@@ -228,7 +228,7 @@ mission "Ayab's Revenge"
 			choice
 				`	"Hunt? What..."`
 				`	"Wait, I'm not..."`
-			`"Gray Eye!" The man screams loudly. "The accursed creature destroyed my first ship! But now I finally have a new ship and am building up my fleet! Soon it will know my revenge!"
+			`"Gray Eye!" The man screams loudly. "The accursed creature destroyed my first ship! But now I finally have a new ship and am building up my fleet! Soon it will know my revenge!"`
 			choice
 				`	"But I have my own..."`
 				`	"I never agreed..."`

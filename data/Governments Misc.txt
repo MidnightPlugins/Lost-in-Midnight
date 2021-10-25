@@ -35,7 +35,7 @@ government "Creature Hunter"
 	"attitude toward"
 		"Indigenous Lifeform" -.04
 		"Indigenous Predator" -.04
-		"Invasive Lifeform" -.04
+		"Nova Firefly" -.04
 		"Invasive Lifeform (Passive)" -.04
 	"bribe" .05
 	"fine" 0
