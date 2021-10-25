@@ -1,0 +1,197 @@
+# Copyright (c) 2021 by Michael Arsollon
+# derived from original game at https://github.com/endless-sky/endless-sky
+#
+# Endless Sky is free software: you can redistribute it and/or modify it under the
+# terms of the GNU General Public License as published by the Free Software
+# Foundation, either version 3 of the License, or (at your option) any later version.
+#
+# Endless Sky is distributed in the hope that it will be useful, but WITHOUT ANY
+# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+
+	
+
+person "Lure"
+	government "Indigenous Lifeform"
+	frequency 100
+	personality
+		timid mute uninterested unconstrained
+	ship "Luminazoa" "Lure"
+	ship "Ionic Leech" "Migrating Swarm"
+	ship "Ionic Leech" "Migrating Swarm"
+	ship "Ionic Leech" "Migrating Swarm"
+	ship "Ionic Leech" "Migrating Swarm"
+	ship "Ionic Leech" "Migrating Swarm"
+	ship "Ionic Leech" "Migrating Swarm"
+	ship "Ionic Leech" "Migrating Swarm"
+	ship "Ionic Leech" "Migrating Swarm"
+	ship "Ionic Leech" "Migrating Swarm"
+
+
+
+person "Gray Eye"
+	government "Indigenous Lifeform"
+	frequency 100
+	personality
+		timid uninterested mining harvests mute unconstrained
+	ship "Gray Eye" "Gray Eye"
+
+
+
+person "Midnight Spectator"
+	government "Invasive Lifeform (Passive)"
+	frequency 100
+	personality
+		disables unconstrained mute
+	ship "Blight Shadow" "Midnight Spectator"
+
+outfit "Energy Absorber?"
+	category "Guns"
+	thumbnail "outfit/unknown"
+	"gun ports" -1
+	weapon
+		sprite "projectile/laser"
+			"frame rate" 1
+		sound "electron beam"
+		"hit effect" "beam laser impact"
+		"inaccuracy" .5
+		"velocity" 300
+		"lifetime" 1
+		"reload" 1
+		"energy damage" 6
+		"heat damage" -6
+		"fuel damage" 6
+		"shield damage" 12
+		"hull damage" 1
+		"disruption damage" 1
+
+ship "Blight Shadow"
+	noun "creature"
+	sprite "ship/blight shadow/blight shadow"
+	"never disabled"
+	attributes
+		"automaton" 1
+		category "Light Warship"
+		"hull" 3600
+		"mass" 230
+		"drag" 4.3
+		"heat dissipation" 1.3
+		"cargo space" 0
+		"thrust" 24
+		"reverse thrust" 36
+		"turn" 800
+		"hull repair rate" 2
+		"hull protection" 2
+		"piercing protection" 2
+		"heat protection" 1
+		"energy protection" 1
+		"energy capacity" 100
+		"fuel capacity" 300
+		"cloak" .01
+		"cloaking energy" .3
+		"cloaking fuel" .3
+		"inscrutable" 1
+		"gaslining" 1
+		"jump drive" 1
+		"jump speed" .2
+		"ramscoop" 1
+		"solar collection" 1
+		weapon
+			"blast radius" 15
+			"shield damage" 150
+			"hull damage" 150
+			"hit force" -100
+	outfits
+		"Energy Absorber?" 1
+	gun 0 -22 "Energy Absorber?"
+	leak "blood" 15 25
+	explode "blood" 25
+	"final explode" "blood"
+	description "An invasive species from beyond our galaxy. They primarily survive by absorbing various forms of energy."
+
+
+person "Midnight Candle"
+	government "Invasive Lifeform (Passive)"
+	frequency 100
+	personality disables mining harvests unconstrained mute
+	ship "Nova Firefly" "Midnight Candle"
+
+
+
+person "Poltergeist King"
+	government "Author"
+	frequency 349
+	system
+		government "Syndicate" "Republic" "Free Worlds" "Pirate"
+	personality timid mining harvests plunders uninterested
+		confusion 60
+	phrase
+		word
+			"Warning: the target ship is programmed to engage in self-defense behaviors to ensure a realistic simulation."
+			"P.K.'s guide on 'How to Hack a Science Drone For Fun and Profit' is available at your local space port gift shop!"
+			"Cargo containers are excellent hiding places."
+			"Good ol_ Rock. N_thin_ beats Rock."
+			"D_sable the r_botic targ_t d_mmy ship."
+			"co_lect test data for S_ndicate engin_ers by scan_ing its c_rgo"
+			"scan the disabl_d c_aft and take caref_l me_surements of the bat_le d_mage"
+			"disa_le or scan the t_rget dum_y ship"
+			"_ocate it and make deta_led s_ans of its ca_go"
+			"proce_d t_ere for p_yment af_er ret_ieving the data."
+	ship "Hacker Drone" "Poltergeist King"
+	ship "Mule Test Dummy" "Syndicate Test Vessel"
+	ship "Hauler Test Dummy" "S_ndic_te Tes_ Ve_s_l"
+	ship "Freighter Test Dummy" "Syn_i_ate Te_t _es_el"
+	ship "Argosy Test Dummy" "Synd_c_te T_st Ve_se_"
+
+
+
+ship "Hacker Drone"
+	sprite "ship/poltergeist king"
+	attributes
+		category "Drone"
+		"cost" 50000
+		"shields" 200
+		"hull" 400
+		"automaton" 1
+		"mass" 30
+		"drag" 2
+		"heat dissipation" 1
+		"fuel capacity" 100
+		"outfit space" 65
+		"weapon capacity" 0
+		"engine capacity" 50
+		"self destruct" 1
+		weapon
+			"blast radius" 3
+			"shield damage" 30
+			"hull damage" 15
+			"hit force" 45
+	outfits
+		"KP-6 Photovoltaic Array"
+		"Supercapacitor" 2
+		"Tactical Scanner"
+		"X1050 Ion Engines"
+		"Hyperdrive"
+	engine -15 30
+	engine 15 30
+	leak "flame" 60 80
+	explode "tiny explosion" 15
+	explode "small explosion" 5
+	description "Warning: the target ship is programmed to engage in self-defense behaviors to ensure a realistic simulation."
+
+ship "Mule" "Mule Test Dummy"
+	add attributes
+		"automaton" 1
+		"self destruct" 1
+ship "Hauler" "Hauler Test Dummy"
+	add attributes
+		"automaton" 1
+		"self destruct" 1
+ship "Freighter" "Freighter Test Dummy"
+	add attributes
+		"automaton" 1
+		"self destruct" 1
+ship "Argosy" "Argosy Test Dummy"
+	add attributes
+		"automaton" 1
+		"self destruct" 1

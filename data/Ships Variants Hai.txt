@@ -1,0 +1,54 @@
+# Copyright (c) 2021 by Michael Arsollon
+# derived from original game at https://github.com/endless-sky/endless-sky
+#
+# Endless Sky is free software: you can redistribute it and/or modify it under the
+# terms of the GNU General Public License as published by the Free Software
+# Foundation, either version 3 of the License, or (at your option) any later version.
+#
+# Endless Sky is distributed in the hope that it will be useful, but WITHOUT ANY
+# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+
+
+
+ship "Shield Beetle" "Shield Beetle (Jump, Pulse)"
+	outfits
+		"Ion Cannon" 2
+		"Pulse Cannon" 6
+		"Pulse Turret" 4
+		"Boulder Reactor"
+		"Geode Reactor"
+		"Hai Ravine Batteries"
+		"Hai Diamond Regenerator" 2
+		"Hai Williwaw Cooling" 3
+		"Dual Pulse Pistols"
+		"Pulse Rifle" 27
+		`"Bondir" Atomic Thruster`
+		`"Bufaer" Atomic Steering`
+		"Jump Drive"
+	gun "Ion Cannon"
+	gun "Ion Cannon"
+	gun "Pulse Cannon"
+	gun "Pulse Cannon"
+	gun "Pulse Cannon"
+	gun "Pulse Cannon"
+	gun "Pulse Cannon"
+	gun "Pulse Cannon"
+
+
+
+ship "Water Bug" "Water Bug (Jump, Pulse)"
+	outfits
+		"Hai Tracker Pod" 2
+		"Hai Tracker" 112
+		"Pulse Turret" 3
+		"Geode Reactor"
+		"Hai Gorge Batteries"
+		"Hai Chasm Batteries"
+		"Hai Diamond Regenerator"
+		"Hai Williwaw Cooling"
+		"Dual Pulse Pistols"
+		"Pulse Rifle" 3
+		`"Benga" Atomic Thruster`
+		`"Benga" Atomic Steering`
+		"Jump Drive"

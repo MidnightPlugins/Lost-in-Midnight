@@ -1,0 +1,483 @@
+# Copyright (c) 2021 by Michael Arsollon
+# derived from original game at https://github.com/endless-sky/endless-sky
+#
+# Endless Sky is free software: you can redistribute it and/or modify it under the
+# terms of the GNU General Public License as published by the Free Software
+# Foundation, either version 3 of the License, or (at your option) any later version.
+#
+# Endless Sky is distributed in the hope that it will be useful, but WITHOUT ANY
+# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+
+
+
+# Contents: new indigenous life forms and predators
+
+
+mission "First Contact: Subsidurials"
+	landing
+	invisible
+	source
+		attributes "near earth"
+	on offer
+		log "Factions" "Subsidurials"
+			`It is unclear what these creatures are, where they come from, or how they evolved. Scientists have dissected several, but so far the results have simply been that these creatures contain no materials or resources of value; are not even slightly edible, and are too big to be kept as pets.`
+			`To date, none have demonstrated any sign of sapience, and the few captains who have seen them basically consider them to be the bison of space.`
+		conversation
+			`As you land you notice a ship on a nearby landing pad is unloading some kind of huge creature bound to a hoverlift. It sort of looks like a giant hairy slug. Despite it's bindings, the creature manages to make the hoverlift bounce around on the landing pad. Several dock workers narrowly avoid being crushed by it.`
+			`	When you disembark from your own ship, you can hear a representative from the port authority ordering the captain of the other ship to unbind the creature and let it go. Supposedly, the creature is called a "Subsidurial" and has no scientific, commercial, or nutritional value whatsoever.`
+			`	"At least once a month!" yells the representative. "A new inexperienced captain hauls one in thinking he's caught some rare valuable specimen that will put him in the history books. Idiots!"`
+				accept
+	on accept
+		event "Subsidurial Deep"
+		event "Subsidurial Graveyard"
+		event "Subsidurial Hai"
+		event "Subsidurial Isolated"
+		event "Subsidurial Republic"
+		event "Subsidurial Syndicate"
+		event "Subsidurial Ember Waste Inaccessible"
+		event "Subsidurial Ember Waste"
+		event "Subsidurial Coalition"
+		event "Subsidurial Korath"
+	npc kill
+		government "Indigenous Lifeform"
+		personality waiting staying timid mining harvests mute unconstrained
+		fleet "Subsidurial"
+
+
+	
+# Based on the default map data, I picked systems that are:
+# uninhabited, not novas, and devoid of fleets that default to violent behavior.
+
+event "Subsidurial Deep"
+	system Aspidiske
+		add fleet "Subsidurial" 50000
+
+event "Subsidurial Graveyard"
+	system "Aki'il"
+		add fleet "Subsidurial" 50000
+
+event "Subsidurial Hai"
+	system "Lom Tahr"
+		add fleet "Subsidurial" 50000
+
+event "Subsidurial Isolated"
+	system Host
+		add fleet "Subsidurial" 50000
+		
+event "Subsidurial Republic"
+	system Procyon
+		add fleet "Subsidurial" 50000
+
+event "Subsidurial Syndicate"
+	system Acamar
+		add fleet "Subsidurial" 50000
+
+event "Subsidurial Ember Waste Inaccessible"
+	system Diespiter
+		add fleet "Subsidurial" 40000
+	system Egeria
+		add fleet "Subsidurial" 40000
+	system Postverta
+		add fleet "Subsidurial" 40000
+	system Prosa
+		add fleet "Subsidurial" 40000
+	system Vaticanus
+		add fleet "Subsidurial" 40000
+
+event "Subsidurial Ember Waste"
+	system Aescolanus
+		add fleet "Subsidurial" 30000
+	system Antevorta
+		add fleet "Subsidurial" 30000
+	system Cardea
+		add fleet "Subsidurial" 30000
+	system Convector
+		add fleet "Subsidurial" 30000
+	system Insitor
+		add fleet "Subsidurial" 30000
+	system Ossipago
+		add fleet "Subsidurial" 30000
+
+event "Subsidurial Coalition"
+	system "11 Autumn Above"
+		add fleet "Subsidurial" 30000
+	system "16 Autumn Rising"
+		add fleet "Subsidurial" 30000
+	system "5 Spring Below"
+		add fleet "Subsidurial" 30000
+	system Ablodab
+		add fleet "Subsidurial" 30000
+	system "Bright Void"
+		add fleet "Subsidurial" 30000
+	system "Dark Hills"
+		add fleet "Subsidurial" 30000
+	system Torbab
+		add fleet "Subsidurial" 30000
+
+event "Subsidurial Korath"
+	system Chikatip
+		add fleet "Subsidurial" 30000
+	system Chornifath
+		add fleet "Subsidurial" 30000
+	system Furmeliki
+		add fleet "Subsidurial" 30000
+	system Hesselpost
+		add fleet "Subsidurial" 30000
+	system Meftarkata
+		add fleet "Subsidurial" 50000
+	system Sabriset
+		add fleet "Subsidurial" 50000
+	system Seketra
+		add fleet "Subsidurial" 30000
+	system Sepriaptu
+		add fleet "Subsidurial" 50000
+	system Skeruto
+		add fleet "Subsidurial" 50000
+	system Solifar
+		add fleet "Subsidurial" 50000
+
+
+ship "Gray Eye"
+	noun "creature"
+	sprite "ship/grayeye"
+	"never disabled"
+	attributes
+		category "Light Warship"
+		"hull" 23200
+		"automaton" 1
+		"mass" 750
+		"cargo space" 65
+		"drag" 8.2
+		"heat dissipation" .8
+		"fuel capacity" 100
+		"thrust" 10
+		"turn" 800
+		"hull repair rate" 3
+		"ion protection" 3
+		"ion resistance" 1
+		"energy capacity" 1
+		"inscrutable" 1
+		"gaslining" 1
+		"hyperdrive" 1
+		"jump speed" .2
+	outfits
+		Mouthparts? 3
+		Tail? 1
+	gun 0 -97 Mouthparts?
+	gun -23 -95 Mouthparts?
+	gun 23 -95 Mouthparts?
+	turret 0 70 Tail?
+	turret -28 0
+	turret 28 0
+	leak "blood" 30 50
+	explode "blood" 45
+	"final explode" "subsidurial death"
+	description "Gray Eyes are very old Subsidurials that have developed thicker hides. They have also learned how to make a powerful slap with their tails."
+
+ship "Gray Eye" "Gray Eyed"
+	sprite "ship/grayeye flip"
+
+	
+outfit Tail?
+	category "Turrets"
+	thumbnail "outfit/unknown"
+	"turret mounts" -1
+	weapon
+		"turret turn" 4.
+		sound "crunch"
+		"inaccuracy" 180
+		"velocity" 10
+		"lifetime" 1
+		"reload" 70
+		"burst reload" 35
+		"burst count" 3
+		"cluster"
+		"shield damage" 300
+		"hull damage" 400
+		"hit force" 40
+
+fleet "Gray Eye"
+	government "Indigenous Lifeform"
+	cargo 0
+	personality
+		uninterested mining harvests mute unconstrained
+	variant 1
+		"Gray Eye"
+	variant 2
+		"Gray Eyed"
+
+mission "Ayab's Revenge"
+	name "Hunting Gray Eye"
+	description "Captain Ayab is hunting an ancient subsidurial known as the Gray Eye. You're still not sure how you got roped into this..."
+	source
+		attributes "near earth"
+	destination "Earth"
+	to offer
+		has "First Contact: Subsidurials: active"
+		"combat rating" > 10
+	on offer
+		conversation
+			`You're at a spaceport bar when a grizzeled old starship captain with a crazed expression on his face approaches your table.`
+			`"You that new hotshot, <last>?"`
+			choice
+				`	"Yes. Who are..."`
+				`	"How did..."`
+				`	"No, you've got the wrong..."`
+			`"Name's Ayab. Captain Ayab. You're just the kind of fresh recruit I need to join my fleet on the hunt."`
+			choice
+				`	"Hunt? What..."`
+				`	"Wait, I'm not..."`
+			`"Gray Eye!" The man screams loudly. "The accursed creature destroyed my first ship! But now I finally have a new ship and am building up my fleet! Soon it will know my revenge!"
+			choice
+				`	"But I have my own..."`
+				`	"I never agreed..."`
+			`"Welcome to my fleet, <last>! I'll see you up in orbit!" The man stomps off to terrorize other bar patrons. You're still not sure what just happened.`
+				accept
+	npc kill
+		government "Indigenous Lifeform"
+		system
+			distance 1 2
+		personality uninterested mining harvests mute unconstrained
+		fleet "Gray Eye"
+	npc
+		government "Creature Hunter"
+		personality escort heroic vindictive
+		ship "Modified Argosy (Missile)" "Ayab's Revenge"
+
+ship "Luminazoa"
+	noun "creature"
+	sprite "ship/luminazoa/luminazoa"
+	"never disabled"
+	attributes
+		category "Light Warship"
+		"automaton" 1
+		"shields" 800
+		"hull" 2400
+		"mass" 180
+		"drag" 4.8
+		"heat dissipation" 1.2
+		"cargo space" 18
+		"thrust" 22
+		"turn" 800
+		"shield generation" 1.5
+		"hull repair rate" 1
+		"heat protection" 1
+		"ion protection" 1
+		"ion resistance" 1
+		"energy capacity" 150
+		"fuel capacity" 150
+		"inscrutable" 1
+		"gaslining" 1
+		"hyperdrive" 1
+		"scram drive" .2
+	outfits
+		Mouthparts? 3
+		"Lightning Tendril?" 1
+	gun 0 -37 Mouthparts?
+	gun -5 32 Mouthparts?
+	gun 5 32 Mouthparts?
+	turret 0 57 "Lightning Tendril?"
+	leak "blood" 15 25
+	explode "blood" 25
+	"final explode" "blood"
+	description "The exposed mantle of Hell's Maw is home to a thriving colony of these creatures. While they are content to harmlessly scavenge for minerals, they can become dangerous when provoked. One of their tendrils is able to emit electrical bursts which can disrupt a ship's power systems."
+
+
+outfit "Lightning Tendril?"
+	category "Turrets"
+	thumbnail "outfit/unknown"
+	"turret mounts" -1
+	weapon
+		sprite "projectile/lightning"
+			"frame rate" 60
+			"random start frame"
+			"delay" 6
+		sound "zapper"
+		"hit effect" "ion impact" 2
+		"inaccuracy" 3
+		"turret turn" 1
+		"velocity" 320
+		"lifetime" 1
+		"reload" 120
+		"shield damage" 15
+		"hull damage" 12
+		"ion damage" 5
+
+fleet "Luminazoa"
+	government "Indigenous Lifeform"
+	cargo 0
+	personality
+		timid mining harvests unconstrained mute
+	variant 90
+		"Luminazoa"
+	variant 10
+		"Luminazoa" 2
+	variant 1
+		"Luminazoa" 3
+
+mission "First Contact: Luminazoa"
+	landing
+	invisible
+	source "Hell's Maw"
+	on offer
+		log "Factions" "Luminazoa"
+			`The exposed mantle of Hell's Maw is home to a thriving colony of these creatures. While they are content to harmlessly scavenge for minerals, they can become dangerous when provoked. One of their tendrils is able to emit electrical bursts which can disrupt a ship's power systems.`
+		conversation
+			`You wait until the exposed core is facing away from the sun and pick a landing spot near the edge of the planet's broken crust. Even at night the ambient heat here is intense, with temperatures slightly above the recommended safety limits for your environmental suit. Your ship's scanners alert you to the presence of several large life forms moving about on the rocky terrain below. Their appearance reminds you of jellyfish. While observing them consume the exposed minerals from the planet's gaping wound, you see occasional flashes of light when they create some form of energy discharge. Between the presence of these creatures and other environmental hazards, it's probably not a good idea to disembark.`
+				accept
+	on accept
+		event "Luminazoa Hell's Maw"
+	npc kill
+		government "Indigenous Lifeform"
+		personality waiting staying timid mining harvests unconstrained mute
+		fleet "Luminazoa"
+
+event "Luminazoa Hell's Maw"
+	system Kalsolli
+		add fleet "Luminazoa" 5000
+
+
+
+ship "Ionic Leech"
+	noun "creature"
+	sprite "ship/ionic leech/ionic leech"
+	"never disabled"
+	attributes
+		category "Light Warship"
+		"automaton" 1
+		"shields" 1000
+		"hull" 2000
+		"mass" 140
+		"drag" 4.2
+		"heat dissipation" 1.4
+		"cargo space" 16
+		"thrust" 24
+		"turn" 600
+		"shield generation" 2
+		"hull repair rate" 1
+		"energy protection" 1
+		"ion protection" 6
+		"ion resistance" 2
+		"energy capacity" 150
+		"fuel capacity" 150
+		"inscrutable" 1
+		"gaslining" 1
+		"hyperdrive" 1
+		"scram drive" .2
+		"ramscoop" 1
+		weapon
+			"blast radius" 200
+			"shield damage" 2000
+			"hull damage" 1000
+			"hit force" 3000
+	outfits
+		"Ionic Mouthparts?" 1
+	cargo
+		"Ion Leech Sample" 1
+	gun 0 -37 "Ionic Mouthparts?"
+	leak "blood" 15 25
+	explode "blood" 25
+	"final explode" "blood"
+	description "These creatures have infested the Northern Passage since before humans colonized the north. They crave the power generated by ships and are somehow able to consume it through the use of organs uniquely evolved for the task. While they're a rare sight, captains who have the misfortune of encountering them will find that they attack in large swarms."
+
+outfit "Ionic Mouthparts?"
+	category "Guns"
+	thumbnail "outfit/mouthparts"
+	"gun ports" -1
+	weapon
+		sound "zapper"
+		"hit effect" "ionic leeching"
+		"inaccuracy" 180
+		"velocity" 10
+		"lifetime" 1
+		"reload" 70
+		"burst reload" 35
+		"burst count" 3
+		"cluster"
+		"shield damage" 400
+		"hull damage" 200
+		"ion damage" 10
+
+effect "ionic leeching"
+	sprite "effect/spark"
+		"no repeat"
+		"frame rate" 30
+	"lifetime" 29
+	"random angle" 360
+	"random velocity" .4
+	"random spin" 2
+	"random frame rate" 5
+	"velocity scale" .0001
+		
+fleet "Small Ionic Leech"
+	government "Indigenous Predator"
+	cargo 0
+	personality heroic disables unconstrained mute
+	variant 3
+		"Ionic Leech" 5
+	variant 2
+		"Ionic Leech" 7
+	variant 1
+		"Ionic Leech" 9
+	variant 1
+		"Ionic Leech" 11
+
+fleet "Large Ionic Leech"
+	government "Indigenous Predator"
+	cargo 0
+	personality heroic disables unconstrained mute
+	variant 3
+		"Ionic Leech" 7
+	variant 2
+		"Ionic Leech" 9
+	variant 1
+		"Ionic Leech" 11
+
+mission "First Contact: Ionic Leech"
+	landing
+	invisible
+	source 
+		planet "Farpoint" "Maelstrom" "Sunracer" "Skillet" "Prime" "Stormhold"
+	on offer
+		log "Factions" "Ionic Leeches"
+			`These creatures have infested the Northern Passage since before humans colonized the north. They crave the power generated by ships and are somehow able to consume it through the use of organs uniquely evolved for the task. While they're a rare sight, captains who have the misfortune of encountering them will find that they attack in large swarms.`
+		conversation
+			`As you land you notice there are piles of giant creatures that look like leeches at multiple landing pads.`
+			`A dock worker is carting away a pile from your dock. Out of curiosity, you ask what those are.`
+			`"Ionic Leeches. Interstellar vermin that have infested the Northern Passage since before humans colonized the north. If they latch onto the hull, your ship's power systems could be disrupted. They're a rare sight, but several captains have recently had the misfortune of encountering a large swarm of them."`
+				accept
+	on accept
+		event "Ionic Leech North"
+	npc kill
+		government "Indigenous Predator"
+		personality waiting staying uninterested disables unconstrained mute
+		ship "Ionic Leech"
+
+event "Ionic Leech North"
+	system Rigel
+		add fleet "Small Ionic Leech" 40000
+	system Hassaleh
+		add fleet "Small Ionic Leech" 20000
+		add fleet "Large Ionic Leech" 40000
+	system Danoa
+		add fleet "Small Ionic Leech" 40000
+	system Sumar
+		add fleet "Small Ionic Leech" 20000
+		add fleet "Large Ionic Leech" 40000
+	system Rajak
+		add fleet "Small Ionic Leech" 20000
+		add fleet "Large Ionic Leech" 40000
+	system Cardax
+		add fleet "Small Ionic Leech" 20000
+		add fleet "Large Ionic Leech" 40000
+	system Volax
+		add fleet "Small Ionic Leech" 40000
+	system Sospi
+		add fleet "Small Ionic Leech" 40000
+	system Moktar
+		add fleet "Small Ionic Leech" 40000
+	system Oblate
+		add fleet "Small Ionic Leech" 40000
+
+

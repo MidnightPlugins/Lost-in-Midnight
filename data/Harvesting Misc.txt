@@ -1,0 +1,96 @@
+# Copyright (c) 2021 by Michael Arsollon
+# derived from original game at https://github.com/endless-sky/endless-sky
+#
+# Endless Sky is free software: you can redistribute it and/or modify it under the
+# terms of the GNU General Public License as published by the Free Software
+# Foundation, either version 3 of the License, or (at your option) any later version.
+#
+# Endless Sky is distributed in the hope that it will be useful, but WITHOUT ANY
+# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+
+
+
+minable "quantumium"
+	sprite "asteroid/lead/spin"
+	hull 400
+	payload "Quantumium" 4
+	explode "smoke" 40
+	explode "bolide" 40
+	explode "asteroid crunch small"
+
+outfit "Quantumium"
+	plural "Quantumium"
+	category "Systems"
+	cost 6000
+	thumbnail "outfit/quantumium"
+	"flotsam sprite" "effect/flotsam keystone"
+	"mass" 2
+	"outfit space" -2
+	"quantum keystone" 1
+	description "The raw ore used to make Quantum Keystones. Since it has not been processed, it occupies more space than a Quantum Keystone does."
+
+minable "fossil"
+	sprite "asteroid/iron/spin"
+	hull 400
+	payload "Fossil" 4
+	explode "smoke" 40
+	explode "bolide" 40
+	explode "asteroid crunch small"
+
+outfit "Fossil"
+	plural "Fossils"
+	category "Special"
+	cost 100
+	thumbnail "outfit/harvested fossil"
+	"flotsam sprite" "effect/flotsam fossil"
+	"mass" 1
+	"installable" -1
+	description "An alien fossil found in the void of space. Unless you can find the right buyer, most will only see a cheap trinket that can be sold as a souvenir to gullible tourists."
+	
+	
+
+mission "Harvesting: Fossil Acquisitions"
+	invisible
+	repeat
+	source Alexandria
+	to offer
+		random < 20
+	on offer
+		require Fossil
+		dialog
+			`If there is any place in the galaxy to find a serious buyer for the alien fossil you found, this is definitely it. After asking around for a bit, you finally find an official who is interested in purchasing a fossil. You have to answer some questions about how you obtained the fossil, but the process is quick and simple. Once you complete the transaction, you will be short one fossil, but <payment> richer.`
+	on accept
+		outfit Fossil -1
+		payment 400000
+		
+mission "Harvesting: Fossil Researcher"
+	invisible
+	repeat
+	source
+		attributes "research"
+	to offer
+		random < 40
+	on offer
+		require Fossil
+		dialog
+			`<planet> has a noticeable scientific community present. If there is any place in the galaxy to find a serious buyer for the alien fossil you found, this might be it. After asking around for a bit, you finally find a researcher who is interested in purchasing a fossil. You have to answer some questions about how you obtained the fossil, but the process is quick and simple. Once you complete the transaction, you will be short one fossil, but <payment> richer.`
+	on accept
+		outfit Fossil -1
+		payment 300000
+
+mission "Harvesting: Fossil Collector"
+	invisible
+	repeat
+	source
+		attributes "paradise"
+	to offer
+		random < 60
+	on offer
+		require Fossil
+		dialog
+			`The paradise worlds are filled with people who have more money than sense. If there is any place in the galaxy to quickly find a a rich sucker willing to pay ridiculous sums of money for the alien fossil you found, this could be it. After asking around for a bit, you finally find a collector who is interested in purchasing a fossil. Once you complete the transaction, you will be short one fossil, but <payment> richer.`
+	on accept
+		"reputation: Black Market" ++
+		outfit Fossil -1
+		payment 200000

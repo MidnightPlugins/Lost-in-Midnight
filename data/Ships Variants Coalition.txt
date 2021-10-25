@@ -1,0 +1,149 @@
+# Copyright (c) 2021 by Michael Arsollon
+# derived from original game at https://github.com/endless-sky/endless-sky
+#
+# Endless Sky is free software: you can redistribute it and/or modify it under the
+# terms of the GNU General Public License as published by the Free Software
+# Foundation, either version 3 of the License, or (at your option) any later version.
+#
+# Endless Sky is distributed in the hope that it will be useful, but WITHOUT ANY
+# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+
+
+
+# 490		"outfit space" 520
+#			"weapon capacity" 208
+#			"engine capacity" 148
+ship "Arach Hulk" "Arach Hulk (pirate)"
+	outfits
+		"Torpedo Launcher" 2
+		"Torpedo" 210
+		"Torpedo Storage Rack" 10
+		"Modified Blaster Turret" 4
+
+		"Large Collector Module" 2
+		"Large Battery Module"
+		"Small Battery Module"
+		"Small Shield Module" 2
+		"Large Repair Module"
+		"Cooling Module"
+		"Laser Rifle" 8
+		
+		"Large Thrust Module" 2
+		"Small Thrust Module" 2
+		"Large Steering Module" 2
+		"Small Steering Module" 2
+		"Hyperdrive"
+
+# 252		"outfit space" 520
+#			"weapon capacity" 208
+#			"engine capacity" 148
+ship "Arach Hulk" "Arach Hulk (smuggler)"
+	outfits
+		"Large Collector Module"
+		"Large Battery Module"
+		"Small Battery Module"
+		"Small Shield Module" 2
+		"Large Repair Module"
+		"Interference Plating" 62
+		
+		"Large Thrust Module" 2
+		"Small Thrust Module" 2
+		"Large Steering Module" 2
+		"Small Steering Module" 2
+		"Laser Rifle" 8
+
+		"Hyperdrive"
+		"Jump Drive"
+
+
+
+# 474		"outfit space" 489
+#			"weapon capacity" 256
+#			"engine capacity" 129
+ship "Kimek Spire" "Kimek Spire (pirate)"
+	outfits
+		"Torpedo Launcher" 2
+		"Torpedo" 210
+		"Torpedo Storage Rack" 10
+		"Modified Blaster Turret" 4
+		"Large Collector Module" 2
+		"Small Collector Module"
+		"Large Battery Module"
+		"Large Shield Module"
+		"Small Shield Module"
+		"Cooling Module"
+		"Laser Rifle" 19
+		
+		"Large Thrust Module" 2
+		"Large Steering Module" 2
+		"Small Steering Module"
+		"Hyperdrive"
+
+
+# 236		"outfit space" 489
+#			"weapon capacity" 256
+#			"engine capacity" 129
+ship "Kimek Spire" "Kimek Spire (smuggler)"
+	outfits
+		"Large Collector Module"
+		"Small Collector Module"
+		"Large Battery Module"
+		"Large Shield Module"
+		"Small Shield Module"
+		"Interference Plating" 38
+		"Cargo Expansion" 4
+		"Laser Rifle" 19
+		
+		"Large Thrust Module" 2
+		"Large Steering Module" 2
+		"Small Steering Module"
+		"Hyperdrive"
+		"Jump Drive"
+
+
+
+# 514		"outfit space" 568
+#		"weapon capacity" 202
+#		"engine capacity" 156
+ship "Saryd Sojourner" "Saryd Sojourner (pirate)"
+	outfits
+		"Torpedo Launcher" 2
+		"Torpedo" 210
+		"Torpedo Storage Rack" 10
+		"Modified Blaster Turret" 4
+
+		"Large Collector Module" 2
+		"Small Collector Module" 3
+		"Large Battery Module"
+		"Large Shield Module"
+		"Small Repair Module" 2
+		"Cooling Module"
+		"Laser Rifle" 17
+		
+		"Large Thrust Module" 2
+		"Small Thrust Module" 3
+		"Large Steering Module" 2
+		"Small Steering Module"
+		"Hyperdrive"
+
+
+# 276		"outfit space" 568
+#			"weapon capacity" 202
+#			"engine capacity" 156
+ship "Saryd Sojourner" "Saryd Sojourner (smuggler)"
+	outfits
+		"Large Collector Module"
+		"Small Collector Module" 3
+		"Large Battery Module"
+		"Large Shield Module"
+		"Small Repair Module" 2
+		"Interference Plating" 68
+		"Laser Rifle" 17
+		
+		"Large Thrust Module" 2
+		"Small Thrust Module" 3
+		"Large Steering Module" 2
+		"Small Steering Module"
+		"Hyperdrive"
+		"Jump Drive"
