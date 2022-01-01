@@ -356,6 +356,7 @@ mission "Ghost Hunting: Poltergeist King 1"
 	on accept
 		event "Clear Menkalinan"
 		"reputation: Independent (Killable)" >?= 10
+		"reputation: Derelict (Killable)" <?= -1
 
 	npc board
 		personality derelict target staying pacifist mute
@@ -410,21 +411,6 @@ mission "Ghost Hunting: Poltergeist King 1"
 			`	You manage to launch just as the other ship violently explodes!"`
 				launch
 	npc
-		government "Derelict"
-		system "Menkalinan"
-		personality derelict target staying pacifist mute
-		ship "Derelict Hauler" "Funhouse"
-	npc 
-		government "Derelict"
-		system "Menkalinan"
-		personality derelict target staying pacifist mute
-		ship "Derelict Freighter" "Funhouse"
-	npc
-		government "Derelict"
-		system "Menkalinan"
-		personality derelict target staying pacifist mute
-		ship "Derelict Argosy" "Funhouse"
-	npc
 		government "Independent (Killable)"
 		system "Menkalinan"
 		personality waiting staying surveillance mute
@@ -467,6 +453,103 @@ event "Restore Menkalinan"
 		add fleet "Small Republic" 800
 		add fleet "Large Republic" 2000
 		add fleet "Republic Logistics" 2000
+
+mission "Ghost Hunting: Poltergeist King Trick A"
+	landing
+	invisible
+	to complete
+		has "Ghost Hunting: Poltergeist King 1: done"
+	npc board
+		to spawn
+			has "Ghost Hunting: Poltergeist King 1: active"
+		to despawn
+			has "Ghost Hunting: Poltergeist King 1: done"
+		government "Derelict (Killable)"
+		system "Menkalinan"
+		personality derelict target staying pacifist mute
+		ship "Derelict Hauler" "Funhouse"
+		conversation "Funhouse in Flames"
+
+mission "Ghost Hunting: Poltergeist King Trick B"
+	landing
+	invisible
+	to complete
+		has "Ghost Hunting: Poltergeist King 1: done"
+	npc board
+		to spawn
+			has "Ghost Hunting: Poltergeist King 1: active" 
+		to despawn
+			has "Ghost Hunting: Poltergeist King 1: done"
+		government "Derelict (Killable)"
+		system "Menkalinan"
+		personality derelict target staying pacifist mute
+		ship "Derelict Freighter" "Funhouse"
+		conversation "Funhouse in Flames"
+
+mission "Ghost Hunting: Poltergeist King Trick C"
+	landing
+	invisible
+	to complete
+		has "Ghost Hunting: Poltergeist King 1: done"
+	npc board
+		to spawn
+			has "Ghost Hunting: Poltergeist King 1: active"
+		to despawn
+			has "Ghost Hunting: Poltergeist King 1: done"
+		government "Derelict (Killable)"
+		system "Menkalinan"
+		personality derelict target staying pacifist mute
+		ship "Derelict Argosy" "Funhouse"
+		conversation "Funhouse in Flames"
+
+conversation "Funhouse in Flames"
+	`The ship seems deserted.`
+	scene "scene/scene-sivael3cropflipdark"
+	choice
+		`	(Call out for a response.)`
+		`	(Leave)`
+			flee
+	`	There is no response.`
+	scene "scene/scene-sivael3cropflipdark"
+	choice
+		`	(Explore the derelict.)`
+		`	(Leave)`
+			flee
+	`	It's quiet. Suddenly, the air is filled with static as some speakers crackle on.`
+	`	"Five. Hee hee hee!"`
+	scene "scene/scene-sivael3cropflipdark"
+	choice
+		`	(Continue to explore.)`
+		`	(Leave)`
+			flee
+	`	You look through several more corridors and empty rooms.`
+	`	"Four. Ha ha ha!"`
+	scene "scene/scene-sivael3cropflipdark"
+	choice
+		`	(Continue to explore.)`
+		`	(Leave)`
+			flee
+	`	You find a storage room with some cargo containers.`
+	`	"Three. Hee hee hee!"`
+	scene "scene/scene-sivael3cropflipdark"
+	choice
+		`	(Search the containers.)`
+		`	(Leave)`
+			flee
+	`	The containers are empty.`
+	`	"Two. Ho ho ho!"`
+	scene "scene/scene-sivael3cropflipdark"
+	choice
+		`	(Keep searching.)`
+		`	(Leave)`
+			flee
+	`	You look through several more corridors and empty rooms.`
+	`	"One and done!"`
+	choice
+		`	(You've gotta get outta here!)`
+	scene "scene/scene-explosion"
+	`	The empty corridors and rooms become a blur as you try running back to your ship. At one intersection, you pause as you realize that you're lost...`
+		die
 
 
 
@@ -608,6 +691,8 @@ mission "Ghost Hunting: Zubenelgenubi Ghost Ship"
 				accept
 	on accept
 		event "Ghost clear Zubenelgenubi"
+		"reputation: Independent (Killable)" >?= 10
+		"reputation: Derelict (Killable)" <?= -1
 
 	on enter Zubenelgenubi
 		conversation

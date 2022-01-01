@@ -46,7 +46,7 @@ government "Creature Hunter"
 # Derelicts that explode or can be captured.
 government "Derelict (Killable)"
 	"display name" "Derelict"
-	"player reputation" 0
+	"player reputation" -1
 	"fine" 0
 	"penalty for"
 		assist 0
