@@ -189,6 +189,7 @@ mission "Oathbreaker Liberator 1"
 	to offer
 		has "Oathbreaker Siege 2: done"
 		has "Sheragi Archaeology: Epilogue: done"
+		not "Oathbreaker Thermopylae: offered"
 	on offer
 		dialog
 			`You receive a message from Barmy Edwards on Rust: "Hello Captain <first> <last>. I just finished outfitting a new prototype ship for Southbound Shipyards. Would you be interested in helping to test it out?`
@@ -308,8 +309,8 @@ mission "Oathbreaker Liberator 4"
 		has "Oathbreaker Liberator 3: done"
 	on offer
 		conversation
-			`As you disembark, you see Barmy talking to a man wearing a Southbay Shipyards engineering uniform.`
-			`	Barmy waves you over. "Captain <last>, this is Ricardo Astillero from Southbay Shipyards R&D. He was just telling me the bad news.`
+			`As you disembark, you see Barmy talking to a man wearing a Southbound Shipyards engineering uniform.`
+			`	Barmy waves you over. "Captain <last>, this is Ricardo Astillero from Southbound Shipyards R&D. He was just telling me the bad news.`
 			`	"Wait, THE Captain <last>? The war hero?" Ricardo expresses his surprise.`
 			choice
 				`	"The one and only. So what's this bad news?"`
