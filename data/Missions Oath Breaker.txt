@@ -189,7 +189,7 @@ mission "Oathbreaker Liberator 1"
 	to offer
 		has "Oathbreaker Siege 2: done"
 		has "Sheragi Archaeology: Epilogue: done"
-		not "Oathbreaker Thermopylae: offered"
+		not "Oathbreaker Thermopylae: done"
 	on offer
 		dialog
 			`You receive a message from Barmy Edwards on Rust: "Hello Captain <first> <last>. I just finished outfitting a new prototype ship for Southbound Shipyards. Would you be interested in helping to test it out?`
