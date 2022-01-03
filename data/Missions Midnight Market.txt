@@ -759,6 +759,8 @@ mission "Midnight Market: Asteroid Catapult 1"
 		has "event: Oathbreaker diminish"
 		has "event: reveal Chasm"
 		"credits" >= 2000000
+	to complete
+		"credits" >= 1000000
 	on offer
 		conversation
 			`You receive an anonymous message:`
