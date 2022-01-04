@@ -274,6 +274,7 @@ mission "Midnight Lost Orphan: Coalition Atrocity"
 
 
 mission "Midnight Lost Orphan: Chaos Hammer"
+	landing
 	invisible
 	source
 		attributes "core" "core pirate"
@@ -334,6 +335,8 @@ mission "Midnight Lost Orphan: Chaos Hammer"
 		ship "Korath Chaser" "Cruelty"
 		dialog `You find the ship's brig has been converted into a torure chamber. Most of the prisoners are dead. Those who are still alive are near death, their wounds too severe to treat.`
 
+	on complete
+		"captain of atrocity" ++
 
 ship "Korath Raider" "Korath Raider (Chaos Hammer)"
 	outfits
@@ -364,7 +367,21 @@ ship "Korath Raider" "Korath Raider (Chaos Hammer)"
 
 
 
+mission "Midnight Lost Orphan: Chaos Hammer Patch"
+	landing
+	invisible
+	to offer
+		has "Midnight Lost Orphan: Chaos Hammer: done"
+		not "captain of atrocity"
+	on offer
+		require "Midnight's Lost Orphan"
+		"captain of atrocity" ++
+		fail
+
+
+
 mission "Midnight Lost Orphan: Arctic Dragon"
+	landing
 	invisible
 	source
 		attributes "north" "hai" "paradise" "north pirate"
@@ -434,6 +451,9 @@ mission "Midnight Lost Orphan: Arctic Dragon"
 			`	You nonchalantly fire on the Unfettered warrior and he collapses onto the floor. The rest of the battle continues to rage on, unabated by this strange scene.`
 				accept
 
+	on complete
+		"captain of atrocity" ++
+
 ship "Shield Beetle" "Shield Beetle (Arctic Dragon)"
 	outfits
 		"Ion Cannon" 2
@@ -461,9 +481,22 @@ ship "Shield Beetle" "Shield Beetle (Arctic Dragon)"
 	gun "Pulse Cannon"
 	gun "Pulse Cannon"
 	gun "Pulse Cannon"
+
+
+mission "Midnight Lost Orphan: Arctic Dragon Patch"
+	landing
+	invisible
+	to offer
+		has "Midnight Lost Orphan: Arctic Dragon: done"
+		not "captain of atrocity"
+	on offer
+		require "Midnight's Lost Orphan"
+		"captain of atrocity" ++
+		fail
 	
 
 mission "Midnight Lost Orphan: Night Sword"
+	landing
 	invisible
 	source
 		attributes "dirt belt" "ember waste" "south" "south pirate"
@@ -523,6 +556,9 @@ mission "Midnight Lost Orphan: Night Sword"
 		ship "Albatross (Night Sword)" "Night Sword"
 		dialog `You pass through the ship's sick bay and find a corpse strapped onto the operating table. The clothing on the corpse suggests it was a Syndicate lab worker. Blood is leaking out from one of it's ears. A nearby monitor shows some sort of parasitic worm has settled inside the corpse's skull...`
 		
+	on complete
+		"captain of atrocity" ++
+
 ship "Albatross" "Albatross (Night Sword)"
 	outfits
 		"Inhibitor Cannon" 6
@@ -549,14 +585,29 @@ ship "Albatross" "Albatross (Night Sword)"
 	turret
 	turret "Point Defense Turret"
 
+
+mission "Midnight Lost Orphan: Night Sword Patch"
+	landing
+	invisible
+	to offer
+		has "Midnight Lost Orphan: Night Sword: done"
+		not "captain of atrocity"
+	on offer
+		require "Midnight's Lost Orphan"
+		"captain of atrocity" ++
+		fail
+
+
+
 mission "Midnight Lost Orphan: Blood Wind"
+	landing
 	invisible
 	source
 		government "Republic" "Syndicate" "Free Worlds" "Pirate"
 	to offer
-			has "Midnight Lost Orphan: Chaos Hammer: done"
-			has "Midnight Lost Orphan: Arctic Dragon: done"
-			has "Midnight Lost Orphan: Night Sword: done"
+		has "Midnight Lost Orphan: Chaos Hammer: done"
+		has "Midnight Lost Orphan: Arctic Dragon: done"
+		has "Midnight Lost Orphan: Night Sword: done"
 	on offer
 		require "Midnight's Lost Orphan"
 

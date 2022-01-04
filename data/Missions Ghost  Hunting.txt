@@ -324,6 +324,14 @@ ship "Model 512" "Model 512 (dire omen)"
 	turret -121 86
 	description `This alien "ghost ship" was terrorizing the Northern Passage. Its automated systems allow it to be controlled remotely. Despite large portions of the ship being damaged beyond repair, it is still operational.`
 
+
+mission "Ghost Hunting: Derelict Killabe Patch"
+	landing
+	invisible
+	on offer
+		"reputation: Derelict (Killable)" <?= -1
+		fail
+
 mission "Ghost Hunting: Poltergeist King 1"
 	name "Trick or Treat"
 	description "A madman calling himself Poltergeist King is holding three children hostage in Menkalinan. Search for the perpetrator, rescue the children, and return them to <planet> in the <system> system."
