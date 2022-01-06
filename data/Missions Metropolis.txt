@@ -974,7 +974,7 @@ mission "Metropolis Epilogue: Hiding in Plain Sight 1"
 		or
 			not "randomize Metropolis Epilogue: Hiding in Plain Sight 1"
 			and
-				"randomize Metropolis Epilogue: Hiding in Plain Sight 1"
+				has "randomize Metropolis Epilogue: Hiding in Plain Sight 1"
 				random < 5
 	on offer
 		require "Balthazar Model"
@@ -1132,7 +1132,7 @@ mission "Metropolis Epilogue: Leviathan Comics"
 		or
 			not "randomize Metropolis Epilogue: Leviathan Comics"
 			and
-				"randomize Metropolis Epilogue: Leviathan Comics"
+				has "randomize Metropolis Epilogue: Leviathan Comics"
 				random < 20
 	on offer
 		require "Leviathan Comic"
