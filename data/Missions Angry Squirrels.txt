@@ -327,7 +327,7 @@ mission "Angry Squirrels: Countermeasures 2"
 
 mission "Angry Squirrels: Countermeasures 3"
 	name "Unfettered Intrusion Device"
-	description "Go to <waypoint> and board a suitable target to test out a new Unfettered boarding weapon. Return to <planet> when you are done."
+	description "Go to <waypoints> and board a suitable target to test out a new Unfettered boarding weapon. Return to <planet> when you are done."
 	source "Darkcloak"
 	waypoint "Almaaz"
 	to offer
@@ -357,7 +357,7 @@ mission "Angry Squirrels: Countermeasures 3"
 	on enter "Almaaz"
 		dialog `That Bactrian looks like the perfect target to try this new boarding weapon on. Disable it without destroying it then move in for the capture!`
 
-	npc boarding
+	npc board
 		system "Almaaz"
 		government "Pirate"
 		personality target waiting staying timid marked

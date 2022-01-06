@@ -971,6 +971,11 @@ mission "Metropolis Epilogue: Hiding in Plain Sight 1"
 	to offer
 		has "Hiding in Plain Sight: done"
 		has "Balthazar Delivery: done"
+		or
+			not "randomize Metropolis Epilogue: Hiding in Plain Sight 1"
+			and
+				"randomize Metropolis Epilogue: Hiding in Plain Sight 1"
+				random < 5
 	on offer
 		require "Balthazar Model"
 		conversation
@@ -982,7 +987,9 @@ mission "Metropolis Epilogue: Hiding in Plain Sight 1"
 					accept
 				`	"Sorry, I'm going in a different direction."`
 			`"That's okay," replies Kiru. "I'm sure we can find another transport. Safe journeys, captain."`
-				decline
+				defer
+	on defer
+		set "randomize Metropolis Epilogue: Hiding in Plain Sight 1"
 	on visit
 		dialog `You look for Arthur and Kiru, but realize that they took a ride on one of your escorts! Better depart and wait for your escorts to arrive in this star system.`
 	on complete
@@ -1014,7 +1021,7 @@ mission "Metropolis Epilogue: Hiding in Plain Sight 2 (Balthazar model)"
 			choice
 				`	"Woah, really? I thought that was just the scale size."`
 			
-			`	"So, will you sell it to us? We can pay you <payment> for it."`
+			`	"So, will you sell it to us? We can pay you 1000000 credits for it."`
 			choice
 				`	"Okay, sure. I can let it go at that price."`
 					goto sell
@@ -1022,7 +1029,7 @@ mission "Metropolis Epilogue: Hiding in Plain Sight 2 (Balthazar model)"
 					goto keep
 			
 			label sell
-			`	You all head to your ship, where you retrieve the model and exchange it with them for <payment>. Both appear to be very happy with their purchase.`
+			`	You all head to your ship, where you retrieve the model and exchange it with them for 1000000 credits. Both appear to be very happy with their purchase.`
 				accept
 			
 			label keep
@@ -1037,6 +1044,7 @@ mission "Metropolis Epilogue: Hiding in Plain Sight 2 (Balthazar model)"
 	on accept
 		outfit "Balthazar Model" -1
 		payment 1000000
+		fail
 
 mission "Metropolis Epilogue: Hiding in Plain Sight 2 (no Balthazar model)"
 	invisible
@@ -1079,6 +1087,7 @@ mission "Metropolis Epilogue: Hiding in Plain Sight 2 (no Balthazar model)"
 
 
 mission "Metropolis Epilogue: Arachi Cartoonist"
+	landing
 	invisible
 	to offer
 		has "Arachi Cartoonist 2: done"
@@ -1120,6 +1129,11 @@ mission "Metropolis Epilogue: Leviathan Comics"
 	destination "Mebla's Portion"
 	to offer
 		has "event: Leviathan Comic Collectible"
+		or
+			not "randomize Metropolis Epilogue: Leviathan Comics"
+			and
+				"randomize Metropolis Epilogue: Leviathan Comics"
+				random < 20
 	on offer
 		require "Leviathan Comic"
 		conversation
@@ -1128,7 +1142,9 @@ mission "Metropolis Epilogue: Leviathan Comics"
 				`	"Welcome aboard."`
 					accept
 				`	"Sorry, I'm not going in that direction."`
-					decline
+					defer
+	on defer
+		set "randomize Metropolis Epilogue: Leviathan Comics"
 	on complete
 		outfit "Leviathan Comic" -1
 		outfit "Leviathan Comic #1" 1
