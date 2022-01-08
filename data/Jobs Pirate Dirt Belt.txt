@@ -96,6 +96,20 @@ mission "Escort Core Pirate Home"
 		"combat rating" > 400
 		"reputation: Pirate" > 0
 
+	npc
+		government "Syndicate"
+		system
+			distance 1 2
+		personality waiting heroic vindictive
+		fleet "Small Syndicate"
+		fleet "Large Syndicate"
+	npc
+		government "Syndicate"
+		system destination
+		personality waiting staying heroic vindictive
+		fleet "Small Syndicate"
+		fleet "Large Syndicate"
+
 	npc accompany save
 		government Pirate
 		personality escort
@@ -112,20 +126,6 @@ mission "Escort Core Pirate Home"
 			variant 1
 				"Falcon"
 				
-	npc
-		government "Syndicate"
-		system
-			distance 1 2
-		personality waiting heroic vindictive
-		fleet "Small Syndicate"
-		fleet "Large Syndicate"
-	npc
-		government "Syndicate"
-		system destination
-		personality waiting staying heroic vindictive
-		fleet "Small Syndicate"
-		fleet "Large Syndicate"
-
 	on complete
 		payment 375000
 		"reputation: Pirate" ++
@@ -151,6 +151,20 @@ mission "Escort North Pirate Home"
 		"combat rating" > 400
 		"reputation: Pirate" > 0
 
+	npc
+		government "Republic"
+		system
+			distance 1 2
+		personality waiting heroic vindictive
+		fleet "Small Republic"
+		fleet "Large Republic"
+	npc
+		government "Republic"
+		system destination
+		personality waiting staying heroic vindictive
+		fleet "Small Republic"
+		fleet "Large Republic"
+
 	npc accompany save
 		government Pirate
 		personality escort
@@ -171,20 +185,6 @@ mission "Escort North Pirate Home"
 			variant 1
 				"Bactrian"
 				
-	npc
-		government "Republic"
-		system
-			distance 1 2
-		personality waiting heroic vindictive
-		fleet "Small Republic"
-		fleet "Large Republic"
-	npc
-		government "Republic"
-		system destination
-		personality waiting staying heroic vindictive
-		fleet "Small Republic"
-		fleet "Large Republic"
-
 	on complete
 		"reputation: Pirate" ++
 		payment 375000
@@ -210,6 +210,20 @@ mission "Escort South Pirate Home"
 		"combat rating" > 400
 		"reputation: Pirate" > 0
 
+	npc
+		government "Republic"
+		system
+			distance 1 2
+		personality waiting heroic vindictive
+		fleet "Small Republic"
+		fleet "Large Republic"
+	npc
+		government "Militia"
+		system destination
+		personality waiting staying heroic
+		fleet "Small Militia"
+		fleet "Large Militia"
+
 	npc accompany save
 		government Pirate
 		personality escort
@@ -229,19 +243,6 @@ mission "Escort South Pirate Home"
 				"Modified Argosy (Heavy)"
 			variant 1
 				"Modified Argosy (Missile)"
-	npc
-		government "Republic"
-		system
-			distance 1 2
-		personality waiting heroic vindictive
-		fleet "Small Republic"
-		fleet "Large Republic"
-	npc
-		government "Militia"
-		system destination
-		personality waiting staying heroic
-		fleet "Small Militia"
-		fleet "Large Militia"
 
 	on complete
 		"reputation: Pirate" ++
@@ -274,12 +275,8 @@ mission "Jail Break A"
 			fighters "republic fighter"
 			variant 2
 				"Carrier"
-				"Lance" 4
-				"Combat Drone" 6
 			variant 1
 				"Carrier (Mark II)"
-				"Lance" 4
-				"Combat Drone" 6
 		dialog "You find the captured warlord in the brig and take him back to your ship. Time to deliver him to <planet>."
 	on visit
 		dialog phrase "generic bounty hunting boarding on visit"
@@ -311,7 +308,7 @@ mission "Jail Break B"
 					accept
 				`	(Refuse to help them.)`
 					decline
-	npc save
+	npc
 		government "Pirate"
 		personality escort launching timid
 		fleet
@@ -337,12 +334,8 @@ mission "Jail Break B"
 			fighters "republic fighter"
 			variant 2
 				"Carrier"
-				"Lance" 4
-				"Combat Drone" 6
 			variant 1
 				"Carrier (Mark II)"
-				"Lance" 4
-				"Combat Drone" 6
 		dialog "You find the captured warlord in the brig and take her back to your ship. Time to deliver her to <planet>."
 	on visit
 		dialog phrase "generic bounty hunting boarding on visit"
@@ -374,12 +367,8 @@ mission "Jail Break C"
 			fighters "republic fighter"
 			variant 2
 				"Carrier"
-				"Lance" 4
-				"Combat Drone" 6
 			variant 1
 				"Carrier (Mark II)"
-				"Lance" 4
-				"Combat Drone" 6
 		dialog "You find the captured warlord in the brig and take him back to your ship. Time to deliver him to <planet>."
 	on visit
 		dialog phrase "generic bounty hunting boarding on visit"
@@ -476,6 +465,9 @@ mission "Lares Camping (Bums)"
 	source "Lares"
 	to offer
 		random < "day"
+		or
+			not "Lares Camping (Raiders): active"
+			not "Lares Camping (Scavenger): active"
 	on offer
 		conversation
 			`Despte being abandoned, the nearby cabins are well furnished. It might be a nice change of pace to sleep somewhere other than the cramped bunk on your ship.`
@@ -522,6 +514,9 @@ mission "Lares Camping (Raiders)"
 	source "Lares"
 	to offer
 		random < 50
+		or
+			not "Lares Camping (Scavenger): active"
+			not "Lares Camping (Bums): active"
 	on offer
 		conversation
 			`Despite being abandoned, the nearby cabins are well furnished. It might be a nice change of pace to sleep somewhere other than the cramped bunk on your ship.`
@@ -555,6 +550,9 @@ mission "Lares Camping (Scavenger)"
 	source "Lares"
 	to offer
 		random < 30 - "day"
+		or
+			not "Lares Camping (Raiders): active"
+			not ""Lares Camping (Bums): active"
 	on offer
 		conversation
 			`Despte being abandoned, the nearby cabins are well furnished. It might be a nice change of pace to sleep somewhere other than the cramped bunk on your ship.`
@@ -674,9 +672,16 @@ mission "Underworld Meeting (easy)"
 	on stopover
 		dialog
 			`Your passenger directs you through a network of underground caverns to reach the designated meeting spot. The other party arrives and they complete their business. Time to go back to <origin>.`
+	on abort
+		clear "Underworld Meeting (easy): offered"
+		"reputation: Pirate" --
+	on fail
+		clear "Underworld Meeting (easy): offered"
+		"reputation: Pirate" --
 	on complete
 		clear "Underworld Meeting (easy): offered"
 		payment 50000
+		dialogue `Your passenger thanks you and pays <payment>. Ferrying people to the underworld is easy work if the job turns out like this.`
 
 mission "Underworld Meeting (hard)"
 	job
@@ -689,8 +694,9 @@ mission "Underworld Meeting (hard)"
 		has "Cartography: Quarg Hitchhiker 4: done"
 		not "Underworld Meeting (easy): offered"
 		random < 40
-	on stopover
+	on accept
 		set "Underworld Meeting goes badly"
+	on stopover
 		"reputation: Independent (Killable)" <?= -1000
 		conversation
 			`Your passenger directs you through a network of underground caverns to reach the designated meeting spot. The other party arrives and they begin the meeting. Unfortunately, things take a bad turn and they shoot your passenger! Time to get out of here!`

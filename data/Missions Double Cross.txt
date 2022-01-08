@@ -223,7 +223,7 @@ mission "Escort Independence"
 			
 	npc
 		to spawn
-			"ships: Medium Warship" + "ships: Heavy Warship" + "ships: Heavy Freighter" == 2
+			"ships: Medium Warship" + "ships: Heavy Warship" + "ships: Heavy Freighter" >= 2
 		government "Merchant"
 		personality launching heroic
 		fleet
@@ -236,7 +236,7 @@ mission "Escort Independence"
 
 	npc
 		to spawn
-			"ships: Medium Warship" + "ships: Heavy Warship" + "ships: Heavy Freighter" == 3
+			"ships: Medium Warship" + "ships: Heavy Warship" + "ships: Heavy Freighter" >= 3
 		government "Merchant"
 		personality launching heroic
 		fleet
@@ -249,24 +249,22 @@ mission "Escort Independence"
 
 	npc
 		to spawn
-			"ships: Medium Warship" + "ships: Heavy Warship" + "ships: Heavy Freighter" == 4
+			"ships: Medium Warship" + "ships: Heavy Warship" + "ships: Heavy Freighter" >= 4
 		government "Merchant"
 		personality launching heroic
 		fleet
 			names "civilian"
-			fighters "republic fighter"
 			variant
 				"Firebird (Missile)"
 				"Osprey (Missile)"
 
 	npc
 		to spawn
-			"ships: Medium Warship" + "ships: Heavy Warship" + "ships: Heavy Freighter" == 5
+			"ships: Medium Warship" + "ships: Heavy Warship" + "ships: Heavy Freighter" >= 5
 		government "Merchant"
 		personality launching heroic
 		fleet
 			names "civilian"
-			fighters "republic fighter"
 			variant
 				"Protector"
 				"Firebird (Missile)"
@@ -278,7 +276,6 @@ mission "Escort Independence"
 		personality launching heroic
 		fleet
 			names "civilian"
-			fighters "republic fighter"
 			variant
 				"Protector"
 
@@ -286,11 +283,6 @@ mission "Escort Independence"
 		government "Merchant"
 		personality launching timid
 		ship "Mastodon" "Independence"
-		fleet
-			names "civilian"
-			fighters "republic fighter"
-			variant
-				"Dagger" 6
 
 	on fail
 		log `Everyone assumes that I hijacked the Mastodon city ship Independence while I was escorting it. Even if I had hijacked it, I wouldn't incriminate myself here...`
