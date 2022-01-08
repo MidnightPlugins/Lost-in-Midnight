@@ -23,7 +23,7 @@ mission "Midnight Lost Orphan: Abandoned Halcyon"
 	to offer
 		has "Cartography: Midnight's Lost Orphan: done"
 	on offer
-		require "Midnight's Lost Orphan"
+		require "Midnight's Lost Orphan" 1
 		conversation
 			scene "scene/scene-carabao"
 			`You find an abandoned city ship parked on the surface. It looks familiar, but you can't quite remember why. The ship is in very good condition and is outfitted with a variety of alien weapons.`
@@ -61,11 +61,11 @@ mission "Midnight Lost Orphan: Captain of Atrocity"
 	destination Earth
 	to offer
 		has "captain of atrocity"
-		random < ( 9 + "captain of atrocity" )
+		random < ( 19 + "captain of atrocity" )
 	on offer
-		require "Midnight's Lost Orphan"
+		require "Midnight's Lost Orphan" 1
 		"captain of atrocity" ++
-		dialog `You enjoy a perverse pleasure while wielding the supernatural powers granted to you by Midnight's Lost Orphan. The defenders recoil in horror as you slaughter their crewmates with unrestrained cruelty and malice.`
+		dialog `You enjoy a perverse pleasure while wielding the supernatural powers granted to you by Midnight's Lost Orphan. You anticipate slaughtering the defenders with unrestrained cruelty and malice.`
 	on accept
 		fail
 
@@ -75,9 +75,9 @@ mission "Midnight Lost Orphan: Captain of Atrocity 2"
 		attributes "spaceport"
 		not attributes "uninhabited"
 	to offer
-		"captain of atrocity" >= 20
+		"captain of atrocity" >= 10
 	on offer
-		require "Midnight's Lost Orphan"
+		require "Midnight's Lost Orphan" 1
 		dialog `You are the Demon Captain of Atrocities, <first> <last>. As you walk through the spaceport, lesser captains and their crews back away in fear and terror.`
 	on accept
 		fail
@@ -88,9 +88,9 @@ mission "Midnight Lost Orphan: Captain of Atrocity 3"
 		attributes "spaceport"
 		not attributes "uninhabited"
 	to offer
-		"captain of atrocity" >= 30
+		"captain of atrocity" >= 20
 	on offer
-		require "Midnight's Lost Orphan"
+		require "Midnight's Lost Orphan" 1
 		dialog `You are the Demon Captain of Atrocities, <first> <last>. As you settle in to relax at a bar, the other patrons flee in terror.`
 	on accept
 		fail
@@ -101,9 +101,9 @@ mission "Midnight Lost Orphan: Captain of Atrocity 4"
 		attributes "spaceport"
 		not attributes "uninhabited"
 	to offer
-		"captain of atrocity" >= 40
+		"captain of atrocity" >= 30
 	on offer
-		require "Midnight's Lost Orphan"
+		require "Midnight's Lost Orphan" 1
 		dialog `You are the Demon Captain of Atrocities, <first> <last>. As you walk through the spaceport, a sniper takes a shot at your head. But the supernatural power of Midnight's Lost Orphan stops the bullet in mid-air and sends it flying back through the sniper's skull! The crowd in the busy spaceport flees in terror.`
 	on accept
 		fail
@@ -114,9 +114,9 @@ mission "Midnight Lost Orphan: Captain of Atrocity 5"
 		attributes "spaceport"
 		not attributes "uninhabited"
 	to offer
-		"captain of atrocity" >= 50
+		"captain of atrocity" >= 40
 	on offer
-		require "Midnight's Lost Orphan"
+		require "Midnight's Lost Orphan" 1
 		dialog `You are the Demon Captain of Atrocities, <first> <last>. The spaceport is completely deserted. Perhaps news of your arrival preceded you, and the locals fled in panicked fear.`
 	on accept
 		fail
@@ -125,14 +125,13 @@ mission "Midnight Lost Orphan: Captain of Atrocity 5"
 
 mission "Midnight Lost Orphan: Pirate Atrocity"
 	invisible
-	repeat
 	source
 		government "Pirate"
 		not attributes "uninhabited"
 	to offer
-		random < "captain of atrocity"
+		random < ( 9 + "captain of atrocity" )
 	on offer
-		require "Midnight's Lost Orphan"
+		require "Midnight's Lost Orphan" 1
 		"reputation: Pirate" -= 10
 		conversation
 			`You wake up in an alley. You don't remember how you got here or why your hands are covered in blood. You feel relieved when you realize that the blood isn't yours. You try your best to conceal your hands as you make your way back to your ship...`
@@ -143,14 +142,13 @@ mission "Midnight Lost Orphan: Pirate Atrocity"
 
 mission "Midnight Lost Orphan: Republic Atrocity"
 	invisible
-	repeat
 	source
 		government "Republic"
 		not attributes "uninhabited"
 	to offer
-		random < "captain of atrocity"
+		random < ( 9 + "captain of atrocity" )
 	on offer
-		require "Midnight's Lost Orphan"
+		require "Midnight's Lost Orphan" 1
 		"reputation: Republic" -= 10
 		conversation
 			`You wake up in an alley. You don't remember how you got here or why your hands are covered in blood. You feel relieved when you realize that the blood isn't yours. You try your best to conceal your hands as you make your way back to your ship...`
@@ -161,14 +159,13 @@ mission "Midnight Lost Orphan: Republic Atrocity"
 
 mission "Midnight Lost Orphan: Syndicate Atrocity"
 	invisible
-	repeat
 	source
 		government "Syndicate"
 		not attributes "uninhabited"
 	to offer
-		random < "captain of atrocity"
+		random < ( 9 + "captain of atrocity" )
 	on offer
-		require "Midnight's Lost Orphan"
+		require "Midnight's Lost Orphan" 1
 		"reputation: Syndicate" -= 10
 		conversation
 			`You wake up in an alley. You don't remember how you got here or why your hands are covered in blood. You feel relieved when you realize that the blood isn't yours. You try your best to conceal your hands as you make your way back to your ship...`
@@ -179,14 +176,13 @@ mission "Midnight Lost Orphan: Syndicate Atrocity"
 
 mission "Midnight Lost Orphan: Free Worlds Atrocity"
 	invisible
-	repeat
 	source
 		government "Free Worlds"
 		not attributes "uninhabited"
 	to offer
-		random < "captain of atrocity"
+		random < ( 9 + "captain of atrocity" )
 	on offer
-		require "Midnight's Lost Orphan"
+		require "Midnight's Lost Orphan" 1
 		"reputation: Free Worlds" -= 10
 		conversation
 			`You wake up in an alley. You don't remember how you got here or why your hands are covered in blood. You feel relieved when you realize that the blood isn't yours. You try your best to conceal your hands as you make your way back to your ship...`
@@ -197,14 +193,13 @@ mission "Midnight Lost Orphan: Free Worlds Atrocity"
 
 mission "Midnight Lost Orphan: Hai Atrocity"
 	invisible
-	repeat
 	source
 		government "Hai"
 		not attributes "uninhabited"
 	to offer
-		random < "captain of atrocity"
+		random < ( 9 + "captain of atrocity" )
 	on offer
-		require "Midnight's Lost Orphan"
+		require "Midnight's Lost Orphan" 1
 		"reputation: Hai" -= 10
 		conversation
 			`You wake up in an alley. You don't remember how you got here or why your hands are covered in blood. You feel relieved when you realize that the blood isn't yours. You try your best to conceal your hands as you make your way back to your ship...`
@@ -215,14 +210,13 @@ mission "Midnight Lost Orphan: Hai Atrocity"
 
 mission "Midnight Lost Orphan: Remnant Atrocity"
 	invisible
-	repeat
 	source
 		government "Remnant"
 		not attributes "uninhabited"
 	to offer
-		random < "captain of atrocity"
+		random < ( 9 + "captain of atrocity" )
 	on offer
-		require "Midnight's Lost Orphan"
+		require "Midnight's Lost Orphan" 1
 		"reputation: Remnant" -= 10
 		conversation
 			`You wake up in an alley. You don't remember how you got here or why your hands are covered in blood. You feel relieved when you realize that the blood isn't yours. You try your best to conceal your hands as you make your way back to your ship...`
@@ -233,14 +227,13 @@ mission "Midnight Lost Orphan: Remnant Atrocity"
 
 mission "Midnight Lost Orphan: Wanderer Atrocity"
 	invisible
-	repeat
 	source
 		government "Wanderer"
 		not attributes "uninhabited"
 	to offer
-		random < "captain of atrocity"
+		random < ( 9 + "captain of atrocity" )
 	on offer
-		require "Midnight's Lost Orphan"
+		require "Midnight's Lost Orphan" 1
 		"reputation: Wanderer" -= 10
 		conversation
 			`You wake up in an alley. You don't remember how you got here or why your hands are covered in blood. You feel relieved when you realize that the blood isn't yours. You try your best to conceal your hands as you make your way back to your ship...`
@@ -251,14 +244,13 @@ mission "Midnight Lost Orphan: Wanderer Atrocity"
 
 mission "Midnight Lost Orphan: Coalition Atrocity"
 	invisible
-	repeat
 	source
 		government "Coalition" "Heliarch"
 		not attributes "uninhabited"
 	to offer
-		random < "captain of atrocity"
+		random < ( 9 + "captain of atrocity" )
 	on offer
-		require "Midnight's Lost Orphan"
+		require "Midnight's Lost Orphan" 1
 		"reputation: Coalition" -= 10
 		"reputation: Heliarch" -= 10
 		conversation
@@ -282,7 +274,7 @@ mission "Midnight Lost Orphan: Chaos Hammer"
 		not "Midnight Lost Orphan: Arctic Dragon: active"
 		not "Midnight Lost Orphan: Night Sword: active"
 		or
-			"captain of atrocity" >= 60
+			"captain of atrocity" >= 50
 			and			
 				has "Midnight Lost Orphan: Pirate Atrocity: failed"
 				has "Midnight Lost Orphan: Republic Atrocity: failed"
@@ -294,12 +286,12 @@ mission "Midnight Lost Orphan: Chaos Hammer"
 				has "Midnight Lost Orphan: Coalition Atrocity: failed"
 
 	on offer
-		require "Midnight's Lost Orphan"
+		require "Midnight's Lost Orphan" 1
 
 	on enter
 		conversation
 			scene "outfit/midnight lost orphan"
-			`You are the Demon Captain of Atrocities, <first> <last>. The power of Midnight's Lost Chlid flows through you, granting you supernatural abilities that bend time and space. Soon after leaving the planet you are overcome with sudden pain! This is a familiar feeling. You experienced something similar when you were first possessed by Midnight's Lost Orphan. The entity... is trying to leave!`
+			`You are the Demon Captain of Atrocities, <first> <last>. The power of Midnight's Lost Orphan flows through you, granting you supernatural abilities that bend time and space. Soon after leaving the planet you are overcome with sudden pain! This is a familiar feeling. You experienced something similar when you were first possessed by Midnight's Lost Orphan. The entity... is trying to leave!`
 			choice
 				`	(Let it go.)`
 					goto release
@@ -374,8 +366,20 @@ mission "Midnight Lost Orphan: Chaos Hammer Patch"
 		has "Midnight Lost Orphan: Chaos Hammer: done"
 		not "captain of atrocity"
 	on offer
-		require "Midnight's Lost Orphan"
+		require "Midnight's Lost Orphan" 1
 		"captain of atrocity" ++
+		"Midnight Lost Orphan: Captain of Atrocity 2: offered" --
+		"Midnight Lost Orphan: Captain of Atrocity 3: offered" --
+		"Midnight Lost Orphan: Captain of Atrocity 4: offered" --
+		"Midnight Lost Orphan: Captain of Atrocity 5: offered" --
+		"Midnight Lost Orphan: Pirate Atrocity: offered" --
+		"Midnight Lost Orphan: Republic Atrocity: offered" --
+		"Midnight Lost Orphan: Syndicate Atrocity: offered" --
+		"Midnight Lost Orphan: Free Worlds Atrocity: offered" --
+		"Midnight Lost Orphan: Hai Atrocity: offered" --
+		"Midnight Lost Orphan: Remnant Atrocity: offered" --
+		"Midnight Lost Orphan: Wanderer Atrocity: offered" --
+		"Midnight Lost Orphan: Coalition Atrocity: offered" --
 		fail
 
 
@@ -401,12 +405,12 @@ mission "Midnight Lost Orphan: Arctic Dragon"
 				has "Midnight Lost Orphan: Coalition Atrocity: failed"
 
 	on offer
-		require "Midnight's Lost Orphan"
+		require "Midnight's Lost Orphan" 1
 
 	on enter
 		conversation
 			scene "outfit/midnight lost orphan"
-			`You are the Demon Captain of Atrocities, <first> <last>. The power of Midnight's Lost Chlid flows through you, granting you supernatural abilities that bend time and space. Soon after leaving the planet you are overcome with sudden pain! This is a familiar feeling. You experienced something similar when you were first possessed by Midnight's Lost Orphan. The entity... is trying to leave!`
+			`You are the Demon Captain of Atrocities, <first> <last>. The power of Midnight's Lost Orphan flows through you, granting you supernatural abilities that bend time and space. Soon after leaving the planet you are overcome with sudden pain! This is a familiar feeling. You experienced something similar when you were first possessed by Midnight's Lost Orphan. The entity... is trying to leave!`
 			choice
 				`	(Let it go.)`
 					goto release
@@ -490,8 +494,20 @@ mission "Midnight Lost Orphan: Arctic Dragon Patch"
 		has "Midnight Lost Orphan: Arctic Dragon: done"
 		not "captain of atrocity"
 	on offer
-		require "Midnight's Lost Orphan"
+		require "Midnight's Lost Orphan" 1
 		"captain of atrocity" ++
+		"Midnight Lost Orphan: Captain of Atrocity 2: offered" --
+		"Midnight Lost Orphan: Captain of Atrocity 3: offered" --
+		"Midnight Lost Orphan: Captain of Atrocity 4: offered" --
+		"Midnight Lost Orphan: Captain of Atrocity 5: offered" --
+		"Midnight Lost Orphan: Pirate Atrocity: offered" --
+		"Midnight Lost Orphan: Republic Atrocity: offered" --
+		"Midnight Lost Orphan: Syndicate Atrocity: offered" --
+		"Midnight Lost Orphan: Free Worlds Atrocity: offered" --
+		"Midnight Lost Orphan: Hai Atrocity: offered" --
+		"Midnight Lost Orphan: Remnant Atrocity: offered" --
+		"Midnight Lost Orphan: Wanderer Atrocity: offered" --
+		"Midnight Lost Orphan: Coalition Atrocity: offered" --
 		fail
 	
 
@@ -517,12 +533,12 @@ mission "Midnight Lost Orphan: Night Sword"
 				has "Midnight Lost Orphan: Coalition Atrocity: failed"
 
 	on offer
-		require "Midnight's Lost Orphan"
+		require "Midnight's Lost Orphan" 1
 
 	on enter
 		conversation
 			scene "outfit/midnight lost orphan"
-			`You are the Demon Captain of Atrocities, <first> <last>. The power of Midnight's Lost Chlid flows through you, granting you supernatural abilities that bend time and space. Soon after leaving the planet you are overcome with sudden pain! This is a familiar feeling. You experienced something similar when you were first possessed by Midnight's Lost Orphan. The entity... is trying to leave!`
+			`You are the Demon Captain of Atrocities, <first> <last>. The power of Midnight's Lost Orphan flows through you, granting you supernatural abilities that bend time and space. Soon after leaving the planet you are overcome with sudden pain! This is a familiar feeling. You experienced something similar when you were first possessed by Midnight's Lost Orphan. The entity... is trying to leave!`
 			choice
 				`	(Let it go.)`
 					goto release
@@ -593,8 +609,20 @@ mission "Midnight Lost Orphan: Night Sword Patch"
 		has "Midnight Lost Orphan: Night Sword: done"
 		not "captain of atrocity"
 	on offer
-		require "Midnight's Lost Orphan"
+		require "Midnight's Lost Orphan" 1
 		"captain of atrocity" ++
+		"Midnight Lost Orphan: Captain of Atrocity 2: offered" --
+		"Midnight Lost Orphan: Captain of Atrocity 3: offered" --
+		"Midnight Lost Orphan: Captain of Atrocity 4: offered" --
+		"Midnight Lost Orphan: Captain of Atrocity 5: offered" --
+		"Midnight Lost Orphan: Pirate Atrocity: offered" --
+		"Midnight Lost Orphan: Republic Atrocity: offered" --
+		"Midnight Lost Orphan: Syndicate Atrocity: offered" --
+		"Midnight Lost Orphan: Free Worlds Atrocity: offered" --
+		"Midnight Lost Orphan: Hai Atrocity: offered" --
+		"Midnight Lost Orphan: Remnant Atrocity: offered" --
+		"Midnight Lost Orphan: Wanderer Atrocity: offered" --
+		"Midnight Lost Orphan: Coalition Atrocity: offered" --
 		fail
 
 
@@ -609,12 +637,12 @@ mission "Midnight Lost Orphan: Blood Wind"
 		has "Midnight Lost Orphan: Arctic Dragon: done"
 		has "Midnight Lost Orphan: Night Sword: done"
 	on offer
-		require "Midnight's Lost Orphan"
+		require "Midnight's Lost Orphan" 1
 
 	on enter
 		conversation
 			scene "outfit/midnight lost orphan"
-			`You are the Demon Captain of Atrocities, <first> <last>. The power of Midnight's Lost Chlid flows through you, granting you supernatural abilities that bend time and space. Soon after leaving the planet you are overcome with sudden pain! This is a familiar feeling. You experienced something similar when you were first possessed by Midnight's Lost Orphan. The entity... is trying to leave!`
+			`You are the Demon Captain of Atrocities, <first> <last>. The power of Midnight's Lost Orphan flows through you, granting you supernatural abilities that bend time and space. Soon after leaving the planet you are overcome with sudden pain! This is a familiar feeling. You experienced something similar when you were first possessed by Midnight's Lost Orphan. The entity... is trying to leave!`
 			choice
 				`	(Let it go.)`
 					goto release
