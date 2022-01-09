@@ -754,18 +754,31 @@ mission "Midnight Market: Asteroid Catapult 1"
 	destination "Rum Cellar"
 	to offer
 		"Midnight Market" > 10
-		has "Terraforming 6: offered"
-		has "Oathbreaker Liberator 4: done"
-		has "event: Oathbreaker diminish"
+		has "Oathbreaker Thermopylae: done"
 		has "event: reveal Chasm"
 		"credits" >= 2000000
+		or
+			has "Oathbreaker Liberator 4: done"
+			has "SB-Labs Vindicator 4: done"
 	to complete
 		"credits" >= 1000000
 	on offer
 		conversation
+			branch vindicator
+				has "SB-Labs Vindicator 4: done"
+			
 			`You receive an anonymous message:`
 			scene "scene/scene-liberator"
 			`	"Greetings, Captain <first> <last>. If you are still in possession of South Bound Shipyards prototype Liberator heavy warship, we believe you would be a suitable client for a certain piece of unique merchandise that has found its way into our inventory. Come to the address in the attached data file by <date> if you are interested in purchasing this one of a kind item. Be prepared to pay one million credits at the time of the transaction."`
+				goto end
+			
+			label vindicator
+			`You receive an anonymous message:`
+			scene "scene/scene-liberator"
+			`	"Greetings, Captain <first> <last>. If you are still in possession of South Bound Shipyards prototype Vindicator heavy warship, we believe you would be a suitable client for a certain piece of unique merchandise that has found its way into our inventory. Come to the address in the attached data file by <date> if you are interested in purchasing this one of a kind item. Be prepared to pay one million credits at the time of the transaction."`
+				goto end
+			
+			label end
 			`	The address listed is for a bar on <planet> in the <system> system.`
 			choice
 				`	(Accept the invitation.)`
