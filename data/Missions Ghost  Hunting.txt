@@ -303,6 +303,7 @@ ship "Model 512" "Model 512 (dire omen)"
 		"outfit space" -38
 		"weapon capacity" -35
 		"self destruct" -.20
+		"fused circuits" -2
 	outfits
 		"Korath Minelayer" 2
 		"Korath Disruptor"

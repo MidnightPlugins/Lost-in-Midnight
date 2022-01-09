@@ -359,6 +359,7 @@ outfit "Reasoning Node (Damaged)"
 	thumbnail "outfit/damaged reasoning node"
 	"mass" 1
 	"outfit space" -1
+	"fused circuits" 1
 	description "This miniature computer appears to be damaged. Hopefully it wasn't an important part of the systems for the ship it was installed on."
 
 
@@ -393,6 +394,7 @@ outfit "Systems Core (Damaged)"
 	"hull heat" .6
 	"energy consumption" 0.8
 	"heat generation" 1.2
+	"fused circuits" 1
 	description `Despite massive damage, this hybrid shield generator computer system is still operational to some degree.`
 
 
