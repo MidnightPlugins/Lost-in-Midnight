@@ -123,7 +123,7 @@ ship "Kestrel Prototype"
 		"outfit space" 810
 		"weapon capacity" 390
 		"engine capacity" 210
-		"cloaking fuel" -.2
+		"fused circuits" 1
 		weapon
 			"blast radius" 260
 			"shield damage" 2600
@@ -133,7 +133,7 @@ ship "Kestrel Prototype"
 		"Large Collector Module" 3
 		"Jump Drive"
 		"Inhibitor Cannon" 6
-		"Cloaking Device"
+		"Cloaking Prototype (Damaged)"
 		"Point Defense Turret" 2
 		"Large Radar Jammer"
 		"Ka'het Annihilator Turret" 2
@@ -181,7 +181,7 @@ ship "Kestrel Prototype" "Kestrel Prototype (Void Rifle)"
 		"Large Collector Module" 3
 		"Jump Drive"
 		"Inhibitor Cannon" 6
-		"Cloaking Device"
+		"Cloaking Prototype (Damaged)"
 		"Point Defense Turret" 2
 		"Large Radar Jammer"
 		"Ka'het Annihilator Turret" 2

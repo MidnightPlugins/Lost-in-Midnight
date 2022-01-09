@@ -811,8 +811,6 @@ mission "Nemesis: Grave Digger"
 		personality target waiting staying plunders marked unconstrained vindictive
 		system Aki'il
 		ship "Kestrel Prototype (Void Rifle)" "Grave Digger"
-		ship "Petrel" Senluo 
-		ship "Petrel" Yanluo 
 		dialog `Lu Bu makes one final taunt. "You think the Remnant didn't have me run scans on you!?! Remnant only look out for Remnant. After I'm gone, you are next!"`
 
 	npc kill
@@ -822,8 +820,6 @@ mission "Nemesis: Grave Digger"
 		personality target waiting staying plunders marked unconstrained vindictive
 		system Aki'il
 		ship "Kestrel Prototype" "Grave Digger"
-		ship "Petrel" Senluo 
-		ship "Petrel" Yanluo 
 		dialog `Lu Bu makes one final taunt. "You think the Remnant didn't have me run scans on you!?! Remnant only look out for Remnant. After I'm gone, you are next!"`
 
 	npc
@@ -846,6 +842,8 @@ mission "Nemesis: Grave Digger"
 		ship "Gull (Gravedigger)" "Netherworld Guardian"
 		ship "Gull (Gravedigger)" "Underworld Harbinger"
 		ship "Gull (Gravedigger)" "Lord of Midnight"
+		ship "Petrel" Senluo 
+		ship "Petrel" Yanluo 
 
 	npc
 		government "Grave Diggers"
@@ -902,23 +900,6 @@ event "Gravedigger defeated"
 		remove fleet "Grave Digger raid" 8000
 	system Ritilas
 		remove fleet "Grave Digger raid" 10000
-
-outfitter "Ka'het salvage"
-	"EMP Torpedo"
-	"Ka'het Annihilator"
-	"Ka'het Annihilator Turret"
-	"Ka'het EMP Deployer"
-	"Ka'het Ravager Beam"
-	"Ka'het Ravager Turret"
-	"Ka'het Support Cooling" 
-	"Ka'het Primary Cooling"
-	"Ka'het Shield Restorer"
-	"Ka'het MHD Generator"
-	"Ka'het Reserve Accumulator"
-	"Maeri Engine Nacelles"
-	"Ka'het Compact Engine"
-	"Ka'het Sustainer Nacelles"
-	"Telis Engine Nacelles"
 
 
 

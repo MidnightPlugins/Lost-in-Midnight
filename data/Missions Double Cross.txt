@@ -178,7 +178,7 @@ mission "Escort Independence"
 		to spawn
 			"ships: Medium Warship" + "ships: Heavy Warship" + "ships: Heavy Freighter" >= 7
 		government "Republic"
-		personality entering staying heroic
+		personality entering heroic
 		fleet "Small Republic" 2
 
 	npc
@@ -186,14 +186,15 @@ mission "Escort Independence"
 			"ships: Medium Warship" + "ships: Heavy Warship" + "ships: Heavy Freighter" >= 8
 		government "Republic"
 		personality waiting heroic
-		system destination
+		system
+			distance 2 3
 		fleet "Small Republic" 2
 
 	npc
 		to spawn
 			"ships: Medium Warship" + "ships: Heavy Warship" + "ships: Heavy Freighter" >= 9
 		government "Republic"
-		personality waiting staying heroic
+		personality waiting heroic
 		system destination
 		fleet "Large Republic"
 
@@ -201,7 +202,7 @@ mission "Escort Independence"
 		to spawn
 			"ships: Medium Warship" + "ships: Heavy Warship" + "ships: Heavy Freighter" >= 10
 		government "Republic"
-		personality waiting staying heroic
+		personality enering heroic
 		system destination
 		fleet "Large Republic"
 
@@ -209,7 +210,9 @@ mission "Escort Independence"
 		to spawn
 			"ships: Medium Warship" + "ships: Heavy Warship" + "ships: Heavy Freighter" >= 11
 		government "Republic"
-		personality entering staying heroic
+		personality entering heroic
+		system
+			distance 2 3
 		fleet "Large Republic"
 
 	npc
@@ -278,10 +281,11 @@ mission "Escort Independence"
 			names "civilian"
 			variant
 				"Protector"
+				"Vanguard"
 
 	npc accompany save
 		government "Merchant"
-		personality launching timid
+		personality launching timid escort
 		ship "Mastodon" "Independence"
 
 	on fail

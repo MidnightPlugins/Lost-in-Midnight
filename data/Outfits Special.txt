@@ -125,17 +125,18 @@ outfit "Celestial Compass"
 
 
 
-# The Cloaking Prototype will have to be stolen in a Double Cross mission.
+# The Cloaking Prototype (Damaged) is installed on the Grave Digger.
 
-outfit "Cloaking Prototype"
+outfit "Cloaking Prototype (Damaged)"
 	category "Systems"
 	cost 1200000
-	"mass" 12
-	"outfit space" -12
+	"mass" 11
+	"outfit space" -11
 	"cloak" .007
 	"cloaking energy" 1.3
-	"cloaking fuel" .3
+	"cloaking fuel" .25
 	"unplunderable" 1
+	"fused circuits" 1
 	description "You're sure the cloaking prototype is here somewhere, but you can't see it."
 
 
