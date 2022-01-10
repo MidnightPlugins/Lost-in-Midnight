@@ -24,6 +24,7 @@ mission "First Contact: Subsidurials"
 			`It is unclear what these creatures are, where they come from, or how they evolved. Scientists have dissected several, but so far the results have simply been that these creatures contain no materials or resources of value; are not even slightly edible, and are too big to be kept as pets.`
 			`To date, none have demonstrated any sign of sapience, and the few captains who have seen them basically consider them to be the bison of space.`
 		conversation
+			scene "thumbnail/subsidurial"
 			`As you land you notice a ship on a nearby landing pad is unloading some kind of huge creature bound to a hoverlift. It sort of looks like a giant hairy slug. Despite it's bindings, the creature manages to make the hoverlift bounce around on the landing pad. Several dock workers narrowly avoid being crushed by it.`
 			`	When you disembark from your own ship, you can hear a representative from the port authority ordering the captain of the other ship to unbind the creature and let it go. Supposedly, the creature is called a "Subsidurial" and has no scientific, commercial, or nutritional value whatsoever.`
 			`	"At least once a month!" yells the representative. "A new inexperienced captain hauls one in thinking he's caught some rare valuable specimen that will put him in the history books. Idiots!"`
