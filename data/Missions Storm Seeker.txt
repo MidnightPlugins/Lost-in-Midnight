@@ -100,7 +100,7 @@ mission "Storm Seeker Skulduggery"
 	deadline 1
 	on offer
 		conversation
-			scene "thumbnail/storm seeker-thumb"
+			scene "scene/scene-stormseekerskulduggery"
 			`Ever since you landed, you've had the feeling that something about the spaceport seeems different, but you're not sure what it is. As you start to inspect one of the abandoned ships, you hear the roar of engines outside! Rushing out of the abandoned space ship, you see a medium warship taking off with several of the abandoned interceptors. Do you pursue?`
 			choice
 				`	Of course!`
@@ -135,7 +135,7 @@ mission "Storm Seeker Raid: Free Worlds"
 				accept
 	on enter
 		conversation
-			scene "thumbnail/storm seeker-thumb"
+			scene "scene/scene-stormseekerraid"
 			`This is no ordinary pirate fleet. Amid the chaos you spot a familiar ship jumping away from the system...`
 				accept
 
@@ -191,7 +191,7 @@ mission "Storm Seeker Raid: Syndicate"
 				accept
 	on enter
 		conversation
-			scene "thumbnail/storm seeker-thumb"
+			scene "scene/scene-stormseekerraid"
 			`This is no ordinary pirate fleet. Amid the chaos you spot a familiar ship jumping away from the system...`
 				accept
 
@@ -247,7 +247,7 @@ mission "Storm Seeker Raid: Deep"
 				accept
 	on enter
 		conversation
-			scene "thumbnail/storm seeker-thumb"
+			scene "scene/scene-stormseekerraid"
 			`This is no ordinary pirate fleet. Amid the chaos you spot a familiar ship jumping away from the system...`
 				accept
 
@@ -303,7 +303,7 @@ mission "Storm Seeker Raid: Paradise"
 				accept
 	on enter
 		conversation
-			scene "thumbnail/storm seeker-thumb"
+			scene "scene/scene-stormseekerraid"
 			`This is no ordinary pirate fleet. Amid the chaos you spot a familiar ship jumping away from the system...`
 				accept
 
@@ -357,7 +357,7 @@ mission "Storm Seeker Raid: North"
 				accept
 	on enter
 		conversation
-			scene "thumbnail/storm seeker-thumb"
+			scene "scene/scene-stormseekerraid"
 			`This is no ordinary pirate fleet. Amid the chaos you spot a familiar ship jumping away from the system...`
 				accept
 
@@ -433,7 +433,7 @@ mission "Storm Seeker Counter Attack 2"
 		has "Storm Seeker Counter Attack 1: done"
 	on offer
 		conversation
-			scene "thumbnail/storm seeker-thumb"
+			scene "scene/scene-stormseekerstrategy"
 			`As soon as you arrive on Luna, Navy Intelligence escorts you to the meeting. There, you and a small group of other elite captains are given a debiefing regarding the raids which have taken place and the Alpha ship which was present during all of these attacks. Each of the captains present assisted in defending against these raids. While you feel a sense of pride in defending more planets than the other captains, you note that there were more planets attacked that you were not involved in defending. The captain who succesfully eliminates this threat will be granted a set of  temporary Navy Licenses for one month. You are all dismissed.`
 				accept
 	on accept
@@ -602,7 +602,9 @@ mission "Storm Seeker Counter Attack 4"
 		"Storm Seeker Raid: Free Worlds: offered" ++
 	
 	on enter
-		dialog `Kenney cowers in a corner of your ship muttering unintelligently to himself while you engage the Rolling Thunder. As you clear the planet's atmosphere, scanners show that more company has arrived...`
+		conversation
+			scene "scene/scene-badcompany"
+			`Kenney cowers in a corner of your ship muttering unintelligently to himself while you engage the Rolling Thunder. As you clear the planet's atmosphere, scanners show that more company has arrived...`
 	
 	npc
 		government "Alpha"
