@@ -342,6 +342,15 @@ phrase "hostile oathbreaker"
 
 
 
+phrase "storm seeker"
+	word
+		"No sign of the Rolling Thunder here."
+		"We're still searching for the Rolling Thunder."
+		"We've had no luck tracking down the Rolling Thunder."
+		"Do you have any leads on the Rolling Thunder?"
+		"Any idea where the Rolling Thunder might be hiding?"
+		"We haven't found any clues regarding the Rolling Thunder."
+
 # Nemesis hails
 
 phrase "hostile nemesis"

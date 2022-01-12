@@ -1034,3 +1034,9 @@ fleet "Grave Digger raid"
 		"Starling (Gravedigger)" 2
 	variant 3
 		"Gull (Gravedigger)" 2
+		
+fleet "Storm Seeker Escort"
+	government "Pirate"
+	variant
+		"Shallow Pond" 10
+		"Flycatcher" 10

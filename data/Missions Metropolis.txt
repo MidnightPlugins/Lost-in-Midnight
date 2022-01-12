@@ -607,7 +607,7 @@ mission "Caspar Capture"
 		ship "Municipality" "Caspar"
 		conversation
 			`	When you board the ship, you find the only surviving crew are children. Amazingly, they are diligently repairing the ship and pay you no attention. When you meet their new captain, Tyler Maverick, you find that he is a mere teenager.`
-			`	Welcome aboard my ship Captain <last>, hero of the war. I was both surprised and relieved when our scanners indicated <ship> was nearby. Surely, a captain of your reputation could be trusted to render assistance."`
+			`	"Welcome aboard my ship Captain <last>, hero of the war. I was both surprised and relieved when our scanners indicated <ship> was nearby. Surely, a captain of your reputation could be trusted to render assistance."`
 			choice
 				`	"Your crew is already repairing the ship. What do you need me for?"`
 				`	"I'll help, on the condition that you relinquish your ship."`
@@ -857,106 +857,6 @@ mission "Metropolis 2"
 
 
 
-ship "Kestrel" "Kestrel (Battle Engines)"
-	add attributes
-		"drag" -1.0
-		"fuel capacity" 100
-		"engine capacity" 30
-	outfits
-		"Particle Cannon" 4
-		"Torpedo Launcher" 2
-		"Torpedo" 60
-		"Heavy Laser Turret" 4
-		
-		"Fusion Reactor"
-		"LP144a Battery Pack"
-		"D94-YV Shield Generator"
-		"Fuel Pod" 3
-		"Liquid Helium Cooler"
-		"Tactical Scanner" 2
-		
-		"Afterburner"
-		"Orca Plasma Thruster"
-		"Orca Plasma Steering"
-		"Hyperdrive"
-		"Sniper Rifle"
-		"Laser Rifle" 127
-
-	gun "Torpedo Launcher"
-	gun "Torpedo Launcher"
-	gun "Particle Cannon"
-	gun "Particle Cannon"
-	gun "Particle Cannon"
-	gun "Particle Cannon"
-
-ship "Kestrel" "Kestrel (Battle Shields)"
-	add attributes
-		"shields" 3000
-		"hull" 1500
-		"heat dissipation" .06
-	outfits
-		"Particle Cannon" 4
-		"Torpedo Launcher" 2
-		"Torpedo" 60
-		"Heavy Laser Turret" 4
-		
-		"Fusion Reactor"
-		"LP072a Battery Pack"
-
-		"D94-YV Shield Generator"
-		"D41-HY Shield Generator"
-		"Liquid Nitrogen Cooler"
-		"Tactical Scanner" 2
-		
-		"Orca Plasma Thruster"
-		"Orca Plasma Steering"
-		"Hyperdrive"
-		"Sniper Rifle"
-		"Laser Rifle" 127
-
-	gun "Torpedo Launcher"
-	gun "Torpedo Launcher"
-	gun "Particle Cannon"
-	gun "Particle Cannon"
-	gun "Particle Cannon"
-	gun "Particle Cannon"
-
-ship "Kestrel" "Kestrel (Battle Weapons)"
-	add attributes
-		"weapon capacity" 40
-	outfits
-		"Particle Cannon" 4
-		"Meteor Missile Launcher" 6
-		"Meteor Missile" 180
-		"Torpedo Launcher" 2
-		"Torpedo" 60
-		"Heavy Laser Turret" 4		
-		"Fusion Reactor"
-		"LP144a Battery Pack"
-		"D94-YV Shield Generator"
-		"Liquid Nitrogen Cooler"
-		"Tactical Scanner" 2
-		"Orca Plasma Thruster"
-		"Orca Plasma Steering"
-		"Hyperdrive"
-		"Sniper Rifle"
-		"Laser Rifle" 127
-	gun -31 66 "Particle Cannon"
-	gun 31 66 "Particle Cannon"
-	gun -31 66 "Meteor Missile Launcher"
-	gun 31 66 "Meteor Missile Launcher"
-	gun -53 61 "Particle Cannon"
-	gun 53 61 "Particle Cannon"
-	gun -53 61 "Meteor Missile Launcher"
-	gun 53 61 "Meteor Missile Launcher"
-	gun -75 57 "Torpedo Launcher"
-	gun 75 57 "Torpedo Launcher"
-	gun -75 57 "Meteor Missile Launcher"
-	gun 75 57 "Meteor Missile Launcher"
-	turret -7 -4 "Heavy Laser Turret"
-	turret 7 -4 "Heavy Laser Turret"
-	turret -23 14 "Heavy Laser Turret"
-	turret 23 14 "Heavy Laser Turret"
 	
 
 

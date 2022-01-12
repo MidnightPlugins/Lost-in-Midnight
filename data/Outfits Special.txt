@@ -125,9 +125,9 @@ outfit "Celestial Compass"
 
 
 
-# The Cloaking Prototype (Damaged) is installed on the Grave Digger.
+# The Cloaking Device (Damaged) is installed on the Grave Digger.
 
-outfit "Cloaking Prototype (Damaged)"
+outfit "Cloaking Device (Damaged)"
 	category "Systems"
 	cost 1200000
 	"mass" 11
@@ -137,7 +137,7 @@ outfit "Cloaking Prototype (Damaged)"
 	"cloaking fuel" .25
 	"unplunderable" 1
 	"fused circuits" 1
-	description "You're sure the cloaking prototype is here somewhere, but you can't see it."
+	description "You're sure the cloaking device is here somewhere, but you can't see it."
 
 
 

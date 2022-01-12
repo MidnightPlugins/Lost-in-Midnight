@@ -552,7 +552,7 @@ mission "Lares Camping (Scavenger)"
 		random < 30 - "day"
 		or
 			not "Lares Camping (Raiders): active"
-			not ""Lares Camping (Bums): active"
+			not "Lares Camping (Bums): active"
 	on offer
 		conversation
 			`Despte being abandoned, the nearby cabins are well furnished. It might be a nice change of pace to sleep somewhere other than the cramped bunk on your ship.`
@@ -667,8 +667,8 @@ mission "Underworld Meeting (easy)"
 	passengers 1
 	to offer
 		has "Cartography: Quarg Hitchhiker 4: done"
-		not "Underworld Meeting (hard): offered"
-		random < 60
+		not "Underworld Meeting (hard): active"
+		random < 25
 	on stopover
 		dialog
 			`Your passenger directs you through a network of underground caverns to reach the designated meeting spot. The other party arrives and they complete their business. Time to go back to <origin>.`
@@ -681,19 +681,19 @@ mission "Underworld Meeting (easy)"
 	on complete
 		clear "Underworld Meeting (easy): offered"
 		payment 50000
-		dialogue `Your passenger thanks you and pays <payment>. Ferrying people to the underworld is easy work if the job turns out like this.`
+		dialog `Your passenger thanks you and pays <payment>. Ferrying people to the underworld is easy work if the job turns out like this.`
 
 mission "Underworld Meeting (hard)"
 	job
 	name "Underworld Meeting"
-	description "Take <fare> to a clandestine meeting in <stopovers>'s underworld. Then return them to <origin>. Payment is 50000"
+	description "Take <fare> to a clandestine meeting in <stopovers>'s underworld. Then return them to <origin>. Payment is 50000 credits."
 	source "Wang Xiang Tai"
 	stopover "Naihe Qiao"
 	passengers 1
 	to offer
 		has "Cartography: Quarg Hitchhiker 4: done"
-		not "Underworld Meeting (easy): offered"
-		random < 40
+		not "Underworld Meeting (easy): active"
+		random < 25
 	on accept
 		set "Underworld Meeting goes badly"
 	on stopover

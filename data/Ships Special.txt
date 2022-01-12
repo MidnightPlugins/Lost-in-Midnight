@@ -15,6 +15,125 @@
 
 
 
+#  An ancient Wanderer warship salvaged by pirates in the Storm Seeker missions.
+
+ship "Storm Seeker"
+	sprite "ship/storm seeker"
+	thumbnail "thumbnail/storm seeker-thumb"
+	attributes
+		category "Medium Warship"
+		licenses
+			"Wanderer Military"
+		"cost" 16500000
+		"shields" 28700
+		"hull" 20000
+		"required crew" 18
+		"bunks" 40
+		"mass" 290
+		"drag" 4.9
+		"heat dissipation" .7
+		"fuel capacity" 600
+		"cargo space" 85
+		"outfit space" 493
+		"weapon capacity" 250
+		"engine capacity" 114
+		"outfit scan power" 25
+		"outfit scan speed" 1
+		"tactical scan power" 25
+		weapon
+			"blast radius" 200
+			"shield damage" 2000
+			"hull damage" 1000
+			"hit force" 3000
+	outfits
+		"Sunbeam" 6
+		"Wanderer Anti-Missile"
+		
+		"White Sun Reactor"
+		"Dark Storm Shielding"
+		"Wanderer Ramscoop" 1
+		
+		"Type 1 Radiant Thruster"
+		"Type 2 Radiant Thruster"
+		"Type 3 Radiant Steering"
+		"Jump Drive"
+		
+	engine -31 101
+	engine 31 101
+	gun -24 -50.5
+	gun 25 -50.5
+	gun -64.5 -9
+	gun 62.5 -9
+	gun -58 -1
+	gun 56.5 -1
+	turret 0 -4
+	explode "small explosion" 60
+	explode "medium explosion" 40
+	explode "large explosion" 20
+	"final explode" "final explosion medium"
+	description "An old relic from a time when the Wanderers occupied what is now southern human space, the Storm Seeker is a destroyer with an array of information warfare technologies built directly into the hull."
+
+
+
+# Shallow Ponds often escort the Storm Seeeker in the Storm Seeker missions.
+# A limited number of them can be salvaged from Season's End.
+
+ship "Shallow Pond"
+	sprite "ship/shallow pond"
+	thumbnail "thumbnail/shallow pond-thumb"
+	attributes
+		category "Interceptor"
+		"cost" 690000
+		"shields" 3300
+		"hull" 600
+		"required crew" 1
+		"bunks" 4
+		"mass" 150
+		"drag" 2.1
+		"heat dissipation" .8
+		"fuel capacity" 300
+		"cargo space"  0
+		"outfit space" 169
+		"weapon capacity" 34
+		"engine capacity" 47
+		weapon
+			"blast radius" 36
+			"shield damage" 180
+			"hull damage" 360
+			"hit force" 540
+	outfits
+		"Sunbeam"
+
+		"Red Sun Reactor"
+		"Bright Cloud Shielding"
+
+		"Type 2 Radiant Thruster"
+		"Type 2 Radiant Steering"
+		Hyperdrive		
+
+	engine -9 51
+	engine 9 51
+	gun 1 -5.5
+	bay "Drone" 1 -27.5
+		under
+	leak "leak" 60 50
+	explode "tiny explosion" 10
+	explode "small explosion" 20
+	explode "medium explosion" 5
+	"final explode" "final explosion small"
+	description "These ancient Wanderer interceptors can deploy a drone for added versatility in combat."
+
+ship "Shallow Pond" "Shallow Pond (Jump)"
+	outfits
+		"Sunbeam"
+		"Red Sun Reactor"
+		"Bright Cloud Shielding"
+		"Type 2 Radiant Thruster"
+		"Type 2 Radiant Steering"
+		"Jump Drive"
+
+
+
 # The Carabao is Quash's unique city ship in the Cartographer missions.
 
 ship "Carabao"
@@ -123,7 +242,7 @@ ship "Kestrel Prototype"
 		"outfit space" 810
 		"weapon capacity" 390
 		"engine capacity" 210
-		"fused circuits" 1
+		"fused circuits" -1
 		weapon
 			"blast radius" 260
 			"shield damage" 2600
@@ -133,7 +252,7 @@ ship "Kestrel Prototype"
 		"Large Collector Module" 3
 		"Jump Drive"
 		"Inhibitor Cannon" 6
-		"Cloaking Prototype (Damaged)"
+		"Cloaking Device (Damaged)"
 		"Point Defense Turret" 2
 		"Large Radar Jammer"
 		"Ka'het Annihilator Turret" 2
@@ -181,7 +300,7 @@ ship "Kestrel Prototype" "Kestrel Prototype (Void Rifle)"
 		"Large Collector Module" 3
 		"Jump Drive"
 		"Inhibitor Cannon" 6
-		"Cloaking Prototype (Damaged)"
+		"Cloaking Device (Damaged)"
 		"Point Defense Turret" 2
 		"Large Radar Jammer"
 		"Ka'het Annihilator Turret" 2
@@ -206,6 +325,113 @@ ship "Kestrel Prototype" "Kestrel Prototype (Void Rifle)"
 	turret "Point Defense Turret"
 	turret "Ka'het Annihilator Turret"
 	turret "Ka'het Annihilator Turret"
+
+
+
+
+# Kestrel variants from the Metropolis and Storm Seeker missions. Which one spawns depends on the player's choice during the original Kestrel missions.
+
+ship "Kestrel" "Kestrel (Battle Engines)"
+	add attributes
+		"drag" -1.0
+		"fuel capacity" 100
+		"engine capacity" 30
+	outfits
+		"Particle Cannon" 4
+		"Torpedo Launcher" 2
+		"Torpedo" 60
+		"Heavy Laser Turret" 4
+		
+		"Fusion Reactor"
+		"LP144a Battery Pack"
+		"D94-YV Shield Generator"
+		"Fuel Pod" 3
+		"Liquid Helium Cooler"
+		"Tactical Scanner" 2
+		
+		"Afterburner"
+		"Orca Plasma Thruster"
+		"Orca Plasma Steering"
+		"Hyperdrive"
+		"Sniper Rifle"
+		"Laser Rifle" 127
+
+	gun "Torpedo Launcher"
+	gun "Torpedo Launcher"
+	gun "Particle Cannon"
+	gun "Particle Cannon"
+	gun "Particle Cannon"
+	gun "Particle Cannon"
+
+ship "Kestrel" "Kestrel (Battle Shields)"
+	add attributes
+		"shields" 3000
+		"hull" 1500
+		"heat dissipation" .06
+	outfits
+		"Particle Cannon" 4
+		"Torpedo Launcher" 2
+		"Torpedo" 60
+		"Heavy Laser Turret" 4
+		
+		"Fusion Reactor"
+		"LP072a Battery Pack"
+
+		"D94-YV Shield Generator"
+		"D41-HY Shield Generator"
+		"Liquid Nitrogen Cooler"
+		"Tactical Scanner" 2
+		
+		"Orca Plasma Thruster"
+		"Orca Plasma Steering"
+		"Hyperdrive"
+		"Sniper Rifle"
+		"Laser Rifle" 127
+
+	gun "Torpedo Launcher"
+	gun "Torpedo Launcher"
+	gun "Particle Cannon"
+	gun "Particle Cannon"
+	gun "Particle Cannon"
+	gun "Particle Cannon"
+
+ship "Kestrel" "Kestrel (Battle Weapons)"
+	add attributes
+		"weapon capacity" 40
+	outfits
+		"Particle Cannon" 4
+		"Meteor Missile Launcher" 6
+		"Meteor Missile" 180
+		"Torpedo Launcher" 2
+		"Torpedo" 60
+		"Heavy Laser Turret" 4		
+		"Fusion Reactor"
+		"LP144a Battery Pack"
+		"D94-YV Shield Generator"
+		"Liquid Nitrogen Cooler"
+		"Tactical Scanner" 2
+		"Orca Plasma Thruster"
+		"Orca Plasma Steering"
+		"Hyperdrive"
+		"Sniper Rifle"
+		"Laser Rifle" 127
+	gun -31 66 "Particle Cannon"
+	gun 31 66 "Particle Cannon"
+	gun -31 66 "Meteor Missile Launcher"
+	gun 31 66 "Meteor Missile Launcher"
+	gun -53 61 "Particle Cannon"
+	gun 53 61 "Particle Cannon"
+	gun -53 61 "Meteor Missile Launcher"
+	gun 53 61 "Meteor Missile Launcher"
+	gun -75 57 "Torpedo Launcher"
+	gun 75 57 "Torpedo Launcher"
+	gun -75 57 "Meteor Missile Launcher"
+	gun 75 57 "Meteor Missile Launcher"
+	turret -7 -4 "Heavy Laser Turret"
+	turret 7 -4 "Heavy Laser Turret"
+	turret -23 14 "Heavy Laser Turret"
+	turret 23 14 "Heavy Laser Turret"
+
 
 
 

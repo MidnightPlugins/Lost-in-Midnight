@@ -15,6 +15,44 @@
 
 
 
+mission "Alternative Astroid Ammo"
+	name "Alternative Astroid Ammo"
+	description "Deliver 300 tons of junk metal to <destination>, where it can be converted into ammunition for your asteroid catapult."
+	destination
+		attributes "factory" "mining" "dirt belt"
+	cargo "Junk Metal" 300
+	to offer
+		"combat rating" > 10000
+		or
+			has "event: Asteroid Catapult Remnant"
+			has "event: Asteroid Catapult Unfettered"
+	on offer
+		require "Asteroid Catapult"
+		conversation
+			scene "outfit/metallic asteroid"
+			`A man in a dirty jumpsuit approaches you. "Captain <first> <last>? I've heard you use an asteroid catapult. Have you considered the benefits of using recycled junk metal instead?"`
+			choice
+				`	"What benefits?"`
+				`	"Sorry, not interested."`
+					decline
+			`"Well, for starters, its much more readily available. You can get it almost anywhere! And it's good for the environment too. How about I load you up with 300 tons? Just take it to a recycler and tell then you want it compacted into roughly the same size and shape as the asteroids you normally use.`
+			choice
+				`	"Sounds interesting. Okay, I'll try it!"`
+				`	That sounds like a hassle. I'm happier relying on my current supplier's expertise in handling acquisition.`
+					decline
+			`"Glad to hear it! I'll have it loaded onto your ship right away!"`
+				accept
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		outfit "Aluminum" 30
+		payment -20000
+		conversation
+			scene "outfit/harvested aluminum"
+			`The recycler charges you <payment> for processing the junk metal. When they're done, you have 30 compacted clumps of metal. Once you get the load back to your ship, you test them. Unfortunately, they aren't magnetic so you can't use them! In the end, you manage to scrape together 30 tons of aluminum from the metal clumps.`
+
+
+
 mission "Destroy Independence (North)"
 	name "Mastodon Hunting"
 	description "The Independence is the last Mastodon city ship still in service. You've received a tip that it will pass through <waypoints>. Capture this rare ship and add it to your fleet!"
@@ -202,7 +240,7 @@ mission "Escort Independence"
 		to spawn
 			"ships: Medium Warship" + "ships: Heavy Warship" + "ships: Heavy Freighter" >= 10
 		government "Republic"
-		personality enering heroic
+		personality entering heroic
 		system destination
 		fleet "Large Republic"
 

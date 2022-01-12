@@ -123,6 +123,67 @@ system Archipelago
 
 
 
+system Aya'arak
+	hidden
+	pos -593.479 463.399
+	government Uninhabited Midnight
+	habitable 1080
+	asteroids "small rock" 88 2.016
+	asteroids "medium rock" 10 4.932
+	asteroids "large rock" 4 1.908
+	asteroids "small metal" 23 2.556
+	asteroids "medium metal" 1 2.268
+	asteroids "large metal" 10 5.076
+	minables aluminum 20 1.132
+	minables copper 12 2.023
+	minables tungsten 4 3.223
+	trade Clothing 290
+	trade Electronics 740
+	trade Equipment 530
+	trade Food 350
+	trade "Heavy Metals" 960
+	trade Industrial 720
+	trade "Luxury Goods" 1220
+	trade Medical 680
+	trade Metal 390
+	trade Plastic 390
+	object
+		sprite star/g0
+		period 10
+	object
+		sprite planet/ice2
+		distance 642.115
+		period 198.046
+		offset 156.233
+		object
+			sprite planet/dust3
+			distance 208.318
+			period 37.7966
+			offset 164.036
+	object
+		sprite planet/jupiter
+		distance 1314.84
+		period 580.31
+		offset 155.071
+		object
+			sprite planet/rock7
+			distance 265.412
+			period 13.5876
+			offset 275.021
+		object "Season's End"
+			sprite "planet/seasons end"
+			distance 342.412
+			period 19.9106
+			offset 263.061
+	object
+		sprite "planet/collapsed wormhole"
+		distance 1956.39
+		period 1053.25
+		offset 163.793
+
+
+
+
 system Chasm
 	hidden
 	pos -760.745 156.878
@@ -704,40 +765,18 @@ system Zubahai
 
 
 
-planet "Rum Cellar"
-	attributes station midnight pirate "south pirate" south
-	landscape land/sivael1
-	description `During the early days of humanity's expansion into space, the success of a pirate base was determined more by its ability to remain hidden than on the strength of a defensive fleet. Rum Cellar is one of those early success stories, thanks to the alien device orbiting Chasm's sun. The pirates who first found the abandoned artifact quickly learned how to use it to shut down the hyperspace link to the system. This allowed Chasm to remain a secret out of reach from authoritarian governments.`
-	spaceport `Many of the pirate ships parked here are damaged. It's a wonder some of them were able to escape the Navy in the condition that they are in.`
-	shipyard "Core Pirates"
-	shipyard "Northern Pirates"
-	shipyard "Southern Pirates"
-	outfitter "Basic Outfits"
-	outfitter "Common Outfits"
-	outfitter "Ammo North"
-	outfitter "Ammo South"
-	outfitter "Pirate Outfits"
-	bribe 0.05
-	security 0
-	tribute 1000
-		threshold 2000
-		fleet "Small Independent (Killable)" 5
-		fleet "Large Independent (Killable)" 1
-		fleet "Small Southern Pirates" 1
-		fleet "Small Core Pirates" 1
-		fleet "Small Northern Pirates" 1
-		fleet "pirate raid" 3
-		fleet "Marauder Independent (Killable)" 5
-
 planet Corpse
 	attributes uninhabited midnight
 	landscape land/mars0
 	description `Several asteroids have formed a cluster at this location. Perhaps they are all that remain of a destroyed planet that once occupied this orbital path. With no atmosphere and the danger of asteroid collisions, a heavy environental suit is necessary to explore the area.`
+	government Uninhabited
+	security 0
 
 planet Detritus
 	attributes uninhabited midnight station south
 	landscape land/loc3
 	description `This alien artifact is capable of connecting and disconnecting the hyperspace links to the system it is in. How it does this is a mystery. This particular facility has taken heavy damage from asteroid collisions. A hole large enough to squeeze your ship through has granted you access to its inner workings.`
+	government Uninhabited
 	security 0
 
 planet "Firefly Hatchery"
@@ -749,15 +788,20 @@ planet "Firefly Hatchery"
 "landing message" "This is not something you can land on."
 	"planet/firefly hatchery"
 
+
 planet Fossil
 	attributes uninhabited midnight
 	landscape "land/crystalline ruins"
 	description `Other than some isolated patches of grass and shrubs, you find no signs of life on this desolate world. But signs of an ancient civilization remain. A set of crystalline ruins stands alone as a monument to whatever species once called this planet home. The mysterious megaliths tower over you and are engraved with patterns which suggest that whoever built them had some understanding of astronomy.`
+	government Uninhabited
+	security 0
 
 planet "Hell's Maw"
 	attributes uninhabited midnight
 	landscape land/lava8
 	description `This dying world has been cracked open. The cooled mantle still glows with rivers of lava and the core sheds an eerie light upon the rocky outcroppings. Strange interstellar creatures dart across the planet's innards, feasting on its exposed mineral deposits. While there are thin traces of various gasses forming a thin atmosphere, it is not enough to support a human. When the exposed core faces the sun, the heat below the edge of the broken crust exceeds recommended safety limits. With the additional dangers from the hazardous environent and wildlife, a heavy environmental suit is necessary to explore the area.`
+	government Uninhabited
+	security 0
 
 planet Janus
 	attributes midnight archipelago pirate "dirt belt pirate" "dirt belt" frontier
@@ -812,13 +856,50 @@ planet Orphan
 	landscape land/badlands6
 	description `This frozen planet has been separated from its home system and floats free in the empty void. Although the world is uninhabited, there are Quarg ruins here. Most of the buildings have been demolished by some unknown force. As is typical for a Quarg world, the air is too thin for human comfort.`
 	spaceport `Since there is no sun to power your ramscoops, it is fortunate that you are able to find an abandoned spaceport with some stockpiled fuel to salvage here.`
+	government Uninhabited
+	security 0
 	
 planet Quiet
 	attributes uninhabited ringworld midnight
 	landscape land/station2dark
 	description `This ruined shard orbits the orphan planet as if in mockery of how other Quarg ringworlds orbit stars. Not enough energy is being generated by the power systems for life support to provide an atmosphere. Wearing a heavy environmental suit is necessary for exploring this derelict ruin.`
 	spaceport `The abandoned spaceport barely has any fuel or spare parts to salvage.`
-	
+	government Uninhabited
+	security 0
+
+planet "Rum Cellar"
+	attributes station midnight pirate "south pirate" south
+	landscape land/sivael1
+	description `During the early days of humanity's expansion into space, the success of a pirate base was determined more by its ability to remain hidden than on the strength of a defensive fleet. Rum Cellar is one of those early success stories, thanks to the alien device orbiting Chasm's sun. The pirates who first found the abandoned artifact quickly learned how to use it to shut down the hyperspace link to the system. This allowed Chasm to remain a secret out of reach from authoritarian governments.`
+	spaceport `Many of the pirate ships parked here are damaged. It's a wonder some of them were able to escape the Navy in the condition that they are in.`
+	shipyard "Core Pirates"
+	shipyard "Northern Pirates"
+	shipyard "Southern Pirates"
+	outfitter "Basic Outfits"
+	outfitter "Common Outfits"
+	outfitter "Ammo North"
+	outfitter "Ammo South"
+	outfitter "Pirate Outfits"
+	bribe 0.05
+	security 0
+	tribute 1000
+		threshold 2000
+		fleet "Small Independent (Killable)" 5
+		fleet "Large Independent (Killable)" 1
+		fleet "Small Southern Pirates" 1
+		fleet "Small Core Pirates" 1
+		fleet "Small Northern Pirates" 1
+		fleet "pirate raid" 3
+		fleet "Marauder Independent (Killable)" 5
+
+planet "Season's End"
+	attributes uninhabited station midnight
+	landscape land/space2
+	description `The technology and architecture of this abandoned station reminds you of the Wanderers. Could they have built it? It would mean they occupied this part of the galaxy some time in the distant past.`
+	description `There might be something here worth salvaging if you look hard enough. You just have to sift through a lot rusted decaying junk first. Whoever lived here in the past seemed to leave in a panicked rush. Judging from the condition of the station, the evacuation was chaotic and disorganized.`
+	spaceport `Although most of the spaceport is empty, there are a surprising amount of ships still docked here. However, a more thorough examination reveals that most are likely not in working condition.`
+	government Uninhabited
+	security 0
 
 planet Vesta
 	attributes midnight archipelago mining
@@ -877,3 +958,6 @@ planet "Wang Xiang Tai"
 		fleet "Large Core Pirates" 2
 		fleet "Large Northern Pirates" 6
 		fleet "pirate raid" 8
+
+"landing message" "You cannot enter a collapsed wormhole."
+	"planet/collapsed wormhole"
