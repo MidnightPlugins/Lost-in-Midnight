@@ -628,7 +628,7 @@ mission "Caspar Delivery"
 	landing
 	name "Delivering Caspar"
 	description `Escort the Municipality city ship Caspar to the shipyards on <planet> in the <system> system.`
-	source Janus
+	source Vesta
 	destination Luna
 	to offer
 		has "Caspar Capture: done"
