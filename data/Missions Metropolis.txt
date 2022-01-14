@@ -603,7 +603,7 @@ mission "Caspar Capture"
 	npc assist accompany save
 		system Archipelago
 		government "Independent (Killable)"
-		personality derelict target escort timid
+		personality derelict target escort timid marked
 		ship "Municipality" "Caspar"
 		conversation
 			`	When you board the ship, you find the only surviving crew are children. Amazingly, they are diligently repairing the ship and pay you no attention. When you meet their new captain, Tyler Maverick, you find that he is a mere teenager.`

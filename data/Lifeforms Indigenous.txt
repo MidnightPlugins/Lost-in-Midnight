@@ -168,7 +168,8 @@ ship "Gray Eye"
 	gun 0 -97 Mouthparts?
 	gun -23 -95 Mouthparts?
 	gun 23 -95 Mouthparts?
-	turret 0 70 Tail?
+	gun 0 70 Tail?
+		angle 180
 	turret -28 0
 	turret 28 0
 	leak "blood" 30 50
@@ -181,11 +182,11 @@ ship "Gray Eye" "Gray Eyed"
 
 	
 outfit Tail?
-	category "Turrets"
+	category "Guns"
 	thumbnail "outfit/unknown"
-	"turret mounts" -1
+	"gun ports" -1
+	"unplunderable" 1
 	weapon
-		"turret turn" 4.
 		sound "crunch"
 		"inaccuracy" 180
 		"velocity" 10
@@ -246,12 +247,14 @@ mission "Ayab's Revenge"
 		personality escort heroic vindictive
 		ship "Modified Argosy (Missile)" "Ayab's Revenge"
 
+
+
 ship "Luminazoa"
 	noun "creature"
 	sprite "ship/luminazoa/luminazoa"
 	"never disabled"
 	attributes
-		category "Light Warship"
+		category "Interceptor"
 		"automaton" 1
 		"shields" 800
 		"hull" 2400
@@ -289,6 +292,7 @@ outfit "Lightning Tendril?"
 	category "Turrets"
 	thumbnail "outfit/unknown"
 	"turret mounts" -1
+	"unplunderable" 1
 	weapon
 		sprite "projectile/lightning"
 			"frame rate" 60
@@ -345,7 +349,7 @@ ship "Ionic Leech"
 	sprite "ship/ionic leech/ionic leech"
 	"never disabled"
 	attributes
-		category "Light Warship"
+		category "Interceptor"
 		"automaton" 1
 		"shields" 1000
 		"hull" 2000
@@ -386,6 +390,7 @@ outfit "Ionic Mouthparts?"
 	category "Guns"
 	thumbnail "outfit/mouthparts"
 	"gun ports" -1
+	"unplunderable" 1
 	weapon
 		sound "zapper"
 		"hit effect" "ionic leeching"
@@ -482,3 +487,478 @@ event "Ionic Leech North"
 		add fleet "Small Ionic Leech" 40000
 
 
+
+ship "Astero Nautilus"
+	noun "creature"
+	sprite "ship/asteronautilus a"
+	"never disabled"
+	attributes
+		category "Light Warship"
+		"hull" 12000
+		"automaton" 1
+		"mass" 375
+		"cargo space" 35
+		"drag" 4.2
+		"heat dissipation" .6
+		"fuel capacity" 100
+		"thrust" 10
+		"turn" 800
+		"hull repair rate" 3
+		"ion protection" 3
+		"ion resistance" 1
+		"energy capacity" 1
+		"inscrutable" 1
+		"gaslining" 1
+		"hyperdrive" 1
+		"jump speed" .2
+	outfits
+		Tentacles? 1
+	gun 13.5 -45
+	leak "blood" 15 25
+	explode "blood" 25
+	"final explode" "blood"
+	description "The Astero Nautilus lurk amongst the asteroids of Pebble Beach. Their rock-like shells are hardened from centuries of consuming the minerals in the surrounding asteroids."
+
+ship "Astero Nautilus" "Astero Nautilus B"
+	noun "creature"
+	sprite "ship/asteronautilus b"
+	"never disabled"
+	gun -7.5 -47
+
+outfit "Tentacles?"
+	category "Guns"
+	thumbnail "outfit/unknown"
+	"gun ports" -1
+	"unplunderable" 1
+	weapon
+		sprite "projectile/tentacles"
+			"frame rate" 1
+			"random start frame"
+		sound "asteroid crunch small"
+		"inaccuracy" .4
+		"velocity" 20
+		"lifetime" 1
+		"reload" 1
+		"hit force" 1
+		"shield damage" 6
+		"hull damage" 14
+		"piercing" .2
+
+fleet "Small Astero Nautilus"
+	government "Indigenous Predator"
+	cargo 0
+	personality
+		mining harvests plunders unconstrained mute
+	variant 40
+		"Astero Nautilus"
+	variant 40
+		"Astero Nautilus B"
+	variant 10
+		"Astero Nautilus"
+		"Astero Nautilus B"
+	variant 1
+		"Astero Nautilus" 2
+		"Astero Nautilus B"
+	variant 1
+		"Astero Nautilus"
+		"Astero Nautilus B" 2
+
+mission "First Contact: Astero Nautilus"
+	landing
+	invisible
+	to offer
+		or
+			has "event: link Pebble Beach to Gamma Corvi"
+			has "event: link Pebble Beach to Spica"
+	on offer
+		event "Astero Nautilus Discovered"
+	on enter "Pebble Beach"
+		dialog `You have the eerie feeling that something is lurking among the asteroids...`
+	npc kill
+		government "Indigenous Predator"
+		system "Pebble Beach"
+		personality mining harvests plunders unconstrained mute
+		ship "Astero Nautilus"
+		ship "Astero Nautilus B"
+		
+event "Astero Nautilus Discovered"
+	system "Pebble Beach"
+		add fleet "Small Astero Nautilus" 4000
+	system "Minkar"
+		add fleet "Small Astero Nautilus" 8000
+	planet "Rock Cluster"
+		add description `You suspect several of these asteroids are actually sleeping Astero Nautiluses...`
+
+mission "Astero Nautilus Cross Chasm"
+	landing
+	invisible
+	to offer
+		has "event: Astero Nautilus Discovered"
+		has "event: reveal Chasm"
+	on offer
+		event "Astero Nautilus Cross Chasm"
+		fail
+		
+event "Astero Nautilus Cross Chasm"
+	system "Chasm"
+		add fleet "Small Astero Nautilus" 12000
+	system "Gacrux"
+		add fleet "Small Astero Nautilus" 8000
+
+
+
+ship "Plasma Parasite"
+	noun "creature"
+	sprite "ship/plasma parasite/plasma parasite"
+	"never disabled"
+	attributes
+		category "Interceptor"
+		"automaton" 1
+		"hull" 100
+		"mass" 130
+		"drag" 3.6
+		"heat dissipation" 1.4
+		"cargo space" 0
+		"thrust" 24
+		"turn" 600
+		"energy capacity" 150
+		"fuel capacity" 150
+		"inscrutable" 1
+		"gaslining" 1
+		"hyperdrive" 1
+		"scram drive" .2
+		"ramscoop" 2
+		weapon
+			"blast radius" 200
+			"shield damage" 6000
+			"hull damage" 3000
+			"hit force" 3000
+
+	leak "blood" 15 25
+	explode "medium explosion" 5
+	explode "large explosion" 15
+	"final explode" "final explosion large"
+	description "While these creatures are neither aggressive nor malicious, the Heliarchs consider them a nuisance. They are attracted to the exhaust emmissions of starship engines and will swarm over a ship. Unfortunately 90% of their bodies consist of volatile plasma, causing them to explode violently when exposed to weapons fire."
+
+ship "Plasma Parasite" "Plasma Parasite (Large)"
+	sprite "ship/plasma parasite large/plasma parasite large"
+	"never disabled"
+	add attributes
+		"hull" 100
+		"mass" 130
+		"drag" .4
+		"heat dissipation" -.4		
+		"thrust" -12
+		weapon
+			"blast radius" 400
+			"shield damage" 12000
+			"hull damage" 6000
+			"hit force" 6000
+	leak "blood" 15 25
+	explode "large explosion" 15
+	explode "huge explosion" 5
+	"final explode" "final explosion large"
+
+
+fleet "Plasma Parasites"
+	government "Swarming Lifeform"
+	cargo 0
+	personality
+		swarming heroic unconstrained mute
+	variant 4
+		"Plasma Parasite" 12
+	variant 2
+		"Plasma Parasite" 24
+	variant 1
+		"Plasma Parasite" 36
+		
+fleet "Advanced Plasma Parasites"
+	government "Swarming Lifeform"
+	cargo 0
+	personality
+		swarming heroic unconstrained mute
+	variant 4
+		"Plasma Parasite" 12
+		"Plasma Parasite (Large)" 6
+	variant 2
+		"Plasma Parasite" 24
+		"Plasma Parasite (Large)" 12
+	variant 1
+		"Plasma Parasite" 36
+		"Plasma Parasite (Large)" 18
+		
+mission "First Contact: Plasma Parasite"
+	landing
+	invisible
+	source
+		government "Coalition" "Heliarch"
+	on offer
+		event "Plasma Parasites Infest Coalition"
+	on enter
+		dialog `A strange creature is following your engine trail. Soon after you notice this, more of them appear...`
+	npc kill
+		government "Swarming Lifeform"
+		personality swarming heroic unconstrained mute
+		fleet "Plasma Parasites"
+
+event "Plasma Parasites Infest Coalition"
+	system "1 Axis"
+		add fleet "Plasma Parasites" 40000
+	system "10 Pole" 
+		add fleet "Plasma Parasites" 40000
+	system "11 Autumn Above"
+		add fleet "Plasma Parasites" 40000
+	system "11 Spring Below"
+		add fleet "Plasma Parasites" 40000
+	system "12 Autumn Above"
+		add fleet "Plasma Parasites" 40000
+	system "14 Pole"
+		add fleet "Plasma Parasites" 40000
+	system "14 Summer Above"
+		add fleet "Plasma Parasites" 40000
+	system "14 Winter Below"
+		add fleet "Plasma Parasites" 40000
+	system "16 Autumn Rising"
+		add fleet "Plasma Parasites" 40000
+	system "3 Axis"
+		add fleet "Plasma Parasites" 40000
+	system "3 Pole"
+		add fleet "Plasma Parasites" 40000
+	system "3 Spring Rising"
+		add fleet "Plasma Parasites" 40000
+	system "4 Axis"
+		add fleet "Plasma Parasites" 40000
+	system "4 Spring Rising"
+		add fleet "Plasma Parasites" 40000
+	system "4 Summer Rising"
+		add fleet "Plasma Parasites" 40000
+	system "4 Winter Rising"
+		add fleet "Plasma Parasites" 40000
+	system "5 Axis"
+		add fleet "Plasma Parasites" 40000
+	system "5 Spring Below"
+		add fleet "Plasma Parasites" 40000
+	system "5 Summer Above"
+		add fleet "Plasma Parasites" 40000
+	system "5 Winter Above"
+		add fleet "Plasma Parasites" 40000
+	system "7 Autumn Rising"
+		add fleet "Plasma Parasites" 40000
+	system "8 Winter Below"
+		add fleet "Plasma Parasites" 40000
+	system "9 Spring Above"
+		add fleet "Plasma Parasites" 40000
+	system Ablodab
+		add fleet "Plasma Parasites" 40000
+	system Ablub
+		add fleet "Plasma Parasites" 40000
+	system "Ancient Hope"
+		add fleet "Plasma Parasites" 40000
+	system Answer
+		add fleet "Plasma Parasites" 40000
+	system Beginning
+		add fleet "Plasma Parasites" 40000
+	system Belonging
+		add fleet "Plasma Parasites" 40000
+	system Belug
+		add fleet "Plasma Parasites" 40000
+	system Belugt
+		add fleet "Plasma Parasites" 40000
+	system Bloptab
+		add fleet "Plasma Parasites" 40000
+	system Blubipad
+		add fleet "Plasma Parasites" 40000
+	system Blugtad
+		add fleet "Plasma Parasites" 40000
+	system "Bright Void"
+		add fleet "Plasma Parasites" 40000
+	system "Broken Bowl"
+		add fleet "Plasma Parasites" 40000
+	system Companion
+		add fleet "Plasma Parasites" 40000
+	system "Dark Hills"
+		add fleet "Plasma Parasites" 40000
+	system Debrugt
+		add fleet "Plasma Parasites" 40000
+	system Eblumab
+		add fleet "Plasma Parasites" 40000
+	system "Fallen Leaf"
+		add fleet "Plasma Parasites" 40000
+	system "Far Horizon"
+		add fleet "Plasma Parasites" 40000
+	system "Fell Omen"
+		add fleet "Plasma Parasites" 40000
+	system Flugbu
+		add fleet "Plasma Parasites" 40000
+	system "Four Pillars"
+		add fleet "Plasma Parasites" 40000
+	system Glubatub
+		add fleet "Plasma Parasites" 40000
+	system "Good Omen"
+		add fleet "Plasma Parasites" 40000
+	system Gupta
+		add fleet "Plasma Parasites" 40000
+	system Homeward
+		add fleet "Plasma Parasites" 40000
+	system Hunter
+		add fleet "Plasma Parasites" 40000
+	system "Last Word"
+		add fleet "Plasma Parasites" 40000
+	system "Lone Cloud"
+		add fleet "Plasma Parasites" 40000
+	system Mebla
+		add fleet "Plasma Parasites" 40000
+	system Meblumem
+		add fleet "Plasma Parasites" 40000
+	system Miblulub
+		add fleet "Plasma Parasites" 40000
+	system Pelubta
+		add fleet "Plasma Parasites" 40000
+	system Plort
+		add fleet "Plasma Parasites" 40000
+	system Remembrance
+		add fleet "Plasma Parasites" 40000
+	system "Silver Bell"
+		add fleet "Plasma Parasites" 40000
+	system "Silver String"
+		add fleet "Plasma Parasites" 40000
+	system "Sol Arach"
+		add fleet "Plasma Parasites" 40000
+	system "Sol Kimek"
+		add fleet "Plasma Parasites" 40000
+	system "Sol Saryd"
+		add fleet "Plasma Parasites" 40000
+	system Speloog
+		add fleet "Plasma Parasites" 40000
+	system "Steep Roof"
+		add fleet "Plasma Parasites" 40000
+	system Tebuteb
+		add fleet "Plasma Parasites" 40000
+	system Torbab
+		add fleet "Plasma Parasites" 40000
+
+mission "Coalition: Exterminate Plasma Parasites"
+	job
+	repeat
+	name "Exterminate Plasma Parasites"
+	description "Help the Heliarchs exterminate a large infestation of Plasma Parasites at <destination>. Payment is <payment>."
+	to offer
+		has "known to the heliarchs"
+		has "event: Plasma Parasites Infest Coalition"
+		random < 50
+	source
+		government "Heliarch"
+	destination
+		government "Coalition"
+	npc kill
+		government "Swarming Lifeform"
+		system destination
+		personality waiting staying swarming heroic unconstrained mute
+		fleet "Advanced Plasma Parasites" 3
+		dialog `You've cleared the infestation. Land on <planet> to claim your reward.`
+	on visit
+		dialog `There are still Plasma Parasites infesting the system. Eliminate them.`
+	on complete
+		"coalition jobs" ++
+		payment
+		payment 40000
+		dialog `The Heliarchs are grateful for your assistance with eliminating the parasitic infestation and reward you with <payment>.`
+
+
+
+ship "Rock Scavenger"
+	noun "creature"
+	sprite "ship/rock scavenger"
+	"uncapturable"
+	attributes
+		category "Light Warship"
+		"hull" 44000
+		"automaton" 1
+		"mass" 700
+		"cargo space" 65
+		"drag" 8
+		"heat dissipation" .9
+		"fuel capacity" 100
+		"thrust" 30
+		"turn" 800
+		"hull repair rate" 3
+		"ion protection" 3
+		"ion resistance" 1
+		"energy capacity" 1
+		"inscrutable" 1
+		"gaslining" 1
+		"hyperdrive" 1
+		"scram drive" .2
+	outfits
+		Mandibles? 3
+		Tail? 1
+		"Rock Scavenger Meat" 1
+	gun 0 -97 Mandibles?
+	gun -23 -95 Mandibles?
+	gun 23 -95 Mandibles?
+	gun 0 70 Tail?
+		angle 180
+	turret -28 0
+	turret 28 0
+	leak "blood" 30 50
+	explode "blood" 45
+	"final explode" blood
+	description "Rock Scavengers look fearsome, but they are actually quite passive if left alone. Unfortunately they are often hunted for their meat, which is considered a delicacy in the paradise planets."
+
+outfit Mandibles?
+	category "Guns"
+	thumbnail "outfit/mouthparts"
+	"gun ports" -1
+	"unplunderable" 1
+	weapon
+		sound "crunch"
+		"hit effect" "void sprite chewing"
+		"inaccuracy" 180
+		"velocity" 10
+		"lifetime" 1
+		"reload" 70
+		"burst reload" 35
+		"burst count" 3
+		"cluster"
+		"shield damage" 600
+		"hull damage" 600
+		
+outfit "Rock Scavenger Meat"
+	category "Special"
+	cost 1200000
+	thumbnail "outfit/rock scavenger meat"
+	"mass" 1
+	description "Although it looks disgusting, rock scavenger meat is considered a delicacy in the Paradise Planets. Restaurants will pay a large sums of money for it."
+
+fleet "Rock Scavenger"
+	government "Indigenous Lifeform"
+	cargo 0
+	personality
+		mining harvests timid uninterested mute
+	variant
+		"Rock Scavenger" 1
+
+mission "First Contact: Rock Scavenger"
+	landing
+	invisible
+	on enter "Eber"
+		dialog `When you enter the system you see a large space creature.`
+	npc board
+		government "Indigenous Lifeform"
+		system "Eber"
+		personality mining harvests timid uninterested mute
+		fleet "Rock Scavenger"
+	on fail
+		event "Rock Scavengers in Dirt Belt"
+	on complete
+		event "Rock Scavengers in Dirt Belt"
+		
+event "Rock Scavengers in Dirt Belt"
+	system Wei
+		add fleet "Rock Scavenger" 30000
+	system Alnasl
+		add fleet "Rock Scavenger" 30000
+	system Eber
+		add fleet "Rock Scavenger" 20000
+	system "Alpha Arae"
+		add fleet "Rock Scavenger" 30000

@@ -37,6 +37,7 @@ government "Creature Hunter"
 		"Indigenous Predator" -.04
 		"Nova Firefly" -.04
 		"Invasive Lifeform (Passive)" -.04
+		"Swarming Lifeform" -.04
 	"bribe" .05
 	"fine" 0
 	"friendly hail" "friendly civilian"
@@ -261,6 +262,44 @@ government "Storm Seekers"
 	"fine" 0
 	"friendly hail" "storm seeker"
 	"hostile hail" "hostile civilian"
+
+
+
+government "Swarming Lifeform"
+	"display name" "Indigenous Lifeform"
+	# Nothing you do permanently angers indigenous creatures, because they are
+	# not sentient and do not remember you as an individual.
+	"player reputation" 1000
+	"attitude toward"
+		"Merchant" .03
+		"Free Worlds" .03
+		"Republic" .03
+		"Syndicate" .03
+		"Pirate" .03
+		"Deep Security" .03
+		"Militia" .03
+		"Navy (Oathkeeper)" .03
+		"Navy Intelligence" .03
+		"Hai" .03
+		"Hai (Wormhole Access)" .03
+		"Hai (Unfettered)" .03
+		"Coalition" .03
+		"Heliarch" .03
+		"Remnant" .03
+		"Wanderer" .03
+		"Korath" .03
+		"Kor Efret" .03
+		"Kor Mereti" .03
+		"Kor Sestor" .03
+	"bribe" 0
+	"fine" 0
+	"penalty for"
+		assist 0
+		disable 0
+		board 0
+		capture 0
+		destroy 0
+		atrocity 0
 
 
 

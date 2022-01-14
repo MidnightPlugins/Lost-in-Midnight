@@ -434,7 +434,7 @@ mission "Storm Seeker Counter Attack 2"
 	on offer
 		conversation
 			scene "scene/scene-stormseekerstrategy"
-			`As soon as you arrive on Luna, Navy Intelligence escorts you to the meeting. There, you and a small group of other elite captains are given a debiefing regarding the raids which have taken place and the Alpha ship which was present during all of these attacks. Each of the captains present assisted in defending against these raids. While you feel a sense of pride in defending more planets than the other captains, you note that there were more planets attacked that you were not involved in defending. The captain who succesfully eliminates this threat will be granted a set of  temporary Navy Licenses for one month. You are all dismissed.`
+			`As soon as you arrive on Luna, Navy Intelligence escorts you to the meeting. There, you and a small group of other elite captains are given a debiefing regarding the raids which have taken place and the Alpha ship which was present during all of these attacks. Each of the captains present assisted in defending against these raids. While you feel a sense of pride in defending more planets than the other captains, you note that there were more planets attacked that you were not involved in defending. The captain who succesfully eliminates this threat will be granted an honorary Navy License. You are all dismissed.`
 				accept
 	on accept
 		"Storm Seeker Raid: North: offered" --
@@ -662,16 +662,11 @@ mission "Storm Seeker Counter Attack 5"
 		has "Storm Seeker Counter Attack 3: done"
 	on complete
 		set "license: Navy"
-		set "license: Navy Auxiliary"
-		set "license: Navy Cruiser"
-		set "license: Navy Carrier"
-		event "Storm Seeker Reward Expires" 30
 		conversation
 			scene "outfit/navy license"
-			scene "outfit/auxiliary license"
-			scene "outfit/navy cruiser license"
-			scene "outfit/navy carrier license"
-			`Navy Intelligence thanks you for you contribution to galactic safety and stability. You are awarded a set of honorary temporary Navy licenses, good for 30 days.`
+			`Navy Intelligence thanks you for you contribution to galactic safety and stability. You are awarded a honorary Navy license in recognition for your service to the Republic.`
+
+#keeping this for anyone who got version 0.9.14.8
 
 event "Storm Seeker Reward Expires"
 
@@ -681,7 +676,6 @@ mission "Storm Seeker Reward Expires"
 	to offer
 		has "event: Storm Seeker Reward Expires"
 	on offer
-		clear "license: Navy"
 		clear "license: Navy Auxiliary"
 		clear "license: Navy Cruiser"
 		clear "license: Navy Carrier"
