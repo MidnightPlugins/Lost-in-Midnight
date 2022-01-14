@@ -15,7 +15,7 @@ person "Lure"
 	government "Indigenous Lifeform"
 	frequency 100
 	personality
-		timid mute uninterested unconstrained
+		timid mute uninterested unconstrained surveillance
 	ship "Luminazoa" "Lure"
 	ship "Ionic Leech" "Migrating Swarm"
 	ship "Ionic Leech" "Migrating Swarm"
@@ -35,6 +35,80 @@ person "Gray Eye"
 	personality
 		timid uninterested mining harvests mute unconstrained
 	ship "Gray Eye" "Gray Eye"
+
+
+
+person "Old Crusty"
+	government "Indigenous Lifeform"
+	frequency 100
+	personality
+		timid uninterested mining harvests mute unconstrained
+	ship "Elder Astero Nautilus" "Old Crusty"
+
+ship "Astero Nautilus" "Elder Astero Nautilus"
+	noun "creature"
+	sprite "ship/asteronautilus ancient"
+	"never disabled"		
+	add attributes
+		"hull" 12000
+	outfits
+		Tentacles? 3
+	gun -3.5 -51.5
+	gun -3 -51.5
+	gun -2.5 -51.5
+
+		
+
+person "Night Light"
+	government "Swarming Lifeform"
+	frequency 100
+	personality
+		swarming harvests mute unconstrained
+	ship "Plasma Parasite (Large)" "Night Light"
+
+
+
+person "Sea of Stars"
+	government "Swarming Lifeform"
+	frequency 100
+	personality
+		swarming harvests mute unconstrained
+	ship "Plasma Parasite" "Sea of Stars"
+	ship "Plasma Parasite" "Sea of Stars"
+	ship "Plasma Parasite" "Sea of Stars"
+	ship "Plasma Parasite" "Sea of Stars"
+	ship "Plasma Parasite" "Sea of Stars"
+	ship "Plasma Parasite" "Sea of Stars"
+	ship "Plasma Parasite" "Sea of Stars"
+	ship "Plasma Parasite" "Sea of Stars"
+	ship "Plasma Parasite" "Sea of Stars"
+	ship "Plasma Parasite" "Sea of Stars"
+	ship "Plasma Parasite" "Sea of Stars"
+	ship "Plasma Parasite" "Sea of Stars"
+	ship "Plasma Parasite" "Sea of Stars"
+	ship "Plasma Parasite" "Sea of Stars"
+	ship "Plasma Parasite" "Sea of Stars"
+	ship "Plasma Parasite" "Sea of Stars"
+	ship "Plasma Parasite" "Sea of Stars"
+	ship "Plasma Parasite" "Sea of Stars"
+	ship "Plasma Parasite" "Sea of Stars"
+	ship "Plasma Parasite" "Sea of Stars"
+	ship "Plasma Parasite" "Sea of Stars"
+	ship "Plasma Parasite" "Sea of Stars"
+	ship "Plasma Parasite" "Sea of Stars"
+	ship "Plasma Parasite" "Sea of Stars"
+
+
+
+person "Serial No. 0000013"
+	government "Indigenous Lifeform"
+	frequency 100
+	personality
+		timid uninterested mining harvests unconstrained
+	ship "Rock Scavenger" "Serial No. 0000013"
+	phrase
+		word
+			"A device implanted on the creature is sending out a message: Prop_rty of Rock Scavenger Farms Inc. If fo_nd in the wild, c_ntact our of_ice on Hope in the Wei s_stem."
 
 
 
