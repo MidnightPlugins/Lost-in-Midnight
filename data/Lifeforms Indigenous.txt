@@ -571,9 +571,9 @@ mission "First Contact: Astero Nautilus"
 	on enter "Pebble Beach"
 		dialog `You have the eerie feeling that something is lurking among the asteroids...`
 	npc kill
-		government "Indigenous Lifeform""
+		government "Indigenous Lifeform"
 		system "Pebble Beach"
-		personality mining harvests plunders unconstrained mute
+		personality waiting staying marked mining harvests plunders unconstrained mute
 		ship "Astero Nautilus"
 		ship "Astero Nautilus B"
 	on complete
@@ -581,7 +581,7 @@ mission "First Contact: Astero Nautilus"
 		
 event "Astero Nautilus Provoked"
 	system "Pebble Beach"
-		add fleet "Small Astero Nautilus" 2000
+		add fleet "Small Astero Nautilus" 200
 		
 mission "Astero Nautilus Discovered"
 	landing
@@ -596,10 +596,10 @@ mission "Astero Nautilus Discovered"
 
 event "Astero Nautilus Discovered"
 	system "Pebble Beach"
-		remove fleet "Small Astero Nautilus" 2000
-		add fleet "Small Astero Nautilus" 4000
+		remove fleet "Small Astero Nautilus" 200
+		add fleet "Small Astero Nautilus" 400
 	system "Minkar"
-		add fleet "Small Astero Nautilus" 8000
+		add fleet "Small Astero Nautilus" 800
 	planet "Rock Cluster"
 		add description `You suspect several of these asteroids are actually sleeping Astero Nautiluses...`
 
@@ -614,10 +614,34 @@ mission "Astero Nautilus Cross Chasm"
 		fail
 		
 event "Astero Nautilus Cross Chasm"
-	system "Chasm"
-		add fleet "Small Astero Nautilus" 12000
 	system "Gacrux"
-		add fleet "Small Astero Nautilus" 8000
+		add fleet "Small Astero Nautilus" 1200
+	system "Mizar"
+		add fleet "Small Astero Nautilus" 6000
+	system "Ipsing"
+		add fleet "Small Astero Nautilus" 6000
+	system "Holeb"
+		add fleet "Small Astero Nautilus" 1600
+	system "Wei"
+		add fleet "Small Astero Nautilus" 6000
+	system "Alnasl"
+		add fleet "Small Astero Nautilus" 1200
+	system "Eber"
+		add fleet "Small Astero Nautilus" 1200
+	system "Alpha Arae"
+		add fleet "Small Astero Nautilus" 1200
+	system "Lesath"
+		add fleet "Small Astero Nautilus" 1600
+	system "Tais"
+		add fleet "Small Astero Nautilus" 1600
+	system "Naper"
+		add fleet "Small Astero Nautilus" 2000
+	system "Eltanin"
+		add fleet "Small Astero Nautilus" 1600
+	system "Lurata"
+		add fleet "Small Astero Nautilus" 2000
+	system "Sadr"
+		add fleet "Small Astero Nautilus" 2400
 
 
 
@@ -705,14 +729,14 @@ mission "First Contact: Plasma Parasite"
 	landing
 	invisible
 	source
-		government "Coalition" "Heliarch"
+		government "Coalition"
 	on offer
 		event "Plasma Parasites Infest Coalition"
 	on enter
 		dialog `A strange creature is following your engine trail. Soon after you notice this, more of them appear...`
 	npc kill
 		government "Swarming Lifeform"
-		personality swarming heroic unconstrained mute
+		personality waiting staying swarming heroic unconstrained mute
 		fleet "Plasma Parasites"
 
 event "Plasma Parasites Infest Coalition"
@@ -912,8 +936,6 @@ ship "Rock Scavenger"
 	gun 23 -95 Mandibles?
 	gun 0 70 Tail?
 		angle 180
-	turret -28 0
-	turret 28 0
 	leak "blood" 30 50
 	explode "blood" 45
 	"final explode" blood
@@ -960,7 +982,7 @@ mission "First Contact: Rock Scavenger"
 	npc board
 		government "Indigenous Lifeform"
 		system "Eber"
-		personality mining harvests timid uninterested mute
+		personality waiting staying mining harvests uninterested mute
 		fleet "Rock Scavenger"
 	on fail
 		event "Rock Scavengers in Dirt Belt"
@@ -969,10 +991,45 @@ mission "First Contact: Rock Scavenger"
 		
 event "Rock Scavengers in Dirt Belt"
 	system Wei
-		add fleet "Rock Scavenger" 30000
+		add fleet "Rock Scavenger" 40000
 	system Alnasl
 		add fleet "Rock Scavenger" 30000
 	system Eber
 		add fleet "Rock Scavenger" 20000
 	system "Alpha Arae"
 		add fleet "Rock Scavenger" 30000
+
+mission "Rock Scavengers Flee Astero Nautilus"
+	landing
+	invisible
+	to offer
+		has "event: Rock Scavengers in Dirt Belt"
+		has "event: Astero Nautilus Cross Chasm"
+	on offer
+		event "Rock Scavengers Flee Astero Nautilus"
+		fail
+
+event "Rock Scavengers Flee Astero Nautilus"	
+	system Wei
+		remove fleet "Rock Scavenger" 40000
+		add fleet  "Rock Scavenger" 30000
+	system Alnasl
+		remove fleet "Rock Scavenger" 30000
+	system Eber
+		remove fleet "Rock Scavenger" 20000
+	system "Alpha Arae"
+		remove fleet "Rock Scavenger" 30000
+	system Boral
+		add fleet  "Rock Scavenger" 20000
+	system Hintar
+		add fleet  "Rock Scavenger" 20000
+	system Muphrid
+		add fleet  "Rock Scavenger" 30000
+	system Regulus
+		add fleet  "Rock Scavenger" 40000
+	system Fingol
+		add fleet  "Rock Scavenger" 50000
+	system Zubenelgenubi
+		add fleet  "Rock Scavenger" 20000
+	system Ildaria
+		add fleet  "Rock Scavenger" 30000

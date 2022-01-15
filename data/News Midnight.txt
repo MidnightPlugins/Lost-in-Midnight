@@ -328,3 +328,37 @@ news "Nova Firefly"
 			"Some fire breathing monsters attacked my ship out near Terminus! I made it through okay, but my refrigerated cargo did not."
 		word
 			`"`
+
+
+
+news "Astero Nautilus"
+	to show
+		has "event: Astero Nautilus Cross Chasm"
+	location
+		attributes "dirt belt" "south"
+	name
+		word
+			"Drunk Starship Captain"
+	message
+		word
+			`"`
+		word
+			"An asteroid sprouted tentacles and attacked my ship! I swear, I was sober at the time!"
+		word
+			`"`
+
+
+
+news "Rock Scavenger Meat"
+	location
+		attributes "paradise"
+	name
+		word
+			"Restaurant Patron"
+	message
+		word
+			`"`
+		word
+			"Rock Scavenger? Absolutely disgusting. People only eat it because its trendy and hip. I'm sticking with lobster."
+		word
+			`"`

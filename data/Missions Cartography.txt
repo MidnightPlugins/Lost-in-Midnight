@@ -634,6 +634,7 @@ mission "Cartography: Quarg Hitchhiker 7"
 	landing
 	name "The Forbidden System"
 	description "Take Quash to the unidentified system near Umbral."
+	autosave
 	source "Smuggler's Den"
 	destination "Orphan"
 	to offer
@@ -906,6 +907,23 @@ event "link Pebble Beach to Spica"
 	link "Pebble Beach" "Spica"
 
 
+
+mission "Cartography: Mining Pebble Beach"
+	landing
+	invisible
+	to offer
+		or
+			has "event: link Pebble Beach to Gamma Corvi"
+			has "event: link Pebble Beach to Spica"
+	on offer
+		event "Mining Pebble Beach"
+		fail
+
+event "Mining Pebble Beach"
+	system "Pebble Beach"
+		add fleet "Human Miners" 3200
+		add fleet "Small Free Worlds" 4000
+		add fleet "Large Free Worlds" 4800
 
 mission "Cartography: Unukalhai"
 	landing

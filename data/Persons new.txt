@@ -47,7 +47,7 @@ person "Old Crusty"
 
 ship "Astero Nautilus" "Elder Astero Nautilus"
 	noun "creature"
-	sprite "ship/asteronautilus ancient"
+	sprite "ship/old crusty"
 	"never disabled"		
 	add attributes
 		"hull" 12000

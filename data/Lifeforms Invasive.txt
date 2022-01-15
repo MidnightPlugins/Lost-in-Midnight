@@ -11,7 +11,7 @@
 
 
 
-# Contents: Nova Firefly creatures from beyond the galaxy.
+# Contents: Creatures from beyond the galaxy.
 # - ship stats
 # - specialized outfits
 # - missions
@@ -23,7 +23,7 @@ ship "Nova Firefly"
 	"never disabled"
 	attributes
 		"automaton" 1
-		category "Light Warship"
+		category "Interceptor"
 		"hull" 3500
 		"mass" 220
 		"drag" 5.3
@@ -65,6 +65,7 @@ outfit "Flare Belcher?"
 	category "Guns"
 	thumbnail "outfit/unknown"
 	"gun ports" -1
+	"unplunderable" 1
 	weapon
 		sprite "effect/explosion/small"
 			"frame rate" 60
@@ -235,5 +236,3 @@ event "Nova Firefly Invasion"
 		add fleet "Nova Firefly" 8000
 	system Algieba
 		add fleet "Nova Firefly" 12000
-		
-
