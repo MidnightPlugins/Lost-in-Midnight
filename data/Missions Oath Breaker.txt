@@ -33,7 +33,6 @@ mission "Oathbreaker Siege 1"
 		has "First Contact: Hai: offered"
 		has "main plot completed"
 	on offer
-		event "Oathbreaker reveal"
 		conversation
 			scene "scene/scene-navyfleet"
 			`You're trying to relax at the bar when the holovideos are interrupted. An image of a gruff man in a disheveled navy uniform appears. "People of, ahem, 'The Free Worlds'. As you may recall, early in the war many navy personnel were captured and held hostage by your government. They were only released on condition of swearing an oath, under duress, to never attack 'The Free Worlds' again. Today, I, Captain Arnold Benedict, renounce that oath. An oath, made under duress, is no oath at all. I have returned to this part of the galaxy to avenge my brother and sister, both of whom fought and died bravely for The Republic in the days following my imprisonment by your government. And I am not alone in this mission. We are not acting on behalf of the government of The Republic. We are here on our own initiatve: to avenge our fallen brothers, sisters, husbands, and wives."`
@@ -79,31 +78,6 @@ mission "Oathbreaker Siege 1"
 		conversation
 			`The Republic releases a statement confirming that the man in the transmission is indeed Captain Arnold Benedict. The navy has given him an immediate dishonorable discharge and are seeking information on any officers or crew that have failed to check in during the past 48 hours.`
 		log "Factions" "Oathbreakers" `The "Oathbreakers" are a regiment of former Navy officers who were once part of the "Oathkeepers" but have since renounced their oath to once again fight against the Free Worlds. Their stated motivation is revenge for their fallen family members. Any Navy officers or crew members found to be working with the Oathbreakers will be subjected to a dishonorable discharge.`
-
-event "Oathbreaker reveal"
-	government "Free Worlds"
-		"attitude toward"
-			"Oathbreaker" -.4
-			"Merchant" .3
-			"Militia" .3
-			"Pirate" -.4
-			"Neutral" .1
-	government "Militia"
-		"attitude toward"
-			"Oathbreaker" -.4
-			"Merchant" .3
-			"Pirate" -.4
-	government "Navy (Oathkeeper)"
-		"attitude toward"
-			"Oathbreaker" -.2
-			"Alpha" -.3
-			"Merchant" .25
-			"Militia" .1
-			"Pirate" -.3
-			"Kor Sestor" -.1
-			"Kor Mereti" -.1
-			"Navy Intelligence" 1
-
 
 event "Oathbreaker planning"
 
@@ -387,8 +361,7 @@ mission "Oathbreaker Bounty, Free Worlds"
 			has "Oathbreaker Bounty, Republic: declined"
 			has "Oathbreaker Bounty, Syndicate: declined"		
 	on offer
-		event "Oathbreaker Piracy (Republic)" 30
-		event "Oathbreaker Piracy (Syndicate)" 30
+		event "Oathbreaker Piracy"
 		payment 50000
 		log `After my run in with the Oathbreakers on a pirate planet, The Free Worlds gave me a piece of the one million credit reward for information leading to the capture or death of Arnold Benedict. Others are also turning in information and the reward money will likely run out soon.`
 		conversation
@@ -410,8 +383,7 @@ mission "Oathbreaker Bounty, Republic"
 			has "Oathbreaker Bounty, Free Worlds: declined"
 			has "Oathbreaker Bounty, Syndicate: declined"		
 	on offer
-		event "Oathbreaker Piracy (Republic)"
-		event "Oathbreaker Piracy (Syndicate)" 30
+		event "Oathbreaker Piracy"
 		payment 45000
 		log `After my run in with the Oathbreakers on a pirate planet, The Republic gave me a piece of the one million credit reward for information leading to the capture or death of Arnold Benedict. Others are also turning in information and the reward money will likely run out soon.`
 		conversation
@@ -433,35 +405,22 @@ mission "Oathbreaker Bounty, Syndicate"
 			has "Oathbreaker Bounty, Free Worlds: declined"
 			has "Oathbreaker Bounty, Republic: declined"		
 	on offer
-		event "Oathbreaker Piracy (Syndicate)"
-		event "Oathbreaker Piracy (Republic)" 30
+		event "Oathbreaker Piracy"
 		payment 35000
 		log `After my run in with the Oathbreakers on a pirate planet, The Syndicate gave me a piece of the one million credit reward for information leading to the capture or death of Arnold Benedict. Others are also turning in information and the reward money will likely run out soon.`
 		conversation
 			`The Syndicate government pays you <payment> for the scanner data of your encounter with the Oathbreakers on a pirate planet. While signing the credit transfer documentation, you note that this amount is being subtracted from the bounty pool of one million credits for information leading to the capture or death of Arnold Benedict. Almost half of the reward money is already gone, likely paid for reports like yours coming from elsewhere in the galaxy.`
 				decline
 
-event "Oathbreaker Piracy (Republic)"
-	government "Republic"
+event "Oathbreaker Piracy
+	government "Oathbreaker"
 		"attitude toward"
-			"Oathbreaker" -.2
-			"Alpha" -.3
-			"Merchant" .25
-			"Militia" .1
-			"Pirate" -.3
-			"Navy Intelligence" 1
-			"Navy (Oathkeeper)" 1
-			"Neutral" .1
-
-event "Oathbreaker Piracy (Syndicate)"
-	government "Syndicate"
-		"attitude toward"
-			"Oathbreaker" -.1
-			"Merchant" .3
-			"Pirate" -.4
-			"Korath" -.5
-
-
+			"Free Worlds" -.04
+			"Militia" -.04
+			"Navy (Oathkeeper)" -.01
+			"Republic" -.02
+			"Syndicate" -.01
+			"Pirate" .01
 
 mission "Oathbreaker Fugitives Hideout Job 1"
 	job

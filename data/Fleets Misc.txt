@@ -905,7 +905,8 @@ fleet "Small Oathbreaker"
 	government "Oathbreaker"
 	names "republic small"
 	fighters "republic fighter"
-	cargo 0
+	cargo 1
+	outfitters "Ammo North"
 	personality
 		heroic
 	variant
@@ -929,7 +930,8 @@ fleet "Large Oathbreaker"
 	government "Oathbreaker"
 	names "republic capital"
 	fighters "republic fighter"
-	cargo 0
+	cargo 1
+	outfitters "Ammo North"
 	personality
 		heroic
 	variant
@@ -961,7 +963,8 @@ fleet "Elite Oathbreaker"
 	government "Oathbreaker"
 	names "republic capital"
 	fighters "republic fighter"
-	cargo 0
+	cargo 1
+	outfitters "Ammo North"
 	personality
 		heroic
 	variant
@@ -978,7 +981,6 @@ fleet "Fugitive Oathbreaker"
 	government "Oathbreaker"
 	names "Oathbreaker"
 	fighters "republic fighter"
-	cargo 0
 	personality
 		coward plunders harvests
 	variant 1
@@ -1018,11 +1020,21 @@ fleet "Fugitive Oathbreaker"
 		"Marauder Bounder" 2
 		
 		
+
+outfitters "Remnant Weapons"
+	"Inhibitor Cannon"
+	"Thrasher Cannon"
+	"Thrasher Turret"
+	"Point Defense Turret"
+	"EMP Torpedo"
+	"EMP Torpedo Bay"
+	"EMP Torpedo Storage Bay"
+
 fleet "Grave Digger raid"
 	government "Grave Diggers"
 	names "grave diggers"
 	personality plunders harvests coward mute
-	outfitters "Remnant"
+	outfitters "Remnant Weapons"
 	variant 1
 		"Starling (Gravedigger)"
 	variant 1
@@ -1035,6 +1047,27 @@ fleet "Grave Digger raid"
 	variant 3
 		"Gull (Gravedigger)" 2
 		
+fleet "Grave Digger Lurker"
+	government "Grave Diggers"
+	names "grave diggers"
+	personality waiting uninterested unconstrained mute
+	outfitters "Remnant Weapons"
+	variant 1
+		"Starling (Gravedigger)"
+	variant 1
+		"Gull (Gravedigger)"
+
+fleet "Grave Digger Smugglers"
+	government "Independent (Killable)"
+	names "grave diggers"
+	personality waiting uninterested unconstrained mute
+	outfitters "Remnant Weapons"
+	variant 1
+		"Blackbird (Remnant)"
+		"Raven (Remnant)" 4
+
+
+
 fleet "Storm Seeker Escort"
 	government "Pirate"
 	variant

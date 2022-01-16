@@ -136,15 +136,23 @@ event "Grave Digger Betrayal"
 		add fleet "Grave Digger raid" 12000
 	system Paeli
 		add fleet "Grave Digger raid" 12000
-	system Polerius
-		add fleet "Grave Digger raid" 12000
 	system Queri
 		add fleet "Grave Digger raid" 12000
 	system Relifer
 		add fleet "Grave Digger raid" 8000
 	system Ritilas
 		add fleet "Grave Digger raid" 10000
-	
+	system Polerius
+		add fleet "Grave Digger raid" 12000
+		add fleet "Grave Digger Smugglers" 12000
+	system Ossipago
+		add fleet "Grave Digger Smugglers" 8000
+	system Antevorta
+		add fleet "Grave Digger Smugglers" 6000
+	system Cardea
+		add fleet "Grave Digger Smugglers" 4000
+	system Terminus
+		add fleet "Grave Digger Smugglers" 4000
 
 
 mission "Grave Digger: Graveyard Robbery A"
@@ -325,7 +333,7 @@ mission "Grave Digger: Graveyard Robbery Job A"
 		government "Grave Diggers"
 		personality waiting uninterested unconstrained mute
 		system Relifer
-		ship "Starling (Gravedigger)" phrase "grave diggers"
+		fleet "Grave Digger Lurker"
 
 	npc assist accompany save
 		system Relifer
@@ -376,7 +384,7 @@ mission "Grave Digger: Graveyard Robbery Job B"
 		government "Grave Diggers"
 		personality waiting uninterested unconstrained mute
 		system Fearis
-		ship "Starling (Gravedigger)" phrase "grave diggers"
+		fleet "Grave Digger Lurker"
 
 	npc assist accompany save
 		system Fearis
@@ -427,7 +435,7 @@ mission "Grave Digger: Graveyard Robbery Job C"
 		government "Grave Diggers"
 		personality waiting uninterested unconstrained mute
 		system Delia
-		ship "Starling (Gravedigger)" phrase "grave diggers"
+		fleet "Grave Digger Lurker"
 
 	npc assist accompany save
 		system Delia
@@ -770,17 +778,20 @@ mission "Grave Digger: Inhibitor Cannons 2"
 		fail
 
 event "Grave Digger Testimony"
-	government "Remnant"
-		"attitude toward"
-			"Grave Diggers" -.05 
-			"Indigenous Lifeform" 0.05
-			"Korath" -.05
-			"Alpha" -.05
 
 
 
 # Nemesis: Grave Digger
 # This mission features variant NPCs, dependingi on the player's previous mission path choices.
+
+
+outfitter "Ka'het Weapons Salvage"
+	"EMP Torpedo"
+	"Ka'het Annihilator"
+	"Ka'het Annihilator Turret"
+	"Ka'het EMP Deployer"
+	"Ka'het Ravager Beam"
+	"Ka'het Ravager Turret"
 
 
 mission "Nemesis: Grave Digger"
@@ -851,7 +862,7 @@ mission "Nemesis: Grave Digger"
 		system Aki'il
 		fleet
 			names "grave diggers"
-			outfitters "Ka'het salvage"
+			outfitters "Ka'het Weapons Salvage"
 			variant
 				"Albatross (Gravedigger)"
 				"Pelican (Gravedigger)"
@@ -892,14 +903,23 @@ event "Gravedigger defeated"
 		remove fleet "Grave Digger raid" 12000
 	system Paeli
 		remove fleet "Grave Digger raid" 12000
-	system Polerius
-		remove fleet "Grave Digger raid" 12000
 	system Queri
 		remove fleet "Grave Digger raid" 12000
 	system Relifer
 		remove fleet "Grave Digger raid" 8000
 	system Ritilas
 		remove fleet "Grave Digger raid" 10000
+	system Polerius
+		remove fleet "Grave Digger raid" 12000
+		remove fleet "Grave Digger Smugglers" 12000
+	system Ossipago
+		remove fleet "Grave Digger Smugglers" 8000
+	system Antevorta
+		remove fleet "Grave Digger Smugglers" 6000
+	system Cardea
+		remove fleet "Grave Digger Smugglers" 4000
+	system Terminus
+		remove fleet "Grave Digger Smugglers" 4000
 
 
 

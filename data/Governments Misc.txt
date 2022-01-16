@@ -68,7 +68,6 @@ government "Grave Diggers"
 	"friendly hail" "friendly pirate"
 	"hostile hail" "hostile pirate"
 	"attitude toward"
-		"Author" -.01
 		"Remnant" -.01
 
 
@@ -188,7 +187,6 @@ government "Nemesis"
 	swizzle 6
 	"player reputation" -1000
 	"fine" 0
-
 	"hostile hail" "hostile nemesis"
 	"hostile disabled hail" "hostile disabled nemesis"
 
@@ -227,6 +225,7 @@ government "Oathbreaker"
 	"attitude toward"
 		"Free Worlds" -.04
 		"Militia" -.04
+		"Navy (Oathkeeper)" -.01
 	"bribe" 0
 	"fine" 0
 	"friendly hail" "friendly oathbreaker"
