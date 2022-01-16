@@ -113,7 +113,7 @@ ship "Shallow Pond"
 
 	engine -9 51
 	engine 9 51
-	gun 1 -5.5
+	gun 1 -19
 	bay "Drone" 1 -27.5
 		under
 	leak "leak" 60 50
