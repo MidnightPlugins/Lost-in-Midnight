@@ -22,6 +22,7 @@ mission "Hackerz"
 	landing
 	invisible
 	deadline 1
+	repeat 2
 	source
 		government "Republic" "Syndicate" "Free Worlds"
 	to offer
@@ -31,6 +32,8 @@ mission "Hackerz"
 		government "Hackerz"
 		personality waiting surveillance
 		ship "Hackerz Drone" "Hackerz"
+	on fail
+		"Hackerz: offered" --
 	on complete
 		"Hackerz: offered" --
 		payment -100000
@@ -124,7 +127,7 @@ mission "Hackerz 2B"
 mission "Hackerz 3"
 	job
 	name "Trace Hackerz"
-	description "The source of the mysterious Hackerz has been traced back to a derelict in orbit around <planet> in the <system> system. Apprehend these criminals and bring them in for a reward of 1000000 credits."
+	description "The source of the mysterious Hackerz has been traced back to a derelict in orbit around <destination> system. Apprehend these criminals and bring them in for a reward of 1000000 credits."
 	source
 		government "Republic" "Syndicate" "Free Worlds"
 	destination
@@ -133,19 +136,18 @@ mission "Hackerz 3"
 		has "Hackerz 2B: declined"
 	on offer
 		"reputation: Derelict" >?= 0
-	npc assist
+	npc assist save
 		government "Derelict"
 		system destination
 		personality derelict target waiting staying pacifist mute
 		ship "Derelict Bactrian" "P.K.'s Party Palace"
 		conversation
-			`When the airlock opens your senses are overwhelmed by the sound of loud music and the scent of burnt recreational herbs. Hundreds of partygoers are too busy enjoying themselves to take notice of your entrance. After searching around for a bit, you find that the ship has power for life support, lighting, and music. But no weapons, navigation, or propulsion. You also haven't found any networking equipment. Either the Hackerz are gone or you've been fed false information.`
-				decline
-	on decline
-		log `Took on a job to locate the Hackerz. False information lead me to a rave on a derelict space ship instead.`
-				
-				
-				
+			`When the airlock opens your senses are overwhelmed by the sound of loud music and the scent of burnt recreational herbs. Hundreds of partygoers are too busy enjoying themselves to take notice of your entrance. After searching around for a bit, you find that the ship has power for life support, lighting, and music. But no weapons, navigation, or propulsion. You also haven't found any networking equipment. Suddenly, you hear panicked screaming coming from the partygoers. When you investigate what's going on, you see that everyone is ruahing to abandon ship. You ask one of them what's going on. They yell "Bomb!" while still fleeing. Now would be a good time to run back to your ship.`
+				flee
+	on fail
+		log `Took on a job to locate the Hackerz. The information lead me to a rave on a derelict space ship instead. While searching the ship, a bomb was set to explode. I barely escaped. Trying to track down the Hackerz is getting dangerous.`
+
+
 
 mission "Hackerz 4"
 	job
@@ -156,11 +158,11 @@ mission "Hackerz 4"
 	destination
 		government "Republic" "Syndicate" "Free Worlds"
 	to offer
-		has "Hackerz 3: declined"
+		has "Hackerz 3: failed"
 	to complete
 		never
 	on visit
-		log `Trying to track down the Hackerz is getting dangerous. Another bounty hunter mistook me for one of them. I'm lucky I didn't lose my head. If I hadn't been interrupted, the abandoned warehouse I was searching would've probably turned out to become another dud. I'm starting to suspect that the job board system itself has been hacked and all of the jobs for tracing the Hackerz is another one of their sick jokes.`
+		set "Hackerz Angry Bounty Hunter"
 		conversation
 			`Your information has lead you to an abandoned warehouse some distance from the space port. There don't appear to be any guards or traps. Carefully, you make your way inside the building.`
 			choice
@@ -177,8 +179,28 @@ mission "Hackerz 4"
 				die
 			label dodge
 			`	You narrowly avoid a shotgun slug and jump out the nearest window. Fortunately, the window was already broken, but you still got some minor scrapes from the few shards of glass remaining in the frame. "Better than a shotgun slug to the head!" You mutter to yourself as you run for your ship.`
-				flee
+				launch
+	npc save
+		to spawn
+			has "Hackerz Angry Bounty Hunter"
+		government "Bounty Hunter"
+		system destination
+		personality launching heroic vindictive unconstrained nemesis
+		ship "Headhunter" "Payback"
+	on fail
+		clear "Hackerz Angry Bounty Hunter"
+		log `The latest Hackerz job was a dud. Another bounty hunter mistook me for one of them. I'm lucky I didn't lose my head. If I hadn't been interrupted, the abandoned warehouse I was searching would've probably turned out to become another dud. I'm starting to suspect that the job board system itself has been hacked and all of the jobs for tracing the Hackerz is another one of their sick jokes.`
 
+mission "Hackerz 4B"
+	landing
+	invisible
+	to offer
+		has "Hackerz 4: active"
+		has "Hackerz Angry Bounty Hunter"
+	on offer
+		fail "Hackerz 4"
+		clear "Hackerz Angry Bounty Hunter"
+		fail
 
 
 # ship stats for a Hackerz drone
