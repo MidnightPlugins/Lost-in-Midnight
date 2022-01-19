@@ -25,7 +25,7 @@ mission "Gathering Specimens: Gray Eye"
 		government "Indigenous Lifeform (Hostile)"
 		system "Kor Ak'Mari"
 		personality waiting staying uninterested mute marked
-		ship "Gray Eye" "Gray Eye Specimen"
+		ship "Gray Eye Specimen"
 	on fail
 		"Gathering Specimens: Gray Eye: offered" --
 
@@ -60,7 +60,7 @@ mission "Gathering Specimens: Luminazoa"
 		government "Indigenous Lifeform (Hostile)"
 		system "Kalsolli"
 		personality waiting staying uninterested mute marked
-		ship "Luminazoa" "Luminazoa Specimen"
+		ship "Luminazoa Specimen"
 	on fail
 		"Gathering Specimens: Luminazoa: offered" --
 
@@ -96,7 +96,7 @@ mission "Gathering Specimens: Ionic Leech"
 		government "Indigenous Predator"
 		system "Ultima Thule"
 		personality waiting staying uninterested mute marked
-		ship "Ionic Leech" "Ionic Leech Specimen"
+		ship "Ionic Leech Specimen"
 	on fail
 		"Gathering Specimens: Ionic Leech: offered" --
 
@@ -131,7 +131,7 @@ mission "Gathering Specimens: Astero Nautilus"
 		government "Indigenous Predator"
 		system "Pebble Beach"
 		personality waiting staying uninterested mute marked
-		ship "Astero Nautilus" "Astero Nautilus Specimen"
+		ship "Astero Nautilus Specimen"
 	on fail
 		"Gathering Specimens: Astero Nautilus: offered" --
 
@@ -166,7 +166,7 @@ mission "Gathering Specimens: Plasma Parasite"
 		government "Indigenous Lifeform (Hostile)"
 		system Nebulous
 		personality derelict waiting staying uninterested mute marked
-		ship "Plasma Parasite" "Plasma Parasite Specimen"
+		ship "Plasma Parasite Specimen"
 	on fail
 		"Gathering Specimens: Plasma Parasite: offered" --
 
@@ -187,7 +187,7 @@ mission "Gathering Specimens: Nova Firefly"
 	landing
 	invisible
 	to offer
-		has "First Contact: Nova Firefly: offered"
+		has "First Contact: Nova Fireflies: offered"
 		or
 			has "Gathering Specimens: Alexandria: offered"
 			has "Gathering Specimens: Conservatory: offered"
@@ -206,7 +206,7 @@ mission "Gathering Specimens: Nova Firefly"
 		government "Invasive Lifeform"
 		system Hazehai
 		personality waiting staying uninterested mute marked
-		ship "Nova Firefly" "Nova Firefly Specimen"
+		ship "Nova Firefly Specimen"
 	on fail
 		"Gathering Specimens: Nova Firefly: offered" --
 
@@ -241,7 +241,7 @@ mission "Gathering Specimens: Star Gazer"
 		government "Invasive Lifeform"
 		system "Watcher's Nest"
 		personality waiting staying uninterested mute marked
-		ship "Star Gazer" "Star Gazer Specimen"
+		ship "Star Gazer Specimen"
 	on fail
 		"Gathering Specimens: Star Gazer: offered" --
 
@@ -490,6 +490,7 @@ mission "Gathering Specimens: Conservatory Gray Eye"
 		outfit "Gray Eye Specimen" -1
 		fail "Gathering Specimens: Gray Eye"
 		"Gathering Specimens: Gray Eye: offered" --
+		dialog `The lab accepts the Gray Eye Specimen.`
 
 
 mission "Gathering Specimens: Conservatory Luminazoa"
@@ -518,6 +519,7 @@ mission "Gathering Specimens: Conservatory Luminazoa"
 		outfit "Luminazoa Specimen" -1
 		fail "Gathering Specimens: Luminazoa"
 		"Gathering Specimens: Luminazoa: offered" --
+		dialog `The lab accepts the Luminazoa Specimen.`
 
 mission "Gathering Specimens: Conservatory Ionic Leech"
 	landing
@@ -545,6 +547,7 @@ mission "Gathering Specimens: Conservatory Ionic Leech"
 		outfit "Leech Specimen" -1
 		fail "Gathering Specimens: Ionic Leech"
 		"Gathering Specimens: Ionic Leech: offered" --
+		dialog `The lab accepts the Leech Specimen.`
 
 mission "Gathering Specimens: Conservatory Astero Nautilus"
 	landing
@@ -572,6 +575,7 @@ mission "Gathering Specimens: Conservatory Astero Nautilus"
 		outfit "Nautilus Specimen" -1
 		fail "Gathering Specimens: Astero Nautilus"
 		"Gathering Specimens: Astero Nautilus: offered" --
+		dialog `The lab accepts the Nautilus Specimen.`
 
 mission "Gathering Specimens: Conservatory Plasma Parasite"
 	landing
@@ -599,6 +603,7 @@ mission "Gathering Specimens: Conservatory Plasma Parasite"
 		outfit "Plasma Specimen" -1
 		fail "Gathering Specimens: Plasma Parasite"
 		"Gathering Specimens: Plasma Parasite: offered" --
+		dialog `The lab accepts the Plasma Specimen.`
 
 mission "Gathering Specimens: Conservatory Nova Firefly"
 	landing
@@ -626,6 +631,8 @@ mission "Gathering Specimens: Conservatory Nova Firefly"
 		outfit "Firefly Specimen" -1
 		fail "Gathering Specimens: Nova Firefly"
 		"Gathering Specimens: Nova Firefly: offered" --
+		dialog `The lab accepts the Firefly Specimen.`
+
 
 mission "Gathering Specimens: Conservatory Star Gazer"
 	landing
@@ -653,6 +660,7 @@ mission "Gathering Specimens: Conservatory Star Gazer"
 		outfit "Gazer Specimen" -1
 		fail "Gathering Specimens: Star Gazer"
 		"Gathering Specimens: Star Gazer: offered" --
+		dialog `The lab accepts the Gazer Specimen.`
 
 mission "Gathering Specimens: Conservatory Research"
 	landing
@@ -917,7 +925,7 @@ mission "Gathering Specimens: Remnant Gray Eye B"
 	invisible
 	source Caelian
 	to offer
-		has "Gathering Specimens: Remnant: active"
+		has "Gathering Specimens: Remnant B: active"
 		has "Remnant: Face to Maw 2B: done"
 	on offer
 		require "Gray Eye Specimen"
@@ -940,7 +948,7 @@ mission "Gathering Specimens: Remnant Luminazoa B"
 	invisible
 	source Caelian
 	to offer
-		has "Gathering Specimens: Remnant: active"
+		has "Gathering Specimens: Remnant B: active"
 		has "Remnant: Face to Maw 2B: done"
 	on offer
 		require "Luminazoa Specimen"
@@ -963,7 +971,7 @@ mission "Gathering Specimens: Remnant Ionic Leech B"
 	invisible
 	source Caelian
 	to offer
-		has "Gathering Specimens: Ionic Leech: active"
+		has "Gathering Specimens: Remnant B: active"
 		has "Remnant: Face to Maw 2B: done"
 	on offer
 		require "Leech Specimen"
@@ -986,7 +994,7 @@ mission "Gathering Specimens: Remnant Astero Nautilus B"
 	invisible
 	source Caelian
 	to offer
-		has "Gathering Specimens: Remnant: active"
+		has "Gathering Specimens: Remnant B: active"
 		has "Remnant: Face to Maw 2B: done"
 	on offer
 		require "Nautilus Specimen"
@@ -1009,7 +1017,7 @@ mission "Gathering Specimens: Remnant Plasma Parasite B"
 	invisible
 	source Caelian
 	to offer
-		has "Gathering Specimens: Remnant: active"
+		has "Gathering Specimens: Remnant B: active"
 		has "Remnant: Face to Maw 2B: done"
 	on offer
 		require "Plasma Specimen"
@@ -1032,7 +1040,7 @@ mission "Gathering Specimens: Remnant Nova Firefly B"
 	invisible
 	source Caelian
 	to offer
-		has "Gathering Specimens: Remnant: active"
+		has "Gathering Specimens: Remnant B: active"
 		has "Remnant: Face to Maw 2B: done"
 	on offer
 		require "Firefly Specimen"
@@ -1055,7 +1063,7 @@ mission "Gathering Specimens: Remnant Star Gazer B"
 	invisible
 	source Caelian
 	to offer
-		has "Gathering Specimens: Remnant: active"
+		has "Gathering Specimens: Remnant B: active"
 		has "Remnant: Face to Maw 2B: done"
 	on offer
 		require "Gazer Specimen"
@@ -1119,7 +1127,8 @@ mission "Gathering Specimens: Remnant Conclusion"
 			choice
 				`	"Sure."`
 				`	"Of course I will."`
-					accept
+			`	You	prepare for the journey to <destination>.`
+				accept
 	npc accompany save
 		government Remnant
 		personality target marked escort

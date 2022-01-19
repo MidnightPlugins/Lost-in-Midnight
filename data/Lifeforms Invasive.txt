@@ -367,20 +367,14 @@ mission "First Contact: Star Gazer"
 	on offer
 		event "Reveal Watcher's Nest"
 	on enter "Watcher's Nest"
+		event "Star Gazers In Wanderer Space"
 		dialog `A strange creature is lurking in this system. It watches you silently with multiple eyes.`
 	
-	npc disable
-		government "Test Dummy"
-		system "Watcher's Nest"
-		personality unconstrained heroic nemesis
-		ship "Timer Ship" "Timer"
 	npc
 		government "Invasive Lifeform (Passive)"
 		system "Watcher's Nest"
 		personality waiting staying opportunistic surveillance mute
 		ship "Star Gazer"
-	on complete
-		event "Star Gazers In Wanderer Space"
 	
 event "Reveal Watcher's Nest"
 	system "Watcher's Nest"
