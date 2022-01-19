@@ -1,0 +1,1148 @@
+# Copyright (c) 2021 by Michael Arsollon
+# derived from original game at https://github.com/endless-sky/endless-sky
+#
+# Endless Sky is free software: you can redistribute it and/or modify it under the
+# terms of the GNU General Public License as published by the Free Software
+# Foundation, either version 3 of the License, or (at your option) any later version.
+#
+# Endless Sky is distributed in the hope that it will be useful, but WITHOUT ANY
+# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+
+
+
+
+mission "Gathering Specimens: Gray Eye"
+	landing
+	invisible
+	to offer
+		has "First Contact: Subsidurials: offered"
+		or
+			has "Gathering Specimens: Alexandria: offered"
+			has "Gathering Specimens: Conservatory: offered"
+			has "Gathering Specimens: Remnant: offered"
+	npc board
+		government "Indigenous Lifeform (Hostile)"
+		system "Kor Ak'Mari"
+		personality waiting staying uninterested mute marked
+		ship "Gray Eye" "Gray Eye Specimen"
+	on fail
+		"Gathering Specimens: Gray Eye: offered" --
+
+ship "Gray Eye" "Gray Eye Specimen"
+	"uncapturable"
+	outfits
+		"Gray Eye Specimen" 1
+
+outfit "Gray Eye Specimen"
+	category "Special"
+	thumbnail "outfit/gray eye specimen"
+	cost 0
+	description "The slimy goopy remains of a Gray Eye."
+
+
+
+mission "Gathering Specimens: Luminazoa"
+	landing
+	invisible
+	to offer
+		has "First Contact: Luminazoa: offered"
+		or
+			has "Gathering Specimens: Alexandria: offered"
+			has "Gathering Specimens: Conservatory: offered"
+			has "Gathering Specimens: Remnant: offered"
+	npc
+		government "Indigenous Lifeform (Hostile)"
+		system "Kalsolli"
+		personality waiting staying mining harvests unconstrained mute
+		fleet "Luminazoa" 5
+	npc board
+		government "Indigenous Lifeform (Hostile)"
+		system "Kalsolli"
+		personality waiting staying uninterested mute marked
+		ship "Luminazoa" "Luminazoa Specimen"
+	on fail
+		"Gathering Specimens: Luminazoa: offered" --
+
+ship "Luminazoa" "Luminazoa Specimen"
+	"uncapturable"
+	outfits
+		"Luminazoa Specimen" 1
+
+outfit "Luminazoa Specimen"
+	category "Special"
+	thumbnail "outfit/luminazoa specimen"
+	cost 0
+	description "The slimy goopy remains of a Luminazoa. It glows in the dark."
+
+
+
+mission "Gathering Specimens: Ionic Leech"
+	landing
+	invisible
+	to offer
+		has "First Contact: Ionic Leech: offered"
+		has "First Contact: Hai: offered"
+		or
+			has "Gathering Specimens: Alexandria: offered"
+			has "Gathering Specimens: Conservatory: offered"
+			has "Gathering Specimens: Remnant: offered"
+	npc
+		government "Indigenous Predator"
+		system "Ultima Thule"
+		personality waiting staying heroic disables unconstrained mute
+		fleet "Large Ionic Leech" 2
+	npc board
+		government "Indigenous Predator"
+		system "Ultima Thule"
+		personality waiting staying uninterested mute marked
+		ship "Ionic Leech" "Ionic Leech Specimen"
+	on fail
+		"Gathering Specimens: Ionic Leech: offered" --
+
+ship "Ionic Leech" "Ionic Leech Specimen"
+	"uncapturable"
+	outfits
+		"Leech Specimen" 1
+
+outfit "Leech Specimen"
+	category "Special"
+	thumbnail "outfit/ionic leech specimen"
+	cost 0
+	description "The slimy goopy remains of a Ionic Leech. You feel static electricity clinging to the surface of the container."
+
+
+
+mission "Gathering Specimens: Astero Nautilus"
+	landing
+	invisible
+	to offer
+		has "First Contact: Astero Nautilus: offered"
+		or
+			has "Gathering Specimens: Alexandria: offered"
+			has "Gathering Specimens: Conservatory: offered"
+			has "Gathering Specimens: Remnant: offered"
+	npc
+		government "Indigenous Predator"
+		system "Pebble Beach"
+		personality waiting staying mining harvests plunders unconstrained mute
+		fleet "Small Astero Nautilus" 7
+	npc board
+		government "Indigenous Predator"
+		system "Pebble Beach"
+		personality waiting staying uninterested mute marked
+		ship "Astero Nautilus" "Astero Nautilus Specimen"
+	on fail
+		"Gathering Specimens: Astero Nautilus: offered" --
+
+ship "Astero Nautilus" "Astero Nautilus Specimen"
+	"uncapturable"
+	outfits
+		"Nautilus Specimen" 1
+
+outfit "Nautilus Specimen"
+	category "Special"
+	thumbnail "outfit/astero nautilus specimen"
+	cost 0
+	description "The slimy goopy remains of a Astero Nautilus. You're almost ceratin that one of the tentacles just twitched..."
+
+
+
+mission "Gathering Specimens: Plasma Parasite"
+	landing
+	invisible
+	to offer
+		has "First Contact: Plasma Parasite: offered"
+		or
+			has "Gathering Specimens: Alexandria: offered"
+			has "Gathering Specimens: Conservatory: offered"
+			has "Gathering Specimens: Remnant: offered"
+	npc
+		government "Swarming Lifeform"
+		system Nebulous
+		personality waiting staying swarming heroic unconstrained mute
+		fleet "Advanced Plasma Parasites" 3
+	npc board
+		government "Indigenous Lifeform (Hostile)"
+		system Nebulous
+		personality derelict waiting staying uninterested mute marked
+		ship "Plasma Parasite" "Plasma Parasite Specimen"
+	on fail
+		"Gathering Specimens: Plasma Parasite: offered" --
+
+ship "Plasma Parasite" "Plasma Parasite Specimen"
+	"uncapturable"
+	outfits
+		"Plasma Specimen" 1
+		
+outfit "Plasma Specimen"
+	category "Special"
+	thumbnail "outfit/plasma parasite specimen"
+	cost 0
+	description "The slimy goopy remains of a Plasma Parasite. Handle with care."
+	
+
+
+mission "Gathering Specimens: Nova Firefly"
+	landing
+	invisible
+	to offer
+		has "First Contact: Nova Firefly: offered"
+		or
+			has "Gathering Specimens: Alexandria: offered"
+			has "Gathering Specimens: Conservatory: offered"
+			has "Gathering Specimens: Remnant: offered"
+	npc
+		government "Invasive Lifeform"
+		system Hazehai
+		personality waiting staying vindictive mining mute
+		fleet "Nova Firefly" 5
+	npc
+		system Hazehai
+		government "Invasive Lifeform (Passive)"
+		personality waiting staying heroic mute
+		fleet "Nova Firefly Hatchery"
+	npc board
+		government "Invasive Lifeform"
+		system Hazehai
+		personality waiting staying uninterested mute marked
+		ship "Nova Firefly" "Nova Firefly Specimen"
+	on fail
+		"Gathering Specimens: Nova Firefly: offered" --
+
+ship "Nova Firefly" "Nova Firefly Specimen"
+	"uncapturable"
+	outfits
+		"Firefly Specimen" 1
+
+outfit "Firefly Specimen"
+	category "Special"
+	thumbnail "outfit/nova firefly specimen"
+	cost 0
+	description "The slimy goopy remains of a Nova Firefly. The surface of the container feels warm."
+
+
+
+mission "Gathering Specimens: Star Gazer"
+	landing
+	invisible
+	to offer
+		has "First Contact: Star Gazer: offered"
+		or
+			has "Gathering Specimens: Alexandria: offered"
+			has "Gathering Specimens: Conservatory: offered"
+			has "Gathering Specimens: Remnant: offered"
+	npc
+		government "Invasive Lifeform"
+		system "Watcher's Nest"
+		personality waiting staying heroic vindictive opportunistic unconstrained mute
+		fleet "Star Gazer Aggressive"
+	npc board
+		government "Invasive Lifeform"
+		system "Watcher's Nest"
+		personality waiting staying uninterested mute marked
+		ship "Star Gazer" "Star Gazer Specimen"
+	on fail
+		"Gathering Specimens: Star Gazer: offered" --
+
+
+ship "Star Gazer" "Star Gazer Specimen"
+	"uncapturable"
+	outfits
+		"Gazer Specimen" 1
+
+outfit "Gazer Specimen"
+	category "Special"
+	thumbnail "outfit/star gazer specimen"
+	cost 0
+	description "The slimy goopy remains of a Star Gazer. The eye seems to be staring at you..."
+
+
+
+mission "Gathering Specimens: Alexandria"
+	name "Gathering Specimens"
+	description "Search the galaxy for interstellar life. Bring tissue samples back to <origin>."
+	source Alexandria
+	to offer
+		or
+			"Transport scientists: done" > 5
+			has "Deep: Project Hawking: done"
+	to complete
+		never
+	on offer
+		conversation
+			`A group of scientists approach you. "Captain <first> <last>? We've been told that you're a reliable captain who travels beyond The Deep. If that's true, would be interested in helping us with our research?"`
+			choice
+				`	"What sort of help do you need?"`
+			`	"Nothing too hard. Just keep an eye out for any interstellar life forms. If you find one, bring us back a tissue sample. We'll make sure you are compensated."`
+				accept
+
+mission "Gathering Specimens: Alexandria Gray Eye"
+	landing
+	invisible
+	repeat
+	source Alexandria
+	to offer
+		has "Gathering Specimens: Alexandria: active"
+	on offer
+		require "Gray Eye Specimen"
+		conversation
+			scene "outfit/gray eye specimen"
+			`Do you want to hand the Gray Eye specimen over to the Alexandria researchers?`
+			choice
+				`	(Yes.)`
+				`	(No.)`
+					defer
+			`The researchers thank you for your contribution to the advancement of human knowledge and award you <payment>.`
+				decline
+	on decline
+		outfit "Gray Eye Specimen" -1
+		payment 1000000
+		fail "Gathering Specimens: Gray Eye"
+		"Gathering Specimens: Gray Eye: offered" --
+	
+mission "Gathering Specimens: Alexandria Luminazoa"
+	landing
+	invisible
+	repeat
+	source Alexandria
+	to offer
+		has "Gathering Specimens: Alexandria: active"
+	on offer
+		require "Luminazoa Specimen"
+		conversation
+			scene "outfit/luminazoa specimen"
+			`Do you want to hand the Luminazoa specimen over to the Alexandria researchers?`
+			choice
+				`	(Yes.)`
+				`	(No.)`
+					defer
+			`The researchers thank you for your contribution to the advancement of human knowledge and award you <payment>.`
+				decline
+	on decline
+		outfit "Luminazoa Specimen" -1
+		payment 1000000
+		fail "Gathering Specimens: Luminazoa"
+		"Gathering Specimens: Luminazoa: offered" --
+
+mission "Gathering Specimens: Alexandria Ionic Leech"
+	landing
+	invisible
+	repeat
+	source Alexandria
+	to offer
+		has "Gathering Specimens: Ionic Leech: active"
+	on offer
+		require "Leech Specimen"
+		conversation
+			scene "outfit/ionic leech specimen"
+			`Do you want to hand the Ionic Leech specimen over to the Alexandria researchers?`
+			choice
+				`	(Yes.)`
+				`	(No.)`
+					defer
+			`The researchers thank you for your contribution to the advancement of human knowledge and award you <payment>.`
+				decline
+	on decline
+		outfit "Leech Specimen" -1
+		payment 1000000
+		fail "Gathering Specimens: Ionic Leech"
+		"Gathering Specimens: Ionic Leech: offered" --
+
+mission "Gathering Specimens: Alexandria Astero Nautilus"
+	landing
+	invisible
+	repeat
+	source Alexandria
+	to offer
+		has "Gathering Specimens: Alexandria: active"
+	on offer
+		require "Nautilus Specimen"
+		conversation
+			scene "outfit/astero nautilus specimen"
+			`Do you want to hand the Astero Nautilus specimen over to the Alexandria researchers?`
+			choice
+				`	(Yes.)`
+				`	(No.)`
+					defer
+			`The researchers thank you for your contribution to the advancement of human knowledge and award you <payment>.`
+				decline
+	on decline
+		outfit "Nautilus Specimen" -1
+		payment 1000000
+		fail "Gathering Specimens: Astero Nautilus"
+		"Gathering Specimens: Astero Nautilus: offered" --
+
+mission "Gathering Specimens: Alexandria Plasma Parasite"
+	landing
+	invisible
+	repeat
+	source Alexandria
+	to offer
+		has "Gathering Specimens: Alexandria: active"
+	on offer
+		require "Plasma Specimen"
+		conversation
+			scene "outfit/plasma parasite specimen"
+			`Do you want to hand the Plasma Parasite specimen over to the Alexandria researchers?`
+			choice
+				`	(Yes.)`
+				`	(No.)`
+					defer
+			`The researchers thank you for your contribution to the advancement of human knowledge and award you <payment>.`
+				decline
+	on decline
+		outfit "Plasma Specimen" -1
+		payment 1000000
+		fail "Gathering Specimens: Plasma Parasite"
+		"Gathering Specimens: Plasma Parasite: offered" --
+
+mission "Gathering Specimens: Alexandria Nova Firefly"
+	landing
+	invisible
+	repeat
+	source Alexandria
+	to offer
+		has "Gathering Specimens: Alexandria: active"
+	on offer
+		require "Firefly Specimen"
+		conversation
+			scene "outfit/nova firefly specimen"
+			`Do you want to hand the Nova Firefly specimen over to the Alexandria researchers?`
+			choice
+				`	(Yes.)`
+				`	(No.)`
+					defer
+			`The researchers thank you for your contribution to the advancement of human knowledge and award you <payment>.`
+				decline
+	on decline
+		outfit "Firefly Specimen" -1
+		payment 1000000
+		fail "Gathering Specimens: Nova Firefly"
+		"Gathering Specimens: Nova Firefly: offered" --
+
+mission "Gathering Specimens: Alexandria Star Gazer"
+	landing
+	invisible
+	repeat
+	source Alexandria
+	to offer
+		has "Gathering Specimens: Alexandria: active"
+	on offer
+		require "Gazer Specimen"
+		conversation
+			scene "outfit/star gazer specimen"
+			`Do you want to hand the Star Gazer specimen over to the Alexandria researchers?`
+			choice
+				`	(Yes.)`
+				`	(No.)`
+					defer
+			`The researchers thank you for your contribution to the advancement of human knowledge and award you <payment>.`
+				decline
+	on decline
+		outfit "Gazer Specimen" -1
+		payment 1000000
+		fail "Gathering Specimens: Star Gazer"
+		"Gathering Specimens: Star Gazer: offered" --
+
+
+
+mission "Gathering Specimens: Conservatory"
+	name "Gathering Specimens: Conservatory"
+	description "Search the galaxy for interstellar life. Bring tissue samples back to <origin>."
+	source Winter
+	to offer
+		has "event: fw conservatory founded"
+		has "free worlds plot completed"
+	to complete
+		never
+	on offer
+		conversation
+			`A group of conservatory administrators approach you. "Captain <first> <last>? Katya referred you to us. The Free Worlds Conservatory has several research projects in development. Would you be interested in helping?"`
+			choice
+				`	"What sort of help do you need?"`
+			`	"Nothing too hard. Just keep an eye out for any interstellar life forms. If you find one, bring us back a tissue sample. If our research is successful, you'll be granted a share of the profits."`
+				accept
+
+mission "Gathering Specimens: Conservatory Gray Eye"
+	landing
+	name "Conservatory Gray Eye"
+	description "Deliver the Gray Eye Specimen to <destination>."
+	source Winter
+	destination
+		government "Free Worlds" "Republic"
+		attributes medical
+		attributes research
+	to offer
+		has "Gathering Specimens: Conservatory: active"
+	on offer
+		require "Gray Eye Specimen"
+		conversation
+			scene "outfit/gray eye specimen"
+			`Do you want to hand the Gray Eye specimen over to the Conservatory researchers?`
+			choice
+				`	(Yes.)`
+				`	(No.)`
+					defer
+			`The researchers thank you for informing them of this discovery. They ask that you deliver it to a lab on <destination>.`
+				accept
+	on complete
+		outfit "Gray Eye Specimen" -1
+		fail "Gathering Specimens: Gray Eye"
+		"Gathering Specimens: Gray Eye: offered" --
+
+
+mission "Gathering Specimens: Conservatory Luminazoa"
+	landing
+	name "Conservatory Luminazoa"
+	description "Deliver the Luminazoa Specimen to <destination>."
+	source Winter
+	destination
+		government "Free Worlds" "Republic"
+		attributes medical
+		attributes research
+	to offer
+		has "Gathering Specimens: Conservatory: active"
+	on offer
+		require "Luminazoa Specimen"
+		conversation
+			scene "outfit/luminazoa specimen"
+			`Do you want to hand the Luminazoa specimen over to the Conservatory researchers?`
+			choice
+				`	(Yes.)`
+				`	(No.)`
+					defer
+			`The researchers thank you for informing them of this discovery. They ask that you deliver it to a lab on <destination>.`
+				accept
+	on complete
+		outfit "Luminazoa Specimen" -1
+		fail "Gathering Specimens: Luminazoa"
+		"Gathering Specimens: Luminazoa: offered" --
+
+mission "Gathering Specimens: Conservatory Ionic Leech"
+	landing
+	name "Conservatory Ionic Leech"
+	description "Deliver the Ionic Leech Specimen to <destination>."
+	source Winter
+	destination
+		government "Free Worlds" "Republic"
+		attributes medical
+		attributes research
+	to offer
+		has "Gathering Specimens: Conservatory: active"
+	on offer
+		require "Leech Specimen"
+		conversation
+			scene "outfit/ionic leech specimen"
+			`Do you want to hand the Ionic Leech specimen over to the Conservatory researchers?`
+			choice
+				`	(Yes.)`
+				`	(No.)`
+					defer
+			`The researchers thank you for informing them of this discovery. They ask that you deliver it to a lab on <destination>.`
+				accept
+	on complete
+		outfit "Leech Specimen" -1
+		fail "Gathering Specimens: Ionic Leech"
+		"Gathering Specimens: Ionic Leech: offered" --
+
+mission "Gathering Specimens: Conservatory Astero Nautilus"
+	landing
+	name "Conservatory Astero Nautilus"
+	description "Deliver the Astero Nautilus Specimen to <destination>."
+	source Winter
+	destination
+		government "Free Worlds" "Republic"
+		attributes medical
+		attributes research
+	to offer
+		has "Gathering Specimens: Conservatory: active"
+	on offer
+		require "Nautilus Specimen"
+		conversation
+			scene "outfit/astero nautilus specimen"
+			`Do you want to hand the Astero Nautilus specimen over to the Conservatory researchers?`
+			choice
+				`	(Yes.)`
+				`	(No.)`
+					defer
+			`The researchers thank you for informing them of this discovery. They ask that you deliver it to a lab on <destination>.`
+				accept
+	on complete
+		outfit "Nautilus Specimen" -1
+		fail "Gathering Specimens: Astero Nautilus"
+		"Gathering Specimens: Astero Nautilus: offered" --
+
+mission "Gathering Specimens: Conservatory Plasma Parasite"
+	landing
+	name "Conservatory Plasma Parasite"
+	description "Deliver the Plasma Parasite Specimen to <destination>."
+	source Winter
+	destination
+		government "Free Worlds" "Republic"
+		attributes medical
+		attributes research
+	to offer
+		has "Gathering Specimens: Conservatory: active"
+	on offer
+		require "Plasma Specimen"
+		conversation
+			scene "outfit/plasma parasite specimen"
+			`Do you want to hand the Plasma Parasite specimen over to the Conservatory researchers?`
+			choice
+				`	(Yes.)`
+				`	(No.)`
+					defer
+			`The researchers thank you for informing them of this discovery. They ask that you deliver it to a lab on <destination>.`
+				accept
+	on complete
+		outfit "Plasma Specimen" -1
+		fail "Gathering Specimens: Plasma Parasite"
+		"Gathering Specimens: Plasma Parasite: offered" --
+
+mission "Gathering Specimens: Conservatory Nova Firefly"
+	landing
+	name "Conservatory Plasma Parasite"
+	description "Deliver the Plasma Parasite Specimen to <destination>."
+	source Winter
+	destination
+		government "Free Worlds" "Republic"
+		attributes medical
+		attributes research
+	to offer
+		has "Gathering Specimens: Conservatory: active"
+	on offer
+		require "Firefly Specimen"
+		conversation
+			scene "outfit/nova firefly specimen"
+			`Do you want to hand the Nova Firefly specimen over to the Conservatory researchers?`
+			choice
+				`	(Yes.)`
+				`	(No.)`
+					defer
+			`The researchers thank you for informing them of this discovery. They ask that you deliver it to a lab on <destination>.`
+				accept
+	on complete
+		outfit "Firefly Specimen" -1
+		fail "Gathering Specimens: Nova Firefly"
+		"Gathering Specimens: Nova Firefly: offered" --
+
+mission "Gathering Specimens: Conservatory Star Gazer"
+	landing
+	name "Conservatory Star Gazer"
+	description "Deliver the Star Gazer Specimen to <destination>."
+	source Winter
+	destination
+		government "Free Worlds" "Republic"
+		attributes medical
+		attributes research
+	to offer
+		has "Gathering Specimens: Conservatory: active"
+	on offer
+		require "Gazer Specimen"
+		conversation
+			scene "outfit/star gazer specimen"
+			`Do you want to hand the Star Gazer specimen over to the Conservatory researchers?`
+			choice
+				`	(Yes.)`
+				`	(No.)`
+					defer
+			`The researchers thank you for informing them of this discovery. They ask that you deliver it to a lab on <destination>.`
+				accept
+	on complete
+		outfit "Gazer Specimen" -1
+		fail "Gathering Specimens: Star Gazer"
+		"Gathering Specimens: Star Gazer: offered" --
+
+mission "Gathering Specimens: Conservatory Research"
+	landing
+	invisible
+	to offer
+		has "Gathering Specimens: Conservatory Gray Eye: done"
+		has "Gathering Specimens: Conservatory Luminazoa: done"
+		has "Gathering Specimens: Conservatory Ionic Leech: done"
+		has "Gathering Specimens: Conservatory Astero Nautilus: done"
+		has "Gathering Specimens: Conservatory Plasma Parasite: done"
+		has "Gathering Specimens: Conservatory Nova Firefly: done"
+		has "Gathering Specimens: Conservatory Star Gazer: done"
+	on offer
+		dialog `You receive a message from the Free Worlds Conservatory administrators: "We no longer need tissue samples and are close to completing our research. We should have an update soon."`
+	on accept
+		event "Gathering Specimens: Conservatory Research" 30
+		fail "Gathering Specimens: Conservatory"
+		fail
+		
+event "Gathering Specimens: Conservatory Research"
+
+mission "Gathering Specimens: Conservatory Conclusion"
+	landing
+	invisible
+	source
+		government "Free Worlds" "Republic" "Syndicate" "Neutral" "Independant" "Pirate"
+		not attributes "uninhabited"
+	destination Winter
+	to offer
+		has "event: Gathering Specimens: Conservatory Research"
+	on offer
+		dialog `You receive a message from the Free Worlds Conservatory administrators: "Your contributions have lead to a research break through! Visit the Conservatory on <destination> to learn more."`
+	on complete
+		"salary: Free Worlds Conservatory" = 1000
+		conversation
+			scene "scene/scene-specimens"
+			`The administrators thank you for helping with the research. And now they present the results of that work: a cure for Chronic Hyperspace Traveler's Disorder.`
+			choice
+				`	"I've never heard of that."`
+			`	They explain "When you've been traveling for days on a cramped ship through Hyperspace, you may experience the following symptoms: muscle soreness, irritability, restlessness, and difficulty sleeping."`
+			choice
+				`	"That's normal."`
+			`	"It's Chronic Hyperspace Traveler's Disorder, a condition that affects more than 90% of space travelers to the detriment of their well being. And since you played a important role in developing the cure, a portion of the profits from sales of this miracle drug will be paid to you. Congratulations!"`
+			`	While you'll gladly accept the reward for your efforts, you wonder what sort of other projects the Conservatory is researching.`
+			
+
+
+mission "Gathering Specimens: Remnant"
+	name "Gathering Specimens"
+	description "Search the galaxy for interstellar life. Bring tissue samples back to <origin>."
+	source "Viminal"
+	to offer
+		has "Remnant: Face to Maw 2: done"
+	to complete
+		never
+	on offer
+		conversation
+			`A group of Remnant approach you. "Captain <first> <last>?" they sing. "To ensure we are investigating all possibilities in our research, we need  help from someone who has traveled far in the galaxy. Prefect Taely suggested we ask you. Would you be interested in helping?"`
+			choice
+				`	"What sort of help do you need?" you sign.`
+			`	The Remnant look at each other then sign their reply, "Nothing too hard. Just keep an eye out for any interstellar life forms. If you find one, bring us back a tissue sample. If our research is successful, you'll be given an opportunity to test the prototypes."`
+				accept
+
+mission "Gathering Specimens: Remnant Gray Eye"
+	landing
+	invisible
+	source Viminal
+	to offer
+		has "Gathering Specimens: Remnant: active"
+		has "Remnant: Face to Maw 2: done"
+	on offer
+		require "Gray Eye Specimen"
+		conversation
+			scene "outfit/gray eye specimen"
+			`Do you want to hand the Gray Eye specimen over to the Remnant researchers?`
+			choice
+				`	(Yes.)`
+				`	(No.)`
+					defer
+			`The researchers thank you for your assistance.`
+				decline
+	on decline
+		outfit "Gray Eye Specimen" -1
+		fail "Gathering Specimens: Gray Eye"
+		"Gathering Specimens: Gray Eye: offered" --
+	
+mission "Gathering Specimens: Remnant Luminazoa"
+	landing
+	invisible
+	source Viminal
+	to offer
+		has "Gathering Specimens: Remnant: active"
+		has "Remnant: Face to Maw 2: done"
+	on offer
+		require "Luminazoa Specimen"
+		conversation
+			scene "outfit/luminazoa specimen"
+			`Do you want to hand the Luminazoa specimen over to the Remnant researchers?`
+			choice
+				`	(Yes.)`
+				`	(No.)`
+					defer
+			`The researchers thank you for your assistance.`
+				decline
+	on decline
+		outfit "Luminazoa Specimen" -1
+		fail "Gathering Specimens: Luminazoa"
+		"Gathering Specimens: Luminazoa: offered" --
+
+mission "Gathering Specimens: Remnant Ionic Leech"
+	landing
+	invisible
+	source Viminal
+	to offer
+		has "Gathering Specimens: Ionic Leech: active"
+		has "Remnant: Face to Maw 2: done"
+	on offer
+		require "Leech Specimen"
+		conversation
+			scene "outfit/ionic leech specimen"
+			`Do you want to hand the Ionic Leech specimen over to the Remnant researchers?`
+			choice
+				`	(Yes.)`
+				`	(No.)`
+					defer
+			`The researchers thank you for your assistance.`
+				decline
+	on decline
+		outfit "Leech Specimen" -1
+		fail "Gathering Specimens: Ionic Leech"
+		"Gathering Specimens: Ionic Leech: offered" --
+
+mission "Gathering Specimens: Remnant Astero Nautilus"
+	landing
+	invisible
+	source Viminal
+	to offer
+		has "Gathering Specimens: Remnant: active"
+		has "Remnant: Face to Maw 2: done"
+	on offer
+		require "Nautilus Specimen"
+		conversation
+			scene "outfit/astero nautilus specimen"
+			`Do you want to hand the Astero Nautilus specimen over to the Remnant researchers?`
+			choice
+				`	(Yes.)`
+				`	(No.)`
+					defer
+			`The researchers thank you for your assistance.`
+				decline
+	on decline
+		outfit "Nautilus Specimen" -1
+		fail "Gathering Specimens: Astero Nautilus"
+		"Gathering Specimens: Astero Nautilus: offered" --
+
+mission "Gathering Specimens: Remnant Plasma Parasite"
+	landing
+	invisible
+	source Viminal
+	to offer
+		has "Gathering Specimens: Remnant: active"
+		has "Remnant: Face to Maw 2: done"
+	on offer
+		require "Plasma Specimen"
+		conversation
+			scene "outfit/plasma parasite specimen"
+			`Do you want to hand the Plasma Parasite specimen over to the Remnant researchers?`
+			choice
+				`	(Yes.)`
+				`	(No.)`
+					defer
+			`The researchers thank you for your assistance.`
+				decline
+	on decline
+		outfit "Plasma Specimen" -1
+		fail "Gathering Specimens: Plasma Parasite"
+		"Gathering Specimens: Plasma Parasite: offered" --
+
+mission "Gathering Specimens: Remnant Nova Firefly"
+	landing
+	invisible
+	source Viminal
+	to offer
+		has "Gathering Specimens: Remnant: active"
+		has "Remnant: Face to Maw 2: done"
+	on offer
+		require "Firefly Specimen"
+		conversation
+			scene "outfit/nova firefly specimen"
+			`Do you want to hand the Nova Firefly specimen over to the Remnant researchers?`
+			choice
+				`	(Yes.)`
+				`	(No.)`
+					defer
+			`The researchers thank you for your assistance.`
+				decline
+	on decline
+		outfit "Firefly Specimen" -1
+		fail "Gathering Specimens: Nova Firefly"
+		"Gathering Specimens: Nova Firefly: offered" --
+
+mission "Gathering Specimens: Remnant Star Gazer"
+	landing
+	invisible
+	source Viminal
+	to offer
+		has "Gathering Specimens: Remnant: active"
+		has "Remnant: Face to Maw 2: done"
+	on offer
+		require "Gazer Specimen"
+		conversation
+			scene "outfit/star gazer specimen"
+			`Do you want to hand the Star Gazer specimen over to the Remnant researchers?`
+			choice
+				`	(Yes.)`
+				`	(No.)`
+					defer
+			`The researchers thank you for your assistance.`
+				decline
+	on decline
+		outfit "Gazer Specimen" -1
+		fail "Gathering Specimens: Star Gazer"
+		"Gathering Specimens: Star Gazer: offered" --
+
+mission "Gathering Specimens: Remnant Research"
+	landing
+	invisible
+	to offer
+		has "Gathering Specimens: Remnant Gray Eye: declined"
+		has "Gathering Specimens: Remnant Luminazoa: declined"
+		has "Gathering Specimens: Remnant Ionic Leech: declined"
+		has "Gathering Specimens: Remnant Astero Nautilus: declined"
+		has "Gathering Specimens: Remnant Plasma Parasite: declined"
+		has "Gathering Specimens: Remnant Nova Firefly: declined"
+		has "Gathering Specimens: Remnant Star Gazer: declined"
+	on offer
+		dialog `You find Taely preparing to board a ship. She signs "Your contributions to the junior engineering research project have caused quite a stir. I'm off to attend another meeting regarding some new devopment based on it. We might have some results soon."`
+	on accept
+		event "Gathering Specimens: Remnant Research" 14
+		fail "Gathering Specimens: Remnant"
+		fail
+
+
+mission "Gathering Specimens: Remnant B"
+	name "Gathering Specimens"
+	description "Search the galaxy for interstellar life. Bring tissue samples back to <origin>."
+	source "Caelian"
+	to offer
+		has "Remnant: Face to Maw 2B: done"
+	to complete
+		never
+	on offer
+		conversation
+			`A group of Remnant approach you. "Captain <first> <last>?" they sing. "To ensure we are investigating all possibilities in our research, we need  help from someone who has traveled far in the galaxy. Prefect Chilia suggested we ask you. Would you be interested in helping?"`
+			choice
+				`	"What sort of help do you need?" you sign.`
+			`	The Remnant look at each other then sign their reply, "Nothing too hard. Just keep an eye out for any interstellar life forms. If you find one, bring us back a tissue sample. If our research is successful, you'll be given an opportunity to test the prototypes."`
+				accept
+
+mission "Gathering Specimens: Remnant Gray Eye B"
+	landing
+	invisible
+	source Caelian
+	to offer
+		has "Gathering Specimens: Remnant: active"
+		has "Remnant: Face to Maw 2B: done"
+	on offer
+		require "Gray Eye Specimen"
+		conversation
+			scene "outfit/gray eye specimen"
+			`Do you want to hand the Gray Eye specimen over to the Remnant researchers?`
+			choice
+				`	(Yes.)`
+				`	(No.)`
+					defer
+			`The researchers thank you for your assistance.`
+				decline
+	on decline
+		outfit "Gray Eye Specimen" -1
+		fail "Gathering Specimens: Gray Eye"
+		"Gathering Specimens: Gray Eye: offered" --
+	
+mission "Gathering Specimens: Remnant Luminazoa B"
+	landing
+	invisible
+	source Caelian
+	to offer
+		has "Gathering Specimens: Remnant: active"
+		has "Remnant: Face to Maw 2B: done"
+	on offer
+		require "Luminazoa Specimen"
+		conversation
+			scene "outfit/luminazoa specimen"
+			`Do you want to hand the Luminazoa specimen over to the Remnant researchers?`
+			choice
+				`	(Yes.)`
+				`	(No.)`
+					defer
+			`The researchers thank you for your assistance.`
+				decline
+	on decline
+		outfit "Luminazoa Specimen" -1
+		fail "Gathering Specimens: Luminazoa"
+		"Gathering Specimens: Luminazoa: offered" --
+
+mission "Gathering Specimens: Remnant Ionic Leech B"
+	landing
+	invisible
+	source Caelian
+	to offer
+		has "Gathering Specimens: Ionic Leech: active"
+		has "Remnant: Face to Maw 2B: done"
+	on offer
+		require "Leech Specimen"
+		conversation
+			scene "outfit/ionic leech specimen"
+			`Do you want to hand the Ionic Leech specimen over to the Remnant researchers?`
+			choice
+				`	(Yes.)`
+				`	(No.)`
+					defer
+			`The researchers thank you for your assistance.`
+				decline
+	on decline
+		outfit "Leech Specimen" -1
+		fail "Gathering Specimens: Ionic Leech"
+		"Gathering Specimens: Ionic Leech: offered" --
+
+mission "Gathering Specimens: Remnant Astero Nautilus B"
+	landing
+	invisible
+	source Caelian
+	to offer
+		has "Gathering Specimens: Remnant: active"
+		has "Remnant: Face to Maw 2B: done"
+	on offer
+		require "Nautilus Specimen"
+		conversation
+			scene "outfit/astero nautilus specimen"
+			`Do you want to hand the Astero Nautilus specimen over to the Remnant researchers?`
+			choice
+				`	(Yes.)`
+				`	(No.)`
+					defer
+			`The researchers thank you for your assistance.`
+				decline
+	on decline
+		outfit "Nautilus Specimen" -1
+		fail "Gathering Specimens: Astero Nautilus"
+		"Gathering Specimens: Astero Nautilus: offered" --
+
+mission "Gathering Specimens: Remnant Plasma Parasite B"
+	landing
+	invisible
+	source Caelian
+	to offer
+		has "Gathering Specimens: Remnant: active"
+		has "Remnant: Face to Maw 2B: done"
+	on offer
+		require "Plasma Specimen"
+		conversation
+			scene "outfit/plasma parasite specimen"
+			`Do you want to hand the Plasma Parasite specimen over to the Remnant researchers?`
+			choice
+				`	(Yes.)`
+				`	(No.)`
+					defer
+			`The researchers thank you for your assistance.`
+				decline
+	on decline
+		outfit "Plasma Specimen" -1
+		fail "Gathering Specimens: Plasma Parasite"
+		"Gathering Specimens: Plasma Parasite: offered" --
+
+mission "Gathering Specimens: Remnant Nova Firefly B"
+	landing
+	invisible
+	source Caelian
+	to offer
+		has "Gathering Specimens: Remnant: active"
+		has "Remnant: Face to Maw 2B: done"
+	on offer
+		require "Firefly Specimen"
+		conversation
+			scene "outfit/nova firefly specimen"
+			`Do you want to hand the Nova Firefly specimen over to the Remnant researchers?`
+			choice
+				`	(Yes.)`
+				`	(No.)`
+					defer
+			`The researchers thank you for your assistance.`
+				decline
+	on decline
+		outfit "Firefly Specimen" -1
+		fail "Gathering Specimens: Nova Firefly"
+		"Gathering Specimens: Nova Firefly: offered" --
+
+mission "Gathering Specimens: Remnant Star Gazer B"
+	landing
+	invisible
+	source Caelian
+	to offer
+		has "Gathering Specimens: Remnant: active"
+		has "Remnant: Face to Maw 2B: done"
+	on offer
+		require "Gazer Specimen"
+		conversation
+			scene "outfit/star gazer specimen"
+			`Do you want to hand the Star Gazer specimen over to the Remnant researchers?`
+			choice
+				`	(Yes.)`
+				`	(No.)`
+					defer
+			`The researchers thank you for your assistance.`
+				decline
+	on decline
+		outfit "Gazer Specimen" -1
+		fail "Gathering Specimens: Star Gazer"
+		"Gathering Specimens: Star Gazer: offered" --
+
+mission "Gathering Specimens: Remnant Research B"
+	landing
+	invisible
+	to offer
+		has "Gathering Specimens: Remnant Gray Eye B: declined"
+		has "Gathering Specimens: Remnant Luminazoa B: declined"
+		has "Gathering Specimens: Remnant Ionic Leech B: declined"
+		has "Gathering Specimens: Remnant Astero Nautilus B: declined"
+		has "Gathering Specimens: Remnant Plasma Parasite B: declined"
+		has "Gathering Specimens: Remnant Nova Firefly B: declined"
+		has "Gathering Specimens: Remnant Star Gazer B: declined"
+	on offer
+		dialog `You find Prefect Chilia preparing to board a ship. He signs "Your contributions to the junior weapons research project have caused quite a stir. I'm off to attend another meeting regarding some new devopment based on it. We might have some results soon."`
+	on accept
+		event "Gathering Specimens: Remnant Research" 14
+		fail "Gathering Specimens: Remnant B"
+		fail
+
+event "Gathering Specimens: Remnant Research"
+
+mission "Gathering Specimens: Remnant Conclusion"
+	landing
+	name "The Raptor"
+	description "Escort the prototype Raptor to <destination>." 
+	source Viminal
+	destination Caelian
+	to offer
+		has "event: Gathering Specimens: Remnant Research"
+	on offer
+		conversation
+			scene "ship/raptor prototype"
+			`You notice a strange ship parked at the spaceport. While there are some bits of Remnant technology installed on it, the ship is very different from their other designs.`
+			`	As you are studying the mysterious ship, Taely approaches you. "I see you found the Raptor," she signs.`
+			choice
+				`	"It's different from the other Remnant ships."`
+				`	"Did you design this?"`
+			`	"Its design was based on the research results from studying the genetic samples you brought us."`
+			choice
+				`	"It was made from those jars of goop?"`
+			`	"It's more accurate to say that this ship was grown, not made. I'll admit, I had my doubts. It's not as elegant as our other ships. But it has some features they lack." She pets the hull.`
+			choice
+				`	"So, can I fly it?"`
+			`	"Not just yet. I have to take it Caelian for weapons installation. Care to join me?"`
+			choice
+				`	"Sure."`
+				`	"Of course I will."`
+					accept
+	npc accompany save
+		government Remnant
+		personality target marked escort
+		ship "Raptor Prototype (unarmed)" "Raptor"
+	on visit
+		dialog "Taely and the Raptor haven't arrived yet. Better head back to space and make sure they're okay."
+	on complete
+		give ship "Raptor Prototype"
+		conversation
+			scene "ship/raptor prototype"
+			`	Taely lands the Raptor. Before departing on a ship bound for Viminal, she signs, "I think you'll enjoy piloting the Raptor. The engines are very responsive."`
+			scene "scene/scene-raptorweapons"
+			`	Prefect Chilia arrives with a team ready to install the weapons systems. As you watch them unload the crates, you wonder how the different specimens contributed to each weapon's design.`
+			`	It doesn't take long for the team to finish. "The Raptor is ready for testing. May the Ebers burn bright for you, captain!" he sings.`
+			
+ship "Raptor Prototype" "Raptor Prototype (unarmed)"
+	outfits
+		"Aeon Cell"
+		"Crystal Capacitor" 2
+		"Thermoelectric Cooler" 3
+		"Quantum Key Stone"
+		"Tuning Rifle" 15
+
+		"Smelter-Class Thruster"
+		"Smelter-Class Steering"
+		"Scram Drive"

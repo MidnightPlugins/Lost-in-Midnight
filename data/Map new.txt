@@ -532,6 +532,118 @@ system Kalsolli
 
 
 
+system Nebulous
+	attributes "midnight"
+	pos -1145.58 432.574
+	habitable 233.28
+	fleet "Plasma Parasites" 3600
+	fleet "Nesting Plasma Parasites" 400
+	trade Clothing 290
+	trade Electronics 740
+	trade Equipment 530
+	trade Food 350
+	trade "Heavy Metals" 960
+	trade Industrial 720
+	trade "Luxury Goods" 1220
+	trade Medical 680
+	trade Metal 390
+	trade Plastic 390
+	object
+		sprite star/wr
+		period 10
+	object "Parasite's Nest"
+		sprite "planet/ringworld infested 1"
+		distance 812
+		period 360
+	object "Parasite's Nest"
+		sprite "planet/ringworld infested 2"
+		distance 812
+		period 360
+		offset 20
+	object "Parasite's Nest"
+		sprite "planet/ringworld infested 3"
+		distance 812
+		period 360
+		offset 40
+	object "Parasite's Nest"
+		sprite "planet/ringworld infested 1"
+		distance 812
+		period 360
+		offset 60
+	object "Parasite's Nest"
+		sprite "planet/ringworld infested 2"
+		distance 812
+		period 360
+		offset 80
+	object "Parasite's Nest"
+		sprite "planet/ringworld infested 3"
+		distance 812
+		period 360
+		offset 100
+	object "Parasite's Nest"
+		sprite "planet/ringworld infested 2"
+		distance 812
+		period 360
+		offset 120
+	object "Parasite's Nest"
+		sprite "planet/ringworld infested 3"
+		distance 812
+		period 360
+		offset 140
+	object "Parasite's Nest"
+		sprite "planet/ringworld infested 1"
+		distance 812
+		period 360
+		offset 160
+	object "Parasite's Nest"
+		sprite "planet/ringworld infested 1"
+		distance 812
+		period 360
+		offset 180
+	object "Parasite's Nest"
+		sprite "planet/ringworld infested 3"
+		distance 812
+		period 360
+		offset 200
+	object "Parasite's Nest"
+		sprite "planet/ringworld infested 2"
+		distance 812
+		period 360
+		offset 220
+	object "Parasite's Nest"
+		sprite "planet/ringworld infested 1"
+		distance 812
+		period 360
+		offset 240
+	object "Parasite's Nest"
+		sprite "planet/ringworld infested 3"
+		distance 812
+		period 360
+		offset 260
+	object "Parasite's Nest"
+		sprite "planet/ringworld infested 2"
+		distance 812
+		period 360
+		offset 280
+	object "Parasite's Nest"
+		sprite "planet/ringworld infested 3"
+		distance 812
+		period 360
+		offset 300
+	object "Parasite's Nest"
+		sprite "planet/ringworld infested 2"
+		distance 812
+		period 360
+		offset 320
+	object "Parasite's Nest"
+		sprite "planet/ringworld infested 1"
+		distance 812
+		period 360
+		offset 340
+
+
+
+
 system "Pebble Beach"
 	hidden
 	pos -893.745 96.378
@@ -702,6 +814,58 @@ system Temeh
 
 
 
+system "Watcher's Nest"
+	hidden
+	pos -386.428 -908.93
+	habitable 233.28
+	belt 1000
+	asteroids "small rock" 2 5.2118
+	asteroids "large rock" 3 5.7684
+	asteroids "small metal" 2 6.578
+	asteroids "medium metal" 3 3.6432
+	asteroids "large metal" 4 2.783
+	minables lead 8 4.8391
+	minables titanium 12 5.08669
+	minables neodymium 5 2.48669
+	trade Electronics 740
+	trade Equipment 530
+	trade Food 350
+	trade "Heavy Metals" 960
+	trade Industrial 720
+	trade "Luxury Goods" 1220
+	trade Medical 680
+	trade Metal 390
+	trade Plastic 390
+	object
+		sprite star/m4
+		period 10
+	object
+		sprite planet/ice4
+		distance 294.41
+		period 132.297
+		object
+			sprite planet/rock0
+			distance 127
+			period 17.9915
+	object
+		sprite planet/gas14
+		distance 799.41
+		period 591.937
+		offset 40.5568
+		object
+			sprite planet/dust4
+			distance 249
+			period 16.0014
+			offset 199.055
+	object
+		sprite planet/gas6
+		distance 1357.41
+		period 1309.75
+		offset 184.839
+
+
+
+
 system Zubahai
 	hidden
 	pos -761.407 -124.233
@@ -849,6 +1013,13 @@ planet "Naihe Qiao"
 	attributes midnight uninhabited
 	landscape land/badlands1
 	description `"The Bridge to the Underworld" is a barren rock. The surface is riddled wtih canyons and chasms. Supposedly there are secret tunnels hidden within these crevices which lead to vast underground caverns that various pirate gangs use as hideouts.`
+	government Uninhabited
+	security 0
+
+planet "Parasite's Nest"
+	attributes uninhabited ringworld midnight
+	landscape land/station2dark
+	description `While this ring world is visible to Coalition astronomers, it sits outside their reach. The ring is completely intact. However, it has been completely overrun by plasma parasites. The infestation has reached the point where one misplaced blaster shot could set the whole ring on fire...`
 	government Uninhabited
 	security 0
 

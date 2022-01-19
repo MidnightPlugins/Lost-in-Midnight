@@ -15,130 +15,11 @@
 
 
 
-#  An ancient Wanderer warship salvaged by pirates in the Storm Seeker missions.
-
-ship "Storm Seeker"
-	sprite "ship/storm seeker"
-	thumbnail "thumbnail/storm seeker-thumb"
-	attributes
-		category "Medium Warship"
-		licenses
-			"Wanderer Military"
-		"cost" 16500000
-		"shields" 28700
-		"hull" 20000
-		"required crew" 18
-		"bunks" 40
-		"mass" 290
-		"drag" 4.9
-		"heat dissipation" .7
-		"fuel capacity" 600
-		"cargo space" 85
-		"outfit space" 493
-		"weapon capacity" 250
-		"engine capacity" 114
-		"outfit scan power" 25
-		"outfit scan speed" 1
-		"tactical scan power" 25
-		weapon
-			"blast radius" 200
-			"shield damage" 2000
-			"hull damage" 1000
-			"hit force" 3000
-	outfits
-		"Sunbeam" 6
-		"Wanderer Anti-Missile"
-		
-		"White Sun Reactor"
-		"Dark Storm Shielding"
-		"Wanderer Ramscoop" 1
-		
-		"Type 1 Radiant Thruster"
-		"Type 2 Radiant Thruster"
-		"Type 3 Radiant Steering"
-		"Jump Drive"
-		
-	engine -31 101
-	engine 31 101
-	gun -24 -50.5
-	gun 25 -50.5
-	gun -64.5 -9
-	gun 62.5 -9
-	gun -58 -1
-	gun 56.5 -1
-	turret 0 -4
-	explode "small explosion" 60
-	explode "medium explosion" 40
-	explode "large explosion" 20
-	"final explode" "final explosion medium"
-	description "An old relic from a time when the Wanderers occupied what is now southern human space, the Storm Seeker is a destroyer with an array of information warfare technologies built directly into the hull."
-
-
-
-# Shallow Ponds often escort the Storm Seeeker in the Storm Seeker missions.
-# A limited number of them can be salvaged from Season's End.
-
-ship "Shallow Pond"
-	sprite "ship/shallow pond"
-	thumbnail "thumbnail/shallow pond-thumb"
-	attributes
-		category "Interceptor"
-		"cost" 690000
-		"shields" 3300
-		"hull" 600
-		"required crew" 1
-		"bunks" 4
-		"mass" 150
-		"drag" 2.1
-		"heat dissipation" .8
-		"fuel capacity" 300
-		"cargo space"  0
-		"outfit space" 169
-		"weapon capacity" 34
-		"engine capacity" 47
-		weapon
-			"blast radius" 36
-			"shield damage" 180
-			"hull damage" 360
-			"hit force" 540
-	outfits
-		"Sunbeam"
-
-		"Red Sun Reactor"
-		"Bright Cloud Shielding"
-
-		"Type 2 Radiant Thruster"
-		"Type 2 Radiant Steering"
-		Hyperdrive		
-
-	engine -9 51
-	engine 9 51
-	gun 1 -19
-	bay "Drone" 1 -27.5
-		under
-	leak "leak" 60 50
-	explode "tiny explosion" 10
-	explode "small explosion" 20
-	explode "medium explosion" 5
-	"final explode" "final explosion small"
-	description "These ancient Wanderer interceptors can deploy a drone for added versatility in combat."
-
-ship "Shallow Pond" "Shallow Pond (Jump)"
-	outfits
-		"Sunbeam"
-		"Red Sun Reactor"
-		"Bright Cloud Shielding"
-		"Type 2 Radiant Thruster"
-		"Type 2 Radiant Steering"
-		"Jump Drive"
-
-
-
 # The Carabao is Quash's unique city ship in the Cartographer missions.
 
 ship "Carabao"
 	sprite "ship/carabao"
-	thumbnail "thumbnail/bactrian"
+	thumbnail "thumbnail/carabao-thumb"
 	attributes
 		category "Heavy Warship"
 		"cost" 18000000
@@ -666,6 +547,72 @@ ship "Mastodon"
 
 
 
+# The Raptor Protoype is a mission reward in Gathering Specimens.
+
+ship "Raptor Prototype"
+	sprite "ship/raptor prototype"
+	attributes
+		category "Light Warship"
+		licenses
+			"Remnant"
+		cost 9900000
+		"shields" 10000
+		"hull" 7000
+		"required crew" 14
+		"bunks" 35
+		"cargo space" 102
+		"mass" 320
+		"drag" 7.2
+		"heat dissipation" 0.7
+		"fuel capacity" 600
+		"ramscoop" 1
+		"outfit space" 493
+		"weapon capacity" 147
+		"engine capacity" 141
+		"shield generation" 2.7
+		"shield energy" 1.8
+		"hull repair rate" 1
+		"hull energy" 0.75
+		"ion resistance" 1
+		"outfit scan power" 12
+		"outfit scan speed" 1
+		"tactical scan power" 26
+		weapon
+			"blast radius" 320
+			"shield damage" 3200
+			"hull damage" 1600
+			"hit force" 4800
+	outfits
+		"Quill Launcher"
+		"Lightning Tendril" 2
+		"Flare Belcher"
+		
+		"Aeon Cell"
+		"Crystal Capacitor" 2
+		"Thermoelectric Cooler" 3
+		"Quantum Key Stone"
+		"Tuning Rifle" 15
+
+		"Smelter-Class Thruster"
+		"Smelter-Class Steering"
+		"Scram Drive"
+		
+	engine -19.5 138
+	engine 18 138.5
+	gun 3.5 -35.5 "Quill Launcher"
+	gun 3.5 -35.5 "Flare Belcher"
+	turret -33 10 "Lightning Tendril"
+	turret 34.5 14 "Lightning Tendril"
+	turret 1.5 63
+	leak "remnant leak" 20 8
+	leak "remnant leak sparkle" 30 12
+	explode "medium explosion" 15
+	explode "large explosion" 10
+	explode "huge explosion" 5
+	"final explode" "final explosion large" 1
+	description `The Raptor Prototype is the result of experiments utilizing biological specimens collected from across the galaxy and beyond. As a result, it's design is a bit different from other Remnant ships.`
+
+
 
 # This empty hull can be obtained from a Cartography mission.
 # A variant appears in an Oathbreaker mission.
@@ -886,6 +833,126 @@ ship "Shield Fortress"
 
 
 
+#  An ancient Wanderer warship salvaged by pirates in the Storm Seeker missions.
+
+ship "Storm Seeker"
+	sprite "ship/storm seeker"
+	thumbnail "thumbnail/storm seeker-thumb"
+	attributes
+		category "Medium Warship"
+		licenses
+			"Wanderer Military"
+		"cost" 16500000
+		"shields" 28700
+		"hull" 20000
+		"required crew" 18
+		"bunks" 40
+		"mass" 290
+		"drag" 4.9
+		"heat dissipation" .7
+		"fuel capacity" 600
+		"cargo space" 85
+		"outfit space" 493
+		"weapon capacity" 250
+		"engine capacity" 114
+		"outfit scan power" 25
+		"outfit scan speed" 1
+		"tactical scan power" 25
+		weapon
+			"blast radius" 200
+			"shield damage" 2000
+			"hull damage" 1000
+			"hit force" 3000
+	outfits
+		"Sunbeam" 6
+		"Wanderer Anti-Missile"
+		
+		"White Sun Reactor"
+		"Dark Storm Shielding"
+		"Wanderer Ramscoop" 1
+		
+		"Type 1 Radiant Thruster"
+		"Type 2 Radiant Thruster"
+		"Type 3 Radiant Steering"
+		"Jump Drive"
+		
+	engine -31 101
+	engine 31 101
+	gun -24 -50.5
+	gun 25 -50.5
+	gun -64.5 -9
+	gun 62.5 -9
+	gun -58 -1
+	gun 56.5 -1
+	turret 0 -4
+	explode "small explosion" 60
+	explode "medium explosion" 40
+	explode "large explosion" 20
+	"final explode" "final explosion medium"
+	description "An old relic from a time when the Wanderers occupied what is now southern human space, the Storm Seeker is a destroyer with an array of information warfare technologies built directly into the hull."
+
+
+
+# Shallow Ponds often escort the Storm Seeeker in the Storm Seeker missions.
+# A limited number of them can be salvaged from Season's End.
+
+ship "Shallow Pond"
+	sprite "ship/shallow pond"
+	thumbnail "thumbnail/shallow pond-thumb"
+	attributes
+		category "Interceptor"
+		"cost" 690000
+		"shields" 3300
+		"hull" 600
+		"required crew" 1
+		"bunks" 4
+		"mass" 150
+		"drag" 2.1
+		"heat dissipation" .8
+		"fuel capacity" 300
+		"cargo space"  0
+		"outfit space" 169
+		"weapon capacity" 34
+		"engine capacity" 47
+		weapon
+			"blast radius" 36
+			"shield damage" 180
+			"hull damage" 360
+			"hit force" 540
+	outfits
+		"Sunbeam"
+
+		"Red Sun Reactor"
+		"Bright Cloud Shielding"
+
+		"Type 2 Radiant Thruster"
+		"Type 2 Radiant Steering"
+		Hyperdrive		
+
+	engine -9 51
+	engine 9 51
+	gun 1 -19
+	bay "Drone" 1 -27.5
+		under
+	leak "leak" 60 50
+	explode "tiny explosion" 10
+	explode "small explosion" 20
+	explode "medium explosion" 5
+	"final explode" "final explosion small"
+	description "These ancient Wanderer interceptors can deploy a drone for added versatility in combat."
+
+ship "Shallow Pond" "Shallow Pond (Jump)"
+	outfits
+		"Sunbeam"
+		"Red Sun Reactor"
+		"Bright Cloud Shielding"
+		"Type 2 Radiant Thruster"
+		"Type 2 Radiant Steering"
+		"Jump Drive"
+
+
+
+
 # A War Hauler appears in Grudge Family missions.
 # A War Hauler appears in Oathbreaker missions.
 # A War Hauler appears in a Double Cross mission.
@@ -962,6 +1029,7 @@ ship "War Hauler"
 
 ship "Metropolis"
 	sprite "ship/metropolis"
+	thumbnail "thumbnail/metropolis-thumb"
 	attributes
 		category "Heavy Warship"
 		"cost" 27060000

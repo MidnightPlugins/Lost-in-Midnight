@@ -1021,7 +1021,7 @@ fleet "Fugitive Oathbreaker"
 		
 		
 
-outfitters "Remnant Weapons"
+outfitter "Remnant Weapons"
 	"Inhibitor Cannon"
 	"Thrasher Cannon"
 	"Thrasher Turret"

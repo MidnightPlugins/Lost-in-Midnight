@@ -31,7 +31,7 @@ mission "Oathbreaker Siege 1"
 		distance 2 3
 	to offer
 		has "First Contact: Hai: offered"
-		has "main plot completed"
+		has "free worlds plot completed"
 	on offer
 		conversation
 			scene "scene/scene-navyfleet"
@@ -412,7 +412,7 @@ mission "Oathbreaker Bounty, Syndicate"
 			`The Syndicate government pays you <payment> for the scanner data of your encounter with the Oathbreakers on a pirate planet. While signing the credit transfer documentation, you note that this amount is being subtracted from the bounty pool of one million credits for information leading to the capture or death of Arnold Benedict. Almost half of the reward money is already gone, likely paid for reports like yours coming from elsewhere in the galaxy.`
 				decline
 
-event "Oathbreaker Piracy
+event "Oathbreaker Piracy"
 	government "Oathbreaker"
 		"attitude toward"
 			"Free Worlds" -.04

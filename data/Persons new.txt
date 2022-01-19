@@ -120,6 +120,15 @@ person "Midnight Candle"
 
 
 
+person "Silent Observer"
+	government "Invasive Lifeform (Passive)"
+	frequency 100
+	personality surveillance opportunistic mute
+	ship "Star Gazer" "Silent Observer"
+	
+
+
+
 person "Poltergeist King"
 	government "Author"
 	frequency 349

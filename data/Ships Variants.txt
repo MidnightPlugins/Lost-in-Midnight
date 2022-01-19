@@ -155,8 +155,6 @@ ship "Carrier" "Carrier (Coalition)"
 		"A860 Atomic Thruster"
 		"A525 Atomic Steering"
 		"Hyperdrive"
-	cargo
-		"Jump Drive"
 
 	gun "Particle Cannon"
 	gun "Particle Cannon"
@@ -202,8 +200,6 @@ ship "Cruiser" "Cruiser (Coalition)"
 		"A520 Atomic Thruster"
 		"A525 Atomic Steering"
 		"Hyperdrive"
-	cargo
-		"Jump Drive"
 
 	gun "Sidewinder Missile Launcher"
 	gun "Sidewinder Missile Launcher"
@@ -269,8 +265,6 @@ ship "Gunboat" "Gunboat (Coalition)"
 		"A250 Atomic Thruster"
 		"A255 Atomic Steering"
 		"Hyperdrive"
-	cargo
-		"Jump Drive"
 
 
 

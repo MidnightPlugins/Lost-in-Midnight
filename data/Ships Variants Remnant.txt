@@ -77,7 +77,7 @@ ship "Penguin" "Penguin (Gravedigger)"
 ship "Albatross" "Albatross (Gravedigger)"
 	outfits
 		"Inhibitor Cannon" 6
-		"Ka'het Annihilator  Turret" 2
+		"Ka'het Annihilator Turret" 2
 		"Point Defense Turret"
 		"Aeon Cell"
 		"Epoch Cell"

@@ -23,7 +23,7 @@ mission "SB-Labs Vindicator 1"
 		has "Sheragi Archaeology: Epilogue: done"
 		not "Oathbreaker Liberator 1: offered"
 		or
-			not "Oathbreaker Siege 2: done"
+			not "Oathbreaker Siege 1: offered"
 			has "Oathbreaker Thermopylae: done"
 	on offer
 		dialog
@@ -253,7 +253,7 @@ mission "Oathbreaker Liberator 1"
 	destination "Rust"
 	to offer
 		has "Sheragi Archaeology: Epilogue: done"
-		has "Oathbreaker Siege 2: done"
+		has "Oathbreaker Siege 1: done"
 		not "Oathbreaker Thermopylae: done"
 		not "SB-Labs Vindicator 1: offered"
 	on offer

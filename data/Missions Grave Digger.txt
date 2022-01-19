@@ -48,7 +48,7 @@ mission "Grave Digger: Void Rifle"
 		planet "Aventine"
 	to offer
 		has "Grave Digger: Stolen Kestrel: declined"
-		has "Remnant: Face to Maw 2A: done"
+		has "Remnant: Face to Maw 2: done"
 		or
 			has "Remnant: Deep Surveillance: done"
 			has "Remnant: Deep Surveillance: declined"
