@@ -293,7 +293,7 @@ mission "Gathering Specimens: Alexandria Gray Eye"
 				`	(Yes.)`
 				`	(No.)`
 					defer
-			`The researchers thank you for your contribution to the advancement of human knowledge and award you <payment>.`
+			`The researchers thank you for your contribution to the advancement of human knowledge and award you 1000000 credits.`
 				decline
 	on decline
 		outfit "Gray Eye Specimen" -1
@@ -317,7 +317,7 @@ mission "Gathering Specimens: Alexandria Luminazoa"
 				`	(Yes.)`
 				`	(No.)`
 					defer
-			`The researchers thank you for your contribution to the advancement of human knowledge and award you <payment>.`
+			`The researchers thank you for your contribution to the advancement of human knowledge and award you 1000000 credits.`
 				decline
 	on decline
 		outfit "Luminazoa Specimen" -1
@@ -341,7 +341,7 @@ mission "Gathering Specimens: Alexandria Ionic Leech"
 				`	(Yes.)`
 				`	(No.)`
 					defer
-			`The researchers thank you for your contribution to the advancement of human knowledge and award you <payment>.`
+			`The researchers thank you for your contribution to the advancement of human knowledge and award you 1000000 credits.`
 				decline
 	on decline
 		outfit "Leech Specimen" -1
@@ -365,7 +365,7 @@ mission "Gathering Specimens: Alexandria Astero Nautilus"
 				`	(Yes.)`
 				`	(No.)`
 					defer
-			`The researchers thank you for your contribution to the advancement of human knowledge and award you <payment>.`
+			`The researchers thank you for your contribution to the advancement of human knowledge and award you 1000000 credits.`
 				decline
 	on decline
 		outfit "Nautilus Specimen" -1
@@ -389,7 +389,7 @@ mission "Gathering Specimens: Alexandria Plasma Parasite"
 				`	(Yes.)`
 				`	(No.)`
 					defer
-			`The researchers thank you for your contribution to the advancement of human knowledge and award you <payment>.`
+			`The researchers thank you for your contribution to the advancement of human knowledge and award you 1000000 credits.`
 				decline
 	on decline
 		outfit "Plasma Specimen" -1
@@ -413,7 +413,7 @@ mission "Gathering Specimens: Alexandria Nova Firefly"
 				`	(Yes.)`
 				`	(No.)`
 					defer
-			`The researchers thank you for your contribution to the advancement of human knowledge and award you <payment>.`
+			`The researchers thank you for your contribution to the advancement of human knowledge and award you 1000000 credits.`
 				decline
 	on decline
 		outfit "Firefly Specimen" -1
@@ -437,7 +437,7 @@ mission "Gathering Specimens: Alexandria Star Gazer"
 				`	(Yes.)`
 				`	(No.)`
 					defer
-			`The researchers thank you for your contribution to the advancement of human knowledge and award you <payment>.`
+			`The researchers thank you for your contribution to the advancement of human knowledge and award you 1000000 credits.`
 				decline
 	on decline
 		outfit "Gazer Specimen" -1
@@ -694,7 +694,7 @@ mission "Gathering Specimens: Conservatory Conclusion"
 	on offer
 		dialog `You receive a message from the Free Worlds Conservatory administrators: "Your contributions have lead to a research break through! Visit the Conservatory on <destination> to learn more."`
 	on complete
-		"salary: Free Worlds Conservatory" = 1000
+		"salary: Free Worlds Conservatory" = 3000
 		conversation
 			scene "scene/scene-specimens"
 			`The administrators thank you for helping with the research. And now they present the results of that work: a cure for Chronic Hyperspace Traveler's Disorder.`
