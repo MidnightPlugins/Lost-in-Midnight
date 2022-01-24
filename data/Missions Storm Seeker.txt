@@ -406,7 +406,7 @@ mission "Storm Seeker Counter Attack 1"
 	name "Storm Seeker"
 	description "Meet Admiral Danforth on <destination> regarding the Alpha attacks happening across the galaxy."
 	source
-		government "Republic" "Syndicate" "Free Worlds" "Neutral" "Independant"
+		government "Republic" "Syndicate" "Free Worlds" "Neutral" "Independent"
 		not attributes "uninhabited"
 	destination "Luna"
 	to offer
