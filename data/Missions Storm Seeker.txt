@@ -590,11 +590,17 @@ mission "Storm Seeker Counter Attack 4"
 	to offer
 		has "Storm Seeker Counter Attack 3: done"
 	on offer
-		"Storm Seeker Raid: North: offered" ++
-		"Storm Seeker Raid: Paradise: offered" ++
-		"Storm Seeker Raid: Deep: offered" ++
-		"Storm Seeker Raid: Syndicate: offered" ++
-		"Storm Seeker Raid: Free Worlds: offered" ++
+		"Storm Seeker Raid: North: offered" += 10
+		"Storm Seeker Raid: Paradise: offered" += 10
+		"Storm Seeker Raid: Deep: offered" += 10
+		"Storm Seeker Raid: Syndicate: offered" += 10
+		"Storm Seeker Raid: Free Worlds: offered" += 10
+		fail "Storm Seeker Raid: North"
+		fail "Storm Seeker Raid: Paradise"
+		fail "Storm Seeker Raid: Deep"
+		fail "Storm Seeker Raid: Syndicate"
+		fail "Storm Seeker Raid: Free Worlds"
+
 	
 	on enter
 		conversation
@@ -647,6 +653,24 @@ ship "Flycatcher" "Flycatcher (Laser)"
 		"Small Biochemical Cell" 2
 		"Type 1 Radiant Thruster"
 		"Type 1 Radiant Steering"
+
+mission "Storm Seeker Counter Attack 4 Patch"
+	landing
+	invisible
+	to offer
+		has "Storm Seeker Counter Attack 4: done"
+	on offer
+		"Storm Seeker Raid: North: offered" += 10
+		"Storm Seeker Raid: Paradise: offered" += 10
+		"Storm Seeker Raid: Deep: offered" += 10
+		"Storm Seeker Raid: Syndicate: offered" += 10
+		"Storm Seeker Raid: Free Worlds: offered" += 10
+		fail "Storm Seeker Raid: North"
+		fail "Storm Seeker Raid: Paradise"
+		fail "Storm Seeker Raid: Deep"
+		fail "Storm Seeker Raid: Syndicate"
+		fail "Storm Seeker Raid: Free Worlds"
+		fail
 
 mission "Storm Seeker Counter Attack 5"
 	landing
