@@ -574,6 +574,7 @@ ship "Raptor Prototype"
 		"hull repair rate" 1
 		"hull energy" 0.75
 		"ion resistance" 1
+		"ion protection" 3
 		"outfit scan power" 12
 		"outfit scan speed" 1
 		"tactical scan power" 26
@@ -834,6 +835,7 @@ ship "Shield Fortress"
 
 
 #  An ancient Wanderer warship salvaged by pirates in the Storm Seeker missions.
+#  A variant is given as a mission reward in gathering specimens missions.
 
 ship "Storm Seeker"
 	sprite "ship/storm seeker"
@@ -869,7 +871,7 @@ ship "Storm Seeker"
 		
 		"White Sun Reactor"
 		"Dark Storm Shielding"
-		"Wanderer Ramscoop" 1
+		"Wanderer Ramscoop"
 		
 		"Type 1 Radiant Thruster"
 		"Type 2 Radiant Thruster"

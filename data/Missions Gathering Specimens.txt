@@ -27,8 +27,7 @@ mission "Gathering Specimens: Gray Eye"
 		personality waiting staying uninterested mute marked
 		ship "Gray Eye Specimen"
 	on fail
-		"Gathering Specimens: Gray Eye: offered" --
-
+		clear "Gathering Specimens: Gray Eye: offered"
 ship "Gray Eye" "Gray Eye Specimen"
 	"uncapturable"
 	outfits
@@ -39,6 +38,20 @@ outfit "Gray Eye Specimen"
 	thumbnail "outfit/gray eye specimen"
 	cost 0
 	description "The slimy goopy remains of a Gray Eye."
+	description "This is a rare specimen. You can install it on your ship to keep it from getting mixed in with the regular cargo."
+
+mission "Gathering Specimens: Gray Eye Lost"
+	landing
+	invisible
+	repeat
+	source
+		planet "Alexandria" "Winter" "Viminal" "Caelian"
+	to offer
+		has "Gathering Specimens: Gray Eye: active"
+	on offer
+		require "Gray Eye Specimen" 0
+		fail "Gathering Specimens: Gray Eye"
+		fail
 
 
 
@@ -62,8 +75,7 @@ mission "Gathering Specimens: Luminazoa"
 		personality waiting staying uninterested mute marked
 		ship "Luminazoa Specimen"
 	on fail
-		"Gathering Specimens: Luminazoa: offered" --
-
+		clear "Gathering Specimens: Luminazoa: offered"
 ship "Luminazoa" "Luminazoa Specimen"
 	"uncapturable"
 	outfits
@@ -74,6 +86,20 @@ outfit "Luminazoa Specimen"
 	thumbnail "outfit/luminazoa specimen"
 	cost 0
 	description "The slimy goopy remains of a Luminazoa. It glows in the dark."
+	description "This is a rare specimen. You can install it on your ship to keep it from getting mixed in with the regular cargo."
+
+mission "Gathering Specimens: Luminazoa Lost"
+	landing
+	invisible
+	repeat
+	source
+		planet "Alexandria" "Winter" "Viminal" "Caelian"
+	to offer
+		has "Gathering Specimens: Luminazoa: active"
+	on offer
+		require "Luminazoa Specimen" 0
+		fail "Gathering Specimens: Luminazoa"
+		fail
 
 
 
@@ -98,8 +124,7 @@ mission "Gathering Specimens: Ionic Leech"
 		personality waiting staying uninterested mute marked
 		ship "Ionic Leech Specimen"
 	on fail
-		"Gathering Specimens: Ionic Leech: offered" --
-
+		clear "Gathering Specimens: Ionic Leech: offered"
 ship "Ionic Leech" "Ionic Leech Specimen"
 	"uncapturable"
 	outfits
@@ -109,7 +134,21 @@ outfit "Leech Specimen"
 	category "Special"
 	thumbnail "outfit/ionic leech specimen"
 	cost 0
-	description "The slimy goopy remains of a Ionic Leech. You feel static electricity clinging to the surface of the container."
+	description "The slimy goopy remains of an Ionic Leech. You feel static electricity clinging to the surface of the container."
+	description "This is a rare specimen. You can install it on your ship to keep it from getting mixed in with the regular cargo."
+
+mission "Gathering Specimens: Ionic Leech Lost"
+	landing
+	invisible
+	repeat
+	source
+		planet "Alexandria" "Winter" "Viminal" "Caelian"
+	to offer
+		has "Gathering Specimens: Ionic Leech: active"
+	on offer
+		require "Leech Specimen" 0
+		fail "Gathering Specimens: Ionic Leech"
+		fail
 
 
 
@@ -133,8 +172,7 @@ mission "Gathering Specimens: Astero Nautilus"
 		personality waiting staying uninterested mute marked
 		ship "Astero Nautilus Specimen"
 	on fail
-		"Gathering Specimens: Astero Nautilus: offered" --
-
+		clear "Gathering Specimens: Astero Nautilus: offered"
 ship "Astero Nautilus" "Astero Nautilus Specimen"
 	"uncapturable"
 	outfits
@@ -144,7 +182,21 @@ outfit "Nautilus Specimen"
 	category "Special"
 	thumbnail "outfit/astero nautilus specimen"
 	cost 0
-	description "The slimy goopy remains of a Astero Nautilus. You're almost ceratin that one of the tentacles just twitched..."
+	description "The slimy goopy remains of an Astero Nautilus. You're almost ceratin that one of the tentacles just twitched..."
+	description "This is a rare specimen. You can install it on your ship to keep it from getting mixed in with the regular cargo."
+
+mission "Gathering Specimens: Astero Nautilus Lost"
+	landing
+	invisible
+	repeat
+	source
+		planet "Alexandria" "Winter" "Viminal" "Caelian"
+	to offer
+		has "Gathering Specimens: Astero Nautilus: active"
+	on offer
+		require "Nautilus Specimen" 0
+		fail "Gathering Specimens: Astero Nautilus"
+		fail
 
 
 
@@ -168,8 +220,7 @@ mission "Gathering Specimens: Plasma Parasite"
 		personality derelict waiting staying uninterested mute marked
 		ship "Plasma Parasite Specimen"
 	on fail
-		"Gathering Specimens: Plasma Parasite: offered" --
-
+		clear "Gathering Specimens: Plasma Parasite: offered"
 ship "Plasma Parasite" "Plasma Parasite Specimen"
 	"uncapturable"
 	outfits
@@ -180,6 +231,20 @@ outfit "Plasma Specimen"
 	thumbnail "outfit/plasma parasite specimen"
 	cost 0
 	description "The slimy goopy remains of a Plasma Parasite. Handle with care."
+	description "This is a rare specimen. You can install it on your ship to keep it from getting mixed in with the regular cargo."
+
+mission "Gathering Specimens: Plasma Parasite Lost"
+	landing
+	invisible
+	repeat
+	source
+		planet "Alexandria" "Winter" "Viminal" "Caelian"
+	to offer
+		has "Gathering Specimens: Plasma Parasite: active"
+	on offer
+		require "Plasma Specimen" 0
+		fail "Gathering Specimens: Plasma Parasite"
+		fail
 	
 
 
@@ -208,8 +273,7 @@ mission "Gathering Specimens: Nova Firefly"
 		personality waiting staying uninterested mute marked
 		ship "Nova Firefly Specimen"
 	on fail
-		"Gathering Specimens: Nova Firefly: offered" --
-
+		clear "Gathering Specimens: Nova Firefly: offered"
 ship "Nova Firefly" "Nova Firefly Specimen"
 	"uncapturable"
 	outfits
@@ -220,6 +284,20 @@ outfit "Firefly Specimen"
 	thumbnail "outfit/nova firefly specimen"
 	cost 0
 	description "The slimy goopy remains of a Nova Firefly. The surface of the container feels warm."
+	description "This is a rare specimen. You can install it on your ship to keep it from getting mixed in with the regular cargo."
+
+mission "Gathering Specimens: Nova Firefly Lost"
+	landing
+	invisible
+	repeat
+	source
+		planet "Alexandria" "Winter" "Viminal" "Caelian"
+	to offer
+		has "Gathering Specimens: Nova Firefly: active"
+	on offer
+		require "Firefly Specimen" 0
+		fail "Gathering Specimens: Nova Firefly"
+		fail
 
 
 
@@ -243,9 +321,7 @@ mission "Gathering Specimens: Star Gazer"
 		personality waiting staying uninterested mute marked
 		ship "Star Gazer Specimen"
 	on fail
-		"Gathering Specimens: Star Gazer: offered" --
-
-
+		clear "Gathering Specimens: Star Gazer: offered"
 ship "Star Gazer" "Star Gazer Specimen"
 	"uncapturable"
 	outfits
@@ -256,11 +332,25 @@ outfit "Gazer Specimen"
 	thumbnail "outfit/star gazer specimen"
 	cost 0
 	description "The slimy goopy remains of a Star Gazer. The eye seems to be staring at you..."
+	description "This is a rare specimen. You can install it on your ship to keep it from getting mixed in with the regular cargo."
+
+mission "Gathering Specimens: Star Gazer Lost"
+	landing
+	invisible
+	repeat
+	source
+		planet "Alexandria" "Winter" "Viminal" "Caelian"
+	to offer
+		has "Gathering Specimens: Star Gazer: active"
+	on offer
+		require "Gazer Specimen" 0
+		fail "Gathering Specimens: Star Gazer"
+		fail
 
 
 
 mission "Gathering Specimens: Alexandria"
-	name "Gathering Specimens"
+	name "Gathering Specimens: Alexandria"
 	description "Search the galaxy for interstellar life. Bring tissue samples back to <origin>."
 	source Alexandria
 	to offer
@@ -298,9 +388,7 @@ mission "Gathering Specimens: Alexandria Gray Eye"
 	on decline
 		outfit "Gray Eye Specimen" -1
 		payment 1000000
-		fail "Gathering Specimens: Gray Eye"
-		"Gathering Specimens: Gray Eye: offered" --
-	
+		clear "Gathering Specimens: Gray Eye: offered"	
 mission "Gathering Specimens: Alexandria Luminazoa"
 	landing
 	invisible
@@ -322,9 +410,7 @@ mission "Gathering Specimens: Alexandria Luminazoa"
 	on decline
 		outfit "Luminazoa Specimen" -1
 		payment 1000000
-		fail "Gathering Specimens: Luminazoa"
-		"Gathering Specimens: Luminazoa: offered" --
-
+		clear "Gathering Specimens: Luminazoa: offered"
 mission "Gathering Specimens: Alexandria Ionic Leech"
 	landing
 	invisible
@@ -346,9 +432,7 @@ mission "Gathering Specimens: Alexandria Ionic Leech"
 	on decline
 		outfit "Leech Specimen" -1
 		payment 1000000
-		fail "Gathering Specimens: Ionic Leech"
-		"Gathering Specimens: Ionic Leech: offered" --
-
+		clear "Gathering Specimens: Ionic Leech: offered"
 mission "Gathering Specimens: Alexandria Astero Nautilus"
 	landing
 	invisible
@@ -370,9 +454,7 @@ mission "Gathering Specimens: Alexandria Astero Nautilus"
 	on decline
 		outfit "Nautilus Specimen" -1
 		payment 1000000
-		fail "Gathering Specimens: Astero Nautilus"
-		"Gathering Specimens: Astero Nautilus: offered" --
-
+		clear "Gathering Specimens: Astero Nautilus: offered"
 mission "Gathering Specimens: Alexandria Plasma Parasite"
 	landing
 	invisible
@@ -394,9 +476,7 @@ mission "Gathering Specimens: Alexandria Plasma Parasite"
 	on decline
 		outfit "Plasma Specimen" -1
 		payment 1000000
-		fail "Gathering Specimens: Plasma Parasite"
-		"Gathering Specimens: Plasma Parasite: offered" --
-
+		clear "Gathering Specimens: Plasma Parasite: offered"
 mission "Gathering Specimens: Alexandria Nova Firefly"
 	landing
 	invisible
@@ -418,9 +498,7 @@ mission "Gathering Specimens: Alexandria Nova Firefly"
 	on decline
 		outfit "Firefly Specimen" -1
 		payment 1000000
-		fail "Gathering Specimens: Nova Firefly"
-		"Gathering Specimens: Nova Firefly: offered" --
-
+		clear "Gathering Specimens: Nova Firefly: offered"
 mission "Gathering Specimens: Alexandria Star Gazer"
 	landing
 	invisible
@@ -442,9 +520,7 @@ mission "Gathering Specimens: Alexandria Star Gazer"
 	on decline
 		outfit "Gazer Specimen" -1
 		payment 1000000
-		fail "Gathering Specimens: Star Gazer"
-		"Gathering Specimens: Star Gazer: offered" --
-
+		clear "Gathering Specimens: Star Gazer: offered"
 
 
 mission "Gathering Specimens: Conservatory"
@@ -488,9 +564,7 @@ mission "Gathering Specimens: Conservatory Gray Eye"
 				accept
 	on complete
 		outfit "Gray Eye Specimen" -1
-		fail "Gathering Specimens: Gray Eye"
-		"Gathering Specimens: Gray Eye: offered" --
-		dialog `The lab accepts the Gray Eye Specimen.`
+		clear "Gathering Specimens: Gray Eye: offered"		dialog `The lab accepts the Gray Eye Specimen.`
 
 
 mission "Gathering Specimens: Conservatory Luminazoa"
@@ -517,9 +591,7 @@ mission "Gathering Specimens: Conservatory Luminazoa"
 				accept
 	on complete
 		outfit "Luminazoa Specimen" -1
-		fail "Gathering Specimens: Luminazoa"
-		"Gathering Specimens: Luminazoa: offered" --
-		dialog `The lab accepts the Luminazoa Specimen.`
+		clear "Gathering Specimens: Luminazoa: offered"		dialog `The lab accepts the Luminazoa Specimen.`
 
 mission "Gathering Specimens: Conservatory Ionic Leech"
 	landing
@@ -545,9 +617,7 @@ mission "Gathering Specimens: Conservatory Ionic Leech"
 				accept
 	on complete
 		outfit "Leech Specimen" -1
-		fail "Gathering Specimens: Ionic Leech"
-		"Gathering Specimens: Ionic Leech: offered" --
-		dialog `The lab accepts the Leech Specimen.`
+		clear "Gathering Specimens: Ionic Leech: offered"		dialog `The lab accepts the Leech Specimen.`
 
 mission "Gathering Specimens: Conservatory Astero Nautilus"
 	landing
@@ -573,9 +643,7 @@ mission "Gathering Specimens: Conservatory Astero Nautilus"
 				accept
 	on complete
 		outfit "Nautilus Specimen" -1
-		fail "Gathering Specimens: Astero Nautilus"
-		"Gathering Specimens: Astero Nautilus: offered" --
-		dialog `The lab accepts the Nautilus Specimen.`
+		clear "Gathering Specimens: Astero Nautilus: offered"		dialog `The lab accepts the Nautilus Specimen.`
 
 mission "Gathering Specimens: Conservatory Plasma Parasite"
 	landing
@@ -601,9 +669,7 @@ mission "Gathering Specimens: Conservatory Plasma Parasite"
 				accept
 	on complete
 		outfit "Plasma Specimen" -1
-		fail "Gathering Specimens: Plasma Parasite"
-		"Gathering Specimens: Plasma Parasite: offered" --
-		dialog `The lab accepts the Plasma Specimen.`
+		clear "Gathering Specimens: Plasma Parasite: offered"		dialog `The lab accepts the Plasma Specimen.`
 
 mission "Gathering Specimens: Conservatory Nova Firefly"
 	landing
@@ -629,9 +695,7 @@ mission "Gathering Specimens: Conservatory Nova Firefly"
 				accept
 	on complete
 		outfit "Firefly Specimen" -1
-		fail "Gathering Specimens: Nova Firefly"
-		"Gathering Specimens: Nova Firefly: offered" --
-		dialog `The lab accepts the Firefly Specimen.`
+		clear "Gathering Specimens: Nova Firefly: offered"		dialog `The lab accepts the Firefly Specimen.`
 
 
 mission "Gathering Specimens: Conservatory Star Gazer"
@@ -658,9 +722,7 @@ mission "Gathering Specimens: Conservatory Star Gazer"
 				accept
 	on complete
 		outfit "Gazer Specimen" -1
-		fail "Gathering Specimens: Star Gazer"
-		"Gathering Specimens: Star Gazer: offered" --
-		dialog `The lab accepts the Gazer Specimen.`
+		clear "Gathering Specimens: Star Gazer: offered"		dialog `The lab accepts the Gazer Specimen.`
 
 mission "Gathering Specimens: Conservatory Research"
 	landing
@@ -686,7 +748,7 @@ mission "Gathering Specimens: Conservatory Conclusion"
 	landing
 	invisible
 	source
-		government "Free Worlds" "Republic" "Syndicate" "Neutral" "Independant" "Pirate"
+		government "Free Worlds" "Republic" "Syndicate" "Neutral" "Independent" "Pirate"
 		not attributes "uninhabited"
 	destination Winter
 	to offer
@@ -705,11 +767,55 @@ mission "Gathering Specimens: Conservatory Conclusion"
 				`	"That's normal."`
 			`	"It's Chronic Hyperspace Traveler's Disorder, a condition that affects more than 90% of space travelers to the detriment of their well being. And since you played a important role in developing the cure, a portion of the profits from sales of this miracle drug will be paid to you. Congratulations!"`
 			`	While you'll gladly accept the reward for your efforts, you wonder what sort of other projects the Conservatory is researching.`
-			
+
+mission "Gathering Specimens: Conservatory Conclusion 2"
+	landing
+	invisible
+	to offer
+		has "Gathering Specimens: Conservatory Conclusion: done"
+	on offer
+		event "Chronic Hyperspace Traveler's Disorder Cure" 180
+		fail
+
+event "Chronic Hyperspace Traveler's Disorder Cure" 180
+
+mission "Gathering Specimens: Conservatory Conclusion 2"
+	landing
+	source
+		government "Republic" "Free Worlds" "Syndicate"
+	invisible
+	to offer
+		has "event: Chronic Hyperspace Traveler's Disorder Cure"
+	on offer
+		"salary: Free Worlds Conservatory" = 42000
+		event "Chronic Hyperspace Traveler's Disorder Competition" 180
+		conversation
+			scene "scene/scene-specimens"
+			`You receive a message from the Conservatory administrators: "Sales of the cure for Chronic Hyperspace Traveler's Disorder are exploding! You can expect an increase in pay as a result. Congratulations." Idly, you wonder if people would still take the cure if they saw the jars of goop it originated from.`
+				accept
+	on accept
+		fail
+
+event "Chronic Hyperspace Traveler's Disorder Competition"
+
+mission "Gathering Specimens: Conservatory Conclusion 3"
+	source
+		government "Republic" "Free Worlds" "Syndicate"
+	invisible
+	to offer
+		has "event: Chronic Hyperspace Traveler's Disorder Competition"
+	on offer
+		"salary: Free Worlds Conservatory" = 3000
+		conversation		
+			`You stop in at a spaceport convenience store to pick up some snacks and notice that there are several different products claiming to cure Chronic Hyperspace Traveler's Disorder on sale. You send a quick message to the Conservatory and they confirmed that sales are down due to these competitors. Of course, you can expect a decrease in pay as well.`
+				accept
+	on accept
+		fail	
+
 
 
 mission "Gathering Specimens: Remnant"
-	name "Gathering Specimens"
+	name "Gathering Specimens: Remnant"
 	description "Search the galaxy for interstellar life. Bring tissue samples back to <origin>."
 	source "Viminal"
 	to offer
@@ -744,9 +850,7 @@ mission "Gathering Specimens: Remnant Gray Eye"
 				decline
 	on decline
 		outfit "Gray Eye Specimen" -1
-		fail "Gathering Specimens: Gray Eye"
-		"Gathering Specimens: Gray Eye: offered" --
-	
+		clear "Gathering Specimens: Gray Eye: offered"	
 mission "Gathering Specimens: Remnant Luminazoa"
 	landing
 	invisible
@@ -767,9 +871,7 @@ mission "Gathering Specimens: Remnant Luminazoa"
 				decline
 	on decline
 		outfit "Luminazoa Specimen" -1
-		fail "Gathering Specimens: Luminazoa"
-		"Gathering Specimens: Luminazoa: offered" --
-
+		clear "Gathering Specimens: Luminazoa: offered"
 mission "Gathering Specimens: Remnant Ionic Leech"
 	landing
 	invisible
@@ -790,9 +892,7 @@ mission "Gathering Specimens: Remnant Ionic Leech"
 				decline
 	on decline
 		outfit "Leech Specimen" -1
-		fail "Gathering Specimens: Ionic Leech"
-		"Gathering Specimens: Ionic Leech: offered" --
-
+		clear "Gathering Specimens: Ionic Leech: offered"
 mission "Gathering Specimens: Remnant Astero Nautilus"
 	landing
 	invisible
@@ -813,9 +913,7 @@ mission "Gathering Specimens: Remnant Astero Nautilus"
 				decline
 	on decline
 		outfit "Nautilus Specimen" -1
-		fail "Gathering Specimens: Astero Nautilus"
-		"Gathering Specimens: Astero Nautilus: offered" --
-
+		clear "Gathering Specimens: Astero Nautilus: offered"
 mission "Gathering Specimens: Remnant Plasma Parasite"
 	landing
 	invisible
@@ -836,9 +934,7 @@ mission "Gathering Specimens: Remnant Plasma Parasite"
 				decline
 	on decline
 		outfit "Plasma Specimen" -1
-		fail "Gathering Specimens: Plasma Parasite"
-		"Gathering Specimens: Plasma Parasite: offered" --
-
+		clear "Gathering Specimens: Plasma Parasite: offered"
 mission "Gathering Specimens: Remnant Nova Firefly"
 	landing
 	invisible
@@ -859,9 +955,7 @@ mission "Gathering Specimens: Remnant Nova Firefly"
 				decline
 	on decline
 		outfit "Firefly Specimen" -1
-		fail "Gathering Specimens: Nova Firefly"
-		"Gathering Specimens: Nova Firefly: offered" --
-
+		clear "Gathering Specimens: Nova Firefly: offered"
 mission "Gathering Specimens: Remnant Star Gazer"
 	landing
 	invisible
@@ -882,9 +976,7 @@ mission "Gathering Specimens: Remnant Star Gazer"
 				decline
 	on decline
 		outfit "Gazer Specimen" -1
-		fail "Gathering Specimens: Star Gazer"
-		"Gathering Specimens: Star Gazer: offered" --
-
+		clear "Gathering Specimens: Star Gazer: offered"
 mission "Gathering Specimens: Remnant Research"
 	landing
 	invisible
@@ -905,7 +997,7 @@ mission "Gathering Specimens: Remnant Research"
 
 
 mission "Gathering Specimens: Remnant B"
-	name "Gathering Specimens"
+	name "Gathering Specimens: Remnant"
 	description "Search the galaxy for interstellar life. Bring tissue samples back to <origin>."
 	source "Caelian"
 	to offer
@@ -940,9 +1032,7 @@ mission "Gathering Specimens: Remnant Gray Eye B"
 				decline
 	on decline
 		outfit "Gray Eye Specimen" -1
-		fail "Gathering Specimens: Gray Eye"
-		"Gathering Specimens: Gray Eye: offered" --
-	
+		clear "Gathering Specimens: Gray Eye: offered"	
 mission "Gathering Specimens: Remnant Luminazoa B"
 	landing
 	invisible
@@ -963,9 +1053,7 @@ mission "Gathering Specimens: Remnant Luminazoa B"
 				decline
 	on decline
 		outfit "Luminazoa Specimen" -1
-		fail "Gathering Specimens: Luminazoa"
-		"Gathering Specimens: Luminazoa: offered" --
-
+		clear "Gathering Specimens: Luminazoa: offered"
 mission "Gathering Specimens: Remnant Ionic Leech B"
 	landing
 	invisible
@@ -986,9 +1074,7 @@ mission "Gathering Specimens: Remnant Ionic Leech B"
 				decline
 	on decline
 		outfit "Leech Specimen" -1
-		fail "Gathering Specimens: Ionic Leech"
-		"Gathering Specimens: Ionic Leech: offered" --
-
+		clear "Gathering Specimens: Ionic Leech: offered"
 mission "Gathering Specimens: Remnant Astero Nautilus B"
 	landing
 	invisible
@@ -1009,9 +1095,7 @@ mission "Gathering Specimens: Remnant Astero Nautilus B"
 				decline
 	on decline
 		outfit "Nautilus Specimen" -1
-		fail "Gathering Specimens: Astero Nautilus"
-		"Gathering Specimens: Astero Nautilus: offered" --
-
+		clear "Gathering Specimens: Astero Nautilus: offered"
 mission "Gathering Specimens: Remnant Plasma Parasite B"
 	landing
 	invisible
@@ -1032,9 +1116,7 @@ mission "Gathering Specimens: Remnant Plasma Parasite B"
 				decline
 	on decline
 		outfit "Plasma Specimen" -1
-		fail "Gathering Specimens: Plasma Parasite"
-		"Gathering Specimens: Plasma Parasite: offered" --
-
+		clear "Gathering Specimens: Plasma Parasite: offered"
 mission "Gathering Specimens: Remnant Nova Firefly B"
 	landing
 	invisible
@@ -1055,9 +1137,7 @@ mission "Gathering Specimens: Remnant Nova Firefly B"
 				decline
 	on decline
 		outfit "Firefly Specimen" -1
-		fail "Gathering Specimens: Nova Firefly"
-		"Gathering Specimens: Nova Firefly: offered" --
-
+		clear "Gathering Specimens: Nova Firefly: offered"
 mission "Gathering Specimens: Remnant Star Gazer B"
 	landing
 	invisible
@@ -1078,9 +1158,7 @@ mission "Gathering Specimens: Remnant Star Gazer B"
 				decline
 	on decline
 		outfit "Gazer Specimen" -1
-		fail "Gathering Specimens: Star Gazer"
-		"Gathering Specimens: Star Gazer: offered" --
-
+		clear "Gathering Specimens: Star Gazer: offered"
 mission "Gathering Specimens: Remnant Research B"
 	landing
 	invisible
@@ -1123,7 +1201,7 @@ mission "Gathering Specimens: Remnant Conclusion"
 			`	"It's more accurate to say that this ship was grown, not made. I'll admit, I had my doubts. It's not as elegant as our other ships. But it has some features they lack." She pets the hull.`
 			choice
 				`	"So, can I fly it?"`
-			`	"Not just yet. I have to take it Caelian for weapons installation. Care to join me?"`
+			`	"Not just yet. I have to take it to Caelian for weapons installation. Care to join me?"`
 			choice
 				`	"Sure."`
 				`	"Of course I will."`
@@ -1133,10 +1211,11 @@ mission "Gathering Specimens: Remnant Conclusion"
 		government Remnant
 		personality target marked escort
 		ship "Raptor Prototype (unarmed)" "Raptor"
+
 	on visit
 		dialog "Taely and the Raptor haven't arrived yet. Better head back to space and make sure they're okay."
 	on complete
-		give ship "Raptor Prototype"
+		give ship "Raptor Prototype" "Raptor"
 		conversation
 			scene "ship/raptor prototype"
 			`	Taely lands the Raptor. Before departing on a ship bound for Viminal, she signs, "I think you'll enjoy piloting the Raptor. The engines are very responsive."`
@@ -1155,3 +1234,93 @@ ship "Raptor Prototype" "Raptor Prototype (unarmed)"
 		"Smelter-Class Thruster"
 		"Smelter-Class Steering"
 		"Scram Drive"
+
+
+
+mission "Gathering Specimens: Wanderer Ionic Research 1"
+	name "Gathering Specimens: Vara K'chrai"
+	description "The Wanderers need a tissue sample from an Ionic Leech. Once you have it, bring it back to <destination>."
+	source
+		government "Wanderer"
+	destination "Vara K'chrai"
+	to offer
+		has "Gathering Specimens: Ionic Leech: active"
+		has "event: wanderers: tempest mass production"
+		"reputation: Wanderer" >= 0.01
+	on offer
+		conversation
+			`You receive a message from Sobari Tele'ek, the Wanderer military commander. "Captain <first> <last>, are you familiar with a [creature, animal] called an 'Ionic [Leech, Bloodworm]'? Ambassador Sayari mentioned them during a [meeting, gathering] the other day."`
+			choice
+				`	"I've encountered them."`
+			`	"If you find one again, bring us back a [tissue, meat] sample. We hope that [studying, investigating] it will give us a [better, improved] [idea, understanding] of the Hai's ionic weapons."`
+				accept
+	on complete
+		outfit "Leech Specimen" -1
+		clear "Gathering Specimens: Ionic Leech: offered"
+		event "Storm Seeker Reborn" 30
+		dialog `Sobari Tele'ek thanks you for delivering the specimen.`
+
+event "Storm Seeker Reborn"
+
+mission "Gathering Specimens: Wanderer Ionic Research 2"
+	landing
+	name "Wanderer Ionic Research Result"
+	description "Travel to <destination> to learn the results of the research."
+	source
+		government "Wanderer"
+	destination "Vara K'chrai"
+	to offer
+		has "event: wanderers: hurricane mass production"
+		"reputation: Wanderer" >= 0.01
+		has "Gathering Specimens: Wanderer Ionic Research 1: done"
+	on offer
+		dialog `You recieve a message from Sobari Tele'ek: "The [research, investigation] from the Ionic [Leech, Bloodworm] [tissue, meat] sample is [complete, concluded]. Come to <destination> if you are [interested, curious] in seeing the [result, solution].`
+	on complete
+		dialog `Visit the spaceport to see the research results that Sobari Tele'ek mentioned.`
+
+mission "Gathering Specimens: Wanderer Ionic Research 3"
+	invisible
+	source "Vara K'chrai"
+	to offer
+		has "Gathering Specimens: Wanderer Ionic Research 2: done"
+	on offer
+		conversation
+			`A group of Wanderer military officers greet you. Sobari Tele'ek is not among them. "Tele'ek sends his [apologies, regrets] for not being [present, available]. A recent Unfettered [attack, raid] required his [oversight, attention]." They lead you to a landing pad in a secluded location. A new ship is parked there.`
+			choice
+				`	(Study the new ship.)`
+			
+			scene "thumbnail/storm seeker reborn-thumb"			
+			`	"The Storm Seeker, [reborn, remade]. This is the [conclusion, result] of the ionic [research, investigation] you [helped, aided] Sobari Tele'ek with. It's an [ancient, historical] design updated with an ionic [resistant, protective] hull. Unfortunately, with the mass [construction, production] of the Hurricanes, the Wanderer leaders decided that the Storm Seeker won't be [desireable, necessary]. Only this experimental [exam, test] model was [created, produced]. Rather than let it be [trashed, scrapped], Sobari Tele'ek has decided to let you have it. This [vessel, ship] could not exist without your [support, contribution]."`
+			`	You thank the Wanderers for the gift given in recognition of you support and promise to put it to good use.`
+				accept
+	on accept
+		give ship "Storm Seeker Reborn" "Storm Seeker"
+		fail
+
+ship "Storm Seeker" "Storm Seeker Reborn"
+	sprite "ship/storm seeker reborn"
+	thumbnail "thumbnail/storm seeker reborn-thumb"
+	add attributes
+		"ion resistance" .5
+		"ion protection" 2
+	outfits
+		"Sunbeam" 6
+		"White Sun Reactor"
+		"Bright Cloud Shielding"
+		"Dark Storm Shielding"
+		"Wanderer Ramscoop"
+		"Type 1 Radiant Thruster"
+		"Type 2 Radiant Thruster"
+		"Type 3 Radiant Steering"
+		"Hyperdrive"
+	engine -33 85.5
+	engine 30.5 85.5
+	gun -29.5 -37.5
+	gun 29 -37.5
+	gun -65 -22.5
+	gun 63 -22.5
+	gun -58 -15.5
+	gun 56.5 -15.5
+
+
+

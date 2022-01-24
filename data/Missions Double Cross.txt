@@ -510,14 +510,14 @@ mission "Jump Drive Theft 2"
 				
 mission "Pot-o'-honey"
 	name "Escort to <planet>"
-	description "The captain of the <npc> will pay you <payment> to escort them safely into a dangerous region of space to reach <destination>."
+	description "The captain of the Pot-o'-honey will pay you <payment> to escort them safely into a dangerous region of space to reach <destination>."
 	source
 		government "Hai"
-	destination "Farpoint" "Skillet" "Prime"
+	destination "Farpoint"
 	to offer
-		random < 60
-		"combat rating" > 10
-		"pirate attraction" > 0
+#		random < 60
+#		"combat rating" > 10
+#		"pirate attraction" > 0
 	on offer
 		conversation
 			`A human merchant captain approaches you. "Greetings captain. I am looking for an escort through the northern passage to <destination>. Would you help me get there for <payment>?`
@@ -526,7 +526,7 @@ mission "Pot-o'-honey"
 				`	(Decline this job offer.)`
 					defer
 			
-			`	"Thank you. I'm Robin. Chris Robin, captain of the <npc>."`
+			`	"Thank you. I'm Robin. Chris Robin, captain of the Pot-o'-honey."`
 			choice
 				`	"<first> <last>, captain of the <ship>."`
 			
@@ -535,28 +535,35 @@ mission "Pot-o'-honey"
 			
 	on accept
 		"reputation: Pirate (Disguised)" >?= 1
-	on enter "Ultima Thule"
+	on enter "Waypoint"
 		"reputation: Pirate (Disguised)" <?= -1000
 		conversation
 			scene "scene/scene-bulk drones"
-			`When you enter the system, a small fleet of pirates is waiting for you. You are getting ready to defend the <npc> when you notice something strange. Its cargo bays are opening and releasing a swarm of drones! You receive a message from Captain Robin of the <npc>:`
+			`When you enter the system, a small fleet of pirates is waiting for you. You are getting ready to defend the <npc> when you notice something strange. Its cargo bays are opening and releasing a swarm of drones! You receive a message from Captain Robin of the Pot-o'-honey:`
 			`"Congratulations, you fell for our trap Captain <last>!"`		
 	npc
 		government "Pirate"
+		system "Waypoint"
 		personality waiting staying harvests plunders nemesis
 			confusion 20
-		fleet "Small Northern Pirates" 3
+		fleet
+			names "Pirate"
+			variant
+				"Headhunter (Hai)"
+				"Bounder (Hai)"
+				"Flivver (Hai)"
+				"Arrow (Hai)"
 
 	npc kill
 		government "Pirate (Disguised)"
-		personality marked launching harvests plunders
+		personality target marked launching harvests plunders
 			confusion 20
 		ship "Bulk Freighter (hai drones)" "Pot-o'-honey"
 		fleet
 			fighters "republic fighter"
 			variant
 				"Pirate Drone" 10
-		dialog `The <npc> and its drones have been defeated. You make a mental note to check with the authorities to see if there is any reward for your effort.`
+		dialog `The Pot-o'-honey and its drones have been defeated. You make a mental note to check with the authorities on <destination> to see if there is any reward for your effort.`
 
 	on complete
 		payment 150000
@@ -582,9 +589,10 @@ ship "Bulk Freighter" "Bulk Freighter (hai drones)"
 		"Pulse Turret" 3
 		"Bullfrog Anti-Missile" 2
 		"Geode Reactor"
-		"Hai Ravine Batteries"
-		"Hai Corundum Regenerator" 2
-		"Hai Williwaw Cooling" 2
+		"Hai Gorge Batteries"
+		"Hai Diamond Regenerator"
+		"Hai Williwaw Cooling"
+		"Interference Plating" 6
 		"Dual Pulse Pistols"
 		"Pulse Rifle" 18		
 		`"Biroo" Atomic Thruster`

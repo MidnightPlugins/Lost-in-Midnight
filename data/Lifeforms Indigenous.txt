@@ -365,8 +365,8 @@ ship "Ionic Leech"
 		"shield generation" 2
 		"hull repair rate" 1
 		"energy protection" 1
-		"ion protection" 6
-		"ion resistance" 2
+		"ion protection" 3
+		"ion resistance" 1
 		"energy capacity" 150
 		"fuel capacity" 150
 		"inscrutable" 1
@@ -724,16 +724,13 @@ mission "First Contact: Rock Scavenger"
 	landing
 	invisible
 	on enter "Eber"
+		event "Rock Scavengers in Dirt Belt"
 		dialog `When you enter the system you see a large space creature.`
 	npc board
 		government "Indigenous Lifeform"
 		system "Eber"
 		personality waiting staying mining harvests uninterested mute
 		fleet "Rock Scavenger"
-	on fail
-		event "Rock Scavengers in Dirt Belt"
-	on complete
-		event "Rock Scavengers in Dirt Belt"
 		
 event "Rock Scavengers in Dirt Belt"
 	system Wei

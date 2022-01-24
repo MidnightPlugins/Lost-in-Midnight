@@ -53,8 +53,8 @@ event "angri byrds"
 			fleet "Wanderer Drones" 5
 			fleet "Wanderer Defense" 10
 	planet "Vara K'chrai"
-		tribute 2000
-			threshold 5000
+		tribute 10000
+			threshold 20000
 			fleet "Wanderer Drones" 5
 			fleet "Wanderer Defense" 10
 	planet "Varu Ek'lak'lai"
@@ -63,8 +63,8 @@ event "angri byrds"
 			fleet "Wanderer Drones" 5
 			fleet "Wanderer Defense" 10
 	planet "Var' Kayi"
-		tribute 10000
-			threshold 20000
+		tribute 2000
+			threshold 5000
 			fleet "Wanderer Drones" 10
 			fleet "Wanderer Defense" 50
 	planet "Var' Roi"
@@ -211,9 +211,9 @@ mission "Angri Byrds: Peace Through Strength 2"
 		"tribute: Vara Rakak" <?= 200
 		"tribute: Tik Klai" <?= 200
 		"tribute: Vara Kehi'ki" <?= 200
-		"tribute: Vara K'chrai" <?= 200
+		"tribute: Vara K'chrai" <?= 1000
 		"tribute: Varu Ek'lak'lai" <?= 200
-		"tribute: Var' Kayi" <?= 1000
+		"tribute: Var' Kayi" <?= 200
 		"tribute: Var' Roi" <?= 200
 		"tribute: Varu Tek'kai" <?= 200
 		"tribute: Spera Anatrusk" <?= 100

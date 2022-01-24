@@ -36,6 +36,8 @@ ship "Nova Firefly"
 		"hull protection" 1
 		"burn protection" 3
 		"energy protection" 1
+		"ion protection" 3
+		"ion resistance" 1
 		"energy capacity" 200
 		"fuel capacity" 399
 		"inscrutable" 1
@@ -98,6 +100,8 @@ ship "Egg Pouch"
 		"heat protection" 3
 		"hull protection" 1
 		"energy protection" 3
+		"ion protection" 3
+		"ion resistance" 1
 		"inscrutable" 1
 		"ramscoop" 1
 		"solar collection" 1
@@ -288,29 +292,6 @@ ship "Star Gazer"
 	explode "blood" 45
 	"final explode" "blood"
 	description "An invasive species from beyond our galaxy. While not particularly aggressive, they can be dangerous if provoked. Their bodies generate replacement quills quickly, allowing them to maintain a constant stream of fire. These projectiles are made of a material that evades detection by anti-missile systems."
-
-
-outfit "XQuill Launcher?"
-	category "Secondary Weapons"
-	thumbnail "outfit/quill launcher"
-	"gun ports" -1
-	"unplunderable" 1
-	weapon
-		sprite "projectile/quill"
-			"frame rate" 5
-			"random start frame"
-		sound "piercer"
-		icon "icon/quill"
-		"hit effect" "thrasher impact"
-		"inaccuracy" 6
-		"velocity" 10
-		"lifetime" 36
-		"reload" 5
-		"shield damage" 38
-		"hull damage" 46
-		"piercing" .2
-		"hit force" 30
-		"missile strength" 1
 
 
 
