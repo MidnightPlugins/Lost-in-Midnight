@@ -925,6 +925,50 @@ event "Mining Pebble Beach"
 		add fleet "Small Free Worlds" 4000
 		add fleet "Large Free Worlds" 4800
 
+mission "Cartography: Mining Pebble Beach 2"
+	landing
+	invisible
+	to offer
+		has "event: Mining Pebble Beach"
+	on offer
+		event "Mining Pebble Beach 2" 90
+		event "Mining Pebble Beach 3" 180
+		fail
+
+event "Mining Pebble Beach 2"
+	system "Pebble Beach"
+		remove minables copper
+		remove minables silver
+		remove minables gold
+		remove minables platinum
+		add minables uranium 3 4
+		add minables tungsten 6 3
+		add minables neodymium 12 2
+		add minables titanium 24 1
+		remove fleet "Human Miners" 3200
+		remove fleet "Small Free Worlds" 4000
+		remove fleet "Large Free Worlds" 4800
+		add fleet "Human Miners" 6400
+		add fleet "Small Free Worlds" 8000
+		add fleet "Large Free Worlds" 9600
+
+event "Mining Pebble Beach 3"
+		remove minables uranium
+		remove minables tungsten
+		remove minables neodymium
+		remove minables titanium
+		add minables titanium 3 4
+		add minables aluminum 6 3
+		add minables iron 12 2
+		add minables lead 24 1
+		remove fleet "Human Miners" 6400
+		remove fleet "Small Free Worlds" 8000
+		remove fleet "Large Free Worlds" 9600
+		add fleet "Human Miners" 12800
+		add fleet "Small Free Worlds" 16000
+		add fleet "Large Free Worlds" 19200
+
+
 mission "Cartography: Unukalhai"
 	landing
 	invisible

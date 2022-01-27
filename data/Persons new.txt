@@ -128,6 +128,53 @@ person "Silent Observer"
 	
 
 
+person "Black Wings"
+	government "Independant"
+	system
+		attributes "deep" "ember waste"
+	frequency 100
+	personality surveillance coward unconstrained mute
+	ship "Black Wing" "Black Wings"
+	ship "Black Wing" "Black Wings"
+	ship "Black Wing" "Black Wings"
+	ship "Black Wing" "Black Wings"
+	ship "Black Wing" "Black Wings"
+
+ship "Blackbird" "Black Wing"
+	sprite "ship/remnant blackbird"
+	add attributes
+		"inscrutable" 1
+		"atmosphere scan" 100
+		"self destruct" 1
+		
+	outfits
+		"Inhibitor Cannon"
+		"Point Defense Turret" 2
+		
+		"KP-6 Photovoltaic Panel" 6
+		"Epoch Cell"
+		"Millennium Cell"
+		"Crystal Capacitor"
+		"Systems Core (Small)"
+		"Thermoelectric Cooler" 2
+		"Emergency Ramscoop"
+		"Quantum Key Stone"
+		"Salvage Scanner"
+		"Outfit Scanner"
+		"Tuning Rifle" 2
+		"Laser Rifle" 6
+		
+		"Crucible-Class Thruster"
+		"Crucible-Class Steering"
+		"Scram Drive"
+		
+	engine -42.5 52
+	engine 42.5 52
+	gun 0 -52
+	turret -26 15 
+	turret 26 15 
+
+
 
 person "Poltergeist King"
 	government "Author"

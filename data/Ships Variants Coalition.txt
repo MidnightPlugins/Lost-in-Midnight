@@ -11,23 +11,23 @@
 
 
 
-# 490		"outfit space" 520
-#			"weapon capacity" 208
-#			"engine capacity" 148
 ship "Arach Hulk" "Arach Hulk (pirate)"
 	outfits
-		"Torpedo Launcher" 2
-		"Torpedo" 210
-		"Torpedo Storage Rack" 10
 		"Modified Blaster Turret" 4
+		"Torpedo Launcher" 2
+		"Torpedo" 60
 
-		"Large Collector Module" 2
+		"Large Collector Module"
 		"Large Battery Module"
 		"Small Battery Module"
+		"Breeder Reactor"
+
+		"S-970 Regenerator"
 		"Small Shield Module" 2
 		"Large Repair Module"
+		"Liquid Nitrogen Cooler"
 		"Cooling Module"
-		"Laser Rifle" 8
+		"Laser Rifle" 12
 		
 		"Large Thrust Module" 2
 		"Small Thrust Module" 2
@@ -35,9 +35,8 @@ ship "Arach Hulk" "Arach Hulk (pirate)"
 		"Small Steering Module" 2
 		"Hyperdrive"
 
-# 252		"outfit space" 520
-#			"weapon capacity" 208
-#			"engine capacity" 148
+
+
 ship "Arach Hulk" "Arach Hulk (smuggler)"
 	outfits
 		"Large Collector Module"
@@ -58,22 +57,45 @@ ship "Arach Hulk" "Arach Hulk (smuggler)"
 
 
 
-# 474		"outfit space" 489
-#			"weapon capacity" 256
-#			"engine capacity" 129
+ship "Arach Freighter" "Arach Freighter (pirate)"
+	outfits
+		"Modified Blaster Turret" 2
+		"Torpedo Launcher" 2
+		"Torpedo" 60
+
+		"Small Collector Module" 3
+		"Small Battery Module" 2
+		"NT-200 Nucleovoltaic"
+		"Small Shield Module"
+		"Small Repair Module" 2
+		"S-270 Regenerator"
+		"Liquid Nitrogen Cooler"
+		
+		"Large Thrust Module"
+		"Small Thrust Module" 2
+		"Large Steering Module"
+		"Small Steering Module" 2
+		"Hyperdrive"
+
+
+
+
+
 ship "Kimek Spire" "Kimek Spire (pirate)"
 	outfits
-		"Torpedo Launcher" 2
-		"Torpedo" 210
-		"Torpedo Storage Rack" 10
 		"Modified Blaster Turret" 4
-		"Large Collector Module" 2
+		"Torpedo Launcher" 2
+		"Torpedo" 60
+
+		"Large Collector Module"
 		"Small Collector Module"
 		"Large Battery Module"
+		"NT-200 Nucleovoltaic"
 		"Large Shield Module"
 		"Small Shield Module"
-		"Cooling Module"
-		"Laser Rifle" 19
+		"S-970 Regenerator"
+		"Liquid Nitrogen Cooler"
+		"Laser Rifle" 23
 		
 		"Large Thrust Module" 2
 		"Large Steering Module" 2
@@ -81,9 +103,7 @@ ship "Kimek Spire" "Kimek Spire (pirate)"
 		"Hyperdrive"
 
 
-# 236		"outfit space" 489
-#			"weapon capacity" 256
-#			"engine capacity" 129
+
 ship "Kimek Spire" "Kimek Spire (smuggler)"
 	outfits
 		"Large Collector Module"
@@ -103,23 +123,46 @@ ship "Kimek Spire" "Kimek Spire (smuggler)"
 
 
 
-# 514		"outfit space" 568
-#		"weapon capacity" 202
-#		"engine capacity" 156
+ship "Kimek Thistle" "Kimek Thistle (pirate)"
+	outfits
+		"Modified Blaster Turret" 2
+		"Torpedo Launcher" 2
+		"Torpedo" 60
+
+		"Large Collector Module"
+		"Small Battery Module"
+		"Dwarf Core"
+		"Small Shield Module" 3
+		"S-270 Regenerator"
+		"Liquid Nitrogen Cooler"
+		
+		"Large Thrust Module"
+		"Small Thrust Module" 2
+		"Large Steering Module"
+		"Small Steering Module"
+		"Hyperdrive"
+
+
+
+
 ship "Saryd Sojourner" "Saryd Sojourner (pirate)"
 	outfits
-		"Torpedo Launcher" 2
-		"Torpedo" 210
-		"Torpedo Storage Rack" 10
 		"Modified Blaster Turret" 4
+		"Torpedo Launcher" 2
+		"Torpedo" 60
 
-		"Large Collector Module" 2
+		"Large Collector Module"
 		"Small Collector Module" 3
 		"Large Battery Module"
+		"Breeder Reactor"
+
+
 		"Large Shield Module"
 		"Small Repair Module" 2
-		"Cooling Module"
-		"Laser Rifle" 17
+		"S-970 Regenerator"
+		"Liquid Nitrogen Cooler"
+
+		"Laser Rifle" 21
 		
 		"Large Thrust Module" 2
 		"Small Thrust Module" 3
@@ -128,9 +171,7 @@ ship "Saryd Sojourner" "Saryd Sojourner (pirate)"
 		"Hyperdrive"
 
 
-# 276		"outfit space" 568
-#			"weapon capacity" 202
-#			"engine capacity" 156
+
 ship "Saryd Sojourner" "Saryd Sojourner (smuggler)"
 	outfits
 		"Large Collector Module"
@@ -147,3 +188,30 @@ ship "Saryd Sojourner" "Saryd Sojourner (smuggler)"
 		"Small Steering Module"
 		"Hyperdrive"
 		"Jump Drive"
+
+
+
+ship "Saryd Traveler" "Saryd Traveler (pirate)"
+	outfits
+		"Modified Blaster Turret" 2
+		"Torpedo Launcher" 4
+		"Torpedo Storage Rack" 4
+		"Torpedo" 60
+
+		"Small Collector Module" 3
+		"Small Battery Module"
+		"NT-200 Nucleovoltaic"
+
+
+		"Small Shield Module" 2
+		"Small Repair Module"
+		"S-970 Regenerator"
+		"Liquid Nitrogen Cooler"
+
+		"Laser Rifle" 21
+		
+		"Large Thrust Module"
+		"Small Thrust Module"
+		"Large Steering Module"
+		"Small Steering Module"
+		"Hyperdrive"

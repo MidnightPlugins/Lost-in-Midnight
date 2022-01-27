@@ -564,7 +564,8 @@ mission "Gathering Specimens: Conservatory Gray Eye"
 				accept
 	on complete
 		outfit "Gray Eye Specimen" -1
-		clear "Gathering Specimens: Gray Eye: offered"		dialog `The lab accepts the Gray Eye Specimen.`
+		clear "Gathering Specimens: Gray Eye: offered"
+		dialog `The lab accepts the Gray Eye Specimen.`
 
 
 mission "Gathering Specimens: Conservatory Luminazoa"
@@ -591,7 +592,8 @@ mission "Gathering Specimens: Conservatory Luminazoa"
 				accept
 	on complete
 		outfit "Luminazoa Specimen" -1
-		clear "Gathering Specimens: Luminazoa: offered"		dialog `The lab accepts the Luminazoa Specimen.`
+		clear "Gathering Specimens: Luminazoa: offered"
+		dialog `The lab accepts the Luminazoa Specimen.`
 
 mission "Gathering Specimens: Conservatory Ionic Leech"
 	landing
@@ -617,7 +619,8 @@ mission "Gathering Specimens: Conservatory Ionic Leech"
 				accept
 	on complete
 		outfit "Leech Specimen" -1
-		clear "Gathering Specimens: Ionic Leech: offered"		dialog `The lab accepts the Leech Specimen.`
+		clear "Gathering Specimens: Ionic Leech: offered"
+		dialog `The lab accepts the Leech Specimen.`
 
 mission "Gathering Specimens: Conservatory Astero Nautilus"
 	landing
@@ -643,7 +646,8 @@ mission "Gathering Specimens: Conservatory Astero Nautilus"
 				accept
 	on complete
 		outfit "Nautilus Specimen" -1
-		clear "Gathering Specimens: Astero Nautilus: offered"		dialog `The lab accepts the Nautilus Specimen.`
+		clear "Gathering Specimens: Astero Nautilus: offered"
+		dialog `The lab accepts the Nautilus Specimen.`
 
 mission "Gathering Specimens: Conservatory Plasma Parasite"
 	landing
@@ -669,7 +673,8 @@ mission "Gathering Specimens: Conservatory Plasma Parasite"
 				accept
 	on complete
 		outfit "Plasma Specimen" -1
-		clear "Gathering Specimens: Plasma Parasite: offered"		dialog `The lab accepts the Plasma Specimen.`
+		clear "Gathering Specimens: Plasma Parasite: offered"
+		dialog `The lab accepts the Plasma Specimen.`
 
 mission "Gathering Specimens: Conservatory Nova Firefly"
 	landing
@@ -695,7 +700,8 @@ mission "Gathering Specimens: Conservatory Nova Firefly"
 				accept
 	on complete
 		outfit "Firefly Specimen" -1
-		clear "Gathering Specimens: Nova Firefly: offered"		dialog `The lab accepts the Firefly Specimen.`
+		clear "Gathering Specimens: Nova Firefly: offered"
+		dialog `The lab accepts the Firefly Specimen.`
 
 
 mission "Gathering Specimens: Conservatory Star Gazer"
@@ -722,7 +728,8 @@ mission "Gathering Specimens: Conservatory Star Gazer"
 				accept
 	on complete
 		outfit "Gazer Specimen" -1
-		clear "Gathering Specimens: Star Gazer: offered"		dialog `The lab accepts the Gazer Specimen.`
+		clear "Gathering Specimens: Star Gazer: offered"
+		dialog `The lab accepts the Gazer Specimen.`
 
 mission "Gathering Specimens: Conservatory Research"
 	landing
@@ -779,7 +786,7 @@ mission "Gathering Specimens: Conservatory Conclusion 2"
 
 event "Chronic Hyperspace Traveler's Disorder Cure" 180
 
-mission "Gathering Specimens: Conservatory Conclusion 2"
+mission "Gathering Specimens: Conservatory Conclusion 3"
 	landing
 	source
 		government "Republic" "Free Worlds" "Syndicate"
@@ -798,7 +805,7 @@ mission "Gathering Specimens: Conservatory Conclusion 2"
 
 event "Chronic Hyperspace Traveler's Disorder Competition"
 
-mission "Gathering Specimens: Conservatory Conclusion 3"
+mission "Gathering Specimens: Conservatory Conclusion 4"
 	source
 		government "Republic" "Free Worlds" "Syndicate"
 	invisible
@@ -1300,15 +1307,13 @@ mission "Gathering Specimens: Wanderer Ionic Research 3"
 ship "Storm Seeker" "Storm Seeker Reborn"
 	sprite "ship/storm seeker reborn"
 	thumbnail "thumbnail/storm seeker reborn-thumb"
-	add attributes
-		"ion resistance" .5
-		"ion protection" 2
 	outfits
 		"Sunbeam" 6
 		"White Sun Reactor"
 		"Bright Cloud Shielding"
 		"Dark Storm Shielding"
 		"Wanderer Ramscoop"
+		"Anti-Ionic Plating"
 		"Type 1 Radiant Thruster"
 		"Type 2 Radiant Thruster"
 		"Type 3 Radiant Steering"
@@ -1321,6 +1326,3 @@ ship "Storm Seeker" "Storm Seeker Reborn"
 	gun 63 -22.5
 	gun -58 -15.5
 	gun 56.5 -15.5
-
-
-

@@ -123,8 +123,40 @@ outfit "Alien Torture Device"
 
 
 
+# Anti-Ionic Plating is installed on the Storm Seeker Reborn.
+
+outfit "Anti-Ionic Plating"
+	category "Systems"
+	thumbnail "outfit/anti-ionic hull"
+	cost 1000000
+	"mass" 24
+	"outfit space" -24
+	"ion resistance" 1
+	"ion protection" 3
+	"integrated systems" 1
+	"unplunderable" 1
+	description `The result of Wanderer research into the nature of ionic damage, resistance, and protection.`
+	description `It is integrated into the hull of the test model Storm Seeker and cannot be removed.`
+
+
+
+
 # The Asteroid Catapult is installed on Thermopylae Station
 # One can be acquired after completing some mission chains
+
+
+outfit "Asteroid Storage"
+	category "Ammunition"
+	cost 45000
+	thumbnail "outfit/asteroid storage"
+	"mass" 130
+	"outfit space" 0
+	"cargo space" -130
+	"asteroid capacity" 13
+	"required crew" 5
+	ammo "Metallic Asteroid"
+	description "This box of rocks holds extra asteroids for the Asteroid Catapult. Since it's basically a cargo container, it occupies your cargo hold rather than your ships outfit systems. Five crewmembers are needed to transport the asteroids from the ship's cargo bay to the catapult and load it."
+
 
 outfit "Metallic Asteroid"
 	plural "Metallic Asteroids"
@@ -137,6 +169,7 @@ outfit "Metallic Asteroid"
 
 outfitter "Asteroid Ammo"
 	"Metallic Asteroid"
+	"Asteroid Storage"
 
 outfit "Asteroid Catapult"
 	category "Secondary Weapons"

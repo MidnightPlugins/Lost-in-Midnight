@@ -834,8 +834,8 @@ ship "Shield Fortress"
 
 
 
-#  An ancient Wanderer warship salvaged by pirates in the Storm Seeker missions.
-#  A variant is given as a mission reward in gathering specimens missions.
+#  An ancient Wanderer warship that appears in the Storm Seeker missions.
+#  A variant is given as a mission reward in the Gathering Specimens missions.
 
 ship "Storm Seeker"
 	sprite "ship/storm seeker"
@@ -951,6 +951,319 @@ ship "Shallow Pond" "Shallow Pond (Jump)"
 		"Type 2 Radiant Thruster"
 		"Type 2 Radiant Steering"
 		"Jump Drive"
+
+
+#  Nine of these ancient Wanderer warships appear in the Storm Seeker missions.
+
+ship "Spring Leaf"
+	plural "Spring Leaves"
+	sprite "ship/spring leaf"
+	thumbnail "thumbnail/spring leaf-thumb"
+	attributes
+		category "Light Warship"
+		licenses
+			Wanderer
+		"cost" 9500000
+		"shields" 12200
+		"hull" 5400
+		"required crew" 4
+		"bunks" 14
+		"mass" 100
+		"drag" 2.3
+		"heat dissipation" .8
+		"fuel capacity" 600
+		"cargo space" 37
+		"outfit space" 244
+		"weapon capacity" 39
+		"engine capacity" 82
+		weapon
+			"blast radius" 70
+			"shield damage" 700
+			"hull damage" 350
+			"hit force" 1050
+	outfits
+		"Sunbeam"
+		
+		"Yellow Sun Reactor"
+		"Bright Cloud Shielding"
+		"Wanderer Ramscoop"
+		
+		"Type 3 Radiant Thruster"
+		"Type 3 Radiant Steering"
+		"Hyperdrive"
+		
+	engine -17.5 66
+	engine 18.5 66
+	gun 0.5 -67.5
+	explode "tiny explosion" 40
+	explode "small explosion" 20
+	explode "medium explosion" 10
+	"final explode" "final explosion small"
+	description "This ancient Wanderer transport was among the ships originally in use when they first arrived in our galaxy. Now, obsolete, the Spring Leaf is best suited for display in a museum."
+
+
+
+#  An ancient Wanderer warship that appears in the Storm Seeker missions.
+
+ship "Winter Leaf"
+	plural "Winter Leaves"
+	sprite "ship/winter leaf"
+	thumbnail "thumbnail/winter leaf"
+	attributes
+		category "Light Warship"
+		licenses
+			Wanderer
+		"cost" 15200000
+		"shields" 19500
+		"hull" 8700
+		"required crew" 12
+		"bunks" 20
+		"mass" 130
+		"drag" 3.1
+		"heat dissipation" .8
+		"fuel capacity" 1000
+		"cargo space" 60
+		"outfit space" 405
+		"weapon capacity" 145
+		"engine capacity" 120
+		weapon
+			"blast radius" 80
+			"shield damage" 800
+			"hull damage" 400
+			"hit force" 1200
+	outfits
+		"Sunbeam" 3
+		"Wanderer Anti-Missile"
+		
+		"White Sun Reactor"
+		"Bright Cloud Shielding"
+		"Wanderer Ramscoop"
+		
+		"Type 3 Radiant Thruster"
+		"Type 4 Radiant Steering"
+		"Hyperdrive"
+		
+	engine -22.5 74
+	engine 22.5 74
+	gun 0 -75.5
+	gun -24 -13
+	gun 24 -13
+	turret 0 31.5
+	explode "tiny explosion" 50
+	explode "small explosion" 30
+	explode "medium explosion" 20
+	"final explode" "final explosion small"
+	description "With the Unfettered Hai behind them and the unknown beyond the Eye ahead, Wanderer shipyards are prepared to phase out production of the Summer Leaf in favor of this ancient alternative."
+
+
+
+#  An ancient Wanderer warship that appears in the Storm Seeker missions.
+
+ship "Tornado"
+	sprite "ship/tornado"
+	thumbnail "thumbnail/tornado-thumb"
+	attributes
+		category "Heavy Warship"
+		licenses
+			"Wanderer Military"
+		"cost" 20700000
+		"shields" 42600
+		"hull" 29500
+		"required crew" 41
+		"bunks" 55
+		"mass" 335
+		"drag" 6.5
+		"heat dissipation" 0.65
+		"fuel capacity" 600
+		"cargo space" 43
+		"outfit space" 623
+		"weapon capacity" 281
+		"engine capacity" 122
+		weapon
+			"blast radius" 280
+			"shield damage" 2800
+			"hull damage" 1400
+			"hit force" 4200
+	outfits
+		"Sunbeam" 4
+		"Sunbeam Turret" 2
+		"Wanderer Anti-Missile" 2
+		
+		"Yellow Sun Reactor" 2
+		"Dark Storm Shielding"
+		"Wanderer Ramscoop"
+		
+		"Type 4 Radiant Thruster"
+		"Type 4 Radiant Steering"
+		"Hyperdrive"
+	
+	engine -18 118.5
+	engine 21.5 118.5
+	gun -9.5 -94
+	gun 13 -94
+	gun -15.5 -73
+	gun 18 -73
+	turret -27.5 10 "Sunbeam Turret"
+	turret 31 10 "Sunbeam Turret"
+	turret -30.5 80 "Wanderer Anti-Missile"
+	turret 32.5 80 "Wanderer Anti-Missile"
+	explode "small explosion" 80
+	explode "medium explosion" 50
+	explode "large explosion" 25
+	"final explode" "final explosion medium" 1
+	description "An ancient Wanderer warship, the Tornado was likely used to fulfill the same role as the modern Tempest. There are many similarities between the two ships."
+
+
+#  An ancient Wanderer warship that appears in the Storm Seeker missions.
+
+ship "Tsunami"
+	sprite "ship/tsunami"
+	thumbnail "thumbnail/tsunami-thumb"
+	attributes
+		category "Heavy Warship"
+		licenses
+			"Wanderer Military"
+		"cost" 63100000
+		"shields" 74200
+		"hull" 64500
+		"required crew" 152
+		"bunks" 234
+		"mass" 870
+		"drag" 12.1
+		"heat dissipation" 0.5
+		"fuel capacity" 700
+		"cargo space" 136
+		"outfit space" 903
+		"weapon capacity" 371
+		"engine capacity" 140
+		weapon
+			"blast radius" 400
+			"shield damage" 4000
+			"hull damage" 2000
+			"hit force" 6000
+	outfits
+		"Sunbeam" 4
+		"Sunbeam Turret" 5
+		
+		"Blue Sun Reactor"
+		"White Sun Reactor"
+		"Dark Storm Shielding" 2
+		"Wanderer Heat Sink"
+		"Wanderer Ramscoop"
+		
+		"Type 4 Radiant Thruster"
+		"Type 4 Radiant Steering"
+		"Type 2 Radiant Steering"
+		"Hyperdrive"
+
+	engine -23.5 181.5
+	engine 25 181.5
+	gun -46.5 -80.5
+	gun 48.5 -80.5
+	gun -69.5 -61.5
+	gun 75 -61.5
+	turret -37 -48.5
+	turret 37 -48.5
+	turret 0 13.5
+	turret -52 53
+	turret 49.5 53
+	bay "Drone" -20 42
+	bay "Drone" 20 42
+	bay "Drone" -31 75
+	bay "Drone" 31 75
+	explode "small explosion" 20
+	explode "medium explosion" 80
+	explode "large explosion" 70
+	explode "huge explosion" 30
+	"final explode" "final explosion large" 1
+	description "The Tsunami is a mobile fortress. Among the ancient Wanderer vessels, it was their closest equivalent to a city-ship."
+
+
+# Deep River Rapids appear in Storm Seeker Raids.
+
+ship "Deep River Rapids"
+	sprite "ship/deep river"
+	thumbnail "thumbnail/deep river"
+	attributes
+		category "Medium Warship"
+		licenses
+			Wanderer
+		"cost" 18300000
+		"shields" 17600
+		"hull" 47500
+		"required crew" 13
+		"bunks" 22
+		"mass" 750
+		"drag" 9.4
+		"heat dissipation" .6
+		"fuel capacity" 500
+		"cargo space" 74
+		"outfit space" 405
+		"weapon capacity" 240
+		"engine capacity" 83
+		weapon
+			"blast radius" 280
+			"shield damage" 2800
+			"hull damage" 1400
+			"hit force" 4200
+	outfits
+		"Sunbeam Turret" 3
+		"Wanderer Anti-Missile"
+
+		"Yellow Sun Reactor"
+		"Dark Storm Shielding"
+		"Wanderer Heat Sink"
+		"Wanderer Ramscoop"
+
+		"Type 2 Radiant Thruster"
+		"Type 4 Radiant Steering"
+		"Hyperdrive"
+		
+	engine 53 345 .7
+	engine 0 345
+	engine -53 345 .7
+	gun -56 -217
+	gun 56 -217
+	gun -40 -217
+	gun 40 -217
+	gun -18 -217
+	gun 18 -217
+	turret -36 -205 "Sunbeam Turret"
+	turret 36 -205 "Sunbeam Turret"
+	turret -36 330 "Sunbeam Turret"
+	turret 36 330 "Wanderer Anti-Missile"
+	explode "small explosion" 80
+	explode "medium explosion" 60
+	explode "large explosion" 30
+	explode "huge explosion" 20
+	"final explode" "final explosion large"
+	description "This is a Deep River freighter that has been converted into a war ship."
+
+ship "Deep River Rapids" "Deep River Pirate 4"
+	sprite "ship/deep river 4"
+	add attributes
+		"mass" -80
+		"drag" -.4
+		"cargo space" -74
+	outfits
+		"Modified Blaster" 4
+		"Modified Blaster Turret" 4
+		"Torpedo Launcher" 2
+		"Torpedo" 60
+		"Yellow Sun Reactor"
+		"Dark Storm Shielding"
+		"Wanderer Heat Sink"
+		"Wanderer Ramscoop"
+		"Type 2 Radiant Thruster"
+		"Type 4 Radiant Steering"
+		"Hyperdrive"
+	gun "Modified Blaster"
+	gun "Modified Blaster"
+	gun "Modified Blaster"
+	gun "Modified Blaster"
+	gun "Torpedo Launcher"
+	gun "Torpedo Launcher"
+
 
 
 
@@ -1288,13 +1601,13 @@ ship "Municipality"
 
 
 
-# A battle station not meant to be captured.
+# "Ships" not meant to be captured.
 
 ship "Thermopylae Station"
 	sprite "ship/thermopylae station"
 	"never disabled"
 	attributes
-		category "Space Station"
+		category "Heavy Warship"
 		"cost" 30000000
 		"shields" 300000
 		"hull" 200000
@@ -1303,7 +1616,7 @@ ship "Thermopylae Station"
 		"mass" 9999
 		"drag" 100
 		"heat dissipation" .4
-		"cargo space" 300
+		"cargo space" 1300
 		"outfit space" 1400
 		"weapon capacity" 562
 		"engine capacity" 38
@@ -1317,7 +1630,8 @@ ship "Thermopylae Station"
 		"Quad Blaster Turret" 8
 		"Heavy Anti-Missile Turret" 8
 		"Asteroid Catapult"
-		"Metallic Asteroid" 30
+		"Metallic Asteroid" 95
+		"Asteroid Storage" 5
 		
 		"Armageddon Core"
 		"Dwarf Core" 2
@@ -1333,7 +1647,7 @@ ship "Thermopylae Station"
 		"Tactical Scanner"
 		"Brig"
 		"Interference Plating"
-		"Laser Rifle"
+		"Laser Rifle" 200
 		"Security Station"
 		
 		"A120 Atomic Thruster"
@@ -1373,4 +1687,7 @@ ship "Thermopylae Station"
 	explode "large explosion" 135
 	explode "huge explosion" 90
 	"final explode" "final explosion large"
-	description "A prototype built during the war that was never actually deployed into active service. It is supposed to securely locked away in a Navy testing facility."
+	description "A prototype built during the war that was never actually deployed into active service. It is supposed to be securely locked away in a Navy testing facility."
+
+
+

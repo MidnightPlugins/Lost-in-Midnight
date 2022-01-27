@@ -144,25 +144,16 @@ mission "Storm Seeker Raid: Free Worlds"
 		fleet "Large Militia"
 		fleet "Small Militia"
 
-	npc evade
+	npc
 		government "Pirate"
 		personality waiting plunders harvests coward
-		fleet "Marauder fleet X" 2
-			
-	npc kill
-		government "Pirate"
-		personality waiting staying plunders harvests			
-		fleet
-			names "pirate"
-			variant
-				"Arach Hulk (pirate)"
-				"Kimek Spire (pirate)"
-				"Saryd Sojourner (pirate)"
+		fleet "Marauder fleet X"
+		fleet "Coalition Pirate"
 				
-	npc evade
-		government "Alpha"
-		personality waiting coward
-		fleet "Storm Seeker Escort"
+	npc disable
+		government "Pirate"
+		personality target waiting staying plunders harvests
+		fleet "Storm Seeker Raid"
 	
 	on visit
 		dialog `There are still pirate ships in orbit. Rejoin the battle.`
@@ -199,24 +190,30 @@ mission "Storm Seeker Raid: Syndicate"
 		fleet "Large Syndicate"
 		fleet "Small Syndicate"
 
-	npc evade
+	npc
 		government "Pirate"
 		personality waiting plunders harvests coward
-		fleet "Marauder fleet X" 2
-			
-	npc kill
-		government "Pirate"
-		personality waiting staying plunders harvests			
 		fleet
 			names "pirate"
 			variant
-				"Korath Raider" 3
-				"Korath Chaser" 6
+				"Korath Raider" 
+				"Korath Chaser" 12
+				"Falcon (Korath)"
+				"Protector (Korath)"
+				"Vanguard (Korath)"
+				"Bastion (Korath)"
+				"Roost (Korath)"
+				"Aerie (Korath)"
+				"Nest (Korath)"
+				"Splinter (Korath)"
+				"Modified Argosy (Korath)"
+				"Quicksilver (Korath)"
 
-	npc evade
-		government "Alpha"
-		personality waiting coward
-		fleet "Storm Seeker Escort"
+			
+	npc disable
+		government "Pirate"
+		personality target waiting staying plunders harvests
+		fleet "Storm Seeker Raid"
 	
 	on visit
 		dialog `There are still pirate ships in orbit. Rejoin the battle.`
@@ -254,25 +251,22 @@ mission "Storm Seeker Raid: Deep"
 		fleet "Large Deep Security"
 		fleet "Small Deep Security"
 
-	npc kill
+	npc
 		government "Pirate"
-		personality waiting staying plunders harvests			
+		personality waiting plunders harvests coward		
 		fleet
 			names "pirate"
 			variant
-				"Albatross"
-				"Pelican"
-				"Ibis"
-				"Petrel" 2
-				"Tern" 4
-				"Blackbird (Remnant)" 3
-				"Raven (Remnant)" 12
+				"Falcon (Remnant)" 2
+				"Osprey (Remnant)" 4
+				"Raven (Remnant)" 6
+				"Hawk (Remnant)" 8
 			
-	npc evade
-		government "Alpha"
-		personality waiting coward
-		fleet "Storm Seeker Escort"
-	
+	npc disable
+		government "Pirate"
+		personality target waiting staying plunders harvests
+		fleet "Storm Seeker Raid"
+				
 	on visit
 		dialog `There are still pirate ships in orbit. Rejoin the battle.`
 	on complete
@@ -309,22 +303,22 @@ mission "Storm Seeker Raid: Paradise"
 		fleet "Large Republic"
 		fleet "Small Republic"
 
-	npc kill
+	npc
 		government "Pirate"
-		personality waiting staying plunders harvests		
+		personality waiting plunders harvests coward
 		fleet "Marauder Parade"
 	
-	npc kill
+	npc
 		to spawn
 			has "event: Grudge Legacy"
 		government "Pirate"
-		personality waiting staying plunders harvests		
+		personality waiting plunders harvests coward
 		fleet "Grudge Parade"
 			
-	npc evade
-		government "Alpha"
-		personality waiting coward
-		fleet "Storm Seeker Escort"
+	npc disable
+		government "Pirate"
+		personality target waiting staying plunders harvests
+		fleet "Storm Seeker Raid"
 	
 	on visit
 		dialog `There are still pirate ships in orbit. Rejoin the battle.`
@@ -365,7 +359,7 @@ mission "Storm Seeker Raid: North"
 
 	npc kill
 		government "Pirate"
-		personality waiting staying plunders harvests			
+		personality waiting plunders harvests coward
 		fleet
 			names "pirate"
 			variant
@@ -388,10 +382,11 @@ mission "Storm Seeker Raid: North"
 				"Corvette (Hai)"
 				"Headhunter (Hai)"
 				"Dagger" 3
-	npc evade
-		government "Alpha"
-		personality waiting coward
-		fleet "Storm Seeker Escort"
+
+	npc disable
+		government "Pirate"
+		personality target waiting staying plunders harvests
+		fleet "Storm Seeker Raid"
 
 	on visit
 		dialog `There are still pirate ships in orbit. Rejoin the battle.`
@@ -590,11 +585,11 @@ mission "Storm Seeker Counter Attack 4"
 	to offer
 		has "Storm Seeker Counter Attack 3: done"
 	on offer
-		"Storm Seeker Raid: North: offered" += 10
-		"Storm Seeker Raid: Paradise: offered" += 10
-		"Storm Seeker Raid: Deep: offered" += 10
-		"Storm Seeker Raid: Syndicate: offered" += 10
-		"Storm Seeker Raid: Free Worlds: offered" += 10
+		"Storm Seeker Raid: North: offered" += 2
+		"Storm Seeker Raid: Paradise: offered" += 2
+		"Storm Seeker Raid: Deep: offered" += 2
+		"Storm Seeker Raid: Syndicate: offered" += 2
+		"Storm Seeker Raid: Free Worlds: offered" += 2
 		fail "Storm Seeker Raid: North"
 		fail "Storm Seeker Raid: Paradise"
 		fail "Storm Seeker Raid: Deep"
@@ -605,7 +600,7 @@ mission "Storm Seeker Counter Attack 4"
 	on enter
 		conversation
 			scene "scene/scene-badcompany"
-			`Kenney cowers in a corner of your ship muttering unintelligently to himself while you engage the Rolling Thunder. As you clear the planet's atmosphere, scanners show that more company has arrived...`
+			`Kenny cowers in a corner of your ship muttering unintelligently to himself while you engage the Rolling Thunder. As you clear the planet's atmosphere, scanners show that more company has arrived...`
 	
 	npc
 		government "Alpha"
@@ -613,27 +608,21 @@ mission "Storm Seeker Counter Attack 4"
 		fleet
 			names "pirate"
 			variant
-				"Korath Dredger"
-				"Korath Chaser" 4
-				"Albatross (Gravedigger)"
-				"Shield Beetle (Jump, Pulse)"
-				"Bactrian (Hai Weapons)"
-				"Leviathan (Hai Weapons)"
-				"Falcon (Korath)"
-				"Protector (Korath)"
-				"Vanguard (Korath)"
-				"Blackbird (Remnant)"
-				"Raven (Remnant)" 4
-
-	npc
-		government "Alpha"
-		personality waiting heroic vindictive
-		fleet
-			names "pirate"
-			variant
-				"Shallow Pond" 20
-				"Flycatcher" 10
-				"Flycatcher (Laser)" 10
+				"Tsunami"
+				"Tornado" 2
+				"Deep River Rapids"
+				"Deep River Pirate 4" 3
+				"Deep River Pirate 3"
+				"Deep River Pirate 2"
+				"Deep River Pirate 1"
+				"Deep River Pirate 0"
+				"Winter Leaf" 2
+				"Autumn Leaf" 3
+				"Summer Leaf" 6
+				"Spring Leaf" 9
+				"Shallow Pond" 12
+				"Flycatcher (Laser)" 12
+				"Rainmaker (Wanderer)" 4
 
 	npc kill
 		government "Alpha"
@@ -643,16 +632,11 @@ mission "Storm Seeker Counter Attack 4"
 		dialog `You've defeated the Rolling Thunder. Dump Kenny off on Wang Xiang Tai, then head to Luna for your reward.`
 	
 	on complete
-		"reputation: Pirate" --
+		"reputation: Pirate" -= 2
 		fail "Storm Seeker Counter Attack 2"
 		dialog `You dump an ungrateful Kenny off on Wang Xiang Tai and make preparations to head for Luna.`
 
-ship "Flycatcher" "Flycatcher (Laser)"
-	outfits
-		"Laser Turret"
-		"Small Biochemical Cell" 2
-		"Type 1 Radiant Thruster"
-		"Type 1 Radiant Steering"
+
 
 mission "Storm Seeker Counter Attack 4 Patch"
 	landing
@@ -700,3 +684,185 @@ mission "Storm Seeker Reward Expires"
 		clear "license: Navy Carrier"
 		fail
 
+
+
+mission "Storm Seeker Epilogue: Spring Leaf"
+	invisible
+	source "Season's End"
+	repeat
+	to offer
+		or
+			and
+				has "Storm Seeker Counter Attack 4: done"
+				not "Storm Seeker Epilogue: Spring Leaf: done"
+			and
+				has "Storm Seeker Epilogue: Spring Leaf: done"
+				random < 35 - ( 3 * "Storm Seeker Epilogue: Spring Leaf: done" )
+	on offer
+		require "Jump Drive" 2
+		conversation
+			scene "thumbnail/spring leaf-thumb"
+			`After several hours of searching, and scavenging parts from ships that are otherwise unsalvageable, you find a ship that's almost salvageable. All it requires is a jump drive.`
+			choice
+				`Use one of your jump drives to salvage the ship.`
+					accept
+				`Do not salvage the ship.`
+					defer
+	on accept
+		outfit "Jump Drive" -1
+		give ship "Spring Leaf (Jump)"
+
+ship "Spring Leaf" "Spring Leaf (Jump)"
+	outfits
+		"Sunbeam"
+		
+		"Yellow Sun Reactor"
+		"Bright Cloud Shielding"
+		"Wanderer Ramscoop"
+		
+		"Type 3 Radiant Thruster"
+		"Type 3 Radiant Steering"
+		"Jump Drive"
+
+
+
+mission "Storm Seeker Epilogue: Winter Leaf"
+	invisible
+	source "Season's End"
+	to offer
+		has "Storm Seeker Epilogue: Spring Leaf: done"
+		random < 30
+	on offer
+		require "Jump Drive" 2
+		conversation
+			scene "thumbnail/winter leaf-thumb"
+			`After several hours of searching, and scavenging parts from ships that are otherwise unsalvageable, you find a ship that's almost salvageable. All it requires is a jump drive.`
+			choice
+				`Use one of your jump drives to salvage the ship.`
+					accept
+				`Do not salvage the ship.`
+					defer
+	on accept
+		outfit "Jump Drive" -1
+		give ship "Winter Leaf (Jump)"
+
+ship "Winter Leaf" "Winter Leaf (Jump)"
+	outfits
+		"Sunbeam" 3
+		"Wanderer Anti-Missile"
+		
+		"White Sun Reactor"
+		"Bright Cloud Shielding"
+		"Wanderer Ramscoop"
+		
+		"Type 3 Radiant Thruster"
+		"Type 4 Radiant Steering"
+		"Jump Drive"
+
+
+
+mission "Storm Seeker Epilogue: Storm Seeker"
+	invisible
+	source "Season's End"
+	to offer
+		has "Storm Seeker Epilogue: Winter Leaf: done"
+		random < 25
+	on offer
+		require "Jump Drive" 2
+		conversation
+			scene "thumbnail/storm seeker-thumb"
+			`After several hours of searching, and scavenging parts from ships that are otherwise unsalvageable, you find a ship that's almost salvageable. All it requires is a jump drive.`
+			choice
+				`Use one of your jump drives to salvage the ship.`
+					accept
+				`Do not salvage the ship.`
+					defer
+	on accept
+		outfit "Jump Drive" -1
+		give ship "Storm Seeker"
+
+
+
+mission "Storm Seeker Epilogue: Tornado"
+	invisible
+	source "Season's End"
+	to offer
+		has "Storm Seeker Epilogue: Storm Seeker: done"
+		random < 20
+	on offer
+		require "Jump Drive" 2
+		conversation
+			scene "thumbnail/tornado-thumb"
+			`After several hours of searching, and scavenging parts from ships that are otherwise unsalvageable, you find a ship that's almost salvageable. All it requires is a jump drive.`
+			choice
+				`Use one of your jump drives to salvage the ship.`
+					accept
+				`Do not salvage the ship.`
+					defer
+	on accept
+		outfit "Jump Drive" -1
+		give ship "Tornado (Jump)"
+
+ship "Tornado" "Tornado (Jump)"
+	outfits
+		"Sunbeam" 4
+		"Sunbeam Turret" 2
+		"Wanderer Anti-Missile" 2
+		
+		"Yellow Sun Reactor" 2
+		"Dark Storm Shielding"
+		"Wanderer Ramscoop"
+		
+		"Type 4 Radiant Thruster"
+		"Type 4 Radiant Steering"
+		"Jump Drive"
+
+
+
+mission "Storm Seeker Epilogue: Tsunami"
+	invisible
+	source "Season's End"
+	to offer
+		has "Storm Seeker Epilogue: Tornado: done"
+		random < 15
+	on offer
+		require "Jump Drive" 2
+		conversation
+			scene "thumbnail/tsunami-thumb"
+			`After several hours of searching, and scavenging parts from ships that are otherwise unsalvageable, you find a ship that's almost salvageable. All it requires is a jump drive.`
+			choice
+				`Use one of your jump drives to salvage the ship.`
+					accept
+				`Do not salvage the ship.`
+					defer
+	on accept
+		outfit "Jump Drive" -1
+		give ship "Tsunami (Jump)"
+
+ship "Tsunami" "Tsunami (Jump)"
+	outfits
+		"Sunbeam" 4
+		"Sunbeam Turret" 5
+		
+		"Blue Sun Reactor"
+		"White Sun Reactor"
+		"Dark Storm Shielding" 2
+		"Wanderer Heat Sink"
+		"Wanderer Ramscoop"
+		
+		"Type 4 Radiant Thruster"
+		"Type 4 Radiant Steering"
+		"Type 2 Radiant Steering"
+		"Jump Drive"
+		
+
+
+mission "Storm Seeker Epilogue: Season's End"
+	invisible
+	source "Season's End"
+	repeat
+	to offer
+		has "Storm Seeker Epilogue: Tsunami: done"
+		random < 30 - ( 3 * "Storm Seeker Epilogue: Season's End: done" )		
+	on offer
+		dialog `After several hours of searching, you fail to find any ship that's salvageable. While you might have overlooked a Shallow Pond or Spring Leaf, you have no doubt that you've checked all the larger derelicts and confirmed that there's nothing left but piles of useless scrap.`
