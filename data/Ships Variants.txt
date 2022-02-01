@@ -487,6 +487,24 @@ ship "Splinter" "Splinter (Korath)"
 
 
 
+ship "Star Queen" "Star Queen (Advanced Research)"
+	add attributes
+		"atmosphere scan" 100
+	outfits
+		"Heavy Anti-Missile Turret" 2	
+		"KP-6 Photovoltaic Array" 4
+		"LP036a Battery Pack"
+		"D94-YV Shield Generator"
+		"Small Radar Jammer" 3
+		"Luxury Accommodations"
+		"Asteroid Scanner"
+		"Outfit Scanner"
+		"X3700 Ion Thruster"
+		"X3200 Ion Steering"
+		"Jump Drive"
+
+
+
 ship "Quicksilver" "Quicksilver (Korath)"
 	outfits
 		"Korath Fire-Lance" 2

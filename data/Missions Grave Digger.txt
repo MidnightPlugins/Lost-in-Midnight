@@ -931,9 +931,6 @@ mission "Grave Digger: Asteroid Catapult"
 	to offer
 		has "Midnight Market: Asteroid Catapult 2: done"
 		has "Remnant: Tech Retrieval: done"
-		or
-			not "Angry Squirrels: Asteroid Catapult: active"
-			not "Angry Squirrels: Asteroid Catapult: done"
 		"net worth" > 4000000
 		"credits" >= 2000000
 	on offer

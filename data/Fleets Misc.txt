@@ -65,6 +65,71 @@ fleet "Bounty Hunter (licensed)"
 
 
 
+fleet "Ancestral Unfettered"
+	government "Hai (Unfettered)"
+	names "hai"
+	cargo 1
+	personality
+		disables
+		plunders
+	variant 1
+		"Geocoris"
+		"Shield Beetle (Pulse)"
+		"Shield Beetle (Tracker)"
+	variant 1
+		"Geocoris"
+		"Shield Beetle (Pulse)"
+		"Grasshopper"
+		"Grasshopper (Tracker)"
+	variant 1
+		"Geocoris"
+		"Shield Beetle (Pulse)" 
+		"Grasshopper"
+		"Grasshopper (Tracker)"
+	variant 1
+		"Geocoris (Tracker)"
+		"Shield Beetle"
+		"Aphid" 2
+		"Aphid (Armed)" 
+	variant 1
+		"Centipede"
+		"Geocoris (Tracker)"
+		"Lightning Bug"
+		"Water Bug"
+		"Grasshopper (Tracker)"
+
+
+
+fleet "Ancestral Unfettered Raid"
+	government "Hai (Unfettered)"
+	names "hai"
+	cargo 1
+	personality
+		disables
+		plunders
+	variant 1
+		"Solifuge (Jump)"
+		"Violin Spider" 6
+		"Lightning Bug (Jump)"
+		"Water Bug (Jump)"
+		"Shield Beetle (Jump, Tracker)"
+		"Shield Beetle (Jump, Pulse)"
+	variant 1
+		"Solifuge (Jump)"
+		"Violin Spider" 6
+		"Lightning Bug (Jump)"
+		"Shield Beetle (Jump)"
+		"Shield Beetle (Jump, Tracker)"
+		"Water Bug (Jump, Pulse)"
+	variant 1
+		"Solifuge (Jump)"
+		"Violin Spider" 6
+		"Shield Beetle (Jump)"
+		"Shield Beetle (Jump, Tracker)"
+		"Water Bug (Jump)"
+		"Lightning Bug (Jump, Pulse)"
+
+
 fleet "S. Advanced Independent"
 	government "Independent"
 	names "independent"

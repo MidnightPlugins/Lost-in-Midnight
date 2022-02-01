@@ -529,7 +529,116 @@ ship "Astero Nautilus" "Astero Nautilus B"
 	sprite "ship/asteronautilus b"
 	"never disabled"
 	gun -7.5 -47
-	
+
+ship "Astero Nautilus" "Bulk Freighter?"
+	noun "creature"
+	sprite "ship/asteronautilus c"
+	"never disabled"
+	add attributes
+		"shields" 13500
+		"shield generation" .82
+	outfits
+		Tentacles? 2
+	gun -4 -205
+	gun 4 -205
+	leak "blood" 30 50
+	leak "flame" 50 80
+	leak "big leak" 40 30
+	explode "small explosion" 15
+	explode "medium explosion" 25
+	explode "large explosion" 35
+	explode "huge explosion" 20
+	"final explode" "final explosion large"
+
+ship "Astero Nautilus" "Freighter?"
+	noun "creature"
+	sprite "ship/asteronautilus f1"
+	"never disabled"
+	gun 1 -66
+
+ship "Astero Nautilus" "Freighter??"
+	noun "creature"
+	sprite "ship/asteronautilus f2"
+	"never disabled"
+	gun -0.5 -61.5
+
+ship "Astero Nautilus" "Freighter???"
+	noun "creature"
+	sprite "ship/asteronautilus f3"
+	"never disabled"
+	add attributes
+		"shields" 2000
+	outfits
+		Tentacles? 2
+	gun -4 -46
+	gun 4 -46
+	leak "blood" 60 50
+	leak "flame" 50 80
+	explode "tiny explosion" 10
+	explode "small explosion" 30
+	explode "medium explosion" 20
+	"final explode" "final explosion small"
+
+
+ship "Astero Nautilus" "Protector?"
+	noun "creature"
+	sprite "ship/asteronautilus p"
+	"never disabled"
+	add attributes
+		"shields" 9500
+		"shield generation" .51
+	outfits
+		Tentacles? 2
+	gun -4 -94.5
+	gun 4 -94.5
+	leak "blood" 60 50
+	leak "flame" 20 80
+	explode "tiny explosion" 18
+	explode "small explosion" 36
+	explode "medium explosion" 24
+	explode "large explosion" 8
+	"final explode" "final explosion large"
+
+ship "Astero Nautilus" "Splinter?"
+	noun "creature"
+	sprite "ship/asteronautilus s"
+	"never disabled"
+	add attributes
+		"shields" 5200
+		"shield generation" .51
+	outfits
+		Tentacles? 2
+	gun 16 -33.5
+	gun 24 -33.5
+	leak "blood" 60 50
+	leak "flame" 40 80
+	leak "big leak" 90 30
+	explode "tiny explosion" 18
+	explode "small explosion" 36
+	explode "medium explosion" 24
+	explode "large explosion" 8
+	"final explode" "final explosion medium"
+
+ship "Astero Nautilus" "Vanguard?"
+	noun "creature"
+	sprite "ship/asteronautilus v"
+	"never disabled"
+	add attributes
+		"shields" 9800
+		"shield generation" .51
+	outfits
+		Tentacles? 2
+	gun -4 -64.5
+	gun 4 -64.5
+	leak "blood" 60 50
+	leak "flame" 30 80
+	explode "tiny explosion" 18
+	explode "small explosion" 36
+	explode "medium explosion" 24
+	explode "large explosion" 8
+	"final explode" "final explosion medium"
+
+
 
 outfit "Tentacles?"
 	category "Guns"
@@ -556,11 +665,11 @@ fleet "Small Astero Nautilus"
 	cargo 0
 	personality
 		mining harvests plunders unconstrained mute
-	variant 40
+	variant 3
 		"Astero Nautilus"
-	variant 40
+	variant 3
 		"Astero Nautilus B"
-	variant 10
+	variant 2
 		"Astero Nautilus"
 		"Astero Nautilus B"
 	variant 1
@@ -569,6 +678,20 @@ fleet "Small Astero Nautilus"
 	variant 1
 		"Astero Nautilus"
 		"Astero Nautilus B" 2
+
+fleet "Mutated Astero Nautilus"
+	government "Indigenous Predator"
+	cargo 0
+	personality
+		mining harvests plunders unconstrained mute
+	variant
+		"Bulk Freighter?"
+		"Freighter?"
+		"Freighter??"
+		"Freighter???"
+		"Protector?"
+		"Splinter?"
+		"Vanguard?"
 
 mission "First Contact: Astero Nautilus"
 	landing
@@ -647,6 +770,111 @@ event "Astero Nautilus Cross Chasm"
 		add fleet "Small Astero Nautilus" 2000
 	system "Sadr"
 		add fleet "Small Astero Nautilus" 2400
+
+
+
+mission "Investigate Missing Shipment 1"
+	job
+	name "Investigate Missing Shipment"
+	description "Track down a missing shipment of experimental growth hormone that was last seen at <waypoints>. Once you've confirmed the fate of the cargo, report to <destination>. Payment is <payment>."
+	source
+		government "Syndicate"
+	destination
+		attributes "south"
+		attributes "farming"
+	waypoint "Alpha Arae"
+	to offer
+		has "event: Astero Nautilus Cross Chasm"
+		random < 30
+	on waypoint
+		dialog `You've found the missing fleet! But the ships look strange...`
+	npc
+		government "Indigenous Predator"
+		system "Alpha Arae"
+		personality staying mining harvests plunders unconstrained mute
+		fleet "Small Astero Nautilus" 5
+	npc kill
+		government "Indigenous Predator"
+		system "Alpha Arae"
+		personality target staying mining harvests plunders unconstrained mute
+		fleet "Mutated Astero Nautilus"
+	on visit
+		dialog `You haven't confirmed the fate of all the missing cargo. Visit <waypoints> and keep searching.`
+	on abort
+		clear "Investigate Missing Shipment 1: offered"
+	on complete
+		clear "Investigate Missing Shipment 2: offered"
+		payment 1000000
+		dialog `You've confirmed that the missing shipment was destroyed. After watching video of your fight with the Mutated Astero Nautilus, the Syndicate representative reluctantly pays you <payment>.`
+
+mission "Investigate Missing Shipment 2"
+	job
+	name "Investigate Missing Shipment"
+	description "Track down a missing shipment of experimental growth hormone that was last seen at <waypoints>. Once you've confirmed the fate of the cargo, report to <destination>. Payment is <payment>."
+	source
+		government "Syndicate"
+	destination
+		attributes "south"
+		attributes "farming"
+	waypoint Eber
+	to offer
+		has "Investigate Missing Shipment 1: done"
+		random < 25
+	on waypoint
+		dialog `You've found the missing fleet! But the ships look strange...`
+	npc
+		government "Indigenous Predator"
+		system Eber
+		personality staying mining harvests plunders unconstrained mute
+		fleet "Small Astero Nautilus" 7
+	npc kill
+		government "Indigenous Predator"
+		system Eber
+		personality target staying mining harvests plunders unconstrained mute
+		fleet "Mutated Astero Nautilus"
+	on visit
+		dialog `You haven't confirmed the fate of all the missing cargo. Visit <waypoints> and keep searching.`
+	on abort
+		clear "Investigate Missing Shipment 2: offered"
+	on complete
+		clear "Investigate Missing Shipment 3: offered"
+		payment 1000000
+		dialog `You've confirmed that the missing shipment was destroyed. After watching video of your fight with the Mutated Astero Nautilus, the Syndicate representative reluctantly pays you <payment>.`
+
+mission "Investigate Missing Shipment 3"
+	job
+	name "Investigate Missing Shipment"
+	description "Track down a missing shipment of experimental growth hormone that was last seen at <waypoints>. Once you've confirmed the fate of the cargo, report to <destination>. Payment is <payment>."
+	source
+		government "Syndicate"
+	destination
+		attributes "south"
+		attributes "farming"
+	waypoint Alnasl
+	to offer
+		has "Investigate Missing Shipment 2: done"
+		random < 20
+	on waypoint
+		dialog `You've found the missing fleet! But the ships look strange...`
+	npc
+		government "Indigenous Predator"
+		system Alnasl
+		personality staying mining harvests plunders unconstrained mute
+		fleet "Small Astero Nautilus" 9
+	npc kill
+		government "Indigenous Predator"
+		system Alnasl
+		personality target staying mining harvests plunders unconstrained mute
+		fleet "Mutated Astero Nautilus"
+	on visit
+		dialog `You haven't confirmed the fate of all the missing cargo. Visit <waypoints> and keep searching.`
+	on abort
+		clear "Investigate Missing Shipment 3: offered"
+	on complete
+		clear "Investigate Missing Shipment 1: offered"
+		payment 1000000
+		dialog `You've confirmed that the missing shipment was destroyed. After watching video of your fight with the Mutated Astero Nautilus, the Syndicate representative reluctantly pays you <payment>.`
+
 
 
 

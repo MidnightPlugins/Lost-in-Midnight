@@ -126,7 +126,8 @@ system Archipelago
 system Aya'arak
 	hidden
 	pos -593.479 463.399
-	government Uninhabited Midnight
+	government Uninhabited
+	attributes "midnight"
 	habitable 1080
 	asteroids "small rock" 88 2.016
 	asteroids "medium rock" 10 4.932
@@ -342,17 +343,97 @@ system Diyu
 
 
 
+system Genesis
+	hidden
+	pos -928.898 194.924
+	government Uninhabited
+	habitable 1505.92
+	asteroids "medium rock" 12 4.16
+	asteroids "large rock" 11 5.4496
+	asteroids "small metal" 9 5.5328
+	asteroids "large metal" 2 3.0784
+	minables silicon 19 1.023
+	minables iron 14 1.132
+	minables aluminum 9 1.153
+	trade Clothing 290
+	trade Electronics 740
+	trade Equipment 530
+	trade Food 350
+	trade "Heavy Metals" 960
+	trade Industrial 720
+	trade "Luxury Goods" 1220
+	trade Medical 680
+	trade Metal 390
+	trade Plastic 390
+	object
+		sprite star/g0
+		distance 33.374
+		period 13.2124
+		offset 180
+	object
+		sprite star/k5
+		distance 84.626
+		period 13.2124
+	object
+		sprite planet/lava4
+		distance 735.383
+		period 205.556
+		offset 242.64
+	object "The Garden"
+		sprite planet/earth
+		distance 1532
+		period 618.084
+		offset 322.711
+		object
+			sprite planet/luna
+			distance 173
+			period 23.2957
+	object
+		sprite planet/desert10
+		distance 1986.42
+		period 912.569
+		offset 3.97754
+	object
+		sprite planet/gas1
+		distance 3103.76
+		period 1782.35
+		offset 271.705
+		object
+			sprite planet/dust7
+			distance 219
+			period 12.9533
+			offset 299.477
+		object
+			sprite planet/europa
+			distance 348
+			period 25.9468
+			offset 224.845
+		object
+			sprite planet/rhea
+			distance 520
+			period 47.3937
+			offset 196.692
+
+
+
+
 system Ehmahai
 	hidden
 	pos -806.407 -97.2328
-	government Pirate
+	government Uninhabited
+	attributes "midnight"
 	habitable 625
+	link Heiahai
+	link Zubahai
 	asteroids "small rock" 3 7.8
 	asteroids "medium rock" 5 7.956
 	asteroids "large rock" 30 4.992
 	asteroids "small metal" 22 11.622
 	asteroids "medium metal" 80 9.516
 	asteroids "large metal" 14 3.978
+	minables silicon 19 1.023
+	minables copper 14 1.132
+	minables aluminum 9 1.153
 	trade Clothing 290
 	trade Electronics 740
 	trade Equipment 530
@@ -374,12 +455,12 @@ system Ehmahai
 		sprite planet/desert8
 		distance 380.52
 		period 118.764
-	object
+	object "Oldhome"
 		sprite planet/forest3
 		distance 615.704
 		period 244.443
 		offset 74.9355
-	object
+	object "Nearwater"
 		sprite planet/ocean1
 		distance 953.264
 		period 470.912
@@ -430,11 +511,16 @@ system Hazehai
 system Heiahai
 	hidden
 	pos -864.407 -48.2328
-	government Pirate
-	habitable 425.92
+	attributes midnight
+	government Uninhabited
+	habitable 1250
+	link Ehmahai
 	asteroids "small metal" 4 1.734
 	asteroids "medium metal" 5 2.3698
 	asteroids "large metal" 8 3.757
+	minables silicon 19 1.023
+	minables iron 14 1.132
+	minables titanium 9 1.153
 	trade Clothing 290
 	trade Electronics 740
 	trade Equipment 530
@@ -446,27 +532,34 @@ system Heiahai
 	trade Metal 390
 	trade Plastic 390
 	object
-		sprite star/k5
-		period 10
+		sprite star/g5
+		distance 58.5
+		period 14.318
+		offset 180
 	object
+		sprite star/g5
+		distance 58.5
+		period 14.318
+	object Drywaste
 		sprite planet/desert6
-		distance 175.49
-		period 45.0583
-	object
+		distance 1145.86
+		period 438.836
+		offset 197.814
+	object Takerstone
 		sprite planet/rock1
-		distance 420.85
-		period 167.335
-		offset 176.335
+		distance 1359.86
+		period 567.343
+		offset 92.7578
 	object
 		sprite planet/titan
-		distance 1061.81
-		period 670.604
-		offset 323.516
+		distance 1699.57
+		period 792.711
+		offset 195.313
 	object
 		sprite planet/gas14
-		distance 1962.17
-		period 1684.62
-		offset 352.082
+		distance 2459.73
+		period 1380.18
+		offset 218.077
 		object
 			sprite planet/dust7
 			distance 219
@@ -533,8 +626,11 @@ system Kalsolli
 
 
 system Nebulous
+	hidden
 	attributes "midnight"
 	pos -1145.58 432.574
+	government Uninhabited
+	attributes "midnight"
 	habitable 233.28
 	fleet "Plasma Parasites" 3600
 	fleet "Nesting Plasma Parasites" 400
@@ -816,17 +912,19 @@ system Temeh
 
 system "Watcher's Nest"
 	hidden
+	attributes midnight
 	pos -386.428 -908.93
+	government Uninhabited
 	habitable 233.28
 	belt 1000
+	minables lead 8 4.8391
+	minables titanium 12 5.08669
+	minables neodymium 5 2.48669
 	asteroids "small rock" 2 5.2118
 	asteroids "large rock" 3 5.7684
 	asteroids "small metal" 2 6.578
 	asteroids "medium metal" 3 3.6432
 	asteroids "large metal" 4 2.783
-	minables lead 8 4.8391
-	minables titanium 12 5.08669
-	minables neodymium 5 2.48669
 	trade Electronics 740
 	trade Equipment 530
 	trade Food 350
@@ -841,17 +939,18 @@ system "Watcher's Nest"
 		period 10
 	object
 		sprite planet/ice4
-		distance 294.41
-		period 132.297
+		distance 662.245
+		period 446.323
+		offset 173.389
 		object
 			sprite planet/rock0
 			distance 127
 			period 17.9915
 	object
 		sprite planet/gas14
-		distance 799.41
-		period 591.937
-		offset 40.5568
+		distance 1167.25
+		period 1044.39
+		offset 104.729
 		object
 			sprite planet/dust4
 			distance 249
@@ -859,9 +958,9 @@ system "Watcher's Nest"
 			offset 199.055
 	object
 		sprite planet/gas6
-		distance 1357.41
-		period 1309.75
-		offset 184.839
+		distance 1725.25
+		period 1876.71
+		offset 318.576
 
 
 
@@ -870,12 +969,17 @@ system Zubahai
 	hidden
 	pos -761.407 -124.233
 	government Uninhabited
+	attributes "midnight"
 	habitable 1080
+	link Ehmahai
 	asteroids "small rock" 110 3.672
 	asteroids "medium rock" 3 3.96
 	asteroids "large rock" 90 2.196
 	asteroids "medium metal" 1 2.196
 	asteroids "large metal" 1 2.268
+	minables silicon 19 1.023
+	minables iron 14 1.132
+	minables neodymium 5 2.48669
 	trade Clothing 290
 	trade Electronics 740
 	trade Equipment 530
@@ -894,7 +998,7 @@ system Zubahai
 		distance 503.47
 		period 137.502
 		offset 155.025
-	object
+	object "Wildland"
 		sprite planet/earth
 		distance 1079.4
 		period 431.643
@@ -928,6 +1032,36 @@ system Zubahai
 			period 23.7634
 
 
+planet "The Garden"
+	attributes midnight
+	landscape land/city5
+	description `The Children of The Garden have developed a pre-hyperdrive civilization. They are attempting to explore space, but the object in orbit over their world prevents them from doing so...`
+	"required reputation" 1
+
+planet "Oldhome"
+	attributes uninhabited midnight "ancestral lands"
+	landscape land/forest3
+	description `The ancestral home of the Hai. Most of the ruins have been hidden away by the encroaching forests, leaving little evidence of their civilization behind.`
+
+planet "Nearwater"
+	attributes uninhabited midnight "ancestral lands"
+	landscape land/sea3
+	description `Much of this world is covered by a raging ocean. The near constant storms have eroded any Hai structures down to their foundations.`
+
+planet "Drywaste"
+	attributes uninhabited midnight "ancestral lands"
+	landscape land/desert7
+	description `The wreckage of Hai spacecraft are scattered across the land of this desert world. But they are covered by hills of sand. Occasionally, the desert winds will shift these dunes, revealing the derelicts that lie underneath.`
+
+planet "Takerstone"
+	attributes uninhabited midnight "ancestral lands"
+	landscape land/desert0
+	description `This planet has a breathable atmosphere, but food and water are scarce. The surface of the planet is dotted with the rotting wreckage of ancient Hai spacecraft. Perhaps this system was a battlefield, much like Wah Ki is today.`
+
+planet "Wildland"
+	attributes uninhabited midnight "ancestral lands"
+	landscape land/city17-sfiera
+	description `This earth-like planet is covered in decaying ruins. But they don't appear to be Hai ruins. On this world it seems another species evolved, thrived, then died out during the Hai's long absence. Wild animals roam the streets and birds nest in the taller structures. You imagine this is how Earth would turn out if humans ever abandoned it.`
 
 
 planet Corpse

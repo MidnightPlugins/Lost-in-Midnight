@@ -215,20 +215,6 @@ mission "First Contact: Nova Fireflies"
 	on complete
 		event "Nova Firefly Invasion" 7
 
-event "reveal Hazehai"
-	system Ehmahai
-		remove hidden
-		add fleet "Nova Firefly" 1000
-	system Hazehai
-		remove hidden
-		add fleet "Nova Firefly Hatchery" 600
-		add fleet "Nova Firefly" 4000
-	system Heiahai
-		remove hidden
-		add fleet "Nova Firefly" 1000
-	system Zubahai
-		remove hidden
-
 event "Nova Firefly Invasion"
 	system Zubahai
 		add fleet "Nova Firefly" 4000
@@ -242,7 +228,9 @@ event "Nova Firefly Invasion"
 		add fleet "Nova Firefly" 8000
 	system Algieba
 		add fleet "Nova Firefly" 12000
-		
+
+# For the reveal Hazehai event, look in Cartography Map.
+
 
 
 ship "Star Gazer"

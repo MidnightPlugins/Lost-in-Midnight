@@ -330,3 +330,13 @@ government "Syndicate (Corrupt)"
 	"bribe" .08
 	"friendly hail" "friendly syndicate"
 	"hostile hail" "hostile syndicate"
+
+
+
+# A Wanderer government that is always hostile to the player.
+government "Wanderer (Hostile)"
+	"display name" "Wanderer"
+	swizzle 2
+	color .70 .91 .12
+	"player reputation" -1000
+	language "Wanderer"

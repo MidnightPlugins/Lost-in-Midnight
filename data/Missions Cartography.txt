@@ -31,18 +31,27 @@ mission "Cartography: Quarg Hitchhiker 1"
 		or
 			"reputation: Pirate" > 0
 			and
-				"tribute: Albatross" > 0
-				"tribute: Bloodsea" > 0
+				or
+					"tribute: Albatross" > 0
+					has "event: albatross joins free worlds"
+				or
+					"tribute: Bloodsea" > 0
+					has "event: bloodsea independent"
+					has "event: bloodsea joins free worlds"
+				or
+					and
+						"tribute: Thule" > 0
+						"tribute: Smuggler's Den" > 0
+					has "event: Thule becomes independent"
 				"tribute: Buccaneer Bay" > 0
 				"tribute: Covert" > 0
 				"tribute: Deadman's Cove" > 0
 				"tribute: Freedom" > 0
 				"tribute: Greenrock" > 0
 				"tribute: Haven" > 0
-				"tribute: Smuggler's Den" > 0
 				"tribute: Stormhold" > 0
-				"tribute: Thule" > 0
 				"tribute: Zenith" > 0
+
 	on offer
 		conversation
 			`You are surprised to see a Quarg approaching you. "Greetings human. I am in need of transport. Can you help me? I can pay you 90000 credits after we arrive."`
@@ -109,7 +118,7 @@ mission "Cartography: Quarg Hitchhiker 2"
 		has "Cartography: Quarg Hitchhiker 1: done"
 	on offer
 		conversation
-			scene "scene/scene-carabao"
+			scene "thumbnail/carabao-thumb"
 			`When you arrive at landing pad Q, you are surprised to find it occupied by a city ship. While there are some similarities to a Bactrian, it seems to be a different model ship.`
 			`	"Welcome, Captain <first> <last>. Please, come aboard my new ship." a boarding ramp descends from an open entry hatch. It's dark inside.`
 			choice
@@ -284,6 +293,7 @@ mission "Cartography: The Map (Hai)"
 	invisible
 	source
 		government "Hai"
+		not planet "Darkwaste"
 	to offer
 		has "trailblazer map"
 		has "First Contact: Hai: offered"
@@ -512,7 +522,7 @@ mission "Cartography: Quarg Hitchhiker 5"
 				`	"Sorry, I have other things to do."`
 					decline
 
-			`	"Good. Our destination is The Ring of Friendship, a former Quarg Ringworld."`
+			`	"Good. Our destination is The Ring of Friendship, a former Quarg ringworld."`
 			choice
 				`	"Will the Heliarchs allow a Quarg to land?"`
 
@@ -544,6 +554,7 @@ mission "Cartography: Quarg Hitchhiker 5"
 	
 	on complete
 		"reputation: Quarg" >?= 1
+		event "reveal Nebulous"
 		event "Quash Ring of Wisdom" 5
 		log `Escorted Quash's ship, the Halcyon, to the Ring of Friendship in Coalition space. Amazingly, the Heliarch allowed Quash to land. Quash seems to have made some sort of deal with the Heliarch and we parted ways while Quash works with them.`
 		log "People" "Quash" `The Heliarch refer to Quash as 'The Outcast'. Apparently, Quash is some sort of criminal amongst the Quarg. Considering that the previous two times I've met Quash were on pirate worlds, I shouldn't be surprised.`
@@ -559,13 +570,27 @@ mission "Cartography: Quarg Hitchhiker 5"
 			
 			`	An Arach speaks up. "Beware human. Though cast out from its own society The Outcast is, for good reason the Quarg must have."`
 			`	You thank the Heliarchs before boarding your ship to follow Quash. Before launching, you find that Quash has already sent you a message:`
-			`	"They've asked me for some assistance on the Ring of Wisdom. This may take a while. I'll contact you when I am finished."`
+			`	"They've asked me for some assistance on the Ring of Wisdom. This may take a while. I'll contact you when I am finished. In the meantime, have you visited the Quarg ringworld to the west? I've attached the map data if you haven't. It's quite a sight!"`
 
 event "reveal Chasm"
 	system Chasm
 		remove hidden
 
 event "Quash Ring of Wisdom"
+
+event "reveal Nebulous"
+	system Nebulous
+		remove hidden
+
+mission "Cartography: Nebulous Patch"
+	landing
+	invisible
+	to offer
+		has "Cartography: Quarg Hitchhiker 5: done"
+		not "event: reveal Nebulous"
+	on offer
+		event "reveal Nebulous"
+		fail
 
 
 
@@ -634,7 +659,6 @@ mission "Cartography: Quarg Hitchhiker 7"
 	landing
 	name "The Forbidden System"
 	description "Take Quash to the unidentified system near Umbral."
-	autosave
 	source "Smuggler's Den"
 	destination "Orphan"
 	to offer
@@ -841,169 +865,3 @@ mission "Cartography: Midnight's Lost Orphan"
 				"Quarg Skylark" 4
 				"Quarg Wardragon" 4
 
-
-
-mission "Cartography: Pebble Beach"
-	landing
-	name "Celestial Compass"
-	description "Explore the new system revealed by inputting the Celestial Compass with the obsolete star map data."
-	source
-		near "Spica" 1 10
-	destination Detritus
-	to offer
-		has "celestial compass"
-	on offer
-		require "Celestial Compass"
-		conversation
-			scene "outfit/celestial compass"
-			`The Celestial Compass is highlighting an area of the map near the Spica system. Another hidden system is waiting to be explored!`
-				accept
-	on accept
-		event "reveal Pebble Beach"
-	on enter "Pebble Beach"
-		dialog `There is an alien construct orbiting the star. It resembles the constructs you have seen in the other hidden systems. But this one is damaged. There's a hole large enough for your ship to squeeze through...`
-
-event "reveal Pebble Beach"
-	system "Pebble Beach"
-		remove hidden
-
-mission "Cartography: Pebble Beach Link"
-	landing
-	invisible
-	source Detritus
-	on offer
-		conversation
-			`After some exploration, you find a device displaying a star map of the local area. From the graphical display, it looks like you can activate links to Gamma Corvi and Spica.`
-			choice
-				`	(Activate the link to Gamma Corvi.)`
-				`	(Activate the link to Spica.)`
-					goto Spica
-				`	(Do nothing.)`
-					defer
-			
-			`	You touch the icon representing Gamma Corvi. There is a low humming sound and the floor panels start to vibrate as distant machinery moves into place... A hyperspace link is forming! The Gamma Corvi system is now connected to this one.`
-			scene "scene/scene-engine2flip"
-			`Suddenly, sparks erupt from the device as it bursts into flames! Considering the condition this facility is in, it was amazing that any of the devices were working at all.`
-				decline
-			
-			label Spica
-			
-			`	You touch the icon representing Spica. There is a low humming sound and the floor panels start to vibrate as distant machinery moves into place... A hyperspace link is forming! The Spica system is now connected to this one.`
-			scene "scene/scene-engine2flip"
-			`Suddenly, sparks erupt from the device as it bursts into flames! Considering the condition this facility is in, it was amazing that any of the devices were working at all.`
-				accept
-				
-	on decline
-		event "link Pebble Beach to Gamma Corvi"
-	
-	on accept
-		event "link Pebble Beach to Spica"
-		fail
-
-event "link Pebble Beach to Gamma Corvi"
-	link "Pebble Beach" "Gamma Corvi"
-
-event "link Pebble Beach to Spica"
-	link "Pebble Beach" "Spica"
-
-
-
-mission "Cartography: Mining Pebble Beach"
-	landing
-	invisible
-	to offer
-		or
-			has "event: link Pebble Beach to Gamma Corvi"
-			has "event: link Pebble Beach to Spica"
-	on offer
-		event "Mining Pebble Beach"
-		fail
-
-event "Mining Pebble Beach"
-	system "Pebble Beach"
-		add fleet "Human Miners" 3200
-		add fleet "Small Free Worlds" 4000
-		add fleet "Large Free Worlds" 4800
-
-mission "Cartography: Mining Pebble Beach 2"
-	landing
-	invisible
-	to offer
-		has "event: Mining Pebble Beach"
-	on offer
-		event "Mining Pebble Beach 2" 90
-		event "Mining Pebble Beach 3" 180
-		fail
-
-event "Mining Pebble Beach 2"
-	system "Pebble Beach"
-		remove minables copper
-		remove minables silver
-		remove minables gold
-		remove minables platinum
-		add minables uranium 3 4
-		add minables tungsten 6 3
-		add minables neodymium 12 2
-		add minables titanium 24 1
-		remove fleet "Human Miners" 3200
-		remove fleet "Small Free Worlds" 4000
-		remove fleet "Large Free Worlds" 4800
-		add fleet "Human Miners" 6400
-		add fleet "Small Free Worlds" 8000
-		add fleet "Large Free Worlds" 9600
-
-event "Mining Pebble Beach 3"
-		remove minables uranium
-		remove minables tungsten
-		remove minables neodymium
-		remove minables titanium
-		add minables titanium 3 4
-		add minables aluminum 6 3
-		add minables iron 12 2
-		add minables lead 24 1
-		remove fleet "Human Miners" 6400
-		remove fleet "Small Free Worlds" 8000
-		remove fleet "Large Free Worlds" 9600
-		add fleet "Human Miners" 12800
-		add fleet "Small Free Worlds" 16000
-		add fleet "Large Free Worlds" 19200
-
-
-mission "Cartography: Unukalhai"
-	landing
-	invisible
-	source
-		near "Unukalhai" 1 10
-	to offer
-		has "celestial compass"
-	on offer
-		require "Celestial Compass"
-		conversation
-			scene "outfit/celestial compass"
-			`The Celestial Compass is highlighting the Unukalhai system. According to the compiled data, it was once located farther north than its current position.`
-				decline
-
-
-mission "Cartography: Aya'arak"
-	landing
-	invisible
-	source
-		near "Lesath" 1 10
-	destination "Season's End"
-	to offer
-		has "celestial compass"
-		has "Wanderers: Translation Machine: done"
-	on offer
-		require "Celestial Compass"
-		conversation
-			scene "outfit/celestial compass"
-			`The Celestial Compass is highlighting an area of the map near the Lesath system. Another hidden system is waiting to be explored!`
-				accept
-	on accept
-		event "reveal Aya'arak"
-	on enter "Aya'arak"
-		dialog `There is a space station orbiting the second planet. It might be worth checking out.`
-
-event "reveal Aya'arak"
-	system "Aya'arak"
-		remove hidden

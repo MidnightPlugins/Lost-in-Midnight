@@ -131,6 +131,7 @@ mission "QKBlade: Quantum Key Blade 1"
 	description "Go to <planet> in the <system> system and meet with the council of elders to discuss a recent incident involving the Unfettered."
 	source
 		government "Hai"
+		not planet "Darkwaste"
 	destination
 		planet "Hai-home"
 	to offer
@@ -455,6 +456,7 @@ mission "QKBlade: Bearer of The Blade 2"
 	invisible
 	source
 		government "Hai"
+		not planet "Darkwaste"
 	to offer
 		has "event: stolen Quantum Key Blade timer"
 	on offer
@@ -516,6 +518,7 @@ mission "QKBlade: Bearer of The Blade 3A"
 	repeat
 	source
 		government "Hai" "Hai (Unfettered)"
+		not planet "Darkwaste"
 	to offer
 		has "event: stolen Quantum Key Blade timer"
 		random < 17
@@ -549,6 +552,7 @@ mission "QKBlade: Bearer of The Blade 3B"
 	repeat
 	source
 		government "Hai" "Hai (Unfettered)"
+		not planet "Darkwaste"
 	to offer
 		has "event: stolen Quantum Key Blade timer"
 		random < 17
@@ -582,6 +586,7 @@ mission "QKBlade: Bearer of The Blade 3C"
 	repeat
 	source
 		government "Hai" "Hai (Unfettered)"
+		not planet "Darkwaste"
 	to offer
 		has "event: stolen Quantum Key Blade timer"
 		random < 17

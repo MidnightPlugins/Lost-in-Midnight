@@ -11,6 +11,38 @@
 
 
 
+ship "Lightning Bug" "Lightning Bug (Jump)"
+	outfits
+		"Ion Cannon"
+		"Bullfrog Anti-Missile" 2
+		"Geode Reactor"
+		"Hai Gorge Batteries"
+		"Hai Corundum Regenerator"
+		"Hai Williwaw Cooling"
+		"Quantum Keystone"
+		`"Benga" Atomic Thruster`
+		`"Biroo" Atomic Steering`
+		"Jump Drive"
+
+
+
+ship "Lightning Bug" "Lightning Bug (Jump, Pulse)"
+	outfits
+		"Hai Tracker Pod"
+		"Hai Tracker" 56
+		"Pulse Turret" 2
+		"Geode Reactor"
+		"Hai Gorge Batteries"
+		"Hai Corundum Regenerator"
+		"Dual Pulse Pistols"
+		"Pulse Rifle" 2
+		`"Biroo" Atomic Thruster`
+		`"Benga" Atomic Steering`
+		"Hyperdrive"
+
+
+
+
 ship "Shield Beetle" "Shield Beetle (Jump, Pulse)"
 	outfits
 		"Ion Cannon" 2
@@ -34,6 +66,56 @@ ship "Shield Beetle" "Shield Beetle (Jump, Pulse)"
 	gun "Pulse Cannon"
 	gun "Pulse Cannon"
 	gun "Pulse Cannon"
+
+
+
+ship "Solifuge" "Solifuge Prototype"
+	sprite "ship/hai solifuge prototype"
+	thumbnail "thumbnail/hai solifuge prototype-thumb"
+	add attributes
+		"bunks" 20
+		"cargo space" -15
+		"weapon capacity" 16
+		"engine capacity" -16
+	outfits
+		"Ion Cannon" 2
+		"Pulse Cannon" 3
+		"Pulse Turret" 5
+		"Bullfrog Anti-Missile" 2
+		"Boulder Reactor" 2
+		"Hai Fissure Batteries"
+		"Hai Corundum Regenerator"
+		"Hai Diamond Regenerator"
+		"Hai Williwaw Cooling" 8
+		"Dual Pulse Pistols"		
+		"Pulse Rifle" 71
+		`"Bufaer" Atomic Steering`
+		`"Bondir" Atomic Thruster`
+		"Jump Drive"
+			
+	engine -32.5 137.5
+	engine 34.5 137.5
+	gun 0 -140.5 "Pulse Cannon"
+	gun -12 -139 "Pulse Cannon"
+	gun 10.5 -139 "Pulse Cannon"
+	gun -10 -100 "Ion Cannon"
+	gun 8.5 -100 "Ion Cannon"
+	turret 0 -112 "Pulse Turret"
+	turret -54.5 -50 "Pulse Turret"
+	turret 55 -50 "Bullfrog Anti-Missile"
+	turret -55 0 "Pulse Turret"
+	turret 55 0 "Pulse Turret"
+	turret -54 48 "Bullfrog Anti-Missile"
+	turret 55 48 "Pulse Turret"
+	bay "Fighter" -51.5 -60 under
+	bay "Fighter" 51.5 -60 under
+	bay "Fighter" -51.5 0 under
+	bay "Fighter" 51.5 0 under
+	bay "Fighter" -51.5 60 under
+	bay "Fighter" 51.5 60 under
+
+	description `This is the prototype. There are slight differences from the final production model, but the essential core elements of the Solifuge haven't changed.`
+
 
 
 

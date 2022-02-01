@@ -863,6 +863,8 @@ mission "Storm Seeker Epilogue: Season's End"
 	repeat
 	to offer
 		has "Storm Seeker Epilogue: Tsunami: done"
-		random < 30 - ( 3 * "Storm Seeker Epilogue: Season's End: done" )		
+		random < 30 - ( 3 * "Storm Seeker Epilogue: Season's End: failed" )		
 	on offer
 		dialog `After several hours of searching, you fail to find any ship that's salvageable. While you might have overlooked a Shallow Pond or Spring Leaf, you have no doubt that you've checked all the larger derelicts and confirmed that there's nothing left but piles of useless scrap.`
+	on accept
+		fail

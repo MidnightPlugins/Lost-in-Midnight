@@ -513,6 +513,7 @@ mission "Pot-o'-honey"
 	description "The captain of the Pot-o'-honey will pay you <payment> to escort them safely into a dangerous region of space to reach <destination>."
 	source
 		government "Hai"
+		not planet "Darkwaste"
 	destination "Farpoint"
 	to offer
 #		random < 60
@@ -547,7 +548,7 @@ mission "Pot-o'-honey"
 		personality waiting staying harvests plunders nemesis
 			confusion 20
 		fleet
-			names "Pirate"
+			names "pirate"
 			variant
 				"Headhunter (Hai)"
 				"Bounder (Hai)"

@@ -40,7 +40,7 @@ person "Gray Eye"
 
 person "Old Crusty"
 	government "Indigenous Lifeform"
-	frequency 100
+	frequency 10000
 	personality
 		timid uninterested mining harvests mute unconstrained
 	ship "Elder Astero Nautilus" "Old Crusty"
@@ -125,11 +125,11 @@ person "Silent Observer"
 	frequency 100
 	personality surveillance opportunistic mute
 	ship "Star Gazer" "Silent Observer"
-	
+
 
 
 person "Black Wings"
-	government "Independant"
+	government "Independent"
 	system
 		attributes "deep" "ember waste"
 	frequency 100

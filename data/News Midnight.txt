@@ -11,111 +11,6 @@
 
 
 
-news "House Unuk Cookies"
-	to show
-		or
-			not "QKBlade: Quantum Key Blade 3: offered"
-			has "event: House Unuk Recovery timer"
-	location
-		planet "Flood"
-	name
-		word
-			"Tourist"
-			"Cafe Waitress"
-	message
-		word
-			`"`
-		word
-			"This may sound odd, but the acorn cookies from House Unuk are the best cookies I've ever eaten."
-			"If you haven't tasted the acorn cookies from House Unuk, you're missing out!"
-			"I remember being skeptical when I first heard about the acorn cookies from House Unuk, but after getting a taste I was hooked!"
-		word
-			`"`
-
-news "Oathbreaker Southern Activity"
-	to show
-		has "event: Oathbreaker reveal"
-		not "event: Oathbreaker diminish 2"
-	location
-		government "Free Worlds"
-		not attributes "uninhabited"
-	name
-		word
-			"Journalist"
-			"Militia Pilot"
-			"Spaceport Worker"
-	message
-		word
-			`"`
-		word
-			"The Oathbreakers recently tried a blockade on our planet. Thank goodness the Militia was able to drive them away!"
-			"The price of household supplies has skyrocketed based on rumors that the Oathbreakers are planning a siege on this planet."
-			"I've heard that the Oathbreakers are stealing war ships to add to their fleet. They're as bad as the pirates!"
-		word
-			`"`
-
-news "Oathbreaker Navy Disposition"
-	to show
-		has "event: Oathbreaker reveal"
-		not "event: Oathbreaker diminish 2"
-	location
-		government "Republic"
-		not attributes "uninhabited"
-	name
-		word
-			"Navy Pilot"
-			"Navy Officer"
-			"Navy Oathkeeper"
-	message
-		word
-			`"`
-		word
-			"I know what Captain Benedict is doing is wrong, but I understand his grief. I also lost someone close to me in the war."
-			"I was once on patrol duty with Captain Benedict in the North. His pirate interrogations were as brutal as the rumors say. I'm certain he knows more about the  secret machinations of the various northern pirate factions than most pirate raiders do."
-			"Captain Benedict was a good officer. I can't believe that person on the video is the same man."			
-		word
-			`"`
-
-news "Hackerz"
-	to show
-		has "Hackerz 1: declined"
-	location
-		government "Republic" "Syndicate" "Free Worlds"
-		not attributes "uninhabited"
-	name
-		word
-			"Street Vendor"
-			"Gift Shop Clerk"
-	message
-		word
-			`"`
-		word
-			"Need extra cash? Buy a copy of 'How to Hack a Science Drone For Fun and Profit' and watch the credits roll in!"
-			"Just took the top spot on last month's best selling books list! Get your copy of 'How to Hack a Science Drone For Fun and Profit' today!"
-		word
-			`"`
-
-news "Grave Digger Pirate Gossip"
-	to show
-		has "Grave Digger: Stolen Kestrel: declined"
-		not "event: Gravedigger defeated"
-	location
-		government "Pirate" "Neutral" "Independent"
-		not attributes "uninhabited"
-	name
-		word
-			"Pirate"
-			"Smuggler"
-	message
-		word
-			`"`
-		word
-			"Somehow, the Grave Digger always manages to have the best illegal tech for sale."
-			"I once knew a guy who tried cheating the captain of the Grave Digger on a sale of stolen weapons. He's no longer around to try cheating anyone else."
-			"The Grave Digger is quite possibly the scariest pirate ship in the galaxy. It's a wonder Tarazed didn't keep it under tighter security."
-		word
-			`"`
-
 news "Archipelago Pirate Politics"
 	location
 		planet "Janus"
@@ -206,6 +101,155 @@ news "Archipelago Vesta Miners"
 		word
 			`"`
 
+news "Grave Digger Pirate Gossip"
+	to show
+		has "Grave Digger: Stolen Kestrel: declined"
+		not "event: Gravedigger defeated"
+	location
+		government "Pirate" "Neutral" "Independent"
+		not attributes "uninhabited"
+	name
+		word
+			"Pirate"
+			"Smuggler"
+	message
+		word
+			`"`
+		word
+			"Somehow, the Grave Digger always manages to have the best illegal tech for sale."
+			"I once knew a guy who tried cheating the captain of the Grave Digger on a sale of stolen weapons. He's no longer around to try cheating anyone else."
+			"The Grave Digger is quite possibly the scariest pirate ship in the galaxy. It's a wonder Tarazed didn't keep it under tighter security."
+		word
+			`"`
+
+news "Hackerz"
+	to show
+		has "Hackerz 1: declined"
+	location
+		government "Republic" "Syndicate" "Free Worlds"
+		not attributes "uninhabited"
+	name
+		word
+			"Street Vendor"
+			"Gift Shop Clerk"
+	message
+		word
+			`"`
+		word
+			"Need extra cash? Buy a copy of 'How to Hack a Science Drone For Fun and Profit' and watch the credits roll in!"
+			"Just took the top spot on last month's best selling books list! Get your copy of 'How to Hack a Science Drone For Fun and Profit' today!"
+		word
+			`"`
+
+news "House Unuk Cookies"
+	to show
+		or
+			not "QKBlade: Quantum Key Blade 3: offered"
+			has "event: House Unuk Recovery timer"
+	location
+		planet "Flood"
+	name
+		word
+			"Tourist"
+			"Cafe Waitress"
+	message
+		word
+			`"`
+		word
+			"This may sound odd, but the acorn cookies from House Unuk are the best cookies I've ever eaten."
+			"If you haven't tasted the acorn cookies from House Unuk, you're missing out!"
+			"I remember being skeptical when I first heard about the acorn cookies from House Unuk, but after getting a taste I was hooked!"
+		word
+			`"`
+
+news "Journey to the Southwest"
+	to show
+		has "Angry Squirrels: The Monkey King: offered"
+	location
+		government "Hai" "Hai (Unfettered)"
+		not planet "Darkwaste"
+	name
+		word
+			"Hai Youth"
+	message
+		word
+			`"`
+		word
+			"Journey to the Southwest is "
+		word
+			"awesome! "
+			"amazing! "
+		word
+			"I loved the part where "
+		word
+			"the Monkey King conquered the capitals of the three corrupt kingdoms!"
+			"they reached the Ancestral Lands!"
+			"they discovered the Floating Palace!"
+			"they outwitted the greedy merchants!"
+			"they fought the pirate lords!"
+		word
+			`"`
+
+news "Lares Wildlife"
+	location
+		planet "Lares"
+	name
+		word
+			"Nocturnal Creatures"
+			"Woodland Creatures"
+			"Local Wildlife"
+	message
+		word
+			"Some nearby bushes rustle with activity. You're not sure what sort of creature is causing the movement."
+			"An animal howls in the distance. You're not sure if it's a cry for help or a mating call."
+			"You feel like you're being watched."
+			"You are startled by the sound of sudden movement in the branches above. When you look up, all you see are some falling leaves."
+			"It was only for a moment that you set your bag down. When you pick it back up, a side pouch is open and some of your rations have gone missing..."
+
+news "Oathbreaker Southern Activity"
+	to show
+		has "event: Oathbreaker reveal"
+		not "event: Oathbreaker diminish 2"
+	location
+		government "Free Worlds"
+		not attributes "uninhabited"
+	name
+		word
+			"Journalist"
+			"Militia Pilot"
+			"Spaceport Worker"
+	message
+		word
+			`"`
+		word
+			"The Oathbreakers recently tried a blockade on our planet. Thank goodness the Militia was able to drive them away!"
+			"The price of household supplies has skyrocketed based on rumors that the Oathbreakers are planning a siege on this planet."
+			"I've heard that the Oathbreakers are stealing war ships to add to their fleet. They're as bad as the pirates!"
+		word
+			`"`
+
+news "Oathbreaker Navy Disposition"
+	to show
+		has "event: Oathbreaker reveal"
+		not "event: Oathbreaker diminish 2"
+	location
+		government "Republic"
+		not attributes "uninhabited"
+	name
+		word
+			"Navy Pilot"
+			"Navy Officer"
+			"Navy Oathkeeper"
+	message
+		word
+			`"`
+		word
+			"I know what Captain Benedict is doing is wrong, but I understand his grief. I also lost someone close to me in the war."
+			"I was once on patrol duty with Captain Benedict in the North. His pirate interrogations were as brutal as the rumors say. I'm certain he knows more about the  secret machinations of the various northern pirate factions than most pirate raiders do."
+			"Captain Benedict was a good officer. I can't believe that person on the video is the same man."			
+		word
+			`"`
+
 news "Rum fight"
 	location
 		planet "Rum Cellar"
@@ -275,23 +319,9 @@ news "Wang Xiang Tai"
 			"Ugh. I was supposed to attend a meeting down on Naihe Qiao, but I got lost in the tunnels!"
 		word
 			`"`
-			
-news "Lares Wildlife"
-	location
-		planet "Lares"
-	name
-		word
-			"Nocturnal Creatures"
-			"Woodland Creatures"
-			"Local Wildlife"
-	message
-		word
-			"Some nearby bushes rustle with activity. You're not sure what sort of creature is causing the movement."
-			"An animal howls in the distance. You're not sure if it's a cry for help or a mating call."
-			"You feel like you're being watched."
-			"You are startled by the sound of sudden movement in the branches above. When you look up, all you see are some falling leaves."
-			"It was only for a moment that you set your bag down. When you pick it back up, a side pouch is open and some of your rations have gone missing..."
 
+
+			
 news "Ionic Leech"
 	to show
 		has "First Contact: Ionic Leech: done"
@@ -310,26 +340,6 @@ news "Ionic Leech"
 		word
 			`"`
 	
-
-news "Nova Firefly"
-	to show
-		has "event: Nova Firefly Invasion"
-	location
-		attributes "dirt belt"
-	name
-		word
-			"Starship Captain"
-			"Merchant"
-			"Cargo Pilot"
-	message
-		word
-			`"`
-		word
-			"Some fire breathing monsters attacked my ship out near Terminus! I made it through okay, but my refrigerated cargo did not."
-		word
-			`"`
-
-
 
 news "Astero Nautilus"
 	to show
@@ -362,3 +372,26 @@ news "Rock Scavenger Meat"
 			"Rock Scavenger? Absolutely disgusting. People only eat it because its trendy and hip. I'm sticking with lobster."
 		word
 			`"`
+
+
+
+news "Nova Firefly"
+	to show
+		has "event: Nova Firefly Invasion"
+	location
+		attributes "dirt belt"
+	name
+		word
+			"Starship Captain"
+			"Merchant"
+			"Cargo Pilot"
+	message
+		word
+			`"`
+		word
+			"Some fire breathing monsters attacked my ship out near Terminus! I made it through okay, but my refrigerated cargo did not."
+		word
+			`"`
+
+
+

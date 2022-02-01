@@ -25,7 +25,7 @@ mission "Midnight Lost Orphan: Abandoned Halcyon"
 	on offer
 		require "Midnight's Lost Orphan" 1
 		conversation
-			scene "scene/scene-carabao"
+			scene "thumbnail/carabao-thumb"
 			`You find an abandoned city ship parked on the surface. It looks familiar, but you can't quite remember why. The ship is in very good condition and is outfitted with a variety of alien weapons.`
 			choice
 				`	(Take the ship.)`
@@ -195,6 +195,7 @@ mission "Midnight Lost Orphan: Hai Atrocity"
 	invisible
 	source
 		government "Hai"
+		not planet "Darkwaste"
 		not attributes "uninhabited"
 	to offer
 		random < ( 9 + "captain of atrocity" )

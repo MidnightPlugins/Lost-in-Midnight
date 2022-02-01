@@ -127,16 +127,16 @@ outfit "Alien Torture Device"
 
 outfit "Anti-Ionic Plating"
 	category "Systems"
-	thumbnail "outfit/anti-ionic hull"
+	thumbnail "outfit/anti-ionic plating"
 	cost 1000000
-	"mass" 24
-	"outfit space" -24
+	"mass" 6
+	"outfit space" -6
 	"ion resistance" 1
 	"ion protection" 3
-	"integrated systems" 1
+	"reinstall" -1
 	"unplunderable" 1
 	description `The result of Wanderer research into the nature of ionic damage, resistance, and protection.`
-	description `It is integrated into the hull of the test model Storm Seeker and cannot be removed.`
+	description `WARNING: This is integrated into the hull of the test model Storm Seeker and cannot be removed without damaging it. If uninstalled it cannot be reinstalled.`
 
 
 
@@ -263,8 +263,9 @@ outfit "Cloaking Device (Damaged)"
 	"cloaking energy" 1.3
 	"cloaking fuel" .25
 	"unplunderable" 1
-	"fused circuits" 1
+	"reinstall" -1
 	description "You're sure the cloaking device is here somewhere, but you can't see it."
+	description "WARNING: This was damaged in a previous battle and cannot be removed without damaging it further. If uninstalled it cannot be reinstalled."
 
 
 
