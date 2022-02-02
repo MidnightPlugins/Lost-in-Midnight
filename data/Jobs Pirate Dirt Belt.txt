@@ -576,8 +576,7 @@ mission "Lares Camping (Scavenger)"
 mission "New China Supplies to Diyu"
 	job
 	repeat
-	deadline
-	deadline 2
+	deadline 8
 	name "New China Supply Run"
 	description "Pickup <cargo> from <stopovers> and deliver them to <origin> by <date>. Payment is <payment>. Do not let law enforcement follow you."
 	source "Wang Xiang Tai"
