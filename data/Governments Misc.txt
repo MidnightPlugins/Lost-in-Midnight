@@ -188,6 +188,8 @@ government "Invasive Lifeform"
 government "Invasive Lifeform (Passive)"
 	"display name" "Invasive Lifeform"
 	"player reputation" 1
+	"attitude toward"
+		"Invasive Lifeform" .04
 	"bribe" 0
 	"fine" 0
 	"penalty for"

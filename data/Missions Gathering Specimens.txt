@@ -22,7 +22,7 @@ mission "Gathering Specimens: Gray Eye"
 			has "Gathering Specimens: Conservatory: offered"
 			has "Gathering Specimens: Remnant: offered"
 	npc board
-		government "Indigenous Lifeform (Hostile)"
+		government "Indigenous Lifeform"
 		system "Kor Ak'Mari"
 		personality waiting staying uninterested mute marked
 		ship "Gray Eye Specimen"
@@ -65,12 +65,12 @@ mission "Gathering Specimens: Luminazoa"
 			has "Gathering Specimens: Conservatory: offered"
 			has "Gathering Specimens: Remnant: offered"
 	npc
-		government "Indigenous Lifeform (Hostile)"
+		government "Indigenous Lifeform"
 		system "Kalsolli"
 		personality waiting staying mining harvests unconstrained mute
 		fleet "Luminazoa" 5
 	npc board
-		government "Indigenous Lifeform (Hostile)"
+		government "Indigenous Lifeform"
 		system "Kalsolli"
 		personality waiting staying uninterested mute marked
 		ship "Luminazoa Specimen"

@@ -43,7 +43,10 @@ ship "Nova Firefly"
 		"inscrutable" 1
 		"gaslining" 1
 		"jump drive" 1
-		"jump speed" .2
+		"jump speed" 1
+		"jump effect" "flamethrower die"
+		"jump in sound" "flamethrower"
+		"jump out sound" "flamethrower"
 		"ramscoop" 2
 		"solar collection" 2
 		weapon
@@ -259,6 +262,9 @@ ship "Star Gazer"
 		"gaslining" 1
 		"jump drive" 1
 		"jump speed" .2
+		"jump effect" "jump drive sg"
+		"jump in sound" "hyperdrive out"
+		"jump out sound" "hyperdrive in"
 		"ramscoop" 1
 		"outfit scan power" 32
 		"outfit scan speed" 4
@@ -281,6 +287,13 @@ ship "Star Gazer"
 	"final explode" "blood"
 	description "An invasive species from beyond our galaxy. While not particularly aggressive, they can be dangerous if provoked. Their bodies generate replacement quills quickly, allowing them to maintain a constant stream of fire. These projectiles are made of a material that evades detection by anti-missile systems."
 
+effect "jump drive sg"
+	sprite "effect/jump drive sg"
+		"no repeat"
+		"frame rate" 12
+	"lifetime" 10
+	"random angle" 180
+	"velocity scale" 0.
 
 
 outfit "Quill Launcher?"

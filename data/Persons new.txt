@@ -15,17 +15,27 @@ person "Lure"
 	government "Indigenous Lifeform"
 	frequency 100
 	personality
-		timid mute uninterested unconstrained surveillance
+		timid mute uninterested unconstrained
 	ship "Luminazoa" "Lure"
+		"never disabled"
 	ship "Ionic Leech" "Migrating Swarm"
+		"never disabled"
 	ship "Ionic Leech" "Migrating Swarm"
+		"never disabled"
 	ship "Ionic Leech" "Migrating Swarm"
+		"never disabled"
 	ship "Ionic Leech" "Migrating Swarm"
+		"never disabled"
 	ship "Ionic Leech" "Migrating Swarm"
+		"never disabled"
 	ship "Ionic Leech" "Migrating Swarm"
+		"never disabled"
 	ship "Ionic Leech" "Migrating Swarm"
+		"never disabled"
 	ship "Ionic Leech" "Migrating Swarm"
+		"never disabled"
 	ship "Ionic Leech" "Migrating Swarm"
+		"never disabled"
 
 
 
@@ -35,6 +45,7 @@ person "Gray Eye"
 	personality
 		timid uninterested mining harvests mute unconstrained
 	ship "Gray Eye" "Gray Eye"
+		"never disabled"
 
 
 
@@ -44,6 +55,7 @@ person "Old Crusty"
 	personality
 		timid uninterested mining harvests mute unconstrained
 	ship "Elder Astero Nautilus" "Old Crusty"
+		"never disabled"
 
 ship "Astero Nautilus" "Elder Astero Nautilus"
 	noun "creature"
@@ -65,6 +77,7 @@ person "Night Light"
 	personality
 		swarming harvests mute unconstrained
 	ship "Plasma Parasite (Large)" "Night Light"
+		"never disabled"
 
 
 
@@ -74,29 +87,53 @@ person "Sea of Stars"
 	personality
 		swarming harvests mute unconstrained
 	ship "Plasma Parasite" "Sea of Stars"
+		"never disabled"
 	ship "Plasma Parasite" "Sea of Stars"
+		"never disabled"
 	ship "Plasma Parasite" "Sea of Stars"
+		"never disabled"
 	ship "Plasma Parasite" "Sea of Stars"
+		"never disabled"
 	ship "Plasma Parasite" "Sea of Stars"
+		"never disabled"
 	ship "Plasma Parasite" "Sea of Stars"
+		"never disabled"
 	ship "Plasma Parasite" "Sea of Stars"
+		"never disabled"
 	ship "Plasma Parasite" "Sea of Stars"
+		"never disabled"
 	ship "Plasma Parasite" "Sea of Stars"
+		"never disabled"
 	ship "Plasma Parasite" "Sea of Stars"
+		"never disabled"
 	ship "Plasma Parasite" "Sea of Stars"
+		"never disabled"
 	ship "Plasma Parasite" "Sea of Stars"
+		"never disabled"
 	ship "Plasma Parasite" "Sea of Stars"
+		"never disabled"
 	ship "Plasma Parasite" "Sea of Stars"
+		"never disabled"
 	ship "Plasma Parasite" "Sea of Stars"
+		"never disabled"
 	ship "Plasma Parasite" "Sea of Stars"
+		"never disabled"
 	ship "Plasma Parasite" "Sea of Stars"
+		"never disabled"
 	ship "Plasma Parasite" "Sea of Stars"
+		"never disabled"
 	ship "Plasma Parasite" "Sea of Stars"
+		"never disabled"
 	ship "Plasma Parasite" "Sea of Stars"
+		"never disabled"
 	ship "Plasma Parasite" "Sea of Stars"
+		"never disabled"
 	ship "Plasma Parasite" "Sea of Stars"
+		"never disabled"
 	ship "Plasma Parasite" "Sea of Stars"
+		"never disabled"
 	ship "Plasma Parasite" "Sea of Stars"
+		"never disabled"
 
 
 
@@ -105,10 +142,11 @@ person "Serial No. 0000013"
 	frequency 100
 	personality
 		timid uninterested mining harvests unconstrained
-	ship "Rock Scavenger" "Serial No. 0000013"
 	phrase
 		word
 			"A device implanted on the creature is sending out a message: Prop_rty of Rock Scavenger Farms Inc. If fo_nd in the wild, c_ntact our of_ice on Hope in the Wei s_stem."
+	ship "Rock Scavenger" "Serial No. 0000013"
+		"never disabled"
 
 
 
@@ -117,6 +155,7 @@ person "Midnight Candle"
 	frequency 100
 	personality disables mining harvests unconstrained mute
 	ship "Nova Firefly" "Midnight Candle"
+		"never disabled"
 
 
 
@@ -125,6 +164,7 @@ person "Silent Observer"
 	frequency 100
 	personality surveillance opportunistic mute
 	ship "Star Gazer" "Silent Observer"
+		"never disabled"
 
 
 
@@ -182,13 +222,13 @@ person "El Niño"
 	system
 		government "Wanderer"
 	personality vindictive coward
-	ship "God of Thunder" "El Niño"
 	phrase
 		word
 			"Feel the storm? It's coming!"
 			"Fear the thunder!"
 			"I am the storm!"
 			"I am the lightning chaser!"
+	ship "God of Thunder" "El Niño"
 
 ship "Thunder Maker" "God of Thunder"
 	sprite "ship/god of thunder"
@@ -217,11 +257,6 @@ person "Poltergeist King"
 		government "Syndicate" "Republic" "Free Worlds" "Pirate"
 	personality timid mining harvests plunders uninterested
 		confusion 60
-	ship "Hacker Drone" "Poltergeist King"
-	ship "Mule Test Dummy" "Syndicate Test Vessel"
-	ship "Hauler Test Dummy" "S_ndic_te Tes_ Ve_s_l"
-	ship "Freighter Test Dummy" "Syn_i_ate Te_t _es_el"
-	ship "Argosy Test Dummy" "Synd_c_te T_st Ve_se_"
 	phrase
 		word
 			"Warning: the target ship is programmed to engage in self-defense behaviors to ensure a realistic simulation."
@@ -234,6 +269,11 @@ person "Poltergeist King"
 			"disa_le or scan the t_rget dum_y ship"
 			"_ocate it and make deta_led s_ans of its ca_go"
 			"proce_d t_ere for p_yment af_er ret_ieving the data."
+	ship "Hacker Drone" "Poltergeist King"
+	ship "Mule Test Dummy" "Syndicate Test Vessel"
+	ship "Hauler Test Dummy" "S_ndic_te Tes_ Ve_s_l"
+	ship "Freighter Test Dummy" "Syn_i_ate Te_t _es_el"
+	ship "Argosy Test Dummy" "Synd_c_te T_st Ve_se_"
 
 
 

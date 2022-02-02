@@ -298,23 +298,19 @@ outfit "Cryo Chamber"
 
 
 outfitter "Genesis"
-	"Laser"
 	"Anti-Missile"
 	"Gat"
 	"Bullet Boxes"
 	"Gatling Gun Ammo"
 	"Small Photovoltaic"
 	"Tiny Fuel Cell"
-	"Radiothermal"
 	"Thermionic"
-	"Fusion"
+	"Radiothermal"
 	"Tiny Battery"
 	"Small Battery"
-	"Medium Battery"
-	"Cryostasis Pod"
 	"Fuel Pod"
 	"Scanner"
-	"Luxury Accommodations"		
+	"Luxury Accommodations"
 	"Afterburner"
 	"Engines"
 
@@ -723,6 +719,8 @@ event "Genesis Colony"
 				offset 196.692
 	planet "The Garden"
 		spaceport `The Childen of The Garden have constructed a simple spaceport, with runways, landing/launching pads, and hangars. Though they haven't devloped a Hyperdrive, they still use hyperspace fuel in their engines and are able to refuel your ship.`
+		add description `They have set up an outfitter. Many of the outfits are similar to equivalents you can find in human space.`
+		outfitter "Genesis"
 	planet "The Gate"
 		attributes midnight genesis
 		landscape land/earthrise
@@ -788,9 +786,7 @@ event "Genesis Cryoships" 1800
 				offset 196.692
 	planet "The Garden"
 		landscape land/nasa4
-		add description `They have set up an outfitter. Many of the outfits are similar to equivalents you can find in human space.`
 		spaceport `The Childen of The Garden have constructed a new spaceport, with larger landing/launching pads and facilities to handle their new Cryoships. Though they haven't devloped a Hyperdrive, they still use hyperspace fuel in their engines and are able to refuel your ship.`
-		outfitter "Genesis"
 	planet "The Gate"
 		landscape land/nasa2
 		description `The Childen of The Garden have developed this spacecolony into a thriving city.`
@@ -800,6 +796,11 @@ event "Genesis Cryoships" 1800
 		landscape land/sivael0
 		description `The Childen of The Garden have deployed this space station on the edge of their solar system to study conditions in deep space.`
 		"required reputation" 1
+	outfitter "Genesis"
+		add "Cryostasis Pod"
+		add "Laser"
+		add "Fusion"
+		add "Medium Battery"
 
 
 # Cryostasis Pod Missions
