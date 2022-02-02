@@ -40,7 +40,7 @@ person "Gray Eye"
 
 person "Old Crusty"
 	government "Indigenous Lifeform"
-	frequency 10000
+	frequency 100
 	personality
 		timid uninterested mining harvests mute unconstrained
 	ship "Elder Astero Nautilus" "Old Crusty"
@@ -176,6 +176,40 @@ ship "Blackbird" "Black Wing"
 
 
 
+person "El Niño"
+	government "Author"
+	frequency "1000"
+	system
+		government "Wanderer"
+	personality vindictive coward
+	ship "God of Thunder" "El Niño"
+	phrase
+		word
+			"Feel the storm? It's coming!"
+			"Fear the thunder!"
+			"I am the storm!"
+			"I am the lightning chaser!"
+
+ship "Thunder Maker" "God of Thunder"
+	sprite "ship/god of thunder"
+	add attributes
+		"self destruct" .4
+	outfits
+		"Thunderhead Launcher" 16
+		"Thunderhead Missile" 640
+		
+		"Blue Sun Reactor"
+		"White Sun Reactor"
+		"Dark Storm Shielding" 2
+		"Wanderer Heat Sink"
+		"Fuel Pod" 4
+		"Wanderer Ramscoop"
+		
+		"Type 4 Radiant Thruster"
+		"Type 4 Radiant Steering"
+		Hyperdrive
+
+
 person "Poltergeist King"
 	government "Author"
 	frequency 349
@@ -183,6 +217,11 @@ person "Poltergeist King"
 		government "Syndicate" "Republic" "Free Worlds" "Pirate"
 	personality timid mining harvests plunders uninterested
 		confusion 60
+	ship "Hacker Drone" "Poltergeist King"
+	ship "Mule Test Dummy" "Syndicate Test Vessel"
+	ship "Hauler Test Dummy" "S_ndic_te Tes_ Ve_s_l"
+	ship "Freighter Test Dummy" "Syn_i_ate Te_t _es_el"
+	ship "Argosy Test Dummy" "Synd_c_te T_st Ve_se_"
 	phrase
 		word
 			"Warning: the target ship is programmed to engage in self-defense behaviors to ensure a realistic simulation."
@@ -195,11 +234,6 @@ person "Poltergeist King"
 			"disa_le or scan the t_rget dum_y ship"
 			"_ocate it and make deta_led s_ans of its ca_go"
 			"proce_d t_ere for p_yment af_er ret_ieving the data."
-	ship "Hacker Drone" "Poltergeist King"
-	ship "Mule Test Dummy" "Syndicate Test Vessel"
-	ship "Hauler Test Dummy" "S_ndic_te Tes_ Ve_s_l"
-	ship "Freighter Test Dummy" "Syn_i_ate Te_t _es_el"
-	ship "Argosy Test Dummy" "Synd_c_te T_st Ve_se_"
 
 
 

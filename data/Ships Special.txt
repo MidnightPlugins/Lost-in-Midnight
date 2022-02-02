@@ -687,7 +687,7 @@ ship "Raptor Prototype"
 	turret 1.5 63
 	leak "remnant leak" 20 8
 	leak "remnant leak sparkle" 30 12
-	explode "medium explosion" 15
+	explode "blood" 15
 	explode "large explosion" 10
 	explode "huge explosion" 5
 	"final explode" "final explosion large" 1
@@ -1346,6 +1346,69 @@ ship "Deep River Rapids" "Deep River Pirate 4"
 
 
 
+ship "Thunder Maker"
+	sprite "ship/thunder maker"
+	thumbnail "thumbnail/thunder maker-thumb"
+	attributes
+		category "Heavy Warship"
+		licenses
+			"Wanderer Military"
+		"cost" 89100000
+		"shields" 142400
+		"hull" 86500
+		"automaton" 1
+		"mass" 1470
+		"drag" 14.9
+		"heat dissipation" 0.45
+		"fuel capacity" 0
+		"cargo space" 0
+		"outfit space" 976
+		"weapon capacity" 416
+		"engine capacity" 112
+		"self destruct" .6
+		weapon
+			"blast radius" 800
+			"shield damage" 8000
+			"hull damage" 4000
+			"hit force" 12000
+	outfits
+		"Thunderhead Launcher" 12
+		"Thunderhead Storage Array" 12
+		"Thunderhead Missile" 720
+		
+		"Blue Sun Reactor"
+		"White Sun Reactor"
+		"Dark Storm Shielding" 2
+		"Wanderer Heat Sink"
+		
+		"Type 1 Radiant Thruster"
+		"Type 4 Radiant Steering"
+
+	engine -30.5 98.5
+	engine 29.5 98.5
+	gun -137.5 -12 "Thunderhead Launcher"
+	gun -130.5 -12 "Thunderhead Launcher"
+	gun -14.5 -12
+	gun -7.5 -12 "Thunderhead Launcher"
+	gun 7.5 -12
+	gun 13 -12 "Thunderhead Launcher"
+	gun 129.5 -12 "Thunderhead Launcher"
+	gun 136 -12
+	gun -109 12 "Thunderhead Launcher"
+	gun -103 12 "Thunderhead Launcher"
+	gun -46 12
+	gun -39.5 12 "Thunderhead Launcher"
+	gun 37 12 "Thunderhead Launcher"
+	gun 43 12 "Thunderhead Launcher"
+	gun 100.5 12 "Thunderhead Launcher"
+	gun 107 12 "Thunderhead Launcher"
+	explode "small explosion" 40
+	explode "medium explosion" 160
+	explode "large explosion" 140
+	explode "huge explosion" 60
+	"final explode" "final explosion large" 1
+	description "An ancient Wanderer planetary defense system."
+
 
 
 # A War Hauler appears in Grudge Family missions.
@@ -1771,103 +1834,4 @@ ship "Thermopylae Station"
 
 
 
-ship "Thunder Maker"
-	sprite "ship/thunder maker"
-	attributes
-		category "Heavy Warship"
-		licenses
-			"Wanderer Military"
-		"cost" 89100000
-		"shields" 142400
-		"hull" 86500
-		"automaton" 1
-		"mass" 1470
-		"drag" 14.9
-		"heat dissipation" 0.45
-		"fuel capacity" 0
-		"cargo space" 0
-		"outfit space" 951
-		"weapon capacity" 416
-		"engine capacity" 59
-		"self destruct" 1
-		weapon
-			"blast radius" 800
-			"shield damage" 8000
-			"hull damage" 4000
-			"hit force" 12000
-	outfits
-		"Thunderhead Launcher" 12
-		"Thunderhead Storage Array" 12
-		"Thunderhead Missile" 720
-		
-		"Blue Sun Reactor"
-		"White Sun Reactor"
-		"Dark Storm Shielding" 2
-		"Wanderer Heat Sink"
-		"Wanderer Ramscoop"
-		
-		"Type 1 Radiant Thruster"
-		"Type 4 Radiant Steering"
 
-	engine -30.5 98.5
-	engine 29.5 98.5
-	gun -137.5 -12 "Thunderhead Launcher"
-	gun -130.5 -12 "Thunderhead Launcher"
-	gun -14.5 -12
-	gun -7.5 -12 "Thunderhead Launcher"
-	gun 7.5 -12
-	gun 13 -12 "Thunderhead Launcher"
-	gun 129.5 -12 "Thunderhead Launcher"
-	gun 136 -12
-	gun -109 12 "Thunderhead Launcher"
-	gun -103 12 "Thunderhead Launcher"
-	gun -46 12
-	gun -39.5 12 "Thunderhead Launcher"
-	gun 37 12 "Thunderhead Launcher"
-	gun 43 12 "Thunderhead Launcher"
-	gun 100.5 12 "Thunderhead Launcher"
-	gun 107 12 "Thunderhead Launcher"
-	explode "small explosion" 40
-	explode "medium explosion" 160
-	explode "large explosion" 140
-	explode "huge explosion" 60
-	"final explode" "final explosion large" 1
-	description "An ancient Wanderer planetary defense system."
-
-ship "Thunder Maker" "Thunder Maker B"
-	gun "Thunderhead Launcher"
-	gun "Thunderhead Launcher"
-	gun "Thunderhead Launcher"
-	gun "Thunderhead Launcher"
-	gun "Thunderhead Launcher"
-	gun "Thunderhead Launcher"
-	gun 
-	gun "Thunderhead Launcher"
-	gun 
-	gun 
-	gun "Thunderhead Launcher"
-	gun "Thunderhead Launcher"
-	gun 
-	gun "Thunderhead Launcher"
-	gun "Thunderhead Launcher"
-	gun "Thunderhead Launcher"
-	
-ship "Thunder Maker" "Thunder Maker C"
-	gun "Thunderhead Launcher"
-	gun "Thunderhead Launcher"
-	gun 
-	gun "Thunderhead Launcher"
-	gun "Thunderhead Launcher"
-	gun "Thunderhead Launcher"
-	gun "Thunderhead Launcher"
-	gun "Thunderhead Launcher"
-	gun 
-	gun "Thunderhead Launcher"
-	gun "Thunderhead Launcher"
-	gun 
-	gun "Thunderhead Launcher"
-	gun "Thunderhead Launcher"
-	gun "Thunderhead Launcher"
-	gun 
-	
-	
