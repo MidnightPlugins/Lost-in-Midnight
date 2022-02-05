@@ -206,7 +206,8 @@ government "Nemesis"
 	swizzle 6
 	"player reputation" -1000
 	"fine" 0
-
+	"crew attack" 1.5
+	"crew defense" 2.5
 	"hostile hail" "hostile nemesis"
 	"hostile disabled hail" "hostile disabled nemesis"
 

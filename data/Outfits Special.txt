@@ -11,7 +11,7 @@
 
 	
 # These special outfits cannot be purchased at outfitters, but most can be obtained via missions.
-
+# Exception: Ammunition and similar support outfits may be available at outfitters.
 
 
 # The Flare Belcher, Lightning Tendril, and Quill Launcher are installed on the Raptor.
@@ -62,7 +62,7 @@ outfit "Lightning Tendril"
 		"hardpoint offset" 6
 		sound "zapper"
 		"hit effect" "ion impact" 2
-		"inaccuracy" 3
+		"inaccuracy" 9
 		"turret turn" 1
 		"velocity" 320
 		"lifetime" 1
@@ -140,7 +140,6 @@ outfit "Anti-Ionic Plating"
 
 
 
-
 # The Asteroid Catapult is installed on Thermopylae Station
 # One can be acquired after completing some mission chains
 
@@ -163,6 +162,7 @@ outfit "Metallic Asteroid"
 	category "Ammunition"
 	cost 3000
 	thumbnail "outfit/metallic asteroid"
+	"flotsam sprite" "effect/flotsam metallic asteroid"
 	"mass" 10
 	"asteroid capacity" -1
 	description `The most difficult part of operating an Asteroid Catapult is locating ammunition with the right size, shape, density, and magnetic properties.`
@@ -314,6 +314,22 @@ outfit "Leviathan Comic #1"
 	"unplunderable" 1
 	description "The first issue of Drugub's comic book inspired by human ship designs. The art looks good, but you can't read Arach."
 	description "After a decade, this has become a rare collector's item."
+
+
+
+# Liquid Metal Hull is installed on the Mythreal.
+
+outfit "Liquid Metal Hull"
+	category "Systems"
+	thumbnail "outfit/liquid metal hull"
+	cost 1000000
+	"mass" 6
+	"outfit space" -6
+	"hull repair rate" 100
+	"reinstall" -1
+	"unplunderable" 1
+	description `Made with Korath nanomachine technology. It's ability to regenerate the hull is unparalleld.`
+	description `WARNING: This is integrated into the hull of the test model Amalgam and cannot be removed without damaging it. If uninstalled it cannot be reinstalled.`
 
 
 
@@ -477,6 +493,7 @@ outfit "Quantum Tiger Blade"
 	"illegal" 250000
 	"required crew" 1
 	"unplunderable" 1
+
 
 
 

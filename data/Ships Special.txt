@@ -14,6 +14,132 @@
 # Contents: The below ships are not sold in shipyards, but most can be captured or are received as mission rewards.
 
 
+ship "Veliante'exis"
+	sprite ship/veliante'exis
+	attributes
+		category "Heavy Warship"
+		cost 676000000
+		"shields" 24700
+		"hull" 70200
+		"required crew" 61
+		"bunks" 231
+		"mass" 930
+		"drag" 14.9
+		"heat dissipation" 0.4
+		"fuel capacity" 700
+		"ramscoop" 0.97
+		"cargo space" 151
+		"outfit space" 1008
+		"weapon capacity" 461
+		"engine capacity" 137
+		"energy capacity" 41000
+		"energy generation" 61.2
+		"heat generation" 46
+		"hull repair rate" 0.55
+		"shield heat" 11.3
+		weapon
+			"blast radius" 400
+			"shield damage" 1600
+			"hull damage" 800
+			"hit force" 2100
+	outfits
+		"Ka'het Nullifier"
+		"Ka'het Annihilator" 4
+		"Ka'het Ravager Turret" 14
+		
+		"Ka'het Grand Restorer" 2
+		"Ka'het MHD Generator" 6
+		"Ka'het Reserve Accumulator" 11
+		"Ka'het Primary Cooling"
+		"Ka'het Support Cooling"
+		
+		"Vareti Engine Block"
+		"Hyperdrive"
+
+	engine -41 183
+	engine 41 183
+	engine -20 186 0.8
+	engine 20 186 0.8
+	gun 1 -194 "Ka'het Nullifier"
+	gun -57.5 -4 "Ka'het Annihilator"
+	gun 57.5 -4 "Ka'het Annihilator"
+	gun -57.5 -4 "Ka'het Annihilator"
+	gun 57.5 -4 "Ka'het Annihilator"	
+	turret -13.5 -141
+	turret 13.5 -141
+	turret -14 -126
+	turret 14 -126
+	turret -42.5 -16
+	turret -17.5 -15
+	turret 17.5 -15
+	turret 42.5 -16
+	turret -12 32.5
+	turret 12 32.5
+	turret -12 54
+	turret 12 54
+	turret -12 74.5
+	turret 12 74.5
+	explode "small explosion" 40
+	explode "medium explosion" 36
+	explode "large explosion" 28
+	explode "huge explosion" 7
+	"final explode" "final explosion large"
+	description "This is the only Builders ship that hasn't been completely destroyed by the Ka'het. Concealed for millenia under the ocean waves of Retilie, it was found by Lu Bu during the Grave Digger's exploration of the Graveyard. Lu Bu never completed salvage operations, but a few former Gravediggers knew of the derelict's location."
+
+
+# Amalgam appears in a gathering specimens mission.
+
+ship "Amalgam"
+	sprite "ship/amalgam/amalgam"
+	thumbnail "thumbnail/amalgam-thumb"
+	attributes
+		category "Light Warship"
+		"cost" 1200000
+		"shields" 0
+		"hull" 4400
+		"automaton" 1
+		"bunks" 7
+		"mass" 140
+		"drag" 2.7
+		"heat dissipation" .8
+		"fuel capacity" 400
+		"cargo space" 10
+		"outfit space" 282
+		"weapon capacity" 80
+		"engine capacity" 115
+		weapon
+			"blast radius" 45
+			"shield damage" 450
+			"hull damage" 225
+			"hit force" 650
+	outfits
+		"Heavy Laser" 2
+		"Heavy Laser Turret"
+		
+		"Fission Reactor"
+		"LP036a Battery Pack"
+		"Liquid Metal Hull"
+		"Liquid Nitrogen Cooler"
+		"Sniper Rifle"
+		"Laser Rifle" 4
+		
+		"A370 Atomic Thruster"
+		"A375 Atomic Steering"
+		"Hyperdrive"
+	
+	engine -16 52
+	engine 0 52
+	engine 16 52
+	gun -7 -39 "Heavy Laser"
+	gun 7 -39 "Heavy Laser"
+	turret 0 15 "Heavy Laser Turret"
+	explode "tiny explosion" 12
+	explode "small explosion" 16
+	"final explode" "final explosion small"
+	description "This experimental model quicksilver has been created using Korath nanotechnology found in the north. In addition to added flexibility in the assignment of oufit space, it gives the hull the ability to regenerate itself."
+
+
+
 
 # The Carabao is Quash's unique city ship in the Cartographer missions.
 

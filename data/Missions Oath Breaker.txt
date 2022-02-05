@@ -30,7 +30,7 @@ mission "Oathbreaker Siege 1"
 		government "Free Worlds"
 		distance 2 3
 	to offer
-		has "First Contact: Hai: offered"
+		has "First Contact: Hai: declined"
 		has "free worlds plot completed"
 	on offer
 		conversation

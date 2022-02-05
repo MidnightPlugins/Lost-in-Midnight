@@ -327,3 +327,117 @@ ship "Argosy" "Argosy Test Dummy"
 	add attributes
 		"automaton" 1
 		"self destruct" 1
+
+
+
+
+person "Liquid Metal"
+	government "Indigenous Lifeform"
+	frequency 1000
+	system
+		government "Pirate" "Uninhabited"
+	personality
+		timid uninterested mining harvests unconstrained
+			confusion 30
+	ship "Liquid Metal" "Liquid Metal"
+		"uncapturable"
+
+ship "Liquid Metal"
+	noun "creature"
+	sprite "ship/liquid metal/liquid metal"
+	"uncapturable"
+	attributes
+		category "Medium Warship"
+		"hull" 36000
+		"automaton" 1
+		"mass" 700
+		"cargo space" 120
+		"drag" 8.2
+		"heat dissipation" .8
+		"fuel capacity" 100
+		"thrust" 20
+		"turn" 800
+		"hull repair rate" 100
+		"heat protection" 2
+		"heat resistance" .5
+		"energy capacity" 1
+		"inscrutable" 1
+		"gaslining" 1
+		"hyperdrive" 1
+		"jump speed" .2
+		"ramscoop" 1
+		"solar collection" 1
+	outfits
+		"Metal Tentacle?" 4
+		"Liquid Metal Specimen"
+	turret 0 -50 "Metal Tentacle?"
+	turret -20 0 "Metal Tentacle?"
+	turret 20 0 "Metal Tentacle?"
+	turret 0 50 "Metal Tentacle?"
+	leak "gray blood" 75
+	explode "gray blood" 145
+	"final explode" "gray blood"
+	description "While this is technically an artificial life form, it is indigenous to our galaxy."
+
+effect "gray blood"
+	sprite "effect/gray blood"
+		"no repeat"
+		"frame rate" 10
+		"random start frame"
+	"lifetime" 61
+	"random angle" 20
+	"random velocity" 1
+	"random spin" 5
+
+
+outfit "Metal Tentacle?"
+	category "Turrets"
+	thumbnail "outfit/unknown"
+	"turret mounts" -1
+	"unplunderable" 1
+	weapon
+		sprite "projectile/tentacle gray"
+			"frame rate" 1
+			"random start frame"
+		sound "asteroid crunch small"
+		"turret turn" 180
+		"inaccuracy" .4
+		"velocity" 70
+		"lifetime" 1
+		"reload" 1
+		"hit force" 10
+		"shield damage" 12
+		"hull damage" 28
+		"piercing" .2
+
+outfit "Liquid Metal Specimen"
+	category "Special"
+	thumbnail "outfit/liquid metal specimen"
+	description "Specimen ID Number: HG-80"
+	description "Source: Moktar"
+	description "Notes: Multimorphic Nanomachines. Can mimic shape, not color."
+	description "Property of The Syndicate. Biohazard. Do not open."
+	description "If found, return to the Syndicate offices at the Foundry spaceport in the Achernar system."
+
+phrase "liquid metal"
+	word
+		"Liquid Metal"
+
+outfitter "Quarg Plunder"
+	"Nanotech Battery"
+	"Antimatter Core"
+	"Quarg Skylance"
+	"Quarg Anti-Missile"
+	"Intrusion Countermeasures"
+	"Medium Graviton Thruster"
+	"Medium Graviton Steering"
+	"Quantum Shield Generator"
+	"Jump Drive"
+
+fleet "Liquid Metal"
+	government "Indigenous Lifeform"
+	names "liquid metal"
+	cargo 1
+	outfitters "Quarg Plunder"
+	variant
+		"Liquid Metal"

@@ -47,7 +47,15 @@ outfit "Fossil"
 	"mass" 1
 	"installable" -1
 	description "An alien fossil found in the void of space. Unless you can find the right buyer, most will only see a cheap trinket that can be sold as a souvenir to gullible tourists."
-	
+
+minable "metallic asteroid"
+	sprite "asteroid/iron/spin"
+	hull 600
+	payload "Metallic Asteroid" 8
+	explode "smoke" 40
+	explode "bolide" 40
+	explode "asteroid crunch small"
+
 	
 
 mission "Harvesting: Fossil Acquisitions"
@@ -94,3 +102,229 @@ mission "Harvesting: Fossil Collector"
 		"reputation: Black Market" ++
 		outfit Fossil -1
 		payment 200000
+
+
+
+mission "Harvesting Quantumium Research"
+	name "Quantumium Research"
+	description "Deliver 10 Quantumium stones to Aeolus on <destination>. Payment is payment."
+	source Viminal
+	to offer
+		has "Remnant: Keystone Research 1: done"
+		or
+			not "Randomize Harvesting Quantumium Research"
+			and
+				has "Randomize Harvesting Quantumium Research"
+				random < 20
+	on offer
+		require "Quantumium" 1
+		conversation
+			scene "outfit/quantumium"
+			`You remember Aeolus mentioning that he was looking for alternatives to the Quantum Key Stone. Do you want to show Aeolus the Quantumium you found?`
+			choice
+				`	(Yes.)`
+				`	(Not right now.)`
+					defer
+			`	Aeolus is surprised when you present him with the Quantumium. "I would be very interested in more samples. Probably ten would be enough. You'll be rewarded with <payment>."`
+			choice
+				`	"I'll bring them to you as soon as I can."`
+					accept
+				`	"It was hard just getting this one."`
+			`	"I see. If they're that rare, then we not have a practical use for them." He taps at his commlink and walks away."`
+				decline
+	on defer
+		set "Randomize Harvesting Quantumium Research"
+	on complete
+		payment 10000000
+		dialog `The Remnant accept your delivery of Quantumium and reward you with <payment>.`
+
+
+
+mission "Harvesting Cut Quantumium 1"
+	invisible
+	source
+		government "Hai"
+		not attributes "uninhabited"
+	to offer
+		has "First Contact: Hai: declined"
+		random < 15
+		or
+			not "Remnant: Key Stones: done"
+			not "Remnant: Key Stones (Hai): done"
+			not "Remnant: Key Stones (Pre-Hai) 2: done"
+	on offer
+		require "Quantumium" 1
+		conversation
+			scene "outfit/quantumium"
+			`You find a Hai who is able to process your Quantumium. Do you want to?`
+			choice
+				`	(Yes.)`
+				`	(Not now.)`
+					defer
+			`After some negotiating, you agree to an even split of the resulting Quantum Keystones. The Hai says the process will be complete the next time you land on <origin>.`
+				accept
+	on accept
+		outfit "Quantumium" -1
+	on complete
+		outfit "Quantum Keystone" 1
+		dialog `The Hai hands you one Quantum Keystone, your share from the processed Quantumium.`
+
+mission "Harvesting Cut Quantumium 2"
+	invisible
+	source
+		government "Hai"
+		not attributes "uninhabited"
+	to offer
+		has "First Contact: Hai: declined"
+		random < 10
+		or
+			not "Remnant: Key Stones: done"
+			not "Remnant: Key Stones (Hai): done"
+			not "Remnant: Key Stones (Pre-Hai) 2: done"
+	on offer
+		require "Quantumium" 1
+		conversation
+			scene "outfit/quantumium"
+			`You find a Hai who is able to process your Quantumium. Do you want to?`
+			choice
+				`	(Yes.)`
+				`	(Not now.)`
+					defer
+			`After some negotiating, you agree to an even split of the resulting Quantum Keystones. The Hai says the process will be complete the next time you land on <origin>.`
+				accept
+	on accept
+		outfit "Quantumium" -1
+	on complete
+		outfit "Quantum Keystone" 2
+		dialog `The Hai hands you two Quantum Keystones, your share from the processed Quantumium.`
+
+mission "Harvesting Cut Quantumium 3"
+	invisible
+	source
+		government "Hai"
+		not attributes "uninhabited"
+	to offer
+		has "First Contact: Hai: declined"
+		or
+			has "Remnant: Key Stones: done"
+			has "Remnant: Key Stones (Hai): done"
+			has "Remnant: Key Stones (Pre-Hai) 2: done"
+		random < 15
+	on offer
+		require "Quantumium" 1
+		conversation
+			scene "outfit/quantumium"
+			`You find a Hai who is able to process your Quantumium. Do you want to?`
+			choice
+				`	(Yes.)`
+				`	(Not now.)`
+					defer
+			`After some negotiating, you agree to an even split of the resulting Quantum Keystones. The Hai says the process will be complete the next time you land on <origin>.`
+				accept
+	on accept
+		outfit "Quantumium" -1
+	on complete
+		outfit "Quantum Key Stone" 1
+		dialog `The Hai hands you one Quantum Key Stone, your share from the processed Quantumium.`
+
+mission "Harvesting Cut Quantumium 4"
+	invisible
+	source
+		government "Hai"
+		not attributes "uninhabited"
+	to offer
+		has "First Contact: Hai: declined"
+		or
+			has "Remnant: Key Stones: done"
+			has "Remnant: Key Stones (Hai): done"
+			has "Remnant: Key Stones (Pre-Hai) 2: done"
+		random < 10
+	on offer
+		require "Quantumium" 1
+		conversation
+			scene "outfit/quantumium"
+			`You find a Hai who is able to process your Quantumium. Do you want to?`
+			choice
+				`	(Yes.)`
+				`	(Not now.)`
+					defer
+			`After some negotiating, you agree to an even split of the resulting Quantum Keystones. The Hai says the process will be complete the next time you land on <origin>.`
+				accept
+	on accept
+		outfit "Quantumium" -1
+	on complete
+		outfit "Quantum Key Stone" 2
+		dialog `The Hai hands you two Quantum Key Stones, your share from the processed Quantumium.`
+
+
+mission "Harvesting: Metallic Asteroids"
+	invisible
+	to offer
+		or
+			has "event: Asteroid Catapult Unfettered"
+			has "event: Asteroid Catapult Remnant"
+	on offer
+		event "Metallic Asteroid Mining"
+		fail
+		
+event "Metallic Asteroid Mining"
+	system "Wah Yoot"
+		add minables "metallic asteroid" 4 1
+	system "Ehma Ti"
+		add minables "metallic asteroid" 4 1
+	system "Hi Yahr"
+		add minables "metallic asteroid" 4 1
+	system Perfica
+		add minables "metallic asteroid" 4 1
+	system Farinus
+		add minables "metallic asteroid" 4 1
+	system Wei
+		add minables "metallic asteroid" 4 1
+	system "Beta Lupi"
+		add minables "metallic asteroid" 4 1
+	system Lesath
+		add minables "metallic asteroid" 4 1
+	system Sadr
+		add minables "metallic asteroid" 4 1
+	system Umbral
+		add minables "metallic asteroid" 4 1
+	system Persian
+		add minables "metallic asteroid" 4 1
+	system Durax
+		add minables "metallic asteroid" 4 1
+	system Oblate
+		add minables "metallic asteroid" 4 1
+	system Unagi
+		add minables "metallic asteroid" 4 1
+	system Hatysa
+		add minables "metallic asteroid" 4 1
+	system Mintaka
+		add minables "metallic asteroid" 4 1
+	system Danoa
+		add minables "metallic asteroid" 4 1
+	system Archipelago
+		add minables "metallic asteroid" 4 1
+	system Aya'arak
+		add minables "metallic asteroid" 4 1
+	system Chasm
+		add minables "metallic asteroid" 4 1
+	system Diyu
+		add minables "metallic asteroid" 4 1
+	system Ehmahai
+		add minables "metallic asteroid" 4 1
+	system Genesis
+		add minables "metallic asteroid" 4 1
+	system Heiahai
+		add minables "metallic asteroid" 4 1
+	system Kalsolli
+		add minables "metallic asteroid" 4 1
+	system "Pebble Beach"
+		add minables "metallic asteroid" 4 1
+	system Quarantine
+		add minables "metallic asteroid" 4 1
+	system Temeh
+		add minables "metallic asteroid" 4 1
+	system "Watcher's Nest"
+		add minables "metallic asteroid" 4 1
+	system Zubahai
+		add minables "metallic asteroid" 4 1

@@ -32,7 +32,7 @@ mission "Metropolis 1"
 			has "main plot completed"
 			and
 				"year" > 3015
-				has "First Contact: Hai: offered"
+				has "First Contact: Hai: declined"
 	to complete
 		has "Caspar Delivery: done"
 	on offer

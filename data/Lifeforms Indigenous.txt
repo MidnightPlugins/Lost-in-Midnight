@@ -285,10 +285,22 @@ ship "Luminazoa"
 	gun -5 32 Mouthparts?
 	gun 5 32 Mouthparts?
 	turret 0 57 "Lightning Tendril?"
-	leak "blood" 15 25
-	explode "blood" 25
-	"final explode" "blood"
+	leak "blue blood" 15 25
+	explode "blue blood" 25
+	"final explode" "blue blood"
 	description "The exposed mantle of Hell's Maw is home to a thriving colony of these creatures. While they are content to harmlessly scavenge for minerals, they can become dangerous when provoked. Their tendrils are able to emit electrical bursts which can disrupt a ship's power systems."
+
+
+effect "blue blood"
+	sprite "effect/blue blood"
+		"no repeat"
+		"frame rate" 10
+		"random start frame"
+	"lifetime" 61
+	"random angle" 20
+	"random velocity" 1
+	"random spin" 5
+
 
 
 outfit "Lightning Tendril?"
@@ -1034,7 +1046,7 @@ ship "Plasma Parasite"
 			"hull damage" 3000
 			"hit force" 3000
 
-	leak "blood" 15 25
+	leak "flame" 15 25
 	explode "medium explosion" 5
 	explode "large explosion" 15
 	"final explode" "final explosion large"
@@ -1054,7 +1066,7 @@ ship "Plasma Parasite" "Plasma Parasite (Large)"
 			"shield damage" 12000
 			"hull damage" 6000
 			"hit force" 6000
-	leak "blood" 15 25
+	leak "flame" 15 25
 	explode "large explosion" 15
 	explode "huge explosion" 5
 	"final explode" "final explosion large"
@@ -1473,4 +1485,6 @@ event "Volatile Plasma Parasites" 14
 		add fleet "Volatile Plasma Parasites" 40000
 	system Torbab
 		add fleet "Volatile Plasma Parasites" 40000
+
+
 

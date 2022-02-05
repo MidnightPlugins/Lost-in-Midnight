@@ -343,79 +343,6 @@ system Diyu
 
 
 
-system Genesis
-	hidden
-	pos -928.898 194.924
-	government Uninhabited
-	habitable 1505.92
-	asteroids "medium rock" 12 4.16
-	asteroids "large rock" 11 5.4496
-	asteroids "small metal" 9 5.5328
-	asteroids "large metal" 2 3.0784
-	minables silicon 19 1.023
-	minables iron 14 1.132
-	minables aluminum 9 1.153
-	trade Clothing 290
-	trade Electronics 740
-	trade Equipment 530
-	trade Food 350
-	trade "Heavy Metals" 960
-	trade Industrial 720
-	trade "Luxury Goods" 1220
-	trade Medical 680
-	trade Metal 390
-	trade Plastic 390
-	object
-		sprite star/g0
-		distance 33.374
-		period 13.2124
-		offset 180
-	object
-		sprite star/k5
-		distance 84.626
-		period 13.2124
-	object
-		sprite planet/lava4
-		distance 735.383
-		period 205.556
-		offset 242.64
-	object "The Garden"
-		sprite planet/earth
-		distance 1532
-		period 618.084
-		offset 322.711
-		object
-			sprite planet/luna
-			distance 173
-			period 23.2957
-	object
-		sprite planet/desert10
-		distance 1986.42
-		period 912.569
-		offset 3.97754
-	object
-		sprite planet/gas1
-		distance 3103.76
-		period 1782.35
-		offset 271.705
-		object
-			sprite planet/dust7
-			distance 219
-			period 12.9533
-			offset 299.477
-		object
-			sprite planet/europa
-			distance 348
-			period 25.9468
-			offset 224.845
-		object
-			sprite planet/rhea
-			distance 520
-			period 47.3937
-			offset 196.692
-
-
-
 
 system Ehmahai
 	hidden
@@ -485,6 +412,78 @@ system Ehmahai
 
 
 
+system Genesis
+	hidden
+	pos -928.898 194.924
+	government "Genesis"
+	habitable 1505.92
+	asteroids "medium rock" 12 4.16
+	asteroids "large rock" 11 5.4496
+	asteroids "small metal" 9 5.5328
+	asteroids "large metal" 2 3.0784
+	minables silicon 19 1.023
+	minables iron 14 1.132
+	minables aluminum 9 1.153
+	trade Clothing 290
+	trade Electronics 740
+	trade Equipment 530
+	trade Food 350
+	trade "Heavy Metals" 960
+	trade Industrial 720
+	trade "Luxury Goods" 1220
+	trade Medical 680
+	trade Metal 390
+	trade Plastic 390
+	object
+		sprite star/g0
+		distance 33.374
+		period 13.2124
+		offset 180
+	object
+		sprite star/k5
+		distance 84.626
+		period 13.2124
+	object
+		sprite planet/lava4
+		distance 735.383
+		period 205.556
+		offset 242.64
+	object "The Garden"
+		sprite planet/earth
+		distance 1532
+		period 618.084
+		offset 322.711
+		object
+			sprite planet/luna
+			distance 173
+			period 23.2957
+	object
+		sprite planet/desert10
+		distance 1986.42
+		period 912.569
+		offset 3.97754
+	object
+		sprite planet/gas1
+		distance 3103.76
+		period 1782.35
+		offset 271.705
+		object
+			sprite planet/dust7
+			distance 219
+			period 12.9533
+			offset 299.477
+		object
+			sprite planet/europa
+			distance 348
+			period 25.9468
+			offset 224.845
+		object
+			sprite planet/rhea
+			distance 520
+			period 47.3937
+			offset 196.692
+
+
 
 system Hazehai
 	hidden
@@ -506,6 +505,7 @@ system Hazehai
 		sprite "planet/firefly hatchery"
 		distance 175.49
 		period 45.0583
+
 
 
 system Heiahai
@@ -584,9 +584,11 @@ system Kalsolli
 	asteroids "small metal" 14 4.28
 	asteroids "medium metal" 12 3.62
 	asteroids "large metal" 8 2.085
+	asteroids "dead crystal" 5 1
 	minables silicon 15 4.3863
 	minables iron 10 3.1863
 	minables neodymium 5 2.48669
+	minables quantumium 1 2
 	object
 		sprite star/f5-old
 		distance 31.5287
@@ -839,10 +841,11 @@ system Tekochtli
 	asteroids "small metal" 13 3.024
 	asteroids "medium metal" 33 3.0744
 	asteroids "large metal" 18 1.5624
+	asteroids "dead crystal" 3 1
 	minables fossil 1 2.223
 	minables lead 8 4.8391
 	minables uranium 4 3.48669
-	minables yottrite 2 5.5863
+	minables quantumium 2 5.5863
 	object
 		sprite star/wr
 		period 100
@@ -881,7 +884,8 @@ system Temeh
 	asteroids "small metal" 14 5.482
 	asteroids "medium metal" 12 4.778
 	asteroids "large metal" 11 3.346
-	minables quantumium 3 3.1863
+	asteroids "dead crystal" 10 6
+	minables quantumium 5 3.1863
 	minables titanium 12 5.08669
 	minables uranium 8 5.48669
 	object
@@ -1033,7 +1037,7 @@ system Zubahai
 
 
 planet "The Garden"
-	attributes midnight
+	attributes midnight uninhabited
 	landscape land/city5
 	description `The Children of The Garden have developed a pre-hyperdrive civilization. They are attempting to explore space, but the object in orbit over their world prevents them from doing so...`
 	"required reputation" 1

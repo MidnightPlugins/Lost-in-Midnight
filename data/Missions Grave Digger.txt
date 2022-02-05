@@ -157,7 +157,7 @@ event "Grave Digger Betrayal"
 
 mission "Grave Digger: Graveyard Robbery A"
 	name "Graveyard Rescue Mission"
-	description "Search The Graveyard for the missing science vessel <npc>. Escort it to <origin>."
+	description "Search the Graveyard for the missing science vessel <npc>. Escort it to <origin>."
 	source "Caelian"
 	to offer
 		not "event: Gravedigger defeated"
@@ -167,7 +167,7 @@ mission "Grave Digger: Graveyard Robbery A"
 	on offer
 		conversation
 			scene thumbnail/pelican
-			`A nearby Remnant logistics team is discussing the late arrival of <npc>. The ship was doing research in The Graveyard but it has been several days since it was scheduled to return.`
+			`A nearby Remnant logistics team is discussing the late arrival of <npc>. The ship was doing research in the Graveyard but it has been several days since it was scheduled to return.`
 			choice
 				`	(Offer to search for it.)`
 					goto rescue
@@ -194,7 +194,7 @@ mission "Grave Digger: Graveyard Robbery A"
 		
 mission "Grave Digger: Graveyard Robbery B"
 	name "Graveyard Rescue Mission"
-	description "Search The Graveyard for the missing science vessel <npc>. Escort it to <origin>."
+	description "Search the Graveyard for the missing science vessel <npc>. Escort it to <origin>."
 	source "Viminal"
 	to offer
 		not "event: Gravedigger defeated"
@@ -204,7 +204,7 @@ mission "Grave Digger: Graveyard Robbery B"
 	on offer
 		conversation
 			scene thumbnail/pelican
-			`A nearby Remnant logistics team is discussing the late arrival of <npc>. The ship was doing research in The Graveyard but it has been several days since it was scheduled to return.`
+			`A nearby Remnant logistics team is discussing the late arrival of <npc>. The ship was doing research in the Graveyard but it has been several days since it was scheduled to return.`
 			choice
 				`	(Offer to search for it.)`
 					goto rescue
@@ -231,7 +231,7 @@ mission "Grave Digger: Graveyard Robbery B"
 
 mission "Grave Digger: Graveyard Robbery C"
 	name "Graveyard Rescue Mission"
-	description "Search The Graveyard for the missing science vessel <npc>. Escort it to <origin>."
+	description "Search the Graveyard for the missing science vessel <npc>. Escort it to <origin>."
 	source "Aventine"
 	to offer
 		not "event: Gravedigger defeated"
@@ -241,7 +241,7 @@ mission "Grave Digger: Graveyard Robbery C"
 	on offer
 		conversation
 			scene thumbnail/pelican
-			`A nearby Remnant logistics team is discussing the late arrival of <npc>. The ship was doing research in The Graveyard but it has been several days since it was scheduled to return.`
+			`A nearby Remnant logistics team is discussing the late arrival of <npc>. The ship was doing research in the Graveyard but it has been several days since it was scheduled to return.`
 			choice
 				`	(Offer to search for it.)`
 					goto rescue
@@ -310,7 +310,7 @@ mission "Grave Digger: Lu Bu's Legend"
 mission "Grave Digger: Graveyard Robbery Job A"
 	job
 	name "Graveyard Rescue Mission"
-	description "A Remnant research ship named <npc> has gone missing in The Graveyard. Locate the ship and bring it back to <planet>."
+	description "A Remnant research ship named <npc> has gone missing in the Graveyard. Locate the ship and bring it back to <planet>."
 	source
 		government Remnant
 	to offer
@@ -361,7 +361,7 @@ mission "Grave Digger: Graveyard Robbery Job A"
 mission "Grave Digger: Graveyard Robbery Job B"
 	job
 	name "Graveyard Rescue Mission"
-	description "A Remnant research ship named <npc> has gone missing in The Graveyard. Locate the ship and bring it back to <planet>."
+	description "A Remnant research ship named <npc> has gone missing in the Graveyard. Locate the ship and bring it back to <planet>."
 	source
 		government Remnant
 	to offer
@@ -412,7 +412,7 @@ mission "Grave Digger: Graveyard Robbery Job B"
 mission "Grave Digger: Graveyard Robbery Job C"
 	job
 	name "Graveyard Rescue Mission"
-	description "A Remnant research ship named <npc> has gone missing in The Graveyard. Locate the ship and bring it back to <planet>."
+	description "A Remnant research ship named <npc> has gone missing in the Graveyard. Locate the ship and bring it back to <planet>."
 	source
 		government Remnant
 	to offer
@@ -984,3 +984,119 @@ mission "Grave Digger: Asteroid Catapult"
 event "Asteroid Catapult Remnant"
 	planet "Viminal"
 		outfitter "Asteroid Ammo"
+
+
+
+mission "Grave Digger Epilogue: Omnipotence 0"
+	landing
+	invisible
+	source
+		government "Republic" "Syndicate" "Free Worlds"
+		not attributes "uninhabited"
+	to offer
+		has "event: Gravedigger defeated"
+	on offer
+		dialog `You see an advertisement for chocolate covered acorn cookies from House Unuk. A new flavor? You're surprised they didn't already make those.`
+	on accept
+		fail
+
+mission "Grave Digger Epilogue: Omnipotence 1"
+	name "Grave Digger Remnants"
+	description "There may be more Grave Diggers hiding in the Graveyard. Visit all of the Graveyard systems marked on your map to check for Gravedigger activity."
+	source
+		near "Tarazed" 0 10
+		not government "Pirate"
+		not attributes "uninhabited"
+	destination Kaeyin 
+	waypoint Delia
+	waypoint Dixere
+	waypoint Esix
+	waypoint Fearis
+	waypoint Feraticus
+	waypoint Fereti
+	waypoint Gerenus
+	waypoint Giribea
+	waypoint Lire
+	waypoint Nona
+	waypoint Paeli
+	waypoint Queri
+	waypoint Relifer
+	waypoint Ritilas
+	waypoint Polerius
+	stopover Retilie
+	to offer
+		or
+			has "Grave Digger Epilogue: Omnipotence 0: declined"
+			has "Grave Digger Epilogue: Omnipotence 0: failed"
+	on offer
+		conversation
+			`You receive a message from Charles Atinoda: "Good news! They caught the thief. Well, one of them anyway. He admitted to being part of a pirate gang called 'The Grave Diggers'. He kept saying 'Tell <last> that the Grave Diggers will get their revenge with what we found in the Graveyard.'  I thought I should warn you."`
+			`	You thank Charles for the warning. Maybe it would be a good idea to check the Graveyard again for Grave Digger activity.`
+				accept
+	on accept
+		"reputation: Derelict (Killable)" <?= -1
+	on visit
+		dialog `The Grave Diggers had a base here, but it looks abandoned.`
+	on enter Polerius
+		dialog `A derelict Pelican is asking for assistance. They were attacked by Ka'het.`
+	on enter Esix
+		dialog `A derelict Ibis is asking for assistance. They were attacked by Ka'het.`
+	on enter Relifer
+		dialog `You find a derelict Ka'het. That's not so unusual. The Ka'het do fight amongst themselves.`
+	on enter Fearis
+		dialog `You find a derelict Ka'het. That's not so unusual. The Ka'het do fight amongst themselves.`
+	on enter Lire
+		dialog `You find a derelict Albatross. This might be something to investigate.`
+	on stopover
+		dialog `You find rusting salvaging equipment strewn across a beach on one of the tropical islands. Labels on the machines indicate they were manufactured on Millrace and sold by the Syndicate. From the markings in the sand, something big was dragged out of the ocean. Whatever it was is no longer here.`
+	on waypoint
+		dialog `You've checked all the systems in the Graveyard. You should do a thorough search the Grave Digger's base on <destination> in case they left behind any clues.`
+	npc
+		government "Remnant"
+		system Polerius
+		personality derelict waiting staying
+		ship "Pelican" "Eternal Dream Yonder"
+	npc
+		government "Remnant"
+		system Esix
+		personality derelict waiting staying
+		ship "Ibis" "Ancient Memory Awakened"
+	npc
+		government "Ka'het"
+		system Relifer
+		personality derelict waiting staying
+		ship "Telis'het (Disable-able)" "Retilie-reati'het"
+	npc
+		government "Ka'het"
+		system Fearis
+		personality derelict waiting staying
+		ship "Telis'het (Disable-able)" "Retilie-maere'het"
+	npc board
+		government "Derelict (Killable)"
+		system Lire
+		personality target derelict waiting staying
+		ship "Albatross" "Midnight Graveyard"
+		dialog `The ship has been stripped of its outfits. There are no signs of violent conflict and no remains of the crew. When you check the logs, most of the data was erased, but from what remains it seems they were investigating something submerged under the waters of Retilie.`
+	on complete
+		conversation
+			`The Grave Digger base looks abandoned. But before you leave, something catches your eye: an empty box of House Unuk chocolate covered acorn cookies. You're certain those didn't exist back when you fought Lu Bu...`
+			
+mission "Grave Digger Epilogue: Omnipotence 2"
+	landing
+	invisible
+	source Kaeyin
+	to offer
+		has "Grave Digger Epilogue: Omnipotence 1: done"
+	on enter
+		conversation
+			`A Grave Digger fleet has entered the system! The lead ship, a model you have not seen before, hails you. "Captain <last>, welcome to your grave!"`
+				accept
+	npc
+		government "Grave Diggers"
+		personality plunders harvests
+		fleet "Grave Digger raid" 10
+	npc kill
+		government "Grave Diggers"
+		personality vindictive
+		ship "Veliante'exis" "Omnipotence"
+		dialog `The Builder ship Omnipotence is no longer a threat. Hopefully this is the last of the Grave Diggers.`

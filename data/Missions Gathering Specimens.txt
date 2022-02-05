@@ -108,7 +108,7 @@ mission "Gathering Specimens: Ionic Leech"
 	invisible
 	to offer
 		has "First Contact: Ionic Leech: offered"
-		has "First Contact: Hai: offered"
+		has "First Contact: Hai: declined"
 		or
 			has "Gathering Specimens: Alexandria: offered"
 			has "Gathering Specimens: Conservatory: offered"
@@ -784,7 +784,7 @@ mission "Gathering Specimens: Conservatory Conclusion 2"
 		event "Chronic Hyperspace Traveler's Disorder Cure" 180
 		fail
 
-event "Chronic Hyperspace Traveler's Disorder Cure" 180
+event "Chronic Hyperspace Traveler's Disorder Cure"
 
 mission "Gathering Specimens: Conservatory Conclusion 3"
 	landing
@@ -1326,3 +1326,116 @@ ship "Storm Seeker" "Storm Seeker Reborn"
 	gun 63 -22.5
 	gun -58 -15.5
 	gun 56.5 -15.5
+
+
+
+mission "Gathering Specimens: Liquid Metal"
+	invisible
+	source Foundry
+	on offer
+		require "Liquid Metal Specimen" 1
+		conversation
+			scene "outfit/liquid metal specimen"
+			`Do you want to turn in the liquid metal specimen to the Syndicate? There might be a big reward. Or this could be an opportunity to get arrested for being in possession of stolen property...`
+			choice
+				`	(Turn in the specimen.)`
+					goto reward
+				`	(Keep the specimen.)`
+			`	You decide to keep the specimen instead of turning it in. Remember to keep it installed so it doesn't get mixed in with the regular cargo.`
+				decline
+			label reward
+			`	The Syndicate representative is very appreciative for the return of their stolen propery and grants you <payment> as reward. They aren't asking any questions. As for you...`
+			label questions
+			choice
+				`	"Did the Syndicate really make this?"`
+				`	"What is the Syndicate going to do with this?"`
+					goto motive
+				`	(No more questions.)`
+					goto end
+			`	"Syndicate patrols found the original HG-80 specimen while patrolling the northern passage. Patents have been filed with the Republic. It is by all rights, physical and intellectual, property of the Syndicate."`
+				goto questions
+			label motive
+			`	"As you can imagine, there several commercial and industrial uses for this material. You're a pilot, right? Perhaps we'll contact you when we have a new hull to test out."`
+				goto questions
+			label end
+			`	The Syndicate representative thanks you again for returning their property. Security escorts you safely outside...`
+				accept
+	on accept
+		payment 1000000
+		fail
+		
+mission "Gathering Specimens: Liquid Metal Escapes"
+	landing
+	invisible
+	source
+		government "Republic" "Syndicate" "Free Worlds" "Pirate" "Neutral" "Independent"
+	to offer
+		has "Gathering Specimens: Liquid Metal: declined"
+		random < 15
+	on offer
+		require "Liquid Metal Specimen" 1
+		conversation
+			scene "outfit/liquid metal specimen"
+			`After you land, you notice that the Liquid Metal Specimen is gone! A trail or silvery slime leads to an exhaust port. You'll probably run into it again sooner or later.`
+				accept
+	on accept
+		outfit "Liquid Metal Specimen" -1
+		clear "Gathering Specimens: Liquid Metal Reset: offered"
+	npc board
+		government "Indigenous Lifeform"
+		system
+			government "Pirate" "Uninhabited" "Neutral" "Independent"
+		personality waiting uninterested mining harvests unconstrained
+			confusion 30
+		fleet "Liquid Metal"
+		dialog `The Liquid Metal must have snacked on some interesting ships...`
+
+mission "Gathering Specimens: Liquid Metal Reset"
+	landing
+	invisible
+	to offer
+		has "Gathering Specimens: Liquid Metal Escapes: active"
+	on offer
+		require "Liquid Metal Specimen" 1
+		fail "Gathering Specimens: Liquid Metal Escapes"
+		clear "Gathering Specimens: Liquid Metal Escapes: offered"
+		fail
+		
+mission "Gathering Specimens: Liquid Metal Amalgam"
+	name "Ghost Ship: Mythreal"
+	description "The Syndicate has lost control of their Amalgam test ship Mythreal. It was last spotted heading towards the Paradise Planets. Locate and neutralize the ship before it can harm any more people."
+	source
+		attributes "paradise"
+	to offer
+		has "Gathering Specimens: Liquid Metal: failed"
+		or
+			not "chosen sides"
+			has "main plot completed"
+	on offer
+		conversation
+			scene "outfit/rock scavenger meat"
+			`	You''ve won a bet and have been given the opportunity to eat Rock Scavenger for free at the spaceport bar and grill! Before you can take a bite, the communications device of everyone in the restaurant loudly beeps, vibrates, or otherwise alerts their owners that they have a message.`
+			choice
+				`	(Check your messages.)`
+			scene "outfit/liquid metal specimen"
+			`You check yours and are surprised to get a message from the Syndicate representative who you delivered the Liquid Metal sample to: "Greetings Captain <first> <last>. The liquid metal specimen was used to make the test model Amalgam ship, Mythreal. You were to be invited to help test the ship as previously discussed. If you are anywhere near the Paradise Planets, we advise you to head over there if you want to try and stop the Mythreal. Unlike our normal testing procedures, you are not forbidden from destroying or capturing this ship.`
+			choice
+				`	(That's strange. Why...)`
+			scene "scene/scene-amalgam1"
+			`As you are mulling over the odd message, someone watching the news display mutters "Ghost Ship. You look up in time to see a Quicksilver destroy a Navy Cruiser.`
+			choice
+				`	(What the...)`
+			scene "scene/scene-amalgam2"
+			`As you are watching, the Quicksilver changes form! Now it looks more like a heavily modified Marauder Quicksilver. Realization of what you are watching dawns on you as you notice the Quicksilver doesn't have any color other than the underlying metal...`
+				accept
+	npc kill
+		government "Test Dummy"
+		personality target entering vindictive marked unconstrained
+			confusion 10
+		ship "Amalgam" "Mythreal"
+		dialog `The Mythreal is no longer a threat. Return to origin and check if the authorities will reward you for your efforts.`
+	on visit
+		dialog `The Mythreal is still in orbit. Get back up there!`
+	on complete
+		payment 20000
+		dialog `The authorities award you <payment> for defeating the Mythreal.`

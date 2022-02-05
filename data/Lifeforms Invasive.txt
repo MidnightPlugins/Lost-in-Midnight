@@ -248,7 +248,7 @@ ship "Star Gazer"
 		"cargo space" 35
 		"drag" 8.2
 		"heat dissipation" .8
-		"fuel capacity" 200
+		"fuel capacity" 250
 		"thrust" 10
 		"reverse thrust" 10
 		"turn" 800
@@ -262,6 +262,8 @@ ship "Star Gazer"
 		"gaslining" 1
 		"jump drive" 1
 		"jump speed" .2
+		"jump fuel" 250
+		"jump range" 150
 		"jump effect" "jump drive sg"
 		"jump in sound" "hyperdrive out"
 		"jump out sound" "hyperdrive in"

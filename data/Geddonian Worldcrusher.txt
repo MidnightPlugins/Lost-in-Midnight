@@ -166,11 +166,11 @@ ship "Worldcrusher"
 	turret -118.5 222.5 "Quantum Paradox Diffusion"
 	turret 115 223 "Quantum Paradox Diffusion"
 	turret -3.5 15.5 "Graviton Channeler"
-	leak "jump drive" 30 50
-	leak "jump drive" 30 80
-	leak "jump drive" 50 30
+	leak "nano spark" 30 50
+	leak "nano spark" 30 80
+	leak "nano spark" 50 30
 	explode "jump drive" 50
-	explode "jump drive red" 30
+	explode "jump drive" 30
 	"final explode" "jump drive"	
 	description "The first vessel of its kind; and the last."
 
@@ -185,7 +185,7 @@ mission "Geddonia's Folly"
 		log `Factions` `Geddonia was a highly advanced species older than the Drak. They were small spheres of light with telekinetic powers that lived in large crystalline structures. The only active remnant of their civilization is a doomsday device called the Worldcrusher.`
 		conversation
 			`Soon after entering the system, a voice speaks directly to your mind.`
-			`"Welcome to the remains of Geddonia. The beings who once lived here were already old when the Drak were young. The object patrolling the nearby system is a final monument to their civilization. If you decide to visit that system, take care to only observe it from a distance. The Worldcrusher can be very dangerous when viewed up close. Millions died luring it away from here to its present location. Sadly, by then it was already too late for the Geddonians."`
+			`"Welcome to the remains of Geddonia. The beings who once lived here were already old when the Drak were young. The object patrolling the nearby system is the final monument to their civilization. If you decide to visit that system, take care to only observe it from a distance. The Worldcrusher can be very dangerous when viewed up close. Millions died luring it away from here to its present location. Sadly, by then it was already too late for the Geddonians."`
 			choice
 				`	"Why did they build the Worldcrusher?"`
 				`	"Who were the Geddonians fighting?"`

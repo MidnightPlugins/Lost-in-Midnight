@@ -296,7 +296,7 @@ mission "Cartography: The Map (Hai)"
 		not planet "Darkwaste"
 	to offer
 		has "trailblazer map"
-		has "First Contact: Hai: offered"
+		has "First Contact: Hai: declined"
 	on offer
 		conversation
 			scene "outfit/obsolete star map"
