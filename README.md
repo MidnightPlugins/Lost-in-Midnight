@@ -7,6 +7,8 @@ New outfits.
 
 Some highlights:
 - a doomsday device left behind by a long dead civilization
+- a pre-Hyperdrive civilization
+- new (rare) stuff to harvest from asteroids
 - Dirt Belt pirates
 - indigenous/invasive life forms
 - a system with four suns
@@ -15,6 +17,7 @@ Some highlights:
 - weapons trading with the Unfettered
 - dominating the Unfettered
 - finding hidden systems with guidance from a Quarg outcast
+- missions gathering specimens
 - missions where your employer betrays you
 - missions where you may betray your employer
 - "ghost ships"
@@ -26,3 +29,4 @@ Some highlights:
 - terrorists not satisfied with how the war ended
 - a search for a legendary Hai artifact
 - buying used ships from independent sellers
+- a derelict Wanderer space station
