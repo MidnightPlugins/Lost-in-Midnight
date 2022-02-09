@@ -182,7 +182,7 @@ outfit "Nautilus Specimen"
 	category "Special"
 	thumbnail "outfit/astero nautilus specimen"
 	cost 0
-	description "The slimy goopy remains of an Astero Nautilus. You're almost ceratin that one of the tentacles just twitched..."
+	description "The slimy goopy remains of an Astero Nautilus. You're almost certain that one of the tentacles just twitched..."
 	description "This is a rare specimen. You can install it on your ship to keep it from getting mixed in with the regular cargo."
 
 mission "Gathering Specimens: Astero Nautilus Lost"

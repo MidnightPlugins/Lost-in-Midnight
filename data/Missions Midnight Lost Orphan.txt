@@ -841,10 +841,89 @@ mission "Quash Lives!"
 	on offer
 		conversation
 			scene "scene/scene-station5dark"
-			`You are exploring the ruins of the orphan planet when you are suddenly lifted off the ground by a supernatural force. "I knew you'd come back, Captain <first> <last>."`
+			`You are exploring the ruins of the orphan planet.` 
+		
+			branch "backup"
+				or
+					has "Midnight Market: Project THOR 2: active"
+					has "Midnight Market: Project THOR 2: done"
+					has "Bearer of The Blade"
+		
+			label alone
+			`You are suddenly lifted off the ground by a supernatural force. "I knew you'd come back, Captain <first> <last>."`
 			choice
 				`	"Quash!?! You're alive!?!"`
+					goto QuashEnd
+				
+			label backup
+			
+			branch "Quantum Key Blade"
+				has "Bearer of The Blade"
 
+			`You've sent T.H.O.R. to scout ahead. After your previous experience here, you aren't taking any chances.`
+			choice
+				`	"T.H.O.R., situation status?"`
+			scene "outfit/thor"
+			`	The Tactical Heavy Offensive Robot responds, "No hostiles detected. The ruin appears to be..." the comm is flooded with static.`
+			choice
+				`	"T.H.O.R., respond!"`
+			`	Silence. What will you do?`
+			choice
+				`	(I don't like this. Abandon T.H.O.R. and head back to the ship.)`
+					goto abandon
+				`	(See what happened to T.H.O.R.)`
+			`	You rush towards T.H.O.R.'s last known location. There, you find the mangled remains of the robot. Whatever did this should have made a lot of noise. Instead, there was nothing but the dead silence which surrounds you even now...`
+				goto alone
+
+			label "Quantum Key Blade"
+			
+			branch "Quantum T.H.O.R."
+				or
+					has "Midnight Market: Project THOR 2: active"
+					has "Midnight Market: Project THOR 2: done"
+
+			` You have your Quantum Key Blade in hand, just in case. After your previous experience here, you aren't taking any chances. As you delve ever deeper into the ruin, the deafening silence smothers you. Finally, the quiet is broken by the sound of something behind you! As you turn to look, the Quantum Key Blade is wrenched out of your hands. It flies towards the darkness, where a massive gray hand catches it. A familiar Quarg steps out into your field of vision.`
+
+			label QuashKeyblade
+			choice
+				`	"Quash!?! You're alive!?!"`
+			scene "outfit/quantum dragon blade"
+			`"Were you counting on the Hai's little toy to save you?" It turns the blade over in its hands. "Alright then. Entertain me!" Quash tosses the Quantum Key Blade towards you. Quash charges towards you. When you catch the blade, the Quarg's almost upon you!`
+			choice
+				`	(Activate Quantum Shifting.)`
+				`	(Stab at Quash.)`
+					goto stab
+			`	You activate Quantum Shifting expecting Quash to barrel past you. But Quash grabs you instead! It rips the blade out of your hands and forces you both out of Quantum Shifting. "If one is knowledgeable of the quantum mechanics involved, getting the entity to emulate them is child's play."`
+				goto QuashEnd
+
+			label stab
+			`	You stab at Quash, but it barrels past you as though the Quarg had Quantum Shifted with a Keyblade of its own. As turn to face it, the blade is ripped from your hands once again as you are telekinetically lifted into the air. "If one is knowledgeable of the quantum mechanics involved, getting the entity to emulate them is child's play."` 
+				goto QuashEnd
+			
+			label "Quantum T.H.O.R."
+			`You've sent T.H.O.R. to scout ahead. After your previous experience here, you aren't taking any chances.`
+			choice
+				`	"T.H.O.R., situation status?"`
+			scene "outfit/thor"
+			`	The Tactical Heavy Offensive Robot responds, "No hostiles detected. The ruin appears to be..." the comm is flooded with static.`
+			choice
+				`	"T.H.O.R., respond!"`
+			`	Silence. What will you do?`
+			choice
+				`	(I don't like this. Abandon T.H.O.R. and head back to the ship.)`
+					goto abandon
+				`	(See what happened to T.H.O.R.)`
+			`	You draw your Quantum Key Blade and rush towards T.H.O.R.'s last known location. There, you find the mangled remains of the robot. Whatever did this should have made a lot of noise. Instead, there was nothing but the dead silence which surrounds you even now... Finally, the quiet is broken by the sound of something behind you! As you turn to look, the Quantum Key Blade is wrenched out of your hands. It flies towards the darkness, where a massive gray hand catches it. A familiar Quarg steps out into your field of vision.`
+				goto QuashKeyblade
+
+			label abandon
+			`	Barmy is gonna flip when he learns about this. But you aren't ready to lose your life to whatever eldritch horror took down T.H.O.R.`
+				defer
+					
+			label QuashEnd
 			scene "scene/scene-station5blood"
-			`	"Carabaos like the Halcyon have robust autopiloting systems." You feel intense pressure on your limbs as several bones snap. "Humans were wise to be distrustful of that technology." The pain spreads to your torso as several internal organs burst. "With it, I managed to trick those other Quarg into thinking I'd died." You feel intense pain building up in your head. "But that left me without a ship. Thank you Captain <first> <last>, for coming to my rescue." Like a puppet with its strings severed, your lifeless body crumples to the ground.`
+			`	"To answer your question, yes. As you can see, I am very much alive. Carabaos like the Halcyon have robust autopiloting systems." You feel intense pressure on your limbs as several bones snap. "Humans were wise to be distrustful of that technology." The pain spreads to your torso as several internal organs burst. "With it, I managed to trick those other Quarg into thinking I'd died." You feel intense pain building up in your head. "But that left me without a ship. Thank you Captain <first> <last>, for coming to my rescue." Like a puppet with its strings severed, your lifeless body crumples to the ground.`
 				die
+							
+	on defer
+		outfit "T.H.O.R." -1

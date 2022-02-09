@@ -584,7 +584,7 @@ system Kalsolli
 	asteroids "small metal" 14 4.28
 	asteroids "medium metal" 12 3.62
 	asteroids "large metal" 8 2.085
-	asteroids "dead crystal" 5 1
+	asteroids "dead crystal" 8 1
 	minables silicon 15 4.3863
 	minables iron 10 3.1863
 	minables neodymium 5 2.48669
@@ -841,7 +841,7 @@ system Tekochtli
 	asteroids "small metal" 13 3.024
 	asteroids "medium metal" 33 3.0744
 	asteroids "large metal" 18 1.5624
-	asteroids "dead crystal" 3 1
+	asteroids "dead crystal" 8 1
 	minables fossil 1 2.223
 	minables lead 8 4.8391
 	minables uranium 4 3.48669
@@ -884,7 +884,7 @@ system Temeh
 	asteroids "small metal" 14 5.482
 	asteroids "medium metal" 12 4.778
 	asteroids "large metal" 11 3.346
-	asteroids "dead crystal" 10 6
+	asteroids "dead crystal" 8 6
 	minables quantumium 5 3.1863
 	minables titanium 12 5.08669
 	minables uranium 8 5.48669

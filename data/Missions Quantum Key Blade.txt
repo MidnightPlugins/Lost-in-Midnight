@@ -155,7 +155,7 @@ mission "QKBlade: Quantum Key Blade 2"
 		has "Nemesis: Quantum Key Blade: done"
 	on offer
 		log `The Hai council of elders has tasked me with hunting down an Unfettered ship named "Kotetsu" which is likely working its way towards human space. It is a unique Unfettered prototype ship outfitted with plundered Wanderer technology.`
-		log "People" "Gai Ro Nin" `The Unfettered captain of the Scorpion prototype, the Kotetsu. He is searching for something called a Quantum Key Blade.`
+		log "People" "Gai Ro Nin" `The Unfettered captain of the Scorpion prototype, Kotetsu. He is searching for something called a Quantum Key Blade.`
 		conversation
 			`A guard patrol greets you at the spaceport and escorts you to the council of elders. When you arrive they inform you of why you've been summoned.`
 			`	"Welcome Captain <first> <last>. Hai is in need of well traveled experts on the areas beyond our space." states one elder.`
@@ -174,6 +174,22 @@ mission "QKBlade: Quantum Key Blade 2"
 			`	Another elder directs her statement at you. "It might interest Captain <last> to know that the Kotetsu is likely modified with technology plundered from the Wanderers. Our garrison on Cloudfire reported as much."`
 			`	The first elder addresses you. "Captain <last>, we believe Gai is heading to human space because the final resting place of the Quantum Key Blade is likely somwhere within that vast territory. The Unfettered must have discovered some clue specifying its location amongst their plunder from the Wanderers. Go captain, and stop him before he tears apart your people in his search."`
 				accept
+
+
+
+mission "QKBlade: Quantum Key Blade 2 clue"
+	landing
+	invisible
+	source "Vara K'chrai"
+	to offer
+		has "QKBlade: Quantum Key Blade 2: active"
+		not "QKBlade: Quantum Key Blade 3: active"
+	on offer
+		log `The Wanderers have not witnessed the Kotetsu in Wanderer space. If Gai hasn't passed through either Hai space or Wanderer space, then he must have traveled east...`
+		dialog `You ask the Wanderers if a protoype Unfettered ship matching the Kotetsu's description has passed through the system. They tell you that such a ship has not been seen amongst the Unfettered fleets in their space.`
+	on accept
+		fail
+
 
 				
 mission "QKBlade: Quantum Key Blade 3"
@@ -197,7 +213,7 @@ mission "QKBlade: Quantum Key Blade 3"
 			`	You approach the Kor Efreti and make the customary gesture for greeting. He reciprocates. You try motioning towards the rifle, but at this point you need a translator.`
 			`	A nearby Quarg notices your dilemma and offers to translate.`
 			`	"Where did you get that rifle?" you ask.`
-			`	The Quarg translates the reply, "A furry alien exchanged this for some work on his ship. The furry alien had battled with the bird folk before arriving here. The furry alien had also salvaged components from a Kor Mereti and wanted them installed on his ship."`
+			`	The Quarg translates the reply, "A furry alien exchanged this for some work on his ship. The furry alien had battled with bird folk before arriving here. The furry alien had also salvaged components from a Kor Mereti and wanted them installed on his ship."`
 			`	You express your thanks to both of them and prepare to leave. But before you do, the Quarg asks,"You are searching for that group of Hai, are you not? Would you explain why it is you seek them out? They refused to speak of what brought them here or where they were heading."`
 			choice
 				`	(Inform the Quarg of Gai's search for the Quantum Key Blade.)`
@@ -209,7 +225,7 @@ mission "QKBlade: Quantum Key Blade 3"
 			
 			label Quantum
 			`	"Ah, so the Hai have finally discerned the location of that lost toy. Unuk al Hai was once located near Terminus. While the stars may seem to scarcely move during your short lifetimes, they are always in motion. Unuk al Hai drifted far to the south after the star of a nearby system went nova. Your quarry is likely headed there."`
-			`	It takes a moment for you to realize that the Quarg is referring the Unukalhai system. His pronunciation of the system's name sounds odd at first, but it soon dawns on you the connection the Hai have to that system and a certain producer of acorn cookies hidden in the mountains there.`
+			`	It takes a moment for you to realize that the Quarg is referring the Unukalhai system. Its pronunciation of the system's name sounds odd at first, but it soon dawns on you the connection the Hai have to that system and a certain producer of acorn cookies hidden in the mountains there.`
 				accept
 
 	on accept
@@ -289,15 +305,40 @@ mission "Nemesis: Quantum Key Blade"
 		conversation
 			scene "outfit/quantum key blade"
 			`The ship is lurching erratically as the Unfettered have abandoned their posts to fight off your boarding attempt. An Unfettered you assume is Gai Ro Nin wields a glimmering sword as he attacks one of your crew members. He then turns his attention to you and charges. As he does so, you sense the artificial gravity has begun to fail...`
+
+			branch "Midnight's Lost Orphan"
+				has "captain of atrocity"
+
 			choice
 				`	(Block the sword with your rifle.)`
+					goto block
 				`	(Dodge the attack.)`
 					goto dodge
+					
+			label block		
 			`	You attempt to block the sword with your rifle. He smirks as you do so and you watch in horror as the blade passes through the rifle and into your chest. You feel no pain, as if the sword isn't even there. You aim the rifle at his head and pull the trigger. But like the sword, the laser passes through his head as if he isn't there! Then you notice him manipulate a control on the handle and suddenly there is a sharp pain in your chest. Gai gasps for air as you feel your life slip away. "The only... (gasp) drawback... (gasp) is that I can't breath... (gasp) while phased out," he mutters as he wipes the blood off the blade with your shirt.`
 				die
 			label dodge
 			`	You dodge the blade as he careens past you. The artificial gravity has completely failed and you notice him frantically fidgeting with a control on the sword grip when he passes through the bulkhead! You hear and audible squish as his arm holding the sword becomes trapped on your side of the wall. His hand goes limp and releases the sword. Through a nearby view port you see Gai's corpse floating out in the void of space. You manage to grab hold of the Quantum Key Blade and tuck it into your belt. There's still a battle to be fought.`
 				accept
+
+			label "Midnight's Lost Orphan"
+			choice
+				`	(Block the sword with your rifle.)`
+					goto block
+				`	(Dodge the attack.)`
+					goto dodge
+				`	(Wield the terrifying power of Midnight's Lost Orphan.)`
+			scene "outfit/midnight lost orphan"
+			`	You are the Demon Captain of Atrocities. The power of Midnight's Lost Orphan flows through you. As Gai Ro Nin charges with his sword poised to strike, you gesture at him with murderous intent...`
+			choice
+				`	(Make his head explode.)`
+				`	(Rearrange his internal organs.)`
+				`	(Cause his blood to flow backwards.)`
+			scene "outfit/quantum key blade"
+			`	But nothing happens! It's as if Gai isn't there... Gai smirks as he closes in. He plunges the blade deep into your chest, but you feel no pain. As you stare at the blade sticking out of your chest in bewilderment, Gai manipulates something on the sword grip. Sudden pain washes over you as Gai quantum shifts. He takes a deep breath. "The only... (gasp) drawback... (gasp) is that I can't breath... (gasp) while phased out," he mutters as he wipes the blood off the blade with your shirt. As your life slips away, you will Midnight's Lost Orphan to make one final attack against Gai... But it's too late. It seems the entity has abandoned you in favor of a new host. "What's this?" you hear Gai gasp as your vision fades to black."`
+				die
+
 	on accept
 		outfit "Quantum Key Blade" 1
 	on visit Unukalhai
@@ -372,7 +413,7 @@ mission "QKBlade: House Unuk History"
 			`	After hiking through the mountains, you find the Unuk residence has been rebuilt. You try using the communications device at the entrance and a familiar voice answers. You explain why you are visiting.`
 			`	"Ah, thank you for coming to check up on me! Tell me, what happened to the item?"`
 			`	You tell her, "After recovering it from the thief, the Hai government allowed me to keep it."`
-			`	"I suppose that's for the best. I wouldn't want anyon else coming here in search of it. I think it's fair to tell you, I am the master of House Unuk. My ancestors were among the first colonists on Flood. In these mountains, they found and befriended the last surviving descendant of the Hai. According to him, his ancestors crash landed here during a war that took place centuries before, when the stars were different." She pauses then says,"Please wait a moment. There's something I want to show you." She goes back intot he house while you wait.`
+			`	"I suppose that's for the best. I wouldn't want anyon else coming here in search of it. I think it's fair to tell you, I am the master of House Unuk. My ancestors were among the first colonists on Flood. In these mountains, they found and befriended the last surviving descendant of the Hai. According to him, his ancestors crash landed here during a war that took place centuries before, when the stars were different." She pauses then says,"Please wait a moment. There's something I want to show you." She goes back into the house while you wait.`
 			`After a short while, she returns with a quantum keystone and a mirror that appears to also be made from a quantum keystone. "These were the other treasures held by the last Hai. Gai never asked for them. Maybe he didn't know they were here." The mirror glimmers under the light of Unukalhai's sun, and you feel light headed...`
 				launch
 	on enter
@@ -390,6 +431,8 @@ mission "QKBlade: House Unuk History"
 	on complete
 		log `House Unuk seems satisfied with me keeping the Quantum Key Blade. Their maid has recovered from her injuries and the house has been rebuilt. I also learned some of the history behind the relationship behind House Unuk, the Hai, and Unukalhai. That's all I'm willing to say about that for now.`
 		dialog `You contemplate returning to House Unuk, but decide you'd rather not get anywhere near that strange mirror again.`
+
+
 
 mission "QKBlade: House Unuk Secrets"
 	landing
@@ -527,13 +570,19 @@ mission "QKBlade: Bearer of The Blade 3A"
 		conversation
 			scene "outfit/quantum dragon blade"
 			`It's after midnight by the time you head back to your ship. The area is deserted when a short figure in a hooded cloak steps out of a nearby alley. It pulls out a long knife and charges at you! You scarcely have time to draw the Quantum Key Blade to defend yourself. What will you do?`
+
+			branch "Midnight's Lost Orphan"
+				has "captain of atrocity"
+
 			choice
 				`	(Feint.)`
 					goto success
 				`	(Parry.)`
 					goto draw
 				`	(Strike.)`
-			
+					goto strike
+
+			label strike
 			`	Your attempt at swordsmanship fails as the attacker's blade sinks into your chest. The murderer is a Hai, probably an Unfettered. He grabs the Quantum Key Blade and cackles in glee as your life blood drains away...`
 				die
 			
@@ -544,6 +593,21 @@ mission "QKBlade: Bearer of The Blade 3A"
 			label success
 			`	You bait your assailant with a feint and follow up with an attack through the opening in his defense. Your blade draws blood and your attacker mutters a curse while scurrying off into the darkness. Realizing that a Hai running on all four limbs is too fast for a human to follow, you don't bother to pursue.`
 				accept
+
+			label "Midnight's Lost Orphan"
+			choice
+				`	(Feint.)`
+					goto success
+				`	(Parry.)`
+					goto draw
+				`	(Strike.)`
+					goto strike
+				`	(Wield the terrifying power of Midnight's Lost Orphan.)`
+			scene "outfit/midnight lost orphan"
+			`	You are the Demon Captain of Atrocities. The power of Midnight's Lost Orphan flows through you. With a simple gesture, the Unfettered is sent flying into the side of a building! It crumples to the ground in a bloody heap.`
+				decline
+	on decline
+		"captain of atrocity" ++
 	on accept
 		"QKBlade: duels won" ++
 
@@ -561,13 +625,19 @@ mission "QKBlade: Bearer of The Blade 3B"
 		conversation
 			scene "outfit/quantum dragon blade"
 			`It's after midnight by the time you head back to your ship. The area is deserted when a short figure in a hooded cloak steps out of a nearby alley. It pulls out a long knife and charges at you! You scarcely have time to draw the Quantum Key Blade to defend yourself. What will you do?`
+
+			branch "Midnight's Lost Orphan"
+				has "captain of atrocity"
+
 			choice
 				`	(Feint.)`
+					goto feint
 				`	(Parry.)`
 					goto success
 				`	(Strike.)`
 					goto draw
 
+			label feint
 			`	Your attempt at swordsmanship fails as the attacker's blade sinks into your chest. The murderer is a Hai, probably an Unfettered. He grabs the Quantum Key Blade and cackles in glee as your life blood drains away...`
 				die
 			
@@ -578,6 +648,21 @@ mission "QKBlade: Bearer of The Blade 3B"
 			label success
 			`	You parry the attack and counter with one of your own. Your blade draws blood and your attacker mutters a curse while scurrying off into the darkness. Realizing that a Hai running on all four limbs is too fast for a human to follow, you don't bother to pursue.`
 				accept
+
+			label "Midnight's Lost Orphan"
+			choice
+				`	(Feint.)`
+					goto feint
+				`	(Parry.)`
+					goto success
+				`	(Strike.)`
+					goto draw
+				`	(Wield the terrifying power of Midnight's Lost Orphan.)`
+			scene "outfit/midnight lost orphan"
+			`	You are the Demon Captain of Atrocities. The power of Midnight's Lost Orphan flows through you. With a simple gesture, the Unfettered is sent flying into the side of a building! It crumples to the ground in a bloody heap.`
+				decline
+	on decline
+		"captain of atrocity" ++
 	on accept
 		"QKBlade: duels won" ++
 
@@ -595,13 +680,19 @@ mission "QKBlade: Bearer of The Blade 3C"
 		conversation
 			scene "outfit/quantum dragon blade"
 			`It's after midnight by the time you head back to your ship. The area is deserted when a short figure in a hooded cloak steps out of a nearby alley. It pulls out a long knife and charges at you! You scarcely have time to draw the Quantum Key Blade to defend yourself. What will you do?`
+
+			branch "Midnight's Lost Orphan"
+				has "captain of atrocity"
+
 			choice
 				`	(Feint.)`
 					goto draw
 				`	(Parry.)`
+					goto parry
 				`	(Strike.)`
 					goto success
 
+			label parry
 			`	Your attempt at swordsmanship fails as the attacker's blade sinks into your chest. The murderer is a Hai, probably an Unfettered. He grabs the Quantum Key Blade and cackles in glee as your life blood drains away...`
 				die
 
@@ -612,6 +703,21 @@ mission "QKBlade: Bearer of The Blade 3C"
 			label success
 			`	You see through your attacker's feint and strike when an opportunity presents itself. Your blade draws blood and your attacker mutters a curse while scurrying off into the darkness. Realizing that a Hai running on all four limbs is too fast for a human to follow, you don't bother to pursue.`
 				accept
+
+			label "Midnight's Lost Orphan"
+			choice
+				`	(Feint.)`
+					goto draw
+				`	(Parry.)`
+					goto parry
+				`	(Strike.)`
+					goto success
+				`	(Wield the terrifying power of Midnight's Lost Orphan.)`
+			scene "outfit/midnight lost orphan"
+			`	You are the Demon Captain of Atrocities. The power of Midnight's Lost Orphan flows through you. With a simple gesture, the Unfettered is sent flying into the side of a building! It crumples to the ground in a bloody heap.`
+				decline
+	on decline
+		"captain of atrocity" ++
 	on accept
 		"QKBlade: duels won" ++
 
@@ -652,7 +758,11 @@ mission "QKBlade: Bearer of The Blade 5"
 		require "Quantum Dragon Blade"
 		conversation
 			scene "outfit/quantum dragon blade"
-			`When you head back to your ship, you find the space port eerily deserted. Before you can open your ship's entry hatch a woman in a hooded cloak leaps through it and attacks you with a Quantum Key Blade! You scarcely have time to draw your own Quantum Key Blade to defend yourself. What will you do?`
+			`When you head back to your ship, you find the space port eerily deserted. Before you can open your ship's entry hatch a woman in a hooded cloak leaps through it and attacks you with a Quantum Key Blade! This must be Phantom. You scarcely have time to draw your own Quantum Key Blade to defend yourself. What will you do?`
+
+			branch "Midnight's Lost Orphan"
+				has "captain of atrocity"
+
 			choice
 				`	Dodge.`
 					goto activate
@@ -662,11 +772,11 @@ mission "QKBlade: Bearer of The Blade 5"
 					goto death
 
 			label death
-			`	Your attempt at swordsmanship fails as the attacker's blade sinks into your chest. There is no pain at first, but then the attacker shifts out of Quantum mode and you fall to your knees as the blade materializes within you. She grabs your Quantum Key Blade and gives you no regard as your life blood drains away...`
+			`	Your attempt at swordsmanship fails as Phantom's blade sinks into your chest. There is no pain at first, but then Phantom shifts out of Quantum mode and you fall to your knees as the blade materializes within you. She grabs your Quantum Key Blade and gives you no regard as your life blood drains away...`
 				die
 
 			label activate
-			`	You dodge your assailant and activate the Quantum Key Blade. You and your foe both regard each other and now that you have a chance to get a better look, you see that she is an Alpha! What will you do?`
+			`	You dodge your assailant and activate the Quantum Key Blade. You and Phantom both regard each other and now that you have a chance to get a better look, you see that she is an Alpha! What will you do?`
 			label qbattle
 			choice
 				`	Quantum strike.`
@@ -677,15 +787,15 @@ mission "QKBlade: Bearer of The Blade 5"
 					goto qshift
 
 			label qdeath
-			`	Both you and your assailant attack, skewering each other with your blades! You both fall through the ground, leaving only your blades behind in the deserted space port...`
+			`	Both you and Phantom attack, skewering each other with your blades! You both fall through the ground, leaving only your blades behind in the deserted space port...`
 				die
 
 			label qparry
-			`	You parry your assailant's blow and counter with a strike of your own! She falls through the ground, leaving only her sword behind. When you pick up the blade, you note the intricate snake carving on the hand guard.`
+			`	You parry Phantom's blow and counter with a strike of your own! She falls through the ground, leaving only her sword behind. When you pick up the blade, you note the intricate snake carving on the hand guard.`
 				accept
 				
 			label qshift
-			`	You shift out of Quantum mode and your attacker's blade harmlessly passes through you. Your opponent almost loses her balance, but shifts out of Quantum mode to regain her footing. Both of you gasp for air as you consider your next move. What will you do?`
+			`	You shift out of Quantum mode and Phantom's blade harmlessly passes through you. Your opponent almost loses her balance, but shifts out of Quantum mode to regain her footing. Both of you gasp for air as you consider your next move. What will you do?`
 			choice
 				`	Feint.`
 					goto fdeath
@@ -695,7 +805,7 @@ mission "QKBlade: Bearer of The Blade 5"
 					goto reshift
 					
 			label fdeath
-			`	You try to bait the Alpha with a feint, but she doesn't fall for it. Instead she counters with her own attack using the opening you've presented her. The blow is fatal and you crumple to the ground. She grabs your Quantum Key Blade and gives you no regard as your life blood drains away...`
+			`	You try to bait the Alpha with a feint, but she doesn't fall for it. Instead Phantom counters with her own attack using the opening you've presented her. The blow is fatal and you crumple to the ground. She grabs your Quantum Key Blade and gives you no regard as your life blood drains away...`
 				die
 
 			label reshift
@@ -716,12 +826,32 @@ mission "QKBlade: Bearer of The Blade 5"
 
 			label dodge
 			scene "outfit/quantum snake blade"
-			`	You deftly dodge her attack and she loses her balance. She tries to shift out of Quantum mode but is already halfway into the ground when she does so. You hear an audible squelch as her lower torso is melded into the ground. She lets out a pained groan before vomiting out blood as she passes away. Her hand goes limp as her Quantum Key Blade falls to the ground. When you pick up the blade, you note the intricate snake carving on the hand guard.`
+			`	You deftly dodge Phantom's attack and she loses her balance. She tries to shift out of Quantum mode but is already halfway into the ground when she does so. You hear an audible squelch as her lower torso is melded into the ground. She lets out a pained groan before vomiting out blood as she passes away. Her hand goes limp as her Quantum Key Blade falls to the ground. When you pick up the blade, you note the intricate snake carving on the hand guard.`
 				accept
 
 			label mistake
 			`	In the heat of battle mistakes can and will occur. As you shift back into Quantum mode her blade sinks into you, confirming this fundamental truth. "Thank you for saving me the trouble of having to shift back," she whispers into your ear. The blow is fatal and you fall through the ground, leaving only your blade behind...`
 				die
+
+			label "Midnight's Lost Orphan"
+			choice
+				`	Dodge.`
+					goto activate
+				`	Parry.`
+					goto death
+				`	Strike.`
+					goto death
+				`	(Wield the terrifying power of Midnight's Lost Orphan.)`
+			scene "outfit/midnight lost orphan"
+			`	You are the Demon Captain of Atrocities. The power of Midnight's Lost Orphan flows through you. As Phantom charges with her sword poised to strike, you gesture at her with murderous intent...`
+			choice
+				`	(Make her head explode.)`
+				`	(Rearrange her internal organs.)`
+				`	(Cause her blood to flow backwards.)`
+			scene "outfit/quantum snake blade"
+			`	But nothing happens! It's as if she isn't there... Phantom plunges the blade deep into your chest, but you feel no pain. As you stare at the blade sticking out of your chest in bewilderment, she manipulates something on the sword grip. Sudden pain washes over you as Phantom quantum shifts. Her hood falls back as she takes a deep breath and you realize she's an Alpha! Phantom grabs your Quantum Key Blade and gives you no regard as your life blood drains away... You will Midnight's Lost Orphan to make one final attack against Phantom... But it's too late. It seems the entity has abandoned you in favor of a new host. "What's this?" you hear Phantom gasp as your vision fades to black."`
+				die
+
 	on accept
 		"QKBlade: duels won" ++
 		log `On a pirate world I dueled an Alpha who wielded a Quantum Key Blade. This was likely Phantom. The blade she wielded bears a carving of a snake on the hand guard, just as the blade stolen from the Hai cultural festival did. I should probably take it to the Hai council of elders.`

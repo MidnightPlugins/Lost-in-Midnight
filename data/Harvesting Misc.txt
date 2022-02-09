@@ -14,7 +14,7 @@
 minable "quantumium"
 	sprite "asteroid/lead/spin"
 	hull 400
-	payload "Quantumium" 4
+	payload "Quantumium" 5
 	explode "smoke" 40
 	explode "bolide" 40
 	explode "asteroid crunch small"
@@ -33,7 +33,7 @@ outfit "Quantumium"
 minable "fossil"
 	sprite "asteroid/iron/spin"
 	hull 400
-	payload "Fossil" 4
+	payload "Fossil" 5
 	explode "smoke" 40
 	explode "bolide" 40
 	explode "asteroid crunch small"
@@ -49,14 +49,30 @@ outfit "Fossil"
 	description "An alien fossil found in the void of space. Unless you can find the right buyer, most will only see a cheap trinket that can be sold as a souvenir to gullible tourists."
 
 minable "metallic asteroid"
-	sprite "asteroid/iron/spin"
+	sprite "asteroid/large rock/spin"
 	hull 600
-	payload "Metallic Asteroid" 8
+	payload "Metallic Asteroid" 10
 	explode "smoke" 40
 	explode "bolide" 40
 	explode "asteroid crunch small"
 
+minable "space junk"
+	sprite "asteroid/space junk/spin"
+	hull 200
+	payload "Space Junk" 20
+	payload "KP-6 Photovoltaic Panel" 6
+	payload "Supercapacitor" 4
+	explode "smoke" 40
+	explode "bolide" 40
+	explode "asteroid crunch small"
 	
+outfit "Space Junk"
+	category "Special"
+	cost 100
+	thumbnail "outfit/space junk"
+	"mass" 1
+	"installable" -1
+	description "Centuries after they've ceased functioning, the wreckage of old satellites and probes can still be found in the systems near Earth. The reward for recycling this junk isn't much, but if you won't do your part to keep the galaxy clean, who will?"
 
 mission "Harvesting: Fossil Acquisitions"
 	invisible
@@ -71,6 +87,7 @@ mission "Harvesting: Fossil Acquisitions"
 	on accept
 		outfit Fossil -1
 		payment 400000
+		fail
 		
 mission "Harvesting: Fossil Researcher"
 	invisible
@@ -86,6 +103,7 @@ mission "Harvesting: Fossil Researcher"
 	on accept
 		outfit Fossil -1
 		payment 300000
+		fail
 
 mission "Harvesting: Fossil Collector"
 	invisible
@@ -102,6 +120,7 @@ mission "Harvesting: Fossil Collector"
 		"reputation: Black Market" ++
 		outfit Fossil -1
 		payment 200000
+		fail
 
 
 
@@ -130,7 +149,7 @@ mission "Harvesting Quantumium Research"
 				`	"I'll bring them to you as soon as I can."`
 					accept
 				`	"It was hard just getting this one."`
-			`	"I see. If they're that rare, then we not have a practical use for them." He taps at his commlink and walks away."`
+			`	"I see. If they're that rare, then we might not have a practical use for them." He taps at his commlink and walks away."`
 				decline
 	on defer
 		set "Randomize Harvesting Quantumium Research"
@@ -258,6 +277,7 @@ mission "Harvesting Cut Quantumium 4"
 
 
 mission "Harvesting: Metallic Asteroids"
+	landing
 	invisible
 	to offer
 		or
@@ -328,3 +348,26 @@ event "Metallic Asteroid Mining"
 		add minables "metallic asteroid" 4 1
 	system Zubahai
 		add minables "metallic asteroid" 4 1
+
+mission "Harvesting: Space Junk"
+	landing
+	invisible
+	on offer
+		event "Space Junk Mining"
+		fail
+		
+event "Space Junk Mining"
+	system "Sol"
+		add minables "space junk" 1 1
+	system "Alpha Centauri"
+		add minables "space junk" 1 1
+	system Altair
+		add minables "space junk" 1 1
+	system Caph
+		add minables "space junk" 1 1
+	system Denebola
+		add minables "space junk" 1 1
+	system Sirius
+		add minables "space junk" 1 1
+	system Vega
+		add minables "space junk" 1 1

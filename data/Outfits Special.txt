@@ -117,7 +117,7 @@ outfit "Alien Torture Device"
 	thumbnail "outfit/alien torture device"
 	"capture attack" 3.9
 	"capture defense" 0.1
-	"illegal" 1000000
+	"illegal" 100000
 	"unplunderable" 1
 	description "A machine assembled from scavenged parts that appear to be alien in origin. It creates a burst of energy that causes extreme pain. While not harmful enough to kill its victims, this device can be used to torture captured defenders until they reveal the codes for bypassing a ship's internal security locks."
 
@@ -162,7 +162,7 @@ outfit "Metallic Asteroid"
 	category "Ammunition"
 	cost 3000
 	thumbnail "outfit/metallic asteroid"
-	"flotsam sprite" "effect/flotsam metallic asteroid"
+	"flotsam sprite" "asteroid/small metal/spin"
 	"mass" 10
 	"asteroid capacity" -1
 	description `The most difficult part of operating an Asteroid Catapult is locating ammunition with the right size, shape, density, and magnetic properties.`

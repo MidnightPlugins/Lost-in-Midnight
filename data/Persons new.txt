@@ -218,7 +218,7 @@ ship "Blackbird" "Black Wing"
 
 person "El Niño"
 	government "Author"
-	frequency "1000"
+	frequency "100"
 	system
 		government "Wanderer"
 	personality vindictive coward
@@ -252,7 +252,7 @@ ship "Thunder Maker" "God of Thunder"
 
 person "Poltergeist King"
 	government "Author"
-	frequency 349
+	frequency "100"
 	system
 		government "Syndicate" "Republic" "Free Worlds" "Pirate"
 	personality timid mining harvests plunders uninterested
@@ -269,12 +269,59 @@ person "Poltergeist King"
 			"disa_le or scan the t_rget dum_y ship"
 			"_ocate it and make deta_led s_ans of its ca_go"
 			"proce_d t_ere for p_yment af_er ret_ieving the data."
+	ship "Ghost PK" "PK"
 	ship "Hacker Drone" "Poltergeist King"
 	ship "Mule Test Dummy" "Syndicate Test Vessel"
 	ship "Hauler Test Dummy" "S_ndic_te Tes_ Ve_s_l"
 	ship "Freighter Test Dummy" "Syn_i_ate Te_t _es_el"
 	ship "Argosy Test Dummy" "Synd_c_te T_st Ve_se_"
 
+
+
+
+ship "Ghost PK"
+	sprite "ship/cloaked"
+	attributes
+		category "Drone"
+		"cost" 50000
+		"shields" 999999
+		"hull" 999999
+		"automaton" 1
+		"mass" 30
+		"drag" 1.9
+		"heat dissipation" 1
+		"disruption resistance" 1
+		"ion resistance" 1
+		"slowing resistance" 1
+		"piercing resistance" 1
+		"disruption protection" 3
+		"energy protection" 3
+		"force protection" 3
+		"fuel protection" 3
+		"heat protection" 3
+		"hull protection" 3
+		"ion protection" 3
+		"piercing protection" 3
+		"shield protection" 3
+		"slowing protection" 3
+		"fuel capacity" 100
+		"outfit space" 65
+		"weapon capacity" 0
+		"engine capacity" 50
+		"self destruct" 1
+		weapon
+			"blast radius" 3
+			"shield damage" 30
+			"hull damage" 15
+			"hit force" 45
+	outfits
+		"KP-6 Photovoltaic Array"
+		"Supercapacitor" 2
+		"Tactical Scanner"
+		"X1050 Ion Engines"
+		"Hyperdrive"
+	engine -15 30
+	engine 15 30
 
 
 ship "Hacker Drone"

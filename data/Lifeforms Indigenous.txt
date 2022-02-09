@@ -19,6 +19,7 @@ mission "First Contact: Subsidurials"
 	invisible
 	source
 		attributes "near earth"
+		not attributes "uninhabited" "station"
 	on offer
 		log "Factions" "Subsidurials"
 			`It is unclear what these creatures are, where they come from, or how they evolved. Scientists have dissected several, but so far the results have simply been that these creatures contain no materials or resources of value; are not even slightly edible, and are too big to be kept as pets.`
