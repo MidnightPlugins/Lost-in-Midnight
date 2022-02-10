@@ -17,6 +17,20 @@
 # - missions
 
 
+effect "pug flamethrower die"
+	sprite "effect/explosion/pug/small"
+		"no repeat"
+		"frame rate" 15
+		"random start frame"
+	"lifetime" 24
+	"random angle" 360
+	"random frame rate" 5
+	"random spin" 2
+	"random velocity" .4
+	"velocity scale" .4
+
+
+
 ship "Nova Firefly"
 	noun "creature"
 	sprite "ship/nova firefly"
@@ -44,9 +58,9 @@ ship "Nova Firefly"
 		"gaslining" 1
 		"jump drive" 1
 		"jump speed" 1
-		"jump effect" "flamethrower die"
-		"jump in sound" "flamethrower"
-		"jump out sound" "flamethrower"
+		"jump effect" "pug flamethrower die"
+		"jump in sound" "nuke"
+		"jump out sound" "nuke"
 		"ramscoop" 2
 		"solar collection" 2
 		weapon
