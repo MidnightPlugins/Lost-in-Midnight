@@ -877,10 +877,12 @@ mission "Ancestral Lands: Supply Run 1"
 	description "The Unfettered colonists are in need of supplies. Deliver <cargo> to <destination>. Payment is <payment>."
 	cargo random 5 2 .1
 	source
+		government "Hai (Unfettered)"
 		planet Oldhome Wildland
 	stopover
 		planet Darkcloak Firelode Warfeed
 	to offer
+		has "event: Completed Journey to the Southwest"
 		random < 70
 	on stopover
 		dialog `The Unfettered load <cargo> onto your ship. Now you just have to deliver it to <destination>.`
@@ -895,10 +897,12 @@ mission "Ancestral Lands: Supply Run 2"
 	description "The Unfettered colonists are in need of supplies. Deliver <cargo> to <destination>. Payment is <payment>."
 	cargo random 5 2 .1
 	source
+		government "Hai (Unfettered)"
 		planet Oldhome Wildland
 	stopover
 		planet Darkcloak Firelode Warfeed
 	to offer
+		has "event: Completed Journey to the Southwest"
 		random < 60
 	on stopover
 		dialog `The Unfettered load <cargo> onto your ship. Now you just have to deliver it to <destination>.`
@@ -914,10 +918,12 @@ mission "Ancestral Lands: Supply Run 3"
 	description "The Unfettered colonists are in need of supplies. Deliver <cargo> to <destination>. Payment is <payment>."
 	cargo random 5 2 .1
 	source
+		government "Hai (Unfettered)"
 		planet Oldhome Wildland
 	stopover
 		planet Darkcloak Firelode Warfeed
 	to offer
+		has "event: Completed Journey to the Southwest"
 		random < 50
 	on stopover
 		dialog `The Unfettered load <cargo> onto your ship. Now you just have to deliver it to <destination>.`
@@ -933,10 +939,12 @@ mission "Ancestral Lands: Supply Run 4"
 	description "The Unfettered colonists are in need of supplies. Deliver <cargo> to <destination>. Payment is <payment>."
 	cargo random 25 2 .05
 	source
+		government "Hai (Unfettered)"
 		planet Oldhome Wildland
 	stopover
 		planet Darkcloak Firelode Warfeed
 	to offer
+		has "event: Completed Journey to the Southwest"
 		random < 70
 	on stopover
 		dialog `The Unfettered load <cargo> onto your ship. Now you just have to deliver it to <destination>.`
@@ -951,10 +959,12 @@ mission "Ancestral Lands: Supply Run 5"
 	description "The Unfettered colonists are in need of supplies. Deliver <cargo> to <destination>. Payment is <payment>."
 	cargo random 25 2 .05
 	source
+		government "Hai (Unfettered)"
 		planet Oldhome Wildland
 	stopover
 		planet Darkcloak Firelode Warfeed
 	to offer
+		has "event: Completed Journey to the Southwest"
 		random < 60
 	on stopover
 		dialog `The Unfettered load <cargo> onto your ship. Now you just have to deliver it to <destination>.`
@@ -970,10 +980,12 @@ mission "Ancestral Lands: Supply Run 6"
 	description "The Unfettered colonists are in need of supplies. Deliver <cargo> to <destination>. Payment is <payment>."
 	cargo random 25 2 .05
 	source
+		government "Hai (Unfettered)"
 		planet Oldhome Wildland
 	stopover
 		planet Darkcloak Firelode Warfeed
 	to offer
+		has "event: Completed Journey to the Southwest"
 		random < 50
 	on stopover
 		dialog `The Unfettered load <cargo> onto your ship. Now you just have to deliver it to <destination>.`
@@ -991,10 +1003,12 @@ mission "Ancestral Lands: Delivery 1"
 	description "Deliver <cargo> to <destination>. Payment is <payment>."
 	cargo random 5 2 .1
 	source
+		government "Hai (Unfettered)"
 		planet Oldhome Wildland
 	destination
 		planet Darkcloak Firelode Warfeed
 	to offer
+		has "event: Completed Journey to the Southwest"
 		random < 70
 	on complete
 		payment
@@ -1007,10 +1021,12 @@ mission "Ancestral Lands: Delivery 2"
 	description "Deliver <cargo> to <destination>. Payment is <payment>."
 	cargo random 5 2 .1
 	source
+		government "Hai (Unfettered)"
 		planet Oldhome Wildland
 	destination
 		planet Darkcloak Firelode Warfeed
 	to offer
+		has "event: Completed Journey to the Southwest"
 		random < 60
 	on complete
 		payment
@@ -1024,10 +1040,12 @@ mission "Ancestral Lands: Delivery 3"
 	description "Deliver <cargo> to <destination>. Payment is <payment>."
 	cargo random 5 2 .1
 	source
+		government "Hai (Unfettered)"
 		planet Oldhome Wildland
 	destination
 		planet Darkcloak Firelode Warfeed
 	to offer
+		has "event: Completed Journey to the Southwest"
 		random < 50
 	on complete
 		payment
@@ -1041,10 +1059,12 @@ mission "Ancestral Lands: Delivery 4"
 	description "Deliver <cargo> to <destination>. Payment is <payment>."
 	cargo random 25 2 .05
 	source
+		government "Hai (Unfettered)"
 		planet Oldhome Wildland
 	destination
 		planet Darkcloak Firelode Warfeed
 	to offer
+		has "event: Completed Journey to the Southwest"
 		random < 70
 	on complete
 		payment
@@ -1057,10 +1077,12 @@ mission "Ancestral Lands: Delivery 5"
 	description "Deliver <cargo> to <destination>. Payment is <payment>."
 	cargo random 25 2 .05
 	source
+		government "Hai (Unfettered)"
 		planet Oldhome Wildland
 	destination
 		planet Darkcloak Firelode Warfeed
 	to offer
+		has "event: Completed Journey to the Southwest"
 		random < 60
 	on complete
 		payment
@@ -1074,10 +1096,12 @@ mission "Ancestral Lands: Delivery 6"
 	description "Deliver <cargo> to <destination>. Payment is <payment>."
 	cargo random 25 2 .05
 	source
+		government "Hai (Unfettered)"
 		planet Oldhome Wildland
 	destination
 		planet Darkcloak Firelode Warfeed
 	to offer
+		has "event: Completed Journey to the Southwest"
 		random < 50
 	on complete
 		payment
@@ -1091,6 +1115,7 @@ mission "Ancestral Lands: Pirate Raid"
 	name "Unfettered Pirate Raid"
 	description "Lead an Unfettered fleet on raid against pirates in <waypoints>. Then return to <origin>."
 	source
+		government "Hai (Unfettered)"
 		planet Oldhome Wildland
 	waypoint Orbona
 	to offer
@@ -1113,7 +1138,10 @@ mission "Ancestral Lands: Pirate Raid"
 		government "Hai (Unfettered)"
 		personality escort plunders
 		ship "Megalocoleus (Jump)" "Go Ku"
+	on abort
+		"reputation: Hai (Unfettered)" <?= -1000
 	on fail
+		"reputation: Hai (Unfettered)" <?= -1000
 		dialog `[MISSION FAILED]: The Megalocoleus "Go Ku" was an important asset to the Unfettered of the Ancestral Lands. With it gone, they are unlikely to entrust you with future raids. If life were a game you could load a save file and try again.`
 	on complete
 		clear "Ancestral Lands: Marauder Raid: offered"
@@ -1125,6 +1153,7 @@ mission "Ancestral Lands: Marauder Raid"
 	name "Unfettered Marauder Raid"
 	description "Lead an Unfettered fleet on raid against marauder ships in <waypoints>. Then return to <origin>."
 	source
+		government "Hai (Unfettered)"
 		planet Oldhome Wildland
 	waypoint Orbona
 	to offer
@@ -1147,7 +1176,10 @@ mission "Ancestral Lands: Marauder Raid"
 		government "Hai (Unfettered)"
 		personality escort plunders
 		ship "Megalocoleus (Jump)" "Go Ku"
+	on abort
+		"reputation: Hai (Unfettered)" <?= -1000
 	on fail
+		"reputation: Hai (Unfettered)" <?= -1000
 		dialog `[MISSION FAILED]: The Megalocoleus "Go Ku" was an important asset to the Unfettered of the Ancestral Lands. With it gone, they are unlikely to entrust you with future raids. If life were a game you could load a save file and try again.`
 	on complete
 		clear "Ancestral Lands: Independent Raid: offered"
@@ -1159,6 +1191,7 @@ mission "Ancestral Lands: Independent Raid"
 	name "Unfettered Pirate Raid"
 	description "Lead an Unfettered fleet on raid against independent ships in <waypoints>. Then return to <origin>."
 	source
+		government "Hai (Unfettered)"
 		planet Oldhome Wildland
 	waypoint Orbona
 	to offer
@@ -1179,7 +1212,10 @@ mission "Ancestral Lands: Independent Raid"
 		government "Hai (Unfettered)"
 		personality escort plunders
 		ship "Megalocoleus (Jump)" "Go Ku"
+	on abort
+		"reputation: Hai (Unfettered)" <?= -1000
 	on fail
+		"reputation: Hai (Unfettered)" <?= -1000
 		dialog `[MISSION FAILED]: The Megalocoleus "Go Ku" was an important asset to the Unfettered of the Ancestral Lands. With it gone, they are unlikely to entrust you with future raids. If life were a game you could load a save file and try again.`
 	on complete
 		clear "Ancestral Lands: Pirate Raid: offered"
@@ -1189,20 +1225,31 @@ mission "Ancestral Lands: Independent Raid"
 
 
 mission "Ancestral Lands: Nova Firefly Swarm"
+	repeat
 	name "Nova Firefly Swarm"
 	description "A large swarm of Nova Fireflies has entered <system>. Drive them off then land on <planet> for payment."
 	source
 		government "Hai (Unfettered)"
 		attributes "ancestral lands"
+	to offer
+		has "event: Completed Journey to the Southwest"
+		or
+			not "Randomize Ancestral Lands: Nova Firefly Swarm"
+			and
+				has "Randomize Ancestral Lands: Nova Firefly Swarm"
+				random < 20
 	on offer
 		conversation
 			`Suddenly you hear raised voices and shouting outside: "We are under attack! A swarm of Nova Fireflies has entered the system! We need every combat-worthy ship to join the defenses!" The Unfettered will probably pay you quite well if you assist them, but this could also be an easy way to get yourself killed.`
 			choice
 				`	(Stay here until the fight is over.)`
-					decline
+					defer
 				`	(Join the defense fleet.)`
 			`A few Unfettered pilots have gathered to help repel the Nova Firefly swarm. You join them, and take off together...`
 				launch
+	on defer
+		"reputation: Hai (Unfettered)" <?= -1000		
+		set "Randomize Ancestral Lands: Nova Firefly Swarm"
 	npc
 		government "Hai (Unfettered)"
 		personality launching staying heroic vindictive
@@ -1214,5 +1261,6 @@ mission "Ancestral Lands: Nova Firefly Swarm"
 	on visit
 		dialog `The swarm still threatens the system. Get back in the fight!`
 	on complete
+		set "Randomize Ancestral Lands: Nova Firefly Swarm"
 		payment 150000
 		dialog `The Unfettered pay you <payment> for your assistance.`
