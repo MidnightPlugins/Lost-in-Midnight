@@ -241,7 +241,7 @@ system Chasm
 			distance 322
 			period 30.7582
 		object "Rum Cellar"
-			sprite planet/station4
+			sprite planet/station1ver8
 			distance 505
 			period 60.4107
 			offset 250.347
@@ -316,7 +316,7 @@ system Diyu
 		period 473.776
 		offset 146.881
 		object "Wang Xiang Tai"
-			sprite planet/station4
+			sprite planet/station3ver8
 			distance 195.071
 			period 19.7335
 			offset 354.885
