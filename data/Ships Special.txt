@@ -250,7 +250,7 @@ ship "Kestrel Prototype"
 		"outfit space" 810
 		"weapon capacity" 390
 		"engine capacity" 210
-		"integrated systems" -1
+		"fused circuits" -1
 		weapon
 			"blast radius" 260
 			"shield damage" 2600
