@@ -1307,6 +1307,8 @@ mission "Gathering Specimens: Wanderer Ionic Research 3"
 ship "Storm Seeker" "Storm Seeker Reborn"
 	sprite "ship/storm seeker reborn"
 	thumbnail "thumbnail/storm seeker reborn-thumb"
+	add attributes
+		"integrated systems" -1
 	outfits
 		"Sunbeam" 6
 		"White Sun Reactor"

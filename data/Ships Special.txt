@@ -107,6 +107,7 @@ ship "Amalgam"
 		"outfit space" 282
 		"weapon capacity" 80
 		"engine capacity" 115
+		"integrated systems" -1
 		weapon
 			"blast radius" 45
 			"shield damage" 450
@@ -249,6 +250,7 @@ ship "Kestrel Prototype"
 		"outfit space" 810
 		"weapon capacity" 390
 		"engine capacity" 210
+		"integrated systems" -1
 		weapon
 			"blast radius" 260
 			"shield damage" 2600
