@@ -311,7 +311,7 @@ outfit "Leviathan Comic #1"
 
 outfit "Liquid Metal Hull"
 	category "Systems"
-	thumbnail "outfit/nasa-pia22895"
+	thumbnail "outfit/liquid metal hull"
 	cost 1000000
 	"mass" 6
 	"outfit space" -6
