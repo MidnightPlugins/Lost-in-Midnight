@@ -384,7 +384,7 @@ person "Liquid Metal"
 	system
 		government "Pirate" "Uninhabited"
 	personality
-		timid uninterested mining harvests unconstrained
+		timid uninterested mining harvests unconstrained mute
 			confusion 30
 	ship "Liquid Metal" "Liquid Metal"
 		"uncapturable"

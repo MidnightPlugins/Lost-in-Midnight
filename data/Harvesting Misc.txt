@@ -45,8 +45,9 @@ outfit "Fossil"
 	thumbnail "outfit/harvested fossil"
 	"flotsam sprite" "effect/flotsam fossil"
 	"mass" 1
-	"installable" -1
 	description "An alien fossil found in the void of space. Unless you can find the right buyer, most will only see a cheap trinket that can be sold as a souvenir to gullible tourists."
+	description "This is a rare specimen. You can install it on your ship to keep it from getting mixed in with the regular cargo."
+
 
 minable "metallic asteroid"
 	sprite "asteroid/large rock/spin"
@@ -73,6 +74,9 @@ outfit "Space Junk"
 	"mass" 1
 	"installable" -1
 	description "Centuries after they've ceased functioning, the wreckage of old satellites and probes can still be found in the systems near Earth. The reward for recycling this junk isn't much, but if you won't do your part to keep the galaxy clean, who will?"
+
+
+
 
 mission "Harvesting: Fossil Acquisitions"
 	invisible

@@ -314,10 +314,25 @@ mission "Midnight Market: Project THOR 2"
 		"Midnight Market" ++
 		payment -2000000
 		outfit "T.H.O.R." 1
+		set "T.H.O.R"
 	on complete
 		log `Barmy seems to be alright with letting me hold onto T.H.O.R. so long as I send him combat data. Seems like fair deal.`
 		conversation
 			`Barmy Edward greets you at the spaceport when you land. "Spaceport security detected T.H.O.R.'s systems in your cargo hold. I'm not going to ask how you got it. And it's probably safer in your hands than most others. But if you do use it, just be sure to record combat data and send it to me."`
+
+
+mission "Midnight Market: Project THOR patch"
+	landing
+	invisible
+	to offer
+		or
+			has "Midnight Market: Project THOR 2: active"
+			has "Midnight Market: Project THOR 2: done"
+	on offer
+		set "T.H.O.R."
+		fail
+
+
 
 mission "Midnight Market: Cloaking Device 0"
 	landing

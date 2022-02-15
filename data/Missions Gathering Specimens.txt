@@ -24,7 +24,7 @@ mission "Gathering Specimens: Gray Eye"
 	npc board
 		government "Indigenous Lifeform"
 		system "Kor Ak'Mari"
-		personality waiting staying uninterested mute marked
+		personality target waiting staying uninterested mute marked
 		ship "Gray Eye Specimen"
 	on fail
 		clear "Gathering Specimens: Gray Eye: offered"
@@ -72,7 +72,7 @@ mission "Gathering Specimens: Luminazoa"
 	npc board
 		government "Indigenous Lifeform"
 		system "Kalsolli"
-		personality waiting staying uninterested mute marked
+		personality target waiting staying uninterested mute marked
 		ship "Luminazoa Specimen"
 	on fail
 		clear "Gathering Specimens: Luminazoa: offered"
@@ -121,7 +121,7 @@ mission "Gathering Specimens: Ionic Leech"
 	npc board
 		government "Indigenous Predator"
 		system "Ultima Thule"
-		personality waiting staying uninterested mute marked
+		personality target waiting staying uninterested mute marked
 		ship "Ionic Leech Specimen"
 	on fail
 		clear "Gathering Specimens: Ionic Leech: offered"
@@ -169,7 +169,7 @@ mission "Gathering Specimens: Astero Nautilus"
 	npc board
 		government "Indigenous Predator"
 		system "Pebble Beach"
-		personality waiting staying uninterested mute marked
+		personality target waiting staying uninterested mute marked
 		ship "Astero Nautilus Specimen"
 	on fail
 		clear "Gathering Specimens: Astero Nautilus: offered"
@@ -217,7 +217,7 @@ mission "Gathering Specimens: Plasma Parasite"
 	npc board
 		government "Indigenous Lifeform (Hostile)"
 		system Nebulous
-		personality derelict waiting staying uninterested mute marked
+		personality derelict target waiting staying uninterested mute marked
 		ship "Plasma Parasite Specimen"
 	on fail
 		clear "Gathering Specimens: Plasma Parasite: offered"
@@ -270,7 +270,7 @@ mission "Gathering Specimens: Nova Firefly"
 	npc board
 		government "Invasive Lifeform"
 		system Hazehai
-		personality waiting staying uninterested mute marked
+		personality target waiting staying uninterested mute marked
 		ship "Nova Firefly Specimen"
 	on fail
 		clear "Gathering Specimens: Nova Firefly: offered"
@@ -318,7 +318,7 @@ mission "Gathering Specimens: Star Gazer"
 	npc board
 		government "Invasive Lifeform"
 		system "Watcher's Nest"
-		personality waiting staying uninterested mute marked
+		personality target waiting staying uninterested mute marked
 		ship "Star Gazer Specimen"
 	on fail
 		clear "Gathering Specimens: Star Gazer: offered"
@@ -1387,7 +1387,7 @@ mission "Gathering Specimens: Liquid Metal Escapes"
 		government "Indigenous Lifeform"
 		system
 			government "Pirate" "Uninhabited" "Neutral" "Independent"
-		personality waiting uninterested mining harvests unconstrained
+		personality waiting uninterested mining harvests unconstrained mute
 			confusion 30
 		fleet "Liquid Metal"
 		dialog `The Liquid Metal must have snacked on some interesting ships...`
@@ -1432,7 +1432,7 @@ mission "Gathering Specimens: Liquid Metal Amalgam"
 				accept
 	npc kill
 		government "Test Dummy"
-		personality target entering vindictive marked unconstrained
+		personality target entering vindictive marked unconstrained mute
 			confusion 10
 		ship "Amalgam" "Mythreal"
 		dialog `The Mythreal is no longer a threat. Return to origin and check if the authorities will reward you for your efforts.`

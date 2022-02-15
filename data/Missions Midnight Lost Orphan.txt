@@ -61,13 +61,14 @@ mission "Midnight Lost Orphan: Captain of Atrocity"
 	destination Earth
 	to offer
 		has "captain of atrocity"
-		random < ( 19 + "captain of atrocity" )
+		random < ( 24 + "captain of atrocity" )
 	on offer
 		require "Midnight's Lost Orphan" 1
 		"captain of atrocity" ++
-		dialog `You enjoy a perverse pleasure while wielding the supernatural powers granted to you by Midnight's Lost Orphan. You anticipate slaughtering the defenders with unrestrained cruelty and malice.`
-	on accept
-		fail
+		conversation
+			scene "outfit/midnight lost orphan"
+			`You enjoy a perverse pleasure while wielding the supernatural powers granted to you by Midnight's Lost Orphan. You anticipate slaughtering the defenders with unrestrained cruelty and malice.`
+				depart
 
 mission "Midnight Lost Orphan: Captain of Atrocity 2"
 	invisible
@@ -134,10 +135,11 @@ mission "Midnight Lost Orphan: Pirate Atrocity"
 		require "Midnight's Lost Orphan" 1
 		"reputation: Pirate" -= 10
 		conversation
+			scene "outfit/midnight lost orphan"
 			`You wake up in an alley. You don't remember how you got here or why your hands are covered in blood. You feel relieved when you realize that the blood isn't yours. You try your best to conceal your hands as you make your way back to your ship...`
 				accept
 	on accept
-		"captain of atrocity" ++
+		"captain of atrocity" += 10
 		fail
 
 mission "Midnight Lost Orphan: Republic Atrocity"
@@ -151,10 +153,11 @@ mission "Midnight Lost Orphan: Republic Atrocity"
 		require "Midnight's Lost Orphan" 1
 		"reputation: Republic" -= 10
 		conversation
+			scene "outfit/midnight lost orphan"
 			`You wake up in an alley. You don't remember how you got here or why your hands are covered in blood. You feel relieved when you realize that the blood isn't yours. You try your best to conceal your hands as you make your way back to your ship...`
 				accept
 	on accept
-		"captain of atrocity" ++
+		"captain of atrocity" += 10
 		fail
 
 mission "Midnight Lost Orphan: Syndicate Atrocity"
@@ -168,10 +171,11 @@ mission "Midnight Lost Orphan: Syndicate Atrocity"
 		require "Midnight's Lost Orphan" 1
 		"reputation: Syndicate" -= 10
 		conversation
+			scene "outfit/midnight lost orphan"
 			`You wake up in an alley. You don't remember how you got here or why your hands are covered in blood. You feel relieved when you realize that the blood isn't yours. You try your best to conceal your hands as you make your way back to your ship...`
 				accept
 	on accept
-		"captain of atrocity" ++
+		"captain of atrocity" += 10
 		fail
 
 mission "Midnight Lost Orphan: Free Worlds Atrocity"
@@ -185,10 +189,11 @@ mission "Midnight Lost Orphan: Free Worlds Atrocity"
 		require "Midnight's Lost Orphan" 1
 		"reputation: Free Worlds" -= 10
 		conversation
+			scene "outfit/midnight lost orphan"
 			`You wake up in an alley. You don't remember how you got here or why your hands are covered in blood. You feel relieved when you realize that the blood isn't yours. You try your best to conceal your hands as you make your way back to your ship...`
 				accept
 	on accept
-		"captain of atrocity" ++
+		"captain of atrocity" += 10
 		fail
 
 mission "Midnight Lost Orphan: Hai Atrocity"
@@ -203,10 +208,11 @@ mission "Midnight Lost Orphan: Hai Atrocity"
 		require "Midnight's Lost Orphan" 1
 		"reputation: Hai" -= 10
 		conversation
+			scene "outfit/midnight lost orphan"
 			`You wake up in an alley. You don't remember how you got here or why your hands are covered in blood. You feel relieved when you realize that the blood isn't yours. You try your best to conceal your hands as you make your way back to your ship...`
 				accept
 	on accept
-		"captain of atrocity" ++
+		"captain of atrocity" += 10
 		fail
 
 mission "Midnight Lost Orphan: Remnant Atrocity"
@@ -220,10 +226,11 @@ mission "Midnight Lost Orphan: Remnant Atrocity"
 		require "Midnight's Lost Orphan" 1
 		"reputation: Remnant" -= 10
 		conversation
+			scene "outfit/midnight lost orphan"
 			`You wake up in an alley. You don't remember how you got here or why your hands are covered in blood. You feel relieved when you realize that the blood isn't yours. You try your best to conceal your hands as you make your way back to your ship...`
 				accept
 	on accept
-		"captain of atrocity" ++
+		"captain of atrocity" += 10
 		fail
 
 mission "Midnight Lost Orphan: Wanderer Atrocity"
@@ -237,10 +244,11 @@ mission "Midnight Lost Orphan: Wanderer Atrocity"
 		require "Midnight's Lost Orphan" 1
 		"reputation: Wanderer" -= 10
 		conversation
+			scene "outfit/midnight lost orphan"
 			`You wake up in an alley. You don't remember how you got here or why your hands are covered in blood. You feel relieved when you realize that the blood isn't yours. You try your best to conceal your hands as you make your way back to your ship...`
 				accept
 	on accept
-		"captain of atrocity" ++
+		"captain of atrocity" += 10
 		fail
 
 mission "Midnight Lost Orphan: Coalition Atrocity"
@@ -255,10 +263,11 @@ mission "Midnight Lost Orphan: Coalition Atrocity"
 		"reputation: Coalition" -= 10
 		"reputation: Heliarch" -= 10
 		conversation
+			scene "outfit/midnight lost orphan"
 			`You wake up in an alley. You don't remember how you got here or why your hands are covered in blood. You feel relieved when you realize that the blood isn't yours. You try your best to conceal your hands as you make your way back to your ship...`
 				accept
 	on accept
-		"captain of atrocity" ++
+		"captain of atrocity" += 10
 		fail
 
 
@@ -845,8 +854,7 @@ mission "Quash Lives!"
 		
 			branch "backup"
 				or
-					has "Midnight Market: Project THOR 2: active"
-					has "Midnight Market: Project THOR 2: done"
+					has "T.H.O.R."
 					has "Bearer of The Blade"
 		
 			label alone
@@ -879,16 +887,15 @@ mission "Quash Lives!"
 			
 			branch "Quantum T.H.O.R."
 				or
-					has "Midnight Market: Project THOR 2: active"
-					has "Midnight Market: Project THOR 2: done"
+					has "T.H.O.R."
 
 			` You have your Quantum Key Blade in hand, just in case. After your previous experience here, you aren't taking any chances. As you delve ever deeper into the ruin, the deafening silence smothers you. Finally, the quiet is broken by the sound of something behind you! As you turn to look, the Quantum Key Blade is wrenched out of your hands. It flies towards the darkness, where a massive gray hand catches it. A familiar Quarg steps out into your field of vision.`
 
 			label QuashKeyblade
 			choice
 				`	"Quash!?! You're alive!?!"`
-			scene "outfit/quantum dragon blade"
-			`"Were you counting on the Hai's little toy to save you?" It turns the blade over in its hands. "Alright then. Entertain me!" Quash tosses the Quantum Key Blade towards you. Quash charges towards you. When you catch the blade, the Quarg's almost upon you!`
+			scene "outfit/quantum key blade"
+			`	"Were you counting on the Hai's little toy to save you?" It turns the blade over in its hands. "Alright then. Entertain me!" Quash tosses the Quantum Key Blade towards you. Quash charges towards you. When you catch the blade, the Quarg's almost upon you!`
 			choice
 				`	(Activate Quantum Shifting.)`
 				`	(Stab at Quash.)`
@@ -897,7 +904,7 @@ mission "Quash Lives!"
 				goto QuashEnd
 
 			label stab
-			`	You stab at Quash, but it barrels past you as though the Quarg had Quantum Shifted with a Keyblade of its own. As turn to face it, the blade is ripped from your hands once again as you are telekinetically lifted into the air. "If one is knowledgeable of the quantum mechanics involved, getting the entity to emulate them is child's play."` 
+			`	You stab at Quash, but it barrels past you as though the Quarg had Quantum Shifted with a Keyblade of its own. As you turn to face it, the blade is ripped from your hands once again as you are telekinetically lifted into the air. "If one is knowledgeable of the quantum mechanics involved, getting the entity to emulate them is child's play."` 
 				goto QuashEnd
 			
 			label "Quantum T.H.O.R."
@@ -926,4 +933,5 @@ mission "Quash Lives!"
 				die
 							
 	on defer
+		clear "T.H.O.R."
 		outfit "T.H.O.R." -1

@@ -1077,7 +1077,7 @@ planet Corpse
 
 planet Detritus
 	attributes uninhabited midnight station south
-	landscape land/loc3
+	landscape land/station4ver8
 	description `This alien artifact is capable of connecting and disconnecting the hyperspace links to the system it is in. How it does this is a mystery. This particular facility has taken heavy damage from asteroid collisions. A hole large enough to squeeze your ship through has granted you access to its inner workings.`
 	government Uninhabited
 	security 0
@@ -1110,7 +1110,7 @@ planet Janus
 	attributes midnight archipelago pirate "dirt belt pirate" "dirt belt" frontier
 	landscape land/nasa3
 	description "When humans first arrived in Archipelago they learned that the alien device orbiting the oldest star could shut down the Hyperspace link to the system. Over the centuries, the system would turn into the galaxy's best secret hideout for pirates and anarchists. The almost Earth-like environment of Janus makes it a perfect rendezvous point for the rare instance when different pirate factions need a place to host a council."
-	spaceport `The spaceport is relatively modern for a pirate world. Few of the other spaceports you've visited are as well stocked and equipped. There are enough landing pads to handle traffic for multiple large fleets.`
+	spaceport `The spaceport is relatively modern for a pirate world. Few of the other pirate spaceports you've visited are as well stocked and equipped. There are enough landing pads to handle traffic for multiple large fleets.`
 	shipyard "Basic Ships"
 	shipyard "Northern Pirates"
 	shipyard "Southern Pirates"
@@ -1157,7 +1157,7 @@ planet "Naihe Qiao"
 planet "Parasite's Nest"
 	attributes uninhabited ringworld midnight
 	landscape land/station2dark
-	description `While this ring world is visible to Coalition astronomers, it sits outside their reach. The ring is completely intact. However, it has been completely overrun by plasma parasites. The infestation has reached the point where one misplaced blaster shot could set the whole ring on fire...`
+	description `While this ring world is visible to Coalition astronomers, it sits outside their reach. The ring is completely intact. However, it has been  overrun by plasma parasites. The infestation has reached the point where one misplaced blaster shot could set the whole ring on fire...`
 	government Uninhabited
 	security 0
 
@@ -1211,7 +1211,7 @@ planet "Rum Cellar"
 
 planet "Season's End"
 	attributes uninhabited station midnight
-	landscape land/space2
+	landscape land/space2spring
 	description `The technology and architecture of this abandoned station reminds you of the Wanderers. Could they have built it? It would mean they occupied this part of the galaxy some time in the distant past.`
 	description `There might be something here worth salvaging if you look hard enough. You just have to sift through a lot rusted decaying junk first. Whoever lived here in the past seemed to leave in a panicked rush. Judging from the condition of the station, the evacuation was chaotic and disorganized.`
 	spaceport `Although most of the spaceport is empty, there are a surprising amount of ships still docked here. However, a more thorough examination reveals that most are likely not in working condition.`
@@ -1278,3 +1278,77 @@ planet "Wang Xiang Tai"
 
 "landing message" "You cannot enter a collapsed wormhole."
 	"planet/collapsed wormhole"
+
+
+
+# The following missions/events change the land image for Season's End.
+
+mission "Season's End: Summer"
+	landing
+	invisible
+	source "Season's End"
+	to offer
+		random < 10
+		or
+			not "Season's End: Summer: failed"
+			has "Season's End: Spring: offered"
+	on offer
+		clear "Season's End: Autumn: offered"
+		clear "event: Season's End: Autumn"
+		event "Season's End: Summer"
+		fail
+		
+event "Season's End: Summer"
+	planet "Season's End"
+		landscape land/space2
+
+mission "Season's End: Autumn"
+	landing
+	invisible
+	source "Season's End"
+	to offer
+		random < 10
+		has "Season's End: Summer: offered"
+	on offer
+		clear "Season's End: Winter: offered"
+		clear "event: Season's End: Winter"
+		event "Season's End: Autumn"
+		fail
+
+event "Season's End: Autumn"
+	planet "Season's End"
+		landscape land/space2autumn
+
+mission "Season's End: Winter"
+	landing
+	invisible
+	source "Season's End"
+	to offer
+		random < 10
+		has "Season's End: Autumn: offered"
+	on offer
+		clear "Season's End: Spring: offered"
+		clear "event: Season's End: Spring"
+		event "Season's End: Winter"
+		fail
+
+event "Season's End: Winter"
+	planet "Season's End"
+		landscape land/space2winter
+		
+mission "Season's End: Spring"
+	landing
+	invisible
+	source "Season's End"
+	to offer
+		random < 10
+		has "Season's End: Autumn: offered"
+	on offer
+		clear "Season's End: Summer: offered"
+		clear "event: Season's End: Summer"
+		event "Season's End: Spring"
+		fail
+				
+event "Season's End: Spring"		
+	planet "Season's End"
+		landscape land/space2spring
