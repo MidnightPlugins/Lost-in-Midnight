@@ -52,14 +52,22 @@ Endless Sky Photographs:
 
 Additional Image Sources:
 	
-Derivative Files: images/ship/geddonian worldcrusher/*
-source name: 24-cell-orig.gif
-Copyright: Jason Hise
-License: CC0 1.0
-Comment: created different animations using a non-animated version of the image
+images/ship/geddonian worldcrusher/*
+	source name: 24-cell-orig.gif
+	Copyright: Jason Hise
+	License: CC0 1.0
+	Comment: created different animations using a non-animated version of the image
 
-https://creativecommons.org/publicdomain/zero/1.0/deed.en
+	https://creativecommons.org/publicdomain/zero/1.0/deed.en
 
 
 
+
+image/outfit/liquid metal hull
+image/outfit/liquid metal specimen
+	source name: nasa-pia22895
+	Copyright: NASA
+	License: public-domain
+	 From NASA, and therefore in the public domain because they were created by
+	 government employees while doing work for the government.
 
