@@ -85,7 +85,7 @@ mission "Destroy Independence (North)"
 			
 			label introduction
 			scene "scene/scene-mastodon"
-			`	"I'm an information broker. I have info on the route that the Mastodon city ship 'Independence' will be taking on its next flight. I'm willing to sell for 15000. Are you interested?"`
+			`	"I'm an information broker. I have info on the route that the Mastodon city ship 'Independence' will be taking on its next flight. I'm willing to sell for 15,000. Are you interested?"`
 			choice
 				`	"Alright, I'll buy in."`
 					goto sucker
@@ -99,7 +99,7 @@ mission "Destroy Independence (North)"
 					defer
 			
 			label sucker
-			`	You place 15000 in credit chips on the table and she hands you a data chip. "Pleasure doing business with you, captain."`
+			`	You place 15,000 in credit chips on the table and she hands you a data chip. "Pleasure doing business with you, captain."`
 			`	When you load the data from the chip, you learn that the Independence will pass through the Mirzam system very soon. There isn't much room to take detours...`
 				accept
 
@@ -154,7 +154,7 @@ mission "Destroy Independence (South)"
 				
 			label introduction
 			scene "scene/scene-mastodon"
-			`	"I'm an information broker. I have info on the route that the Mastodon city ship 'Independence' will be taking on its next flight. I'm willing to sell for 15000. Are you interested?"`
+			`	"I'm an information broker. I have info on the route that the Mastodon city ship 'Independence' will be taking on its next flight. I'm willing to sell for 15,000. Are you interested?"`
 			choice
 				`	"Alright, I'll buy in."`
 					goto sucker
@@ -168,7 +168,7 @@ mission "Destroy Independence (South)"
 					defer
 			
 			label sucker
-			`	You place 15000 in credit chips on the table and she hands you a data chip. "Pleasure doing business with you, captain."`
+			`	You place 15,000 in credit chips on the table and she hands you a data chip. "Pleasure doing business with you, captain."`
 			`	When you load the data from the chip, you learn that the Independence will pass through the Holeb system very soon. There isn't much room to take detours...`
 				accept
 
@@ -425,7 +425,7 @@ mission "Jump Drive Theft 1"
 	on offer
 		require "Jump Drive" 0
 		conversation
-			`You receive a message when you land. "Captain <first> <last>, you have a reputation for doing competent work. We have a job suitable for a person with your skills and experience with less than legal activities. 1000000 credit payment on delivery. Will you accept?`
+			`You receive a message when you land. "Captain <first> <last>, you have a reputation for doing competent work. We have a job suitable for a person with your skills and experience with less than legal activities. 1,000,000 credit payment on delivery. Will you accept?`
 			choice
 				`	(Accept.)`
 					goto details

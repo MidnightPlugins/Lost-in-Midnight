@@ -187,7 +187,7 @@ mission "Angri Byrds: Peace Through Strength 2"
 			`	"Hello Captain <first> <last>," Ektasi Rek welcomes you. We have invited you here to discuss a formal cessation of hostilities between you and our people.`
 			`	"Too many have died in needless battle with you," adds Tema'a Iriket. "Our [first? primary?] focus should be on developing these new worlds, not [participating? engaging?] in pointless warfare over a [robbery? pillaging?] between this human and the Pug." Several who are sitting near her nod in agreement.`
 			`	"There are some who [argue? preach?] the Pug have abandoned us to our fate here because of the actions of Captain <last>," states Sobari Tele'ek. There are murmurs amongst those present and from the agitation in their voices, you're certain there are some here who would shoot you now if they thought they could get away with it.`
-			`	Meto Pa'aret has been silent, quietly tinkering with a Kor Mereti Reasoning Node while the others were talking. When he realizes it's his turn to speak, he states "The Mereti were willing to fight <last> on our behalf at first, but after the [failure? tragedy?] with the Exiles, their collective opinion is in disarray."`
+			`	Meto Pa'aret has been silent, quietly tinkering with a Kor Mereti Reasoning Node while the others were talking. When he realizes it's his turn to speak, he states, "The Mereti were willing to fight <last> on our behalf at first, but after the [failure? tragedy?] with the Exiles, their collective opinion is in disarray."`
 			`	Rek speaks again. "Ultimately, fighting with you now is not in the best interest of our people. We are prepared to cease hostilities if you will release all tribute demands you have placed upon our worlds."`
 			choice
 				`	(Reject their offer.)`

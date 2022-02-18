@@ -54,7 +54,7 @@ mission "Cartography: Quarg Hitchhiker 1"
 
 	on offer
 		conversation
-			`You are surprised to see a Quarg approaching you. "Greetings human. I am in need of transport. Can you help me? I can pay you 90000 credits after we arrive."`
+			`You are surprised to see a Quarg approaching you. "Greetings human. I am in need of transport. Can you help me? I can pay you 90,000 credits after we arrive."`
 			label negotiation
 			choice
 				`	"Welcome aboard. I'll do my best to get you where you're going."`
@@ -93,7 +93,7 @@ mission "Cartography: Quarg Hitchhiker 1"
 		event "Archipelago reveal"
 
 	on enter Orbona
-		dialog `When you arrive in Orbona, Quash asks you to transmit a certain coded signal far beyond the edge of the system. Not long after, your navigational computer shows a path to a new system has opened! "As promised, the path ahead is clear." says Quash.`
+		dialog `When you arrive in Orbona, Quash asks you to transmit a certain coded signal far beyond the edge of the system. Not long after, your navigational computer shows a path to a new system has opened! "As promised, the path ahead is clear," says Quash.`
 
 	on enter Archipelago
 		conversation
@@ -102,7 +102,7 @@ mission "Cartography: Quarg Hitchhiker 1"
 	on visit
 		dialog `You look for Quash, but realize that it took a ride on one of your escorts! Better depart and wait for your escorts to arrive in this star system.`
 	on complete
-		dialog `Quash says "Meet me at landing pad Q in the spaceport after an hour to receive your payment. As for the transmission data that unlocks the path to Archipelago, feel free to use it as a bonus for a job well done."`
+		dialog `Quash says, "Meet me at landing pad Q in the spaceport after an hour to receive your payment. As for the transmission data that unlocks the path to Archipelago, feel free to use it as a bonus for a job well done."`
 
 event "Archipelago reveal"
 	system Archipelago
@@ -120,7 +120,7 @@ mission "Cartography: Quarg Hitchhiker 2"
 		conversation
 			scene "thumbnail/carabao-thumb"
 			`When you arrive at landing pad Q, you are surprised to find it occupied by a city ship. While there are some similarities to a Bactrian, it seems to be a different model ship.`
-			`	"Welcome, Captain <first> <last>. Please, come aboard my new ship." a boarding ramp descends from an open entry hatch. It's dark inside.`
+			`	"Welcome, Captain <first> <last>. Please, come aboard my new ship." A boarding ramp descends from an open entry hatch. It's dark inside.`
 			choice
 				`	(Enter the ship.)`
 					goto enter
@@ -133,7 +133,7 @@ mission "Cartography: Quarg Hitchhiker 2"
 			label enter
 			scene "outfit/quarg countermeasures"
 			`	Soon after you enter, your eyes adjust to the low light. The four corners of the room are occupied by alien devices that provide the only internal light sources. On the floor is a pouch, a briefcase, and a series of bloodstains.`
-			`	"Sorry about the mess." Quash's voice emanates from a speaker in the ceiling. "The business associate who helped me acquire this vessel chose to alter the terms of our agreement. He chose poorly. I'm certain you are a trustworthy businessman who would not engage in such duplicitous behavior. Your payment of 90000 credits is in the pouch on the floor. Go ahead, you've earned it."`
+			`	"Sorry about the mess." Quash's voice emanates from a speaker in the ceiling. "The business associate who helped me acquire this vessel chose to alter the terms of our agreement. He chose poorly. I'm certain you are a trustworthy businessman who would not engage in such duplicitous behavior. Your payment of 90,000 credits is in the pouch on the floor. Go ahead, you've earned it."`
 			choice
 				`	(Take the pouch)`
 					goto departure
@@ -209,7 +209,7 @@ mission "Cartography: Poisonwood Trailblazer"
 		conversation
 			scene "scene/scene-trailblazerdesert"
 			`It's been a while since you last visited the archaeological dig site and you are curious at how they have progressed in excavating the hull of that crashed ship. When you arrive, you find that they have excavated what remains of the ship, but have left it to languish exposed to the elements.`
-			`	Millie arrives to greet you. "Welcome back, Captain <last>. We were hoping to find more buried beyond the ship, but this is all we've found for now. The local government has no plans to keep the wrecked hull. Things might've turned out differently if Foster had shown up, but all we have is you. Would you be interested in purchasing it? We estimate 4400000 credits is a fair price for an empty hull of this size and condition."`
+			`	Millie arrives to greet you. "Welcome back, Captain <last>. We were hoping to find more buried beyond the ship, but this is all we've found for now. The local government has no plans to keep the wrecked hull. Things might've turned out differently if Foster had shown up, but all we have is you. Would you be interested in purchasing it? We estimate 4,400,000 credits is a fair price for an empty hull of this size and condition."`
 			choice
 				`	"Sure, I enjoy restoring old ships to working condition."`
 					goto purchase
@@ -426,7 +426,7 @@ mission "Cartography: Quarg Hitchhiker 3"
 			
 			`	"I can share the knowledge I gain of the hidden system I am looking for. I'll add in the hyperspace link codes for Diyu if you don't already have them."`
 			choice
-				`	"Sounds good. I accept"`
+				`	"Sounds good. I accept."`
 					accept
 	on accept
 		event "Diyu hyperlinks"
@@ -473,7 +473,7 @@ mission "Cartography: Quarg Hitchhiker 4"
 				launch
 				
 	on enter Diyu
-		dialog `It doesn't take long for the pirate ship you encountered earlier to follow you along with a few other ships in tow. Quash remarks "They lost quite a few ships stealing this for me." He taps his pocket. "Perhaps the hyperspace links to Archipelago wasn't enough compensation for them."`
+		dialog `It doesn't take long for the pirate ship you encountered earlier to follow you along with a few other ships in tow. Quash remarks, "They lost quite a few ships stealing this for me." He taps his pocket. "Perhaps the hyperspace links to Archipelago wasn't enough compensation for them."`
 		
 	npc kill
 		government "Pirate"
@@ -605,7 +605,7 @@ mission "Cartography: Chasm Link"
 				has "randomize Cartography: Chasm Link"
 				random < 40
 	on offer
-		dialog `Somone in a cloak and gas mask approaches you. "Do you need the hyperlink codes for entering this system? I can sell them to you for 100000 credits.`
+		dialog `Somone in a cloak and gas mask approaches you. "Do you need the hyperlink codes for entering this system? I can sell them to you for 100,000 credits.`
 	on decline
 		"randomize Cartography: Chasm Link" ++
 		"Cartography: Chasm Link: offered" --

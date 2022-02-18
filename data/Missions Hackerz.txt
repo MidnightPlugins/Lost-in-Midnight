@@ -50,7 +50,7 @@ mission "Hackerz 1"
 		has "Hackerz: offered"
 	on offer
 		conversation 
-			`As you disembark from your ship, a nearby street vendor tries to sell you a book. "How to Hack a Science Drone For Fun and Profit"`
+			`As you disembark from your ship, a nearby street vendor tries to sell you a book: "How to Hack a Science Drone For Fun and Profit".`
 			`	The author is listed as "P.K." Looks like some sort of 'get rich quick' scheme.`
 				decline
 	on decline
@@ -65,7 +65,7 @@ mission "Hackerz 1"
 mission "Hackerz 2A"
 	job
 	name "Trace Hackerz"
-	description "The source of the mysterious Hackerz has been traced back to <planet> in the <system> system. Apprehend these criminals and bring them in for a reward of 1000000 credits."
+	description "The source of the mysterious Hackerz has been traced back to <planet> in the <system> system. Apprehend these criminals and bring them in for a reward of 1,000,000 credits."
 	source
 		government "Republic" "Syndicate" "Free Worlds"
 	destination
@@ -76,7 +76,7 @@ mission "Hackerz 2A"
 mission "Hackerz 2B"
 	landing
 	name "Trace Hackerz"
-	description "The source of the mysterious Hackerz has been traced back to <planet> in the <system> system. Apprehend these criminals and bring them in for a reward of 1000000 credits."
+	description "The source of the mysterious Hackerz has been traced back to <planet> in the <system> system. Apprehend these criminals and bring them in for a reward of 1,000,000 credits."
 	to offer
 		has "Hackerz 2A: done"
 	on offer
@@ -127,7 +127,7 @@ mission "Hackerz 2B"
 mission "Hackerz 3"
 	job
 	name "Trace Hackerz"
-	description "The source of the mysterious Hackerz has been traced back to a derelict in orbit around <destination> system. Apprehend these criminals and bring them in for a reward of 1000000 credits."
+	description "The source of the mysterious Hackerz has been traced back to a derelict in orbit around <destination> system. Apprehend these criminals and bring them in for a reward of 1,000,000 credits."
 	source
 		government "Republic" "Syndicate" "Free Worlds"
 	destination
@@ -174,7 +174,7 @@ mission "Hackerz 3: Derelict Patch"
 mission "Hackerz 4"
 	job
 	name "Trace Hackerz"
-	description "The source of the mysterious Hackerz has been traced back to <planet> in the <system> system. Apprehend these criminals and bring them in for a reward of 1000000 credits."
+	description "The source of the mysterious Hackerz has been traced back to <planet> in the <system> system. Apprehend these criminals and bring them in for a reward of 1,000,000 credits."
 	source
 		government "Republic" "Syndicate" "Free Worlds"
 	destination

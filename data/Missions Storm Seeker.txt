@@ -556,7 +556,7 @@ mission "Storm Seeker Counter Attack 3 Clue"
 mission "Storm Seeker Counter Attack 3"
 	job
 	name "Underworld Meeting"
-	description "Take <fare> to a clandestine meeting in <destination>'s underworld. Then return them to <origin>. Payment is 50000 credits."
+	description "Take <fare> to a clandestine meeting in <destination>'s underworld. Then return them to <origin>. Payment is 50,000 credits."
 	source "Wang Xiang Tai"
 	destination "Naihe Qiao"
 	passengers 1
@@ -578,7 +578,7 @@ mission "Storm Seeker Counter Attack 3"
 mission "Storm Seeker Counter Attack 4"
 	landing
 	name "Underworld Meeting"
-	description "Take <fare> to a clandestine meeting in <origin>'s underworld. Then return them to <destination>. Payment is 50000 credits."
+	description "Take <fare> to a clandestine meeting in <origin>'s underworld. Then return them to <destination>. Payment is 50,000 credits."
 	source "Naihe Qiao"
 	destination "Wang Xiang Tai"
 	passengers 1

@@ -66,7 +66,7 @@ mission "Metropolis 1"
 				accept
 
 	on complete
-		dialog `You receive a message from Joseph Welder. "Congratulations on finding all three sections of the Metropolis ship! Meet me at the spaceport when you're ready to combine them. Make sure you have 13530000 credits to cover labor costs. You won't find a better deal elsewhere."`
+		dialog `You receive a message from Joseph Welder. "Congratulations on finding all three sections of the Metropolis ship! Meet me at the spaceport when you're ready to combine them. Make sure you have 13,530,000 credits to cover labor costs. You won't find a better deal elsewhere."`
 
 
 
@@ -127,11 +127,11 @@ mission "Balthazar 3"
 				`	(Leave.)`
 
 			`	As you are leaving the facility, a technician approaches you. "You're looking for the Balthazar. Are you working on rebuilding the Exodus?"`
-			`	You nod in affirmation and she holds up a datachip, saying "My name is Maria Carpenter. This is the information of the customer who bought the Balthazar. If you find the ship and need help getting it operational, let me know." She hands the data chip to you. "I know a few other technicians willing to help. All we ask is that we be allowed to join the ship's crew once it's able to fly again."`
+			`	You nod in affirmation and she holds up a datachip, saying, "My name is Maria Carpenter. This is the information of the customer who bought the Balthazar. If you find the ship and need help getting it operational, let me know." She hands the data chip to you. "I know a few other technicians willing to help. All we ask is that we be allowed to join the ship's crew once it's able to fly again."`
 			choice
 				`	"You're willing to abandon your jobs here?"`
 			
-			`	She responds "We don't hate our jobs here. But bringing back the Exodus will be a historical event. We'll definitely want to be a part of that!"`
+			`	She responds, "We don't hate our jobs here. But bringing back the Exodus will be a historical event. We'll definitely want to be a part of that!"`
 				accept
 	on accept
 		log "People" "Maria Carpenter" `A technician at Syndicated Systems. She and her associates are willing to quit their jobs and join the crew of the Exodus in order to be a part of history.`
@@ -168,14 +168,14 @@ mission "Balthazar 4"
 			choice
 				`	"I want to buy the salvaging rights for the Balthazar."`
 				
-			`	"Hot diggity! I knew someone would want it eventually! 14520000 credits! I done my research! You won't be pulling the wool over my eyes!."`
+			`	"Hot diggity! I knew someone would want it eventually! 14,520,000 credits! I done my research! You won't be pulling the wool over my eyes!."`
 			choice
 				`	"No way. It's an old barnacle covered wreck. There's no guarantee the ship will even fly again.`
 			
-			`	"Fly?" For a moment, he stares out the window in quiet contemplation. "Fine! Fine. Ya done twisted my arm. 10000000 credits. Take it, space jockey!"`
+			`	"Fly?" For a moment, he stares out the window in quiet contemplation. "Fine! Fine. Ya done twisted my arm. 10,000,000 credits. Take it, space jockey!"`
 			
 			choice
-				`	"5000000 and I won't file a complaint with the port authority for you squatting on the rights."`
+				`	"5,000,000 and I won't file a complaint with the port authority for you squatting on the rights."`
 				
 			`	"Deal. You drive a hard bargain, space jockey." He pulls out a data pad and fills out the forms to transfer the rights ownership. "Do you think you'll actually get her to fly again?"`
 			
@@ -222,7 +222,7 @@ mission "Balthazar 6"
 		has "event: Balthazar salvage timer"
 		"credits" > 1000000
 	on offer
-		dialog `You receive a message from Maria Carpenter. They've salvaged the Balthazar, but need to replace some unsalvagable components with fresh ones from Foundry. A list of the required equipment is attached to her message. It will cost 500000 credits.`
+		dialog `You receive a message from Maria Carpenter. They've salvaged the Balthazar, but need to replace some unsalvagable components with fresh ones from Foundry. A list of the required equipment is attached to her message. It will cost 500,000 credits.`
 	on accept
 		payment -500000
 	on stopover
@@ -334,7 +334,7 @@ mission "Melchior 3"
 			choice
 				`	(Give him the postcard.)`
 
-			`	He looks at the card as he says "When dad passed away my sister, Cathleen, inherited that ship. She and I never really got along. When the Free Worlds declared independence from the Republic, she took it with her to Bourne." He passes the card back to you. "Thanks for the memories. But I'd rather forget."`
+			`	He looks at the card as he says, "When dad passed away my sister, Cathleen, inherited that ship. She and I never really got along. When the Free Worlds declared independence from the Republic, she took it with her to Bourne." He passes the card back to you. "Thanks for the memories. But I'd rather forget."`
 				accept
 	on accept
 		log "People" "Richard Wigglebottom III" `The grandson of the antique collector who purchased the Melchior from Zug. His sister Cathleen, who didn't get along with him, inherited the ship.`
@@ -406,7 +406,7 @@ mission "Melchior 5"
 				goto purchase
 				
 			label purchase
-			`	"Alright." He looks something up on a data pad. "6000000 credits. Don't bother haggling. I've already cut down the suggested price."`
+			`	"Alright." He looks something up on a data pad. "6,000,000 credits. Don't bother haggling. I've already cut down the suggested price."`
 			`	You look at the data pad and see that he has given you a huge discount.`
 			`	"Do you have a crew setup for it?" he asks`
 			choice
@@ -833,8 +833,8 @@ mission "Metropolis 2"
 		conversation
 			`After an exciting test flight, the Exodus has finally arrived to the celebration reception on Earth.`
 			`	"Alright everyone!" exclaims Joseph. "Begin the separation sequence and land!"`
-			`	"Caspar beginning separation sequence." states Tyler.`
-			`	"Balthazar beginning separation sequence." replies Maria.`
+			`	"Caspar beginning separation sequence," states Tyler.`
+			`	"Balthazar beginning separation sequence," replies Maria.`
 			`	"... What are you doing!?!" yells Cathleen.`
 			`	"... Don't blame me! The system isn't responding!" yells Richard.`
 			`	"Melchior, what is going on?" asks Joseph.`
@@ -921,7 +921,7 @@ mission "Metropolis Epilogue: Hiding in Plain Sight 2 (Balthazar model)"
 			choice
 				`	"Woah, really? I thought that was just the scale size."`
 			
-			`	"So, will you sell it to us? We can pay you 1000000 credits for it."`
+			`	"So, will you sell it to us? We can pay you 1,000,000 credits for it."`
 			choice
 				`	"Okay, sure. I can let it go at that price."`
 					goto sell
@@ -929,7 +929,7 @@ mission "Metropolis Epilogue: Hiding in Plain Sight 2 (Balthazar model)"
 					goto keep
 			
 			label sell
-			`	You all head to your ship, where you retrieve the model and exchange it with them for 1000000 credits. Both appear to be very happy with their purchase.`
+			`	You all head to your ship, where you retrieve the model and exchange it with them for 1,000,000 credits. Both appear to be very happy with their purchase.`
 				accept
 			
 			label keep
@@ -971,7 +971,7 @@ mission "Metropolis Epilogue: Hiding in Plain Sight 2 (no Balthazar model)"
 			choice
 				`	"Woah, really? I thought that was just the scale size."`
 			
-			`	"So, will you sell it to us? We can pay you 1000000 credits for it."`
+			`	"So, will you sell it to us? We can pay you 1,000,000 credits for it."`
 			choice
 				`	"Sorry, I already got rid of it."`
 					goto trash
@@ -1051,6 +1051,6 @@ mission "Metropolis Epilogue: Leviathan Comics"
 		payment 42000 200
 		conversation
 			scene "outfit/leviathan comic"
-			`As your Arach passenger pays you the <payment> you agreed upon, he says,"Volume one of Leviathan Comics, I noticed you have." He motions towards a small table nearby. The old comic book must have been left out by a previous passenger. "In good condition, it is. Worth 1000000, it may be. Enjoyed reading it again, I did. To inform you of its value, I decided. Until long after, the value of some things remains undiscovered." He disembarks from the ship.`
+			`As your Arach passenger pays you the <payment> you agreed upon, he says,"Volume one of Leviathan Comics, I noticed you have." He motions towards a small table nearby. The old comic book must have been left out by a previous passenger. "In good condition, it is. Worth 1,000,000, it may be. Enjoyed reading it again, I did. To inform you of its value, I decided. Until long after, the value of some things remains undiscovered." He disembarks from the ship.`
 			`You pick up the well worn book and remember that you traded that old Melchior post card for it. For a brief moment, as you carefully put the book away, you reminisce about your adventures traveling the galaxy in search of the pieces to assemble the metropolis ship Exodus.`
 

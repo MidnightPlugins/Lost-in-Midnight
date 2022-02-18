@@ -491,7 +491,7 @@ event "Grudge Legacy"
 
 mission "Grudge Bounty Hunting"
 	name "Disguised bandit near <system>"
-	description "A low-end pirate warship named Relentless Grudge is posing as a merchant ship near the <system> system. Select merchant ships until you find a ship with a matching name, then destroy it and report to <planet> for payment of 250000 credits."
+	description "A low-end pirate warship named Relentless Grudge is posing as a merchant ship near the <system> system. Select merchant ships until you find a ship with a matching name, then destroy it and report to <planet> for payment of 250,000 credits."
 	job
 	to offer
 		"combat rating" >= 400
@@ -768,7 +768,7 @@ mission "Grudge Hammer"
 
 mission "Grudge Smuggler"
 	name "Disguised smuggler near <system>"
-	description "A low-end drug smuggler named the Ecstasy is posing as a merchant ship near the <system> system. Select merchant ships until you find a ship with a matching name and scan its cargo for illegal substances. Once you have confirmed the target, destroy it and return to <planet>. Payment is 250000 credits."
+	description "A low-end drug smuggler named the Ecstasy is posing as a merchant ship near the <system> system. Select merchant ships until you find a ship with a matching name and scan its cargo for illegal substances. Once you have confirmed the target, destroy it and return to <planet>. Payment is 250,000 credits."
 	job
 	to offer
 		has "Grudge Fight 4: declined"
@@ -786,7 +786,7 @@ mission "Grudge Smuggler"
 				`	(Accept the bribe.)`
 				`	(Refuse the bribe.)`
 					accept
-			`	25000 credits is deposited to your account.`
+			`	25,000 credits is deposited to your account.`
 				decline
 	on enter Miaplacidus
 		conversation
@@ -796,7 +796,7 @@ mission "Grudge Smuggler"
 				`	(Accept the bribe.)`
 				`	(Refuse the bribe.)`
 					accept
-			`	25000 credits is deposited to your account.`
+			`	25,000 credits is deposited to your account.`
 				decline
 	on enter Phurad
 		conversation
@@ -806,7 +806,7 @@ mission "Grudge Smuggler"
 				`	(Accept the bribe.)`
 				`	(Refuse the bribe.)`
 					accept
-			`	25000 credits is deposited to your account.`
+			`	25,000 credits is deposited to your account.`
 				decline
 	on enter Talita
 		conversation
@@ -816,7 +816,7 @@ mission "Grudge Smuggler"
 				`	(Accept the bribe.)`
 				`	(Refuse the bribe.)`
 					accept
-			`	25000 credits is deposited to your account.`
+			`	25,000 credits is deposited to your account.`
 				decline
 	on enter Wazn
 		conversation
@@ -826,7 +826,7 @@ mission "Grudge Smuggler"
 				`	(Accept the bribe.)`
 				`	(Refuse the bribe.)`
 					accept
-			`	25000 credits is deposited to your account.`
+			`	25,000 credits is deposited to your account.`
 				decline
 
 	npc save
@@ -906,7 +906,7 @@ mission "Grudge Mama"
 			`When you return to your ship, you notice a charmingly pleasant older lady waiting for you.`
 			`	"Pardon me, are you the captain of this ship? I am looking for transportation to <planet>."`
 			choice
-				`	"I can take you there for 2000 credits."`
+				`	"I can take you there for 2,000 credits."`
 					goto welcome
 				`	"Sorry lady, I'm not headed in that direction."`
 					defer
@@ -1013,7 +1013,7 @@ mission "Grudge Mama"
 	on enter "Rutilicus"
 		conversation
 			`Soon after entering the system, Mara visits you in the cockpit.`
-			`	"So many new starships these days," she comments on the other ships landing and taking off. Gripping your right shoulder while pointing to your left, she asks "What kind of ship is that?"`
+			`	"So many new starships these days," she comments on the other ships landing and taking off. Gripping your right shoulder while pointing to your left, she asks, "What kind of ship is that?"`
 			choice
 				`	"Hmm... Let's see..."`
 					goto distraction

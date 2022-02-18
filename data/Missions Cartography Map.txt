@@ -251,7 +251,7 @@ mission "Cartography: The Map Missing Conservatory"
 				`	(Ask about their Jump Drive.)`
 				`	(Don't ask about their Jump Drive.)`
 					goto end
-			`"Let's keep it a secret. You didn't really think the restrooms in the girl's dormitory costs 1000000 credits to remodel, did you?"`
+			`"Let's keep it a secret. You didn't really think the restrooms in the girl's dormitory costs 1,000,000 credits to remodel, did you?"`
 			
 			label end
 			`The researchers promise to send a message if they project the locations of more systems.`
@@ -314,7 +314,7 @@ mission "Cartography: The Map Missing Alexandria"
 				`	(Ask about their Jump Drive.)`
 				`	(Don't ask about their Jump Drive.)`
 					goto end
-			`"Let's keep it a secret. You didn't really think the restrooms in the visitor center costs 1000000 credits to remodel, did you?"`
+			`"Let's keep it a secret. You didn't really think the restrooms in the visitor center costs 1,000,000 credits to remodel, did you?"`
 			
 			label end
 			`The researchers promise to send a message if they project the locations of more systems.`

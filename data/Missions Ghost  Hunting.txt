@@ -118,7 +118,7 @@ mission "Ghost Hunting: Dire Omen 3"
 			`	While walking around the spaceport you notice a woman studying the sky with a telescope. She's dressed like a stereotypical cowgirl from an old Earth western. The pistol at her hip is an overt warning to not consider her an easy mark. It is a necessary fashion accessory on any pirate world.`
 			`	"Looking for aliens?" you ask.`
 			`	"Did y'all get that pickup line from some discount bin?" she replies with a drawl.`
-			`	"Whoa, easy now." you raise your hands as a gesture of peace. "Actually, do you know anything about ghost ships?"`
+			`	"Whoa, easy now." You raise your hands as a gesture of peace. "Actually, do you know anything about ghost ships?"`
 			`	"The Dire Omen? Oh yeah, I may know a thang or two." She holds out her hand expectantly, palm up.`
 			choice
 				`	(Shake her hand.)`
@@ -172,8 +172,8 @@ mission "Ghost Hunting: Dire Omen 4"
 				decline
 			
 			label ask
-			`	After he is done filing his report you approach the captain and ask "Where did you last spot this 'ghost ship'?"`
-			`	"About halfway through the northern passage." he responds. "I didn't believe the tales of a haunted war ship. But the legend of the 'Dire Omen' is real! According to my scanner, the ship has no crew."`
+			`	After he is done filing his report you approach the captain and ask, "Where did you last spot this 'ghost ship'?"`
+			`	"About halfway through the northern passage," he responds. "I didn't believe the tales of a haunted war ship. But the legend of the 'Dire Omen' is real! According to my scanner, the ship has no crew."`
 				accept
 	on accept
 		log `A merchant captain claimed to have been attacked by a ghost ship he referred to as the "Dire Omen". The government official who filed the report seemed skeptical of his testimony.`
@@ -205,8 +205,8 @@ mission "Ghost Hunting: Dire Omen 5"
 			
 			label listen
 			`	"Our convoy was traveling through the northern passage when we were attacked by..." the merchant seems hesitant to continue.`
-			`	"Pirates! We were attacked by pirates." another merchant interjects.`
-			`	"No." says the first merchant. "We should speak the truth. You may find this hard to believe. But we were attacked by that ghost ship! The rumors are true!"`
+			`	"Pirates! We were attacked by pirates," another merchant interjects.`
+			`	"No," says the first merchant. "We should speak the truth. You may find this hard to believe. But we were attacked by that ghost ship! The rumors are true!"`
 			
 			choice
 				`	"What do you want from me?"`
@@ -579,13 +579,13 @@ mission "Ghost Hunting: Poltergeist King 2"
 				`	(Stay cool.)`
 					goto staycool
 			`	You whip out your pistol and order the men to back off slowly. "Cali, are you ok?" you call out.`
-			`	Cali turns towards you, startled by your sudden outburst. The men look at her. She looks at them. Then they all start laughing at you. As the laughter slowly dies down, she explains "Thanks for the knight in shinin' armor routine, but this is my crew!"`
+			`	Cali turns towards you, startled by your sudden outburst. The men look at her. She looks at them. Then they all start laughing at you. As the laughter slowly dies down, she explains, "Thanks for the knight in shinin' armor routine, but this is my crew!"`
 			`	With a bit of embarrassment, you put away your pistol.`
 			label staycool
 			`	"Hi Cali, see any ghost ships up there?"`
 			`	"This time, I'm actually lookin' fer aliens." She introduces you to the other guys. "Guys, <first> is the dude who saved our bacon back on Rajak. <first>, this here is the crew of the Lucky Horse Shoe." The guys thank you and introduce themselves, but it's hard to keep track of all their names.`
 			`	Cali lowers her voice, "A reliable feller spilled the beans to me about some aliens who raid this system from time to time. Sometimes the pirates get into regular 'ol scraps with enforcers from the syndicate, while a derelict alien ship is left adrift. And you know how the sayin' goes 'bout derelicts..."`
-			`	"Ain't no one has ownership rights to a derelict 'cept the one who gets to it first." you reply.`
+			`	"Ain't no one has ownership rights to a derelict 'cept the one who gets to it first," you reply.`
 			`	The group gets a good chuckle at your performance.`
 			`	Suddenly Cali's communicator starts beeping.`
 			`	"Hello?" she answers. "What? Begin preflight prep. We're on our way."`
@@ -668,7 +668,7 @@ mission "Ghost Hunting: Poltergeist King 2"
 	on complete
 		outfit "Jump Drive (Broken)" 1
 		conversation
-			`Back at the space port you find Cali. "Thank goodness you're OK! I saw the whole thang! Someone posted a video of it to the net." She shows you a portion of the video on a portable holo projector. "That's an interestin' haul you got there." she says, pausing the video to point at the broken jump drive. "I reckon you could try to pass it off to a gallery or a collector as some kind of modern art." she shrugs.`
+			`Back at the space port you find Cali. "Thank goodness you're OK! I saw the whole thang! Someone posted a video of it to the net." She shows you a portion of the video on a portable holo projector. "That's an interestin' haul you got there," she says, pausing the video to point at the broken jump drive. "I reckon you could try to pass it off to a gallery or a collector as some kind of modern art," she shrugs.`
 			scene "outfit/jump drive (broken)"
 		log `The Poltergeist King struck again. This time he tried to lure in pirate or syndicate salvagers with a rigged alien ship. I managed to escape his trap, but the only thing I was able to salvage was a broken jump drive.`
 
@@ -769,9 +769,9 @@ mission "Ghost Hunting: Zubenelgenubi Ghost Ship"
 				`	"Are you sure they aren't vampires?"`
 
 			`	As you're about to speak you are interrupted by another loud "clunk" from the door behind you. Suddenly, the door bursts open and the rotting corpse of a Saryd pushes it's way through! A piece of shrapnel from the broken door knocks you against the wall and you are momentarily too stunned to aim your gun at the rampaging creature. The mystery woman shoots the undead Saryd in the head until it falls to the floor.`
-			`	She stares at the corpse lying still on the ground and mutters "Like I said: zombie centaurs."`
+			`	She stares at the corpse lying still on the ground and mutters, "Like I said: zombie centaurs."`
 			`	You nod your head, still in disbelief despite what you've just witnessed.`
-			`	The woman activates a communication device. "Necromanteion, this is Greythatch. Come in for pickup." She turns to you and says "I'm leaving. If you're smart, you will too. My boarding crew is already dead and I'm not about to risk the few I have remaining to pilot my ship." She runs off without waiting for a reply. As you watch her go, you notice she's wearing a small backpack that isn't empty. Whatever she looted was probably not  worth the lives of her dead crew members.`
+			`	The woman activates a communication device. "Necromanteion, this is Greythatch. Come in for pickup." She turns to you and says, "I'm leaving. If you're smart, you will too. My boarding crew is already dead and I'm not about to risk the few I have remaining to pilot my ship." She runs off without waiting for a reply. As you watch her go, you notice she's wearing a small backpack that isn't empty. Whatever she looted was probably not  worth the lives of her dead crew members.`
 			`	Before you make up your mind on what to do next, the lights in the hall beyond the door stop flickering and stabilize, beckoning you to enter.`
 			choice
 				`	(Follow the lights.)`
@@ -868,7 +868,7 @@ mission "Ghost Hunting: Friendship 1"
 		has "main plot completed"
 	on offer
 		conversation
-			`As you are leaving the spaceport, some kids approach you. The oldest one asks "Excuse me, but are you a starship captain?"`
+			`As you are leaving the spaceport, some kids approach you. The oldest one asks, "Excuse me, but are you a starship captain?"`
 			choice
 				`	"Yes, I am. What business do you kids have with a starship captain?"`
 					goto kidstale

@@ -189,9 +189,9 @@ mission "Geddonia's Folly"
 			choice
 				`	"Why did they build the Worldcrusher?"`
 				`	"Who were the Geddonians fighting?"`
-			`	"You may find this difficult to believe. But the Worldcrusher was not built as a weapon of war. One of their youths constructed it in an attempt to impress the elders in a competition of scientific prowess." replies the voice in your head.`
+			`	"You may find this difficult to believe. But the Worldcrusher was not built as a weapon of war. One of their youths constructed it in an attempt to impress the elders in a competition of scientific prowess," replies the voice in your head.`
 			`	"A science project? You're telling me a kid's science project caused the downfall of their entire civilization?" you ask, disbelieving.`
-			`	"Yes. It was the Geddonian's folly that taught us the wisdom of limiting technological access to those who have the maturity to use it responsibly. Remember the Geddonians and learn from their downfall"`
+			`	"Yes. It was the Geddonian's folly that taught us the wisdom of limiting technological access to those who have the maturity to use it responsibly. Remember the Geddonians and learn from their downfall."`
 			`	As the voice fades from your mind you see visions of aliens made of light living in large crystalline structures that shatter as their world is destroyed. The image the vision presents of the Geddonian's physical nature is completely beyond your own experience. The closest approximation you can relate to them is that each resembled a star smaller in size than a human. They possessed telekinetic powers to manipulate their environment. Somehow, you're certain that if you were to encounter one and gaze upon it with your own eyes, you would go blind from the intensity of the light.`
 				decline
 

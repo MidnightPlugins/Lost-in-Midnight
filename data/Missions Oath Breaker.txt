@@ -336,12 +336,12 @@ mission "Oathbreaker Pirate Gossip"
 		log `Among the pirates there are rumors that Captain Arnold Benedict's flagship is of alien origin. A "Shield Fortress" that is described as having a huge wing span.`
 		conversation
 			`As you try to relax in the bar you hear someone mention the name of Arnold Benedict.`
-			`	"It was really him! He looked just like on the holovideos." says a man with a scar on his face.`
+			`	"It was really him! He looked just like on the holovideos," says a man with a scar on his face.`
 			`	"What was he doing on <planet>?" asks a woman with a mohawk.`
-			`	"Repairs and maintenance. A wanted fugitive like him fits in on worlds like this." replies the scarred man.`
-			`	Another man, one wearing a stereotypical pirate eyepatch, asks "Does he use a carrier or a cruiser?"`
+			`	"Repairs and maintenance. A wanted fugitive like him fits in on worlds like this," replies the scarred man.`
+			`	Another man, one wearing a stereotypical pirate eyepatch, asks, "Does he use a carrier or a cruiser?"`
 			scene "scene/scene-shieldfortress"
-			`	"Neither." replies the scarred man. "He has some weird alien ship that was salvaged by Marauders before he confiscated it. One of their crew referred to it as a 'Shield Fortress'. They attached parts of a carrier to it, giving it a huge wing span. The thing is a beast of a ship. A real monster."`
+			`	"Neither," replies the scarred man. "He has some weird alien ship that was salvaged by Marauders before he confiscated it. One of their crew referred to it as a 'Shield Fortress'. They attached parts of a carrier to it, giving it a huge wing span. The thing is a beast of a ship. A real monster."`
 				decline
 
 		
@@ -426,7 +426,7 @@ mission "Oathbreaker Fugitives Hideout Job 1"
 	job
 	deadline
 	name "Oathbreaker Hideout"
-	description "Received surveillance evidence indicating that there is an Oathbreaker presence on <destination>. Visit the system and destroy any Oathbreaker ships you encounter. Then land on <planet> to confirm their hideout is cleared. Payment is 150000 credits"
+	description "Received surveillance evidence indicating that there is an Oathbreaker presence on <destination>. Visit the system and destroy any Oathbreaker ships you encounter. Then land on <planet> to confirm their hideout is cleared. Payment is 150,000 credits."
 	source 
 		government "Free Worlds"
 	destination

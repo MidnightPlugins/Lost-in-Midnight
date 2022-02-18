@@ -247,7 +247,7 @@ mission "Cartography: Wanderer Shipyards"
 			choice
 				`	"Oh, I almost forgot. There's this interceptor..."`
 			scene "scene/scene-shallow pond"
-			`	"We're in the [planning, readying] stages for an interceptor, and that's up for consideration. But there's another [design, model] that looks like it'll win out." As you gather your thoughts to make sure you've suggested all the ships you found at Season's End, the shipyard manager asks "Where did you learn about all those [antique, ancient] ships anyway?"`
+			`	"We're in the [planning, readying] stages for an interceptor, and that's up for consideration. But there's another [design, model] that looks like it'll win out." As you gather your thoughts to make sure you've suggested all the ships you found at Season's End, the shipyard manager asks, "Where did you learn about all those [antique, ancient] ships anyway?"`
 			choice
 				`	"Well, I found this old space station..."`
 					accept
