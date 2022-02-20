@@ -116,13 +116,25 @@ mission "Oathbreaker Siege 2"
 	npc
 		government "Bounty Hunter (licensed)"
 		personality launching heroic
-		fleet "Bounty Hunter (licensed)"
+		fleet
+			names "bounty hunter"
+			variant
+				"Fury (Bomber)"
+				"Hawk (Rocket)"
+				"Berserker (Strike)"
+				"Headhunter (Particle)"
 
 	npc
 		government "Bounty Hunter"
 		personality launching heroic
-		fleet "Hired Guns" 2
-
+		fleet
+			names "bounty hunter"
+			variant
+				"Leviathan (Laser)"
+				"Mule (Heavy)"
+				"Dagger"		
+				"Falcon (Laser)"
+				"Modified Argosy" 2
 	npc
 		government "Militia"
 		personality heroic staying

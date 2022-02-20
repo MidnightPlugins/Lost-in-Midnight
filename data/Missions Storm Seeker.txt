@@ -28,8 +28,8 @@ mission "Storm Seeker Raider 1"
 		fail
 		
 mission "Storm Seeker Raider 2"
-	name "Salvage Operation"
-	description "Bring 145 crew and a Jump Drive to <destination> to salvage an abandoned raider."
+	name "Salvage: Raider"
+	description "Bring 145 crew and a Jump Drive to <destination>."
 	source
 		not planet "Season's End"
 	destination "Season's End"
@@ -49,8 +49,9 @@ mission "Storm Seeker Raider 2"
 				`	Meh. I don't really want to go through the trouble.`
 					decline
 	on complete
-		outfit "Jump Drive" -1
+		outfit "Jump Drive" -2
 		give ship "Korath Raider" "Bloody End"
+		outfit "Jump Drive" 1
 		conversation
 			scene "thumbnail/raider"
 			`As soon as you arrive, your crew gets to work on installing a jump drive onto the abandoned raider and cleaning out the previous... mess. Once installed, the ship is ready to launch.`
@@ -58,7 +59,8 @@ mission "Storm Seeker Raider 2"
 
 
 mission "Storm Seeker Shallow Pond"
-	invisible
+	name "Salvage: Shallow Pond"
+	description "Bring 1 new crewmember and a spare Jump Drive to <destination>."
 	repeat
 	source "Season's End"
 	to offer
@@ -69,26 +71,58 @@ mission "Storm Seeker Shallow Pond"
 			not "randomize Storm Seeker Shallow Pond"
 			and
 				has "randomize Storm Seeker Shallow Pond"
-				random < 30 - ( 3 * "Storm Seeker Shallow Pond: failed" )
+				random < 30 - ( 3 * "Storm Seeker Shallow Pond: done" )
 	on offer
 		require "Jump Drive" 2
 		conversation
 			scene "scene/scene-shallow pond"
-			`After several hours of searching, you find a ship that's almost salvageable. All it requires is a jump drive.`
+			`After several hours of searching, you find a ship that's almost salvageable. All it requires is a Jump Drive and a crew.`
 			choice
-				`Use one of your jump drives to salvage the ship.`
-					accept
+				`Salvage the ship.`
 				`Do not salvage the ship.`
 					decline
+			`	You'll have to recruit one crew member to pilot this ship. You'll also need an extra Jump Drive.`
+					accept
+
+	on accept
+		clear "Storm Seeker Shallow Pond Crew: offered"
+	on visit
+		conversation
+			scene "thumbnail/scene-shallow pond"
+			`You don't have enough crew members or spare Jump Drives to salvage this ship.`
+	to complete
+		has "Storm Seeker Shallow Pond Crew: done"
 	on decline
 		set "randomize Storm Seeker Shallow Pond"
-	on accept
-		outfit "Jump Drive" -1
+	on complete
+		outfit "Jump Drive" 1
 		give ship "Shallow Pond (Jump)"
 		give ship "Flycatcher"
 		set "randomize Storm Seeker Shallow Pond"
-		fail
+		conversation
+			scene "scene/scene-shallow pond"
+			`As soon as you arrive, your crew gets to work on installing a jump drive onto the salvaged ship. Once installed, the ship is ready to launch.`
+
+
 		
+"Storm Seeker Shallow Pond Crew"
+	landing
+	invisible
+	passengers 1
+	blocked "You don't have enough passenger space to recruit a pilot for the ship you're trying to salvage."
+	source
+		not attributes "uninhabited"
+	destination "Season's End"
+	to offer
+		has "Storm Seeker Shallow Pond: active"
+	on offer
+		dialog `Recruit a crewmember to pilot a ship you're trying to salvage?`
+	on decline
+		fail "Storm Seeker Shallow Pond"
+	on complete
+		outfit "Jump Drive" -2
+
+	
 mission "Storm Seeker Skulduggery"
 	invisible
 	source "Season's End"
@@ -424,7 +458,7 @@ mission "Storm Seeker Counter Attack 2"
 	on offer
 		conversation
 			scene "scene/scene-stormseekerstrategy"
-			`As soon as you arrive on Luna, Navy Intelligence escorts you to the meeting. There, you and a small group of other elite captains are given a debiefing regarding the raids which have taken place and the Alpha ship which was present during all of these attacks. Each of the captains present assisted in defending against these raids. While you feel a sense of pride in defending more planets than the other captains, you note that there were more planets attacked that you were not involved in defending. The captain who succesfully eliminates this threat will be granted an honorary Navy License. You are all dismissed.`
+			`As soon as you arrive on Luna, Navy Intelligence escorts you to the meeting. There, you and a small group of other elite captains are given a debriefing regarding the raids which have taken place and the Alpha ship which was present during all of these attacks. Each of the captains present assisted in defending against these raids. While you feel a sense of pride in defending more planets than the other captains, you note that there were more planets attacked that you were not involved in defending. The captain who succesfully eliminates this threat will be granted an honorary Navy License. You are all dismissed.`
 				accept
 	on accept
 		"Storm Seeker Raid: North: offered" --
@@ -687,7 +721,8 @@ mission "Storm Seeker Reward Expires"
 
 
 mission "Storm Seeker Epilogue: Spring Leaf"
-	invisible
+	name "Salvage: Spring Leaf"
+	description "Bring 4 new crewmembers and a spare Jump Drive to <destination>."
 	source "Season's End"
 	repeat
 	to offer
@@ -702,15 +737,28 @@ mission "Storm Seeker Epilogue: Spring Leaf"
 		require "Jump Drive" 2
 		conversation
 			scene "thumbnail/spring leaf-thumb"
-			`After several hours of searching, and scavenging parts from ships that are otherwise unsalvageable, you find a ship that's almost salvageable. All it requires is a jump drive.`
+			`After several hours of searching, and scavenging parts from ships that are otherwise unsalvageable, you find a ship that's almost salvageable. All it requires is a Jump Drive and a crew of 4.`
 			choice
-				`Use one of your jump drives to salvage the ship.`
-					accept
+				`Salvage the ship.`
 				`Do not salvage the ship.`
 					defer
+			`	You'll have to recruit 4 crew members to pilot this ship. You'll also need an extra Jump Drive.`
+					accept
+
 	on accept
-		outfit "Jump Drive" -1
+		clear "Storm Seeker Epilogue: Spring Leaf Crew: offered"
+	on visit
+		conversation
+			scene "thumbnail/spring leaf-thumb"	
+			`You don't have enough crew members or spare Jump Drives to salvage this ship.`
+	to complete
+		has "Storm Seeker Epilogue: Spring Leaf Crew: done"
+	on complete
+		outfit "Jump Drive" 1
 		give ship "Spring Leaf (Jump)"
+		conversation
+			scene "scene/spring leaf-thumb"
+			`As soon as you arrive, your crew gets to work on installing a jump drive onto the salvaged ship. Once installed, the ship is ready to launch.`
 
 ship "Spring Leaf" "Spring Leaf (Jump)"
 	outfits
@@ -724,10 +772,29 @@ ship "Spring Leaf" "Spring Leaf (Jump)"
 		"Type 3 Radiant Steering"
 		"Jump Drive"
 
+"Storm Seeker Epilogue: Spring Leaf Crew"
+	landing
+	invisible
+	passengers 4
+	blocked "You don't have enough passenger space to recruit 4 crew members for the ship you're trying to salvage."
+	source
+		not attributes "uninhabited"
+	destination "Season's End"
+	to offer
+		has "Storm Seeker Epilogue: Spring Leaf: active"
+	on offer
+		dialog `Recruit a 4 crew members to pilot a ship you're trying to salvage?`
+	on decline
+		fail "Storm Seeker Epilogue: Spring Leaf"
+	on complete
+		outfit "Jump Drive" -2
+
+
 
 
 mission "Storm Seeker Epilogue: Winter Leaf"
-	invisible
+	name "Salvage: Winter Leaf"
+	description "Bring 12 new crewmembers and a spare Jump Drive to <destination>."
 	source "Season's End"
 	to offer
 		has "Storm Seeker Epilogue: Spring Leaf: done"
@@ -736,15 +803,28 @@ mission "Storm Seeker Epilogue: Winter Leaf"
 		require "Jump Drive" 2
 		conversation
 			scene "thumbnail/winter leaf-thumb"
-			`After several hours of searching, and scavenging parts from ships that are otherwise unsalvageable, you find a ship that's almost salvageable. All it requires is a jump drive.`
+			`After several hours of searching, and scavenging parts from ships that are otherwise unsalvageable, you find a ship that's almost salvageable. All it requires is a Jump Drive and a crew of 12.`
 			choice
-				`Use one of your jump drives to salvage the ship.`
-					accept
+				`Salvage the ship.`
 				`Do not salvage the ship.`
 					defer
+			`	You'll have to recruit 12 crew members to pilot this ship. You'll also need an extra Jump Drive.`
+					accept
+
 	on accept
-		outfit "Jump Drive" -1
+		clear "Storm Seeker Epilogue: Winter Leaf Crew: offered"
+	on visit
+		conversation
+			scene "thumbnail/winter leaf-thumb"
+			`You don't have enough crew members or spare Jump Drives to salvage this ship.`
+	to complete
+		has "Storm Seeker Epilogue: Winter Leaf Crew: done"
+	on complete
+		outfit "Jump Drive" 1
 		give ship "Winter Leaf (Jump)"
+		conversation
+			scene "scene/winter leaf-thumb"
+			`As soon as you arrive, your crew gets to work on installing a jump drive onto the salvaged ship. Once installed, the ship is ready to launch.`
 
 ship "Winter Leaf" "Winter Leaf (Jump)"
 	outfits
@@ -759,10 +839,29 @@ ship "Winter Leaf" "Winter Leaf (Jump)"
 		"Type 4 Radiant Steering"
 		"Jump Drive"
 
+"Storm Seeker Epilogue: Winter Leaf Crew"
+	landing
+	invisible
+	passengers 12
+	blocked "You don't have enough passenger space to recruit 12 crew members for the ship you're trying to salvage."
+	source
+		not attributes "uninhabited"
+	destination "Season's End"
+	to offer
+		has "Storm Seeker Epilogue: Winter Leaf: active"
+	on offer
+		dialog `Recruit a 12 crew members to pilot a ship you're trying to salvage?`
+	on decline
+		fail "Storm Seeker Epilogue: Winter Leaf"
+		clear "Storm Seeker Epilogue: Winter Leaf: offered"
+	on complete
+		outfit "Jump Drive" -2
+
 
 
 mission "Storm Seeker Epilogue: Storm Seeker"
-	invisible
+	name "Salvage: Storm Seeker"
+	description "Bring 18 new crewmembers and a spare Jump Drive to <destination>."
 	source "Season's End"
 	to offer
 		has "Storm Seeker Epilogue: Winter Leaf: done"
@@ -771,20 +870,53 @@ mission "Storm Seeker Epilogue: Storm Seeker"
 		require "Jump Drive" 2
 		conversation
 			scene "thumbnail/storm seeker-thumb"
-			`After several hours of searching, and scavenging parts from ships that are otherwise unsalvageable, you find a ship that's almost salvageable. All it requires is a jump drive.`
+			`After several hours of searching, and scavenging parts from ships that are otherwise unsalvageable, you find a ship that's almost salvageable. All it requires is a Jump Drive and a crew of 18.`
 			choice
-				`Use one of your jump drives to salvage the ship.`
-					accept
+				`Salvage the ship.`
 				`Do not salvage the ship.`
 					defer
+			`	You'll have to recruit 18 crew members to pilot this ship. You'll also need an extra Jump Drive.`
+					accept
+
 	on accept
-		outfit "Jump Drive" -1
+		clear "Storm Seeker Epilogue: Storm Seeker Crew: offered"
+	on visit
+		conversation
+			scene "thumbnail/storm seeker-thumb"
+			`You don't have enough crew members or spare Jump Drives to salvage this ship.`
+	to complete
+		has "Storm Seeker Epilogue: Storm Seeker Crew: done"
+	on complete
+		outfit "Jump Drive" 1
 		give ship "Storm Seeker"
+		conversation
+			scene "scene/storm seeker-thumb"		
+			`As soon as you arrive, your crew gets to work on installing a jump drive onto the salvaged ship. Once installed, the ship is ready to launch.`
+
+"Storm Seeker Epilogue: Storm Seeker Crew"
+	landing
+	invisible
+	passengers 18
+	blocked "You don't have enough passenger space to recruit 18 crew members for the ship you're trying to salvage."
+	source
+		not attributes "uninhabited"
+	destination "Season's End"
+	to offer
+		has "Storm Seeker Epilogue: Storm Seeker: active"
+	on offer
+		dialog `Recruit a 18 crew members to pilot a ship you're trying to salvage?`
+	on decline
+		fail "Storm Seeker Epilogue: Storm Seeker"
+		clear "Storm Seeker Epilogue: Storm Seeker: offered"
+	on complete
+		outfit "Jump Drive" -2
+
 
 
 
 mission "Storm Seeker Epilogue: Tornado"
-	invisible
+	name "Salvage: Tornado"
+	description "Bring 41 new crewmembers and a spare Jump Drive to <destination>."
 	source "Season's End"
 	to offer
 		has "Storm Seeker Epilogue: Storm Seeker: done"
@@ -793,15 +925,28 @@ mission "Storm Seeker Epilogue: Tornado"
 		require "Jump Drive" 2
 		conversation
 			scene "thumbnail/tornado-thumb"
-			`After several hours of searching, and scavenging parts from ships that are otherwise unsalvageable, you find a ship that's almost salvageable. All it requires is a jump drive.`
+			`After several hours of searching, and scavenging parts from ships that are otherwise unsalvageable, you find a ship that's almost salvageable. All it requires is a Jump Drive and a crew of 41.`
 			choice
-				`Use one of your jump drives to salvage the ship.`
-					accept
+				`Salvage the ship.`
 				`Do not salvage the ship.`
 					defer
+			`	You'll have to recruit 41 crew members to pilot this ship. You'll also need an extra Jump Drive.`
+					accept
+
 	on accept
-		outfit "Jump Drive" -1
+		clear "Storm Seeker Epilogue: Tornado Crew: offered"
+	on visit
+		conversation
+			scene "thumbnail/tornado-thumb"			
+			`You don't have enough crew members or spare Jump Drives to salvage this ship.`
+	to complete
+		has "Storm Seeker Epilogue: Tornado Crew: done"
+	on complete
+		outfit "Jump Drive" 1
 		give ship "Tornado (Jump)"
+		conversation
+			scene "scene/tornado-thumb"			
+			`As soon as you arrive, your crew gets to work on installing a jump drive onto the salvaged ship. Once installed, the ship is ready to launch.`
 
 ship "Tornado" "Tornado (Jump)"
 	outfits
@@ -817,10 +962,30 @@ ship "Tornado" "Tornado (Jump)"
 		"Type 4 Radiant Steering"
 		"Jump Drive"
 
+"Storm Seeker Epilogue: Tornado Crew"
+	landing
+	invisible
+	passengers 41
+	blocked "You don't have enough passenger space to recruit 41 crew members for the ship you're trying to salvage."
+	source
+		not attributes "uninhabited"
+	destination "Season's End"
+	to offer
+		has "Storm Seeker Epilogue: Tornado: active"
+	on offer
+		dialog `Recruit a 41 crew members to pilot a ship you're trying to salvage?`
+	on decline
+		fail "Storm Seeker Epilogue: Tornado"
+		clear "Storm Seeker Epilogue: Tornado: offered"
+	on complete
+		outfit "Jump Drive" -2
+
+
 
 
 mission "Storm Seeker Epilogue: Tsunami"
-	invisible
+	name "Salvage: Tsunami"
+	description "Bring 152 new crewmembers and a spare Jump Drive to <destination>."
 	source "Season's End"
 	to offer
 		has "Storm Seeker Epilogue: Tornado: done"
@@ -829,15 +994,28 @@ mission "Storm Seeker Epilogue: Tsunami"
 		require "Jump Drive" 2
 		conversation
 			scene "thumbnail/tsunami-thumb"
-			`After several hours of searching, and scavenging parts from ships that are otherwise unsalvageable, you find a ship that's almost salvageable. All it requires is a jump drive.`
+			`After several hours of searching, and scavenging parts from ships that are otherwise unsalvageable, you find a ship that's almost salvageable. All it requires is a Jump Drive and a crew of 152.`
 			choice
-				`Use one of your jump drives to salvage the ship.`
-					accept
+				`Salvage the ship.`
 				`Do not salvage the ship.`
 					defer
+			`	You'll have to recruit 152 crew members to pilot this ship. You'll also need an extra Jump Drive.`
+					accept
+
 	on accept
-		outfit "Jump Drive" -1
+		clear "Storm Seeker Epilogue: Tsunami Crew: offered"
+	on visit
+		conversation
+			scene "thumbnail/tsunami-thumb"			
+			`You don't have enough crew members or spare Jump Drives to salvage this ship.`
+	to complete
+		has "Storm Seeker Epilogue: Tsunami Crew: done"
+	on complete
+		outfit "Jump Drive" 1
 		give ship "Tsunami (Jump)"
+		conversation
+			scene "scene/tsunami-thumb"			
+			`As soon as you arrive, your crew gets to work on installing a jump drive onto the salvaged ship. Once installed, the ship is ready to launch.`
 
 ship "Tsunami" "Tsunami (Jump)"
 	outfits
@@ -854,6 +1032,25 @@ ship "Tsunami" "Tsunami (Jump)"
 		"Type 4 Radiant Steering"
 		"Type 2 Radiant Steering"
 		"Jump Drive"
+
+"Storm Seeker Epilogue: Tsunami Crew"
+	landing
+	invisible
+	passengers 152
+	blocked "You don't have enough passenger space to recruit 152 crew members for the ship you're trying to salvage."
+	source
+		not attributes "uninhabited"
+	destination "Season's End"
+	to offer
+		has "Storm Seeker Epilogue: Tsunami: active"
+	on offer
+		dialog `Recruit a 152 crew members to pilot a ship you're trying to salvage?`
+	on decline
+		fail "Storm Seeker Epilogue: Tsunami"
+		clear "Storm Seeker Epilogue: Tsunami: offered"
+	on complete
+		outfit "Jump Drive" -2
+
 		
 
 

@@ -11,14 +11,6 @@
 
 
 
-government "Genesis"
-	swizzle 0
-	"player reputation" 1
-	language "Genesis"
-	"attitude toward"
-		"Wanderer (Hostile)" -.01
-
-
 phrase "genesis"
 	word
 		"Za"
@@ -327,6 +319,20 @@ outfit "Cryostasis Pod"
 	"unplunderable" 1
 	description `Most travelers will balk at the notion of riding in one of these. But there may be opportunities to transport dangerous prisoners or sensitive cargo that would otherwise be unavailable without one.`
 
+outfit "Scanner"
+	category "Systems"
+	cost 24000
+	thumbnail "outfit/genesis scanner"
+	"mass" 3
+	"outfit space" -3
+	"cargo scan power" 9
+	"cargo scan speed" 1
+	"outfit scan power" 25
+	"outfit scan speed" 1
+	description "This scanner allows you to determine what outfits are installed in the ship you are currently targeting, as well as scan the cargo holds. Installing more than one increases the scan range and speed."
+
+
+# The following outfits are identical to human outfits, but have different art, descriptions, and/or names.
 
 outfit "Laser"
 	category "Guns"
@@ -349,7 +355,7 @@ outfit "Laser"
 		"firing heat" 1.2
 		"shield damage" 1
 		"hull damage" 1.3
-	description "This looks slightly different, but it functions exactly like the Beam Laser manufactured in the Deep."
+	description "This is similar to the Beam Laser you're familiar with."
 
 outfit "Anti-Missile"
 	category "Turrets"
@@ -369,7 +375,7 @@ outfit "Anti-Missile"
 		"reload" 8
 		"firing energy" 5
 		"firing heat" 3
-	description "This looks slightly different, but it functions exactly like the Anti-Missile Turret manufactured by Lovelace Labs."
+	description "This is similar to the Anti-Missile Turret you're familiar with."
 
 outfit "Gat"
 	category "Secondary Weapons"
@@ -397,7 +403,34 @@ outfit "Gat"
 		"submunition" "gbullet"
 		"cluster"
 		"hit effect" "bullet impact"
-	description "This looks slightly different, but it functions exactly like the Gatling Gun you're familiar with."
+	description "This is similar to the Gatling Gun you're familiar with."
+
+outfit "Tiny Battery"
+	category "Power"
+	cost 12000
+	thumbnail "outfit/tiny battery"
+	"mass" 10
+	"outfit space" -10
+	"energy capacity" 1000
+	description "This is a tiny battery."
+
+outfit "Small Battery"
+	category "Power"
+	cost 30000
+	thumbnail "outfit/small battery"
+	"mass" 20
+	"outfit space" -20
+	"energy capacity" 2200
+	description "This is a small battery."
+
+outfit "Medium Battery"
+	category "Power"
+	cost 67000
+	thumbnail "outfit/medium battery"
+	"mass" 40
+	"outfit space" -40
+	"energy capacity" 4800
+	description "This is a medium battery."
 
 outfit "Small Photovoltaic"
 	category "Power"
@@ -406,7 +439,7 @@ outfit "Small Photovoltaic"
 	"mass" 24
 	"outfit space" -16
 	"solar collection" 1.1
-	description "This looks, and functions, exactly like the KP-6 Photovoltaic Array you're familiar with."
+	description "This generates power when near a star."
 
 outfit "Tiny Fuel Cell"
 	category "Power"
@@ -416,7 +449,7 @@ outfit "Tiny Fuel Cell"
 	"outfit space" -20
 	"energy generation" 1.2
 	"heat generation" 1.9
-	description "This looks, and functions, exactly like the nGVF-AA Fuel Cell you're familiar with."
+	description "This tiny fuel cell generates power when installed on a ship."
 
 outfit "Radiothermal"
 	category "Power"
@@ -426,7 +459,7 @@ outfit "Radiothermal"
 	"outfit space" -45
 	"energy generation" 4.4
 	"heat generation" 18
-	description "This looks slightly different, but it functions exactly like the RT-I Radiothermal you're familiar with."
+	description "Radiothermal generators harvest heat from radioactive isotopes and convert it into electricity."
 
 outfit "Thermionic"
 	category "Power"
@@ -436,7 +469,7 @@ outfit "Thermionic"
 	"outfit space" -55
 	"energy generation" 5.0
 	"heat generation" 12
-	description "This looks slightly different, but it functions exactly like the S3 Thermionic you're familiar with."
+	description "Thermionic radioisotopic generators are a cooler-running alternative to other generators."
 
 outfit "Fusion"
 	category "Power"
@@ -446,46 +479,7 @@ outfit "Fusion"
 	"outfit space" -100
 	"energy generation" 18.2
 	"heat generation" 40
-	description "This looks slightly different, but it functions exactly like the Fusion Reactor you're familiar with."
-
-outfit "Tiny Battery"
-	category "Power"
-	cost 12000
-	thumbnail "outfit/tiny battery"
-	"mass" 10
-	"outfit space" -10
-	"energy capacity" 1000
-	description "This looks, and functions, exactly like the LP036a Battery Pack you're familiar with."
-
-outfit "Small Battery"
-	category "Power"
-	cost 30000
-	thumbnail "outfit/small battery"
-	"mass" 20
-	"outfit space" -20
-	"energy capacity" 2200
-	description "This looks, and functions, exactly like the LP072a Battery Pack you're familiar with."
-
-outfit "Medium Battery"
-	category "Power"
-	cost 67000
-	thumbnail "outfit/medium battery"
-	"mass" 40
-	"outfit space" -40
-	"energy capacity" 4800
-	description "This looks, and functions, exactly like the LP144a Battery Pack you're familiar with."
-
-outfit "Scanner"
-	category "Systems"
-	cost 24000
-	thumbnail "outfit/genesis scanner"
-	"mass" 3
-	"outfit space" -3
-	"cargo scan power" 9
-	"cargo scan speed" 1
-	"outfit scan power" 25
-	"outfit scan speed" 1
-	description "This scanner allows you to determine what outfits are installed in the ship you are currently targeting, as well as scan the cargo holds. Installing more than one increases the scan range and speed."
+	description "This is a fusion reactor."
 
 outfit "Engines"
 	plural "Engines"
@@ -507,8 +501,7 @@ outfit "Engines"
 	"steering flare sprite" "effect/ion flare/tiny"
 		"frame rate" 1.2
 	"steering flare sound" "ion tiny"
-	description "This looks slightly different, but it functions exactly like the X1050 Ion Engines you're familiar with."
-
+	description `This is a compact steering and thrusting engine.`
 
 
 
@@ -525,7 +518,7 @@ fleet "Genesis Space"
 fleet "Genesis Transports"
 	government "Genesis"
 	names "genesis"
-	personality pacifist coward
+	personality pacifist coward uninterested
 	variant
 		"Genesis Freighter"
 	variant
@@ -728,7 +721,7 @@ event "Genesis Colony"
 		"required reputation" 1
 
 	
-event "Genesis Cryoships" 1800
+event "Genesis Cryoships"
 	system Genesis
 		add fleet "Genesis Colony" 8000
 		object
@@ -802,163 +795,3 @@ event "Genesis Cryoships" 1800
 		add "Fusion"
 		add "Medium Battery"
 
-
-# Cryostasis Pod Missions
-
-mission "Cryostasis Prisoner (source)"
-	job
-	repeat
-	deadline
-	passengers 1
-	name "Cryostasis Prisoner"
-	description "A notorious pirate captain has finally been convicted and sentenced to life in prison. Transport this dangerous criminal to <destination>. Only the most secure transports will be offered this job. Payment is <payment>."
-	source
-		government "Republic" "Free Worlds" "Syndicate"
-		not attributes "uninhabited" "deep"
-	destination "Huginn Station"
-	to offer
-		random < 25
-	on offer
-		require "Brig"
-		require "Cryostasis Pod"
-	npc evade
-		government "Pirate"
-		personality heroic harvests plunders
-		fleet "Marauder fleet VIII"
-	npc evade
-		government "Pirate"
-		system
-			distance 1
-		personality heroic harvests plunders
-		fleet "Marauder fleet IX"
-	npc evade
-		government "Pirate"
-		system
-			distance 2
-		personality heroic harvests plunders
-		fleet "Marauder fleet X"
-	on complete
-		payment 25000 175
-		payment 100000
-		dialog `The cryostasis pod opens with a hiss. Your passenger wakes up and, before she's fully conscious, a team of well-armed guards takes her away. You collect your payment of <payment>.`
-		
-mission "Cryostasis Prisoner (destination)"
-	job
-	repeat
-	deadline
-	passengers 1
-	name "Cryostasis Prisoner"
-	description "A notorious pirate captain has finally been convicted and sentenced to life in prison. Transport this dangerous criminal to <destination>. Only the most secure transports will be offered this job. Payment is <payment>."
-	source
-		government "Republic" "Free Worlds" "Syndicate"
-		not attributes "uninhabited" "deep"
-	destination "Huginn Station"
-	to offer
-		random < 25
-	on offer
-		require "Brig"
-		require "Cryostasis Pod"
-	npc evade
-		government "Pirate"
-		system destination
-		personality heroic harvests plunders
-		fleet "Marauder fleet VIII"
-	npc evade
-		government "Pirate"
-		system destination
-		personality staying heroic harvests plunders coward
-		fleet "Marauder fleet IX"
-	npc evade
-		government "Pirate"
-		system destination
-		personality staying heroic harvests plunders
-		fleet "Marauder fleet X"
-	on complete
-		payment 25000 175
-		payment 100000
-		dialog `The cryostasis pod opens with a hiss. Your passenger wakes up and, before he's fully conscious, a team of well-armed guards takes him away. You collect your payment of <payment>.`
-		
-mission "Cryostasis Organ Transplant (easy)"
-	job
-	repeat
-	passengers 1
-	deadline 1 1
-	name "Urgent Organ Transplant"
-	description "An organ donor has recently passed on. An organ urgently needs to be delivered to the recipient by <date>. Reliable cold storage is required. Payment is <payment>."
-	source
-		government "Republic" "Free Worlds" "Syndicate"
-		not attributes "uninhabited"
-	to offer
-		random < 25
-	on offer
-		require "Cryostasis Pod"
-	destination
-		distance 2 10
-		not attributes "uninhabited" "station"
-	on complete
-		payment 25000 175
-		dialog `The cryostasis pod opens with a hiss and you retrieve the donated organ. A medical team rushes it to the intended recipient. You may have saved a life. Your payment of <payment> is just a bonus.`
-		
-mission "Cryostasis Organ Transplant (medium)"
-	job
-	repeat
-	passengers 1
-	deadline 3 1
-	name "Urgent Organ Transplant"
-	description "An organ donor has recently passed on. These organs urgently need to be delivered to their recipients by <date>. Delivery to <destination> is less urgent and should be saved for last. Payment is <payment>."
-	source
-		government "Republic" "Free Worlds" "Syndicate"
-		not attributes "uninhabited"
-	to offer
-		random < 20
-	on offer
-		require "Cryostasis Pod"
-	stopover
-		distance 2 3
-		not attributes "uninhabited" "station"
-	stopover
-		distance 2 3
-		not attributes "uninhabited" "station"
-	destination
-		distance 3 4
-		not attributes "uninhabited" "station"
-	on stopover
-		dialog `You have just one last organ to deliver.`
-	on complete
-		payment 25000 175
-		dialog `The cryostasis pod opens with a hiss and you retrieve the last of the donated organs. A medical team rushes it to the intended recipient. Three lives may have been saved with your help. Compared to that, your payment of <payment> is just a bonus.`
-		
-mission "Cryostasis Organ Transplant (hard)"
-	job
-	repeat
-	passengers 1
-	deadline 3 2
-	name "Urgent Organ Transplant"
-	description "An organ donor has recently passed on. These organs urgently need to be delivered to their recipients by <date>. Delivery to <destination> is less urgent and should be saved for last. Payment is <payment>."
-	source
-		government "Republic" "Free Worlds" "Syndicate"
-		not attributes "uninhabited"
-	to offer
-		random < 15
-	on offer
-		require "Cryostasis Pod"
-	stopover
-		distance 2 3
-		not attributes "uninhabited" "station"
-	stopover
-		distance 2 3
-		not attributes "uninhabited" "station"
-	stopover
-		distance 2 3
-		not attributes "uninhabited" "station"
-	stopover
-		distance 3 4
-		not attributes "uninhabited" "station"
-	destination
-		distance 4 5
-		not attributes "uninhabited" "station"
-	on stopover
-		dialog `You have just one last organ to deliver.`
-	on complete
-		payment 25000 175
-		dialog `The cryostasis pod opens with a hiss and you retrieve the last of the donated organs. A medical team rushes it to the intended recipient. Five lives may have been saved with your help. Compared to that, your payment of <payment> is just a bonus.`

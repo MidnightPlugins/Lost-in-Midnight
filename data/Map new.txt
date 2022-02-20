@@ -56,7 +56,7 @@ system Archipelago
 		sprite planet/browndwarf-t
 		period 10
 	object
-		sprite planet/dyson1
+		sprite planet/station0ver8
 		distance 412.215
 		period 609.287
 		offset 88.1061
@@ -224,7 +224,7 @@ system Chasm
 		period 14.4054
 		offset 180
 	object
-		sprite planet/dyson1
+		sprite planet/station0ver8
 		distance 387.856
 		period 78.7345
 	object
@@ -301,7 +301,7 @@ system Diyu
 		sprite star/g0
 		period 10
 	object
-		sprite planet/dyson1
+		sprite planet/station0ver8
 		distance 176
 		period 28.4195
 		offset 84.8561
@@ -572,7 +572,7 @@ system Heiahai
 
 
 system Kalsolli
-	pos 186.743 -37.1741
+	pos 201.743 -25.1741
 	government Uninhabited
 	attributes "midnight"
 	habitable 1073
@@ -773,7 +773,7 @@ system "Pebble Beach"
 		sprite star/g5
 		period 10
 	object Detritus
-		sprite planet/dyson2
+		sprite planet/station0ver8
 		distance 150.24
 		period 29.4645
 	object "Rock Cluster"
@@ -872,7 +872,7 @@ system Tekochtli
 
 system Temeh
 	hidden
-	pos 178.743 -55.1741
+	pos 182.743 -44.1741
 	government Uninhabited
 	attributes "midnight"
 	habitable 700
@@ -1300,7 +1300,7 @@ mission "Season's End: Summer"
 		
 event "Season's End: Summer"
 	planet "Season's End"
-		landscape land/space2
+		landscape land/space2summer
 
 mission "Season's End: Autumn"
 	landing

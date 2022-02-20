@@ -60,6 +60,15 @@ government "Derelict (Killable)"
 
 
 
+government "Genesis"
+	swizzle 0
+	"player reputation" 1
+	language "Genesis"
+	"attitude toward"
+		"Wanderer (Hostile)" -.01
+
+
+
 government "Grave Diggers"
 	swizzle 0
 	color .89 .38 .62

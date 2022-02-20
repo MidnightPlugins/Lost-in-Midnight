@@ -17,9 +17,9 @@
 hazard "Heliosphere Plasma Storm"
 	"period" 3
 	"duration" 500 2000
-	"strength" 2 4
+	"strength" 4 8
 	"range" 30000
-	"environmental effect" "plasma storm" 20
+	"environmental effect" "plasma storm" 200
 	weapon
 		"heat damage" 7
 		"shield damage" 3
@@ -29,7 +29,7 @@ effect "plasma storm"
 	sprite "effect/plasma explosion"
 		"frame rate" 30
 		"random start frame"
-	"lifetime" 240
-	"random lifetime" 120
+	"lifetime" 480
+	"random lifetime" 240
 	"random spin" 10
 	"random velocity" 2

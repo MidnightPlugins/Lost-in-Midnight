@@ -371,7 +371,7 @@ mission "Ghost Hunting: Poltergeist King 1"
 		personality derelict target staying pacifist mute
 		government "Derelict (Killable)"
 		system "Menkalinan"
-		ship "Derelict Mule" "Funhouse"
+		ship "Explosive Derelict Mule" "Funhouse"
 		conversation
 			`The ship seems deserted.`
 			scene "scene/scene-sivael3cropflipdark"
@@ -441,6 +441,9 @@ mission "Ghost Hunting: Poltergeist King 1"
 		payment 300000
 		event "Restore Menkalinan"
 		event "Poltergeist King Prepares"
+		fail "Ghost Hunting: Poltergeist King Trick A"
+		fail "Ghost Hunting: Poltergeist King Trick B"
+		fail "Ghost Hunting: Poltergeist King Trick C"		
 		dialog "Your ship is slightly singed from all the explosions, but the important thing is that the children are safely returned. Their grateful parents give you <payment> to help cover your repairs. Unfortunately, you did not find the Poltergeist King on any of the derelict ships. Back at the bar, you realize that video of your efforts has been posted to the net. The bartender and several patrons treat you to some drinks."
 		log `Rescued some children being held aboard an explosive derelict by a madman calling himself the Poltergeist King. The galaxy is a big place and there are some truly sick individuals hiding out amongst the stars.`
 		log "People" "Poltergeist King" `A madman who uses drones and remote detonated explosive devices. He is not above kidnapping children and threatening to kill them. A genuine sadist who takes delight in the misery of others.`
@@ -466,8 +469,6 @@ event "Restore Menkalinan"
 mission "Ghost Hunting: Poltergeist King Trick A"
 	landing
 	invisible
-	to complete
-		has "Ghost Hunting: Poltergeist King 1: done"
 	npc board
 		to spawn
 			has "Ghost Hunting: Poltergeist King 1: active"
@@ -482,8 +483,6 @@ mission "Ghost Hunting: Poltergeist King Trick A"
 mission "Ghost Hunting: Poltergeist King Trick B"
 	landing
 	invisible
-	to complete
-		has "Ghost Hunting: Poltergeist King 1: done"
 	npc board
 		to spawn
 			has "Ghost Hunting: Poltergeist King 1: active" 
@@ -498,8 +497,6 @@ mission "Ghost Hunting: Poltergeist King Trick B"
 mission "Ghost Hunting: Poltergeist King Trick C"
 	landing
 	invisible
-	to complete
-		has "Ghost Hunting: Poltergeist King 1: done"
 	npc board
 		to spawn
 			has "Ghost Hunting: Poltergeist King 1: active"
@@ -584,7 +581,7 @@ mission "Ghost Hunting: Poltergeist King 2"
 			label staycool
 			`	"Hi Cali, see any ghost ships up there?"`
 			`	"This time, I'm actually lookin' fer aliens." She introduces you to the other guys. "Guys, <first> is the dude who saved our bacon back on Rajak. <first>, this here is the crew of the Lucky Horse Shoe." The guys thank you and introduce themselves, but it's hard to keep track of all their names.`
-			`	Cali lowers her voice, "A reliable feller spilled the beans to me about some aliens who raid this system from time to time. Sometimes the pirates get into regular 'ol scraps with enforcers from the syndicate, while a derelict alien ship is left adrift. And you know how the sayin' goes 'bout derelicts..."`
+			`	Cali lowers her voice, "A reliable feller spilled the beans to me about some aliens who raid this system from time to time. Sometimes the pirates get into regular 'ol scraps with enforcers from the Syndicate, while a derelict alien ship is left adrift. And you know how the sayin' goes 'bout derelicts..."`
 			`	"Ain't no one has ownership rights to a derelict 'cept the one who gets to it first." you reply.`
 			`	The group gets a good chuckle at your performance.`
 			`	Suddenly Cali's communicator starts beeping.`
@@ -628,7 +625,7 @@ mission "Ghost Hunting: Poltergeist King 2"
 					goto remember
 			`	"I, I, I'm the Poltergeist King! How could you forget after all the EXPLOSIVELY fun times we had back in Menkalinan?"`
 			label remember
-			`	"Today, I was just looking to have some fun! Bait some pirates or syndicate scumbags into this little fun house and listen to their screams of despair! But this should still be entertaining. This time, the hostage is you!"`
+			`	"Today, I was just looking to have some fun! Bait some pirates or Syndicate scumbags into this little fun house and listen to their screams of despair! But this should still be entertaining. This time, the hostage is you!"`
 			`	A nearby panel slides open.`
 
 			scene "scene/scene-RSPwires"
@@ -668,9 +665,9 @@ mission "Ghost Hunting: Poltergeist King 2"
 	on complete
 		outfit "Jump Drive (Broken)" 1
 		conversation
-			`Back at the space port you find Cali. "Thank goodness you're OK! I saw the whole thang! Someone posted a video of it to the net." She shows you a portion of the video on a portable holo projector. "That's an interestin' haul you got there." she says, pausing the video to point at the broken jump drive. "I reckon you could try to pass it off to a gallery or a collector as some kind of modern art." she shrugs.`
 			scene "outfit/jump drive (broken)"
-		log `The Poltergeist King struck again. This time he tried to lure in pirate or syndicate salvagers with a rigged alien ship. I managed to escape his trap, but the only thing I was able to salvage was a broken jump drive.`
+			`Back at the space port you find Cali. "Thank goodness you're OK! I saw the whole thang! Someone posted a video of it to the net." She shows you a portion of the video on a portable holo projector. "That's an interestin' haul you got there." she says, pausing the video to point at the broken jump drive. "I reckon you could try to pass it off to a gallery or a collector as some kind of modern art." she shrugs.`
+		log `The Poltergeist King struck again. This time he tried to lure in pirate or Syndicate salvagers with a rigged alien ship. I managed to escape his trap, but the only thing I was able to salvage was a broken jump drive.`
 
 		
 

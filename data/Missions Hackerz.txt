@@ -140,7 +140,7 @@ mission "Hackerz 3"
 		government "Derelict"
 		system destination
 		personality derelict target waiting staying pacifist mute
-		ship "Derelict Bactrian" "P.K.'s Party Palace"
+		ship "Explosive Derelict Bactrian" "P.K.'s Party Palace"
 		conversation
 			`When the airlock opens your senses are overwhelmed by the sound of loud music and the scent of burnt recreational herbs. Hundreds of partygoers are too busy enjoying themselves to take notice of your entrance. After searching around for a bit, you find that the ship has power for life support, lighting, and music. But no weapons, navigation, or propulsion. You also haven't found any networking equipment. Suddenly, you hear panicked screaming coming from the partygoers. When you investigate what's going on, you see that everyone is ruahing to abandon ship. You ask one of them what's going on. They yell "Bomb!" while still fleeing. Now would be a good time to run back to your ship.`
 				flee
