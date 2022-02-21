@@ -48,7 +48,7 @@ mission "Ghost Hunting: Dire Omen 1"
 			label listen
 			`	"And so, afterwards me and the boys took our plunder. We then set off from Stormhold into the northern passage, where few dare to go unless ye have a good supply of fuel or a ramscoop. It was on the 3rd day of our voyage when it appeared out of the darkness: the Dire Omen. The ghost ship what haunts the northern passage descended upon us like a pelican on a bucket of sardines."`
 			`	"A ghost ship!?!" you shout out. "Surely, you jest."`
-			`	"It be real! I remember clear as day my tactical scanner readouts! That ship, the Dire Omen, has no crew! But it attacked us all the same. I escaped. The others... weren't so lucky.`
+			`	"It be real! I remember clear as day my tactical scanner readouts! That ship, the Dire Omen, has no crew! But it attacked us all the same. I escaped. The others... weren't so lucky."`
 			`	The old pirate falls silent and stares somberly at his mug. The mood has shifted and it is clear he is done telling his tale.`
 				accept
 	on accept
@@ -152,7 +152,7 @@ mission "Ghost Hunting: Dire Omen 4"
 		not "Ghost Hunting: Dire Omen 3: done"
 	on offer
 		conversation
-			`As you start to land you notice smoke and flames coming from a nearby parked ship. That's not too unusual in this dangerous sector of space. What does catch your eye is the nature of the damgage. Large portions of the hull look to have melted right off. Whatever did this must generate intense heat.`
+			`As you start to land you notice smoke and flames coming from a nearby parked ship. That's not too unusual in this dangerous sector of space. What does catch your eye is the nature of the damage. Large portions of the hull look to have melted right off. Whatever did this must generate intense heat.`
 			choice
 				`	(Best not to get involved. Go find another place to land.)`
 				`	(Stick around and find out what happened.)`
@@ -162,7 +162,7 @@ mission "Ghost Hunting: Dire Omen 4"
 				defer
 			
 			label investigate
-			`	When you exit your ship you hear the captain of the damaged ship filing a report with the port authority. "No,no. It wasn't pirates!" he exclaims. "It was the ghost ship. The Dire Omen." The government official stops typing on her datapad and gives the captain a skeptical look.`
+			`	When you exit your ship you hear the captain of the damaged ship filing a report with the port authority. "No, no. It wasn't pirates!" he exclaims. "It was the ghost ship. The Dire Omen." The government official stops typing on her datapad and gives the captain a skeptical look.`
 			choice
 				`	(Ignore them.)`
 				`	(Ask him where he encountered the ghost ship.)`
@@ -184,7 +184,7 @@ mission "Ghost Hunting: Dire Omen 4"
 mission "Ghost Hunting: Dire Omen 5"
 	landing
 	name "Rescue the 'Lucky Horse Shoe'"
-	description "Merchants have asked you find their missing escort, the 'Lucky Horse Shoe', which was last seen heading towards Rajak in the northern passage. Supposedly, it was attacked by a ghost ship named 'Dire Omen'. If you manage to rescue it, escort the 'Lucky Horse Shoe' back to <destination>."
+	description "Merchants have asked you find their missing escort, the 'Lucky Horse Shoe', which was last seen heading towards Rajak in the northern passage. Supposedly, it was attacked by a ghost ship named 'Dire Omen'. If you manage to rescue it, escort the "Lucky Horse Shoe" back to <destination>."
 	source 
 		planet "Farpoint" "Maelstrom" "Sunracer" "Skillet" "Prime"
 	waypoint "Rajak"
@@ -193,7 +193,7 @@ mission "Ghost Hunting: Dire Omen 5"
 		has "Ghost Hunting: Dire Omen 3: failed"
 	on offer
 		conversation
-			`As you open your hatch there is a group of merchants waiting for you. "Excuse us captain. We are seeking volunteers for a rescue mission. Will you hear us out?`
+			`As you open your hatch there is a group of merchants waiting for you. "Excuse us captain. We are seeking volunteers for a rescue mission. Will you hear us out?"`
 			
 			choice
 				`	(Tell them to find someone else.)`
@@ -212,7 +212,7 @@ mission "Ghost Hunting: Dire Omen 5"
 				`	"What do you want from me?"`
 				`	"You mentioned something about a rescue earlier..."`
 				
-			`	"Our escort, the 'Lucky Horse Shoe' was separated from us as we we fled. We believe it is still out there. Would you be willing to search for it? We last saw it heading towards Rajak."`	
+			`	"Our escort, the "Lucky Horse Shoe" was separated from us as we fled. We believe it is still out there. Would you be willing to search for it? We last saw it heading towards Rajak."`	
 			
 			choice
 				`	(Tell them to find someone else.)`
@@ -234,7 +234,7 @@ mission "Ghost Hunting: Dire Omen 5"
 				accept
 				
 			label reward
-			`	"I'm certain the captain of that the Lucky Horse Shoe will repay you for your assistance."`
+			`	"I'm certain the captain of the "Lucky Horse Shoe" will repay you for your assistance."`
 				accept
 
 	on accept
@@ -279,7 +279,7 @@ mission "Ghost Hunting: Dire Omen 5"
 		payment 20000
 		dialog `After you land, Cali hands over a stack of chips worth <payment>. "You were great out there <first>! Thanks again for savin' my bacon!" At the spaceport bar you tell the tale of your encounter with the ghost ship "Dire Omen". Amongst the crowd listening, a skeptic scoffs. "Ghost ship!?! Surely, you jest!"`
 		log `The ghost ship "Dire Omen" turned out to be an alien ship with an advanced autopilot system. Like a drone. A very large and deadly drone.`
-		log "People" "Cali" `A cowgirl who is also captain of the ship Lucky Horse Shoe.` 
+		log "People" "Cali" `A cowgirl who is also captain of the ship "Lucky Horse Shoe".` 
 
 event "Dire Omen Clear Rajak"
 	system "Rajak"
@@ -356,7 +356,7 @@ mission "Ghost Hunting: Poltergeist King 1"
 			`	The image switches back to the shot of derelict ships.`
 			`	"As you can see, I've prepared a wonderful series of funhouses for us to play in!"`
 			`	After a few moments of silence, the bartender looks at you. "What're you gonna do captain?"`
-			`	If those kids are from this world, they probably have rich parents who'll reward you well. On the other hand, heading out there could get you killed."`
+			`	If those kids are from this world, they probably have rich parents who'll reward you well. On the other hand, heading out there could get you killed.`
 			choice
 				`	"Smells like a trap. I'm not going out there."`
 					decline
