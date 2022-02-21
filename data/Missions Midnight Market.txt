@@ -521,6 +521,13 @@ mission "Midnight Market: Intrusion Countermeasures 2"
 
 
 
+outfitter "Pirate Weapons"
+	"Modified Blaster"
+	"Modified Blaster Turret"
+	"Plasma Cannon"
+	"Laser Rifle"
+	"Fragmentation Grenades"
+
 mission "Midnight Market: Coalition Smuggling 1"
 	landing
 	name "Mystery Job"
@@ -613,7 +620,7 @@ mission "Midnight Market: Coalition Smuggling 2"
 		fleet
 			names "saryd"
 			cargo 5
-			outfitters "Pirate Outfits"
+			outfitters "Pirate Weapons"
 			variant
 				"Saryd Sojourner (smuggler)"
 	npc accompany save
@@ -624,7 +631,7 @@ mission "Midnight Market: Coalition Smuggling 2"
 		fleet
 			names "arach"
 			cargo 6
-			outfitters "Pirate Outfits"
+			outfitters "Pirate Weapons"
 			variant
 				"Arach Hulk (smuggler)"
 	npc accompany save
@@ -635,7 +642,7 @@ mission "Midnight Market: Coalition Smuggling 2"
 		fleet
 			names "kimek"
 			cargo 5
-			outfitters "Pirate Outfits"
+			outfitters "Pirate Weapons"
 			variant
 				"Kimek Spire (smuggler)"
 	on abort
@@ -705,7 +712,7 @@ mission "Midnight Market: Coalition Smuggling 4"
 			scene "outfit/nerve gas"
 			`When you arrive at the warehouse, there is no Coalition ship being loaded with cargo. The man in the hawaiian shirt apologizes. "Unfortunately, the ship couldn't get here. Would you be able to handle delivery yourself? I should warn you that the merchandise is somewhat illegal..." He hands you a sample of the merchandise. It's a can of Nerve Gas.`
 			choice
-				`	"I'll take double my usual pay."`
+				`	"I'll take double the pay."`
 					goto pay
 				`	"Sorry, I'm not interested."`
 			`	"Regrettable. I doubt you'll be handling any more of these shipments then."`
@@ -727,6 +734,7 @@ mission "Midnight Market: Coalition Smuggling 4"
 		clear "Midnight Market: Coalition Smuggling 3: offered"
 		clear "Midnight Market: Coalition Smuggling 1: done"
 	
+
 
 mission "Midnight Market: Trailblazer Auction"
 	invisible

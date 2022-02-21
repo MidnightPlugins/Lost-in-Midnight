@@ -11,60 +11,6 @@
 
 
 
-fleet "Bounty Hunter (licensed)"
-	government "Bounty Hunter (licensed)"
-	names "bounty hunter"
-	personality
-		heroic
-	variant 5
-		"Fury" 2
-		"Fury (Bomber)" 2
-	variant 5
-		"Hawk" 2
-		"Hawk (Rocket)" 2
-	variant 5
-		"Hawk"
-		"Hawk (Bomber)"
-		"Sparrow" 2
-	variant 5
-		"Fury (Bomber)"
-		"Sparrow" 2
-	variant 5
-		"Berserker (Strike)"
-		"Quicksilver"
-	variant 5
-		"Quicksilver" 2
-		"Headhunter (Particle)"
-	variant 3
-		"Sparrow" 2
-		"Headhunter (Strike)"
-	variant 3
-		"Raven"
-		"Fury (Missile)" 2
-	variant 1
-		"Firebird"
-		"Fury (Missile)"
-	variant 1
-		"Aerie"
-		"Lance" 2
-	variant 1
-		"Corvette"
-		"Fury (Missile)"
-	variant 1
-		"Osprey"
-		"Fury (Missile)"
-	variant 1
-		"Manta"
-		"Fury (Missile)"
-	variant 1
-		"Splinter"
-		"Fury (Missile)"
-	variant 1
-		"Splinter"
-		"Fury (Heavy)"
-
-
-
 fleet "Ancestral Unfettered"
 	government "Hai (Unfettered)"
 	names "hai"
@@ -965,36 +911,6 @@ fleet "Coalition Pirate"
 		"Kimek Spire (pirate)"
 		"Kimek Thistle (pirate)" 2
 
-outfitter "Pirate Weapons"
-	"Modified Blaster"
-	"Modified Blaster Turret"
-	"Plasma Cannon"
-	"Laser Rifle"
-	"Fragmentation Grenades"
-	"Nerve Gas"
-	"Gatling Gun Ammo"
-	"Gatling Gun"
-	"Bullet Boxes"
-
-fleet "Coalition Smugglers"
-	government "Pirate"
-	names "pirate"
-	cargo 3
-	outfitters "Pirate Weapons"
-	personality
-		timid coward
-	variant 1
-		"Arach Hulk (smuggler)"
-		"Kimek Spire (smuggler)"
-		"Saryd Sojourner (smuggler)"
-	variant 1
-		"Kimek Spire (smuggler)"
-		"Arach Hulk (smuggler)"
-		"Saryd Sojourner (smuggler)"
-	variant 1
-		"Saryd Sojourner (smuggler)"
-		"Arach Hulk (smuggler)"
-		"Kimek Spire (smuggler)"
 
 
 fleet "Marauder Parade"

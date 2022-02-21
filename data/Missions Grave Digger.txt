@@ -282,7 +282,6 @@ ship "Pelican" "Pelican (disarmed)"
 mission "Grave Digger: Lu Bu's Legend"
 	invisible
 	source
-	source
 		government Remnant
 	to offer
 		not "event: Gravedigger defeated"
@@ -476,7 +475,7 @@ ship "Ibis" "Ibis (disarmed)"
 
 mission "Grave Digger: Thrasher Turrets 1"
 	name "Myserious Sales Pitch"
-	description "An anonymous seller is offering a rare item that would supposedly appeal to you. You must go to a warehouse on <planet> in the <system> system if you want to purchase it for four million credits."
+	description "An anonymous seller is offering a rare item that would supposedly appeal to you. You must go to a warehouse on <destination> if you want to purchase it for four million credits."
 	source
 		government "Syndicate"
 	destination "Covert"
@@ -501,7 +500,7 @@ mission "Grave Digger: Thrasher Turrets 1"
 				`	(Reject the invitation.)`
 					defer
 	on visit
-		dialog `You've arrived on <planet>, but you do not have enough credits to complete the transaction. Come back by <date> with the necessary credits.`
+		dialog `You've arrived on <planet>, but you do not have enough credits to complete the transaction. Come back with the necessary credits.`
 
 mission "Grave Digger: Thrasher Turrets 2"
 	landing
@@ -569,6 +568,7 @@ mission "Grave Digger: Thrasher Turrets 2"
 		payment -4000000
 		outfit "Thrasher Turret" 4
 	on accept
+		"Midnight Market" --
 		event "Grave Digger Testimony"
 		log `A Midnight Market arms dealer confessed that the source of his supply of stolen Remnant weaponry is Captain Lu Bu of the Grave Digger.`
 		fail
@@ -577,7 +577,7 @@ mission "Grave Digger: Thrasher Turrets 2"
 
 mission "Grave Digger: Point Defense Turrets 1"
 	name "Myserious Sales Pitch"
-	description "An anonymous seller is offering a rare item that would supposedly appeal to you. You must go to a warehouse on <planet> in the <system> system if you want to purchase it for five million credits."
+	description "An anonymous seller is offering a rare item that would supposedly appeal to you. You must go to a warehouse on <destination> if you want to purchase it for five million credits."
 	source
 		government "Syndicate"
 	destination "Buccaneer Bay"
@@ -602,7 +602,7 @@ mission "Grave Digger: Point Defense Turrets 1"
 				`	(Reject the invitation.)`
 					defer
 	on visit
-		dialog `You've arrived on <planet>, but you do not have enough credits to complete the transaction. Come back by <date> with the necessary credits.`
+		dialog `You've arrived on <planet>, but you do not have enough credits to complete the transaction. Come back with the necessary credits.`
 
 mission "Grave Digger: Point Defense Turrets 2"
 	landing
@@ -670,6 +670,7 @@ mission "Grave Digger: Point Defense Turrets 2"
 		payment -5000000
 		outfit "Point Defense Turret" 4
 	on accept
+		"Midnight Market" --
 		event "Grave Digger Testimony"
 		log `A Midnight Market arms dealer confessed that the source of her supply of stolen Remnant weaponry is Captain Lu Bu of the Grave Digger.`
 		fail
@@ -680,7 +681,7 @@ mission "Grave Digger: Inhibitor Cannons 1"
 	minor
 	deadline
 	name "Myserious Sales Pitch"
-	description "An anonymous seller is offering a rare item that would supposedly appeal to you. You must go to a warehouse on <planet> in the <system> system if you want to purchase it for two million credits."
+	description "An anonymous seller is offering a rare item that would supposedly appeal to you. You must go to a warehouse on <destination> if you want to purchase it for two million credits."
 	source
 		government "Syndicate"
 	destination "Deadman's Cove"
@@ -705,7 +706,7 @@ mission "Grave Digger: Inhibitor Cannons 1"
 				`	(Reject the invitation.)`
 					defer
 	on visit
-		dialog `You've arrived on <planet>, but you do not have enough credits to complete the transaction. Come back by <date> with the necessary credits.`
+		dialog `You've arrived on <planet>, but you do not have enough credits to complete the transaction. Come back with the necessary credits.`
 
 mission "Grave Digger: Inhibitor Cannons 2"
 	landing
@@ -729,7 +730,7 @@ mission "Grave Digger: Inhibitor Cannons 2"
 			`	"What, exactly, am I buying?" you ask.`
 			scene "outfit/inhibitor cannon"
 			`	"Check it out dood!" he gestures towards the warehouse. As he speaks, the door to the warehouse swings open and the dock workers are wheeling out several shipping crates. "We got some radical gun cannons here. Gnarly alien weapons from beyond human space. Far out! Dude who hooked us up  refers to these as 'Inhibitor Cannons'. We are selling them as a set of four. They'd make an awesome addition to your arsenal.`
-			`	By the time he finishes his sales pitch, the dock workers have pried open one of the crates. The crate contains one of the turrets that was described.`
+			`	By the time he finishes his sales pitch, the dock workers have pried open one of the crates. The crate contains one of the cannons that was described.`
 			`	The salesman holds the data pad out expectantly.`
 			choice
 				`	(Purchase the alien weapon.)`
@@ -773,6 +774,7 @@ mission "Grave Digger: Inhibitor Cannons 2"
 		payment -2000000
 		outfit "Inhibitor Cannon" 4
 	on accept
+		"Midnight Market" --
 		event "Grave Digger Testimony"
 		log `A Midnight Market arms dealer confessed that the source of his supply of stolen Remnant weaponry is Captain Lu Bu of the Grave Digger.`
 		fail
@@ -1002,7 +1004,7 @@ mission "Grave Digger Epilogue: Omnipotence 0"
 
 mission "Grave Digger Epilogue: Omnipotence 1"
 	name "Grave Digger Remnants"
-	description "There may be more Grave Diggers hiding in the Graveyard. Visit all of the Graveyard systems marked on your map to check for Gravedigger activity."
+	description "There may be more Grave Diggers hiding in the Graveyard. Visit all of the Graveyard systems marked on your map to check for Grave Digger activity."
 	source
 		near "Tarazed" 0 10
 		not government "Pirate"

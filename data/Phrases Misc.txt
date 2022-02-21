@@ -358,13 +358,10 @@ phrase "hostile nemesis"
 		"<first> <last>? You don't seem as impressive as the stories say."
 		"Captain <last>? I was not expecting to run into you here. No matter. I won't let you interfere with my plans."
 		"I have goals. And allowing you to live isn't one of them."
-		"I'm on a top secret mission. But I'm not worried about you finding out. You won't live long enough to tell anyone about it."
-		"It's nothing personal. This is just business."
 		"Nice ship. Where did you steal it?"
 		"Those are some nice outfits. Perhaps I'll salvage what's left of them once I've destroyed your ship."
 		"What are you doing here? Never mind. I can't allow potential witnesses to escape."
 		"You don't belong here. And in a minute what remains of you won't belong anywhere."
-		"You! You killed my father... No, not really. I just like seeing the reaction people have when I say that before I kill them."
 
 phrase "hostile disabled nemesis"
 	word
