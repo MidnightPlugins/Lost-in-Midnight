@@ -846,7 +846,7 @@ mission "Oathbreaker Metallic Asteroids 3"
 	on offer
 		conversation
 			`When you land, you receive a message from Amy, the girl you helped to terraform Rand and Tundra.`
-			`	"I hope everything is going well, Captain. I was wondering if your friend was able to make use of the information I gave him. He seemed very excited about reading our work on 'Reducing Terraforming Expenses Through Equilibrium Mapping,' and said that you were the one who brought our work to his attention."`
+			`	"I hope everything is going well, Captain. I was wondering if your friend was able to make use of the information I gave him. He seemed very excited about reading our work on 'Reducing Terraforming Expenses Through Equilibrium Mapping' and said that you were the one who brought our work to his attention."`
 			`	Strange. You don't remember referring anyone to Amy and Nolan regarding their terraforming research.`
 				decline
 

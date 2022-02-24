@@ -162,7 +162,7 @@ mission "QKBlade: Quantum Key Blade 2"
 			choice
 				`	"How can I be of assistance?"`
 			scene "outfit/quantum key blade"
-			`	"The Unfettered warrior Gai Ro Nin has undertaken a quest to seek out the lost Quantum Key Blade, an ancient artifact from the era when our people waged war across the galaxy," another elder continues."`
+			`	"The Unfettered warrior Gai Ro Nin has undertaken a quest to seek out the lost Quantum Key Blade, an ancient artifact from the era when our people waged war across the galaxy," another elder continues.`
 			`	"That weapon has been lost for over a hundred millenia. Surely if it even still exists it would no longer work!" interjects a third elder.`
 			`	"The legendary artifacts are no mere cutting tools and were made with technology long since forgotten to our people. If there is any chance that the lost blade should fall into the hands of the Unfettered..." warns a fourth elder.`
 			`	"Putting aside the issue of the lost artifact," interrupts a fifth elder, "What of this new ship, the Kotetsu, that Gai has at his disposal? Is it a credible threat to us?"`
