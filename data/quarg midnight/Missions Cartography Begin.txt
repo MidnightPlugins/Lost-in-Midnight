@@ -135,9 +135,9 @@ mission "Cartography: Quarg Hitchhiker 2"
 			`	Soon after you enter, your eyes adjust to the low light. The four corners of the room are occupied by alien devices that provide the only internal light sources. On the floor is a pouch, a briefcase, and a series of bloodstains.`
 			`	"Sorry about the mess." Quash's voice emanates from a speaker in the ceiling. "The business associate who helped me acquire this vessel chose to alter the terms of our agreement. He chose poorly. I'm certain you are a trustworthy businessman who would not engage in such duplicitous behavior. Your payment of <payment> is in the pouch on the floor. Go ahead, you've earned it."`
 			choice
-				`	(Take the pouch)`
+				`	(Take the pouch.)`
 					goto departure
-				`	(Take the briefcase)`
+				`	(Take the briefcase.)`
 				`	(Take both.)`
 				
 			`	As soon as you touch the briefcase, the entry hatch slams shut. "Tsk. tsk. Captain <first> <last>, I had hoped we could continue to do business in the future." The four devices in the corners of the room are glowing with an eerie light. The heat in the room is also rising. "However, I can't have business associates who are unable to follow simple instructions." Your hair and skin are burning as you bleed out on the floor. Quash's words are drowned out by your screams. After a few moments, the room is dark and silent once again.`
