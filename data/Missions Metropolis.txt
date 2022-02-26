@@ -720,7 +720,7 @@ mission "Metropolis 2"
 				`	(Close the message.)`
 			scene "scene/scene-marauderparade"
 			`	Tyler yells, "Sensors are showing hostiles incoming!"`
-			`	"Maybe I shoudn't have had that second bowl of oatmeal this morning..." Joseph rubs his stomach.`
+			`	"Maybe I shouldn't have had that second bowl of oatmeal this morning..." Joseph rubs his stomach.`
 				accept
 
 	npc evade
@@ -841,7 +841,7 @@ mission "Metropolis 2"
 			`	"It's not just Melchior!" replies Maria. "None of the binding clamps are responding. All of Exodus' binding clamps appear to be frozen in place."`
 			`	Joseph turns to you. "We're going to need a really big landing pad..."`
 			choice
-				`	(Facepalm).`
+				`	(Facepalm.)`
 			`	It takes an hour for the local spaceport to clear three adjacent landing pads to accomodate the Exodus. The reception party proceeds despite being a bit behind schedule. The entire Exodus crew is eager to celebrate. Several times during the evening you are interrupted by incoming congratulatory messages from various people you've encountered and worked with in the past. After you finish responding to one such message, you notice Joseph has also excused himself from the reception area to sit on a balcony overlooking the spaceport.`
 			`	"Thank you, Captain <last>. I never mentioned it before, but one of my ancestors was on the design team for that ship. Seeing the Exodus fly again has been a childhood dream of mine." He pauses to make a great big yawn. "I suppose I've had enough excitement for one day. Figuring out how to unlock those binding clamps will have to wait until tomorrow. For now, I just want to rest. Go on back to the party. I'll be fine. I have an assistant I can call to fetch me when I'm done here."`
 			`	You congratulate Joseph on a job well done and thank him for giving you the opportunity to be a part of his dream. The last time you saw him, he was staring out over the spaceport.`
@@ -1051,6 +1051,6 @@ mission "Metropolis Epilogue: Leviathan Comics"
 		payment 42000 200
 		conversation
 			scene "outfit/leviathan comic"
-			`As your Arach passenger pays you the <payment> you agreed upon, he says,"Volume one of Leviathan Comics, I noticed you have." He motions towards a small table nearby. The old comic book must have been left out by a previous passenger. "In good condition, it is. Worth 1,000,000, it may be. Enjoyed reading it again, I did. To inform you of its value, I decided. Until long after, the value of some things remains undiscovered." He disembarks from the ship.`
+			`As your Arach passenger pays you the <payment> you agreed upon, he says, "Volume One of Leviathan Comics, I noticed you have." He motions towards a small table nearby. The old comic book must have been left out by a previous passenger. "In good condition, it is. Worth 1,000,000, it may be. Enjoyed reading it again, I did. To inform you of its value, I decided. Until long after, the value of some things remains undiscovered." He disembarks from the ship.`
 			`You pick up the well worn book and remember that you traded that old Melchior post card for it. For a brief moment, as you carefully put the book away, you reminisce about your adventures traveling the galaxy in search of the pieces to assemble the metropolis ship Exodus.`
 

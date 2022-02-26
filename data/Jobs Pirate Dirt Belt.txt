@@ -526,12 +526,12 @@ mission "Lares Camping (Raiders)"
 					defer
 			`You settle in for a peaceful night's sleep when the silence is broken by the sounds of an afterburner ripping through the night sky! That sound is quickly overttaken by a loud explosion from the direction of the spaceport!`
 			choice
-				`	(Stay here)`
+				`	(Stay here.)`
 				`	(Head back to your ship.)`
 					goto raiders
 			`	You kill the lights and huddle with your gun in the darkness. There are distant sounds of yelling and gunfire. Eventually, the sounds fade and silence reclaims the night.`
 			choice
-				`	(Stay here)`
+				`	(Stay here.)`
 				`	(Head back to your ship.)`
 					goto raiders
 			`	You try to get some sleep, but you keep your gun clutched close in case someone comes looking for trouble. Eventually, morning comes.`

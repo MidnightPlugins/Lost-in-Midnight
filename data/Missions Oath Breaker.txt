@@ -923,7 +923,7 @@ mission "Oathbreaker Thermopylae"
 		government "Oathbreaker"
 		personality target waiting staying timid uninterested
 		ship "Thermopylae Station" "Thermopylae"
-		dialog `The space battle station Thermopylae has been destroyed. Search planet Hope for any additional fortifications. Then report back to <origin>`
+		dialog `The space battle station Thermopylae has been destroyed. Search planet Hope for any additional fortifications. Then report back to <origin>.`
 
 	npc
 		system "Wei"

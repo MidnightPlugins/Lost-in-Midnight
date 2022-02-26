@@ -1052,7 +1052,7 @@ mission "Grave Digger Epilogue: Omnipotence 1"
 	on stopover
 		dialog `You find rusting salvaging equipment strewn across a beach on one of the tropical islands. Labels on the machines indicate they were manufactured on Millrace and sold by the Syndicate. From the markings in the sand, something big was dragged out of the ocean. Whatever it was is no longer here.`
 	on waypoint
-		dialog `You've checked all the systems in the Graveyard. You should do a thorough search the Grave Digger's base on <destination> in case they left behind any clues.`
+		dialog `You've checked all the systems in the Graveyard. You should do a thorough search of the Grave Digger's base on <destination> in case they left behind any clues.`
 	npc
 		government "Remnant"
 		system Polerius
