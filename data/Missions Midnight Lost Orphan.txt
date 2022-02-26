@@ -128,7 +128,7 @@ mission "Midnight Lost Orphan: Pirate Atrocity"
 	invisible
 	source
 		government "Pirate"
-		not attributes "uninhabited"
+		not attributes "uninhabited" "station"
 	to offer
 		random < ( 9 + "captain of atrocity" )
 	on offer
@@ -146,7 +146,7 @@ mission "Midnight Lost Orphan: Republic Atrocity"
 	invisible
 	source
 		government "Republic"
-		not attributes "uninhabited"
+		not attributes "uninhabited" "station"
 	to offer
 		random < ( 9 + "captain of atrocity" )
 	on offer
@@ -164,7 +164,7 @@ mission "Midnight Lost Orphan: Syndicate Atrocity"
 	invisible
 	source
 		government "Syndicate"
-		not attributes "uninhabited"
+		not attributes "uninhabited" "station"
 	to offer
 		random < ( 9 + "captain of atrocity" )
 	on offer
@@ -182,7 +182,7 @@ mission "Midnight Lost Orphan: Free Worlds Atrocity"
 	invisible
 	source
 		government "Free Worlds"
-		not attributes "uninhabited"
+		not attributes "uninhabited" "station"
 	to offer
 		random < ( 9 + "captain of atrocity" )
 	on offer
@@ -201,7 +201,7 @@ mission "Midnight Lost Orphan: Hai Atrocity"
 	source
 		government "Hai"
 		not planet "Darkwaste"
-		not attributes "uninhabited"
+		not attributes "uninhabited" "station"
 	to offer
 		random < ( 9 + "captain of atrocity" )
 	on offer
@@ -219,7 +219,7 @@ mission "Midnight Lost Orphan: Remnant Atrocity"
 	invisible
 	source
 		government "Remnant"
-		not attributes "uninhabited"
+		not attributes "uninhabited" "station"
 	to offer
 		random < ( 9 + "captain of atrocity" )
 	on offer
@@ -237,7 +237,7 @@ mission "Midnight Lost Orphan: Wanderer Atrocity"
 	invisible
 	source
 		government "Wanderer"
-		not attributes "uninhabited"
+		not attributes "uninhabited" "station"
 	to offer
 		random < ( 9 + "captain of atrocity" )
 	on offer
@@ -255,7 +255,7 @@ mission "Midnight Lost Orphan: Coalition Atrocity"
 	invisible
 	source
 		government "Coalition" "Heliarch"
-		not attributes "uninhabited"
+		not attributes "uninhabited" "station"
 	to offer
 		random < ( 9 + "captain of atrocity" )
 	on offer
