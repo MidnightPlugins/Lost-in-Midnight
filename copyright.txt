@@ -71,3 +71,8 @@ image/outfit/liquid metal specimen
 	 From NASA, and therefore in the public domain because they were created by
 	 government employees while doing work for the government.
 
+
+
+Additional Image Sources:
+	images/outfit/dysprosium.jpg
+		The original uploader was Tomihahndorf at German Wikipedia., CC BY-SA 3.0 <http://creativecommons.org/licenses/by-sa/3.0/>, via Wikimedia Commons Tomihahndorf at German Wikipedia., CC BY-SA 3.0 <http://creativecommons.org/licenses/by-sa/3.0/>, via Wikimedia Commons
