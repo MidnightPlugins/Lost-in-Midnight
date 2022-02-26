@@ -187,51 +187,7 @@ fleet "Nova Firefly Hatchery"
 		"Firefly Young" 4
 
 
-
-mission "First Contact: Nova Fireflies"
-	name "Explore New Systems"
-	description "The Celestial Compass has highlighted an area of the map near the Limen system. Visit these new systems to see what is out there."
-	landing
-	source
-		near "Limen" 1 10
-	to offer
-		has "celestial compass"
-	on offer
-		require "Celestial Compass"
-		event "reveal Hazehai"
-		conversation
-			scene "outfit/celestial compass"
-			`The Celestial Compass is highlighting an area of the map near the Limen system. Several hidden systems are waiting to be explored!`
-				accept
-		
-	on enter Hazehai
-		dialog `This system is all that remains of a star that went supernova long ago. Floating in the superheated gas are some bags of flesh that glow with an eerie light. Some creatures fly out of a bag's orifice and approach you...`
-	on enter Ehmahai
-		dialog `These creatures seem upset with your presence. Perhaps they are fiercely territorial.`
-	on enter Heiahai
-		dialog `These creatures seem upset with your presence. Perhaps they are fiercely territorial.`
-
-	npc kill
-		system Hazehai
-		government "Invasive Lifeform (Passive)"
-		personality waiting staying mining harvests mute
-		fleet "Nova Firefly Hatchery" 5
-
-	npc
-		system Ehmahai
-		government "Invasive Lifeform"
-		personality waiting staying vindictive mining mute
-		fleet "Nova Firefly"
-
-	npc
-		system Heiahai
-		government "Invasive Lifeform"
-		personality waiting staying vindictive mining mute
-		fleet "Nova Firefly"
-
-	on complete
-		event "Nova Firefly Invasion" 7
-
+# For the event trigger, see Missions Cartography Compass
 event "Nova Firefly Invasion"
 	system Zubahai
 		add fleet "Nova Firefly" 4000
@@ -245,8 +201,6 @@ event "Nova Firefly Invasion"
 		add fleet "Nova Firefly" 8000
 	system Algieba
 		add fleet "Nova Firefly" 12000
-
-# For the reveal Hazehai event, look in Cartography Map.
 
 
 
@@ -361,7 +315,7 @@ mission "First Contact: Star Gazer"
 	landing
 	invisible
 	to offer
-		has "Wanderers: Sestor: Final: done"
+		has "event: wanderers: the eye opens"
 	on offer
 		event "Reveal Watcher's Nest"
 	on enter "Watcher's Nest"

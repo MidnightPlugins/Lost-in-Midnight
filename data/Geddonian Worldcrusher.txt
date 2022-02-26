@@ -16,6 +16,9 @@ government "Doomsday Device"
 	"player reputation" -1000
 	"bribe" 0
 	"fine" 0
+	"attitude toward"
+		"Drak (Hostile)" -.01
+
 
 outfit "Graviton Channeler"
 	category "Turrets"

@@ -516,9 +516,9 @@ mission "Pot-o'-honey"
 		not planet "Darkwaste"
 	destination "Farpoint"
 	to offer
-#		random < 60
-#		"combat rating" > 10
-#		"pirate attraction" > 0
+		random < 60
+		"combat rating" > 10
+		"pirate attraction" > 0
 	on offer
 		conversation
 			`A human merchant captain approaches you. "Greetings captain. I am looking for an escort through the northern passage to <destination>. Would you help me get there for <payment>?`
@@ -535,9 +535,9 @@ mission "Pot-o'-honey"
 				accept
 			
 	on accept
-		"reputation: Pirate (Disguised)" >?= 1
+		"reputation: Bounty (Disguised)" >?= 1
 	on enter "Waypoint"
-		"reputation: Pirate (Disguised)" <?= -1000
+		"reputation: Bounty (Disguised)" <?= -1000
 		conversation
 			scene "scene/scene-bulk drones"
 			`When you enter the system, a small fleet of pirates is waiting for you. You are getting ready to defend the <npc> when you notice something strange. Its cargo bays are opening and releasing a swarm of drones! You receive a message from Captain Robin of the Pot-o'-honey:`
@@ -564,11 +564,13 @@ mission "Pot-o'-honey"
 			fighters "republic fighter"
 			variant
 				"Pirate Drone" 10
-		dialog `The Pot-o'-honey and its drones have been defeated. You make a mental note to check with the authorities on <destination> to see if there is any reward for your effort.`
+		conversation
+			apply
+				"reputation: Bounty (Disguised)" >?= 1
+			`The Pot-o'-honey and its drones have been defeated. You make a mental note to check with the authorities on <destination> to see if there is any reward for your effort.`
 
 	on complete
 		payment 150000
-		"reputation: Pirate (Disguised)" >?= 1
 		log `Took on a simple escort job that turned out to be a trap set by pirates. I can't believe they turned an ordinary Bulk Freighter into a drone carrier. If more pirates start using this trick, taking on escort jobs will be even more risky than they already are.`
 		conversation
 			`When you land on <destination> you look up bounties and wanted pirate documents, searching for any mention of the <npc>. Eventually, you find a bounty for the destruction of the <npc>. It appears that Chris was a pirate who became so fascinated with conspiracy theories about a stealth carrier designed to trap pirates that he decided to make his own version of such a ship. It turned out to be a successful operation, with many escort pilots falling into his trap.`

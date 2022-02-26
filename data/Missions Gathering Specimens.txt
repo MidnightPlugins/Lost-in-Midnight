@@ -858,6 +858,7 @@ mission "Gathering Specimens: Remnant Gray Eye"
 	on decline
 		outfit "Gray Eye Specimen" -1
 		clear "Gathering Specimens: Gray Eye: offered"	
+
 mission "Gathering Specimens: Remnant Luminazoa"
 	landing
 	invisible
@@ -879,6 +880,7 @@ mission "Gathering Specimens: Remnant Luminazoa"
 	on decline
 		outfit "Luminazoa Specimen" -1
 		clear "Gathering Specimens: Luminazoa: offered"
+
 mission "Gathering Specimens: Remnant Ionic Leech"
 	landing
 	invisible
@@ -900,6 +902,7 @@ mission "Gathering Specimens: Remnant Ionic Leech"
 	on decline
 		outfit "Leech Specimen" -1
 		clear "Gathering Specimens: Ionic Leech: offered"
+
 mission "Gathering Specimens: Remnant Astero Nautilus"
 	landing
 	invisible
@@ -921,6 +924,7 @@ mission "Gathering Specimens: Remnant Astero Nautilus"
 	on decline
 		outfit "Nautilus Specimen" -1
 		clear "Gathering Specimens: Astero Nautilus: offered"
+
 mission "Gathering Specimens: Remnant Plasma Parasite"
 	landing
 	invisible
@@ -942,6 +946,7 @@ mission "Gathering Specimens: Remnant Plasma Parasite"
 	on decline
 		outfit "Plasma Specimen" -1
 		clear "Gathering Specimens: Plasma Parasite: offered"
+
 mission "Gathering Specimens: Remnant Nova Firefly"
 	landing
 	invisible
@@ -963,6 +968,7 @@ mission "Gathering Specimens: Remnant Nova Firefly"
 	on decline
 		outfit "Firefly Specimen" -1
 		clear "Gathering Specimens: Nova Firefly: offered"
+
 mission "Gathering Specimens: Remnant Star Gazer"
 	landing
 	invisible
@@ -984,6 +990,7 @@ mission "Gathering Specimens: Remnant Star Gazer"
 	on decline
 		outfit "Gazer Specimen" -1
 		clear "Gathering Specimens: Star Gazer: offered"
+
 mission "Gathering Specimens: Remnant Research"
 	landing
 	invisible
@@ -996,7 +1003,7 @@ mission "Gathering Specimens: Remnant Research"
 		has "Gathering Specimens: Remnant Nova Firefly: declined"
 		has "Gathering Specimens: Remnant Star Gazer: declined"
 	on offer
-		dialog `You find Taely preparing to board a ship. She signs "Your contributions to the junior engineering research project have caused quite a stir. I'm off to attend another meeting regarding some new devopment based on it. We might have some results soon."`
+		dialog `You find Taely preparing to board a ship. She signs "Your contributions to the junior engineering research project have caused quite a stir. I'm off to attend another meeting regarding some new development based on it. We might have some results soon."`
 	on accept
 		event "Gathering Specimens: Remnant Research" 14
 		fail "Gathering Specimens: Remnant"
@@ -1040,6 +1047,7 @@ mission "Gathering Specimens: Remnant Gray Eye B"
 	on decline
 		outfit "Gray Eye Specimen" -1
 		clear "Gathering Specimens: Gray Eye: offered"	
+
 mission "Gathering Specimens: Remnant Luminazoa B"
 	landing
 	invisible
@@ -1061,6 +1069,7 @@ mission "Gathering Specimens: Remnant Luminazoa B"
 	on decline
 		outfit "Luminazoa Specimen" -1
 		clear "Gathering Specimens: Luminazoa: offered"
+
 mission "Gathering Specimens: Remnant Ionic Leech B"
 	landing
 	invisible
@@ -1082,6 +1091,7 @@ mission "Gathering Specimens: Remnant Ionic Leech B"
 	on decline
 		outfit "Leech Specimen" -1
 		clear "Gathering Specimens: Ionic Leech: offered"
+
 mission "Gathering Specimens: Remnant Astero Nautilus B"
 	landing
 	invisible
@@ -1103,6 +1113,7 @@ mission "Gathering Specimens: Remnant Astero Nautilus B"
 	on decline
 		outfit "Nautilus Specimen" -1
 		clear "Gathering Specimens: Astero Nautilus: offered"
+
 mission "Gathering Specimens: Remnant Plasma Parasite B"
 	landing
 	invisible
@@ -1124,6 +1135,7 @@ mission "Gathering Specimens: Remnant Plasma Parasite B"
 	on decline
 		outfit "Plasma Specimen" -1
 		clear "Gathering Specimens: Plasma Parasite: offered"
+
 mission "Gathering Specimens: Remnant Nova Firefly B"
 	landing
 	invisible
@@ -1145,6 +1157,7 @@ mission "Gathering Specimens: Remnant Nova Firefly B"
 	on decline
 		outfit "Firefly Specimen" -1
 		clear "Gathering Specimens: Nova Firefly: offered"
+
 mission "Gathering Specimens: Remnant Star Gazer B"
 	landing
 	invisible
@@ -1166,6 +1179,7 @@ mission "Gathering Specimens: Remnant Star Gazer B"
 	on decline
 		outfit "Gazer Specimen" -1
 		clear "Gathering Specimens: Star Gazer: offered"
+
 mission "Gathering Specimens: Remnant Research B"
 	landing
 	invisible
@@ -1178,7 +1192,7 @@ mission "Gathering Specimens: Remnant Research B"
 		has "Gathering Specimens: Remnant Nova Firefly B: declined"
 		has "Gathering Specimens: Remnant Star Gazer B: declined"
 	on offer
-		dialog `You find Prefect Chilia preparing to board a ship. He signs "Your contributions to the junior weapons research project have caused quite a stir. I'm off to attend another meeting regarding some new devopment based on it. We might have some results soon."`
+		dialog `You find Prefect Chilia preparing to board a ship. He sings "Your contributions to the junior weapons research project have caused quite a stir. I'm off to attend another meeting regarding some new development based on it. We might have some results soon."`
 	on accept
 		event "Gathering Specimens: Remnant Research" 14
 		fail "Gathering Specimens: Remnant B"
@@ -1279,7 +1293,7 @@ mission "Gathering Specimens: Wanderer Ionic Research 2"
 	to offer
 		has "event: wanderers: hurricane mass production"
 		"reputation: Wanderer" >= 0.01
-		has "Gathering Specimens: Wanderer Ionic Research 1: done"
+		has "event: Storm Seeker Reborn"
 	on offer
 		dialog `You recieve a message from Sobari Tele'ek: "The [research, investigation] from the Ionic [Leech, Bloodworm] [tissue, meat] sample is [complete, concluded]. Come to <destination> if you are [interested, curious] in seeing the [result, solution].`
 	on complete

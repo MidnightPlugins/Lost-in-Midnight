@@ -1157,7 +1157,7 @@ planet "Naihe Qiao"
 planet "Parasite's Nest"
 	attributes uninhabited ringworld midnight
 	landscape land/station2dark
-	description `While this ring world is visible to Coalition astronomers, it sits outside their reach. The ring is completely intact. However, it has been  overrun by plasma parasites. The infestation has reached the point where one misplaced blaster shot could set the whole ring on fire...`
+	description `While this ring world is visible to Coalition astronomers, it sits outside their reach. The ring is completely intact. However, it has been overrun by plasma parasites. The infestation has reached the point where one misplaced blaster shot could set the whole ring on fire...`
 	government Uninhabited
 	security 0
 
@@ -1185,7 +1185,7 @@ planet "Rock Cluster"
 	security 0
 
 planet "Rum Cellar"
-	attributes station midnight pirate "south pirate" south
+	attributes station midnight pirate "dirt belt pirate" "dirt belt"
 	landscape land/sivael1
 	description `During the early days of humanity's expansion into space, the success of a pirate base was determined more by its ability to remain hidden than on the strength of a defensive fleet. Rum Cellar is one of those early success stories, thanks to the alien device orbiting Chasm's sun. The pirates who first found the abandoned artifact quickly learned how to use it to shut down the hyperspace link to the system. This allowed Chasm to remain a secret out of reach from authoritarian governments.`
 	spaceport `Many of the pirate ships parked here are damaged. It's a wonder some of them were able to escape the Navy in the condition that they are in.`
@@ -1250,7 +1250,7 @@ planet Vesta
 		fleet "Marauder Independent (Killable)" 10
 		
 planet "Wang Xiang Tai"
-	attributes midnight pirate station "dirt belt pirate"
+	attributes midnight pirate station "dirt belt pirate" "dirt belt"
 	landscape land/sivael4
 	description `The pirates who discovered this isolated system, and the secrets to using the alien device orbiting its sun to activate and deactivate the hyperspace links leading to the system, created this space station as a rest stop for those seeking refuge from Earth's authority. It also serves as a meeting place for those seeking to do business with the underworld or rival pirate factions in need of neutral ground.`
 	spaceport `The spaceport is a ring of docking bays that circle around the station. Not everyone here is a pirate. There are also those who conduct business with pirates arriving and departing.`

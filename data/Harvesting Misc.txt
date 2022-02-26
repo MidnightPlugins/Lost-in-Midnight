@@ -121,7 +121,7 @@ mission "Harvesting: Fossil Collector"
 		dialog
 			`The paradise worlds are filled with people who have more money than sense. If there is any place in the galaxy to quickly find a a rich sucker willing to pay ridiculous sums of money for the alien fossil you found, this could be it. After asking around for a bit, you finally find a collector who is interested in purchasing a fossil. Once you complete the transaction, you will be short one fossil, but <payment> richer.`
 	on accept
-		"reputation: Black Market" ++
+		"reputation: Midnight Market" ++
 		outfit Fossil -1
 		payment 200000
 		fail

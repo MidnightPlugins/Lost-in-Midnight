@@ -64,7 +64,7 @@ mission "Vesta Tribute"
 	to offer
 		"reputation: Pirate" > 0
 		random < 40
-	cargo "ore (tribute)" 45 2 .05
+	cargo "ore" 45 2 .05
 	on complete
 		payment 9000 2000
 		dialog `You drop off the tribute to the pirates, and they pay you <payment>.`
@@ -97,12 +97,17 @@ mission "Escort Core Pirate Home"
 		"reputation: Pirate" > 0
 
 	npc
-		government "Syndicate"
+		government "Republic"
 		system
-			distance 1 2
+			distance 2 3
 		personality waiting heroic vindictive
-		fleet "Small Syndicate"
-		fleet "Large Syndicate"
+		fleet "Small Republic"
+	npc
+		government "Republic"
+		system
+			distance 3 4
+		personality waiting heroic vindictive
+		fleet "Large Republic"
 	npc
 		government "Syndicate"
 		system destination
@@ -115,14 +120,20 @@ mission "Escort Core Pirate Home"
 		personality escort
 		fleet
 			names "pirate"
-			variant 2
+			variant 3
 				"Splinter"
-			variant 2
+			variant 3
 				"Splinter (Laser)"
-			variant 2
+			variant 3
 				"Splinter (Mark II)"
-			variant 2
+			variant 3
 				"Splinter (Proton)"
+			variant 2
+				"Vanguard (Particle)"
+			variant 2
+				"Vanguard (Missile)"
+			variant 2
+				"Vanguard"
 			variant 1
 				"Falcon"
 				
@@ -132,6 +143,68 @@ mission "Escort Core Pirate Home"
 		dialog phrase "generic safe escort completion dialog"
 	on visit
 		dialog phrase "generic arrived-without-npc dialog"
+
+
+
+mission "Escort Core Pirate to Dirt Belt"
+	job
+	deadline
+	name "Protection to <planet>"
+	description "The captain of the <npc> will pay you <payment> to help them reach <destination> by <date>."
+	source
+		government "Pirate"
+		attributes "core pirate"
+	destination
+		government "Pirate"
+		attributes "dirt belt pirate"
+	to offer
+		random < 40
+		"combat rating" > 400
+		"reputation: Pirate" > 0
+
+	npc
+		government "Syndicate"
+		system
+			distance 1 2
+		personality waiting heroic vindictive
+		fleet "Small Syndicate"
+		fleet "Large Syndicate"
+	npc
+		government "Syndicate"
+		system destination
+		personality entering heroic vindictive
+		fleet "Small Syndicate"
+		fleet "Large Syndicate"
+
+	npc accompany save
+		government Pirate
+		personality escort
+		fleet
+			names "pirate"
+			variant 3
+				"Splinter"
+			variant 3
+				"Splinter (Laser)"
+			variant 3
+				"Splinter (Mark II)"
+			variant 3
+				"Splinter (Proton)"
+			variant 2
+				"Vanguard (Particle)"
+			variant 2
+				"Vanguard (Missile)"
+			variant 2
+				"Vanguard"
+			variant 1
+				"Falcon"
+				
+	on complete
+		payment 375000
+		"reputation: Pirate" ++
+		dialog phrase "generic safe escort completion dialog"
+	on visit
+		dialog phrase "generic arrived-without-npc dialog"
+
 		
 
 
@@ -154,6 +227,70 @@ mission "Escort North Pirate Home"
 	npc
 		government "Republic"
 		system
+			distance 2 3
+		personality waiting heroic vindictive
+		fleet "Small Republic"
+	npc
+		government "Republic"
+		system
+			distance 3 4
+		personality waiting heroic vindictive
+		fleet "Large Republic"
+	npc
+		government "Republic"
+		system destination
+		personality waiting staying heroic vindictive
+		fleet "Small Republic"
+		fleet "Large Republic"
+
+	npc accompany save
+		government Pirate
+		personality escort
+		fleet
+			names "pirate"
+			variant 3
+				"Corvette"
+			variant 3
+				"Corvette (Missile)"
+			variant 3
+				"Corvette (Speedy)"
+			variant 3
+				"Mule"
+			variant 3
+				"Mule (Heavy)"
+			variant 3
+				"Mule (Hai Weapons)"
+			variant 1
+				"Bactrian"
+				
+	on complete
+		"reputation: Pirate" ++
+		payment 375000
+		dialog phrase "generic safe escort completion dialog"
+	on visit
+		dialog phrase "generic arrived-without-npc dialog"
+
+
+
+mission "Escort North Pirate to Dirt Belt"
+	job
+	deadline
+	name "Protection to <planet>"
+	description "The captain of the <npc> will pay you <payment> to help them reach <destination> by <date>."
+	source
+		government "Pirate"
+		attributes "north pirate"
+	destination
+		government "Pirate"
+		attributes "dirt belt pirate"
+	to offer
+		random < 40
+		"combat rating" > 400
+		"reputation: Pirate" > 0
+
+	npc
+		government "Republic"
+		system
 			distance 1 2
 		personality waiting heroic vindictive
 		fleet "Small Republic"
@@ -161,7 +298,7 @@ mission "Escort North Pirate Home"
 	npc
 		government "Republic"
 		system destination
-		personality waiting staying heroic vindictive
+		personality waiting entering heroic vindictive
 		fleet "Small Republic"
 		fleet "Large Republic"
 
@@ -230,6 +367,12 @@ mission "Escort South Pirate Home"
 		fleet
 			names "pirate"
 			variant 1
+				"Osprey"
+			variant 1
+				"Osprey (Missile)"
+			variant 1
+				"Osprey (Laser)"
+			variant 1
 				"Clipper"
 			variant 1
 				"Clipper (Speedy)"
@@ -252,6 +395,71 @@ mission "Escort South Pirate Home"
 		dialog phrase "generic arrived-without-npc dialog"
 
 		
+
+mission "Escort South Pirate to Dirt Belt"
+	job
+	deadline
+	name "Protection to <planet>"
+	description "The captain of the <npc> will pay you <payment> to help them reach <destination> by <date>."
+	source
+		government "Pirate"
+		attributes "south pirate"
+	destination
+		government "Pirate"
+		attributes "dirt belt pirate"
+	to offer
+		random < 40
+		"combat rating" > 400
+		"reputation: Pirate" > 0
+
+	npc
+		government "Militia"
+		system
+			distance 1 2
+		personality heroic
+		fleet "Small Militia"
+		fleet "Large Militia"
+	npc
+		government "Militia"
+		system destination
+		personality entering heroic
+		fleet "Small Militia"
+		fleet "Large Militia"
+
+	npc accompany save
+		government Pirate
+		personality escort
+		fleet
+			names "pirate"
+			variant 1
+				"Osprey"
+			variant 1
+				"Osprey (Missile)"
+			variant 1
+				"Osprey (Laser)"
+			variant 1
+				"Clipper"
+			variant 1
+				"Clipper (Speedy)"
+			variant 1
+				"Clipper (Heavy)"
+			variant 1
+				"Modified Argosy"
+			variant 1
+				"Modified Argosy (Blaster)"
+			variant 1
+				"Modified Argosy (Heavy)"
+			variant 1
+				"Modified Argosy (Missile)"
+
+	on complete
+		"reputation: Pirate" ++
+		payment 375000
+		dialog phrase "generic safe escort completion dialog"
+	on visit
+		dialog phrase "generic arrived-without-npc dialog"
+
+
 
 mission "Jail Break A"
 	job
@@ -597,6 +805,8 @@ mission "New China Supplies to Diyu"
 	on fail
 		"reputation: Pirate" --
 		dialog `The pirates can't operate the station without a steady supply line. Your failure does not go unnoticed.`
+	on stopover
+		dialog `Dockworkers load <cargo> onto your ship. If you don't make any detours, you should be able to get back to <origin> in time.`
 	on complete
 		payment
 		payment 22000

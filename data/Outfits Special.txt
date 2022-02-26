@@ -14,6 +14,54 @@
 # Exception: Ammunition and similar support outfits may be available at outfitters.
 
 
+
+
+# Dysprosium is obtained in the THOR missions
+
+outfit "Dysprosium"
+	plural "Dysprosium"
+	category "Special"
+	cost 100000
+	thumbnail "outfit/harvested dysprosium"
+	"flotsam sprite" "effect/flotsam dysprosium"
+	"mass" 2
+	"installable" -1
+	description "Dysprosium is never naturally found as a free element. Many industries in a spacefaring civilization have a use for it."
+
+
+
+# The Nanotech Battery (Damaged) is obtained in the THOR missions
+
+outfit "Nanotech Battery (Damaged)"
+	category "Special"
+	cost 0
+	thumbnail "outfit/damaged quarg battery"
+	"mass" 50
+	"installable" -1
+	description "Although this device is no longer functioning, it might still be worth something to the right people."
+
+# The Quantum Shield Generator (Damaged) is obtained in the THOR missions
+
+outfit "Quantum Shield Generator (Damaged)"
+	category "Special"
+	cost 0
+	thumbnail "outfit/damaged quarg shield"
+	"mass" 120
+	"installable" -1
+	description "Although this device is no longer functioning, it might still be worth something to the right people."
+
+# The Antimatter Core (Damaged) is obtained in the THOR missions
+
+outfit "Antimatter Core (Damaged)"
+	category "Special"
+	cost 0
+	thumbnail "outfit/damaged quarg core"
+	"mass" 80
+	"installable" -1
+	description "Although this device is no longer functioning, it might still be worth something to the right people."
+
+
+
 # The Flare Belcher, Lightning Tendril, and Quill Launcher are installed on the Raptor.
 
 outfit "Flare Belcher"
@@ -713,3 +761,14 @@ mission "Outfit Recovery: T.H.O.R."
 				decline
 	on decline
 		outfit "T.H.O.R." 1
+
+
+
+outfit "T.H.O.R. (Damaged)"
+	category "Special"
+	thumbnail "outfit/android"
+	description "Produced by Kraz Cybernetics, this prototype Tactical Heavy Offensive Robot has taken severe damage. The engineers on Rust in the Kraz system can probably repair it, but it won't be cheap."
+	description "Although it is not able to be deployed, you can keep this installed on your ship to prevent it from being mixed in with the regular cargo."
+	"mass" 4
+	"outfit space" -4
+	"unplunderable" 1

@@ -13,7 +13,7 @@
 
 # Cartography missions after the events at Quarantine
 # This path uses the Obsolete Star Map data instead of the Celestial Compass.
-
+# See Cartography Compass for system reveal events
 
 
 mission "Cartography: The Map Hazehai Hint"
@@ -87,25 +87,6 @@ mission "Cartography: The Map Hazehai"
 		set "First Contact: Nova Fireflies: offered"
 		set "First Contact: Nova Fireflies: done"
 		dialog `You confirm to the researchers that their mapping data was accurate. They thank you and promise to send a message if they project the locations of more systems.`
-
-event "reveal Hazehai"
-	system Ehmahai
-		remove hidden
-		add fleet "Nova Firefly" 1000
-	system Hazehai
-		remove hidden
-		add fleet "Nova Firefly Hatchery" 600
-		add fleet "Nova Firefly" 4000
-	system Heiahai
-		remove hidden
-		add fleet "Nova Firefly" 1000
-	system Zubahai
-		remove hidden
-
-# For the Celestial Compass branch revealing Hazehai and the Nova Fiefly Invasion event, look in Lifeform Invasive.
-
-
-
 
 
 
@@ -294,7 +275,7 @@ mission "Cartography: The Map Missing Alexandria"
 			`The researchers who've been helping you analyze map data to reveal new systems are nowhere to be found. When you ask for information about them, you are told that they left on a research expedition in the south near Gamma Corvi and haven't returned.`
 				accept
 	
-	on enter Hazehai
+	on enter "Pebble Beach"
 		dialog `You found the missing Alexandria expedition. Help fix their ship and escort them back to <origin>.`
 		
 	npc assist accompany save
@@ -350,7 +331,8 @@ mission "Cartography: The Map (Hai) Revisited"
 
 mission "Cartography: The Map: The Garden"
 	landing
-	invisible
+	name "Explore New System"
+	description "Explore the new area indicated on your map, then return to <origin> to share your data."
 	source
 		government "Wanderer"
 		not planet "Sabira Eseskrai"
