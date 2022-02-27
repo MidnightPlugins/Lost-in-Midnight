@@ -119,7 +119,7 @@ mission "QKBlade: House Unuk Door Delivery"
 			`	You spend several hours hiking through mountain trails before arriving at your destination, the remote mansion of House Unuk located high in the Zuba Fahn mountains. The mansion is concealed beneath a thick forest canopy. But peering between the trees gives you a perfect view of the spaceport in the distance.`
 			`	The building is surrounded by a high stone wall. A communication device is setup at the front gate and you try using it.`
 			`	"Hello? What business do you have at House Unuk?"`
-			`	"Just a simple delivery. I was told I would be paid if I brought this here." you hold up the package for the camera.`
+			`	"Just a simple delivery. I was told I would be paid if I brought this here." You hold up the package for the camera.`
 			`	"Ah, yes! I'll send someone out shortly."`
 			`	After a moment the gate opens and a maid walks out to make the exchange.`
 			`	"Thank you. House Unuk has been expecting this for some time. In appreciation for your service please accept this additional gift from the master of the house." She smiles and hands you a package of their acorn cookies with a small delivery fee of <payment>.`
@@ -158,11 +158,11 @@ mission "QKBlade: Quantum Key Blade 2"
 		log "People" "Gai Ro Nin" `The Unfettered captain of the Scorpion prototype, Kotetsu. He is searching for something called a Quantum Key Blade.`
 		conversation
 			`A guard patrol greets you at the spaceport and escorts you to the council of elders. When you arrive they inform you of why you've been summoned.`
-			`	"Welcome Captain <first> <last>. Hai is in need of well traveled experts on the areas beyond our space." states one elder.`
+			`	"Welcome Captain <first> <last>. Hai is in need of well traveled experts on the areas beyond our space," states one elder.`
 			choice
 				`	"How can I be of assistance?"`
 			scene "outfit/quantum key blade"
-			`	"The Unfettered warrior Gai Ro Nin has undertaken a quest to seek out the lost Quantum Key Blade, an ancient artifact from the era when our people waged war across the galaxy." another elder continues."`
+			`	"The Unfettered warrior Gai Ro Nin has undertaken a quest to seek out the lost Quantum Key Blade, an ancient artifact from the era when our people waged war across the galaxy," another elder continues."`
 			`	"That weapon has been lost for over a hundred millenia. Surely if it even still exists it would no longer work!" interjects a third elder.`
 			`	"The legendary artifacts are no mere cutting tools and were made with technology long since forgotten to our people. If there is any chance that the lost blade should fall into the hands of the Unfettered..." warns a fourth elder.`
 			`	"Putting aside the issue of the lost artifact," interrupts a fifth elder, "What of this new ship, the Kotetsu, that Gai has at his disposal? Is it a credible threat to us?"`
@@ -172,7 +172,7 @@ mission "QKBlade: Quantum Key Blade 2"
 			`	"A Sword Scorpion," responds a sixth elder. "According to our intelligence reports it was one of the prototypes the Unfettered had under consideration before rejecting it in favor of what would eventually become the Solifuge."`
 			`	"Good. They likely won't be mass producing them then," exclaims another elder. "A single failed prototype ship should be no cause for concern."`
 			`	Another elder directs her statement at you. "It might interest Captain <last> to know that the Kotetsu is likely modified with technology plundered from the Wanderers. Our garrison on Cloudfire reported as much."`
-			`	The first elder addresses you. "Captain <last>, we believe Gai is heading to human space because the final resting place of the Quantum Key Blade is likely somwhere within that vast territory. The Unfettered must have discovered some clue specifying its location amongst their plunder from the Wanderers. Go captain, and stop him before he tears apart your people in his search."`
+			`	The first elder addresses you. "Captain <last>, we believe Gai is heading to human space because the final resting place of the Quantum Key Blade is likely somewhere within that vast territory. The Unfettered must have discovered some clue specifying its location amongst their plunder from the Wanderers. Go captain, and stop him before he tears apart your people in his search."`
 				accept
 
 
@@ -214,7 +214,7 @@ mission "QKBlade: Quantum Key Blade 3"
 			`	A nearby Quarg notices your dilemma and offers to translate.`
 			`	"Where did you get that rifle?" you ask.`
 			`	The Quarg translates the reply, "A furry alien exchanged this for some work on his ship. The furry alien had battled with bird folk before arriving here. The furry alien had also salvaged components from a Kor Mereti and wanted them installed on his ship."`
-			`	You express your thanks to both of them and prepare to leave. But before you do, the Quarg asks,"You are searching for that group of Hai, are you not? Would you explain why it is you seek them out? They refused to speak of what brought them here or where they were heading."`
+			`	You express your thanks to both of them and prepare to leave. But before you do, the Quarg asks, "You are searching for that group of Hai, are you not? Would you explain why it is you seek them out? They refused to speak of what brought them here or where they were heading."`
 			choice
 				`	(Inform the Quarg of Gai's search for the Quantum Key Blade.)`
 					goto Quantum
@@ -225,7 +225,7 @@ mission "QKBlade: Quantum Key Blade 3"
 			
 			label Quantum
 			`	"Ah, so the Hai have finally discerned the location of that lost toy. Unuk al Hai was once located near Terminus. While the stars may seem to scarcely move during your short lifetimes, they are always in motion. Unuk al Hai drifted far to the south after the star of a nearby system went nova. Your quarry is likely headed there."`
-			`	It takes a moment for you to realize that the Quarg is referring the Unukalhai system. Its pronunciation of the system's name sounds odd at first, but it soon dawns on you the connection the Hai have to that system and a certain producer of acorn cookies hidden in the mountains there.`
+			`	It takes a moment for you to realize that the Quarg is referring to the Unukalhai system. Its pronunciation of the system's name sounds odd at first, but it soon dawns on you the connection the Hai have to that system and a certain producer of acorn cookies hidden in the mountains there.`
 				accept
 
 	on accept
@@ -319,7 +319,7 @@ mission "Nemesis: Quantum Key Blade"
 			`	You attempt to block the sword with your rifle. He smirks as you do so and you watch in horror as the blade passes through the rifle and into your chest. You feel no pain, as if the sword isn't even there. You aim the rifle at his head and pull the trigger. But like the sword, the laser passes through his head as if he isn't there! Then you notice him manipulate a control on the handle and suddenly there is a sharp pain in your chest. Gai gasps for air as you feel your life slip away. "The only... (gasp) drawback... (gasp) is that I can't breath... (gasp) while phased out," he mutters as he wipes the blood off the blade with your shirt.`
 				die
 			label dodge
-			`	You dodge the blade as he careens past you. The artificial gravity has completely failed and you notice him frantically fidgeting with a control on the sword grip when he passes through the bulkhead! You hear and audible squish as his arm holding the sword becomes trapped on your side of the wall. His hand goes limp and releases the sword. Through a nearby view port you see Gai's corpse floating out in the void of space. You manage to grab hold of the Quantum Key Blade and tuck it into your belt. There's still a battle to be fought.`
+			`	You dodge the blade as he careens past you. The artificial gravity has completely failed and you notice him frantically fidgeting with a control on the sword grip when he passes through the bulkhead! You hear an audible squish as his arm holding the sword becomes trapped on your side of the wall. His hand goes limp and releases the sword. Through a nearby view port you see Gai's corpse floating out in the void of space. You manage to grab hold of the Quantum Key Blade and tuck it into your belt. There's still a battle to be fought.`
 				accept
 
 			label "Midnight's Lost Orphan"
@@ -413,7 +413,7 @@ mission "QKBlade: House Unuk History"
 			`	After hiking through the mountains, you find the Unuk residence has been rebuilt. You try using the communications device at the entrance and a familiar voice answers. You explain why you are visiting.`
 			`	"Ah, thank you for coming to check up on me! Tell me, what happened to the item?"`
 			`	You tell her, "After recovering it from the thief, the Hai government allowed me to keep it."`
-			`	"I suppose that's for the best. I wouldn't want anyon else coming here in search of it. I think it's fair to tell you, I am the master of House Unuk. My ancestors were among the first colonists on Flood. In these mountains, they found and befriended the last surviving descendant of the Hai. According to him, his ancestors crash landed here during a war that took place centuries before, when the stars were different." She pauses then says,"Please wait a moment. There's something I want to show you." She goes back into the house while you wait.`
+			`	"I suppose that's for the best. I wouldn't want anyone else coming here in search of it. I think it's fair to tell you, I am the master of House Unuk. My ancestors were among the first colonists on Flood. In these mountains, they found and befriended the last surviving descendant of the Hai. According to him, his ancestors crash landed here during a war that took place centuries before, when the stars were different." She pauses then says,"Please wait a moment. There's something I want to show you." She goes back into the house while you wait.`
 			`After a short while, she returns with a quantum keystone and a mirror that appears to also be made from a quantum keystone. "These were the other treasures held by the last Hai. Gai never asked for them. Maybe he didn't know they were here." The mirror glimmers under the light of Unukalhai's sun, and you feel light headed...`
 				launch
 	on enter
@@ -447,7 +447,7 @@ mission "QKBlade: House Unuk Secrets"
 			`	After hiking through the mountains, you find the Unuk residence has been rebuilt. You try using the communications device at the entrance and a familiar voice answers. You explain why you are visiting.`
 			`	"Ah, thank you for coming to check up on me! Tell me, what happened to the item?"`
 			`	You tell her, "After recovering it from the thief, I returned it to the Hai government."`
-			`	"I suppose that's for the best. I wouldn't want anyon else coming here in search of it."`
+			`	"I suppose that's for the best. I wouldn't want anyone else coming here in search of it."`
 			`	Before you leave, she hands you a package of House Unuk acorn cookies. "Thanks again for visiting. Have a pleasant journey, captain."`
 				decline
 	on decline
@@ -466,12 +466,12 @@ mission "QKBlade: Bearer of The Blade 1"
 		conversation
 			scene "outfit/quantum key blade"
 			`You report to the council of elders your battle with the Kotetsu and the fate of Gai Ro Nin. At the end you raise up the Quantum Key Blade.`
-			`	"During your absence, the council decided that, should you desire it, you would be allowed to bear the blade while you live. Know that this permission does not extend to your heirs, and once you pass from this mortal realm the Hai government expects the blade to be returned." decrees one elder.`
+			`	"During your absence, the council decided that, should you desire it, you would be allowed to bear the blade while you live. Know that this permission does not extend to your heirs, and once you pass from this mortal realm the Hai government expects the blade to be returned," decrees one elder.`
 			`	"Will you bear this burden?" asks another elder."`
 			choice
-				`	(Keep the blade)`
+				`	(Keep the blade.)`
 					goto burden
-				`	(Return the blade)`
+				`	(Return the blade.)`
 
 			`	"Thank you, but I am unworthy of this honor. I believe it is in the best interest of everyone that the blade is returned to the Hai people."`
 				decline
@@ -480,7 +480,7 @@ mission "QKBlade: Bearer of The Blade 1"
 			`	"I accept. Thank you for this honor."`
 			`	There is some chattering amongst the elders. Then they address you.`
 			`	"With this, all five of the Quantum Key Blades are accounted for. As you carry that one on your journeys, word will spread that you are in possession of it. Take care that you do not lose it to any Unfettered assassin who tries to claim it."`
-			`	As the meeting adjourns, you wonder if you made the right choice."`
+			`	As the meeting adjourns, you wonder if you made the right choice.`
 				accept
 	on decline
 		log `I have returned the Quantum Key Blade to the Hai people. I believe that is where the artifact truly belongs.`
@@ -862,7 +862,7 @@ mission "QKBlade: Bearer of The Blade 5"
 		"reputation: Hai" ++
 		conversation
 			`The council of elders is surprised and delighted that you managed to locate and return the stolen Quantum Key Blade to them.`
-			`	"To think that an Alpha got ahold of it! We must tighten the security on these artifacts." exclaims one elder.`
+			`	"To think that an Alpha got ahold of it! We must tighten the security on these artifacts," exclaims one elder.`
 			`	"Funding will be granted to the Museum of Galactic History for this purpose," replies another elder.`
 			`	"Once again, Captain <first> <last>, you have proven your friendship to the Hai," states a third elder.`
 			`	"A reward of <payment> for the return of the blade was planned, but we will just deposit that to your account.`

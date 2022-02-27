@@ -13,7 +13,7 @@
 mission "T.H.O.R. Repairs"
 	landing
 	name "T.H.O.R. Repairs"
-	description "Return to <destination> with 1000000 credits and pick up T.H.O.R."
+	description "Return to <destination> with 1,000,000 credits and pick up T.H.O.R."
 	source "Rust"
 	to offer
 		has "T.H.O.R. (Damaged)"
@@ -23,20 +23,20 @@ mission "T.H.O.R. Repairs"
 			scene "outfit/android"
 			`	You take T.H.O.R. to Kraz Cybernetics for repairs.`
 			`	"What caused this?" Barmy asks.`
-			`	After you give a lengthy explanation, Barmy says he'll repair it. But it won't be cheap. You'll have to pay 1000000 credits when you pick it up.`
+			`	After you give a lengthy explanation, Barmy says he'll repair it. But it won't be cheap. You'll have to pay 1,000,000 credits when you pick it up.`
 				accept
 	on accept
 		clear "T.H.O.R. (Damaged)"
 		outfit "T.H.O.R. (Damaged)" -1
 	on visit
-		dialog "T.H.O.R. should be repaired by now, but you don't have the 1000000 credits to cover the repair costs!"
+		dialog "T.H.O.R. should be repaired by now, but you don't have the 1,000,000 credits to cover the repair costs!"
 	on complete
 		payment -1000000
 		set "T.H.O.R."
 		outfit "T.H.O.R." 1
 		conversation
 			scene "outfit/thor"
-			`	T.H.O.R. looks good as new. You pay Barmy 1000000 credits and load the Tactical Heavy Offensive Robot onto your ship.`
+			`	T.H.O.R. looks good as new. You pay Barmy 1,000,000 credits and load the Tactical Heavy Offensive Robot onto your ship.`
 			
 
 
@@ -75,7 +75,7 @@ mission "T.H.O.R.: Quiet Ringworld 1"
 			`	Some time passes. Eventually, T.H.O.R. returns with an Intrusion Countermeasures device.`
 			choice
 				`	"T.H.O.R., retrieve the other devices."`
-			`	T.H.O.R. responds "Unable to comply. The remaining devices were damaged during removal from their mounts. This is the only device that is undamaged."`
+			`	T.H.O.R. responds, "Unable to comply. The remaining devices were damaged during removal from their mounts. This is the only device that is undamaged."`
 				accept
 	on defer
 		set "Randomize T.H.O.R.: Quiet Ringworld 1"
@@ -136,7 +136,7 @@ mission "T.H.O.R.: Quiet Ringworld 2"
 			`	"The devices are active. Taking heavy damage."`
 			choice
 				`	"T.H.O.R., return to the ship."`
-			`	Some time passes... T.H.O.R. returns, but it is badly damaged. You won't be able to deploy it in this condition."`
+			`	Some time passes... T.H.O.R. returns, but it is badly damaged. You won't be able to deploy it in this condition.`
 				accept
 	on decline
 		clear "T.H.O.R.: Quiet Ringworld 1: offered"
@@ -303,7 +303,7 @@ mission "T.H.O.R.: Rock Cluster"
 				decline
 				
 			label damaged
-			`	Some time passes... Eventually, T.H.O.R. returns, but it is badly damaged. You won't be able to deploy it in this condition. "Hostiles were disguised as rocks." it says.`
+			`	Some time passes... Eventually, T.H.O.R. returns, but it is badly damaged. You won't be able to deploy it in this condition. "Hostiles were disguised as rocks," it says.`
 				launch
 	on defer
 		set "Randomize T.H.O.R.: Rock Cluster"
@@ -371,7 +371,7 @@ mission "T.H.O.R.: Corpse 1"
 				decline
 				
 			label damaged
-			`	Some time passes... Eventually, T.H.O.R. returns, but it is badly damaged. You won't be able to deploy it in this condition. "Asteroid collision." it says.`
+			`	Some time passes... Eventually, T.H.O.R. returns, but it is badly damaged. You won't be able to deploy it in this condition. "Asteroid collision," it says.`
 				launch
 	on defer
 		set "Randomize T.H.O.R.: Corpse 1"

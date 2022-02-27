@@ -964,8 +964,8 @@ fleet "Grudge Parade"
 
 fleet "Small Oathbreaker"
 	government "Oathbreaker"
-	names "republic small"
-	fighters "republic fighter"
+	names "Oathbreaker"
+	fighters "Oathbreaker fighter"
 	cargo 1
 	outfitters "Ammo North"
 	personality
@@ -989,8 +989,8 @@ fleet "Small Oathbreaker"
 		
 fleet "Large Oathbreaker"
 	government "Oathbreaker"
-	names "republic capital"
-	fighters "republic fighter"
+	names "Oathbreaker"
+	fighters "Oathbreaker fighter"
 	cargo 1
 	outfitters "Ammo North"
 	personality
@@ -1022,8 +1022,8 @@ fleet "Large Oathbreaker"
 
 fleet "Elite Oathbreaker"
 	government "Oathbreaker"
-	names "republic capital"
-	fighters "republic fighter"
+	names "Oathbreaker"
+	fighters "Oathbreaker fighter"
 	cargo 1
 	outfitters "Ammo North"
 	personality
@@ -1041,7 +1041,7 @@ fleet "Elite Oathbreaker"
 fleet "Fugitive Oathbreaker"
 	government "Oathbreaker"
 	names "Oathbreaker"
-	fighters "republic fighter"
+	fighters "Oathbreaker fighter"
 	personality
 		coward plunders harvests
 	variant 1

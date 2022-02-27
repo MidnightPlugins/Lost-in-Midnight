@@ -491,7 +491,7 @@ event "Grudge Legacy"
 
 mission "Grudge Bounty Hunting"
 	name "Disguised bandit near <system>"
-	description "A low-end pirate warship named Relentless Grudge is posing as a merchant ship near the <system> system. Select merchant ships until you find a ship with a matching name, then destroy it and report to <planet> for payment of 250000 credits."
+	description "A low-end pirate warship named Relentless Grudge is posing as a merchant ship near the <system> system. Select merchant ships until you find a ship with a matching name, then destroy it and report to <planet> for payment of 250,000 credits."
 	job
 	to offer
 		"combat rating" >= 400
@@ -635,6 +635,14 @@ mission "Grudge Brothers"
 		log `Had more trouble with the Grudge crime family. I managed to get a reward for fighting them off. But I doubt it's the last I'll hear from them.`
 		conversation
 			branch "onlyone"
+				or
+					and
+						has "Grudge Fight 2: declined"
+						has "Grudge Fight 3: done"
+					and
+						has "Grudge Fight 2: done"
+						has "Grudge Fight 3: declined"			
+			
 			`When you land on <planet> you discover that the delivery address for the package is fake. Looking inside, you find a tracking device. You look up bounties and wanted pirate documents, searching for any mention of the Relentless Grudge or Swift Vengeance. Eventually, you find bounties for the destruction of both ships. The information indicates that the pirates you killed were named Hardy and Brutus Grudge, Carrie Grudge's brothers. Hardy was a jack of all trades, doing various jobs both illegal and legal while Brutus was a typical raider, attacking ships and plundering their cargo. Hopefully this area of space will be safer with them gone.`
 			`	You head to the local authorities, and show them your combat logs of your fight against the Grudge brothers. They pay you <payment> for your effort.`
 
@@ -768,7 +776,7 @@ mission "Grudge Hammer"
 
 mission "Grudge Smuggler"
 	name "Disguised smuggler near <system>"
-	description "A low-end drug smuggler named the Ecstasy is posing as a merchant ship near the <system> system. Select merchant ships until you find a ship with a matching name and scan its cargo for illegal substances. Once you have confirmed the target, destroy it and return to <planet>. Payment is 250000 credits."
+	description "A low-end drug smuggler named the Ecstasy is posing as a merchant ship near the <system> system. Select merchant ships until you find a ship with a matching name and scan its cargo for illegal substances. Once you have confirmed the target, destroy it and return to <planet>. Payment is 250,000 credits."
 	job
 	to offer
 		has "Grudge Fight 4: declined"
@@ -786,7 +794,7 @@ mission "Grudge Smuggler"
 				`	(Accept the bribe.)`
 				`	(Refuse the bribe.)`
 					accept
-			`	25000 credits is deposited to your account.`
+			`	25,000 credits is deposited to your account.`
 				decline
 	on enter Miaplacidus
 		conversation
@@ -796,7 +804,7 @@ mission "Grudge Smuggler"
 				`	(Accept the bribe.)`
 				`	(Refuse the bribe.)`
 					accept
-			`	25000 credits is deposited to your account.`
+			`	25,000 credits is deposited to your account.`
 				decline
 	on enter Phurad
 		conversation
@@ -806,7 +814,7 @@ mission "Grudge Smuggler"
 				`	(Accept the bribe.)`
 				`	(Refuse the bribe.)`
 					accept
-			`	25000 credits is deposited to your account.`
+			`	25,000 credits is deposited to your account.`
 				decline
 	on enter Talita
 		conversation
@@ -816,7 +824,7 @@ mission "Grudge Smuggler"
 				`	(Accept the bribe.)`
 				`	(Refuse the bribe.)`
 					accept
-			`	25000 credits is deposited to your account.`
+			`	25,000 credits is deposited to your account.`
 				decline
 	on enter Wazn
 		conversation
@@ -826,7 +834,7 @@ mission "Grudge Smuggler"
 				`	(Accept the bribe.)`
 				`	(Refuse the bribe.)`
 					accept
-			`	25000 credits is deposited to your account.`
+			`	25,000 credits is deposited to your account.`
 				decline
 
 	npc save
@@ -851,7 +859,7 @@ mission "Grudge Smuggler"
 		government "Bounty (Disguised)"
 		personality waiting fleeing marked uninterested
 			confusion 20
-		ship "Modified Argosy (Drug Smuggler)" "Ecstasy"
+		fleet "Ecstasy"
 		dialog "You managed to scan the <npc>'s cargo and confirmed the presence of illegal substances before eliminating it. You can claim the bounty payment by returning to <destination>."
 	on decline
 		payment 25000
@@ -875,12 +883,23 @@ ship "Modified Argosy" "Modified Argosy (Drug Smuggler)"
 		"A250 Atomic Thruster"
 		"A375 Atomic Steering"
 		"Scram Drive"
-	cargo
-		"hallucinogens" 10
-		"narcotics" 20
-		"space weed" 30
 	turret "Heavy Laser Turret"
 	turret "Heavy Anti-Missile Turret"
+
+phrase "ecstasy"
+	word
+		"Ecstasy"
+
+fleet "Ecstasy"
+	government "Bounty (Disguised)"
+	names "ecstasy"
+	cargo 3
+	commodities "hallucinogens" "narcotics" "space weed"
+	personality
+		waiting fleeing marked uninterested 
+		confusion 20
+	variant
+		"Modified Argosy (Drug Smuggler)"
 
 
 
@@ -906,7 +925,7 @@ mission "Grudge Mama"
 			`When you return to your ship, you notice a charmingly pleasant older lady waiting for you.`
 			`	"Pardon me, are you the captain of this ship? I am looking for transportation to <planet>."`
 			choice
-				`	"I can take you there for 2000 credits."`
+				`	"I can take you there for 2,000 credits."`
 					goto welcome
 				`	"Sorry lady, I'm not headed in that direction."`
 					defer
@@ -916,7 +935,7 @@ mission "Grudge Mama"
 				accept
 
 	on defer
-		"randomize Grudge Mama" ++
+		set "randomize Grudge Mama"
 
 	on enter
 		conversation
@@ -1013,7 +1032,7 @@ mission "Grudge Mama"
 	on enter "Rutilicus"
 		conversation
 			`Soon after entering the system, Mara visits you in the cockpit.`
-			`	"So many new starships these days," she comments on the other ships landing and taking off. Gripping your right shoulder while pointing to your left, she asks "What kind of ship is that?"`
+			`	"So many new starships these days," she comments on the other ships landing and taking off. Gripping your right shoulder while pointing to your left, she asks, "What kind of ship is that?"`
 			choice
 				`	"Hmm... Let's see..."`
 					goto distraction

@@ -48,7 +48,7 @@ mission "Ghost Hunting: Dire Omen 1"
 			label listen
 			`	"And so, afterwards me and the boys took our plunder. We then set off from Stormhold into the northern passage, where few dare to go unless ye have a good supply of fuel or a ramscoop. It was on the 3rd day of our voyage when it appeared out of the darkness: the Dire Omen. The ghost ship what haunts the northern passage descended upon us like a pelican on a bucket of sardines."`
 			`	"A ghost ship!?!" you shout out. "Surely, you jest."`
-			`	"It be real! I remember clear as day my tactical scanner readouts! That ship, the Dire Omen, has no crew! But it attacked us all the same. I escaped. The others... weren't so lucky.`
+			`	"It be real! I remember clear as day my tactical scanner readouts! That ship, the Dire Omen, has no crew! But it attacked us all the same. I escaped. The others... weren't so lucky."`
 			`	The old pirate falls silent and stares somberly at his mug. The mood has shifted and it is clear he is done telling his tale.`
 				accept
 	on accept
@@ -118,7 +118,7 @@ mission "Ghost Hunting: Dire Omen 3"
 			`	While walking around the spaceport you notice a woman studying the sky with a telescope. She's dressed like a stereotypical cowgirl from an old Earth western. The pistol at her hip is an overt warning to not consider her an easy mark. It is a necessary fashion accessory on any pirate world.`
 			`	"Looking for aliens?" you ask.`
 			`	"Did y'all get that pickup line from some discount bin?" she replies with a drawl.`
-			`	"Whoa, easy now." you raise your hands as a gesture of peace. "Actually, do you know anything about ghost ships?"`
+			`	"Whoa, easy now." You raise your hands as a gesture of peace. "Actually, do you know anything about ghost ships?"`
 			`	"The Dire Omen? Oh yeah, I may know a thang or two." She holds out her hand expectantly, palm up.`
 			choice
 				`	(Shake her hand.)`
@@ -152,7 +152,7 @@ mission "Ghost Hunting: Dire Omen 4"
 		not "Ghost Hunting: Dire Omen 3: done"
 	on offer
 		conversation
-			`As you start to land you notice smoke and flames coming from a nearby parked ship. That's not too unusual in this dangerous sector of space. What does catch your eye is the nature of the damgage. Large portions of the hull look to have melted right off. Whatever did this must generate intense heat.`
+			`As you start to land you notice smoke and flames coming from a nearby parked ship. That's not too unusual in this dangerous sector of space. What does catch your eye is the nature of the damage. Large portions of the hull look to have melted right off. Whatever did this must generate intense heat.`
 			choice
 				`	(Best not to get involved. Go find another place to land.)`
 				`	(Stick around and find out what happened.)`
@@ -162,7 +162,7 @@ mission "Ghost Hunting: Dire Omen 4"
 				defer
 			
 			label investigate
-			`	When you exit your ship you hear the captain of the damaged ship filing a report with the port authority. "No,no. It wasn't pirates!" he exclaims. "It was the ghost ship. The Dire Omen." The government official stops typing on her datapad and gives the captain a skeptical look.`
+			`	When you exit your ship you hear the captain of the damaged ship filing a report with the port authority. "No, no. It wasn't pirates!" he exclaims. "It was the ghost ship. The Dire Omen." The government official stops typing on her datapad and gives the captain a skeptical look.`
 			choice
 				`	(Ignore them.)`
 				`	(Ask him where he encountered the ghost ship.)`
@@ -172,8 +172,8 @@ mission "Ghost Hunting: Dire Omen 4"
 				decline
 			
 			label ask
-			`	After he is done filing his report you approach the captain and ask "Where did you last spot this 'ghost ship'?"`
-			`	"About halfway through the northern passage." he responds. "I didn't believe the tales of a haunted war ship. But the legend of the 'Dire Omen' is real! According to my scanner, the ship has no crew."`
+			`	After he is done filing his report you approach the captain and ask, "Where did you last spot this 'ghost ship'?"`
+			`	"About halfway through the northern passage," he responds. "I didn't believe the tales of a haunted war ship. But the legend of the 'Dire Omen' is real! According to my scanner, the ship has no crew."`
 				accept
 	on accept
 		log `A merchant captain claimed to have been attacked by a ghost ship he referred to as the "Dire Omen". The government official who filed the report seemed skeptical of his testimony.`
@@ -193,7 +193,7 @@ mission "Ghost Hunting: Dire Omen 5"
 		has "Ghost Hunting: Dire Omen 3: failed"
 	on offer
 		conversation
-			`As you open your hatch there is a group of merchants waiting for you. "Excuse us captain. We are seeking volunteers for a rescue mission. Will you hear us out?`
+			`As you open your hatch there is a group of merchants waiting for you. "Excuse us captain. We are seeking volunteers for a rescue mission. Will you hear us out?"`
 			
 			choice
 				`	(Tell them to find someone else.)`
@@ -205,14 +205,14 @@ mission "Ghost Hunting: Dire Omen 5"
 			
 			label listen
 			`	"Our convoy was traveling through the northern passage when we were attacked by..." the merchant seems hesitant to continue.`
-			`	"Pirates! We were attacked by pirates." another merchant interjects.`
-			`	"No." says the first merchant. "We should speak the truth. You may find this hard to believe. But we were attacked by that ghost ship! The rumors are true!"`
+			`	"Pirates! We were attacked by pirates," another merchant interjects.`
+			`	"No," says the first merchant. "We should speak the truth. You may find this hard to believe. But we were attacked by that ghost ship! The rumors are true!"`
 			
 			choice
 				`	"What do you want from me?"`
 				`	"You mentioned something about a rescue earlier..."`
 				
-			`	"Our escort, the 'Lucky Horse Shoe' was separated from us as we we fled. We believe it is still out there. Would you be willing to search for it? We last saw it heading towards Rajak."`	
+			`	"Our escort, the 'Lucky Horse Shoe' was separated from us as we fled. We believe it is still out there. Would you be willing to search for it? We last saw it heading towards Rajak."`	
 			
 			choice
 				`	(Tell them to find someone else.)`
@@ -234,7 +234,7 @@ mission "Ghost Hunting: Dire Omen 5"
 				accept
 				
 			label reward
-			`	"I'm certain the captain of that the Lucky Horse Shoe will repay you for your assistance."`
+			`	"I'm certain the captain of the 'Lucky Horse Shoe' will repay you for your assistance."`
 				accept
 
 	on accept
@@ -356,7 +356,7 @@ mission "Ghost Hunting: Poltergeist King 1"
 			`	The image switches back to the shot of derelict ships.`
 			`	"As you can see, I've prepared a wonderful series of funhouses for us to play in!"`
 			`	After a few moments of silence, the bartender looks at you. "What're you gonna do captain?"`
-			`	If those kids are from this world, they probably have rich parents who'll reward you well. On the other hand, heading out there could get you killed."`
+			`	If those kids are from this world, they probably have rich parents who'll reward you well. On the other hand, heading out there could get you killed.`
 			choice
 				`	"Smells like a trap. I'm not going out there."`
 					decline
@@ -576,13 +576,13 @@ mission "Ghost Hunting: Poltergeist King 2"
 				`	(Stay cool.)`
 					goto staycool
 			`	You whip out your pistol and order the men to back off slowly. "Cali, are you ok?" you call out.`
-			`	Cali turns towards you, startled by your sudden outburst. The men look at her. She looks at them. Then they all start laughing at you. As the laughter slowly dies down, she explains "Thanks for the knight in shinin' armor routine, but this is my crew!"`
+			`	Cali turns towards you, startled by your sudden outburst. The men look at her. She looks at them. Then they all start laughing at you. As the laughter slowly dies down, she explains, "Thanks for the knight in shinin' armor routine, but this is my crew!"`
 			`	With a bit of embarrassment, you put away your pistol.`
 			label staycool
 			`	"Hi Cali, see any ghost ships up there?"`
 			`	"This time, I'm actually lookin' fer aliens." She introduces you to the other guys. "Guys, <first> is the dude who saved our bacon back on Rajak. <first>, this here is the crew of the Lucky Horse Shoe." The guys thank you and introduce themselves, but it's hard to keep track of all their names.`
 			`	Cali lowers her voice, "A reliable feller spilled the beans to me about some aliens who raid this system from time to time. Sometimes the pirates get into regular 'ol scraps with enforcers from the Syndicate, while a derelict alien ship is left adrift. And you know how the sayin' goes 'bout derelicts..."`
-			`	"Ain't no one has ownership rights to a derelict 'cept the one who gets to it first." you reply.`
+			`	"Ain't no one has ownership rights to a derelict 'cept the one who gets to it first," you reply.`
 			`	The group gets a good chuckle at your performance.`
 			`	Suddenly Cali's communicator starts beeping.`
 			`	"Hello?" she answers. "What? Begin preflight prep. We're on our way."`
@@ -666,7 +666,7 @@ mission "Ghost Hunting: Poltergeist King 2"
 		outfit "Jump Drive (Broken)" 1
 		conversation
 			scene "outfit/jump drive (broken)"
-			`Back at the space port you find Cali. "Thank goodness you're OK! I saw the whole thang! Someone posted a video of it to the net." She shows you a portion of the video on a portable holo projector. "That's an interestin' haul you got there." she says, pausing the video to point at the broken jump drive. "I reckon you could try to pass it off to a gallery or a collector as some kind of modern art." she shrugs.`
+			`Back at the space port you find Cali. "Thank goodness you're OK! I saw the whole thang! Someone posted a video of it to the net." She shows you a portion of the video on a portable holo projector. "That's an interestin' haul you got there," she says, pausing the video to point at the broken jump drive. "I reckon you could try to pass it off to a gallery or a collector as some kind of modern art," she shrugs.`
 		log `The Poltergeist King struck again. This time he tried to lure in pirate or Syndicate salvagers with a rigged alien ship. I managed to escape his trap, but the only thing I was able to salvage was a broken jump drive.`
 
 		
@@ -766,9 +766,9 @@ mission "Ghost Hunting: Zubenelgenubi Ghost Ship"
 				`	"Are you sure they aren't vampires?"`
 
 			`	As you're about to speak you are interrupted by another loud "clunk" from the door behind you. Suddenly, the door bursts open and the rotting corpse of a Saryd pushes it's way through! A piece of shrapnel from the broken door knocks you against the wall and you are momentarily too stunned to aim your gun at the rampaging creature. The mystery woman shoots the undead Saryd in the head until it falls to the floor.`
-			`	She stares at the corpse lying still on the ground and mutters "Like I said: zombie centaurs."`
+			`	She stares at the corpse lying still on the ground and mutters, "Like I said: zombie centaurs."`
 			`	You nod your head, still in disbelief despite what you've just witnessed.`
-			`	The woman activates a communication device. "Necromanteion, this is Greythatch. Come in for pickup." She turns to you and says "I'm leaving. If you're smart, you will too. My boarding crew is already dead and I'm not about to risk the few I have remaining to pilot my ship." She runs off without waiting for a reply. As you watch her go, you notice she's wearing a small backpack that isn't empty. Whatever she looted was probably not  worth the lives of her dead crew members.`
+			`	The woman activates a communication device. "Necromanteion, this is Greythatch. Come in for pickup." She turns to you and says, "I'm leaving. If you're smart, you will too. My boarding crew is already dead and I'm not about to risk the few I have remaining to pilot my ship." She runs off without waiting for a reply. As you watch her go, you notice she's wearing a small backpack that isn't empty. Whatever she looted was probably not worth the lives of her dead crew members.`
 			`	Before you make up your mind on what to do next, the lights in the hall beyond the door stop flickering and stabilize, beckoning you to enter.`
 			choice
 				`	(Follow the lights.)`
@@ -865,7 +865,7 @@ mission "Ghost Hunting: Friendship 1"
 		has "main plot completed"
 	on offer
 		conversation
-			`As you are leaving the spaceport, some kids approach you. The oldest one asks "Excuse me, but are you a starship captain?"`
+			`As you are leaving the spaceport, some kids approach you. The oldest one asks, "Excuse me, but are you a starship captain?"`
 			choice
 				`	"Yes, I am. What business do you kids have with a starship captain?"`
 					goto kidstale

@@ -105,7 +105,7 @@ mission "Grave Digger: Penguin"
 			`	"Frankly, I'm starting to suspect the blood test was wrong. If not for those test results, I would assume he was descended from an Alpha."`
 			scene "scene/scene-gravediggerpenguin"
 			`	"And now, I wonder if I made a mistake. He recently returned from an expedition to visit the Void Sprites with some fascinating genetic samples. This proved useful in finalizing development of a new ship. Yesterday I let him take the prototype out for a test flight. But something about his demeanor gives me the impression he won't be returning with it anytime soon."`
-			`	A dock worker motions to Taely while pointing to a broken jump drive being unloaded at the adjoining landing pad. She gestures back. "Thank you for your time <first>. Beware of Lu Bu. That man will likely betray the trust of our people." she signs before running off to supervise their latest acquisition.`
+			`	A dock worker motions to Taely while pointing to a broken jump drive being unloaded at the adjoining landing pad. She gestures back. "Thank you for your time <first>. Beware of Lu Bu. That man will likely betray the trust of our people," she signs before running off to supervise their latest acquisition.`
 				decline
 	on decline
 		event "Grave Digger Betrayal"
@@ -546,7 +546,7 @@ mission "Grave Digger: Thrasher Turrets 2"
 			label strongarm
 			`	You grab him and point your gun at his head. "Sorry, but I really need to know who you got these from." The security guards who were approaching you back off to calm you down.`
 			`	"All right! All right. We acquired this merchandise from Captain Lu Bu of the Grave Digger. He is a prolific trader in exotic merchandise. I've told you what you want. Would you please let me go?"`
-			`	"No hard feelings I hope." you state as you release him.`
+			`	"No hard feelings I hope," you state as you release him.`
 			`	He puts away the data pad. "Unfortunately, it appears we were unable to reach an agreement. Thank you for your time. However, I suggest you depart immediately." The security guards are starting to return with reinforcements and you decide to follow the man's suggestion.`
 				launch
 
@@ -648,7 +648,7 @@ mission "Grave Digger: Point Defense Turrets 2"
 			label strongarm
 			`	You grab her and point your gun at her head. "Sorry, but I really need to know who you got these from." The security guards who were approaching you back off to calm you down.`
 			`	"All right! All right. We acquired this merchandise from Captain Lu Bu of the Grave Digger. He is a prolific trader in exotic merchandise. I've told you what you want. Would you please let me go?"`
-			`	"No hard feelings I hope." you state as you release her.`
+			`	"No hard feelings I hope," you state as you release her.`
 			`	She puts away the data pad. "Unfortunately, it appears we were unable to reach an agreement. Thank you for your time. However, I suggest you depart immediately." The security guards are starting to return with reinforcements and you decide to follow the woman's suggestion.`
 				launch
 
@@ -752,7 +752,7 @@ mission "Grave Digger: Inhibitor Cannons 2"
 			label strongarm
 			`	You grab him and point your gun at his head. "Sorry, but I really need to know who you got these from." The security guards who were approaching you back off to calm you down.`
 			`	"Woah dood! Just woah. Captain Lu Bu of the Grave Digger is the big man you want. He always manages to score some exotic merchandise. I've told you what you want. Ease up already!"`
-			`	"No hard feelings I hope." you state as you release him.`
+			`	"No hard feelings I hope," you state as you release him.`
 			`	He puts away the data pad. "Looks like negotiations failed dood. Thanks for checking out our merch. But it's time for you to peace outta here." The security guards are starting to return with reinforcements and you decide to follow the man's suggestion.`
 				launch
 
@@ -812,7 +812,7 @@ mission "Nemesis: Grave Digger"
 	on offer
 		conversation
 			scene "scene/scene-gravediggerember"
-			`	When you land, Prefect Torza approaches you and signs "Captain <last>, we have a mission we believe is suitable for your unique qualifications. Another human named Lu Bu, captain of the "Grave Digger", arrived in Remnant space some time ago. Unfortunately, it's become clear that he betrayed our trust. We ask that you hunt him down and eliminate his entire fleet. We trust that you are able and willing to carry out this duty. Return here and file a report once you've completed this mission." The space port is eerily quiet and you're certain that every Remnant there has stopped what they were working on to watch your reaction. Torza steps back and gestures "May the Embers burn bright for you," before striding off as you comprehend what you've just been asked to do.`
+			`	When you land, Prefect Torza approaches you and signs "Captain <last>, we have a mission we believe is suitable for your unique qualifications. Another human named Lu Bu, captain of the "Grave Digger", arrived in Remnant space some time ago. Unfortunately, it's become clear that he betrayed our trust. We ask that you hunt him down and eliminate his entire fleet. We trust that you are able and willing to carry out this duty. Return here and file a report once you've completed this mission." The space port is eerily quiet and you're certain that every Remnant there has stopped what they were working on to watch your reaction. Torza steps back and signs, "May the Embers burn bright for you," before striding off as you comprehend what you've just been asked to do.`
 				accept
 	on enter Aki'il
 		dialog `You receive a message as soon as you enter the system. "Nothing personal, captain. I just don't feel like letting you catch me today."`
@@ -944,11 +944,11 @@ mission "Grave Digger: Asteroid Catapult"
 				`	(Yes.)`
 				`	(Not right now.)`
 					defer
-			`	You find her directing a crew that is sorting out a collection of outfits salvaged during a recent expedition. She notices you and gestures "Hello Captain <last>, how can I help you?"`
+			`	You find her directing a crew that is sorting out a collection of outfits salvaged during a recent expedition. She notices you and signs, "Hello Captain <last>, how can I help you?"`
 			choice
 				`	"I'd like you to build something for me."`
 
-			`	She looks over the data and signs "This is just a rail gun..." There is a pause as she continues to look over the data. "Oh! Well, the choice of ammunition is interesting. Yes, I can make one. Pay us 2000000 credits and it should be ready in a month."`
+			`	She looks over the data and signs "This is just a rail gun..." There is a pause as she continues to look over the data. "Oh! Well, the choice of ammunition is interesting. Yes, I can make one. Pay us 2,000,000 credits and it should be ready in a month."`
 			choice
 				`	(Agree to her terms.)`
 				`	(Reject her offer.)`
@@ -981,7 +981,7 @@ mission "Grave Digger: Asteroid Catapult"
 			`	She finishes delivering the weapon to you and thanks you for the interesting project.`
 
 			label "Grave Digger"
-			`	She finishes delivering the weapon to you and signs "A few days ago someone infiltrated the factory where the weapon was being constructed. Surprisingly, both the weapon and the schematic data were undisturbed. However, our security forces still take this breech seriously and are investigating a likely suspect. I can't give you any more details than that for now."`
+			`	She finishes delivering the weapon to you and signs, "A few days ago someone infiltrated the factory where the weapon was being constructed. Surprisingly, both the weapon and the schematic data were undisturbed. However, our security forces still take this breech seriously and are investigating a likely suspect. I can't give you any more details than that for now."`
 
 event "Asteroid Catapult Remnant"
 	planet "Viminal"
@@ -1052,7 +1052,7 @@ mission "Grave Digger Epilogue: Omnipotence 1"
 	on stopover
 		dialog `You find rusting salvaging equipment strewn across a beach on one of the tropical islands. Labels on the machines indicate they were manufactured on Millrace and sold by the Syndicate. From the markings in the sand, something big was dragged out of the ocean. Whatever it was is no longer here.`
 	on waypoint
-		dialog `You've checked all the systems in the Graveyard. You should do a thorough search the Grave Digger's base on <destination> in case they left behind any clues.`
+		dialog `You've checked all the systems in the Graveyard. You should do a thorough search of the Grave Digger's base on <destination> in case they left behind any clues.`
 	npc
 		government "Remnant"
 		system Polerius
@@ -1077,7 +1077,7 @@ mission "Grave Digger Epilogue: Omnipotence 1"
 		government "Derelict (Killable)"
 		system Lire
 		personality target derelict waiting staying
-		ship "Albatross" "Midnight Graveyard"
+		ship "Derelict Albatross" "Midnight Graveyard"
 		dialog `The ship has been stripped of its outfits. There are no signs of violent conflict and no remains of the crew. When you check the logs, most of the data was erased, but from what remains it seems they were investigating something submerged under the waters of Retilie.`
 	on complete
 		conversation

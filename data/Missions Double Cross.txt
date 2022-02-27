@@ -85,7 +85,7 @@ mission "Destroy Independence (North)"
 			
 			label introduction
 			scene "scene/scene-mastodon"
-			`	"I'm an information broker. I have info on the route that the Mastodon city ship 'Independence' will be taking on its next flight. I'm willing to sell for 15000. Are you interested?"`
+			`	"I'm an information broker. I have info on the route that the Mastodon city ship 'Independence' will be taking on its next flight. I'm willing to sell for 15,000. Are you interested?"`
 			choice
 				`	"Alright, I'll buy in."`
 					goto sucker
@@ -99,7 +99,7 @@ mission "Destroy Independence (North)"
 					defer
 			
 			label sucker
-			`	You place 15000 in credit chips on the table and she hands you a data chip. "Pleasure doing business with you, captain."`
+			`	You place 15,000 in credit chips on the table and she hands you a data chip. "Pleasure doing business with you, captain."`
 			`	When you load the data from the chip, you learn that the Independence will pass through the Mirzam system very soon. There isn't much room to take detours...`
 				accept
 
@@ -107,7 +107,7 @@ mission "Destroy Independence (North)"
 		payment -15000
 
 	on abort
-		"Destroy Independence (North): offered" --
+		clear "Destroy Independence (North): offered"
 
 	on enter "Mirzam"
 		dialog `There is no sign of the Mastodon city ship. However, a large Navy fleet is waiting for you. A trap! That information broker set you up!"`
@@ -120,7 +120,7 @@ mission "Destroy Independence (North)"
 		fleet "Large Republic" 3
 	
 	on fail
-		"Destroy Independence (North): offered" --
+		clear "Destroy Independence (North): offered"
 
 mission "Destroy Independence (South)"
 	name "Mastodon Hunting"
@@ -154,7 +154,7 @@ mission "Destroy Independence (South)"
 				
 			label introduction
 			scene "scene/scene-mastodon"
-			`	"I'm an information broker. I have info on the route that the Mastodon city ship 'Independence' will be taking on its next flight. I'm willing to sell for 15000. Are you interested?"`
+			`	"I'm an information broker. I have info on the route that the Mastodon city ship 'Independence' will be taking on its next flight. I'm willing to sell for 15,000. Are you interested?"`
 			choice
 				`	"Alright, I'll buy in."`
 					goto sucker
@@ -168,7 +168,7 @@ mission "Destroy Independence (South)"
 					defer
 			
 			label sucker
-			`	You place 15000 in credit chips on the table and she hands you a data chip. "Pleasure doing business with you, captain."`
+			`	You place 15,000 in credit chips on the table and she hands you a data chip. "Pleasure doing business with you, captain."`
 			`	When you load the data from the chip, you learn that the Independence will pass through the Holeb system very soon. There isn't much room to take detours...`
 				accept
 
@@ -176,7 +176,7 @@ mission "Destroy Independence (South)"
 		payment -15000
 
 	on abort
-		"Destroy Independence (South): offered" --
+		clear "Destroy Independence (South): offered"
 
 	on enter "Holeb"
 		dialog `There is no sign of the Mastodon city ship. However, a large Navy fleet is waiting for you. A trap! That information broker set you up!"`
@@ -189,7 +189,7 @@ mission "Destroy Independence (South)"
 		fleet "Large Republic" 3
 	
 	on fail
-		"Destroy Independence (South): offered" --
+		clear "Destroy Independence (South): offered"
 
 
 mission "Escort Independence"
@@ -425,7 +425,7 @@ mission "Jump Drive Theft 1"
 	on offer
 		require "Jump Drive" 0
 		conversation
-			`You receive a message when you land. "Captain <first> <last>, you have a reputation for doing competent work. We have a job suitable for a person with your skills and experience with less than legal activities. 1000000 credit payment on delivery. Will you accept?`
+			`You receive a message when you land. "Captain <first> <last>, you have a reputation for doing competent work. We have a job suitable for a person with your skills and experience with less than legal activities. 1,000,000 credit payment on delivery. Will you accept?`
 			choice
 				`	(Accept.)`
 					goto details
@@ -458,13 +458,13 @@ mission "Jump Drive Theft 2"
 		conversation
 			`Someone from planetary security must have been bribed by your employer. No one questions you as you locate a discreet landing location near the facility housing Laboratory 51. Following the instructions you were given, you manage to bypass the facility's security systems and enter the lab. Inside, you find an alien device.`
 			scene "outfit/jump drive"
-			`According to the research notes here, this device is a functional jump drive! You load it onto a hover cart and work to remove it from the facility, taking care to avoid the guard patrols with the aid of the scedule your employer provided. Once you get back to your ship, you load the Jump Drive onto it and take off.`
+			`According to the research notes here, this device is a functional Jump Drive! You load it onto a hover cart and work to remove it from the facility, taking care to avoid the guard patrols with the aid of the scedule your employer provided. Once you get back to your ship, you load the Jump Drive onto it and take off.`
 				accept
 	on accept
 		outfit "Jump Drive" 1
 	on abort
 		log `The item I found in the Syndicate lab was a functional Jump Drive. I decided to keep it for myself rather than hand it over to the Midnight Market.`
-		"Midnight Market" --
+		"Midnight Market" -= 2
 
 	on enter
 		dialog `It appears that no one from the lab is pursuing you. Your employer must have spent a considerable sum bribing Syndicate employees to help you slip through their security.`

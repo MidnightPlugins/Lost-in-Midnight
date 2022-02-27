@@ -74,6 +74,21 @@ ship "Explosive Derelict Mule"
 # Regular derelicts.
 #####################
 
+
+ship "Derelict Albatross"
+	plural "Albatrosses"
+	sprite "ship/albatross"
+	attributes
+		category "Heavy Warship"
+		"hull" 2520
+		"mass" 610
+		"drag" 8.6
+		"heat dissipation" 0.6
+	explode "medium explosion" 60
+	explode "large explosion" 40
+
+
+
 ship "Derelict Aerie"
 	sprite "ship/aerie"
 	thumbnail "thumbnail/aerie"

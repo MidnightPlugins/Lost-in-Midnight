@@ -45,7 +45,7 @@ mission "SB-Labs Vindicator 2"
 			choice
 				`	"Of course. So, what kind of ship is it?"`
 				`	"Of course. Is it in this hangar?"`
-			`	He smirks. "I don't want to spoil the surprise. We can talk about it once the test is over and we're back on the ground. Let's go"`
+			`	He smirks. "I don't want to spoil the surprise. We can talk about it once the test is over and we're back on the ground. Let's go!"`
 				launch
 
 	on enter
@@ -276,7 +276,7 @@ mission "Oathbreaker Liberator 2"
 			choice
 				`	"Of course. So, what kind of ship is it?"`
 				`	"Of course. Is it in this hangar?"`
-			`	He smirks. "I don't want to spoil the surprise. We can talk about it once the test is over and we're back on the ground. Let's go"`
+			`	He smirks. "I don't want to spoil the surprise. We can talk about it once the test is over and we're back on the ground. Let's go!"`
 				launch
 
 	on enter

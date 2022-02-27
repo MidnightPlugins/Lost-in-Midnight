@@ -107,7 +107,7 @@ phrase "grave diggers"
 
 phrase "Hackerz LOL"
 	word
-		"You receive a notice from the bank that <payment> credits were processed against your account."
+		"You receive a notice from the bank that 100,000 credits were processed against your account."
 	word
 		" "
 	word
@@ -125,6 +125,9 @@ phrase "Hackerz LOL"
 	word
 		" "
 	word
+		"${band} merchandise"
+		"${media name} merchandise"
+		"acorn cookies"
 		"all natural fertilizer"
 		"anime relics"
 		"archaeology kits"
@@ -163,7 +166,7 @@ phrase "Hackerz LOL"
 	word
 		". "
 	word
-		"Remembering the wreckage of a weird drone you destroyed, you know that somewhere, out there, the Hackerz are laughing at you."
+		"You know that somewhere, out there, the Hackerz are laughing at you."
 
 
 

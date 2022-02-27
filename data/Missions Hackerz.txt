@@ -22,9 +22,9 @@ mission "Hackerz"
 	landing
 	invisible
 	deadline 1
-	repeat 2
 	source
 		government "Republic" "Syndicate" "Free Worlds"
+		not attributes "uninhabited"
 	to offer
 		has "credits" > 1000000
 		random < 40
@@ -32,12 +32,36 @@ mission "Hackerz"
 		government "Hackerz"
 		personality waiting surveillance
 		ship "Hackerz Drone" "Hackerz"
+		conversation
+			apply
+				set "You've been hacked"
+				clear "Hackerz: offered"
+			phrase "Hackerz LOL"
 	on fail
-		"Hackerz: offered" --
+		clear "Hackerz: offered"
 	on complete
-		"Hackerz: offered" --
+		clear "You've been hacked"
 		payment -100000
-		dialog phrase "Hackerz LOL"
+		conversation "You've been hacked"
+
+mission "Hackerz: You've Been Hacked"
+	landing
+	invisible
+	repeat
+	source
+		government "Republic" "Syndicate" "Free Worlds" "Neutral" "Independent"
+		not attributes "uninhabited"
+	to offer
+		has "You've been hacked"
+	on offer
+		clear "You've been hacked"
+		payment -100000
+		conversation "You've been hacked"
+		fail
+
+conversation "You've been hacked"
+	scene "ship/science drone"
+	`	After checking your bank account, you've confirmed that you have indeed been hacked: 100,000 credits are missing.`
 
 
 
@@ -50,7 +74,7 @@ mission "Hackerz 1"
 		has "Hackerz: offered"
 	on offer
 		conversation 
-			`As you disembark from your ship, a nearby street vendor tries to sell you a book. "How to Hack a Science Drone For Fun and Profit"`
+			`As you disembark from your ship, a nearby street vendor tries to sell you a book: "How to Hack a Science Drone For Fun and Profit."`
 			`	The author is listed as "P.K." Looks like some sort of 'get rich quick' scheme.`
 				decline
 	on decline
@@ -65,7 +89,7 @@ mission "Hackerz 1"
 mission "Hackerz 2A"
 	job
 	name "Trace Hackerz"
-	description "The source of the mysterious Hackerz has been traced back to <planet> in the <system> system. Apprehend these criminals and bring them in for a reward of 1000000 credits."
+	description "The source of the mysterious Hackerz has been traced back to <planet> in the <system> system. Apprehend these criminals and bring them in for a reward of 1,000,000 credits."
 	source
 		government "Republic" "Syndicate" "Free Worlds"
 	destination
@@ -76,7 +100,7 @@ mission "Hackerz 2A"
 mission "Hackerz 2B"
 	landing
 	name "Trace Hackerz"
-	description "The source of the mysterious Hackerz has been traced back to <planet> in the <system> system. Apprehend these criminals and bring them in for a reward of 1000000 credits."
+	description "The source of the mysterious Hackerz has been traced back to <planet> in the <system> system. Apprehend these criminals and bring them in for a reward of 1,000,000 credits."
 	to offer
 		has "Hackerz 2A: done"
 	on offer
@@ -127,7 +151,7 @@ mission "Hackerz 2B"
 mission "Hackerz 3"
 	job
 	name "Trace Hackerz"
-	description "The source of the mysterious Hackerz has been traced back to a derelict in orbit around <destination> system. Apprehend these criminals and bring them in for a reward of 1000000 credits."
+	description "The source of the mysterious Hackerz has been traced back to a derelict in orbit around <destination> system. Apprehend these criminals and bring them in for a reward of 1,000,000 credits."
 	source
 		government "Republic" "Syndicate" "Free Worlds"
 	destination
@@ -142,7 +166,7 @@ mission "Hackerz 3"
 		personality derelict target waiting staying pacifist mute
 		ship "Explosive Derelict Bactrian" "P.K.'s Party Palace"
 		conversation
-			`When the airlock opens your senses are overwhelmed by the sound of loud music and the scent of burnt recreational herbs. Hundreds of partygoers are too busy enjoying themselves to take notice of your entrance. After searching around for a bit, you find that the ship has power for life support, lighting, and music. But no weapons, navigation, or propulsion. You also haven't found any networking equipment. Suddenly, you hear panicked screaming coming from the partygoers. When you investigate what's going on, you see that everyone is ruahing to abandon ship. You ask one of them what's going on. They yell "Bomb!" while still fleeing. Now would be a good time to run back to your ship.`
+			`When the airlock opens your senses are overwhelmed by the sound of loud music and the scent of burnt recreational herbs. Hundreds of partygoers are too busy enjoying themselves to take notice of your entrance. After searching around for a bit, you find that the ship has power for life support, lighting, and music. But no weapons, navigation, or propulsion. You also haven't found any networking equipment. Suddenly, you hear panicked screaming coming from the partygoers. When you investigate what's going on, you see that everyone is rushing to abandon ship. You ask one of them what's going on. They yell "Bomb!" while still fleeing. Now would be a good time to run back to your ship.`
 				flee
 	on fail
 		"reputation: Derelict" >?= 0
@@ -174,7 +198,7 @@ mission "Hackerz 3: Derelict Patch"
 mission "Hackerz 4"
 	job
 	name "Trace Hackerz"
-	description "The source of the mysterious Hackerz has been traced back to <planet> in the <system> system. Apprehend these criminals and bring them in for a reward of 1000000 credits."
+	description "The source of the mysterious Hackerz has been traced back to <planet> in the <system> system. Apprehend these criminals and bring them in for a reward of 1,000,000 credits."
 	source
 		government "Republic" "Syndicate" "Free Worlds"
 	destination
@@ -200,7 +224,7 @@ mission "Hackerz 4"
 			`	You hold your hands up and try to reason with him. But he is too crazed to have a discussion with. You are hit by a shotgun slug and your headless corpse falls to the floor.`
 				die
 			label dodge
-			`	You narrowly avoid a shotgun slug and jump out the nearest window. Fortunately, the window was already broken, but you still got some minor scrapes from the few shards of glass remaining in the frame. "Better than a shotgun slug to the head!" You mutter to yourself as you run for your ship.`
+			`	You narrowly avoid a shotgun slug and jump out the nearest window. Fortunately, the window was already broken, but you still get some minor scrapes from the few shards of glass remaining in the frame. "Better than a shotgun slug to the head," you exclaim to yourself as you run for your ship.`
 				launch
 	npc save
 		to spawn

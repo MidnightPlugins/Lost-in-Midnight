@@ -353,7 +353,7 @@ mission "Angry Squirrels: Countermeasures 3"
 					decline
 
 			label bloodthirst
-			`	"You are alright with trying it on your fellow monkeys?" Go Foo Ku laughs "I knew I made the right choice with you!"`
+			`	"You are alright with trying it on your fellow monkeys?" Go Foo Ku laughs, "I knew I made the right choice with you!"`
 			`	You don't bother to tell him about pirates.`
 				accept
 
@@ -401,13 +401,13 @@ mission "Angry Squirrels: Asteroid Catapult"
 			`	"Ah, Captain <last>! Thank you for your previous assistance. As you can see, I am still hard at work on testing the limits of the countermeasures technology." Somehow, he has managed to acquire several more of the Quarg devices. One of them sits disassembled on a work table. There is a sudden shower of sparks from the exposed circuitry. Go Foo Ku pays no attention to the sudden burst of sound and light. "So, captain, what brought you all the way out here today?"`
 			choice
 				`	"I'd like you to build something for me."`
-			`	You show him the schematics for the Asteroid Catapult. After taking a moment to look them over, Go Foo Ku begins laughing boisterously. "The monkey wants to throw rocks at his enemies!" After he gets the laughter out of his system, he says "This is basically a large rail gun with some exotic ammunition... Sure, I can make one. Pay me 2000000 credits and it should be ready in a month."`
+			`	You show him the schematics for the Asteroid Catapult. After taking a moment to look them over, Go Foo Ku begins laughing boisterously. "The monkey wants to throw rocks at his enemies!" After he gets the laughter out of his system, he says "This is basically a large rail gun with some exotic ammunition... Sure, I can make one. Pay me 2,000,000 credits and it should be ready in a month."`
 			choice
 				`	(Agree to his terms.)`
 				`	(Reject his offer.)`
 					goto reject
 			
-			`	"Great! Please confirm payment on this data pad." After you confirm payment, he comments "As I said, return here in a month and I'll have it ready for you."`
+			`	"Great! Please confirm payment on this data pad." After you confirm payment, he comments, "As I said, return here in a month and I'll have it ready for you."`
 				accept
 			
 			label reject
@@ -586,7 +586,7 @@ mission "Angry Squirrels: Journey to the Southwest"
 				random < 20
 	on offer
 		conversation
-			`When you get back to your ship, you find that a crowd has formed at the landing pad. Before you can ask what is going on, one of the Unfettered points at you and proclaims "The Monkey King has arrived!"`
+			`When you get back to your ship, you find that a crowd has formed at the landing pad. Before you can ask what is going on, one of the Unfettered points at you and proclaims, "The Monkey King has arrived!"`
 
 			branch "second encounter"
 				has "Randomize Angry Squirrels: Journey to the Southwest" > 0

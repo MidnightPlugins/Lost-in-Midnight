@@ -498,7 +498,7 @@ mission "Gathering Specimens: Alexandria Gray Eye"
 				`	(Yes.)`
 				`	(Not yet.)`
 					defer
-			`The researchers thank you for your contribution to the advancement of human knowledge and award you 1000000 credits.`
+			`The researchers thank you for your contribution to the advancement of human knowledge and award you 1,000,000 credits.`
 				decline
 	on decline
 		outfit "Gray Eye Specimen" -1
@@ -526,7 +526,7 @@ mission "Gathering Specimens: Alexandria Luminazoa"
 				`	(Yes.)`
 				`	(Not yet.)`
 					defer
-			`The researchers thank you for your contribution to the advancement of human knowledge and award you 1000000 credits.`
+			`The researchers thank you for your contribution to the advancement of human knowledge and award you 1,000,000 credits.`
 				decline
 	on decline
 		outfit "Luminazoa Specimen" -1
@@ -554,7 +554,7 @@ mission "Gathering Specimens: Alexandria Ionic Leech"
 				`	(Yes.)`
 				`	(Not yet.)`
 					defer
-			`The researchers thank you for your contribution to the advancement of human knowledge and award you 1000000 credits.`
+			`The researchers thank you for your contribution to the advancement of human knowledge and award you 1,000,000 credits.`
 				decline
 	on decline
 		outfit "Leech Specimen" -1
@@ -582,7 +582,7 @@ mission "Gathering Specimens: Alexandria Astero Nautilus"
 				`	(Yes.)`
 				`	(Not yet.)`
 					defer
-			`The researchers thank you for your contribution to the advancement of human knowledge and award you 1000000 credits.`
+			`The researchers thank you for your contribution to the advancement of human knowledge and award you 1,000,000 credits.`
 				decline
 	on decline
 		outfit "Nautilus Specimen" -1
@@ -610,7 +610,7 @@ mission "Gathering Specimens: Alexandria Plasma Parasite"
 				`	(Yes.)`
 				`	(Not yet.)`
 					defer
-			`The researchers thank you for your contribution to the advancement of human knowledge and award you 1000000 credits.`
+			`The researchers thank you for your contribution to the advancement of human knowledge and award you 1,000,000 credits.`
 				decline
 	on decline
 		outfit "Plasma Specimen" -1
@@ -638,7 +638,7 @@ mission "Gathering Specimens: Alexandria Nova Firefly"
 				`	(Yes.)`
 				`	(Not yet.)`
 					defer
-			`The researchers thank you for your contribution to the advancement of human knowledge and award you 1000000 credits.`
+			`The researchers thank you for your contribution to the advancement of human knowledge and award you 1,000,000 credits.`
 				decline
 	on decline
 		outfit "Firefly Specimen" -1
@@ -666,7 +666,7 @@ mission "Gathering Specimens: Alexandria Star Gazer"
 				`	(Yes.)`
 				`	(Not yet.)`
 					defer
-			`The researchers thank you for your contribution to the advancement of human knowledge and award you 1000000 credits.`
+			`The researchers thank you for your contribution to the advancement of human knowledge and award you 1,000,000 credits.`
 				decline
 	on decline
 		outfit "Gazer Specimen" -1
@@ -943,7 +943,7 @@ mission "Gathering Specimens: Conservatory Conclusion"
 			`The administrators thank you for helping with the research. And now they present the results of that work: a cure for Chronic Hyperspace Traveler's Disorder.`
 			choice
 				`	"I've never heard of that."`
-			`	They explain "When you've been traveling for days on a cramped ship through Hyperspace, you may experience the following symptoms: muscle soreness, irritability, restlessness, and difficulty sleeping."`
+			`	They explain, "When you've been traveling for days on a cramped ship through Hyperspace, you may experience the following symptoms: muscle soreness, irritability, restlessness, and difficulty sleeping."`
 			choice
 				`	"That's normal."`
 			`	"It's Chronic Hyperspace Traveler's Disorder, a condition that affects more than 90% of space travelers to the detriment of their well being. And since you played a important role in developing the cure, a portion of the profits from sales of this miracle drug will be paid to you. Congratulations!"`
@@ -1198,7 +1198,7 @@ mission "Gathering Specimens: Remnant Research"
 		has "Gathering Specimens: Remnant Nova Firefly: declined"
 		has "Gathering Specimens: Remnant Star Gazer: declined"
 	on offer
-		dialog `You find Taely preparing to board a ship. She signs "Your contributions to the junior engineering research project have caused quite a stir. I'm off to attend another meeting regarding some new development based on it. We might have some results soon."`
+		dialog `You find Taely preparing to board a ship. She signs, "Your contributions to the junior engineering research project have caused quite a stir. I'm off to attend another meeting regarding some new development based on it. We might have some results soon."`
 	on accept
 		event "Gathering Specimens: Remnant Research" 14
 		fail "Gathering Specimens: Remnant"
@@ -1408,7 +1408,7 @@ mission "Gathering Specimens: Remnant Research B"
 		has "Gathering Specimens: Remnant Nova Firefly B: declined"
 		has "Gathering Specimens: Remnant Star Gazer B: declined"
 	on offer
-		dialog `You find Prefect Chilia preparing to board a ship. He sings "Your contributions to the junior weapons research project have caused quite a stir. I'm off to attend another meeting regarding some new development based on it. We might have some results soon."`
+		dialog `You find Prefect Chilia preparing to board a ship. He sings, "Your contributions to the junior weapons research project have caused quite a stir. I'm off to attend another meeting regarding some new development based on it. We might have some results soon."`
 	on accept
 		event "Gathering Specimens: Remnant Research" 14
 		fail "Gathering Specimens: Remnant B"
@@ -1654,7 +1654,7 @@ mission "Gathering Specimens: Liquid Metal Amalgam"
 			choice
 				`	(That's strange. Why...)`
 			scene "scene/scene-amalgam1"
-			`As you are mulling over the odd message, someone watching the news display mutters "Ghost Ship. You look up in time to see a Quicksilver destroy a Navy Cruiser.`
+			`As you are mulling over the odd message, someone watching the news display mutters, "Ghost Ship. You look up in time to see a Quicksilver destroy a Navy Cruiser.`
 			choice
 				`	(What the...)`
 			scene "scene/scene-amalgam2"

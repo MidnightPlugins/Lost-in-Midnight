@@ -557,7 +557,7 @@ mission "Jail Break B"
 mission "Jail Break C"
 	job
 	name "Jail Break"
-	description "A pirate warlord has been taken captive aboard the <npc> and is being transported to the prison on Huginn Station. Disable and board the <npc>, set the warlord free, and bring him to <destination>. The reward for completing this jail break is 400000."
+	description "A pirate warlord has been taken captive aboard the <npc> and is being transported to the prison on Huginn Station. Disable and board the <npc>, set the warlord free, and bring him to <destination>. The reward for completing this jail break is 400,000 credits."
 	passengers 1
 	source
 		government "Pirate"
@@ -734,12 +734,12 @@ mission "Lares Camping (Raiders)"
 					defer
 			`You settle in for a peaceful night's sleep when the silence is broken by the sounds of an afterburner ripping through the night sky! That sound is quickly overttaken by a loud explosion from the direction of the spaceport!`
 			choice
-				`	(Stay here)`
+				`	(Stay here.)`
 				`	(Head back to your ship.)`
 					goto raiders
 			`	You kill the lights and huddle with your gun in the darkness. There are distant sounds of yelling and gunfire. Eventually, the sounds fade and silence reclaims the night.`
 			choice
-				`	(Stay here)`
+				`	(Stay here.)`
 				`	(Head back to your ship.)`
 					goto raiders
 			`	You try to get some sleep, but you keep your gun clutched close in case someone comes looking for trouble. Eventually, morning comes.`
@@ -895,7 +895,7 @@ mission "Underworld Meeting (easy)"
 mission "Underworld Meeting (hard)"
 	job
 	name "Underworld Meeting"
-	description "Take <fare> to a clandestine meeting in <stopovers>'s underworld. Then return them to <origin>. Payment is 50000 credits."
+	description "Take <fare> to a clandestine meeting in <stopovers>'s underworld. Then return them to <origin>. Payment is 50,000 credits."
 	source "Wang Xiang Tai"
 	stopover "Naihe Qiao"
 	passengers 1

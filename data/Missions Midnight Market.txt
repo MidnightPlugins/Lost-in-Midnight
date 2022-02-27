@@ -460,7 +460,7 @@ mission "Midnight Market: Cloaking Device 2"
 
 mission "Midnight Market: Intrusion Countermeasures 1"
 	name "Myserious Sales Pitch"
-	description "An anonymous seller is offering a rare item that would supposedly appeal to you. You must go to a village on <planet> in the <system> system if you want to purchase it for 500000 credits."
+	description "An anonymous seller is offering a rare item that would supposedly appeal to you. You must go to a village on <planet> in the <system> system if you want to purchase it for 500,000 credits."
 	source
 		government "Republic" "Free Worlds" "Syndicate"
 		not attributes "uninhabited"
@@ -475,7 +475,7 @@ mission "Midnight Market: Intrusion Countermeasures 1"
 	on offer
 		conversation
 			`You receive an anonymous message:`
-			`	"Greetings, Captain <first> <last>. As you are a seasoned warrior who has engaged in countless battles across the galaxy, we have determined that you would be a suitable client for a certain piece of rare merchandise that has found its way into our inventory. Come to the location in the attached data file by <date> if you are interested in purchasing this rare item. Be prepared to pay 500000 credits at the time of the transaction."`
+			`	"Greetings, Captain <first> <last>. As you are a seasoned warrior who has engaged in countless battles across the galaxy, we have determined that you would be a suitable client for a certain piece of rare merchandise that has found its way into our inventory. Come to the location in the attached data file by <date> if you are interested in purchasing this rare item. Be prepared to pay 500,000 credits at the time of the transaction."`
 			`	The location indicated is within the Underworld caverns of <destination>.`
 			choice
 				`	(Accept the invitation.)`
@@ -547,7 +547,7 @@ mission "Midnight Market: Coalition Smuggling 1"
 				random < 20
 	on offer
 		conversation
-			`You receive a message indicating a job opportunity on Poisonwood. It involves escorting a ship outside of human space. The address is for a warehouse near the Poisonwood spaceport. Payment is 1000000`
+			`You receive a message indicating a job opportunity on Poisonwood. It involves escorting a ship outside of human space. The address is for a warehouse near the Poisonwood spaceport. Payment is 1,000,000`
 			choice
 				`	(Accept.)`
 					accept
@@ -814,7 +814,7 @@ mission "Midnight Market: Trailblazer Auction"
 			label Qguns
 			scene "scene/scene-modelguns"
 			`	There is a momentary pause of confusion. Then both the Saryd and the Heliarch official begin to laugh.`
-			`	"Sorry human! Not real, these guns are. Decorative models only. For display." the Saryd nervously apologizes.`
+			`	"Sorry human! Not real, these guns are. Decorative models only. For display," the Saryd nervously apologizes.`
 			`	Other than the earlier laughter, the Heliarch official has nothing to say regarding the model guns...`
 				goto buyerquestions
 				
@@ -977,13 +977,14 @@ ship "Saryd Trailblazer" "Saryd Trailblazer (Pirate)"
 
 mission "Midnight Market: Asteroid Catapult 1"
 	name "Myserious Sales Pitch"
-	description "An anonymous seller is offering a unique item that would supposedly appeal to you. You must go to <planet> in the <system> system if you want to purchase it for 1000000 credits."
+	description "An anonymous seller is offering a unique item that would supposedly appeal to you. You must go to <planet> in the <system> system if you want to purchase it for 1,000,000 credits."
 	source
 		government "Republic" "Free Worlds" "Syndicate" "Pirate"
 		not attributes "uninhabited"
 	destination "Rum Cellar"
 	to offer
 		"Midnight Market" > 10
+		has "Terraforming 6: done"
 		has "Oathbreaker Thermopylae: done"
 		has "event: reveal Chasm"
 		"credits" >= 2000000
@@ -1016,7 +1017,7 @@ mission "Midnight Market: Asteroid Catapult 1"
 				`	(Reject the invitation.)`
 					defer
 	on visit
-		dialog `You've arrived at <planet> but you don't have the 1000000 credits that were requested! Return with 1000000 credits to negotiate with the mysterious seller.`
+		dialog `You've arrived at <planet> but you don't have the 1,000,000 credits that were requested! Return with 1,000,000 credits to negotiate with the mysterious seller.`
 
 mission "Midnight Market: Asteroid Catapult 2"
 	landing
@@ -1042,7 +1043,7 @@ mission "Midnight Market: Asteroid Catapult 2"
 			`	He puts away the data pad. "Unfortunately, it appears we were unable to reach an agreement. Thank you for your time. However, I suggest you depart immediately." The cloaked figures you saw when you arrived earlier have now entered the room and you decide to follow the man's suggestion.`
 				flee
 			label purchase
-			`	"Congratulations on your purchase captain. I'm sure you won't regret it. You'll hear from us again if we happen to acquire any more unique  merchandise that might interest you."`
+			`	"Congratulations on your purchase captain. I'm sure you won't regret it. You'll hear from us again if we happen to acquire any more unique merchandise that might interest you."`
 				accept
 	on accept
 		log `Purchased the schematics for an asteroid catapult on the Midnight Market. Supposedly, these are the original files from whoever invented the weapon. Now I just need to find an engineer who's willing to build it.`

@@ -33,7 +33,7 @@ mission "Quarg Tech: Nanotech Battery (Remnant)"
 				has "Shared Quarg technology with Remnant" 
 			
 			`	After searching the shipyard for an hour, you find Taely overseeing reconstruction of a Jump Drive.`
-			`	"Greetings, <first>." She signs, "Even if we manage to reconstruct the frame, we still lack the substance that allows an active Jump Drive to work." She adds some notes to a diagram of the work in progress, then asks, "What brings you here today?"`
+			`	"Greetings, <first>." She signs, "Even if we manage to reconstruct the frame, we still lack the substance that allows an active Jump Drive to work." She adds some notes to a diagram of the work in progress then asks, "What brings you here today?"`
 			choice
 				`	"I have something to show you."`
 					goto quargtech
@@ -170,7 +170,7 @@ mission "Quarg Tech: Quantum Shield Generator (Remnant)"
 				has "Shared Quarg technology with Remnant" 
 			
 			`	After searching the shipyard for an hour, you find Taely overseeing reconstruction of a Jump Drive.`
-			`	"Greetings, <first>." She signs, "Even if we manage to reconstruct the frame, we still lack the substance that allows an active Jump Drive to work." She adds some notes to a diagram of the work in progress, then asks, "What brings you here today?"`
+			`	"Greetings, <first>." She signs, "Even if we manage to reconstruct the frame, we still lack the substance that allows an active Jump Drive to work." She adds some notes to a diagram of the work in progress then asks, "What brings you here today?"`
 			choice
 				`	"I have something to show you."`
 					goto quargtech
@@ -308,7 +308,7 @@ mission "Quarg Tech: Antimatter Core (Remnant)"
 				has "Shared Quarg technology with Remnant" 
 			
 			`	After searching the shipyard for an hour, you find Taely overseeing reconstruction of a Jump Drive.`
-			`	"Greetings, <first>." She signs, "Even if we manage to reconstruct the frame, we still lack the substance that allows an active Jump Drive to work." She adds some notes to a diagram of the work in progress, then asks, "What brings you here today?"`
+			`	"Greetings, <first>." She signs, "Even if we manage to reconstruct the frame, we still lack the substance that allows an active Jump Drive to work." She adds some notes to a diagram of the work in progress then asks, "What brings you here today?"`
 			choice
 				`	"I have something to show you."`
 					goto quargtech
