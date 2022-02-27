@@ -22,6 +22,7 @@ mission "Hackerz"
 	landing
 	invisible
 	deadline 1
+	repeat
 	source
 		government "Republic" "Syndicate" "Free Worlds"
 		not attributes "uninhabited"
