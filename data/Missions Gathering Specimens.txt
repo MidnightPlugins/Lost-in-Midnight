@@ -11,10 +11,40 @@
 
 
 
+mission "Gathering Specimens Clear"
+	landing
+	invisible
+	repeat
+	source
+		not planet "Alexandria" "Winter" "Viminal" "Caelian"
+	to offer
+		not "Gathering Specimens: Alexandria: active"
+		not "Gathering Specimens: Conservatory: active"
+		not "Gathering Specimens: Remnant: active"
+		not "Gathering Specimens: Remnant B: active"
+		or
+			has "Gathering Specimens: Gray Eye: active"
+			has "Gathering Specimens: Luminazoa: active"
+			has "Gathering Specimens: Ionic Leech: active"
+			has "Gathering Specimens: Astero Nautilus: active"
+			has "Gathering Specimens: Plasma Parasite: active"
+			has "Gathering Specimens: Nova Firefly: active"
+			has "Gathering Specimens: Star Gazer: active"
+	on offer
+		fail "Gathering Specimens: Gray Eye: active"
+		fail "Gathering Specimens: Luminazoa: active"
+		fail "Gathering Specimens: Ionic Leech: active"
+		fail "Gathering Specimens: Astero Nautilus: active"
+		fail "Gathering Specimens: Plasma Parasite: active"
+		fail "Gathering Specimens: Nova Firefly: active"
+		fail "Gathering Specimens: Star Gazer: active"
+	
 
 mission "Gathering Specimens: Gray Eye"
 	landing
 	invisible
+	source
+		not planet "Alexandria" "Winter" "Viminal" "Caelian"
 	to offer
 		has "First Contact: Subsidurials: offered"
 		or
@@ -65,6 +95,8 @@ mission "Gathering Specimens: Gray Eye Lost"
 mission "Gathering Specimens: Luminazoa"
 	landing
 	invisible
+	source
+		not planet "Alexandria" "Winter" "Viminal" "Caelian"
 	to offer
 		has "First Contact: Luminazoa: offered"
 		or
@@ -120,6 +152,8 @@ mission "Gathering Specimens: Luminazoa Lost"
 mission "Gathering Specimens: Ionic Leech"
 	landing
 	invisible
+	source
+		not planet "Alexandria" "Winter" "Viminal" "Caelian"
 	to offer
 		has "First Contact: Ionic Leech: offered"
 		has "First Contact: Hai: declined"
@@ -176,6 +210,8 @@ mission "Gathering Specimens: Ionic Leech Lost"
 mission "Gathering Specimens: Astero Nautilus"
 	landing
 	invisible
+	source
+		not planet "Alexandria" "Winter" "Viminal" "Caelian"
 	to offer
 		has "First Contact: Astero Nautilus: offered"
 		or
@@ -231,6 +267,8 @@ mission "Gathering Specimens: Astero Nautilus Lost"
 mission "Gathering Specimens: Plasma Parasite"
 	landing
 	invisible
+	source
+		not planet "Alexandria" "Winter" "Viminal" "Caelian"
 	to offer
 		has "First Contact: Plasma Parasite: offered"
 		or
@@ -286,6 +324,8 @@ mission "Gathering Specimens: Plasma Parasite Lost"
 mission "Gathering Specimens: Nova Firefly"
 	landing
 	invisible
+	source
+		not planet "Alexandria" "Winter" "Viminal" "Caelian"
 	to offer
 		has "First Contact: Nova Fireflies: offered"
 		or
@@ -346,6 +386,8 @@ mission "Gathering Specimens: Nova Firefly Lost"
 mission "Gathering Specimens: Star Gazer"
 	landing
 	invisible
+	source
+		not planet "Alexandria" "Winter" "Viminal" "Caelian"
 	to offer
 		has "First Contact: Star Gazer: offered"
 		or
@@ -406,15 +448,39 @@ mission "Gathering Specimens: Alexandria"
 		or
 			"Transport scientists: done" > 5
 			has "Deep: Project Hawking: done"
+		or
+			not "Randomize Gathering Specimens: Alexandria"
+			and
+				has "Randomize Gathering Specimens: Alexandria"
+				random < 25
 	to complete
 		never
 	on offer
 		conversation
+			branch repeat
+				has "Gathering Specimens: Alexandria: failed"
+				
 			`A group of scientists approach you. "Captain <first> <last>? We've been told that you're a reliable captain who travels beyond The Deep. If that's true, would be interested in helping us with our research?"`
 			choice
 				`	"What sort of help do you need?"`
 			`	"Nothing too hard. Just keep an eye out for any interstellar life forms. If you find one, bring us back a tissue sample. We'll make sure you are compensated."`
-				accept
+				goto end
+				
+			label repeat
+			`	The scientists you previously delivered specimens to are requesting more.`
+
+			label end
+			choice
+				`	(Accept their request.)`
+					accept
+				`	(Decline their request.)`
+					defer
+
+	on defer
+		set "Randomize Gathering Specimens: Alexandria"
+	on accept
+		set "Randomize Gathering Specimens: Alexandria"
+		
 
 mission "Gathering Specimens: Alexandria Gray Eye"
 	landing
@@ -430,7 +496,7 @@ mission "Gathering Specimens: Alexandria Gray Eye"
 			`Do you want to hand the Gray Eye specimen over to the Alexandria researchers?`
 			choice
 				`	(Yes.)`
-				`	(No.)`
+				`	(Not yet.)`
 					defer
 			`The researchers thank you for your contribution to the advancement of human knowledge and award you 1000000 credits.`
 				decline
@@ -439,6 +505,7 @@ mission "Gathering Specimens: Alexandria Gray Eye"
 		payment 1000000
 		fail "Gathering Specimens: Alexandria"
 		clear "Gathering Specimens: Alexandria: offered"
+		fail "Gathering Specimens: Gray Eye"
 		clear "Gathering Specimens: Gray Eye: offered"
 		clear "Specimen: Gray Eye"
 		
@@ -457,7 +524,7 @@ mission "Gathering Specimens: Alexandria Luminazoa"
 			`Do you want to hand the Luminazoa specimen over to the Alexandria researchers?`
 			choice
 				`	(Yes.)`
-				`	(No.)`
+				`	(Not yet.)`
 					defer
 			`The researchers thank you for your contribution to the advancement of human knowledge and award you 1000000 credits.`
 				decline
@@ -466,6 +533,7 @@ mission "Gathering Specimens: Alexandria Luminazoa"
 		payment 1000000
 		fail "Gathering Specimens: Alexandria"
 		clear "Gathering Specimens: Alexandria: offered"
+		fail "Gathering Specimens: Luminazoa"
 		clear "Gathering Specimens: Luminazoa: offered"
 		clear "Specimen: Luminazoa"
 
@@ -484,7 +552,7 @@ mission "Gathering Specimens: Alexandria Ionic Leech"
 			`Do you want to hand the Ionic Leech specimen over to the Alexandria researchers?`
 			choice
 				`	(Yes.)`
-				`	(No.)`
+				`	(Not yet.)`
 					defer
 			`The researchers thank you for your contribution to the advancement of human knowledge and award you 1000000 credits.`
 				decline
@@ -493,6 +561,7 @@ mission "Gathering Specimens: Alexandria Ionic Leech"
 		payment 1000000
 		fail "Gathering Specimens: Alexandria"
 		clear "Gathering Specimens: Alexandria: offered"
+		fail "Gathering Specimens: Ionic Leech"
 		clear "Gathering Specimens: Ionic Leech: offered"
 		clear "Specimen: Ionic Leech"
 
@@ -511,7 +580,7 @@ mission "Gathering Specimens: Alexandria Astero Nautilus"
 			`Do you want to hand the Astero Nautilus specimen over to the Alexandria researchers?`
 			choice
 				`	(Yes.)`
-				`	(No.)`
+				`	(Not yet.)`
 					defer
 			`The researchers thank you for your contribution to the advancement of human knowledge and award you 1000000 credits.`
 				decline
@@ -520,6 +589,7 @@ mission "Gathering Specimens: Alexandria Astero Nautilus"
 		payment 1000000
 		fail "Gathering Specimens: Alexandria"
 		clear "Gathering Specimens: Alexandria: offered"
+		fail "Gathering Specimens: Astero Nautilus"
 		clear "Gathering Specimens: Astero Nautilus: offered"
 		clear "Specimen: Astero Nautilus"
 
@@ -538,7 +608,7 @@ mission "Gathering Specimens: Alexandria Plasma Parasite"
 			`Do you want to hand the Plasma Parasite specimen over to the Alexandria researchers?`
 			choice
 				`	(Yes.)`
-				`	(No.)`
+				`	(Not yet.)`
 					defer
 			`The researchers thank you for your contribution to the advancement of human knowledge and award you 1000000 credits.`
 				decline
@@ -547,6 +617,7 @@ mission "Gathering Specimens: Alexandria Plasma Parasite"
 		payment 1000000
 		fail "Gathering Specimens: Alexandria"
 		clear "Gathering Specimens: Alexandria: offered"
+		fail "Gathering Specimens: Plasma Parasite"
 		clear "Gathering Specimens: Plasma Parasite: offered"
 		clear "Specimen: Plasma Parasite"
 
@@ -565,7 +636,7 @@ mission "Gathering Specimens: Alexandria Nova Firefly"
 			`Do you want to hand the Nova Firefly specimen over to the Alexandria researchers?`
 			choice
 				`	(Yes.)`
-				`	(No.)`
+				`	(Not yet.)`
 					defer
 			`The researchers thank you for your contribution to the advancement of human knowledge and award you 1000000 credits.`
 				decline
@@ -574,6 +645,7 @@ mission "Gathering Specimens: Alexandria Nova Firefly"
 		payment 1000000
 		fail "Gathering Specimens: Alexandria"
 		clear "Gathering Specimens: Alexandria: offered"
+		fail "Gathering Specimens: Nova Firefly"
 		clear "Gathering Specimens: Nova Firefly: offered"
 		clear "Specimen: Nova Firefly"
 
@@ -592,7 +664,7 @@ mission "Gathering Specimens: Alexandria Star Gazer"
 			`Do you want to hand the Star Gazer specimen over to the Alexandria researchers?`
 			choice
 				`	(Yes.)`
-				`	(No.)`
+				`	(Not yet.)`
 					defer
 			`The researchers thank you for your contribution to the advancement of human knowledge and award you 1000000 credits.`
 				decline
@@ -601,6 +673,7 @@ mission "Gathering Specimens: Alexandria Star Gazer"
 		payment 1000000
 		fail "Gathering Specimens: Alexandria"
 		clear "Gathering Specimens: Alexandria: offered"
+		fail "Gathering Specimens: Star Gazer"
 		clear "Gathering Specimens: Star Gazer: offered"
 		clear "Specimen: Star Gazer"
 
@@ -641,12 +714,13 @@ mission "Gathering Specimens: Conservatory Gray Eye"
 			`Do you want to hand the Gray Eye specimen over to the Conservatory researchers?`
 			choice
 				`	(Yes.)`
-				`	(No.)`
+				`	(Not yet.)`
 					defer
 			`The researchers thank you for informing them of this discovery. They ask that you deliver it to a lab on <destination>.`
 				accept
 	on complete
 		outfit "Gray Eye Specimen" -1
+		fail "Gathering Specimens: Gray Eye"
 		clear "Gathering Specimens: Gray Eye: offered"
 		clear "Specimen: Gray Eye"
 		dialog `The lab accepts the Gray Eye Specimen.`
@@ -670,12 +744,13 @@ mission "Gathering Specimens: Conservatory Luminazoa"
 			`Do you want to hand the Luminazoa specimen over to the Conservatory researchers?`
 			choice
 				`	(Yes.)`
-				`	(No.)`
+				`	(Not yet.)`
 					defer
 			`The researchers thank you for informing them of this discovery. They ask that you deliver it to a lab on <destination>.`
 				accept
 	on complete
 		outfit "Luminazoa Specimen" -1
+		fail "Gathering Specimens: Luminazoa"
 		clear "Gathering Specimens: Luminazoa: offered"
 		clear "Specimen: Luminazoa"
 		dialog `The lab accepts the Luminazoa Specimen.`
@@ -698,12 +773,13 @@ mission "Gathering Specimens: Conservatory Ionic Leech"
 			`Do you want to hand the Ionic Leech specimen over to the Conservatory researchers?`
 			choice
 				`	(Yes.)`
-				`	(No.)`
+				`	(Not yet.)`
 					defer
 			`The researchers thank you for informing them of this discovery. They ask that you deliver it to a lab on <destination>.`
 				accept
 	on complete
 		outfit "Leech Specimen" -1
+		fail "Gathering Specimens: Ionic Leech"
 		clear "Gathering Specimens: Ionic Leech: offered"
 		clear "Specimen: Ionic Leech"
 		dialog `The lab accepts the Leech Specimen.`
@@ -726,12 +802,13 @@ mission "Gathering Specimens: Conservatory Astero Nautilus"
 			`Do you want to hand the Astero Nautilus specimen over to the Conservatory researchers?`
 			choice
 				`	(Yes.)`
-				`	(No.)`
+				`	(Not yet.)`
 					defer
 			`The researchers thank you for informing them of this discovery. They ask that you deliver it to a lab on <destination>.`
 				accept
 	on complete
 		outfit "Nautilus Specimen" -1
+		fail "Gathering Specimens: Astero Nautilus"
 		clear "Gathering Specimens: Astero Nautilus: offered"
 		clear "Specimen: Astero Nautilus"
 		dialog `The lab accepts the Nautilus Specimen.`
@@ -754,12 +831,13 @@ mission "Gathering Specimens: Conservatory Plasma Parasite"
 			`Do you want to hand the Plasma Parasite specimen over to the Conservatory researchers?`
 			choice
 				`	(Yes.)`
-				`	(No.)`
+				`	(Not yet.)`
 					defer
 			`The researchers thank you for informing them of this discovery. They ask that you deliver it to a lab on <destination>.`
 				accept
 	on complete
 		outfit "Plasma Specimen" -1
+		fail "Gathering Specimens: Plasma Parasite"
 		clear "Gathering Specimens: Plasma Parasite: offered"
 		clear "Specimen: Plasma Parasite"
 		dialog `The lab accepts the Plasma Specimen.`
@@ -782,12 +860,13 @@ mission "Gathering Specimens: Conservatory Nova Firefly"
 			`Do you want to hand the Nova Firefly specimen over to the Conservatory researchers?`
 			choice
 				`	(Yes.)`
-				`	(No.)`
+				`	(Not yet.)`
 					defer
 			`The researchers thank you for informing them of this discovery. They ask that you deliver it to a lab on <destination>.`
 				accept
 	on complete
 		outfit "Firefly Specimen" -1
+		fail "Gathering Specimens: Nova Firefly"
 		clear "Gathering Specimens: Nova Firefly: offered"
 		clear "Specimen: Nova Firefly"
 		dialog `The lab accepts the Firefly Specimen.`
@@ -811,12 +890,13 @@ mission "Gathering Specimens: Conservatory Star Gazer"
 			`Do you want to hand the Star Gazer specimen over to the Conservatory researchers?`
 			choice
 				`	(Yes.)`
-				`	(No.)`
+				`	(Not yet.)`
 					defer
 			`The researchers thank you for informing them of this discovery. They ask that you deliver it to a lab on <destination>.`
 				accept
 	on complete
 		outfit "Gazer Specimen" -1
+		fail "Gathering Specimens: Star Gazer"
 		clear "Gathering Specimens: Star Gazer: offered"
 		clear "Specimen: Star Gazer"
 		dialog `The lab accepts the Gazer Specimen.`
@@ -945,12 +1025,13 @@ mission "Gathering Specimens: Remnant Gray Eye"
 			`Do you want to hand the Gray Eye specimen over to the Remnant researchers?`
 			choice
 				`	(Yes.)`
-				`	(No.)`
+				`	(Not yet.)`
 					defer
 			`The researchers thank you for your assistance.`
 				decline
 	on decline
 		outfit "Gray Eye Specimen" -1
+		fail "Gathering Specimens: Gray Eye"
 		clear "Gathering Specimens: Gray Eye: offered"	
 		clear "Specimen: Gray Eye"
 
@@ -969,12 +1050,13 @@ mission "Gathering Specimens: Remnant Luminazoa"
 			`Do you want to hand the Luminazoa specimen over to the Remnant researchers?`
 			choice
 				`	(Yes.)`
-				`	(No.)`
+				`	(Not yet.)`
 					defer
 			`The researchers thank you for your assistance.`
 				decline
 	on decline
 		outfit "Luminazoa Specimen" -1
+		fail "Gathering Specimens: Luminazoa"
 		clear "Gathering Specimens: Luminazoa: offered"
 		clear "Specimen: Luminazoa"
 
@@ -993,12 +1075,13 @@ mission "Gathering Specimens: Remnant Ionic Leech"
 			`Do you want to hand the Ionic Leech specimen over to the Remnant researchers?`
 			choice
 				`	(Yes.)`
-				`	(No.)`
+				`	(Not yet.)`
 					defer
 			`The researchers thank you for your assistance.`
 				decline
 	on decline
 		outfit "Leech Specimen" -1
+		fail "Gathering Specimens: Ionic Leech"
 		clear "Gathering Specimens: Ionic Leech: offered"
 		clear "Specimen: Ionic Leech"
 
@@ -1017,12 +1100,13 @@ mission "Gathering Specimens: Remnant Astero Nautilus"
 			`Do you want to hand the Astero Nautilus specimen over to the Remnant researchers?`
 			choice
 				`	(Yes.)`
-				`	(No.)`
+				`	(Not yet.)`
 					defer
 			`The researchers thank you for your assistance.`
 				decline
 	on decline
 		outfit "Nautilus Specimen" -1
+		fail "Gathering Specimens: Astero Nautilus"
 		clear "Gathering Specimens: Astero Nautilus: offered"
 		clear "Specimen: Astero Nautilus"
 
@@ -1041,12 +1125,13 @@ mission "Gathering Specimens: Remnant Plasma Parasite"
 			`Do you want to hand the Plasma Parasite specimen over to the Remnant researchers?`
 			choice
 				`	(Yes.)`
-				`	(No.)`
+				`	(Not yet.)`
 					defer
 			`The researchers thank you for your assistance.`
 				decline
 	on decline
 		outfit "Plasma Specimen" -1
+		fail "Gathering Specimens: Plasma Parasite"
 		clear "Gathering Specimens: Plasma Parasite: offered"
 		clear "Specimen: Plasma Parasite"
 
@@ -1065,12 +1150,13 @@ mission "Gathering Specimens: Remnant Nova Firefly"
 			`Do you want to hand the Nova Firefly specimen over to the Remnant researchers?`
 			choice
 				`	(Yes.)`
-				`	(No.)`
+				`	(Not yet.)`
 					defer
 			`The researchers thank you for your assistance.`
 				decline
 	on decline
 		outfit "Firefly Specimen" -1
+		fail "Gathering Specimens: Nova Firefly"
 		clear "Gathering Specimens: Nova Firefly: offered"
 		clear "Specimen: Nova Firefly"
 
@@ -1089,12 +1175,13 @@ mission "Gathering Specimens: Remnant Star Gazer"
 			`Do you want to hand the Star Gazer specimen over to the Remnant researchers?`
 			choice
 				`	(Yes.)`
-				`	(No.)`
+				`	(Not yet.)`
 					defer
 			`The researchers thank you for your assistance.`
 				decline
 	on decline
 		outfit "Gazer Specimen" -1
+		fail "Gathering Specimens: Star Gazer"
 		clear "Gathering Specimens: Star Gazer: offered"
 		clear "Specimen: Star Gazer"
 
@@ -1148,7 +1235,7 @@ mission "Gathering Specimens: Remnant Gray Eye B"
 			`Do you want to hand the Gray Eye specimen over to the Remnant researchers?`
 			choice
 				`	(Yes.)`
-				`	(No.)`
+				`	(Not yet.)`
 					defer
 			`The researchers thank you for your assistance.`
 				decline
@@ -1156,6 +1243,7 @@ mission "Gathering Specimens: Remnant Gray Eye B"
 		outfit "Gray Eye Specimen" -1
 		clear "Specimen: Gray Eye"
 		clear "Gathering Specimens: Gray Eye: offered"	
+		fail "Gathering Specimens: Gray Eye"
 
 
 mission "Gathering Specimens: Remnant Luminazoa B"
@@ -1172,7 +1260,7 @@ mission "Gathering Specimens: Remnant Luminazoa B"
 			`Do you want to hand the Luminazoa specimen over to the Remnant researchers?`
 			choice
 				`	(Yes.)`
-				`	(No.)`
+				`	(Not yet.)`
 					defer
 			`The researchers thank you for your assistance.`
 				decline
@@ -1180,6 +1268,7 @@ mission "Gathering Specimens: Remnant Luminazoa B"
 		outfit "Luminazoa Specimen" -1
 		clear "Specimen: Luminazoa"
 		clear "Gathering Specimens: Luminazoa: offered"
+		fail "Gathering Specimens: Luminazoa"
 
 
 mission "Gathering Specimens: Remnant Ionic Leech B"
@@ -1196,7 +1285,7 @@ mission "Gathering Specimens: Remnant Ionic Leech B"
 			`Do you want to hand the Ionic Leech specimen over to the Remnant researchers?`
 			choice
 				`	(Yes.)`
-				`	(No.)`
+				`	(Not yet.)`
 					defer
 			`The researchers thank you for your assistance.`
 				decline
@@ -1204,6 +1293,7 @@ mission "Gathering Specimens: Remnant Ionic Leech B"
 		outfit "Leech Specimen" -1
 		clear "Specimen: Ionic Leech"
 		clear "Gathering Specimens: Ionic Leech: offered"
+		fail "Gathering Specimens: Ionic Leech"
 
 
 mission "Gathering Specimens: Remnant Astero Nautilus B"
@@ -1220,7 +1310,7 @@ mission "Gathering Specimens: Remnant Astero Nautilus B"
 			`Do you want to hand the Astero Nautilus specimen over to the Remnant researchers?`
 			choice
 				`	(Yes.)`
-				`	(No.)`
+				`	(Not yet.)`
 					defer
 			`The researchers thank you for your assistance.`
 				decline
@@ -1228,6 +1318,7 @@ mission "Gathering Specimens: Remnant Astero Nautilus B"
 		outfit "Nautilus Specimen" -1
 		clear "Specimen: Astero Nautilus"
 		clear "Gathering Specimens: Astero Nautilus: offered"
+		fail "Gathering Specimens: Astero Nautilus"
 
 
 mission "Gathering Specimens: Remnant Plasma Parasite B"
@@ -1244,7 +1335,7 @@ mission "Gathering Specimens: Remnant Plasma Parasite B"
 			`Do you want to hand the Plasma Parasite specimen over to the Remnant researchers?`
 			choice
 				`	(Yes.)`
-				`	(No.)`
+				`	(Not yet.)`
 					defer
 			`The researchers thank you for your assistance.`
 				decline
@@ -1252,6 +1343,7 @@ mission "Gathering Specimens: Remnant Plasma Parasite B"
 		outfit "Plasma Specimen" -1
 		clear "Specimen: Plasma Parasite"
 		clear "Gathering Specimens: Plasma Parasite: offered"
+		fail "Gathering Specimens: Plasma Parasite"
 
 
 mission "Gathering Specimens: Remnant Nova Firefly B"
@@ -1268,7 +1360,7 @@ mission "Gathering Specimens: Remnant Nova Firefly B"
 			`Do you want to hand the Nova Firefly specimen over to the Remnant researchers?`
 			choice
 				`	(Yes.)`
-				`	(No.)`
+				`	(Not yet.)`
 					defer
 			`The researchers thank you for your assistance.`
 				decline
@@ -1276,6 +1368,7 @@ mission "Gathering Specimens: Remnant Nova Firefly B"
 		outfit "Firefly Specimen" -1
 		clear "Specimen: Nova Firefly"
 		clear "Gathering Specimens: Nova Firefly: offered"
+		fail "Gathering Specimens: Nova Firefly"
 
 
 mission "Gathering Specimens: Remnant Star Gazer B"
@@ -1292,7 +1385,7 @@ mission "Gathering Specimens: Remnant Star Gazer B"
 			`Do you want to hand the Star Gazer specimen over to the Remnant researchers?`
 			choice
 				`	(Yes.)`
-				`	(No.)`
+				`	(Not yet.)`
 					defer
 			`The researchers thank you for your assistance.`
 				decline
@@ -1300,6 +1393,7 @@ mission "Gathering Specimens: Remnant Star Gazer B"
 		outfit "Gazer Specimen" -1
 		clear "Specimen: Star Gazer"
 		clear "Gathering Specimens: Star Gazer: offered"
+		fail "Gathering Specimens: Star Gazer"
 
 
 mission "Gathering Specimens: Remnant Research B"
