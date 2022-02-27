@@ -23,7 +23,7 @@
 
 
 mission "Midnight Market: Jump Drives 1"
-	name "Myserious Buyer"
+	name "Mysterious Buyer"
 	description "An anonymous buyer is interested in purchasing a jump drive. You must go to a warehouse on <planet> in the <system> system if you want to sell one for <payment>."
 	source
 		government "Free Worlds" "Republic" "Syndicate"
@@ -55,7 +55,7 @@ mission "Midnight Market: Jump Drives 1"
 			`You easily find the warehouse indicated by your mysterious buyer. The dockworkers take the jump drive and provide you with a hyperdrive and <payment> in exchange. There is no paperwork to fill out and no receipts are given, leaving you with no record that this transaction ever took place.`
 
 mission "Midnight Market: Jump Drives 2"
-	name "Myserious Buyer"
+	name "Mysterious Buyer"
 	description "An anonymous buyer is interested in purchasing a jump drive. You must go to a warehouse on <planet> in the <system> system if you want to sell one for <payment>."
 	source
 		government "Free Worlds" "Republic" "Syndicate"

@@ -366,7 +366,7 @@ mission "T.H.O.R.: Corpse 1"
 			branch damaged
 				random < 25
 
-			scene "outfit/harvested dysprosium"
+			scene "outfit/quantumium"
 			`	Some time passes... Eventually, T.H.O.R. returns with a chunk of Quantumium.`
 				decline
 				
@@ -455,7 +455,7 @@ mission "T.H.O.R.: Corpse 2"
 		dialog `Your mind is filled with thoughts of fear and loathing. Fear forcing you to seek a hiding place and loathing for whatever was feared. Assuming these thoughts are coming from that Archon, it must be insane.`
 	
 	npc kill
-		government "Drak (Hostile)"
+		government "Derelict (Killable)"
 		personality heroic vindictive unconstrained
 		ship "Archon (Lich)" "Arch-Lich"
 		

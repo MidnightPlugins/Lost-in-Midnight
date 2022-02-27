@@ -17,7 +17,7 @@ government "Doomsday Device"
 	"bribe" 0
 	"fine" 0
 	"attitude toward"
-		"Drak (Hostile)" -.01
+		"Derelict (Killable)" -.01
 
 
 outfit "Graviton Channeler"
@@ -205,7 +205,7 @@ event "Reveal Temeh"
 mission "First Contact: Geddonia"
 	landing
 	invisible
-	destination "Luna"
+	destination "Corpse"
 	npc kill
 		system Temeh
 		government "Doomsday Device"
@@ -222,7 +222,7 @@ mission "First Contact: Geddonia"
 mission "Geddonian Worldcrusher"
 	landing
 	invisible
-	destination "Luna"
+	destination "Corpse"
 	to offer
 		has "First Contact: Geddonia: done"
 	npc kill
