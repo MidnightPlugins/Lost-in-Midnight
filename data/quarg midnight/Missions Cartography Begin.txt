@@ -391,7 +391,7 @@ event "Diyu reveal"
 
 mission "Cartography: Quarg Hitchhiker 3"
 	name "Underworld Hitchhiker"
-	description "Bring Quash to an underground pirate hideout on <planet> to complete a trade. Then return it to <origin>."
+	description "Bring Quash to an underground pirate hideout on <planet> to complete a trade. Then return to <origin>."
 	source "Wang Xiang Tai"
 	destination "Naihe Qiao"
 	passengers 1
@@ -442,7 +442,7 @@ event "Diyu hyperlinks"
 mission "Cartography: Quarg Hitchhiker 4"
 	landing
 	name "Underworld Hitchhiker"
-	description "Bring Quash to an underground pirate hideout on <planet> to complete a trade. Then return it to <origin>."
+	description "Bring Quash to an underground pirate hideout on <origin> to complete a trade. Then return to <planet>."
 	source "Naihe Qiao"
 	destination "Wang Xiang Tai"
 	passengers 1
