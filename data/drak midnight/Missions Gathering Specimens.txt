@@ -1442,7 +1442,7 @@ mission "Gathering Specimens: Remnant Conclusion"
 			choice
 				`	"Sure."`
 				`	"Of course I will."`
-			`	You	prepare for the journey to <destination>.`
+			`	You prepare for the journey to <destination>.`
 				accept
 	npc accompany save
 		government Remnant
@@ -1458,7 +1458,7 @@ mission "Gathering Specimens: Remnant Conclusion"
 			`	Taely lands the Raptor. Before departing on a ship bound for Viminal, she signs, "I think you'll enjoy piloting the Raptor. The engines are very responsive."`
 			scene "scene/scene-raptorweapons"
 			`	Prefect Chilia arrives with a team ready to install the weapons systems. As you watch them unload the crates, you wonder how the different specimens contributed to each weapon's design.`
-			`	It doesn't take long for the team to finish. "The Raptor is ready for testing. May the Ebers burn bright for you, captain!" he sings.`
+			`	It doesn't take long for the team to finish. "The Raptor is ready for testing. May the Embers burn bright for you, captain!" he sings.`
 			
 ship "Raptor Prototype" "Raptor Prototype (unarmed)"
 	outfits
