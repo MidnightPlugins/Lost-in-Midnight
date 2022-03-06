@@ -19,7 +19,7 @@ mission "Storm Seeker Raider 1"
 			scene "thumbnail/raider"
 			`You are surprised to find one of these parked here. An entry hatch was left open, inviting you into the dark interior of the ship.`
 			choice
-				`	Enter.`
+				`	(Enter.)`
 			scene "scene/scene-sivael6cropred"
 			`	As you explore the ship, you realize that the crew was human. You are able to figure this out, because their dead bodies are strewn about. From their attire and equipment, they were probably pirates. They died violently. A mutiny, perhaps? After some more exploration, you note that the jump drive is missing. Maybe it was stolen by another crew. The mystery will have to be left unsolved.`
 			`	This ship isn't going anywhere in its current condition, but if you return with an extra jump drive, it can be salvaged.`
