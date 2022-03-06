@@ -294,7 +294,7 @@ mission "Angry Squirrels: Countermeasures 1"
 	on offer
 		require "Intrusion Countermeasures"
 		conversation
-			`One of the Unfettered approaches you. "I have heard that you can get access to exotic weapons. There is a rumor that Quarg ships have powerful internal weapons systems. Would you be able to sell me one? I can offer you <payment>."`	
+			`One of the Unfettered approaches you. "I have heard that you can get access to exotic weapons. There is a rumor that Quarg ships have powerful internal weapons systems. Would you be able to sell me one? I can offer you one million credits."`
 			scene "outfit/quarg countermeasures"
 			choice
 				`	"I don't have any to sell you."`

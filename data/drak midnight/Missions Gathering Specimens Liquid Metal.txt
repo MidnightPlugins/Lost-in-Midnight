@@ -141,7 +141,7 @@ mission "Gathering Specimens: Liquid Metal"
 			`	You decide to keep the specimen instead of turning it in. Remember to keep it installed so it doesn't get mixed in with the regular cargo.`
 				decline
 			label reward
-			`	The Syndicate representative is very appreciative for the return of their stolen propery and grants you <payment> as reward. They aren't asking any questions. As for you...`
+			`	The Syndicate representative is very appreciative for the return of their stolen propery and grants you one million credits as reward. They aren't asking any questions. As for you...`
 			label questions
 			choice
 				`	"Did the Syndicate really make this?"`
