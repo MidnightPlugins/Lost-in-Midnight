@@ -41,5 +41,6 @@ mission "Harvesting Quantumium Research"
 	on defer
 		set "Randomize Harvesting Quantumium Research"
 	on complete
+		outfit "Quantumium" -10
 		payment 10000000
 		dialog `The Remnant accept your delivery of Quantumium and reward you with <payment>.`

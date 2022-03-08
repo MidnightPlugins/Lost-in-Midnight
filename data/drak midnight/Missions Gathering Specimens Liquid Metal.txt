@@ -158,6 +158,7 @@ mission "Gathering Specimens: Liquid Metal"
 			`	The Syndicate representative thanks you again for returning their property. Security escorts you safely outside...`
 				accept
 	on accept
+		outfit "Liquid Metal Specimen" -1
 		payment 1000000
 		fail
 		
