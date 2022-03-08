@@ -558,6 +558,7 @@ event "Stolen Snake Blade"
 		
 mission "QKBlade: Bearer of The Blade 3A"
 	invisible
+	minor
 	repeat
 	source
 		government "Hai" "Hai (Unfettered)"
@@ -613,6 +614,7 @@ mission "QKBlade: Bearer of The Blade 3A"
 
 mission "QKBlade: Bearer of The Blade 3B"
 	invisible
+	minor
 	repeat
 	source
 		government "Hai" "Hai (Unfettered)"
@@ -668,6 +670,7 @@ mission "QKBlade: Bearer of The Blade 3B"
 
 mission "QKBlade: Bearer of The Blade 3C"
 	invisible
+	minor
 	repeat
 	source
 		government "Hai" "Hai (Unfettered)"
@@ -747,6 +750,7 @@ mission "QKBlade: Bearer of The Blade 4"
 mission "QKBlade: Bearer of The Blade 5"
 	name "Return the Snake"
 	description "Return the stolen Quantum Key Blade with the snake carved hand guard to the council of elders on Hai-home."
+	minor
 	source
 		government "Pirate"
 	destination "Hai-home"
