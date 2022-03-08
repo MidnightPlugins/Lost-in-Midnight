@@ -27,7 +27,7 @@ mission "Harvesting Cut Quantumium 1"
 		require "Quantumium" 1
 		conversation
 			scene "outfit/quantumium"
-			`You find a Hai who is able to process your Quantumium. Do you want to?`
+			`You find a Hai who is able to process your Quantumium. Do you want to have a Quantumium processed into Quantum Keystones?`
 			choice
 				`	(Yes.)`
 				`	(Not now.)`
@@ -56,7 +56,7 @@ mission "Harvesting Cut Quantumium 2"
 		require "Quantumium" 1
 		conversation
 			scene "outfit/quantumium"
-			`You find a Hai who is able to process your Quantumium. Do you want to?`
+			`You find a Hai who is able to process your Quantumium. Do you want to have a Quantumium processed into Quantum Keystones?`
 			choice
 				`	(Yes.)`
 				`	(Not now.)`
@@ -85,7 +85,7 @@ mission "Harvesting Cut Quantumium 3"
 		require "Quantumium" 1
 		conversation
 			scene "outfit/quantumium"
-			`You find a Hai who is able to process your Quantumium. Do you want to?`
+			`You find a Hai who is able to process your Quantumium. Do you want to have a Quantumium processed into Quantum Keystones?`
 			choice
 				`	(Yes.)`
 				`	(Not now.)`
@@ -114,7 +114,7 @@ mission "Harvesting Cut Quantumium 4"
 		require "Quantumium" 1
 		conversation
 			scene "outfit/quantumium"
-			`You find a Hai who is able to process your Quantumium. Do you want to?`
+			`You find a Hai who is able to process your Quantumium. Do you want to have a Quantumium processed into Quantum Keystones?`
 			choice
 				`	(Yes.)`
 				`	(Not now.)`
