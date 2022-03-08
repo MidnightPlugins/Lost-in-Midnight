@@ -1446,7 +1446,7 @@ mission "Gathering Specimens: Remnant Conclusion"
 				accept
 	npc accompany save
 		government Remnant
-		personality target marked escort
+		personality escort
 		ship "Raptor Prototype (unarmed)" "Raptor"
 
 	on visit
