@@ -195,7 +195,7 @@ outfit "Liquid Metal Hull"
 	"integrated systems" 1
 	"reinstall" -1
 	"unplunderable" 1
-	description `Made with Korath nanomachine technology. It's ability to regenerate the hull is unparalleld.`
+	description `Made with Korath nanomachine technology. Its ability to regenerate the hull is unparalleled.`
 
 
 

@@ -711,7 +711,7 @@ event "Genesis Colony"
 				period 47.3937
 				offset 196.692
 	planet "The Garden"
-		spaceport `The Childen of The Garden have constructed a simple spaceport, with runways, landing/launching pads, and hangars. Though they haven't devloped a Hyperdrive, they still use hyperspace fuel in their engines and are able to refuel your ship.`
+		spaceport `The Childen of The Garden have constructed a simple spaceport, with runways, landing/launching pads, and hangars. Though they haven't developed a Hyperdrive, they still use hyperspace fuel in their engines and are able to refuel your ship.`
 		add description `They have set up an outfitter. Many of the outfits are similar to equivalents you can find in human space.`
 		outfitter "Genesis"
 	planet "The Gate"
@@ -779,7 +779,7 @@ event "Genesis Cryoships"
 				offset 196.692
 	planet "The Garden"
 		landscape land/nasa4
-		spaceport `The Childen of The Garden have constructed a new spaceport, with larger landing/launching pads and facilities to handle their new Cryoships. Though they haven't devloped a Hyperdrive, they still use hyperspace fuel in their engines and are able to refuel your ship.`
+		spaceport `The Childen of The Garden have constructed a new spaceport, with larger landing/launching pads and facilities to handle their new Cryoships. Though they haven't developed a Hyperdrive, they still use hyperspace fuel in their engines and are able to refuel your ship.`
 	planet "The Gate"
 		landscape land/nasa2
 		description `The Childen of The Garden have developed this spacecolony into a thriving city.`
