@@ -430,8 +430,6 @@ mission "Cartography: Quarg Hitchhiker 3"
 					accept
 	on accept
 		event "Diyu hyperlinks"
-	on complete
-		dialog `Quash directs you to a certain canyon. In a deep secluded area surrounded by steep canyon walls, you find a tunnel large enough to squeeze your ship through...`
 		
 event "Diyu hyperlinks"
 	link Mora Diyu
