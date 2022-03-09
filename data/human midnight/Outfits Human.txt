@@ -21,8 +21,8 @@ outfit "Alien Torture Device"
 	category "Special"
 	cost 75000
 	thumbnail "outfit/alien torture device"
-	"capture attack" 3.9
-	"capture defense" 0.1
+	"capture attack" 7.8
+	"capture defense" 0.2
 	"illegal" 100000
 	"unplunderable" 1
 	description "A machine assembled from scavenged parts that appear to be alien in origin. It creates a burst of energy that causes extreme pain. While not harmful enough to kill its victims, this device can be used to torture captured defenders until they reveal the codes for bypassing a ship's internal security locks."
@@ -216,8 +216,8 @@ outfit "Microwave Cannon"
 	category "Special"
 	cost 106000
 	thumbnail "outfit/microwave cannon"
-	"capture attack" 2.4
-	"capture defense" 1.6
+	"capture attack" 4.8
+	"capture defense" 3.2
 	"illegal" 1000
 	"unplunderable" 1
 	description "Papa Grudge's custom weapon. It emits a cone of blistering heat, making it difficult for the enemy to maintain a defensive position. While not immediately lethal, prolonged exposure can cause blindness, disfigurement, and ultimately leads to a slow and agonizing death. This sort of weapons modification violates several consumer safety laws and regulations, so don't expect to find one of these for sale at any legitimate outfitter."
