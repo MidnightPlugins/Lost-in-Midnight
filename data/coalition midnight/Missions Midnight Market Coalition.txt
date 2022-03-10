@@ -75,10 +75,21 @@ fleet "Independent Arach Smuggler"
 	personality
 		target launching escort
 	names "arach"
-	cargo 6
+	cargo 5
 	outfitters "Pirate Weapons"
 	variant
 		"Arach Hulk (smuggler)"
+
+fleet "Independent Kimek Smuggler"
+	government "Independent"
+	personality
+		target launching escort
+	names "kimek"
+	cargo 5
+	outfitters "Pirate Weapons"
+	variant
+		"Kimek Spire (smuggler)"
+
 
 
 mission "Midnight Market: Coalition Smuggling 2"
