@@ -518,7 +518,7 @@ mission "Pot-o'-honey"
 				"Arrow (Hai)"
 
 	npc kill
-		government "Pirate (Disguised)"
+		government Bounty (Disguised)
 		personality target marked launching harvests plunders
 			confusion 20
 		ship "Bulk Freighter (hai drones)" "Pot-o'-honey"
