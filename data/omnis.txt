@@ -1,0 +1,388 @@
+#	Systems followed by planets held within
+
+system "Lost in Midnight"
+	pos -70 -10070
+	government "cheat"
+	object "Lost in Midnight"
+		sprite planet/ringworld
+		distance 812
+		offset 20
+	object "Lost in Midnight"
+		sprite planet/ringworld
+		distance 812
+		offset 40
+	object "Lost in Midnight"
+		sprite planet/ringworld
+		distance 812
+		offset 60
+	object "Lost in Midnight"
+		sprite planet/ringworld
+		distance 812
+		offset 80
+	object "Lost in Midnight"
+		sprite planet/ringworld
+		distance 812
+		offset 100
+	object "Lost in Midnight"
+		sprite planet/ringworld
+		distance 812
+		offset 120
+	object "Lost in Midnight"
+		sprite planet/ringworld
+		distance 812
+		offset 140
+	object "Lost in Midnight"
+		sprite planet/ringworld
+		distance 812
+		offset 160
+	object "Lost in Midnight"
+		sprite planet/ringworld
+		distance 812
+		offset 180
+	object "Lost in Midnight"
+		sprite planet/ringworld
+		distance 812
+		offset 200
+	object "Lost in Midnight"
+		sprite planet/ringworld
+		distance 812
+		offset 220
+	object "Lost in Midnight"
+		sprite planet/ringworld
+		distance 812
+		offset 240
+	object "Lost in Midnight"
+		sprite planet/ringworld
+		distance 812
+		offset 260
+	object "Lost in Midnight"
+		sprite planet/ringworld
+		distance 812
+		offset 280
+	object "Lost in Midnight"
+		sprite planet/ringworld
+		distance 812
+		offset 300
+	object "Lost in Midnight"
+		sprite planet/ringworld
+		distance 812
+		offset 320
+	object "Lost in Midnight"
+		sprite planet/ringworld
+		distance 812
+		offset 340
+	object "Lost in Midnight"
+		sprite planet/ringworld
+		distance 812
+		offset 360
+
+planet "Lost in Midnight"
+	description ``
+	landscape landscape/station6
+	spaceport ``
+	outfitter "Lost in Midnight"
+	shipyard "Lost in Midnight"
+	bribe 0
+
+planet "Plugins"
+	add outfitter "Lost in Midnight"
+	add shipyard "Lost in Midnight"
+
+#	Reveal missions
+
+mission "reveal omnis-midnight"
+	invisible
+	landing
+	repeat
+	source
+		government "cheat"
+	on accept
+		event "reveal omnis-midnight"
+
+event "reveal omnis-midnight"
+	visit "Lost in Midnight"
+
+#	Sales
+
+outfitter "Lost in Midnight"
+	"Alien Torture Device"
+	"Almachian Brain Maggots"
+	"Anti-Ionic Plating"
+	"Antimatter Core (Damaged)"
+	"Asteroid Catapult"
+	"Asteroid Storage"
+	"Balthazar Model"
+	"Catapult Schematics"
+	"Celestial Compass"
+	"Cloaking Device (Damaged)"
+	"Cryostasis Pod"
+	"Dual Pulse Pistols"
+	"Dysprosium"
+	"Firefly Specimen"
+	"Flare Belcher"
+	"Flare Belcher?"
+	"Fossil"
+	"Gazer Specimen"
+	"Graviton Channeler"
+	"Gray Eye Specimen"
+	"H6 Refrigeration Module"
+	"Imaginary Number Fusion Matrix"
+	"Ionic Mouthparts?"
+	"Leech Specimen"
+	"Leviathan Comic #1"
+	"Leviathan Comic"
+	"Lightning Tendril"
+	"Lightning Tendril?"
+	"Liquid Metal Hull"
+	"Liquid Metal Specimen"
+	"Luminazoa Specimen"
+	"Mandibles?""]
+	"Melchior Post Card"
+	"Metal Tentacle?"
+	"Metallic Asteroid"
+	"Microwave Cannon"
+	"Midnight's Lost Orphan"
+	"Model Cannon"
+	"Model Turret"
+	"Nanotech Battery (Damaged)"
+	"Nautilus Specimen"
+	"Obsolete Star Map"
+	"Plasma Specimen"
+	"Quantum Dragon Blade"
+	"Quantum Key Blade"
+	"Quantum Paradox Diffusion"
+	"Quantum Paradox Inversion"
+	"Quantum Paradox Propulsion"
+	"Quantum Phoenix Blade"
+	"Quantum Shield Generator (Damaged)"
+	"Quantum Snake Blade"
+	"Quantum Tiger Blade"
+	"Quantum Turtle Blade"
+	"Quantumium"
+	"Quill Launcher"
+	"Quill Launcher?"
+	"Reasoning Node (Damaged)"
+	"Rock Scavenger Meat"
+	"Sniper Rifle"
+	"Space Junk"
+	"Systems Core (Damaged)"
+	"T.H.O.R. (Damaged)"
+	"T.H.O.R."
+	"Tail?"
+	"Tentacles?"
+
+outfitter "coalition plugins"
+	"Leviathan Comic #1"
+	"Model Cannon"
+	"Model Turret"
+
+outfitter "hai plugins"
+	"Dual Pulse Pistols"
+	"Quantum Dragon Blade"
+	"Quantum Key Blade"
+	"Quantum Phoenix Blade"
+	"Quantum Snake Blade"
+	"Quantum Tiger Blade"
+	"Quantum Turtle Blade"
+
+outfitter "human plugins"
+	"Almachian Brain Maggots"
+	"Asteroid Catapult"
+	"Asteroid Storage"
+	"Balthazar Model"
+	"Catapult Schematics"
+	"H6 Refrigeration Module"
+	"Liquid Metal Hull"
+	"Melchior Post Card"
+	"Metallic Asteroid"
+	"Microwave Cannon"
+	"Sniper Rifle"
+	"Space Junk"
+	"T.H.O.R. (Damaged)"
+	"T.H.O.R."
+
+outfitter "korath plugins"
+	"Reasoning Node (Damaged)"
+	"Systems Core (Damaged)"
+
+outfitter "pug plugins"
+	"Cloaking Device (Damaged)"
+
+outfitter "quarg plugins"
+	"Antimatter Core (Damaged)"
+	"Celestial Compass"
+	"Nanotech Battery (Damaged)"
+	"Obsolete Star Map"
+	"Quantum Shield Generator (Damaged)"
+
+outfitter "remnant plugins"
+	"Flare Belcher"
+	"Lightning Tendril"
+	"Quill Launcher"
+
+outfitter "unknown plugins"
+	"Alien Torture Device"
+	"Cryostasis Pod"
+	"Dysprosium"
+	"Firefly Specimen"
+	"Flare Belcher?"
+	"Fossil"
+	"Gazer Specimen"
+	"Graviton Channeler"
+	"Gray Eye Specimen"
+	"Imaginary Number Fusion Matrix"
+	"Ionic Mouthparts?"
+	"Leech Specimen"
+	"Lightning Tendril?"
+	"Liquid Metal Specimen"
+	"Luminazoa Specimen"
+	"Mandibles?""]
+	"Metal Tentacle?"
+	"Midnight's Lost Orphan"
+	"Nautilus Specimen"
+	"Plasma Specimen"
+	"Quantum Paradox Diffusion"
+	"Quantum Paradox Inversion"
+	"Quantum Paradox Propulsion"
+	"Quantumium"
+	"Quill Launcher?"
+	"Rock Scavenger Meat"
+	"Tail?"
+	"Tentacles?"
+
+outfitter "wanderer plugins"
+	"Anti-Ionic Plating"
+
+shipyard "Lost in Midnight"
+	"Amalgam"
+	"Archon (Lich)"
+	"Astero Nautilus B"
+	"Astero Nautilus"
+	"Bulk Freighter?"
+	"Carabao"
+	"District"
+	"Egg Pouch"
+	"Firefly Young"
+	"Freighter?"
+	"Freighter??"
+	"Freighter???"
+	"Genesis Cryoship"
+	"Genesis Freighter"
+	"Genesis Probe"
+	"Genesis Spacecraft"
+	"Genesis Transport"
+	"Gray Eye"
+	"Hauler VI"
+	"Ionic Leech"
+	"Liberator"
+	"Liquid Metal"
+	"Luminazoa"
+	"Mastodon"
+	"Megalocoleus"
+	"Metropolis"
+	"Model 512 (dire omen)"
+	"Modified Nest"
+	"Modified Roost"
+	"Municipality"
+	"Nova Firefly"
+	"Pirate Drone"
+	"Plasma Parasite (Large)"
+	"Plasma Parasite"
+	"Prefecture"
+	"Protector?"
+	"Raptor Prototype"
+	"Rock Scavenger"
+	"Saryd Trailblazer"
+	"Shallow Pond"
+	"Shield Fortress"
+	"Splinter?"
+	"Spring Leaf"
+	"Star Gazer"
+	"Storm Seeker Reborn"
+	"Storm Seeker"
+	"Sword Scorpion"
+	"Thermopylae Station"
+	"Thunder Maker"
+	"Tornado"
+	"Tsunami"
+	"Vanguard?"
+	"Veliante'exis"
+	"Vindicator"
+	"War Hauler"
+	"Winter Leaf"
+	"Worldcrusher"
+
+shipyard "coalition plugins"
+	"Saryd Trailblazer"
+
+shipyard "drak plugins"
+	"Archon (Lich)"
+
+shipyard "hai plugins"
+	"Megalocoleus"
+	"Sword Scorpion"
+
+shipyard "human plugins"
+	"Amalgam"
+	"Carabao"
+	"District"
+	"Hauler VI"
+	"Liberator"
+	"Mastodon"
+	"Metropolis"
+	"Modified Nest"
+	"Modified Roost"
+	"Municipality"
+	"Pirate Drone"
+	"Prefecture"
+	"Shield Fortress"
+	"Thermopylae Station"
+	"Vindicator"
+	"War Hauler"
+
+shipyard "ka'het plugins"
+	"Veliante'exis"
+
+shipyard "korath plugins"
+	"Model 512 (dire omen)"
+
+shipyard "remnant plugins"
+	"Raptor Prototype"
+
+shipyard "unknown plugins"
+	"Astero Nautilus B"
+	"Astero Nautilus"
+	"Bulk Freighter?"
+	"Egg Pouch"
+	"Firefly Young"
+	"Freighter?"
+	"Freighter??"
+	"Freighter???"
+	"Genesis Cryoship"
+	"Genesis Freighter"
+	"Genesis Probe"
+	"Genesis Spacecraft"
+	"Genesis Transport"
+	"Gray Eye"
+	"Ionic Leech"
+	"Liquid Metal"
+	"Luminazoa"
+	"Nova Firefly"
+	"Plasma Parasite (Large)"
+	"Plasma Parasite"
+	"Protector?"
+	"Rock Scavenger"
+	"Splinter?"
+	"Star Gazer"
+	"Vanguard?"
+	"Worldcrusher"
+
+shipyard "wanderer plugins"
+	"Shallow Pond"
+	"Spring Leaf"
+	"Storm Seeker Reborn"
+	"Storm Seeker"
+	"Thunder Maker"
+	"Tornado"
+	"Tsunami"
+	"Winter Leaf"
