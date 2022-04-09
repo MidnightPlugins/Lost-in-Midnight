@@ -135,9 +135,9 @@ mission "Cartography: Quarg Hitchhiker 2"
 			`	Soon after you enter, your eyes adjust to the low light. The four corners of the room are occupied by alien devices that provide the only internal light sources. On the floor is a pouch, a briefcase, and a series of bloodstains.`
 			`	"Sorry about the mess." Quash's voice emanates from a speaker in the ceiling. "The business associate who helped me acquire this vessel chose to alter the terms of our agreement. He chose poorly. I'm certain you are a trustworthy businessman who would not engage in such duplicitous behavior. Your payment of <payment> is in the pouch on the floor. Go ahead, you've earned it."`
 			choice
-				`	(Take the pouch)`
+				`	(Take the pouch.)`
 					goto departure
-				`	(Take the briefcase)`
+				`	(Take the briefcase.)`
 				`	(Take both.)`
 				
 			`	As soon as you touch the briefcase, the entry hatch slams shut. "Tsk. tsk. Captain <first> <last>, I had hoped we could continue to do business in the future." The four devices in the corners of the room are glowing with an eerie light. The heat in the room is also rising. "However, I can't have business associates who are unable to follow simple instructions." Your hair and skin are burning as you bleed out on the floor. Quash's words are drowned out by your screams. After a few moments, the room is dark and silent once again.`
@@ -241,7 +241,7 @@ mission "Cartography: The Map (Coalition)"
 				`	(Yes.)`
 				`	(Not now.)`
 					defer
-			`	After asking around, you're directed to the astronomy department of a local educational center. "Strange, it is," comments a professor,"A Saryd map this is. Familiar with these stars we are not." They ask you for more information about how and where you obtained the map. After listening to your story, they come to a conclusion. "An exploratory mission, it probably was. Before returning, unfortunate crash they likely had." Without a point of reference to guide them, they are unable to extrapolate the current position of these star systems.`
+			`	After asking around, you're directed to the astronomy department of a local educational center. "Strange, it is," comments a professor. "A Saryd map this is. Familiar with these stars we are not." They ask you for more information about how and where you obtained the map. After listening to your story, they come to a conclusion. "An exploratory mission, it probably was. Before returning, unfortunate crash they likely had." Without a point of reference to guide them, they are unable to extrapolate the current position of these star systems.`
 				decline
 
 
@@ -442,7 +442,7 @@ event "Diyu hyperlinks"
 mission "Cartography: Quarg Hitchhiker 4"
 	landing
 	name "Underworld Hitchhiker"
-	description "Bring Quash to an underground pirate hideout on <planet> to complete a trade. Then return it to <origin>."
+	description "Bring Quash to an underground pirate hideout on <origin> to complete a trade. Then return it to <planet>."
 	source "Naihe Qiao"
 	destination "Wang Xiang Tai"
 	passengers 1
@@ -451,7 +451,7 @@ mission "Cartography: Quarg Hitchhiker 4"
 	on offer
 		conversation
 			`Quash directs you to a certain canyon. In a deep secluded area surrounded by steep canyon walls, you find a tunnel large enough to squeeze your ship through...`
-			`	You can't help but feel a tinge of claustrophobia as you navigate your ship throught the narrow tunnels. The occasional stalactite pierces your shields and scrapes your hull. The damage is inconsequential, but you still cringe at the thought of the damage to the paint. After an hour the tunnel opens up into a large cavern that has several other tunnels leading away from it. You've finally reached your destination.`
+			`	You can't help but feel a tinge of claustrophobia as you navigate your ship through the narrow tunnels. The occasional stalactite pierces your shields and scrapes your hull. The damage is inconsequential, but you still cringe at the thought of the damage to the paint. After an hour the tunnel opens up into a large cavern that has several other tunnels leading away from it. You've finally reached your destination.`
 			scene "thumbnail/hai shield beetle"
 			`	"Land here," Quash instructs. Soon after, a Hai shield beetle descends from a tunnel farther up. "Relax captain. These people have brought something for me. Please open the hatch so that I may meet them.`
 			choice
@@ -516,7 +516,7 @@ mission "Cartography: Quarg Hitchhiker 5"
 			choice
 				`	"Is this the system you were looking for?"`
 
-			`	"No. But I know where to find that data. Would you be interested in escorting me there.?"`
+			`	"No. But I know where to find that data. Would you be interested in escorting me there?"`
 			choice
 				`	"Sure. I'd also like to learn the location of the system you are searching for."`
 				`	"Sorry, I have other things to do."`
@@ -780,7 +780,7 @@ mission "Cartography: Midnight's Lost Orphan"
 				`	(Track the moving object.)`
 			
 			scene "outfit/midnight lost orphan"
-			`	From the way it acts, you're certain this is an alien life form. It looks translucent, as if it consists of a hazy mist. The creature seems to be aware of your presence and you suspect it is studying you. Slowly, it starts to descend towards you."`
+			`	From the way it acts, you're certain this is an alien life form. It looks translucent, as if it consists of a hazy mist. The creature seems to be aware of your presence and you suspect it is studying you. Slowly, it starts to descend towards you.`
 			`	"Back away from the creature, Captain <first> <last>." Quash enters the chamber and gives you a stern warning. The mysterious creature hesitates, seeming to observe the actions of its two guests.`
 			choice
 				`	(Do as Quash says. Back away from the creature.)`
@@ -813,7 +813,7 @@ mission "Cartography: Midnight's Lost Orphan"
 			choice
 				`	(Grab the compass and run.)`
 					goto run
-				`	(Wait to see what happens to Quash)`
+				`	(Wait to see what happens to Quash.)`
 
 			scene "scene/scene-station5blood"
 			`	After a while, Quash stops screaming. It calmly stands up and stretches its limbs. The bullet holes are gone, the wounds completely healed. The Quarg then begins to laugh. "Finally reunited! How many centuries have I waited!?!" It looks over at you. "Still here?" It makes a gesture and you are telekinietically lifted off the ground. You feel a strange pressure crushing your body, your bones, your internal organs... "Oops. I suppose it has been a while since I've had access to these powers..."`
