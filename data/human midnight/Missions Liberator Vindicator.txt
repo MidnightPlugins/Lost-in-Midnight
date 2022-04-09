@@ -27,7 +27,7 @@ mission "SB-Labs Vindicator 1"
 			has "Oathbreaker Thermopylae: done"
 	on offer
 		dialog
-			`You receive a message from Barmy Edwards on Rust: "Hello Captain <first> <last>. I just finished outfitting a new prototype ship for Southbound Shipyards. Would you be interested in helping to test it out?`
+			`You receive a message from Barmy Edwards on Rust: "Hello Captain <first> <last>. I just finished outfitting a new prototype ship for Southbound Shipyards. Would you be interested in helping to test it out?"`
 	on complete
 		dialog
 			`Head for the shipyard when you are ready to meet Barmy Edwards and test the new ship he mentioned.`
@@ -145,7 +145,7 @@ mission "SB-Labs Vindicator 4"
 	on offer
 		conversation
 			`As you disembark, you see Barmy talking to a man wearing a Southbound Shipyards engineering uniform.`
-			`	Barmy waves you over. "Captain <last>, this is Ricardo Astillero from Southbound Shipyards R&D. He was just telling me the bad news.`
+			`	Barmy waves you over. "Captain <last>, this is Ricardo Astillero from Southbound Shipyards R&D. He was just telling me the bad news."`
 			`	"Wait, THE Captain <last>? The war hero?" Ricardo expresses his surprise.`
 			choice
 				`	"The one and only. So what's this bad news?"`
@@ -160,7 +160,7 @@ mission "SB-Labs Vindicator 4"
 			`	Ricardo has a grim look on his face. "Take the ship and leave. I'll tell them I tricked you into taking it for more testing. Please, we worked so hard on this..."`
 			`	Barmy turns to you. "Even so, there might still be some repurcussions to your reputation. It's your choice, captain."`
 			choice
-				`	"Alright, it's a big risk, but I'll take it.`
+				`	"Alright, it's a big risk, but I'll take it."`
 					goto liberator
 				`	"Sorry, no. I'm not willing to take this much risk for someone I just met."`
 					goto risk
@@ -182,7 +182,7 @@ mission "SB-Labs Vindicator 4"
 	on enter
 		conversation
 			scene "scene/scene-navyfleet"
-			`A squad of Militia ships are launching from the planet. But they're not after you. Instead, they're targetting a large pirate fleet that just entered the system! It looks like the pirate are starting a siege. Time for the Vindicator to prove its worth!`
+			`A squad of Militia ships are launching from the planet. But they're not after you. Instead, they're targetting a large pirate fleet that just entered the system! It looks like the pirates are starting a siege. Time for the Vindicator to prove its worth!`
 				accept
 
 	on enter
@@ -258,7 +258,7 @@ mission "Oathbreaker Liberator 1"
 		not "SB-Labs Vindicator 1: offered"
 	on offer
 		dialog
-			`You receive a message from Barmy Edwards on Rust: "Hello Captain <first> <last>. I just finished outfitting a new prototype ship for Southbound Shipyards. Would you be interested in helping to test it out?`
+			`You receive a message from Barmy Edwards on Rust: "Hello Captain <first> <last>. I just finished outfitting a new prototype ship for Southbound Shipyards. Would you be interested in helping to test it out?"`
 	on complete
 		dialog
 			`Head for the shipyard when you are ready to meet Barmy Edwards and test the new ship he mentioned.`
@@ -391,7 +391,7 @@ mission "Oathbreaker Liberator 4"
 			`	Ricardo has a grim look on his face. "Take the ship and leave. I'll tell them I tricked you into taking it for more testing. Please, we worked so hard on this..."`
 			`	Barmy turns to you. "Even so, there might still be some repurcussions to your reputation. It's your choice, captain."`
 			choice
-				`	"Alright, it's a big risk, but I'll take it.`
+				`	"Alright, it's a big risk, but I'll take it."`
 					goto liberator
 				`	"Sorry, no. I'm not willing to take this much risk for someone I just met."`
 					goto risk

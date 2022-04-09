@@ -751,7 +751,7 @@ ship "War Hauler"
 	explode "medium explosion" 20
 	explode "large explosion" 5
 	"final explode" "final explosion medium"
-	description `A leftover from the Alpha Wars, War Hauler production stopped soon after the wars ended. Although the ship predates the Republic and is not manufactured by any modern shipyards, Parliament still passed a law prohibiting retail sales of this ship to ordinary civilians. This has made the few remaining War Haulers on the secondary market a highly sought after item amongst collectors of antique ships."`
+	description `A leftover from the Alpha Wars, War Hauler production stopped soon after the wars ended. Although the ship predates the Republic and is not manufactured by any modern shipyards, Parliament still passed a law prohibiting retail sales of this ship to ordinary civilians. This has made the few remaining War Haulers on the secondary market a highly sought after item amongst collectors of antique ships.`
 
 
 

@@ -10,6 +10,9 @@
 
 
 
+#T.H.O.R. is acquired in a Midnight Market mission.
+
+
 mission "T.H.O.R. Repairs"
 	landing
 	name "T.H.O.R. Repairs"

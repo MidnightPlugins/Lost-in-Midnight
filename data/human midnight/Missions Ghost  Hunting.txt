@@ -377,34 +377,34 @@ mission "Ghost Hunting: Poltergeist King 1"
 			scene "scene/scene-sivael3cropflipdark"
 			choice
 				`	(Call out for a response.)`
-				`	(Leave)`
+				`	(Leave.)`
 					flee
 			`	There is no response.`
 			scene "scene/scene-sivael3cropflipdark"
 			choice
 				`	(Explore the derelict.)`
-				`	(Leave)`
+				`	(Leave.)`
 					flee
 			`	It's quiet. Suddenly, the air is filled with static as some speakers crackle on.`
 			`	"Five. Hee hee hee!"`
 			scene "scene/scene-sivael3cropflipdark"
 			choice
 				`	(Continue to explore.)`
-				`	(Leave)`
+				`	(Leave.)`
 					flee
 			`	You look through several more corridors and empty rooms.`
 			`	"Four. Ha ha ha!"`
 			scene "scene/scene-sivael3cropflipdark"
 			choice
 				`	(Continue to explore.)`
-				`	(Leave)`
+				`	(Leave.)`
 					flee
 			`	You find a storage room with some cargo containers.`
 			`	"Three. Hee hee hee!"`
 			scene "scene/scene-sivael3cropflipdark"
 			choice
 				`	(Search the containers.)`
-				`	(Leave)`
+				`	(Leave.)`
 					flee
 			`	You find the missing kids gagged and tied up inside a cargo container. "I'm here to rescue you!"`
 			`	"Two. Ho ho ho!"`
@@ -561,41 +561,41 @@ conversation "Funhouse in Flames"
 	scene "scene/scene-sivael3cropflipdark"
 	choice
 		`	(Call out for a response.)`
-		`	(Leave)`
+		`	(Leave.)`
 			flee
 	`	There is no response.`
 	scene "scene/scene-sivael3cropflipdark"
 	choice
 		`	(Explore the derelict.)`
-		`	(Leave)`
+		`	(Leave.)`
 			flee
 	`	It's quiet. Suddenly, the air is filled with static as some speakers crackle on.`
 	`	"Five. Hee hee hee!"`
 	scene "scene/scene-sivael3cropflipdark"
 	choice
 		`	(Continue to explore.)`
-		`	(Leave)`
+		`	(Leave.)`
 			flee
 	`	You look through several more corridors and empty rooms.`
 	`	"Four. Ha ha ha!"`
 	scene "scene/scene-sivael3cropflipdark"
 	choice
 		`	(Continue to explore.)`
-		`	(Leave)`
+		`	(Leave.)`
 			flee
 	`	You find a storage room with some cargo containers.`
 	`	"Three. Hee hee hee!"`
 	scene "scene/scene-sivael3cropflipdark"
 	choice
 		`	(Search the containers.)`
-		`	(Leave)`
+		`	(Leave.)`
 			flee
 	`	The containers are empty.`
 	`	"Two. Ho ho ho!"`
 	scene "scene/scene-sivael3cropflipdark"
 	choice
 		`	(Keep searching.)`
-		`	(Leave)`
+		`	(Leave.)`
 			flee
 	`	You look through several more corridors and empty rooms.`
 	`	"One and done!"`
