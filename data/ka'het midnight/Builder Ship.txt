@@ -33,6 +33,9 @@ ship "Veliante'exis"
 		"heat generation" 46
 		"hull repair rate" 0.55
 		"shield heat" 11.3
+		"cloak" .0115
+		"cloaking energy" 23.6
+		"cloaking fuel" .16
 		weapon
 			"blast radius" 400
 			"shield damage" 1600
