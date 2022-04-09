@@ -162,7 +162,7 @@ mission "QKBlade: Quantum Key Blade 2"
 			choice
 				`	"How can I be of assistance?"`
 			scene "outfit/quantum key blade"
-			`	"The Unfettered warrior Gai Ro Nin has undertaken a quest to seek out the lost Quantum Key Blade, an ancient artifact from the era when our people waged war across the galaxy," another elder continues."`
+			`	"The Unfettered warrior Gai Ro Nin has undertaken a quest to seek out the lost Quantum Key Blade, an ancient artifact from the era when our people waged war across the galaxy," another elder continues.`
 			`	"That weapon has been lost for over a hundred millenia. Surely if it even still exists it would no longer work!" interjects a third elder.`
 			`	"The legendary artifacts are no mere cutting tools and were made with technology long since forgotten to our people. If there is any chance that the lost blade should fall into the hands of the Unfettered..." warns a fourth elder.`
 			`	"Putting aside the issue of the lost artifact," interrupts a fifth elder, "What of this new ship, the Kotetsu, that Gai has at his disposal? Is it a credible threat to us?"`
@@ -558,6 +558,7 @@ event "Stolen Snake Blade"
 		
 mission "QKBlade: Bearer of The Blade 3A"
 	invisible
+	minor
 	repeat
 	source
 		government "Hai" "Hai (Unfettered)"
@@ -613,6 +614,7 @@ mission "QKBlade: Bearer of The Blade 3A"
 
 mission "QKBlade: Bearer of The Blade 3B"
 	invisible
+	minor
 	repeat
 	source
 		government "Hai" "Hai (Unfettered)"
@@ -668,6 +670,7 @@ mission "QKBlade: Bearer of The Blade 3B"
 
 mission "QKBlade: Bearer of The Blade 3C"
 	invisible
+	minor
 	repeat
 	source
 		government "Hai" "Hai (Unfettered)"
@@ -764,11 +767,11 @@ mission "QKBlade: Bearer of The Blade 5"
 				has "captain of atrocity"
 
 			choice
-				`	Dodge.`
+				`	(Dodge.)`
 					goto activate
-				`	Parry.`
+				`	(Parry.)`
 					goto death
-				`	Strike.`
+				`	(Strike.)`
 					goto death
 
 			label death
@@ -779,11 +782,11 @@ mission "QKBlade: Bearer of The Blade 5"
 			`	You dodge your assailant and activate the Quantum Key Blade. You and Phantom both regard each other and now that you have a chance to get a better look, you see that she is an Alpha! What will you do?`
 			label qbattle
 			choice
-				`	Quantum strike.`
+				`	(Quantum strike.)`
 					goto qdeath
-				`	Quantum parry.`
+				`	(Quantum parry.)`
 					goto qparry
-				`	Quantum shift.`
+				`	(Quantum shift.)`
 					goto qshift
 
 			label qdeath
@@ -797,11 +800,11 @@ mission "QKBlade: Bearer of The Blade 5"
 			label qshift
 			`	You shift out of Quantum mode and Phantom's blade harmlessly passes through you. Your opponent almost loses her balance, but shifts out of Quantum mode to regain her footing. Both of you gasp for air as you consider your next move. What will you do?`
 			choice
-				`	Feint.`
+				`	(Feint.)`
 					goto fdeath
-				`	Strike.`
+				`	(Strike.)`
 					goto pstrike
-				`	Quantum shift.`
+				`	(Quantum shift.)`
 					goto reshift
 					
 			label fdeath
@@ -815,13 +818,13 @@ mission "QKBlade: Bearer of The Blade 5"
 			label pstrike
 			`	Your attack passes harmlessly through her as she shifts back into Quantum mode. What will you do?`
 			choice
-				`	Dodge.`
+				`	(Dodge.)`
 					goto dodge
-				`	Parry.`
+				`	(Parry.)`
 					goto death
-				`	Strike.`
+				`	(Strike.)`
 					goto death
-				`	Quantum shift.`
+				`	(Quantum shift.)`
 					goto mistake
 
 			label dodge
@@ -835,11 +838,11 @@ mission "QKBlade: Bearer of The Blade 5"
 
 			label "Midnight's Lost Orphan"
 			choice
-				`	Dodge.`
+				`	(Dodge.)`
 					goto activate
-				`	Parry.`
+				`	(Parry.)`
 					goto death
-				`	Strike.`
+				`	(Strike.)`
 					goto death
 				`	(Wield the terrifying power of Midnight's Lost Orphan.)`
 			scene "outfit/midnight lost orphan"
@@ -865,7 +868,7 @@ mission "QKBlade: Bearer of The Blade 5"
 			`	"To think that an Alpha got ahold of it! We must tighten the security on these artifacts," exclaims one elder.`
 			`	"Funding will be granted to the Museum of Galactic History for this purpose," replies another elder.`
 			`	"Once again, Captain <first> <last>, you have proven your friendship to the Hai," states a third elder.`
-			`	"A reward of <payment> for the return of the blade was planned, but we will just deposit that to your account.`
+			`	"A reward of <payment> for the return of the blade was planned, but we will just deposit that to your account."`
 	
 mission "QKBlade: Thief of Blades"
 	invisible
