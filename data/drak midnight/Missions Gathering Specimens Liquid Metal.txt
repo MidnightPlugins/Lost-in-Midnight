@@ -141,7 +141,7 @@ mission "Gathering Specimens: Liquid Metal"
 			`	You decide to keep the specimen instead of turning it in. Remember to keep it installed so it doesn't get mixed in with the regular cargo.`
 				decline
 			label reward
-			`	The Syndicate representative is very appreciative for the return of their stolen propery and grants you <payment> as reward. They aren't asking any questions. As for you...`
+			`	The Syndicate representative is very appreciative for the return of their stolen property and grants you 1,000,000 credits as a reward. They aren't asking any questions. As for you...`
 			label questions
 			choice
 				`	"Did the Syndicate really make this?"`
@@ -158,6 +158,7 @@ mission "Gathering Specimens: Liquid Metal"
 			`	The Syndicate representative thanks you again for returning their property. Security escorts you safely outside...`
 				accept
 	on accept
+		outfit "Liquid Metal Specimen" -1
 		payment 1000000
 		fail
 		
@@ -211,15 +212,15 @@ mission "Gathering Specimens: Liquid Metal Amalgam"
 	on offer
 		conversation
 			scene "outfit/rock scavenger meat"
-			`	You''ve won a bet and have been given the opportunity to eat Rock Scavenger for free at the spaceport bar and grill! Before you can take a bite, the communications device of everyone in the restaurant loudly beeps, vibrates, or otherwise alerts their owners that they have a message.`
+			`	You've won a bet and have been given the opportunity to eat Rock Scavenger for free at the spaceport bar and grill! Before you can take a bite, the communications device of everyone in the restaurant loudly beeps, vibrates, or otherwise alerts their owners that they have a message.`
 			choice
 				`	(Check your messages.)`
 			scene "outfit/liquid metal specimen"
-			`You check yours and are surprised to get a message from the Syndicate representative who you delivered the Liquid Metal sample to: "Greetings Captain <first> <last>. The liquid metal specimen was used to make the test model Amalgam ship, Mythreal. You were to be invited to help test the ship as previously discussed. If you are anywhere near the Paradise Planets, we advise you to head over there if you want to try and stop the Mythreal. Unlike our normal testing procedures, you are not forbidden from destroying or capturing this ship.`
+			`You check yours and are surprised to get a message from the Syndicate representative who you delivered the Liquid Metal sample to: "Greetings Captain <first> <last>. The liquid metal specimen was used to make the test model Amalgam ship, Mythreal. You are invited to help test the ship as previously discussed. If you are anywhere near the Paradise Planets, we advise you to head over there if you want to try and stop the Mythreal. Unlike our normal testing procedures, you are not forbidden from destroying or capturing this ship.`
 			choice
 				`	(That's strange. Why...)`
 			scene "scene/scene-amalgam1"
-			`As you are mulling over the odd message, someone watching the news display mutters, "Ghost Ship. You look up in time to see a Quicksilver destroy a Navy Cruiser.`
+			`As you are mulling over the odd message, someone watching the news display mutters, "Ghost Ship." You look up in time to see a Quicksilver destroy a Navy Cruiser.`
 			choice
 				`	(What the...)`
 			scene "scene/scene-amalgam2"
@@ -230,7 +231,7 @@ mission "Gathering Specimens: Liquid Metal Amalgam"
 		personality target entering vindictive marked unconstrained mute
 			confusion 10
 		ship "Amalgam" "Mythreal"
-		dialog `The Mythreal is no longer a threat. Return to origin and check if the authorities will reward you for your efforts.`
+		dialog `The Mythreal is no longer a threat. Return to <origin> and check if the authorities will reward you for your efforts.`
 	on visit
 		dialog `The Mythreal is still in orbit. Get back up there!`
 	on complete

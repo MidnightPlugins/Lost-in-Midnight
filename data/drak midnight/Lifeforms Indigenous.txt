@@ -20,6 +20,7 @@ mission "First Contact: Subsidurials"
 	source
 		attributes "near earth"
 		not attributes "uninhabited" "station"
+		not planet "Earth" "Luna" "Mars"
 	on offer
 		log "Factions" "Subsidurials"
 			`It is unclear what these creatures are, where they come from, or how they evolved. Scientists have dissected several, but so far the results have simply been that these creatures contain no materials or resources of value; are not even slightly edible, and are too big to be kept as pets.`
@@ -180,7 +181,8 @@ ship "Gray Eye"
 
 ship "Gray Eye" "Gray Eyed"
 	sprite "ship/grayeye flip"
-
+	"never disabled"
+	
 	
 outfit Tail?
 	category "Guns"
