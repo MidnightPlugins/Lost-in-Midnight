@@ -13,7 +13,7 @@
 
 mission "Harvesting Quantumium Research"
 	name "Quantumium Research"
-	description "Deliver 10 Quantumium stones to Aeolus on <destination>. Payment is payment."
+	description "Deliver 10 Quantumium stones to Aeolus on <destination>. Payment is <payment>."
 	source Viminal
 	to offer
 		has "Remnant: Keystone Research 1: done"
@@ -41,5 +41,6 @@ mission "Harvesting Quantumium Research"
 	on defer
 		set "Randomize Harvesting Quantumium Research"
 	on complete
+		outfit "Quantumium" -10
 		payment 10000000
 		dialog `The Remnant accept your delivery of Quantumium and reward you with <payment>.`
