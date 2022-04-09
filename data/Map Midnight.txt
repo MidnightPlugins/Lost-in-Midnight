@@ -1071,7 +1071,7 @@ planet "Wildland"
 planet Corpse
 	attributes uninhabited midnight
 	landscape land/mars0
-	description `Several asteroids have formed a cluster at this location. Perhaps they are all that remain of a destroyed planet that once occupied this orbital path. With no atmosphere and the danger of asteroid collisions, a heavy environental suit is necessary to explore the area.`
+	description `Several asteroids have formed a cluster at this location. Perhaps they are all that remain of a destroyed planet that once occupied this orbital path. With no atmosphere and the danger of asteroid collisions, a heavy environmental suit is necessary to explore the area.`
 	government Uninhabited
 	security 0
 
@@ -1102,7 +1102,7 @@ planet Fossil
 planet "Hell's Maw"
 	attributes uninhabited midnight
 	landscape land/lava8
-	description `This dying world has been cracked open. The cooled mantle still glows with rivers of lava and the core sheds an eerie light upon the rocky outcroppings. Strange interstellar creatures dart across the planet's innards, feasting on its exposed mineral deposits. While there are thin traces of various gasses forming a thin atmosphere, it is not enough to support a human. When the exposed core faces the sun, the heat below the edge of the broken crust exceeds recommended safety limits. With the additional dangers from the hazardous environent and wildlife, a heavy environmental suit is necessary to explore the area.`
+	description `This dying world has been cracked open. The cooled mantle still glows with rivers of lava and the core sheds an eerie light upon the rocky outcroppings. Strange interstellar creatures dart across the planet's innards, feasting on its exposed mineral deposits. While there are thin traces of various gasses forming a thin atmosphere, it is not enough to support a human. When the exposed core faces the sun, the heat below the edge of the broken crust exceeds recommended safety limits. With the additional dangers from the hazardous environment and wildlife, a heavy environmental suit is necessary to explore the area.`
 	government Uninhabited
 	security 0
 
@@ -1180,7 +1180,7 @@ planet Quiet
 planet "Rock Cluster"
 	attributes uninhabited midnight
 	landscape land/mars0
-	description `Several asteroids have formed a cluster at this location. Perhaps they are all that remain of a destroyed planet that once occupied this orbital path. With no atmosphere and the danger of asteroid collisions, a heavy environental suit is necessary to explore the area.`
+	description `Several asteroids have formed a cluster at this location. Perhaps they are all that remain of a destroyed planet that once occupied this orbital path. With no atmosphere and the danger of asteroid collisions, a heavy environmental suit is necessary to explore the area.`
 	government Uninhabited
 	security 0
 
