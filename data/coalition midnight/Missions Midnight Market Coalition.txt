@@ -93,13 +93,11 @@ fleet "Independent Kimek Smuggler"
 
 
 mission "Midnight Market: Coalition Smuggling 2"
-	landing
 	name "Coalition Smuggling"
-	description "Escort a ship carrying merchandise to <desination>. Payment is <payment>."
+	description "Escort a ship carrying merchandise to <destination>. Payment is <payment>."
 	source "Poisonwood"
-	destination
+	destinatiot
 		government "Coalition"
-		distance 5 15
 	to offer
 		has "Midnight Market: Coalition Smuggling 1: done"
 	on offer
@@ -108,6 +106,7 @@ mission "Midnight Market: Coalition Smuggling 2"
 				"Midnight Market: Coalition Smuggling 1: done" >= 2
 
 			scene "thumbnail/saryd sojourner"
+			``
 				goto arrival
 
 			label "arach hulk"
@@ -115,11 +114,13 @@ mission "Midnight Market: Coalition Smuggling 2"
 				"Midnight Market: Coalition Smuggling 1: done" == 3
 
 			scene "thumbnail/arach hulk"
+			``
 				goto arrival
 
 			label "kimek spire"
 			
 			scene "thumbnail/kimek spire"
+			``
 			
 			label arrival
 			branch "back again"
@@ -217,15 +218,13 @@ mission "Midnight Market: Coalition Smuggling 3"
 		dialog "Head to the spaceport learn more about the escort job."
 
 mission "Midnight Market: Coalition Smuggling 4"
-	landing
 	name "Coalition Smuggling"
-	description "This time you're delivering merchandise to <desination>. Payment is <payment>. If the Heliarch catch you with this merchandise, it could be trouble."
+	description "This time you're delivering merchandise to <destination>. Payment is <payment>. If the Heliarch catch you with this merchandise, it could be trouble."
 	source "Poisonwood"
 	cargo "nerve gas" 50 100
 	illegal -1
 	destination
 		government "Coalition"
-		distance 10 15
 	to offer
 		has "Midnight Market: Coalition Smuggling 3: done"
 	on offer
@@ -255,6 +254,7 @@ mission "Midnight Market: Coalition Smuggling 4"
 		clear "Midnight Market: Coalition Smuggling 3: offered"
 		clear "Midnight Market: Coalition Smuggling 1: done"
 		clear "Midnight Market: Coalition Smuggling 2: done"
+		dialog `You deliver the nerve gas to a secluded warehouse where they start unloading it. You get a message congratulating you on a job well done. <payment> has been deposited into your account.`
 	
 
 
