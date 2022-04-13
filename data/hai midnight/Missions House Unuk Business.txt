@@ -582,7 +582,7 @@ fleet "Acorn Arach"
 	personality timid coward
 	names "Acorn Arach"
 	cargo 1
-	commodities "cookies"
+	commodities "Food"
 	variant
 		"Behemoth (Jumper)"
 		
@@ -591,7 +591,7 @@ fleet "Acorn Saryd"
 	personality timid coward
 	names "Acorn Saryd"
 	cargo 1
-	commodities "cookies"
+	commodities "Food"
 	variant
 		"Behemoth (Jumper)"
 		
@@ -600,7 +600,7 @@ fleet "Acorn Kimek"
 	personality timid coward
 	names "Acorn Kimek"
 	cargo 1
-	commodities "cookies"
+	commodities "Food"
 	variant
 		"Behemoth (Jumper)"
 		
@@ -609,7 +609,7 @@ fleet "Acorn Wanderer"
 	personality timid coward
 	names "Acorn Wanderer"
 	cargo 1
-	commodities "crackers"
+	commodities "Food"
 	variant
 		"Behemoth (Jumper)"
 		
@@ -618,6 +618,6 @@ fleet "Acorn Efret"
 	personality timid coward
 	names "Acorn Efret"
 	cargo 1
-	commodities "cookies"
+	commodities "Food"
 	variant
 		"Behemoth (Jumper)"
