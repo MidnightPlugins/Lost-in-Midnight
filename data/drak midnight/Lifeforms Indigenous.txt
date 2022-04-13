@@ -141,6 +141,334 @@ event "Subsidurial Korath"
 		add fleet "Subsidurial" 50000
 
 
+
+ship "Subsidurial" "Subsidurial Tamed"
+	sprite "ship/subsidurial tamed"
+	"never disabled"
+	"swizzle" 0
+
+mission "Subsidurial Herding Job Easy"
+	job
+	repeat
+	deadline
+	name "Subsidurial Herding"
+	description "Escort a herd of Subsidurials to <destination>. Payment is <payment>."
+	source
+		attributes "south"
+		attributes "frontier"
+		not planet "Greenrock"
+		not attributes "uninhabited"
+	destination Greenrock
+	to offer
+		has "First Contact: Subsidurials: offered"
+		random < 20 + "subsidurial herding"
+	on accept
+		dialog "The Subsidurials are shackled with collars. If they stray too far from your ship, the collar inflicts pain on the creature."
+	npc accompany save
+		government "Indigenous Lifeform"
+		personality escort mute mining harvests
+		fleet
+			variant
+				"Subsidurial Tamed" 3
+			variant
+				"Subsidurial Tamed" 4
+			variant
+				"Subsidurial Tamed" 5
+	on abort
+		"reputation: Pirate" --
+		"subsidurial herding" -= 10
+		conversation
+			scene "thumbnail/subsidurial"
+			`You release the collars and set the Subsidurials free. This will probably ruin your reputation with the client, but at least these creatures won't suffer anymore. Perhaps it's just your imagination, but one of them seems to nod in thanks before departing.`
+	on fail
+		"reputation: Pirate" --
+		"subsidurial herding" -= 10
+		dialog "You failed to safely deliver the herd to your client."
+	on visit
+		dialog `You've arrived at <planet>, but some of the Subsidurials are missing! Return to orbit and search for them.`
+	on complete
+		payment 200000
+		dialog "You deliver the herd to your client and are rewarded with <payment>. The Subsidurials are sedated in cages and carted away..."
+
+mission "Subsidurial Herding Job Hard"
+	job
+	repeat
+	deadline
+	name "Subsidurial Herding"
+	description "Escort a herd of Subsidurials to <destination>. Payment is <payment>."
+	source
+		attributes "north" "core"
+		attributes "frontier"
+		not attributes "uninhabited"
+	destination Greenrock
+	to offer
+		has "First Contact: Subsidurials: offered"
+		random < 20 + "subsidurial herding"
+	on accept
+		dialog "The Subsidurials are shackled with collars. If they stray too far from your ship, the collar inflicts pain on the creature."
+	npc accompany save
+		government "Indigenous Lifeform"
+		personality escort mute mining harvests
+		fleet
+			variant
+				"Subsidurial Tamed" 3
+			variant
+				"Subsidurial Tamed" 4
+			variant
+				"Subsidurial Tamed" 5
+	on abort
+		"reputation: Pirate" --
+		"subsidurial herding" -= 10
+		conversation
+			scene "thumbnail/subsidurial"
+			`You release the collars and set the Subsidurials free. This will probably ruin your reputation with the client, but at least these creatures won't suffer anymore. Perhaps it's just your imagination, but one of them seems to nod in thanks before departing.`
+	on fail
+		"reputation: Pirate" --
+		"subsidurial herding" -= 10
+		dialog "You failed to safely deliver the herd to your client."
+	on visit
+		dialog `You've arrived at <planet>, but some of the Subsidurials are missing! Return to orbit and search for them.`
+	on complete
+		payment 400000
+		dialog "You deliver the herd to your client and are rewarded with <payment>. The Subsidurials are sedated in cages and carted away..."
+
+phrase "subsidurial herd offer"
+	word
+		`A man `
+		`A woman `
+	word
+		`approaches you`
+		`addresses you`
+	word
+		`and asks, "`
+	word
+		`Excuse me, Captain. I took on a job escorting a herd of Subsidurials to <planet>, but my ship needs repairs and there's no way I can make it there before <day>. Can you take this job for me? `
+	word
+		`I was `
+	word
+		`told `
+		`assured `
+		`promised `
+	word
+		`payment would be <payment> upon delivery."`
+
+mission "Subsidurial Herding Mission Easy"
+	name "Subsidurial Herding"
+	description "Escort a herd of Subsidurials to <destination>. Payment is <payment>."
+	repeat
+	deadline
+	source
+		government "Free Worlds"
+		not planet "Greenrock"
+		not attributes "uninhabited"
+	destination Greenrock
+	to offer
+		has "First Contact: Subsidurials: offered"
+		random < 15 + "subsidurial herding"
+	on offer
+		dialog phrase "subsidurial herd offer"
+	on accept
+		dialog "The Subsidurials are shackled with collars. If they stray too far from your ship, the collar inflicts pain on the creature."
+	npc accompany save
+		government "Indigenous Lifeform"
+		personality escort mute mining harvests
+		fleet
+			variant
+				"Subsidurial Tamed" 3
+			variant
+				"Subsidurial Tamed" 4
+			variant
+				"Subsidurial Tamed" 5
+	on abort
+		conversation
+			scene "thumbnail/subsidurial"
+			`You release the collars and set the Subsidurials free. These creatures won't suffer anymore. Perhaps it's just your imagination, but one of them seems to nod in thanks before departing.`
+	on fail
+		dialog "You failed to safely deliver the herd to your client."
+	on visit
+		dialog `You've arrived at <planet>, but some of the Subsidurials are missing! Return to orbit and search for them.`
+	on complete
+		"reputation: Pirate" ++
+		"subsidurial herding" ++
+		payment 200000
+		dialog "You deliver the herd to your client and are rewarded with <payment>. The Subsidurials are sedated in cages and carted away..."
+
+mission "Subsidurial Herding Mission Hard"
+	name "Subsidurial Herding"
+	description "Escort a herd of Subsidurials to <destination>. Payment is <payment>."
+	repeat
+	deadline
+	source
+		government "Republic" "Syndicate"
+		not attributes "uninhabited"
+	destination Greenrock
+	to offer
+		has "First Contact: Subsidurials: offered"
+		random < 15 + "subsidurial herding"
+	on offer
+		dialog phrase "subsidurial herd offer"
+	on accept
+		dialog "The Subsidurials are shackled with collars. If they stray too far from your ship, the collar inflicts pain on the creature."
+	npc accompany save
+		government "Indigenous Lifeform"
+		personality escort mute mining harvests
+		fleet
+			variant
+				"Subsidurial Tamed" 3
+			variant
+				"Subsidurial Tamed" 4
+			variant
+				"Subsidurial Tamed" 5
+	on abort
+		conversation
+			scene "thumbnail/subsidurial"
+			`You release the collars and set the Subsidurials free. These creatures won't suffer anymore. Perhaps it's just your imagination, but one of them seems to nod in thanks before departing.`
+	on fail
+		dialog "You failed to safely deliver the herd to your client."
+	on visit
+		dialog `You've arrived at <planet>, but some of the Subsidurials are missing! Return to orbit and search for them.`
+	on complete
+		"reputation: Pirate" ++
+		"subsidurial herding" ++
+		payment 400000
+		dialog "You deliver the herd to your client and are rewarded with <payment>. The Subsidurials are sedated in cages and carted away..."
+
+ship "Subsidurial" "Subsidurial Weaponized A"
+	sprite "ship/subsidurial weaponized"
+	"never disabled"
+	"swizzle" 0
+	add attributes
+		"cargo space" -35
+		"outfit space" 80
+		"weapon capacity" 80
+	outfits
+		Mouthparts? 3
+		"Heavy Laser Turret" 2
+	gun Mouthparts?
+	gun Mouthparts?
+	gun Mouthparts?
+	turret "Heavy Laser Turret"
+	turret "Heavy Laser Turret"
+
+ship "Subsidurial" "Subsidurial Weaponized B"
+	sprite "ship/subsidurial weaponized"
+	"never disabled"
+	"swizzle" 0
+	add attributes
+		"cargo space" -35
+		"outfit space" 80
+		"weapon capacity" 80
+	outfits
+		Mouthparts? 3
+		"Modified Blaster Turret" 2
+	gun Mouthparts?
+	gun Mouthparts?
+	gun Mouthparts?
+	turret "Modified Blaster Turret"
+	turret "Modified Blaster Turret"
+
+mission "Day of Subsidurius"
+	name "Day of Subsidurius"
+	description "Defend <origin> from the Subsidurius and its herd of weaponized Subsidurials!" 
+	source
+		government "Free Worlds"
+		attributes "frontier"
+		not attributes "uninhabited"
+	to offer
+		or
+			has "Subsidurial Herding Job Easy: done"
+			has "Subsidurial Herding Job Hard: done"
+			has "Subsidurial Herding Mission Easy: done"
+			has "Subsidurial Herding Mission Hard: done"
+		random < 40 + "day of subsidurius"
+	on offer
+		conversation
+			`You're checking out the local cuisine when an announcement goes out over the spaceport. "Attention! The planet is under attack from... Is this correct?" You hear a muffled voice answering before the announcer continues,"From a herd of weaponized Subsidurials! We are looking for volunteers to assist with the planetary defense." Will you join the defense fleet? <planet>'s government will probably pay a good reward for helping.`
+			choice
+				`	(Join the defense fleet.)`
+				`	(Do not join the defense fleet.)`
+					defer
+			`You and several other pilots get on your ships and prepare to launch...`
+				launch
+	on defer
+		"day of subsidurius" ++
+	on enter
+		"reputation: Independent (Killable)" <?= -1000
+		dialog `The defense fleet is hailed by a mysterious ship. "Pray for salvation! The Day of Subsidurius has arrived!"`
+	npc
+		government "Militia"
+		personality heroic disables
+		fleet "Small Militia"
+	npc evade
+		government "Independent (Killable)"
+		personality target vindictive coward mute
+			confusion 120
+		fleet
+			variant
+				"Subsidurial Weaponized A" 4
+				"Subsidurial Weaponized B" 4
+	npc kill
+		government "Independent (Killable)"
+		personality target vindictive coward
+			confusion 20
+		ship "Subsidurius" "Subsidurius"
+		dialog `The Subsidurius has been defeated. Return to <planet> to collect your reward.`
+	on visit
+		dialog `Threats in orbit haven't been dealt with! Get back up there and defend the planet!`
+	on abort
+		"reputation: Independent (Killable)" >?= 10
+	on complete
+		"reputation: Independent (Killable)" >?= 10
+		payment 150000
+		log `A maniac planned to conquer the galaxy with a herd of weaponized Subsidurials. I managed to foil the diabolical scheme. Unfortunately, I can't claim that no Subsidurials were harmed during the battle.`
+		dialog `The government of <planet> pays you <payment> for helping defend against the Subsidurius.`
+
+mission "Midnight Market: Pet Subsidurial"
+	invisible
+	source "Greenrock"
+	to offer
+		or
+			has "Subsidurial Herding Job Easy: done"
+			has "Subsidurial Herding Job Hard: done"
+			has "Subsidurial Herding Mission Easy: done"
+			has "Subsidurial Herding Mission Hard: done"
+		random < 20 + "Midnight Market"
+		"credits" > 2000000
+	on offer
+		require "Subsidurial Plushie"
+		conversation
+			scene "scene/scene-caged subsidurial"
+			`While browsing the spaceport you find an exotic animal trader trying to sell a Subsidurial in a cage. The asking price is 1,000,000 credits. What do you do?`
+			choice
+				`	(Buy the Subsidurial.)`
+					goto purchase
+				`	(Don't buy the Subsidurial.)`
+					defer
+				`	(Rescue the Subsidurial.)`
+			scene "thumbnail/subsidurial"
+			`	While the animal trader is distracted with another customer, you quietly use your pocket laser cutter to release the lock on the Subsidurial's cage and open the door slightly before walking away. They say that Subsidurials aren't intelligent, but it still doesn't take long for the creature to realize that it can fly free. The resulting commotion in the spaceport ended up being the subject of local bar gossip for the next several months and spread to other pirate worlds for the enjoyment of everyone but the exotic animal trader.`
+				decline
+			label purchase
+			branch "repeat customer"
+				has "Midnight Market: Pet Subsidurial: done"
+			`	"Ah, you have good taste," exclaims the animal trader while collecting your money. As you look closely at the creature the animal trader places a collar with flashing lights snugly around the creature's neck. "The collar inflicts a bit of pain on the creature if it strays too far from your flagship. Subsidurials can be pretty stupid, you know." Arrangements are made to release the creature into your custody when you are ready to launch.`
+				accept
+			label "repeat customer"
+			`	"Welcome back! Are you interested in another Subsidurial?" You answer in the affirmative and the exotic animal trader makes arrangements to release the creature into your custody when you are ready to launch.`
+				accept
+	on accept
+		"Midnight Market" ++
+		payment -1000000
+	npc kill
+		government "Escort"
+		personality escort mute mining harvests
+		ship "Subsidurial Tamed"
+		dialog "Your pet Subsidurial has passed away..."
+	on complete
+		clear "Midnight Market: Pet Subsidurial: offered"
+
+
+
 ship "Gray Eye"
 	noun "creature"
 	sprite "ship/grayeye"
