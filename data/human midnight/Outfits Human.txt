@@ -249,6 +249,17 @@ outfit "Sniper Rifle"
 	description "A single armor piercing bullet can change the course of history. A good scope helps too."
 
 
+# The Subsidurial Plushie is installed on the Subsidurius and the Subsi Marketing.
+
+outfit "Subsidurial Plushie"
+	category "Special"
+	cost 40
+	thumbnail "outfit/subsidurial plushie"
+	description "A stuffed toy shaped like a popular space creature. Isn't it adorable?"
+	description "You can install this on your ship to keep it from getting mixed in with the regular cargo."
+
+
+
 
 # The Systems Core (Damaged) is outfitted on the Dire Omen from the Ghost Hunting missions.
 

@@ -896,6 +896,39 @@ fleet "Grudge Parade"
 
 
 
+fleet "NukeNorth"
+	government "Pirate"
+	names "pirate"
+	cargo 1
+	personality
+		plunders
+	variant 1
+		"Modified Argosy (Nuclear)"
+	variant 1
+		"Rainmaker (Nuclear)"
+
+fleet "NukeCore"
+	government "Pirate"
+	names "pirate"
+	cargo 1
+	personality
+		plunders
+	variant 1
+		"Modified Argosy (Nuclear)"
+	variant 1
+		"Manta (Nuclear)"
+		
+fleet "NukeSouth"
+	government "Pirate"
+	names "pirate"
+	cargo 1
+	personality
+		plunders
+	variant 1
+		"Modified Argosy (Nuclear)"
+	variant 1
+		"Clipper (Nuclear)"
+
 
 fleet "Small Oathbreaker"
 	government "Oathbreaker"
@@ -1035,18 +1068,11 @@ fleet "Grave Digger raid"
 		"Starling (Gravedigger)"
 	variant 1
 		"Gull (Gravedigger)"
-	variant 3
-		"Starling (Gravedigger)"
-		"Gull (Gravedigger)"
-	variant 3
-		"Starling (Gravedigger)" 2
-	variant 3
-		"Gull (Gravedigger)" 2
 		
 fleet "Grave Digger Lurker"
 	government "Grave Diggers"
 	names "grave diggers"
-	personality waiting uninterested unconstrained mute
+	personality waiting uninterested unconstrained mute coward
 	outfitters "Remnant Weapons"
 	variant 1
 		"Starling (Gravedigger)"

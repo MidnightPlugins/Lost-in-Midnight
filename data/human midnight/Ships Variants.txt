@@ -249,6 +249,95 @@ ship "Carrier" "Carrier (Coalition)"
 	
 	
 
+ship "Container Transport" "Container Transport (Billboard TMBR)"
+	sprite "ship/billboard ships/billboard tmbr"
+		"frame rate" 0.1
+	"swizzle" 0
+	add attributes
+		"cost" 10000
+	outfits
+		"Sidewinder Missile Launcher" 2
+		"Sidewinder Missile" 90
+		"Laser Turret" 3
+		"Heavy Anti-Missile Turret" 2
+		
+		"RT-I Radiothermal"
+		"LP144a Battery Pack"
+		"D23-QP Shield Generator"
+		"Interference Plating" 9
+		"Laser Rifle" 9
+		"Nerve Gas" 9
+		
+		"X3700 Ion Thruster"
+		"X3200 Ion Steering"
+		"Scram Drive"
+	description "This ship has a billboard for There May Be Riots attached to it."
+
+ship "Container Transport" "Container Transport (Billboard Mega)"
+	sprite "ship/billboard ships/billboard mega"
+		"frame rate" 0.1
+	"swizzle" 0
+	add attributes
+		"cost" 10000
+	outfits
+		"Proton Turret" 3
+		"Heavy Anti-Missile Turret"
+		"Meteor Missile Launcher" 2
+		"Meteor Missile" 60
+		"Fission Reactor"
+		"LP072a Battery Pack"
+		"D94-YV Shield Generator"
+		"Outfits Expansion"
+		"Laser Rifle" 9
+		"A250 Atomic Thruster"
+		"A375 Atomic Steering"
+		"Scram Drive"
+	description "This ship has a billboard for Megaparsec attached to it."
+
+ship "Container Transport" "Container Transport (Billboard Subs)"
+	sprite "ship/billboard ships/billboard subs"
+		"frame rate" 0.1
+	"swizzle" 0
+	add attributes
+		"cost" 10000
+	outfits
+		"Quad Blaster Turret" 5
+		"Meteor Missile Launcher" 2
+		"Meteor Missile" 60
+		"Fusion Reactor"
+		"LP072a Battery Pack"
+		"D94-YV Shield Generator"
+		"Water Coolant System"
+		"Outfits Expansion" 2
+		"Laser Rifle" 11
+		"A250 Atomic Thruster"
+		"A375 Atomic Steering"
+		"Scram Drive"
+	description "This ship has a billboard for Subsi & Friends attached to it."
+
+ship "Container Transport" "Container Transport (Billboard Unuk)"
+	sprite "ship/billboard ships/billboard unuk"
+		"frame rate" 0.1
+	"swizzle" 0
+	add attributes
+		"cost" 10000
+	outfits
+		"Sidewinder Missile Launcher" 2
+		"Sidewinder Missile" 90
+		"Pulse Turret" 2
+		"Chameleon Anti-Missile" 3
+		"RT-I Radiothermal"
+		"Hai Ravine Batteries"
+		"D23-QP Shield Generator"
+		"Pulse Rifle" 8
+		"X3700 Ion Thruster"
+		`"Benga" Atomic Steering`
+		`"Basrem" Atomic Steering`
+		"Scram Drive"
+	description "This ship has a billboard for House Unuk attached to it."
+
+
+
 ship "Cruiser" "Cruiser (Coalition)"
 	outfits
 		"Typhoon Launcher" 2
@@ -423,6 +512,34 @@ ship "Modified Argosy" "Modified Argosy (Korath)"
 	gun "Meteor Missile Launcher"
 	turret "Korath Warder"
 	turret "Heavy Laser Turret"
+
+
+
+ship "Modified Argosy" "Modified Argosy (Nuclear)"
+	outfits
+		"Nuclear Missile" 2
+		"Torpedo Launcher" 2
+		"Torpedo Storage Rack"
+		Torpedo 75
+		"Heavy Anti-Missile Turret" 2
+		"Fission Reactor"
+		"LP036a Battery Pack"
+		"D23-QP Shield Generator"
+		"Oufits Expansion"
+		"Water Coolant System"
+		"Laser Rifle" 5
+		"Fragmentation Grenades" 3
+		"Sniper Rifle"
+		"A250 Atomic Thruster"
+		"A375 Atomic Steering"
+		"Scram Drive"
+	gun "Nuclear Missile"
+	gun "Nuclear Missile"
+	gun "Torpedo Launcher"
+	gun "Torpedo Launcher"
+	turret "Heavy Anti-Missile Turret"
+	turret "Heavy Anti-Missile Turret"
+
 	
 
 ship "Nest" "Nest (Korath)"
@@ -501,6 +618,31 @@ ship "Protector" "Protector (Korath)"
 	turret "Korath Grab-Strike"
 	turret "Korath Banisher"
 	turret "Korath Warder"
+
+
+
+ship "Rainmaker" "Rainmaker (Nuclear)"
+	outfits
+		"Nuclear Missile" 2
+		"Sidewinder Missile Launcher" 2
+		"Sidewinder Missile" 113
+		"Sidewinder Missile Rack"
+		"nGVF-CC Fuel Cell"
+		"LP036a Battery Pack"
+		"D67-TM Shield Generator"
+		"Fuel Pod"
+		"Laser Rifle" 7
+		"Fragmentation Grenades" 5
+		"Sniper Rifle"
+		"A120 Atomic Thruster"
+		"A125 Atomic Steering"
+		"Scram Drive"
+	gun
+	gun
+	gun "Nuclear Missile"
+	gun "Nuclear Missile"
+	gun "Sidewinder Missile Launcher"
+	gun "Sidewinder Missile Launcher"
 
 
 

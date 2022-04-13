@@ -597,6 +597,55 @@ ship "Mastodon"
 
 
 
+# Parade Float appears in a Double Cross mission
+
+ship "Parade Float"
+	sprite "ship/float subsidurial"
+	thumbnail "thumbnail/float subsidurial"
+	"swizzle" 0
+	attributes
+		category "Light Freighter"
+		"cost" 1960000
+		"shields" 4200
+		"hull" 2600
+		"required crew" 4
+		"bunks" 14
+		"mass" 330
+		"drag" 5.9
+		"heat dissipation" .27
+		"fuel capacity" 400
+		"cargo space" 200
+		"outfit space" 135
+		"engine capacity" 28
+		weapon
+			"blast radius" 60
+			"shield damage" 600
+			"hull damage" 300
+			"hit force" 900
+	outfits
+		"nGVF-CC Fuel Cell"
+		"LP072a Battery Pack"
+		"D23-QP Shield Generator"
+		"Cooling Ducts"
+		"Subsidurial Plushie"
+
+		"X1050 Ion Engines"
+		"Hyperdrive"
+
+	engine 23 -1
+	engine -23 -1
+	engine 19 29
+	engine -19 29
+	leak "leak" 60 50
+	leak "flame" 60 80
+	explode "tiny explosion" 10
+	explode "small explosion" 25
+	explode "medium explosion" 25
+	explode "large explosion" 10
+	"final explode" "final explosion medium"
+	description `This is a vessel specifically made for promotional marketing of a product or service. An ad agency will typically contract with an escort to take the ship on a tour of several nearby systems to promote the product or service.`
+
+
 
 # The Shield Fortress is a unique ship that can be captured in an Oathbreakers mission.
 
@@ -681,6 +730,72 @@ ship "Shield Fortress"
 	"final explode" "final explosion large" 2
 	description "Captain Arnold Benedict had this monster custom made with help from Marauder tinkerers. They pieced it together from the salvaged wreckage of an alien ship and a Navy Carrier."
 
+
+
+# The Subsidurius is a unique ship that can be captured in an Lifeforms Indigenous mission.
+
+ship "Subsidurius"
+	sprite "ship/subsidurius"
+	attributes
+		category "Heavy Freighter"
+		"cost" 1230000
+		"shields" 6800
+		"hull" 4800
+		"required crew" 7
+		"bunks" 19
+		"mass" 440
+		"drag" 5.6
+		"heat dissipation" .6
+		"fuel capacity" 600
+		"cargo space" 250
+		"outfit space" 490
+		"weapon capacity" 140
+		"engine capacity" 150
+		weapon
+			"blast radius" 80
+			"shield damage" 800
+			"hull damage" 400
+			"hit force" 1200
+	outfits
+		"Gatling Gun" 2
+		"Gatling Gun Ammo" 6000
+		"Heavy Laser Turret"
+		"Quad Blaster Turret" 2
+		"Heavy Anti-Missile Turret"
+
+		"nGVF-AA Fuel Cell"
+		"Breeder Reactor"
+		"S-270 Regenerator"
+		"S-970 Regenerator"
+		"LP144a Battery Pack"
+		"Liquid Nitrogen Cooler"
+		Ramscoop
+		"Subsidurial Plushie"
+
+		"Ionic Afterburner"
+		"A370 Atomic Thruster"
+		"A375 Atomic Steering"
+		Hyperdrive
+
+	engine -30 30
+	engine 30 30
+	engine -8 88
+	engine 8 88
+	gun -7 -95 
+	gun 7 -95 
+	turret 0 -69 "Heavy Laser Turret"
+	turret 0 -34 "Blaster Turret"
+	turret 0 15 "Blaster Turret"
+	turret 0 52 "Heavy Anti-Missile Turret"
+	leak "leak" 40 50
+	leak "flame" 50 80
+	leak "big leak" 90 30
+	explode "tiny explosion" 18
+	explode "small explosion" 36
+	explode "medium explosion" 24
+	explode "large explosion" 8
+	"final explode" "final explosion medium"
+	description "This unique ship was created by a maniac obsessed with grandiose delusions of Subsidurial domination."
 
 
 # A War Hauler appears in Grudge Family missions.

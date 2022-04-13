@@ -467,9 +467,478 @@ mission "Jump Drive Theft 2"
 
 		conversation
 			`You manage to safely land at the rendezvous location, an old run down warehouse. The dockworkers take the jump drive and present you with <payment>. There is no paperwork to fill out and no receipts are given, leaving you with no record that this transaction ever took place.`
+
+
+
+outfitter "Syndicate Research"
+	"Ionic Afterburner"
+	"S-270 Regenerator"
+	"S-970 Regenerator"
+
+fleet "Mega Billboard"
+	government "Syndicate"
+	names "syndicate capital"
+	cargo 3
+	outfitters "Syndicate Research"
+	personality timid coward
+	variant
+		"Container Transport (Billboard Mega)"
+
+mission "Missing Syndicate Supplies"
+	job
+	repeat
+	name "Missing Syndicate Ship"
+	description "The <npc> failed to make its delivery on time. Search the pirate systems for it and return it to <destination>. Payment is <payment>."
+	source
+		government "Syndicate"
+	destination
+		government "Syndicate"
+		attributes "outfitter"
+	to offer
+		random < 20
+		"reputation: Syndicate" > 100
+		"combat rating" > 20
+		not "syndicate tech available"
+	on accept
+		dialog `When you accept the job, the agent has you fill out a non-disclosure form. If you are successful in locating the vessel, you are not to divulge knowledge of its contents to anyone. It must contain some top secret research.`
+	npc assist accompany save
+		government "Syndicate"
+		system
+			attributes "pirate"
+			attributes "core"
+		personality target derelict timid
+			confusion 30
+		fleet "Mega Billboard"
+		conversation
+			scene "scene/scene-syndicate research"
+			`While assisting the <npc> with repairs, you note that it is carrying some high tech cargo...`
+	on fail
+		"reputation: Syndicate" -= 20
+		dialog "Rumors spread that you looted a Syndicate ship that you had taken a contract to rescue..."
+	on complete
+		"reputation: Syndicate" += 10
+		payment 1000000
+		conversation
+			scene "scene/scene-syndicate research"
+			`	After safely returning the <npc> to <planet>, the Syndicate deposits <payment> into your account. While no small sum, one glimpse at the cargo was all it took to realize how much more valuable this shipment was.`
+
+
+
+phrase "drowned happiness"
+	word
+		`Drowned Happiness`
+
+fleet "TMBR Billboard"
+	government "Bounty (Disguised)"
+	names "drowned happiness"
+	personality timid
+	cargo 1
+	outfitters "Nuke"
+	variant
+		"Container Transport (Billboard TMBR)"
+
+mission "Peace Tour 1"
+	name "Promotion Tour"
+	description "Escort the <npc> to the planets marked on the map. Then return them to <destination>. Payment is 1,000,000 credits."
+	source
+		attributes "frontier"
+	stopover
+		attributes "pirate" "independent"
+		attributes "spaceport"
+	stopover
+		attributes "pirate" "independent"
+		attributes "spaceport"
+	stopover
+		attributes "pirate" "independent"
+		attributes "spaceport"
+	stopover
+		attributes "pirate" "independent"
+		attributes "spaceport"
+	stopover
+		attributes "pirate" "independent"
+		attributes "spaceport"
+	stopover
+		attributes "pirate" "independent"
+		attributes "spaceport"
+	destination
+		attributes "paradise"
+		attributes "spaceport"
+	to offer
+		has "main plot completed"
+		random < 30
+	on offer
+		conversation
+			scene "portrait/human59"
+			`A freighter captain approaches you from his ship. "Sorry to ask this of you, but my escort ditched me. I still have several more stops to spread the message of intergalactic peace. Won't you help me?"`
+			choice
+				`	(Offer to escort him the rest of the way.)`
+				`	(Refuse to help.)`
+					defer
+			`	"Awesome, we'll make the galaxy a better place. See you in orbit!"`
+				accept
+	on stopover
+		dialog `It was a long trip, but the <npc> finally finished spreading it's message of peace. It's time to take it home to <destination>.`
+	on abort
+		conversation
+			scene "portrait/human59"
+			`"You're leaving me stranded here? Thanks for nothing."`
+	on fail
+		conversation
+			scene "outfit/nuke"
+			`The <npc> had some interesting cargo... It's now scattered across space, available for anyone to pick up.`
+	npc accompany save
+		government "Bounty (Disguised)"
+		personality target timid
+		fleet "TMBR Billboard"
+	on complete
+		event "add nukes of peace"
+		conversation
+			scene "portrait/human59"
+			`The captain of the <npc> thanks you for your help. Your payment, and a bonus package, are waiting for you at the spaceport.`
+		dialog `Go to the spaceport to get your reward.`
+
+event "add nukes of peace"
+	system Almaaz
+		add fleet NukeNorth 20000
+	system Alnilam
+		add fleet NukeNorth 20000
+	system Arneb
+		add fleet NukeNorth 20000
+	system Hatysa
+		add fleet NukeNorth 20000
+	system Unagi
+		add fleet NukeNorth 20000
+	system Danoa 
+		add fleet NukeNorth 20000
+	system Alcyone
+		add fleet NukeCore 20000
+	system Algenib
+		add fleet NukeCore 20000
+	system Almach
+		add fleet NukeCore 20000
+	system Durax
+		add fleet NukeCore 20000
+	system Gienah
+		add fleet NukeCore 20000
+	system Oblate
+		add fleet NukeCore 20000
+	system Antares
+		add fleet NukeSouth 20000
+	system Men
+		add fleet NukeSouth 20000
+	system Nunki
+		add fleet NukeSouth 20000
+	system Shaula
+		add fleet NukeSouth 20000
+	system Archipelago
+		add fleet NukeNorth 20000
+		add fleet NukeCore 20000
+		add fleet NukeSouth 20000
+	system Chasm
+		add fleet NukeNorth 20000
+		add fleet NukeCore 20000
+		add fleet NukeSouth 20000
+	system Diyu
+		add fleet NukeNorth 20000
+		add fleet NukeCore 20000
+		add fleet NukeSouth 20000
+
+
+mission "Peace Tour 2"
+	invisible
+	to offer
+		has "Peace Tour 1: done"
+	on offer
+		conversation
+			scene "outfit/nuke"
+			`A package was left for you by a client. You open it to find a nasty surprise: a nuclear warhead with a countdown timer!`
+			choice
+				`	(Run.)`
+					goto explode
+				`	(Try to disarm it.)
+			branch disarm
+				random < 20
+				
+			scene "scene/scene-explosion"
+			`	Despite your best efforts, there is no escaping the explosion.`
+				die
+
+			label disarm
+			`	Somehow, you managed to safely disarm a nuclear warhead!`
+				goto end
 			
+			label end
+			scene "portrait/human59"
+			`	The government of <origin> is grateful for your assistance and rewards you with 1,000,000 credits. They have issued an additional 1,000,000 credit bounty on the person that left you the rigged nuclear device.`
+				accept
+	on accept
+		payment 1000000
+	npc kill
+		government "Bounty"
+		system
+			distance 2 3
+		personality target uninterested fleeing
+		fleet "TMBR Billboard"
+		dialog `You finally stopped the <npc> from distributing nukes across the galaxy. Return to <origin> to collect the bounty.`
+	on complete
+		event "remove nukes of peace" 30
+		payment 1000000
+		conversation
+			scene "scene/scene-peace bounty"
+			`	The government of <origin> is grateful for your assistance in stopping this dangerous fugitive and rewards you with 1,000,000 credits.`
+
+event "remove nukes of peace"
+	system Almaaz
+		remove fleet NukeNorth 20000
+	system Alnilam
+		remove fleet NukeNorth 20000
+	system Arneb
+		remove fleet NukeNorth 20000
+	system Hatysa
+		remove fleet NukeNorth 20000
+	system Unagi
+		remove fleet NukeNorth 20000
+	system Danoa 
+		remove fleet NukeNorth 20000
+	system Alcyone
+		remove fleet NukeCore 20000
+	system Algenib
+		remove fleet NukeCore 20000
+	system Almach
+		remove fleet NukeCore 20000
+	system Durax
+		remove fleet NukeCore 20000
+	system Gienah
+		remove fleet NukeCore 20000
+	system Oblate
+		remove fleet NukeCore 20000
+	system Antares
+		remove fleet NukeSouth 20000
+	system Men
+		remove fleet NukeSouth 20000
+	system Nunki
+		remove fleet NukeSouth 20000
+	system Shaula
+		remove fleet NukeSouth 20000
+	system Archipelago
+		remove fleet NukeNorth 20000
+		remove fleet NukeCore 20000
+		remove fleet NukeSouth 20000
+	system Chasm
+		remove fleet NukeNorth 20000
+		remove fleet NukeCore 20000
+		remove fleet NukeSouth 20000
+	system Diyu
+		remove fleet NukeNorth 20000
+		remove fleet NukeCore 20000
+		remove fleet NukeSouth 20000
+
+mission "Midnight Market: Nukes of Peace?"
+	invisible
+	source
+		government "Pirate" "Independent"
+		not attributes "uninhabited"
+	to offer
+		random < 20 + "Midnight Market"
+		has "event: add nukes of peace"
+		not "event: remove nukes of peace"
+		"credits" > 4000000
+	on offer
+		conversation
+			`	One of the locals approaches you. "<first> <last>, welcome to <origin>. We believe you would be a suitable client for some special merchandise we happen to have available."`
+			choice
+				`	"What are you offering?"`
+					goto deal
+				`	"How do you know my name?"`
+				`	"I'm not interested in buying anything right now."`
+					defer
+			`	"That's not important. Are you interested or not?"`
+			choice
+				`	"What are you offering?"`
+					goto deal
+				`	"I'm not interested."`
+					defer
+			label deal
+			`	"Please follow me." The stranger leads you through a series of sidestreets and alleys. You pass by several shops selling strange food and exotic merchandise. As you walk, you can't help but notice you are getting farther away from the spaceport...`
+			choice
+				`	(Continue following the stranger.)`
+				`	(Ditch the stranger and return to the spaceport.)`
+					defer
+			branch legitimate
+				random < 75
 				
+			`	Suddenly you are ambushed from behind! There's no room for discussion. These people are out for blood!`
+			choice
+				`	(Fight.)`
+				`	(Run.)
+					goto death
+			
+			branch death
+				random < 25
 				
+			`	Fortunately you are armed and manage to fight off your attackers. With nothing better to do, you decide to check out some of those shops on the long walk back to the spaceport.`
+				defer
+				
+			label death
+			scene "scene/scene-bloodyknife"
+			`	Sudden pain pierces your back! You turn to see one of your attackers holding a knife covered with your blood. The rest of them close in to finish you off...`
+				die
+			
+			label legitimate
+			scene "outfit/nuke"
+			`	After a long walk you arrive at what looks like an abandoned store. The doors and windows are boarded up. Despite this, you notice someone move to hide behind a curtain on the upper floor. The stranger leads you to a side entrance. Inside are a pair of massive crates. The stranger opens one, saying "Behold! Nuclear missiles, a powerful addition to your arsenal. Just confirm payment of 2,000,000 credits on this datapad and they're yours.`
+			choice
+				`	(Buy the Nuclear Missiles.)`
+					goto purchase
+				`	(Don't buy the Nuclear Missiles.)`
+					goto refuse
+				`	(Steal the Nuclear Missiles.)`
+			`	You pull out your gun and tell the stranger you'll be taking the missiles for free.`
+			branch thief
+				random < 20
+			scene "scene/scene-bloodyknife"
+			`	The room explodes in a burst of violence as guards suddenly swarm in from other rooms in the building. You manage to put several down before one of them gets lucky with a knife. Your hands become slick with blood as you grasp at the wound. The surviving guards put a bullet into your head.`
+				die
+			
+			label thief
+			`	The room explodes in a burst of violence as guards suddenly swarm in from other rooms in the building. Though you expend all of your bullets in the fire fight, you miraculously come out of that bloodbath unharmed. A search of the building reveals several more crates in a hidden underground bunker. You begin the arduous task of hauling them back to your ship.`
+				decline
+			
+			label refuse
+			`	The stranger puts away the datapad while some guards enter from adjoining rooms. "It appears our negotiations have failed. Please find your own way back to the spaceport." You begin the long walk back. Maybe you can grab something to eat from one of the shops you passed earlier...`
+				defer
+			
+			label purchase
+			`	"Good choice captain. We'll help haul them back to your ship." Several burly men appear from other rooms in the building and help load the crates into a truck. The ride back is smooth and uneventful.`
+				accept
+	on decline
+		outfit "Nuclear Missile" 50
+		"Midnight Market" -= 50
+	on accept
+		payment -2000000
+		outfit "Nuclear Missile" 2
+		"Midnight Market" ++
+		clear "Midnight Market: Nukes of Peace?: offered"
+		fail
+
+
+
+phrase "subsi tours"
+	word
+		`Subsi Tours`
+
+fleet "Subsi Tours"
+	government "Merchant"
+	names "subsi tours"
+	personality appeasing pacifist
+	cargo 1
+	commodities "Luxury Goods"
+	variant
+		"Parade Float"
+
+fleet "Subs Billboard"
+	government "Merchant"
+	names "civilian"
+	personality timid appeasing
+	cargo 1
+	commodities "Luxury Goods"
+	variant
+		"Container Transport (Billboard Subs)"
+
+mission "Promotion Tour: Subsi"
+	job
+	deadline
+	name "Promotion Tour"
+	description "Escort the marketing ship Subsi Tours to the planets marked on the map. Then return them to <destination> by <date>. Payment is <payment>."
+	source
+		attributes "paradise"
+		attributes "spaceport"
+	stopover
+		attributes "paradise"
+		attributes "spaceport"
+	stopover
+		attributes "paradise"
+		attributes "spaceport"
+	stopover
+		attributes "paradise"
+		attributes "spaceport"
+	stopover
+		attributes "paradise"
+		attributes "spaceport"
+	stopover
+		attributes "paradise"
+		attributes "spaceport"
+	stopover
+		attributes "paradise"
+		attributes "spaceport"
+	stopover
+		attributes "paradise"
+		attributes "spaceport"
+	stopover
+		attributes "paradise"
+		attributes "spaceport"
+	to offer
+		random < 60
+		"reputation: Merchant" > 20
+		"combat rating" > 20
+	on accept
+		conversation
+			branch "another tour"
+				has "Promotion Tour: Subsi: done"
+			scene "thumbnail/float subsidurial"
+			`	The client's ship looks like a pink Subsidurial. While talking to its captain, you learn that these types of ships are custom made for appearances in parades and promotional tours like the one you're about to escort. The ship is unarmed, so they'll be relying on you for protection from pirates or other threats.`
+			scene "scene/scene-subs billboard"
+			`	The client informs you that additional billboard ships will be touring the area. However, they will not be following the same route as the Subsi Tours.`
+				goto end
+			label "another tour"
+			scene "thumbnail/float subsidurial"
+			`	You see a familiar ship when you get to the client's landing pad. You engage the captain in some light conversation as you go over the tour route.`
+				goto end
+			label end
+			`	Your preparations for the tour are complete.`
+				accept
+	npc
+		government "Merchant"
+		system
+			distance 1
+		personality timid appeasing uninterested
+		fleet "Subs Billboard"
+	npc
+		government "Merchant"
+		system
+			distance 1
+		personality timid appeasing uninterested
+		fleet "Subs Billboard"
+	npc
+		government "Merchant"
+		system
+			distance 1
+		personality timid appeasing uninterested
+		fleet "Subs Billboard"		
+	npc accompany save
+		government "Merchant"
+		personality target escort launching appeasing pacifist
+		fleet "Subsi Tours"
+	on stopover
+		dialog "You've completed the marketing tour. It's time to escort the Subsi Tours back to <destination>."
+	on visit
+		dialog "You've arrived at <planet> but the Subsi Tours is missing! Return to orbit and locate them!"
+	on abort
+		"reputation: Merchant" -= 10
+		dialog "When you abort this mission the client files a report with the merchant's association."
+	on fail
+		"reputation: Merchant" -= 10
+		dialog "There are some nasty rumors that you betrayed your client and hijacked the Subsi Tours yourself..."
+	on complete
+		clear "Promotion Tour: Subsi: offered"
+		"reputation: Merchant" ++
+		payment 400000
+		outfit "Subsidurial Plushie" 1
+		conversation
+			scene "outfit/subsidurial plushie"
+			`	After completing the tour you are paid <payment>. The client also gives you one of the leftover promotional items as a bonus tip.`
+
+
 mission "Pot-o'-honey"
 	name "Escort to <planet>"
 	description "The captain of the Pot-o'-honey will pay you <payment> to escort them safely into a dangerous region of space to reach <destination>."
