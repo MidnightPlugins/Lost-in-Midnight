@@ -307,21 +307,6 @@ outfit "T.H.O.R."
 	"required crew" 2
 	"unplunderable" 1
 
-mission "Outfit Recovery: T.H.O.R."
-	landing
-	invisible
-	repeat
-	to offer
-		has "T.H.O.R."
-	on offer
-		require "T.H.O.R." 0
-		conversation
-			scene "outfit/thor"
-			"While cleaning up the ship, you find T.H.O.R. hidden in an out of the way corner."
-				decline
-	on decline
-		outfit "T.H.O.R." 1
-
 
 
 # Sometimes T.H.O.R. is damaged in THOR missions.
