@@ -767,15 +767,15 @@ event "Genesis Cryoships Deployed"
 				distance 348
 				period 25.9468
 				offset 224.845
-			object "Revelations"
-				sprite planet/station2ver8
-				distance 348
-				period 25.9468
-				offset 224.845
 			object
 				sprite planet/rhea
 				distance 520
 				period 47.3937
+				offset 196.692
+			object "Revelations"
+				sprite planet/station2ver8
+				distance 600
+				period 35.9468
 				offset 196.692
 	planet "The Garden"
 		landscape land/nasa4
@@ -849,15 +849,15 @@ event "Genesis Revelation patch3"
 				distance 348
 				period 25.9468
 				offset 224.845
-			object "Revelations"
-				sprite planet/station2ver8
-				distance 348
-				period 25.9468
-				offset 224.845
 			object
 				sprite planet/rhea
 				distance 520
 				period 47.3937
+				offset 196.692
+			object "Revelations"
+				sprite planet/station2ver8
+				distance 600
+				period 35.9468
 				offset 196.692
 	planet "Revelations"
 		attributes midnight genesis
