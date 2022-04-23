@@ -216,20 +216,20 @@ ship "Carabao"
 		
 	engine -13.5 227
 	engine 23 226
-	gun -39 -182.5 "Ion Cannon"
+	gun -39 -182.5 "Heavy Laser"
 		parallel
-	gun -56 -176 "Pulse Cannon"
+	gun -56 -176 "Heavy Laser"
 		parallel
-	gun 44.5 -170 "Bombardment Cannon"
+	gun 44.5 -170 "Torpedo Launcher"
 		parallel
-	gun 61 -134 "Shard Fabricator"
+	gun 61 -134 "Torpedo Launcher"
 		parallel
-	turret 3.5 -123.5 "Ka'het Ravager Turret"
-	turret -54 -45.5 "Ka'het Annihilator Turret"
-	turret 36.5 3.5 "Quarg Anti-Missile"
-	turret -36 24 "Ka'het Annihilator Turret"
-	turret 28 97.5 "Point Defense Turret"
-	turret -4.5 115.5 "Ka'het Ravager Turret"
+	turret 3.5 -123.5 "Heavy Anti-Missile Turret"
+	turret -54 -45.5 "Heavy Laser Turret"
+	turret 36.5 3.5 "Heavy Laser Turret"
+	turret -36 24 "Heavy Laser Turret"
+	turret 28 97.5 "Heavy Laser Turret"
+	turret -4.5 115.5 "Heavy Anti-Missile Turret"
 	bay "Drone" -8 -115
 	bay "Drone" 31 -95
 	bay "Drone" -43 -37
