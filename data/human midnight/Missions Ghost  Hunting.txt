@@ -1046,6 +1046,30 @@ mission "Ghost Hunting: Curse of the Carabao 1"
 
 
 
+mission "Ghost Hunting: Curse of the Carabao 2"
+	source
+		attributes "frontier"
+		not attributes "uninhabited"
+	to offer
+		has "curse of the carabao"
+	on offer
+		require "Carabao AI"
+		conversation
+			scene "thumbnail/carabao-thumb"
+			`You notice one of the locals looking at the Carabao from the edge of the landing pad.`
+			`He notices you and says, "I feel sorry for whoever owns that ship."`
+			choice
+				`	"Why?"`
+				`	"I own that ship."
+					goto scare
+			`He responds, "That's a Carabao. Those ships are cursed! Back in the colonization days, the unfortunate colonists who traveled on those ships died grisly and gruesome deaths as the automated systems went haywire and run amok."`
+			choice
+				`	"I own that ship."
+			label scare
+			`"Oh."
+				decline
+			
+
 phrase "curse of the carabao"
 	word
 		`When you arrive at port, you discover that one of your passengers `
