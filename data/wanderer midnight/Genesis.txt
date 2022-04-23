@@ -767,7 +767,7 @@ event "Genesis Cryoships"
 				distance 348
 				period 25.9468
 				offset 224.845
-			object "Revelation"
+			object "Revelations"
 				sprite planet/station2ver8
 				distance 348
 				period 25.9468
@@ -784,7 +784,7 @@ event "Genesis Cryoships"
 		landscape land/nasa2
 		description `The Childen of The Garden have developed this spacecolony into a thriving city.`
 		spaceport `The landing pads are a bit smaller than you're accustomed to, but this is otherwise a fully serviceable spaceport.`
-	planet "Revelation"
+	planet "Revelations"
 		attributes midnight genesis
 		landscape land/sivael0
 		description `The Childen of The Garden have deployed this space station on the edge of their solar system to study conditions in deep space.`
