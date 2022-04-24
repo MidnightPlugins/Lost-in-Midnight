@@ -11,7 +11,45 @@
 
 
 
-
+fleet "Poachers"
+	government "Creature Hunter"
+	personality vindictive harvests coward
+	cargo 0
+	variant 1
+		"Modified Argosy"
+	variant 1
+		"Modified Argosy (Blaster)"
+	variant 1
+		"Modified Argosy (Heavy)"
+	variant 1
+		"Modified Argosy (Missile)"
+	variant
+		"Modified Argosy (Smuggler)"
+	variant 1
+		"Modified Argosy"
+		"Modified Argosy (Blaster)"
+	variant 1
+		"Modified Argosy"
+		"Modified Argosy (Heavy)"
+	variant 1
+		"Modified Argosy"
+		"Modified Argosy (Missile)"
+	variant 1
+		"Modified Argosy"
+		"Modified Argosy (Smuggler)"
+	variant	3
+		"Clipper"
+	variant	3
+		"Clipper (Heavy)"
+	variant	3
+		"Clipper"
+		"Clipper (Heavy)"
+	variant	4
+		"Clipper"
+		"Modified Argosy"
+	variant	4
+		"Clipper (Heavy)"
+		"Modified Argosy"
 
 
 fleet "Large Scar's Legion"

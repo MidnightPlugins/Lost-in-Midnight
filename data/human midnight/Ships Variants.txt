@@ -516,7 +516,7 @@ ship "Falcon" "Falcon (Remnant)"
 
 
 
-ship "Frigate" "Frigate (Pug)
+ship "Frigate" "Frigate (Pug)"
 	outfits
 		"A250 Atomic Thruster"
 		"A375 Atomic Steering"
