@@ -161,7 +161,7 @@ mission "Subsidurial Herding Job Easy"
 	destination Greenrock
 	to offer
 		has "First Contact: Subsidurials: offered"
-		random < 20 + "subsidurial herding"
+		random < 15
 	on accept
 		dialog "The Subsidurials are shackled with collars. If they stray too far from your ship, the collar inflicts pain on the creature."
 	npc accompany save
@@ -176,13 +176,11 @@ mission "Subsidurial Herding Job Easy"
 				"Subsidurial Tamed" 5
 	on abort
 		"reputation: Pirate" --
-		"subsidurial herding" -= 10
 		conversation
 			scene "thumbnail/subsidurial"
 			`You release the collars and set the Subsidurials free. This will probably ruin your reputation with the client, but at least these creatures won't suffer anymore. Perhaps it's just your imagination, but one of them seems to nod in thanks before departing.`
 	on fail
 		"reputation: Pirate" --
-		"subsidurial herding" -= 10
 		dialog "You failed to safely deliver the herd to your client."
 	on visit
 		dialog `You've arrived at <planet>, but some of the Subsidurials are missing! Return to orbit and search for them.`
@@ -203,7 +201,7 @@ mission "Subsidurial Herding Job Hard"
 	destination Greenrock
 	to offer
 		has "First Contact: Subsidurials: offered"
-		random < 20 + "subsidurial herding"
+		random < 15
 	on accept
 		dialog "The Subsidurials are shackled with collars. If they stray too far from your ship, the collar inflicts pain on the creature."
 	npc accompany save
@@ -218,13 +216,11 @@ mission "Subsidurial Herding Job Hard"
 				"Subsidurial Tamed" 5
 	on abort
 		"reputation: Pirate" --
-		"subsidurial herding" -= 10
 		conversation
 			scene "thumbnail/subsidurial"
 			`You release the collars and set the Subsidurials free. This will probably ruin your reputation with the client, but at least these creatures won't suffer anymore. Perhaps it's just your imagination, but one of them seems to nod in thanks before departing.`
 	on fail
 		"reputation: Pirate" --
-		"subsidurial herding" -= 10
 		dialog "You failed to safely deliver the herd to your client."
 	on visit
 		dialog `You've arrived at <planet>, but some of the Subsidurials are missing! Return to orbit and search for them.`
@@ -264,7 +260,7 @@ mission "Subsidurial Herding Mission Easy"
 	destination Greenrock
 	to offer
 		has "First Contact: Subsidurials: offered"
-		random < 15 + "subsidurial herding"
+		random < 10
 	on offer
 		dialog phrase "subsidurial herd offer"
 	on accept
@@ -279,6 +275,12 @@ mission "Subsidurial Herding Mission Easy"
 				"Subsidurial Tamed" 4
 			variant
 				"Subsidurial Tamed" 5
+	npc
+		government "Creature Hunter"
+		system
+			distance 1 2
+		personality vindictive harvests coward
+		fleet "Poachers"
 	on abort
 		conversation
 			scene "thumbnail/subsidurial"
@@ -289,7 +291,6 @@ mission "Subsidurial Herding Mission Easy"
 		dialog `You've arrived at <planet>, but some of the Subsidurials are missing! Return to orbit and search for them.`
 	on complete
 		"reputation: Pirate" ++
-		"subsidurial herding" ++
 		payment 200000
 		dialog "You deliver the herd to your client and are rewarded with <payment>. The Subsidurials are sedated in cages and carted away..."
 
@@ -304,7 +305,7 @@ mission "Subsidurial Herding Mission Hard"
 	destination Greenrock
 	to offer
 		has "First Contact: Subsidurials: offered"
-		random < 15 + "subsidurial herding"
+		random < 10
 	on offer
 		dialog phrase "subsidurial herd offer"
 	on accept
@@ -319,6 +320,12 @@ mission "Subsidurial Herding Mission Hard"
 				"Subsidurial Tamed" 4
 			variant
 				"Subsidurial Tamed" 5
+	npc
+		government "Creature Hunter"
+		system
+			distance 1 2
+		personality vindictive harvests coward
+		fleet "Poachers"
 	on abort
 		conversation
 			scene "thumbnail/subsidurial"
@@ -329,7 +336,6 @@ mission "Subsidurial Herding Mission Hard"
 		dialog `You've arrived at <planet>, but some of the Subsidurials are missing! Return to orbit and search for them.`
 	on complete
 		"reputation: Pirate" ++
-		"subsidurial herding" ++
 		payment 400000
 		dialog "You deliver the herd to your client and are rewarded with <payment>. The Subsidurials are sedated in cages and carted away..."
 
@@ -401,15 +407,15 @@ mission "Day of Subsidurius"
 		fleet "Small Militia"
 	npc evade
 		government "Independent (Killable)"
-		personality target vindictive coward mute
+		personality target waiting vindictive coward mute
 			confusion 120
 		fleet
 			variant
-				"Subsidurial Weaponized A" 4
-				"Subsidurial Weaponized B" 4
+				"Subsidurial Weaponized A" 8
+				"Subsidurial Weaponized B" 8
 	npc kill
 		government "Independent (Killable)"
-		personality target vindictive coward
+		personality target waiting vindictive coward
 			confusion 20
 		ship "Subsidurius" "Subsidurius"
 		dialog `The Subsidurius has been defeated. Return to <planet> to collect your reward.`
