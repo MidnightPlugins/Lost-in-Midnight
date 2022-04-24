@@ -279,7 +279,7 @@ mission "Midnight Market: Coalition Smuggling 1"
 			not "Randomize Midnight Market: Coalition Smuggling 1"
 			and
 				has "Randomize Midnight Market: Coalition Smuggling 1"
-				random < 20
+				random < 10
 	on offer
 		conversation
 			`You receive a message indicating a job opportunity on Poisonwood. It involves escorting a ship outside of human space. The address is for a warehouse near the Poisonwood spaceport. Payment is 1,000,000`
