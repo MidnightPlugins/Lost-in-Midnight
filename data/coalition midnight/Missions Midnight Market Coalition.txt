@@ -102,9 +102,12 @@ mission "Midnight Market: Trailblazer Auction"
 			`	After signing off on the transfer forms, you look upon your new ship. You make a mental note to take it to an outfitter as soon as possible to get a closer look at those guns...`
 				accept
 	on decline
+		set "trailblazer encountered"
 		event "stolen trailblazer timer" 30
 		log `I saw a Saryd Trailblazer sold at a Coalition auction. I was amazed that the Heliarch allowed the ship to be sold with its guns installed. There is still much for me to learn about the Coalition's legal system regarding civilian weapon ownership.`
 	on accept
+		set "trailblazer encountered"
+		event "Model Guns For Sale"
 		payment -44000000
 		give ship "Saryd Trailblazer (Antique)" "Exturebus Maglorumus"
 		log `Won a Saryd Trailblazer at auction. This is supposedly a rare antique from the time of the Coalition's rebellion against the Quarg. Since the Coalition does not allow citizens to arm their ships, the previous owner outfitted it with model guns to give it an authentic appearance.`
@@ -504,9 +507,13 @@ mission "Midnight Market: Coalition Smuggler Patrols"
 	landing
 	invisible
 	to offer
-		has "Midnight Market: Coalition Smuggling 4: done"
+		or
+			has "Midnight Market: Coalition Smuggling 2: done"
+			has "Midnight Market: Coalition Smuggling 3: done"
+			has "Midnight Market: Coalition Smuggling 4: done"
 	on offer
 		event "Coalition Patrolling Southern Rim" 30
+		event "Model Guns For Sale"
 		fail
 
 fleet "Coalition Smuggler Patrol"
@@ -544,6 +551,7 @@ mission "Midnight Market: Coalition Smuggling Bounty (Kimek)"
 		government "Coalition"
 	to offer
 		has "event: Coalition Patrolling Southern Rim"
+		random < 15
 	npc board
 		government "Independent"
 		system
@@ -552,7 +560,6 @@ mission "Midnight Market: Coalition Smuggling Bounty (Kimek)"
 		fleet "Independent Kimek Smuggler"
 		dialog `You've captured one of the crew members. Bring them to <destination> for questioning.`
 	on complete
-		"reputation: Coalition" ++
 		"reputation: Heliarch" ++
 		payment 150000
 		dialog `Your assistance with stopping the smugglers is appreciated by the Heliarchs. They pay you <payment> for your efforts.`
@@ -568,6 +575,7 @@ mission "Midnight Market: Coalition Smuggling Bounty (Saryd)"
 		government "Coalition"
 	to offer
 		has "event: Coalition Patrolling Southern Rim"
+		random < 15
 	npc board
 		government "Independent"
 		system
@@ -576,7 +584,6 @@ mission "Midnight Market: Coalition Smuggling Bounty (Saryd)"
 		fleet "Independent Saryd Smuggler"
 		dialog `You've captured one of the crew members. Bring them to <destination> for questioning.`
 	on complete
-		"reputation: Coalition" ++
 		"reputation: Heliarch" ++
 		payment 150000
 		dialog `Your assistance with stopping the smugglers is appreciated by the Heliarchs. They pay you <payment> for your efforts.`
@@ -592,6 +599,7 @@ mission "Midnight Market: Coalition Smuggling Bounty (Arach)"
 		government "Coalition"
 	to offer
 		has "event: Coalition Patrolling Southern Rim"
+		random < 15
 	npc board
 		government "Independent"
 		system
@@ -600,7 +608,6 @@ mission "Midnight Market: Coalition Smuggling Bounty (Arach)"
 		fleet "Independent Arach Smuggler"
 		dialog `You've captured one of the crew members. Bring them to <destination> for questioning.`
 	on complete
-		"reputation: Coalition" ++
 		"reputation: Heliarch" ++
 		payment 150000
 		dialog `Your assistance with stopping the smugglers is appreciated by the Heliarchs. They pay you <payment> for your efforts.`
