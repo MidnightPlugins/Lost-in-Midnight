@@ -21,19 +21,9 @@ mission "Midnight Scar (non-Hai)"
 		fail
 
 event "midnight scar's hideout"
-	system Danoa
-		remove trade Clothing
-		remove trade Electronics
-		remove trade Equipment
-		remove trade Food
-		remove trade "Heavy Metals"
-		remove trade Industrial
-		remove trade "Luxury Goods"
-		remove trade Medical
-		remove trade Metal
-		remove trade Plastic
 	planet "Scar's Hideout"
 		attributes north pirate station
+		description "Scar's Hideout is a hollowed-out asteroid used by Scar's Legion as their main base of operations. From here they harass anyone making the journey through the uninhabited systems of the Far North. Recently the gang has reduced their activities due a change of leadership."
 		government "Pirate"
 		outfitter "Ammo North"
 		outfitter "Ammo South"
@@ -44,6 +34,7 @@ event "midnight scar's hideout"
 			threshold 625
 			fleet "Large Northern Pirates" 1
 			fleet "Small Northern Pirates" 8
+			fleet "Scar's Asteroid Defense" 8
 
 
 
@@ -78,16 +69,6 @@ event "midnight scar's hideout (Hai)"
 		add fleet "Small Scar's Legion" 5000
 		add fleet "Large Scar's Legion" 15000
 		fleet "Scar's Asteroid Defense" 20000
-		remove trade Clothing
-		remove trade Electronics
-		remove trade Equipment
-		remove trade Food
-		remove trade "Heavy Metals"
-		remove trade Industrial
-		remove trade "Luxury Goods"
-		remove trade Medical
-		remove trade Metal
-		remove trade Plastic
 	planet "Scar's Hideout"
 		attributes north pirate station
 		outfitter "Ammo North"
