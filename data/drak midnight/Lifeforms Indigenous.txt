@@ -161,7 +161,7 @@ mission "Subsidurial Herding Job Easy"
 	destination Greenrock
 	to offer
 		has "First Contact: Subsidurials: offered"
-		random < 15
+		random < 10
 	on accept
 		dialog "The Subsidurials are shackled with collars. If they stray too far from your ship, the collar inflicts pain on the creature."
 	npc accompany save
@@ -201,7 +201,7 @@ mission "Subsidurial Herding Job Hard"
 	destination Greenrock
 	to offer
 		has "First Contact: Subsidurials: offered"
-		random < 15
+		random < 10
 	on accept
 		dialog "The Subsidurials are shackled with collars. If they stray too far from your ship, the collar inflicts pain on the creature."
 	npc accompany save
@@ -260,7 +260,8 @@ mission "Subsidurial Herding Mission Easy"
 	destination Greenrock
 	to offer
 		has "First Contact: Subsidurials: offered"
-		random < 10
+		not "Day of Subsidurius: offered"
+		random < 5
 	on offer
 		dialog phrase "subsidurial herd offer"
 	on accept
@@ -305,7 +306,8 @@ mission "Subsidurial Herding Mission Hard"
 	destination Greenrock
 	to offer
 		has "First Contact: Subsidurials: offered"
-		random < 10
+		not "Day of Subsidurius: offered"
+		random < 5
 	on offer
 		dialog phrase "subsidurial herd offer"
 	on accept
@@ -325,7 +327,7 @@ mission "Subsidurial Herding Mission Hard"
 		system
 			distance 1 2
 		personality vindictive harvests coward
-		fleet "Poachers"
+		fleet "Poachers" 2
 	on abort
 		conversation
 			scene "thumbnail/subsidurial"
@@ -399,14 +401,13 @@ mission "Day of Subsidurius"
 	on defer
 		"day of subsidurius" ++
 	on enter
-		"reputation: Independent (Killable)" <?= -1000
 		dialog `The defense fleet is hailed by a mysterious ship. "Pray for salvation! The Day of Subsidurius has arrived!"`
 	npc
 		government "Militia"
 		personality heroic disables
 		fleet "Small Militia"
 	npc evade
-		government "Independent (Killable)"
+		government "Pirate"
 		personality target waiting vindictive coward mute
 			confusion 120
 		fleet
@@ -414,20 +415,72 @@ mission "Day of Subsidurius"
 				"Subsidurial Weaponized A" 8
 				"Subsidurial Weaponized B" 8
 	npc kill
-		government "Independent (Killable)"
+		government "Pirate"
 		personality target waiting staying vindictive
 			confusion 20
 		ship "Subsidurius" "Subsidurius"
 		dialog `The Subsidurius has been defeated. Return to <planet> to collect your reward.`
 	on visit
 		dialog `Threats in orbit haven't been dealt with! Get back up there and defend the planet!`
-	on abort
-		"reputation: Independent (Killable)" >?= 10
 	on complete
-		"reputation: Independent (Killable)" >?= 10
-		payment 150000
+		payment 350000
 		log `A maniac planned to conquer the galaxy with a herd of weaponized Subsidurials. I managed to foil the diabolical scheme. Unfortunately, I can't claim that no Subsidurials were harmed during the battle.`
 		dialog `The government of <planet> pays you <payment> for helping defend against the Subsidurius.`
+
+
+
+mission "Weaponized Subsidurial Bounty"
+	name "Weaponized Subsidurials near <system>"
+	description "The <npc> and its herd of weaponized Subsidurials are attacking merchants near <system>. Destroy the <npc> and report to <destination>. Payment is payment." 
+	source
+		government "Free Worlds"
+	to offer
+		has "Day of Subsidurius: done"
+		random < 10
+	npc
+		government "Bounty"
+		personality target entering plundering mute
+			confusion 120
+		fleet
+			variant
+				"Subsidurial Weaponized A" 3
+				"Subsidurial Weaponized B" 4
+	npc kill
+		government "Bounty"
+		personality target entering staying vindictive
+			confusion 20
+		fleet "Poachers"
+		dialog `The <npc> has been defeated. Return to <planet> to collect your reward.`
+	on complete
+		payment 250000
+		dialog `The government of <planet> pays you <payment> for helping eliminate the <npc>.`
+
+
+
+mission "Weaponized Subsidurial Stray"
+	name "Stray Weaponized Subsidurial"
+	description "A stray weaponized Subsidurial is wandering near <system>. Find and herd it back to <destination> to be de-weaponized. Payment is <payment>."
+	source
+		government "Free Worlds"
+	to offer
+		has "Day of Subsidurius: done"
+		random < 5
+	npc accompany save
+		government "Indigenous Lifeform"
+		system
+			distance 1
+		personality target mining plundering mute
+			confusion 120
+		fleet
+			variant
+				"Subsidurial Weaponized A"
+			variant
+				"Subsidurial Weaponized B"
+	on complete
+		payment 100000
+		dialog `The government of <planet> pays you <payment> for helping de-weaponize the Subsidurial.`
+		
+
 
 mission "Midnight Market: Pet Subsidurial"
 	invisible
@@ -1772,7 +1825,7 @@ mission "Coalition: Exterminate Plasma Parasites 1"
 	on complete
 		"coalition jobs" ++
 		payment 500000
-		dialog `The Heliarchs are grateful for your assistance with eliminating the parasitic infestation and reward you with <payment>.`
+		dialog `While the collateral damage was severe, the Heliarchs are grateful for your assistance with eliminating the parasitic infestation and reward you with <payment>.`
 
 mission "Coalition: Exterminate Plasma Parasites 2"
 	job
@@ -1799,7 +1852,7 @@ mission "Coalition: Exterminate Plasma Parasites 2"
 	on complete
 		"coalition jobs" ++
 		payment 750000
-		dialog `The Heliarchs are grateful for your assistance with eliminating the parasitic infestation and reward you with <payment>.`
+		dialog `While the collateral damage was severe, the Heliarchs are grateful for your assistance with eliminating the parasitic infestation and reward you with <payment>.`
 
 mission "Coalition: Exterminate Plasma Parasites 3"
 	job
@@ -1826,5 +1879,5 @@ mission "Coalition: Exterminate Plasma Parasites 3"
 	on complete
 		"coalition jobs" ++
 		payment 1000000
-		dialog `The Heliarchs are grateful for your assistance with eliminating the parasitic infestation and reward you with <payment>.`
+		dialog `While the collateral damage was severe, the Heliarchs are grateful for your assistance with eliminating the parasitic infestation and reward you with <payment>.`
 
