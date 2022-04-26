@@ -634,3 +634,104 @@ ship "Saryd Visitor" "Saryd Visitor (Model)"
 		"Hyperdrive"
 
 
+
+
+ship "Heliarch Neutralizer" "Heliarch Neutralizer (Evidence)"
+	outfits
+		"Ion Rain Gun" 4
+		"Small Reactor Module" 2
+		"Large Battery Module"
+		"Overcharged Shield Module"
+		"Overclocked Repair Module"
+		"Cooling Module"
+		"Scanning Module" 2
+		"Enforcer Riot Staff" 9
+		"Enforcer Confrontation Gear" 11		
+		"Heliarch Corruption"
+		"Large Thrust Module"
+		"Small Thrust Module" 2
+		"Large Steering Module"
+		"Small Steering Module" 2
+		"Hyperdrive"
+
+ship "Heliarch Breacher" "Heliarch Breacher (Evidence)"
+	outfits
+		"Bombardment Cannon" 2
+		"Bombardment Turret"
+		"Finisher Pod"
+		"Finisher Torpedo" 40
+		"Small Reactor Module" 2
+		"Small Battery Module" 2
+		"Overcharged Shield Module"
+		"Overclocked Repair Module"
+		"Cooling Module" 2
+		"Scanning Module"
+		"Enforcer Riot Staff" 8
+		"Enforcer Confrontation Gear" 6		
+		"Heliarch Corruption"
+		"Large Thrust Module"
+		"Small Thrust Module" 3
+		"Small Steering Module"
+		"Hyperdrive"
+
+ship "Heliarch Interdictor" "Interdictor (Evidence)"
+	outfits
+		"Finisher Pod" 2
+		"Finisher Storage Tube"
+		"Finisher Torpedo" 100
+		"Heliarch Attractor"
+		"Heliarch Repulsor"
+		"Large Reactor Module"
+		"Large Battery Module"
+		"Overcharged Shield Module"
+		"Overclocked Repair Module"
+		"Cooling Module" 2
+		"Scanning Module" 3
+		"Enforcer Riot Staff" 28
+		"Enforcer Confrontation Gear" 30
+		"Heliarch Corruption"
+		"Large Thrust Module" 2
+		"Large Steering Module" 2
+		"Hyperdrive"
+
+ship "Heliarch Hunter" "Heliarch Hunter (Evidence)"
+	outfits
+		"Finisher Pod" 3
+		"Finisher Torpedo" 120
+		"Bombardment Turret"
+		"Heliarch Attractor"
+		"Large Reactor Module"
+		"Large Battery Module"
+		"Overcharged Shield Module"
+		"Overclocked Repair Module"
+		"Cooling Module" 2
+		"Scanning Module" 2
+		"Enforcer Riot Staff" 25
+		"Enforcer Confrontation Gear" 13		
+		"Heliarch Corruption"
+		"Large Thrust Module" 2
+		"Small Thrust Module"
+		"Large Steering Module"
+		"Small Steering Module" 2
+		"Scram Drive"
+
+ship "Heliarch Punisher" "Heliarch Punisher (Evidence)"
+	outfits
+		"Ion Rain Gun" 4
+		"Finisher Pod" 2
+		"Finisher Torpedo" 80
+		"Bombardment Turret" 4
+		"Large Reactor Module" 2
+		"Large Battery Module"
+		"Overcharged Shield Module" 2
+		"Overclocked Repair Module" 2
+		"Cooling Module" 4
+		"Scanning Module" 4
+		"Enforcer Riot Staff" 78
+		"Enforcer Confrontation Gear" 44
+		"Heliarch Corruption"
+		"Large Thrust Module" 2
+		"Small Thrust Module" 2
+		"Large Steering Module" 2
+		"Small Steering Module" 2
+		"Hyperdrive"

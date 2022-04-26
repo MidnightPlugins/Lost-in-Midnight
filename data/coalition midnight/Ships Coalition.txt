@@ -11,6 +11,63 @@
 
 
 
+
+ship "Kimek Bramble"
+	sprite "ship/kimek bramble"
+	thumbnail "thumbnail/kimek bramble-thumb"
+	attributes
+		category "Heavy Freighter"
+		licenses
+			Coalition
+		"cost" 11718750
+		"shields" 17750
+		"hull" 6125
+		"required crew" 16
+		"bunks" 46
+		"mass" 712
+		"drag" 8.9
+		"heat dissipation" .75
+		"fuel capacity" 800
+		"cargo space" 278
+		"outfit space" 498
+		"weapon capacity" 256
+		"engine capacity" 129
+		weapon
+			"blast radius" 140
+			"shield damage" 1400
+			"hull damage" 700
+			"hit force" 2100
+	outfits
+		"Large Collector Module"
+		"Small Collector Module"
+		"Large Battery Module"
+		"Large Shield Module"
+		"Small Shield Module"
+		
+		"Large Thrust Module" 2
+		"Large Steering Module" 2
+		"Small Steering Module"
+		"Hyperdrive"
+		
+	engine -23 178 .6
+	engine -13 175 .8
+	engine 13 175 .8
+	engine 23 178 .6
+	gun -14 -176
+	gun 14 -176
+	turret -42 65
+	turret 42 65
+	turret -42 95
+	turret 42 95
+	explode "small explosion" 10
+	explode "medium explosion" 30
+	explode "large explosion" 20
+	explode "huge explosion" 5
+	"final explode" "final explosion large"
+	description `The Bramble is a recent addition to Kimek fleets, giving them a viable option for transporting large amounts of time sensitive freight.`
+
+
+
 # This empty hull can be obtained from a Cartography mission.
 # A variant appears in an Oathbreaker mission.
 # One of multiple variants can be obtained from a Midnight Market mission.
