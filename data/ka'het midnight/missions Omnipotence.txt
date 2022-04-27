@@ -1,0 +1,538 @@
+# Copyright (c) 2021 by Michael Arsollon
+# derived from original game at https://github.com/endless-sky/endless-sky
+#
+# Endless Sky is free software: you can redistribute it and/or modify it under the
+# terms of the GNU General Public License as published by the Free Software
+# Foundation, either version 3 of the License, or (at your option) any later version.
+#
+# Endless Sky is distributed in the hope that it will be useful, but WITHOUT ANY
+# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+
+
+
+fleet "Unuk Billboard"
+	government "Merchant"
+	names "civilian"
+	cargo 1
+	commodities "Food"
+	variant
+		"Container Transport (Billboard Unuk)"
+		
+mission "Omnipotence: Grave Digger Epilogue 0"
+	landing
+	invisible
+	source
+		government "Republic" "Syndicate" "Free Worlds"
+		not attributes "uninhabited"
+	to offer
+		has "event: Gravedigger defeated"
+	on offer
+		conversation
+			scene "scene/scene-unuk billboard"
+			`	You see an advertisement for chocolate covered acorn cookies from House Unuk. A new flavor? You're surprised they didn't already make those.`
+				accept
+	npc
+		government "Merchant"
+		personality waiting pacifist appeasing uninterested
+		fleet "Unuk Billboard"
+	on complete
+		event "unuk billboard"
+
+event "unuk billboard"
+	system Unukalhai
+		add fleet "Unuk Billboard" 20000
+
+	
+mission "Omnipotence: Grave Digger Epilogue 1"
+	name "Grave Digger Remnants"
+	description "There may be more Grave Diggers hiding in the Graveyard. Visit all of the Graveyard systems marked on your map to check for Grave Digger activity."
+	source
+		near "Tarazed" 0 10
+		not government "Pirate"
+		not attributes "uninhabited"
+	destination Kaeyin 
+	waypoint Delia
+	waypoint Dixere
+	waypoint Esix
+	waypoint Fearis
+	waypoint Feraticus
+	waypoint Fereti
+	waypoint Gerenus
+	waypoint Giribea
+	waypoint Nona
+	waypoint Paeli
+	waypoint Queri
+	waypoint Relifer
+	waypoint Ritilas
+	waypoint Polerius
+	stopover Retilie
+	to offer
+		has "Omnipotence: Grave Digger Epilogue 0: offered"
+	on offer
+		conversation
+			`You receive a message from Charles Atinoda: "Good news! They caught the thief. Well, one of them anyway. He admitted to being part of a pirate gang called 'The Grave Diggers'. He kept saying 'Tell <last> that the Grave Diggers will get their revenge with what we found in the Graveyard.'  I thought I should warn you."`
+			`	You thank Charles for the warning. Maybe it would be a good idea to check the Graveyard again for Grave Digger activity.`
+				accept
+	on accept
+		"reputation: Derelict (Killable)" <?= -1
+	on visit
+		dialog `The Grave Diggers had a base here, but it looks abandoned.`
+	on enter Polerius
+		dialog `A derelict Pelican is asking for assistance. They were attacked by Ka'het.`
+	on enter Esix
+		dialog `A derelict Ibis is asking for assistance. They were attacked by Ka'het.`
+	on enter Relifer
+		dialog `You find a derelict Ka'het. That's not so unusual. The Ka'het do fight amongst themselves.`
+	on enter Fearis
+		dialog `You find a derelict Ka'het. That's not so unusual. The Ka'het do fight amongst themselves.`
+	on enter Lire
+		dialog `You find a derelict Albatross. It appears abandoned. This might be something to investigate.`
+	on stopover
+		dialog `You find rusting salvaging equipment strewn across a beach on one of the tropical islands. Labels on the machines indicate they were manufactured on Millrace and sold by the Syndicate. From the markings in the sand, something big was dragged out of the ocean. Whatever it was is no longer here.`
+	on waypoint
+		dialog `You've checked all the systems in the Graveyard. You should do a thorough search of the Grave Digger's base on <destination> in case they left behind any clues.`
+	npc
+		government "Remnant"
+		system Polerius
+		personality derelict waiting staying
+		ship "Pelican" "Eternal Dream Yonder"
+	npc
+		government "Remnant"
+		system Esix
+		personality derelict waiting staying
+		ship "Ibis" "Ancient Memory Awakened"
+	npc
+		government "Ka'het"
+		system Relifer
+		personality derelict waiting staying
+		ship "Telis'het (Disable-able)" "Retilie-reati'het"
+	npc
+		government "Ka'het"
+		system Fearis
+		personality derelict waiting staying
+		ship "Telis'het (Disable-able)" "Retilie-maere'het"
+	npc board
+		government "Derelict (Killable)"
+		system Lire
+		personality target derelict waiting staying mute
+		ship "Derelict Albatross" "Midnight Graveyard"
+		dialog `The ship has been stripped of its outfits. There are no signs of violent conflict and no remains of the crew. When you check the logs, most of the data was erased, but from what remains it seems they were investigating something submerged under the waters of Retilie.`
+	on complete
+		conversation
+			`The Grave Digger base looks abandoned. But before you leave, something catches your eye: an empty box of House Unuk chocolate covered acorn cookies. You're certain those didn't exist back when you fought Lu Bu...`
+			
+ship "Derelict Albatross"
+	plural "Albatrosses"
+	sprite "ship/albatross"
+	attributes
+		category "Heavy Warship"
+		"hull" 2520
+		"mass" 610
+		"drag" 8.6
+		"heat dissipation" 0.6
+	explode "medium explosion" 60
+	explode "large explosion" 40
+
+
+
+fleet "Omnipotence Drones"
+	government "Grave Diggers"
+	personality
+		waiting vindictive mute
+	variant
+		"Selii'mar" 5
+
+mission "Omnipotence: Grave Digger Epilogue 2"
+	landing
+	invisible
+	source Kaeyin
+	to offer
+		has "Omnipotence: Grave Digger Epilogue 1: done"
+	on enter
+		conversation
+			scene "ship/veliante'exis"
+			`A Grave Digger fleet has entered the system! The lead ship, a model you have not seen before, hails you. "Captain <last>, welcome to your grave!"`
+				accept
+	npc
+		government "Grave Diggers"
+		personality waiting vindictive mute
+		fleet "Grave Digger raid" 6
+		fleet "Omnipotence Drones"
+	npc capture
+		government "Grave Diggers"
+		personality target waiting vindictive
+		ship "Veliante'ixis" "Omnipotence"
+		conversation
+			scene "ship/veliante'ixis/veliante'ixis"
+			apply
+				set "graveyard map"
+			`The Builder ship Omnipotence is no longer a threat. Hopefully this is the last of the Grave Diggers.`
+
+
+
+fleet "Ka'het Scout"
+	government "Ka'het"
+	personality
+		plunders harvests surveillance forbearing coward
+	variant 6
+		"Maeri'het (Scanner)"
+	variant
+		"Maeri'het (Scanner, Disable-able)"
+
+mission "Add Ka'het Scouts"
+	landing
+	invisible
+	on offer
+		event "add ka'het scouts"
+		fail
+		
+event "add ka'het scouts"
+	system Polerius
+		add fleet "Ka'het Scout" 2500
+	system Paeli
+		add fleet "Ka'het Scout" 2500
+	system Esix
+		add fleet "Ka'het Scout" 3000
+	system Gerenus
+		add fleet "Ka'het Scout" 2500
+	system Nona
+		add fleet "Ka'het Scout" 3000
+	system Ritilas
+		add fleet "Ka'het Scout" 2500
+
+
+
+mission "Omnipotence Map: Hint"
+	landing
+	invisible
+	to offer
+		has "graveyard map"
+	on offer
+		outfit "Graveyard Map 1
+		conversation
+			scene "outfit/graveyard map"
+			`You found a map of the Graveyard on the Omnipotence. Several systems are marked on the map...`
+				decline
+
+
+
+mission "Omnipotence Map: Builder Ships 1"
+	landing
+	name "Graveyard: Ships"
+	description `<destination> is marked on the Graveyard Map as "Ships".`
+	destination "Palarei"
+	to offer
+		has "graveyard map"
+	to complete
+		never
+	to fail
+		has "Omnipotence Map: Builder Drones 2: failed"
+		has "Omnipotence Map: Ka'het Outfitter 2: failed"
+		has "Omnipotence Map: Builder Negator 2"
+
+
+mission "Omnipotence Map: Builder Ships 2"
+	landing
+	invisible
+	source "Palarei"
+	to offer
+		has "Omnipotence Map: Builder Ships 1: active"
+		or
+			not "Randomize Omnipotence Map: Builder Ships 2"
+			and
+				has "Randomize Omnipotence Map: Builder Ships 2"
+				random < 50
+	on offer
+		conversation
+			scene "thumbnail/kai'xeris-thumb"
+			`You find an abandoned freighter.`
+			choice
+				`	(Take the ship.)`
+				`	(Don't take the ship.)`
+					defer
+			scene "outfit/builder imf"
+			`The ship has a functional Builder IMF Transmitter. If you take it to the various Builder space stations scattered across the Graveyard, you may gain access to areas that would normally be restricted to you.`
+				accept
+	on defer
+		set "Randomize Omnipotence Map: Builder Ships 2"
+	on accept
+		give ship "Kai'xeris" "Builder Freighter"
+		fail
+
+mission "Omnipotence Map: Builder Ships 3"
+	landing
+	invisible
+	source "Palarei"
+	to offer
+		has "graveyard map"
+		has "Omnipotence Map: Builder Ships 2: failed"
+		random < 50
+	on offer
+		require "Builder IMF transmitter" 0
+		conversation
+			scene "thumbnail/kai'teris-thumb"
+			`You find an abandoned transport.`
+			choice
+				`	(Take the ship.)`
+				`	(Don't take the ship.)`
+					defer
+			scene "outfit/builder imf"
+			`The ship has a functional Builder IMF Transmitter. If you take it to the various Builder space stations scattered across the Graveyard, you may gain access to areas that would normally be restricted to you.`
+				accept
+	on accept
+		give ship "Kai'teris" "Builder Transport"
+		clear "Omnipotence Map: Builder Ships 4: offered"
+		fail
+
+mission "Omnipotence Map: Builder Ships 4"
+	landing
+	invisible
+	source "Palarei"
+	to offer
+		has "graveyard map"
+		has "Omnipotence Map: Builder Ships 3: failed"
+		random < 50
+	on offer
+		require "Builder IMF transmitter" 0
+		conversation
+			scene "thumbnail/kai'xeris-thumb"
+			`You find an abandoned freighter.`
+			choice
+				`	(Take the ship.)`
+				`	(Don't take the ship.)`
+					defer
+			scene "outfit/builder imf"
+			`The ship has a functional Builder IMF Transmitter. If you take it to the various Builder space stations scattered across the Graveyard, you may gain access to areas that would normally be restricted to you.`
+				accept
+	on accept
+		give ship "Kai'xeris" "Builder Transport"
+		clear "Omnipotence Map: Builder Ships 3: offered"
+		fail
+
+
+
+mission "Omnipotence Map: Builder Anti-Missile 1"
+	landing
+	name "Graveyard: Anti-Missiles"
+	description `<destination> is marked on the Graveyard Map as "Builder Anti-Missiles".`
+	destination "Ceilia'sei"
+	to offer
+		has "graveyard map"
+	to complete
+		never
+	on visit
+		dialog `Certain areas of the station can't be accessed without a functional Builder IMF Transmitter.`
+	to fail
+		has "Omnipotence Map: Builder Drones 2: failed"
+		has "Omnipotence Map: Ka'het Outfitter 2: failed"
+		has "Omnipotence Map: Builder Negator 2"
+
+mission "Omnipotence Map: Builder Anti-Missile 2"
+	landing
+	invisible
+	repeat
+	source "Ceilia'sei"
+	to offer
+		has "graveyard map"
+		or
+			not "Randomize Omnipotence Map: Builder Anti-Missile 2"
+			and
+				has "Randomize Omnipotence Map: Builder Anti-Missile 2"
+				random < 50
+	on offer
+		require "Builder IMF transmitter"
+		conversation
+			scene "outfit/builder imf"
+			`The codes from the Builder IMF transmitter gives you access to one of the Builders anti-missile turrets.`
+			choice
+				`	(Take the turret.)`
+				`	(Leave the turret.)`
+					defer
+			scene "outfit/builder anti-missile"
+			`You remove the turret.`
+				accept
+	on defer
+		set "Randomize Omnipotence Map: Builder Anti-Missile 2"
+	on accept
+		outfit "Builder Anti-Missile" 1
+		set "Randomize Omnipotence Map: Builder Anti-Missile 2"
+		fail			
+
+
+
+mission "Omnipotence Map: Builder Drones 1"
+	landing
+	name "Graveyard: Drones"
+	description `<destination> is marked on the Graveyard Map as "Drones".`
+	destination "Parii'het"
+	to offer
+		has "graveyard map"
+	to complete
+		never
+	on visit
+		dialog `Certain areas of the station can't be accessed without a functional Builder IMF Transmitter.`
+
+			
+mission "Omnipotence Map: Builder Drones 2"
+	landing
+	invisible
+	source "Parii'het"
+	to offer
+		has "Omnipotence Map: Builder Drones 1: active"
+		or
+			not "Randomize Omnipotence Map: Builder Drones 2"
+			and
+				has "Randomize Omnipotence Map: Builder Drones 2"
+				random < 50
+	on offer
+		require "Builder IMF transmitter"
+		conversation
+			scene "outfit/builder imf"
+			`The codes from the Builder IMF transmitter gives you access to a restricted area of the station where there is an inactive automated shipyard.`
+			choice
+				`	(Activate the shipyard.)`
+				`	(Do not activate the shipyard.)`
+					defer
+			scene "scene/scene-builder drone"
+			`	The sound of newly activated machinery fills the area as the automated systems prepare the shipyard for business. When it's ready, you'll be able to buy Builder drones from here.`
+				accept
+	on defer
+		set "Randomize Omnipotence Map: Builder Drones 2"
+	on accept
+		event "activate Parii'het shipyard"
+		fail "Omnipotence Map: Builder Drones 1"
+		fail
+
+shipyard "Builder Drones"
+	"Selii'mar"
+	"Faes'mar"
+
+event "activate Parii'het shipyard"
+	planet "Parii'het"
+		add shipyard "Builder Drones"
+
+
+
+mission "Omnipotence Map: Ka'het Outfitter 1"
+	landing
+	name "Graveyard: Ka'het Facility"
+	description `<destination> is marked on the Graveyard Map as "Ka'het Facility".`
+	destination "Seli'het"
+	to offer
+		has "graveyard map"
+	to complete
+		never
+	on visit
+		dialog `Certain areas of the station can't be accessed without a functional Builder IMF Transmitter.`
+	npc
+		government "Ka'het"
+		system Giribea
+		personality
+			target waiting staying plunders harvests vindictive unconstrained
+		fleet "Ka'het"
+		fleet "Ka'het Core"
+	npc
+		government "Ka'het"
+		system Giribea
+		personality
+			target waiting staying plunders mining harvests timid
+		fleet "Ka'het"
+		fleet "Ka'het Core"
+	npc
+		government "Ka'het"
+		system Giribea
+		personality
+			target waiting staying plunders mining harvests forbearing
+		fleet "Ka'het"
+		fleet "Ka'het Core"
+	npc
+		government "Ka'het"
+		system Giribea
+		personality
+			target waiting staying plunders harvests surveillance forbearing coward
+		fleet "Ka'het Scout"
+
+
+
+mission "Omnipotence Map: Ka'het Outfitter 2"
+	landing
+	invisible
+	source "Seli'het"
+	to offer
+		has "Omnipotence Map: Ka'het Outfitter 1: active"
+		or
+			not "Randomize Omnipotence Map: Ka'het Outfitter 2"
+			and
+				has "Randomize Omnipotence Map: Ka'het Outfitter 2"
+				random < 50
+	on offer
+		require "Builder IMF transmitter"
+		conversation
+			scene "outfit/builder imf"
+			`The codes from the Builder IMF transmitter gives you access to a restricted area of the station where there is an inactive automated outfitter.`
+			choice
+				`	(Activate the outfitter.)`
+				`	(Do not activate the outfitter.)`
+					defer
+			scene "scene/scene-kahet outfits"
+			`	The sound of newly activated machinery fills the area as the automated systems prepare the outfitter for business. When it's ready, you'll be able to buy Ka'het outfits from here.`
+				accept
+	on defer
+		set "Randomize Omnipotence Map: Ka'het Outfitter 2"
+
+	on accept
+		event "activate seli'het outfitter"
+		fail "Omnipotence Map: Ka'het Outfitter 1"
+		fail
+
+event "activate seli'het outfitter"
+	planet "Seli'het"
+		add outfitter "Ka'het Basics"
+		add outfitter "Ka'het Advanced"
+
+
+
+mission "Omnipotence Map: Builder Negator 1"
+	landing
+	name "Graveyard: Sealed"
+	description `<destination> is marked on the Graveyard Map as "Sealed".`
+	destination "Letis'sei"
+	to offer
+		has "graveyard map"
+	to complete
+		never
+	on visit
+		dialog `Certain areas of the station can't be accessed without a functional Builder IMF Transmitter.`
+
+
+
+mission "Omnipotence Map: Builder Negator 2"
+	landing
+	invisible
+	source "Letis'sei"
+	to offer
+		has "Omnipotence Map: Builder Negator 1: active"
+		or
+			not "Randomize Omnipotence Map: Builder Negator 2"
+			and
+				has "Randomize Omnipotence Map: Builder Negator 2"
+				random < 50
+	on offer
+		require "Builder IMF transmitter"
+		conversation
+			scene "outfit/builder imf"
+			`The codes from the Builder IMF transmitter gives you access to a sealed cargo bay. Inside, you find a Negator cannon.`
+			choice
+				`	(Take the cannon.)`
+				`	(Leave the cannon.)`
+					defer
+			scene "outfit/builder negator"
+			`This Negator appears to be a variant Nullifier that's been constructed for rapid fire. The power on your ship will likely drain quickly if you fire this continuously.`
+				accept
+	on defer
+		set "Randomize Omnipotence Map: Builder Negator 2"
+	on accept
+		outfit "Builder Negator" 1
+		fail "Omnipotence Map: Builder Negator 1"
+		fail
