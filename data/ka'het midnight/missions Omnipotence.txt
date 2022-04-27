@@ -394,7 +394,7 @@ mission "Omnipotence Map: Builder Drones 2"
 				`	(Activate the shipyard.)`
 				`	(Do not activate the shipyard.)`
 					defer
-			scene "scene/scene-builder drone"
+			scene "scene/scene-builder drones"
 			`	The sound of newly activated machinery fills the area as the automated systems prepare the shipyard for business. When it's ready, you'll be able to buy Builder drones from here.`
 				accept
 	on defer
