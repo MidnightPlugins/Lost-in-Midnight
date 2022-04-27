@@ -30,3 +30,7 @@ Some highlights:
 - a search for a legendary Hai artifact
 - buying used ships from independent sellers
 - a derelict Wanderer space station
+- a salvaged Builder ship
+- Coalition smuggling, intrigues, and dissention
+- Subsidurial Herding
+- an asteroid catapult
