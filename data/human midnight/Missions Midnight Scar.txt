@@ -127,7 +127,7 @@ mission "Midnight Scar: Bounty Hai"
 	description "The <npc> and it's fleet of pirate ships is raiding merchants in <waypoints>. Destroy the fleet, then return to <destination> for payment of <payment>."
 	source
 		near Allhome 0 2
-	waypoints Waypoint
+	waypoint "Waypoint"
 	to offer
 		has "event: midnight scar's hideout (Hai)" 
 		random < 15
@@ -137,7 +137,7 @@ mission "Midnight Scar: Bounty Hai"
 		government "Merchant"
 		system Waypoint
 		personality derelict waiting coward
-		"Large Human Merchants (Hai)"
+		fleet "Large Human Merchants (Hai)"
 	npc kill
 		government "Scar's Legion"
 		system Waypoint
@@ -195,7 +195,7 @@ mission "Midnight Scar: Scar's Legion Raid"
 	npc
 		government "Merchant"
 		personality launching coward
-		"Small Human Merchants (Hai)" 2
+		fleet "Small Human Merchants (Hai)" 2
 	npc evade
 		government "Scar's Legion"
 		personality target plunders harvests coward

@@ -789,7 +789,7 @@ ship "Shield Fortress"
 
 	engine -42.5 135
 	engine 42.5 135
-	gun 0 -135 "Railgun"
+	gun 0 -135 "Pug Zapper"
 	gun -21.5 -97.5 "Ion Cannon"
 	gun 21.5 -97.5 "Ion Cannon"
 	gun -34 -62 "Nuclear Missile"
@@ -800,8 +800,8 @@ ship "Shield Fortress"
 	gun 62 -9 "Nuclear Missile"
 	turret -40 43 "Pulse Turret"
 	turret 40 43 "Pulse Turret"
-	turret -55.5 80 "Chameleon Anti-Missile"
-	turret 55.5 80 "Chameleon Anti-Missile"
+	turret -55.5 80 "Bullfrog Anti-Missile"
+	turret 55.5 80 "Bullfrog Anti-Missile"
 	bay "Fighter" -100 78
 	bay "Fighter" 100 78
 	bay "Drone" -160 80
@@ -1012,8 +1012,8 @@ ship "Subsidurius"
 	gun -7 -95 
 	gun 7 -95 
 	turret 0 -69 "Heavy Laser Turret"
-	turret 0 -34 "Blaster Turret"
-	turret 0 15 "Blaster Turret"
+	turret 0 -34 "Quad Blaster Turret"
+	turret 0 15 "Quad Blaster Turret"
 	turret 0 52 "Heavy Anti-Missile Turret"
 	leak "leak" 40 50
 	leak "flame" 50 80

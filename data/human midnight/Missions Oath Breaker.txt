@@ -846,7 +846,7 @@ mission "Oathbreaker Poisonwood"
 	to offer
 		has "salary: Free Worlds"
 		has "event: Oathbreaker Random"
-		"Oathbreaker Strategos Deployed: active"
+		has "Oathbreaker Strategos Deployed: active"
 		"Oathbreaker escalation" >= 6
 	on offer
 		fail "Oathbreaker Strategos Deployed"

@@ -997,11 +997,11 @@ mission "Ghost Hunting: Curse of the Carabao 1"
 			choice
 				`	"Tell me more about this ship."`
 					goto info
-					"Is a city ship license required to buy this ship?"
+				`	"Is a city ship license required to buy this ship?"`
 				`	"Not interested in buying a ship right now."`
 					defer
 			
-			`	"I'm not a professional dealer. I'm just unloading my own personal property."
+			`	"I'm not a professional dealer. I'm just unloading my own personal property."`
 			choice
 				`	"Tell me more about this ship."`
 					goto info
@@ -1063,9 +1063,9 @@ mission "Ghost Hunting: Curse of the Carabao 2"
 
 			`He responds, "That's a Carabao. Those ships are cursed! Back in the colonization days, the unfortunate colonists who traveled on those ships died grisly and gruesome deaths as the automated systems went haywire and run amok."`
 			choice
-				`	"I own that ship."
+				`	"I own that ship."`
 
-			`"Oh."
+			`"Oh."`
 				decline
 			
 
@@ -1097,7 +1097,6 @@ phrase "curse of the carabao"
 
 mission "Ghost Hunting: Curse of the Carabao Passengers [human]"
 	landing
-	minor
 	repeat
 	source
 		attributes "spaceport"
@@ -1134,9 +1133,9 @@ mission "Ghost Hunting: Curse of the Carabao Passengers [human]"
 			has "Colonists [0]: active"
 			has "Colonists [1]: active"
 			has "Stranded Field Trip: active"
-			has "Released Prisoners [0]": active"
-			has "Released Prisoners [1]": active"
-			has "Released Prisoners [2]": active"
+			has "Released Prisoners [0]: active"
+			has "Released Prisoners [1]: active"
+			has "Released Prisoners [2]: active"
 		random < 10
 	on offer
 		require "Carabao AI"

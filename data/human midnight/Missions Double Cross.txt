@@ -379,7 +379,7 @@ mission "Protection: Marauder Double Cross"
 		random < 30
 	on accept
 		payment -100000
-		dialog `You pay the <npc> 100,000 credits to escort your fleet until <date>."
+		dialog `You pay the <npc> 100,000 credits to escort your fleet until <date>.`
 	on fail
 		"reputation: Marauder Independent (Killable)" >?= 1	
 		dialog `The protection contract with <npc> has expired.`
@@ -770,10 +770,6 @@ mission "Peace Tour 1"
 		conversation
 			scene "portrait/human59"
 			`"You're leaving me stranded here? Thanks for nothing."`
-	on fail
-		conversation
-			scene "outfit/nuke"
-			`The <npc> had some interesting cargo... It's now scattered across space, available for anyone to pick up.`
 	npc accompany save
 		government "Bounty (Disguised)"
 		personality target timid
@@ -843,10 +839,11 @@ mission "Peace Tour 2"
 			choice
 				`	(Run.)`
 					goto explode
-				`	(Try to disarm it.)
+				`	(Try to disarm it.)`
 			branch disarm
 				random < 20
 				
+			label explode
 			scene "scene/scene-explosion"
 			`	Despite your best efforts, there is no escaping the explosion.`
 				die
@@ -958,7 +955,7 @@ mission "Midnight Market: Nukes of Peace?"
 			`	Suddenly you are ambushed from behind! There's no room for discussion. These people are out for blood!`
 			choice
 				`	(Fight.)`
-				`	(Run.)
+				`	(Run.)`
 					goto death
 			
 			branch death

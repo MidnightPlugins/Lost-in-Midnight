@@ -11,12 +11,6 @@
 
 
 
-outfit "Secret Prototype"
-	category "Special"
-	cost 0
-	thumbnail "outfit/unknown"
-	"mass" 1
-	description "A secret prototype stolen from a merchant vessel. You have no idea how it works." 
 
 mission "Bounty Hunting (Secret Prototype)"
 	name "Stolen prototype near <system>"
@@ -50,7 +44,14 @@ mission "Bounty Hunting (Secret Prototype)"
 	on complete
 		outfit "Secret Protoype" -1
 		payment 1500000
-		dialog phrase "The authorities pay you <payment> for returning the secret protoype."
+		dialog "The authorities pay you <payment> for returning the secret protoype."
+
+outfit "Secret Prototype"
+	category "Special"
+	cost 0
+	thumbnail "outfit/unknown"
+	"mass" 1
+	description "A secret prototype stolen from a merchant vessel. You have no idea how it works." 
 		
 
 
@@ -68,7 +69,7 @@ mission "Protection: Heavy"
 		"ships: Heavy Warship" <= 1
 	on accept
 		payment -125000
-		dialog `You pay the <npc> 125,000 credits to escort your fleet until <date>."
+		dialog `You pay the <npc> 125,000 credits to escort your fleet until <date>.`
 	on fail
 		dialog `The protection contract with <npc> has expired.`
 	npc save
@@ -90,7 +91,7 @@ mission "Protection: Medium"
 		not "ships: Heavy Warship"
 	on accept
 		payment -100000
-		dialog `You pay the <npc> 100,000 credits to escort your fleet until <date>."
+		dialog `You pay the <npc> 100,000 credits to escort your fleet until <date>.`
 	on fail
 		dialog `The protection contract with <npc> has expired.`
 	npc save
@@ -112,7 +113,7 @@ mission "Protection: Light"
 		not "ships: Medium Warship"
 	on accept
 		payment -80000
-		dialog `You pay the <npc> 80,000 credits to escort your fleet until <date>."
+		dialog `You pay the <npc> 80,000 credits to escort your fleet until <date>.`
 	on fail
 		dialog `The protection contract with <npc> has expired.`
 	npc save
@@ -132,7 +133,7 @@ mission "Protection: Marauder"
 		random < 30
 	on accept
 		payment -100000
-		dialog `You pay the <npc> 100,000 credits to escort your fleet until <date>."
+		dialog `You pay the <npc> 100,000 credits to escort your fleet until <date>.`
 	on fail
 		dialog `The protection contract with <npc> has expired.`
 	npc save
