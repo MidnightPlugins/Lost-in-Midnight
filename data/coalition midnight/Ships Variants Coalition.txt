@@ -674,7 +674,7 @@ ship "Heliarch Breacher" "Heliarch Breacher (Evidence)"
 		"Small Steering Module"
 		"Hyperdrive"
 
-ship "Heliarch Interdictor" "Interdictor (Evidence)"
+ship "Heliarch Interdictor" "Heliarch Interdictor (Evidence)"
 	outfits
 		"Finisher Pod" 2
 		"Finisher Storage Tube"

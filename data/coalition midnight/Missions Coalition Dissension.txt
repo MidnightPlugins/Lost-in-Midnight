@@ -798,7 +798,7 @@ mission "Coalition Dissension: Rogue Heliarch Arach (Neutralizer)"
 					decline
 			scene "thumbnail/heliarch neutralizer"
 			`"... mutiny on the Neutralizer '<npc>'... dissidents have... marked for termination... near <destination>..."`
-			`You're not certain, but it sounds like dissidents have taken over a Neutralizer called the <npc> which has been marked for termination. It was probably last seen near <destination>. If they're going to destroy the ship anyway, you might be able to capture it with only minor repercussions.
+			`You're not certain, but it sounds like dissidents have taken over a Neutralizer called the <npc> which has been marked for termination. It was probably last seen near <destination>. If they're going to destroy the ship anyway, you might be able to capture it with only minor repercussions.`
 			choice
 				`	(Hunt down the <npc>.)`
 					accept
@@ -815,8 +815,10 @@ mission "Coalition Dissension: Rogue Heliarch Arach (Neutralizer)"
 			apply
 				"reputation: Heliarch" -= 5
 				"coalition dissension" ++
-				fail "Coalition Dissension: Rogue Heliarch Arach (Neutralizer)"
-			`You receive a message from the Heliarch demanding to know why you have taken posession of the <npc>. After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you captured the <npc> in the process.`
+			`You receive a message from the Heliarch demanding to know why you have taken posession of the <npc>. Visit <destination> to explain yourself.`
+	on complete
+		conversation
+			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you captured the <npc> in the process.`
 	
 
 mission "Coalition Dissension: Rogue Heliarch Kimek (Neutralizer)"
@@ -842,7 +844,7 @@ mission "Coalition Dissension: Rogue Heliarch Kimek (Neutralizer)"
 					decline
 			scene "thumbnail/heliarch neutralizer"
 			`"... mutiny on the Neutralizer '<npc>'... dissidents have... marked for termination... near <destination>..."`
-			`You're not certain, but it sounds like dissidents have taken over a Neutralizer called the <npc> which has been marked for termination. It was probably last seen near <destination>. If they're going to destroy the ship anyway, you might be able to capture it with only minor repercussions.
+			`You're not certain, but it sounds like dissidents have taken over a Neutralizer called the <npc> which has been marked for termination. It was probably last seen near <destination>. If they're going to destroy the ship anyway, you might be able to capture it with only minor repercussions.`
 			choice
 				`	(Hunt down the <npc>.)`
 					accept
@@ -859,8 +861,10 @@ mission "Coalition Dissension: Rogue Heliarch Kimek (Neutralizer)"
 			apply
 				"reputation: Heliarch" -= 5
 				"coalition dissension" ++
-				fail "Coalition Dissension: Rogue Heliarch Kimek (Neutralizer)"
-			`You receive a message from the Heliarch demanding to know why you have taken posession of the <npc>. After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you captured the <npc> in the process.`
+			`You receive a message from the Heliarch demanding to know why you have taken posession of the <npc>. Visit <destination> to explain yourself.`
+	on complete
+		conversation
+			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you captured the <npc> in the process.`
 
 mission "Coalition Dissension: Rogue Heliarch Saryd (Neutralizer)"
 	repeat
@@ -885,7 +889,7 @@ mission "Coalition Dissension: Rogue Heliarch Saryd (Neutralizer)"
 					decline
 			scene "thumbnail/heliarch neutralizer"
 			`"... mutiny on the Neutralizer '<npc>'... dissidents have... marked for termination... near <destination>..."`
-			`You're not certain, but it sounds like dissidents have taken over a Neutralizer called the <npc> which has been marked for termination. It was probably last seen near <destination>. If they're going to destroy the ship anyway, you might be able to capture it with only minor repercussions.
+			`You're not certain, but it sounds like dissidents have taken over a Neutralizer called the <npc> which has been marked for termination. It was probably last seen near <destination>. If they're going to destroy the ship anyway, you might be able to capture it with only minor repercussions.`
 			choice
 				`	(Hunt down the <npc>.)`
 					accept
@@ -903,8 +907,10 @@ mission "Coalition Dissension: Rogue Heliarch Saryd (Neutralizer)"
 			apply
 				"reputation: Heliarch" -= 5
 				"coalition dissension" ++
-				fail "Coalition Dissension: Rogue Heliarch Saryd (Neutralizer)"
-			`You receive a message from the Heliarch demanding to know why you have taken posession of the <npc>. After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you captured the <npc> in the process.`
+			`You receive a message from the Heliarch demanding to know why you have taken posession of the <npc>. Visit <destination> to explain yourself.`
+	on complete
+		conversation
+			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you captured the <npc> in the process.`
 
 
 
@@ -931,7 +937,7 @@ mission "Coalition Dissension: Rogue Heliarch Arach (Breacher)"
 					decline
 			scene "thumbnail/heliarch breacher"
 			`"... mutiny on the Breacher '<npc>'... dissidents have... marked for termination... near <destination>..."`
-			`You're not certain, but it sounds like dissidents have taken over a Breacher called the <npc> which has been marked for termination. It was probably last seen near <destination>. If they're going to destroy the ship anyway, you might be able to capture it with only minor repercussions.
+			`You're not certain, but it sounds like dissidents have taken over a Breacher called the <npc> which has been marked for termination. It was probably last seen near <destination>. If they're going to destroy the ship anyway, you might be able to capture it with only minor repercussions.`
 			choice
 				`	(Hunt down the <npc>.)`
 					accept
@@ -948,8 +954,10 @@ mission "Coalition Dissension: Rogue Heliarch Arach (Breacher)"
 			apply
 				"reputation: Heliarch" -= 3
 				"coalition dissension" ++
-				fail "Coalition Dissension: Rogue Heliarch Arach (Breacher)"
-			`You receive a message from the Heliarch demanding to know why you have taken posession of the <npc>. After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you captured the <npc> in the process.`
+			`You receive a message from the Heliarch demanding to know why you have taken posession of the <npc>. Visit <destination> to explain yourself.`
+	on complete
+		conversation
+			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you captured the <npc> in the process.`
 
 mission "Coalition Dissension: Rogue Heliarch Kimek (Breacher)"
 	repeat
@@ -974,7 +982,7 @@ mission "Coalition Dissension: Rogue Heliarch Kimek (Breacher)"
 					decline
 			scene "thumbnail/heliarch breacher"
 			`"... mutiny on the Breacher '<npc>'... dissidents have... marked for termination... near <destination>..."`
-			`You're not certain, but it sounds like dissidents have taken over a Breacher called the <npc> which has been marked for termination. It was probably last seen near <destination>. If they're going to destroy the ship anyway, you might be able to capture it with only minor repercussions.
+			`You're not certain, but it sounds like dissidents have taken over a Breacher called the <npc> which has been marked for termination. It was probably last seen near <destination>. If they're going to destroy the ship anyway, you might be able to capture it with only minor repercussions.`
 			choice
 				`	(Hunt down the <npc>.)`
 					accept
@@ -991,8 +999,10 @@ mission "Coalition Dissension: Rogue Heliarch Kimek (Breacher)"
 			apply
 				"reputation: Heliarch" -= 3
 				"coalition dissension" ++
-				fail "Coalition Dissension: Rogue Heliarch Kimek (Breacher)"
-			`You receive a message from the Heliarch demanding to know why you have taken posession of the <npc>. After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you captured the <npc> in the process.`
+			`You receive a message from the Heliarch demanding to know why you have taken posession of the <npc>. Visit <destination> to explain yourself.`
+	on complete
+		conversation
+			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you captured the <npc> in the process.`
 
 
 mission "Coalition Dissension: Rogue Heliarch Saryd (Breacher)"
@@ -1018,7 +1028,7 @@ mission "Coalition Dissension: Rogue Heliarch Saryd (Breacher)"
 					decline
 			scene "thumbnail/heliarch breacher"
 			`"... mutiny on the Breacher '<npc>'... dissidents have... marked for termination... near <destination>..."`
-			`You're not certain, but it sounds like dissidents have taken over a Breacher called the <npc> which has been marked for termination. It was probably last seen near <destination>. If they're going to destroy the ship anyway, you might be able to capture it with only minor repercussions.
+			`You're not certain, but it sounds like dissidents have taken over a Breacher called the <npc> which has been marked for termination. It was probably last seen near <destination>. If they're going to destroy the ship anyway, you might be able to capture it with only minor repercussions.`
 			choice
 				`	(Hunt down the <npc>.)`
 					accept
@@ -1035,8 +1045,10 @@ mission "Coalition Dissension: Rogue Heliarch Saryd (Breacher)"
 			apply
 				"reputation: Heliarch" -= 3
 				"coalition dissension" ++
-				fail "Coalition Dissension: Rogue Heliarch Saryd (Breacher)"
-			`You receive a message from the Heliarch demanding to know why you have taken posession of the <npc>. After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you captured the <npc> in the process.`
+			`You receive a message from the Heliarch demanding to know why you have taken posession of the <npc>. Visit <destination> to explain yourself.`
+	on complete
+		conversation
+			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you captured the <npc> in the process.`
 
 
 
@@ -1063,7 +1075,7 @@ mission "Coalition Dissension: Rogue Heliarch Arach (Interdictor)"
 					decline
 			scene "thumbnail/heliarch interdictor"
 			`"... mutiny on the Interdictor '<npc>'... dissidents have... marked for termination... near <destination>..."`
-			`You're not certain, but it sounds like dissidents have taken over a Interdictor called the <npc> which has been marked for termination. It was probably last seen near <destination>. If they're going to destroy the ship anyway, you might be able to capture it with only minor repercussions.
+			`You're not certain, but it sounds like dissidents have taken over a Interdictor called the <npc> which has been marked for termination. It was probably last seen near <destination>. If they're going to destroy the ship anyway, you might be able to capture it with only minor repercussions.`
 			choice
 				`	(Hunt down the <npc>.)`
 					accept
@@ -1080,8 +1092,10 @@ mission "Coalition Dissension: Rogue Heliarch Arach (Interdictor)"
 			apply
 				"reputation: Heliarch" -= 14
 				"coalition dissension" ++
-				fail "Coalition Dissension: Rogue Heliarch Arach (Interdictor)"
-			`You receive a message from the Heliarch demanding to know why you have taken posession of the <npc>. After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you captured the <npc> in the process.`
+			`You receive a message from the Heliarch demanding to know why you have taken posession of the <npc>. Visit <destination> to explain yourself.`
+	on complete
+		conversation
+			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you captured the <npc> in the process.`
 
 mission "Coalition Dissension: Rogue Heliarch Kimek (Interdictor)"
 	repeat
@@ -1106,7 +1120,7 @@ mission "Coalition Dissension: Rogue Heliarch Kimek (Interdictor)"
 					decline
 			scene "thumbnail/heliarch interdictor"
 			`"... mutiny on the Interdictor '<npc>'... dissidents have... marked for termination... near <destination>..."`
-			`You're not certain, but it sounds like dissidents have taken over a Interdictor called the <npc> which has been marked for termination. It was probably last seen near <destination>. If they're going to destroy the ship anyway, you might be able to capture it with only minor repercussions.
+			`You're not certain, but it sounds like dissidents have taken over a Interdictor called the <npc> which has been marked for termination. It was probably last seen near <destination>. If they're going to destroy the ship anyway, you might be able to capture it with only minor repercussions.`
 			choice
 				`	(Hunt down the <npc>.)`
 					accept
@@ -1123,8 +1137,10 @@ mission "Coalition Dissension: Rogue Heliarch Kimek (Interdictor)"
 			apply
 				"reputation: Heliarch" -= 14
 				"coalition dissension" ++
-				fail "Coalition Dissension: Rogue Heliarch Kimek (Interdictor)"
-			`You receive a message from the Heliarch demanding to know why you have taken posession of the <npc>. After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you captured the <npc> in the process.`
+			`You receive a message from the Heliarch demanding to know why you have taken posession of the <npc>. Visit <destination> to explain yourself.`
+	on complete
+		conversation
+			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you captured the <npc> in the process.`
 
 mission "Coalition Dissension: Rogue Heliarch Saryd (Interdictor)"
 	repeat
@@ -1149,7 +1165,7 @@ mission "Coalition Dissension: Rogue Heliarch Saryd (Interdictor)"
 					decline
 			scene "thumbnail/heliarch interdictor"
 			`"... mutiny on the Interdictor '<npc>'... dissidents have... marked for termination... near <destination>..."`
-			`You're not certain, but it sounds like dissidents have taken over a Interdictor called the <npc> which has been marked for termination. It was probably last seen near <destination>. If they're going to destroy the ship anyway, you might be able to capture it with only minor repercussions.
+			`You're not certain, but it sounds like dissidents have taken over a Interdictor called the <npc> which has been marked for termination. It was probably last seen near <destination>. If they're going to destroy the ship anyway, you might be able to capture it with only minor repercussions.`
 			choice
 				`	(Hunt down the <npc>.)`
 					accept
@@ -1166,8 +1182,10 @@ mission "Coalition Dissension: Rogue Heliarch Saryd (Interdictor)"
 			apply
 				"reputation: Heliarch" -= 14
 				"coalition dissension" ++
-				fail "Coalition Dissension: Rogue Heliarch Saryd (Interdictor)"
-			`You receive a message from the Heliarch demanding to know why you have taken posession of the <npc>. After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you captured the <npc> in the process.`
+			`You receive a message from the Heliarch demanding to know why you have taken posession of the <npc>. Visit <destination> to explain yourself.`
+	on complete
+		conversation
+			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you captured the <npc> in the process.`
 
 
 
@@ -1194,7 +1212,7 @@ mission "Coalition Dissension: Rogue Heliarch Arach (Hunter)"
 					decline
 			scene "thumbnail/heliarch hunter"
 			`"... mutiny on the Hunter '<npc>'... dissidents have... marked for termination... near <destination>..."`
-			`You're not certain, but it sounds like dissidents have taken over a Hunter called the <npc> which has been marked for termination. It was probably last seen near <destination>. If they're going to destroy the ship anyway, you might be able to capture it with only minor repercussions.
+			`You're not certain, but it sounds like dissidents have taken over a Hunter called the <npc> which has been marked for termination. It was probably last seen near <destination>. If they're going to destroy the ship anyway, you might be able to capture it with only minor repercussions.`
 			choice
 				`	(Hunt down the <npc>.)`
 					accept
@@ -1211,8 +1229,10 @@ mission "Coalition Dissension: Rogue Heliarch Arach (Hunter)"
 			apply
 				"reputation: Heliarch" -= 8
 				"coalition dissension" ++
-				fail "Coalition Dissension: Rogue Heliarch Arach (Hunter)"
-			`You receive a message from the Heliarch demanding to know why you have taken posession of the <npc>. After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you captured the <npc> in the process.`
+			`You receive a message from the Heliarch demanding to know why you have taken posession of the <npc>. Visit <destination> to explain yourself.`
+	on complete
+		conversation
+			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you captured the <npc> in the process.`
 
 mission "Coalition Dissension: Rogue Heliarch Kimek (Hunter)"
 	repeat
@@ -1237,7 +1257,7 @@ mission "Coalition Dissension: Rogue Heliarch Kimek (Hunter)"
 					decline
 			scene "thumbnail/heliarch hunter"
 			`"... mutiny on the Hunter '<npc>'... dissidents have... marked for termination... near <destination>..."`
-			`You're not certain, but it sounds like dissidents have taken over a Hunter called the <npc> which has been marked for termination. It was probably last seen near <destination>. If they're going to destroy the ship anyway, you might be able to capture it with only minor repercussions.
+			`You're not certain, but it sounds like dissidents have taken over a Hunter called the <npc> which has been marked for termination. It was probably last seen near <destination>. If they're going to destroy the ship anyway, you might be able to capture it with only minor repercussions.`
 			choice
 				`	(Hunt down the <npc>.)`
 					accept
@@ -1254,8 +1274,10 @@ mission "Coalition Dissension: Rogue Heliarch Kimek (Hunter)"
 			apply
 				"reputation: Heliarch" -= 8
 				"coalition dissension" ++
-				fail "Coalition Dissension: Rogue Heliarch Kimek (Hunter)"
-			`You receive a message from the Heliarch demanding to know why you have taken posession of the <npc>. After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you captured the <npc> in the process.`
+			`You receive a message from the Heliarch demanding to know why you have taken posession of the <npc>. Visit <destination> to explain yourself.`
+	on complete
+		conversation
+			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you captured the <npc> in the process.`
 
 mission "Coalition Dissension: Rogue Heliarch Saryd (Hunter)"
 	repeat
@@ -1280,7 +1302,7 @@ mission "Coalition Dissension: Rogue Heliarch Saryd (Hunter)"
 					decline
 			scene "thumbnail/heliarch hunter"
 			`"... mutiny on the Hunter '<npc>'... dissidents have... marked for termination... near <destination>..."`
-			`You're not certain, but it sounds like dissidents have taken over a Hunter called the <npc> which has been marked for termination. It was probably last seen near <destination>. If they're going to destroy the ship anyway, you might be able to capture it with only minor repercussions.
+			`You're not certain, but it sounds like dissidents have taken over a Hunter called the <npc> which has been marked for termination. It was probably last seen near <destination>. If they're going to destroy the ship anyway, you might be able to capture it with only minor repercussions.`
 			choice
 				`	(Hunt down the <npc>.)`
 					accept
@@ -1297,8 +1319,10 @@ mission "Coalition Dissension: Rogue Heliarch Saryd (Hunter)"
 			apply
 				"reputation: Heliarch" -= 8
 				"coalition dissension" ++
-				fail "Coalition Dissension: Rogue Heliarch Saryd (Hunter)"
-			`You receive a message from the Heliarch demanding to know why you have taken posession of the <npc>. After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you captured the <npc> in the process.`
+			`You receive a message from the Heliarch demanding to know why you have taken posession of the <npc>. Visit <destination> to explain yourself.`
+	on complete
+		conversation
+			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you captured the <npc> in the process.`
 
 
 
@@ -1325,7 +1349,7 @@ mission "Coalition Dissension: Rogue Heliarch Arach (Judicator)"
 					decline
 			scene "thumbnail/heliarch judicator"
 			`"... mutiny on the Judicator '<npc>'... dissidents have... marked for termination... near <destination>..."`
-			`You're not certain, but it sounds like dissidents have taken over a Judicator called the <npc> which has been marked for termination. It was probably last seen near <destination>. If they're going to destroy the ship anyway, you might be able to capture it with only minor repercussions.
+			`You're not certain, but it sounds like dissidents have taken over a Judicator called the <npc> which has been marked for termination. It was probably last seen near <destination>. If they're going to destroy the ship anyway, you might be able to capture it with only minor repercussions.`
 			choice
 				`	(Hunt down the <npc>.)`
 					accept
@@ -1342,8 +1366,10 @@ mission "Coalition Dissension: Rogue Heliarch Arach (Judicator)"
 			apply
 				"reputation: Heliarch" -= 10
 				"coalition dissension" ++
-				fail "Coalition Dissension: Rogue Heliarch Arach (Judicator)"
-			`You receive a message from the Heliarch demanding to know why you have taken posession of the <npc>. After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you captured the <npc> in the process.`
+			`You receive a message from the Heliarch demanding to know why you have taken posession of the <npc>. Visit <destination> to explain yourself.`
+	on complete
+		conversation
+			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you captured the <npc> in the process.`
 
 mission "Coalition Dissension: Rogue Heliarch Kimek (Judicator)"
 	repeat
@@ -1368,7 +1394,7 @@ mission "Coalition Dissension: Rogue Heliarch Kimek (Judicator)"
 					decline
 			scene "thumbnail/heliarch judicator"
 			`"... mutiny on the Judicator '<npc>'... dissidents have... marked for termination... near <destination>..."`
-			`You're not certain, but it sounds like dissidents have taken over a Judicator called the <npc> which has been marked for termination. It was probably last seen near <destination>. If they're going to destroy the ship anyway, you might be able to capture it with only minor repercussions.
+			`You're not certain, but it sounds like dissidents have taken over a Judicator called the <npc> which has been marked for termination. It was probably last seen near <destination>. If they're going to destroy the ship anyway, you might be able to capture it with only minor repercussions.`
 			choice
 				`	(Hunt down the <npc>.)`
 					accept
@@ -1385,8 +1411,10 @@ mission "Coalition Dissension: Rogue Heliarch Kimek (Judicator)"
 			apply
 				"reputation: Heliarch" -= 10
 				"coalition dissension" ++
-				fail "Coalition Dissension: Rogue Heliarch Kimek (Judicator)"
-			`You receive a message from the Heliarch demanding to know why you have taken posession of the <npc>. After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you captured the <npc> in the process.`
+			`You receive a message from the Heliarch demanding to know why you have taken posession of the <npc>. Visit <destination> to explain yourself.`
+	on complete
+		conversation
+			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you captured the <npc> in the process.`
 
 mission "Coalition Dissension: Rogue Heliarch Saryd (Judicator)"
 	repeat
@@ -1411,7 +1439,7 @@ mission "Coalition Dissension: Rogue Heliarch Saryd (Judicator)"
 					decline
 			scene "thumbnail/heliarch judicator"
 			`"... mutiny on the Judicator '<npc>'... dissidents have... marked for termination... near <destination>..."`
-			`You're not certain, but it sounds like dissidents have taken over a Judicator called the <npc> which has been marked for termination. It was probably last seen near <destination>. If they're going to destroy the ship anyway, you might be able to capture it with only minor repercussions.
+			`You're not certain, but it sounds like dissidents have taken over a Judicator called the <npc> which has been marked for termination. It was probably last seen near <destination>. If they're going to destroy the ship anyway, you might be able to capture it with only minor repercussions.`
 			choice
 				`	(Hunt down the <npc>.)`
 					accept
@@ -1428,8 +1456,10 @@ mission "Coalition Dissension: Rogue Heliarch Saryd (Judicator)"
 			apply
 				"reputation: Heliarch" -= 10
 				"coalition dissension" ++
-				fail "Coalition Dissension: Rogue Heliarch Saryd (Judicator)"
-			`You receive a message from the Heliarch demanding to know why you have taken posession of the <npc>. After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you captured the <npc> in the process.`
+			`You receive a message from the Heliarch demanding to know why you have taken posession of the <npc>. Visit <destination> to explain yourself.`
+	on complete
+		conversation
+			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you captured the <npc> in the process.`
 
 
 
@@ -1456,7 +1486,7 @@ mission "Coalition Dissension: Rogue Heliarch Arach (Punisher)"
 					decline
 			scene "thumbnail/heliarch punisher"
 			`"... mutiny on the Punisher '<npc>'... dissidents have... marked for termination... near <destination>..."`
-			`You're not certain, but it sounds like dissidents have taken over a Punisher called the <npc> which has been marked for termination. It was probably last seen near <destination>. If they're going to destroy the ship anyway, you might be able to capture it with only minor repercussions.
+			`You're not certain, but it sounds like dissidents have taken over a Punisher called the <npc> which has been marked for termination. It was probably last seen near <destination>. If they're going to destroy the ship anyway, you might be able to capture it with only minor repercussions.`
 			choice
 				`	(Hunt down the <npc>.)`
 					accept
@@ -1473,8 +1503,10 @@ mission "Coalition Dissension: Rogue Heliarch Arach (Punisher)"
 			apply
 				"reputation: Heliarch" -= 24
 				"coalition dissension" ++
-				fail "Coalition Dissension: Rogue Heliarch Arach (Punisher)"
-			`You receive a message from the Heliarch demanding to know why you have taken posession of the <npc>. After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you captured the <npc> in the process.`
+			`You receive a message from the Heliarch demanding to know why you have taken posession of the <npc>. Visit <destination> to explain yourself.`
+	on complete
+		conversation
+			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you captured the <npc> in the process.`
 
 mission "Coalition Dissension: Rogue Heliarch Kimek (Punisher)"
 	repeat
@@ -1499,7 +1531,7 @@ mission "Coalition Dissension: Rogue Heliarch Kimek (Punisher)"
 					decline
 			scene "thumbnail/heliarch punisher"
 			`"... mutiny on the Punisher '<npc>'... dissidents have... marked for termination... near <destination>..."`
-			`You're not certain, but it sounds like dissidents have taken over a Punisher called the <npc> which has been marked for termination. It was probably last seen near <destination>. If they're going to destroy the ship anyway, you might be able to capture it with only minor repercussions.
+			`You're not certain, but it sounds like dissidents have taken over a Punisher called the <npc> which has been marked for termination. It was probably last seen near <destination>. If they're going to destroy the ship anyway, you might be able to capture it with only minor repercussions.`
 			choice
 				`	(Hunt down the <npc>.)`
 					accept
@@ -1516,8 +1548,10 @@ mission "Coalition Dissension: Rogue Heliarch Kimek (Punisher)"
 			apply
 				"reputation: Heliarch" -= 24
 				"coalition dissension" ++
-				fail "Coalition Dissension: Rogue Heliarch Kimek (Punisher)"
-			`You receive a message from the Heliarch demanding to know why you have taken posession of the <npc>. After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you captured the <npc> in the process.`
+			`You receive a message from the Heliarch demanding to know why you have taken posession of the <npc>. Visit <destination> to explain yourself.`
+	on complete
+		conversation
+			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you captured the <npc> in the process.`
 
 mission "Coalition Dissension: Rogue Heliarch Saryd (Punisher)"
 	repeat
@@ -1542,7 +1576,7 @@ mission "Coalition Dissension: Rogue Heliarch Saryd (Punisher)"
 					decline
 			scene "thumbnail/heliarch punisher"
 			`"... mutiny on the Punisher '<npc>'... dissidents have... marked for termination... near <destination>..."`
-			`You're not certain, but it sounds like dissidents have taken over a Punisher called the <npc> which has been marked for termination. It was probably last seen near <destination>. If they're going to destroy the ship anyway, you might be able to capture it with only minor repercussions.
+			`You're not certain, but it sounds like dissidents have taken over a Punisher called the <npc> which has been marked for termination. It was probably last seen near <destination>. If they're going to destroy the ship anyway, you might be able to capture it with only minor repercussions.`
 			choice
 				`	(Hunt down the <npc>.)`
 					accept
@@ -1559,14 +1593,17 @@ mission "Coalition Dissension: Rogue Heliarch Saryd (Punisher)"
 			apply
 				"reputation: Heliarch" -= 24
 				"coalition dissension" ++
-				fail "Coalition Dissension: Rogue Heliarch Saryd (Punisher)"
-			`You receive a message from the Heliarch demanding to know why you have taken posession of the <npc>. After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you captured the <npc> in the process.`
+			`You receive a message from the Heliarch demanding to know why you have taken posession of the <npc>. Visit <destination> to explain yourself.`
+	on complete
+		conversation
+			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you captured the <npc> in the process.`
 
 
 
 
 mission "Coalition Dissension: Heliarch Intrigues 0"
 	landing
+	invisible
 	to offer
 		has "Kimek Student 4: done"
 	on offer
@@ -1582,7 +1619,7 @@ outfit "Heliarch Corruption"
 
 mission "Coalition Dissension: Heliarch Intrigues 1"
 	name "Heliarch Intrigues"
-	decription "Scan the <npc> at either the Ring of Friendship or Ring of Power and share the data collected with Chikee on <destination>."
+	description "Scan the <npc> at either the Ring of Friendship or Ring of Power and share the data collected with Chikee on <destination>."
 	source "Ring of Wisdom"
 	to offer
 		has "license: Coalition"
@@ -1613,9 +1650,7 @@ mission "Coalition Dissension: Heliarch Intrigues 1"
 
 	npc "scan outfits" save
 		government "Heliarch"
-		system
-			"Ki War Ek"
-			"Quaru"
+		system "Ki War Ek" "Quaru"
 		personality target waiting staying uninterested
 		ship "Interdictor (Evidence)" "Zealous Superior"
 		dialog `Your scans revealed evidence of Temlamrem's involvement in corrupt Heliarch activities! Share the data with Chikee on <destination.>`
@@ -1629,7 +1664,7 @@ event "kimek bramble preorders"
 
 mission "Coalition Dissension: Heliarch Intrigues 2"
 	name "Heliarch Intrigues"
-	decription "Visit Chikee on <destination>."
+	description "Visit Chikee on <destination>."
 	source
 		government "Coalition"
 		attributes "kimek"
@@ -1706,7 +1741,7 @@ fleet "Heliarch (Evidence)"
 mission "Coalition Dissension: Heliarch Intrigues (Repeats)"
 	repeat
 	name "Heliarch Intrigues"
-	decription "Scan the <npc> near <origin> and deliver the data to a safety deposit box on <destination>."
+	description "Scan the <npc> near <origin> and deliver the data to a safety deposit box on <destination>."
 	source
 		government "Heliarch"
 		attributes "ringworld"

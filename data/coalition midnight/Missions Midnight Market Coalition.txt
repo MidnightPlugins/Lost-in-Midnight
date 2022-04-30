@@ -341,7 +341,7 @@ mission "Midnight Market: Coalition Smuggling 2"
 	name "Coalition Smuggling"
 	description "Escort a ship carrying merchandise to <destination> by <date>. Payment is <payment>."
 	source "Poisonwood"
-	destinatiot
+	destination
 		government "Coalition"
 	to offer
 		has "Midnight Market: Coalition Smuggling 1: done"
@@ -612,9 +612,6 @@ mission "Midnight Market: Coalition Smuggling Bounty (Arach)"
 		payment 150000
 		dialog `Your assistance with stopping the smugglers is appreciated by the Heliarchs. They pay you <payment> for your efforts.`
 
-		fleet "Independent Kimek Smuggler" 20000
-		fleet "Independent Saryd Smuggler" 20000
-		fleet "Independent Arach Smuggler" 20000
 
 mission "Midnight Market: Source of Coalition Smuggling 1"
 	name "Source of Coalition Smuggling"
@@ -623,8 +620,9 @@ mission "Midnight Market: Source of Coalition Smuggling 1"
 	to offer
 		has "Midnight Market: Coalition Smuggling 4: done"
 	on offer
-		scene "scene/scene-modelguns"
-		`You wonder where the Coalition Smugglers get their supplies from...`
+		conversation
+			scene "scene/scene-modelguns"
+			`You wonder where the Coalition Smugglers get their supplies from...`
 			accept
 	on fail
 		clear "Midnight Market: Source of Coalition Smuggling 1: offered"
