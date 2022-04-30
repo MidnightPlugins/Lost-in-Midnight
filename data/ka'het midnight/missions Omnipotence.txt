@@ -218,6 +218,26 @@ event "add ka'het scouts"
 
 
 
+mission "Omnipotence Map patch"
+	landing
+	invisible
+	to offer
+		has "Omnipotence Map: Builder Anti-Missile 1: active"
+	on offer
+		fail "Omnipotence Map: Builder Ships 1"
+		fail "Omnipotence Map: Builder Ships 2"
+		fail "Omnipotence Map: Builder Ships 3"
+		fail "Omnipotence Map: Builder Ships 4"
+		fail "Omnipotence Map: Builder Anti-Missile 1"
+		fail "Omnipotence Map: Builder Anti-Missile 2"
+		fail "Omnipotence Map: Builder Drones 1"
+		fail "Omnipotence Map: Builder Drones 2"
+		fail "Omnipotence Map: Ka'het Outfitter 1"
+		fail "Omnipotence Map: Ka'het Outfitter 2"
+		fail "Omnipotence Map: Builder Negator 1"
+		fail "Omnipotence Map: Builder Negator 2"
+
+
 mission "Omnipotence Map: Hint"
 	landing
 	to offer

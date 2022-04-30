@@ -12,7 +12,6 @@
 
 
 outfitter "Ka'het Basics"
-	"Builder IFF Transmitter"
 	"EMP Torpedo"
 	"Ka'het Annihilator"
 	"Ka'het Annihilator Turret"
