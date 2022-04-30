@@ -34,3 +34,4 @@ Some highlights:
 - Coalition smuggling, intrigues, and dissention
 - Subsidurial Herding
 - an asteroid catapult
+- two more Sheragi ships appear in human space
