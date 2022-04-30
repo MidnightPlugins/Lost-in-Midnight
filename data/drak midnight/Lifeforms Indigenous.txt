@@ -439,7 +439,7 @@ mission "Weaponized Subsidurial Bounty"
 		random < 10
 	npc
 		government "Bounty"
-		personality target entering plundering mute
+		personality target entering harvests mute
 			confusion 120
 		fleet
 			variant
@@ -469,7 +469,7 @@ mission "Weaponized Subsidurial Stray"
 		government "Indigenous Lifeform"
 		system
 			distance 1
-		personality target mining plundering mute
+		personality target mining harvests mute
 			confusion 120
 		fleet
 			variant
