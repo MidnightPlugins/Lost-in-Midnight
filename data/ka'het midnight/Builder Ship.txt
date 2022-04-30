@@ -50,7 +50,7 @@ ship "Veliante'ixis"
 		"Ka'het Nullifier"
 		"Ka'het Annihilator Turret" 4
 		"Ka'het Ravager Turret" 6
-		"Builder Anti-missile" 6
+		"Builder Anti-Missile" 6
 		
 		"Builder Grand Defense" 2
 		"Builder Grand Generator"
@@ -71,17 +71,17 @@ ship "Veliante'ixis"
 	turret -13.5 -204.5 "Ka'het Ravager Turret"
 	turret 15.5 -204 "Ka'het Ravager Turret"
 	turret -41.5 -94.5 "Ka'het Ravager Turret"
-	turret -16.5 -93.5 "Builder Anti-missile"
-	turret 18.5 -93 "Builder Anti-missile"
+	turret -16.5 -93.5 "Builder Anti-Missile"
+	turret 18.5 -93 "Builder Anti-Missile"
 	turret 43 -94.5 "Ka'het Ravager Turret"
 	turret -42.5 8.5 "Ka'het Annihilator Turret"
-	turret -16.5 9 "Builder Anti-missile"
-	turret 18.5 8 "Builder Anti-missile"
+	turret -16.5 9 "Builder Anti-Missile"
+	turret 18.5 8 "Builder Anti-Missile"
 	turret 43.5 8.5 "Ka'het Annihilator Turret"
 	turret -13.5 147 "Ka'het Annihilator Turret"
 	turret 15 146.5 "Ka'het Annihilator Turret"
-	turret -12.5 167 "Builder Anti-missile"
-	turret 15 167.5 "Builder Anti-missile"
+	turret -12.5 167 "Builder Anti-Missile"
+	turret 15 167.5 "Builder Anti-Missile"
 	bay "Drone" -45 -43.5 under
 	bay "Drone" -27 -43.5 over
 	bay "Drone" 0 -43.5 under

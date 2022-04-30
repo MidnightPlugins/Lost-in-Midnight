@@ -153,8 +153,10 @@ ship "Derelict Albatross"
 
 fleet "Omnipotence Drones"
 	government "Grave Diggers"
+	fighters "ka'mar"
 	personality
 		waiting vindictive mute
+	commodities "Equipment" "Industrial"
 	variant
 		"Selii'mar" 5
 
@@ -342,6 +344,7 @@ mission "Omnipotence Map: Builder Ships part 5"
 	name "Builder Ship Salvage"
 	description "Take some crew members to <destination> to salvage some Builder ships."
 	source
+		government "Remnant"
 		not attributes "uninhabited"
 		attributes "spaceport"
 	destination "Palarei"
@@ -392,7 +395,7 @@ mission "Omnipotence Map: Builder Anti-Missile part 2"
 			not "Randomize Omnipotence Map: Builder Anti-Missile 2"
 			and
 				has "Randomize Omnipotence Map: Builder Anti-Missile 2"
-				random < 50
+				random < 60 - ( 10 * "Omnipotence Map: Builder Anti-Missile part 2: failed" )
 	on offer
 		require "Builder IFF Transmitter"
 		conversation
@@ -403,7 +406,7 @@ mission "Omnipotence Map: Builder Anti-Missile part 2"
 				`	(Leave the turret.)`
 					defer
 			scene "outfit/builder anti-missile"
-			`You remove the turret.`
+			`It takes several hours for you remove the turret from the station. You can try to get more turrets on future visits to the station, but some of them aren't functional and don't respond to the codes.`
 				accept
 	on defer
 		set "Randomize Omnipotence Map: Builder Anti-Missile 2"
@@ -412,6 +415,28 @@ mission "Omnipotence Map: Builder Anti-Missile part 2"
 		set "Randomize Omnipotence Map: Builder Anti-Missile 2"
 		fail			
 
+
+mission "Omnipotence Map: Builder Anti-Missile part 3"
+	landing
+	invisible
+	source "Viminal"
+	to offer
+		has "event: remnant salvage available"
+		has "Omnipotence Map: Builder Anti-Missile part 2: failed"
+	on offer
+		require "Builder Anti-Missile"
+		conversation
+			scene "outfit/builder anti-missile"
+			`When you exit your ship, one of Taely's assistants enthusiastically greets you. "Our scan revealed you have Builder Anti-Missiles on your ship! If you'd like more, we have a surplus in our salvaged inventory." She leads you to a storage room at the back of the salvaged outfits area. Hidden under dusty tarps is a sizable stock of the turrets. "We salvaged these long ago, but we found them so inferior to the Point Defense Turrets that none of our pilots want to use them. We'll have them moved to the sales area by tomorrow."`
+			``
+			`	You thank her for the information. When compared to the Point Defense Turret, the Builder Anti-Missile is an archaic relic. Even the simplest Anti-Missile Turrets produced by Lovelace Labs have automated targetting systems. But other than requiring a crew member to operate the weapon, it does provide reasonable protection by human standards for an anti-missile turret of its size.`
+				decline
+	on decline
+		event "add Builder Anti-Missile to Remnant Salvage"
+
+event "add Builder Anti-Missile to Remnant Salvage"
+	outfitter "Remnant Salvage"
+		add "Builder Anti-Missile"
 
 
 mission "Omnipotence Map: Builder Drones part 1"
