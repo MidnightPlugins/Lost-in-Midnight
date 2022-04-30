@@ -12,6 +12,7 @@
 
 
 outfitter "Ka'het Basics"
+	"Builder IFF Transmitter"
 	"EMP Torpedo"
 	"Ka'het Annihilator"
 	"Ka'het Annihilator Turret"
@@ -38,7 +39,7 @@ outfitter "Ka'het Advanced"
 
 outfit "Ka'het Scanner"
 	category "Systems"
-	cost 
+	cost 410000
 	thumbnail "outfit/kahet scanner"
 	"mass" 12
 	"outfit space" -14
@@ -60,20 +61,16 @@ outfit "Graveyard Map"
 
 
 
-outfit "Builder IMF (Damaged)"
+outfit "Builder IFF (Damaged)"
 	category "Systems"
 	cost 30000
-	thumbnail "outfit/builder imf damaged"
-	"fused circuits" 1
-	reinstall -1
+	thumbnail "outfit/builder iff damaged"
 	description `Normally, this would give you access to restricted areas of the Builder space stations, but this particular unit is damaged.`
 
-outfit "Builder IMF transmitter"
+outfit "Builder IFF Transmitter"
 	category "Systems"
 	cost 30000
-	thumbnail "outfit/builder imf"
-	"integrated systems" 1
-	reinstall -1
+	thumbnail "outfit/builder iff"
 	description `This device is able to transmit codes which give you access to certain restricted areas of the Builder space stations.`
 
 
@@ -116,7 +113,7 @@ outfit "Builder Negator"
 	description "A rapid fire version of the Nullifier, the Negator can drain it's own ships power reserves if not used with discretion."
 
 
-outfit "Builder Anti-missile"
+outfit "Builder Anti-Missile"
 	category "Turrets"
 	cost 55000
 	thumbnail "outfit/builder anti-missile"

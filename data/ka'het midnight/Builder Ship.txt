@@ -56,7 +56,7 @@ ship "Veliante'ixis"
 		"Builder Grand Generator"
 		"Builder Grand Accumulator"
 		"Builder Grand Cooling"
-		"Builder IMF (Damaged)"
+		"Builder IFF (Damaged)"
 		
 		"Vareti Engine Block"
 		"Jump Drive"
@@ -65,7 +65,7 @@ ship "Veliante'ixis"
 	engine 46 291
 	engine -24 296 .8
 	engine 24.5 296 .8
-	gun 2.5 -303.5  "Builder Negator"
+	gun 2.5 -303.5 "Ka'het Nullifier"
 	turret -13.5 -220.5 "Ka'het Ravager Turret"
 	turret 14 -220.5 "Ka'het Ravager Turret"
 	turret -13.5 -204.5 "Ka'het Ravager Turret"
@@ -98,7 +98,7 @@ ship "Veliante'ixis"
 
 
 ship "Kai'xeris"
-	sprite "ship/selii'mar"
+	sprite "ship/kai'xeris"
 	thumbnail "thumbnail/kai'xeris-thumb"
 	attributes
 		category "Light Freighter"
@@ -110,8 +110,9 @@ ship "Kai'xeris"
 		"mass" 71
 		"drag" .8
 		"heat dissipation" 1.1
+		"fuel capacity" 300
 		"cargo space" 105
-		"outfit space" 76
+		"outfit space" 77
 		"weapon capacity" 18
 		"engine capacity" 21
 		"integrated systems" -1
@@ -125,13 +126,12 @@ ship "Kai'xeris"
 		"Ka'het Reserve Accumulator" 3
 		"Ka'het Compact Engine"
 		"Hyperdrive"
-		"Builder IMF transmitter"
 	engine 0 28 1.5
 	explode "tiny explosion" 16
 	description "."
 
 ship "Kai'teris"
-	sprite "ship/faes'mar"
+	sprite "ship/kai'teris"
 	thumbnail "thumbnail/kai'teris-thumb"
 	attributes
 		category "Transport"
@@ -143,6 +143,7 @@ ship "Kai'teris"
 		"mass" 50
 		"drag" .7
 		"heat dissipation" 1.05
+		"fuel capacity" 300
 		"cargo space" 22
 		"outfit space" 113
 		"engine capacity" 21
@@ -158,7 +159,6 @@ ship "Kai'teris"
 		"Ka'het Reserve Accumulator" 2
 		"Ka'het Compact Engine"
 		"Hyperdrive"
-		"Builder IMF transmitter"
 	
 	engine -7 34.5
 	engine 7 34.5

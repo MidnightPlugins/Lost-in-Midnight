@@ -52,20 +52,21 @@ mission "Omnipotence: Grave Digger Epilogue 1"
 		not government "Pirate"
 		not attributes "uninhabited"
 	destination Kaeyin 
-	waypoint Delia
-	waypoint Dixere
 	waypoint Esix
 	waypoint Fearis
+	waypoint Lire
+	waypoint Polerius
+	waypoint Queri
+	waypoint Relifer
+	waypoint Delia
+	waypoint Dixere
 	waypoint Feraticus
 	waypoint Fereti
 	waypoint Gerenus
 	waypoint Giribea
 	waypoint Nona
 	waypoint Paeli
-	waypoint Queri
-	waypoint Relifer
 	waypoint Ritilas
-	waypoint Polerius
 	stopover Retilie
 	to offer
 		has "Omnipotence: Grave Digger Epilogue 0: offered"
@@ -78,40 +79,53 @@ mission "Omnipotence: Grave Digger Epilogue 1"
 		"reputation: Derelict (Killable)" <?= -1
 	on visit
 		dialog `The Grave Diggers had a base here, but it looks abandoned.`
-	on enter Polerius
-		dialog `A derelict Pelican is asking for assistance. They were attacked by Ka'het.`
-	on enter Esix
-		dialog `A derelict Ibis is asking for assistance. They were attacked by Ka'het.`
-	on enter Relifer
-		dialog `You find a derelict Ka'het. That's not so unusual. The Ka'het do fight amongst themselves.`
-	on enter Fearis
-		dialog `You find a derelict Ka'het. That's not so unusual. The Ka'het do fight amongst themselves.`
-	on enter Lire
-		dialog `You find a derelict Albatross. It appears abandoned. This might be something to investigate.`
-	on stopover
-		dialog `You find rusting salvaging equipment strewn across a beach on one of the tropical islands. Labels on the machines indicate they were manufactured on Millrace and sold by the Syndicate. From the markings in the sand, something big was dragged out of the ocean. Whatever it was is no longer here.`
 	on waypoint
 		dialog `You've checked all the systems in the Graveyard. You should do a thorough search of the Grave Digger's base on <destination> in case they left behind any clues.`
+
+	on enter Polerius
+		dialog `A derelict Pelican is asking for assistance. They were attacked by Ka'het.`
 	npc
 		government "Remnant"
 		system Polerius
 		personality derelict waiting staying
 		ship "Pelican" "Eternal Dream Yonder"
+
+	on enter Esix
+		dialog `A derelict Ibis is asking for assistance. They were attacked by Ka'het.`
 	npc
 		government "Remnant"
 		system Esix
 		personality derelict waiting staying
 		ship "Ibis" "Ancient Memory Awakened"
+
+	on enter Queri
+		dialog `A Quarg Wardragon is visiting the system.`
+	npc
+		government "Quarg"
+		system Queri
+		personality waiting staying
+		ship "Quarg Wardragon" "Quar-trum"
+
+	on enter Relifer
+		dialog `You find a derelict Ka'het. That's not so unusual. The Ka'het do fight amongst themselves.`
 	npc
 		government "Ka'het"
 		system Relifer
 		personality derelict waiting staying
 		ship "Telis'het (Disable-able)" "Retilie-reati'het"
+
+	on enter Fearis
+		dialog `You find a derelict Ka'het. That's not so unusual. The Ka'het do fight amongst themselves.`
 	npc
 		government "Ka'het"
 		system Fearis
 		personality derelict waiting staying
 		ship "Telis'het (Disable-able)" "Retilie-maere'het"
+
+	on enter Lire
+		dialog `You find a derelict Albatross. It appears abandoned. This might be something to investigate.`
+	on stopover
+		dialog `You find rusting salvaging equipment strewn across a beach on one of the tropical islands. Labels on the machines indicate they were manufactured on Millrace and sold by the Syndicate. From the markings in the sand, something big was dragged out of the ocean. Whatever it was is no longer here.`
 	npc board
 		government "Derelict (Killable)"
 		system Lire
@@ -125,6 +139,7 @@ mission "Omnipotence: Grave Digger Epilogue 1"
 ship "Derelict Albatross"
 	plural "Albatrosses"
 	sprite "ship/albatross"
+	"uncapturable"
 	attributes
 		category "Heavy Warship"
 		"hull" 2520
@@ -151,7 +166,7 @@ mission "Omnipotence: Grave Digger Epilogue 2"
 		has "Omnipotence: Grave Digger Epilogue 1: done"
 	on enter
 		conversation
-			scene "ship/veliante'exis"
+			scene "ship/veliante'ixis/veliante'ixis"
 			`A Grave Digger fleet has entered the system! The lead ship, a model you have not seen before, hails you. "Captain <last>, welcome to your grave!"`
 				accept
 	npc
@@ -205,11 +220,9 @@ event "add ka'het scouts"
 
 mission "Omnipotence Map: Hint"
 	landing
-	invisible
 	to offer
 		has "graveyard map"
 	on offer
-		outfit "Graveyard Map 1
 		conversation
 			scene "outfit/graveyard map"
 			`You found a map of the Graveyard on the Omnipotence. Several systems are marked on the map...`
@@ -217,27 +230,21 @@ mission "Omnipotence Map: Hint"
 
 
 
-mission "Omnipotence Map: Builder Ships 1"
+mission "Omnipotence Map: Builder Ships part 1"
 	landing
 	name "Graveyard: Ships"
 	description `<destination> is marked on the Graveyard Map as "Ships".`
 	destination "Palarei"
 	to offer
 		has "graveyard map"
-	to complete
-		never
-	to fail
-		has "Omnipotence Map: Builder Drones 2: failed"
-		has "Omnipotence Map: Ka'het Outfitter 2: failed"
-		has "Omnipotence Map: Builder Negator 2"
 
 
-mission "Omnipotence Map: Builder Ships 2"
+mission "Omnipotence Map: Builder Ships part 2"
 	landing
 	invisible
 	source "Palarei"
 	to offer
-		has "Omnipotence Map: Builder Ships 1: active"
+		has "Omnipotence Map: Builder Ships part 1: done"
 		or
 			not "Randomize Omnipotence Map: Builder Ships 2"
 			and
@@ -248,103 +255,129 @@ mission "Omnipotence Map: Builder Ships 2"
 			scene "thumbnail/kai'xeris-thumb"
 			`You find an abandoned freighter.`
 			choice
-				`	(Take the ship.)`
-				`	(Don't take the ship.)`
+				`	(Search the ship.)`
+				`	(Don't search the ship.)`
 					defer
-			scene "outfit/builder imf"
-			`The ship has a functional Builder IMF Transmitter. If you take it to the various Builder space stations scattered across the Graveyard, you may gain access to areas that would normally be restricted to you.`
+			scene "outfit/builder iff"
+			`The ship has a functional "Builder IFF Transmitter". If you take one to the various Builder space stations scattered across the Graveyard, you may gain access to areas that would normally be restricted to you.`
 				accept
-	on defer
-		set "Randomize Omnipotence Map: Builder Ships 2"
 	on accept
-		give ship "Kai'xeris" "Builder Freighter"
+		outfit "Builder IFF Transmitter" 1
+		clear "Omnipotence Map: Builder Ships 3: offered"
 		fail
 
-mission "Omnipotence Map: Builder Ships 3"
+mission "Omnipotence Map: Builder Ships part 3"
 	landing
 	invisible
 	source "Palarei"
 	to offer
 		has "graveyard map"
-		has "Omnipotence Map: Builder Ships 2: failed"
-		random < 50
+		has "Omnipotence Map: Builder Ships part 2: failed"
+		not "Omnipotence Map: Ka'het Outfitter part 2: failed"
+		random < 25
 	on offer
-		require "Builder IMF transmitter" 0
 		conversation
 			scene "thumbnail/kai'teris-thumb"
 			`You find an abandoned transport.`
 			choice
-				`	(Take the ship.)`
-				`	(Don't take the ship.)`
+				`	(Search the ship.)`
+				`	(Don't search the ship.)`
 					defer
-			scene "outfit/builder imf"
-			`The ship has a functional Builder IMF Transmitter. If you take it to the various Builder space stations scattered across the Graveyard, you may gain access to areas that would normally be restricted to you.`
+			scene "outfit/builder iff"
+			`The ship has a functional "Builder IFF Transmitter". If you take one to the various Builder space stations scattered across the Graveyard, you may gain access to areas that would normally be restricted to you.`
 				accept
 	on accept
-		give ship "Kai'teris" "Builder Transport"
-		clear "Omnipotence Map: Builder Ships 4: offered"
+		outfit "Builder IFF Transmitter" 1
+		clear "Omnipotence Map: Builder Ships 3: offered"
 		fail
 
-mission "Omnipotence Map: Builder Ships 4"
+mission "Omnipotence Map: Builder Ships part 4"
 	landing
 	invisible
 	source "Palarei"
 	to offer
 		has "graveyard map"
-		has "Omnipotence Map: Builder Ships 3: failed"
-		random < 50
+		has "Omnipotence Map: Builder Ships part 3: failed"
+		not "Omnipotence Map: Ka'het Outfitter part 2: failed"
+		random < 25
 	on offer
-		require "Builder IMF transmitter" 0
 		conversation
 			scene "thumbnail/kai'xeris-thumb"
 			`You find an abandoned freighter.`
 			choice
-				`	(Take the ship.)`
-				`	(Don't take the ship.)`
+				`	(Search the ship.)`
+				`	(Don't search the ship.)`
 					defer
-			scene "outfit/builder imf"
-			`The ship has a functional Builder IMF Transmitter. If you take it to the various Builder space stations scattered across the Graveyard, you may gain access to areas that would normally be restricted to you.`
+			scene "outfit/builder iff"
+			`The ship has a functional "Builder IFF Transmitter". If you take one to the various Builder space stations scattered across the Graveyard, you may gain access to areas that would normally be restricted to you.`
 				accept
 	on accept
-		give ship "Kai'xeris" "Builder Transport"
+		outfit "Builder IFF Transmitter" 1
 		clear "Omnipotence Map: Builder Ships 3: offered"
 		fail
 
+mission "Omnipotence Map: Builder Ships part 5"
+	job
+	repeat
+	name "Builder Ship Salvage"
+	description "Take some crew members to <destination> to salvage some Builder ships."
+	source
+		not attributes "uninhabited"
+		attributes "spaceport"
+	destination "Palarei"
+	passengers 2
+	to offer
+		has "Omnipotence Map: Ka'het Outfitter part 2: failed"
+	on offer
+		dialog "You've hired some crew members. Return to <destination> to salvage some ships."
+	
+mission "Omnipotence Map: Builder Ships part 6"
+	landing
+	repeat
+	source "Palarei"
+	to offer
+		has "Omnipotence Map: Builder Ships part 5: done"
+	on offer
+		conversation
+			scene "thumbnail/kai'xeris-thumb"
+			scene "thumbnail/kai'teris-thumb"
+			`You salvage some ships with the help of your new crew members.`
+				decline
+	on decline
+		clear "Omnipotence Map: Builder Ships part 5: done"
+		give ship "Kai'xeris" "Builder Freighter"
+		give ship "Kai'teris" "Builder Transport"
 
 
-mission "Omnipotence Map: Builder Anti-Missile 1"
+		
+mission "Omnipotence Map: Builder Anti-Missile part 1"
 	landing
 	name "Graveyard: Anti-Missiles"
 	description `<destination> is marked on the Graveyard Map as "Builder Anti-Missiles".`
 	destination "Ceilia'sei"
 	to offer
 		has "graveyard map"
-	to complete
-		never
-	on visit
-		dialog `Certain areas of the station can't be accessed without a functional Builder IMF Transmitter.`
-	to fail
-		has "Omnipotence Map: Builder Drones 2: failed"
-		has "Omnipotence Map: Ka'het Outfitter 2: failed"
-		has "Omnipotence Map: Builder Negator 2"
+	on complete
+		dialog `Certain areas of the station can't be accessed without a functional "Builder IFF Transmitter".`
 
-mission "Omnipotence Map: Builder Anti-Missile 2"
+mission "Omnipotence Map: Builder Anti-Missile part 2"
 	landing
-	invisible
+	name "Graveyard: Anti-Missiles"
+	description `<destination> is marked on the Graveyard Map as "Builder Anti-Missiles".`
 	repeat
 	source "Ceilia'sei"
 	to offer
-		has "graveyard map"
+		has "Omnipotence Map: Builder Ships part 2: failed"
 		or
 			not "Randomize Omnipotence Map: Builder Anti-Missile 2"
 			and
 				has "Randomize Omnipotence Map: Builder Anti-Missile 2"
 				random < 50
 	on offer
-		require "Builder IMF transmitter"
+		require "Builder IFF Transmitter"
 		conversation
-			scene "outfit/builder imf"
-			`The codes from the Builder IMF transmitter gives you access to one of the Builders anti-missile turrets.`
+			scene "outfit/builder iff"
+			`The codes from the "Builder IFF Transmitter" give you access to one of the Builders anti-missile turrets.`
 			choice
 				`	(Take the turret.)`
 				`	(Leave the turret.)`
@@ -361,35 +394,34 @@ mission "Omnipotence Map: Builder Anti-Missile 2"
 
 
 
-mission "Omnipotence Map: Builder Drones 1"
+mission "Omnipotence Map: Builder Drones part 1"
 	landing
 	name "Graveyard: Drones"
 	description `<destination> is marked on the Graveyard Map as "Drones".`
 	destination "Parii'het"
 	to offer
 		has "graveyard map"
-	to complete
-		never
-	on visit
-		dialog `Certain areas of the station can't be accessed without a functional Builder IMF Transmitter.`
+	on complete
+		dialog `Certain areas of the station can't be accessed without a functional "Builder IFF Transmitter".`
 
 			
-mission "Omnipotence Map: Builder Drones 2"
+mission "Omnipotence Map: Builder Drones part 2"
 	landing
-	invisible
+	name "Graveyard: Drones"
+	description `<destination> is marked on the Graveyard Map as "Drones".`
 	source "Parii'het"
 	to offer
-		has "Omnipotence Map: Builder Drones 1: active"
+		has "Omnipotence Map: Builder Ships part 2: failed"
 		or
 			not "Randomize Omnipotence Map: Builder Drones 2"
 			and
 				has "Randomize Omnipotence Map: Builder Drones 2"
 				random < 50
 	on offer
-		require "Builder IMF transmitter"
+		require "Builder IFF Transmitter"
 		conversation
-			scene "outfit/builder imf"
-			`The codes from the Builder IMF transmitter gives you access to a restricted area of the station where there is an inactive automated shipyard.`
+			scene "outfit/builder iff"
+			`The codes from the "Builder IFF Transmitter" gives you access to a restricted area of the station where there is an inactive automated shipyard.`
 			choice
 				`	(Activate the shipyard.)`
 				`	(Do not activate the shipyard.)`
@@ -401,7 +433,6 @@ mission "Omnipotence Map: Builder Drones 2"
 		set "Randomize Omnipotence Map: Builder Drones 2"
 	on accept
 		event "activate Parii'het shipyard"
-		fail "Omnipotence Map: Builder Drones 1"
 		fail
 
 shipyard "Builder Drones"
@@ -414,17 +445,15 @@ event "activate Parii'het shipyard"
 
 
 
-mission "Omnipotence Map: Ka'het Outfitter 1"
+mission "Omnipotence Map: Ka'het Outfitter part 1"
 	landing
 	name "Graveyard: Ka'het Facility"
 	description `<destination> is marked on the Graveyard Map as "Ka'het Facility".`
 	destination "Seli'het"
 	to offer
 		has "graveyard map"
-	to complete
-		never
-	on visit
-		dialog `Certain areas of the station can't be accessed without a functional Builder IMF Transmitter.`
+	on complete
+		dialog `Certain areas of the station can't be accessed without a functional "Builder IFF Transmitter".`
 	npc
 		government "Ka'het"
 		system Giribea
@@ -455,22 +484,23 @@ mission "Omnipotence Map: Ka'het Outfitter 1"
 
 
 
-mission "Omnipotence Map: Ka'het Outfitter 2"
+mission "Omnipotence Map: Ka'het Outfitter part 2"
 	landing
-	invisible
+	name "Graveyard: Ka'het Facility"
+	description `<destination> is marked on the Graveyard Map as "Ka'het Facility".`
 	source "Seli'het"
 	to offer
-		has "Omnipotence Map: Ka'het Outfitter 1: active"
+		has "Omnipotence Map: Builder Ships part 2: failed"
 		or
 			not "Randomize Omnipotence Map: Ka'het Outfitter 2"
 			and
 				has "Randomize Omnipotence Map: Ka'het Outfitter 2"
 				random < 50
 	on offer
-		require "Builder IMF transmitter"
+		require "Builder IFF Transmitter"
 		conversation
-			scene "outfit/builder imf"
-			`The codes from the Builder IMF transmitter gives you access to a restricted area of the station where there is an inactive automated outfitter.`
+			scene "outfit/builder iff"
+			`The codes from the "Builder IFF Transmitter" gives you access to a restricted area of the station where there is an inactive automated outfitter.`
 			choice
 				`	(Activate the outfitter.)`
 				`	(Do not activate the outfitter.)`
@@ -483,7 +513,6 @@ mission "Omnipotence Map: Ka'het Outfitter 2"
 
 	on accept
 		event "activate seli'het outfitter"
-		fail "Omnipotence Map: Ka'het Outfitter 1"
 		fail
 
 event "activate seli'het outfitter"
@@ -493,36 +522,35 @@ event "activate seli'het outfitter"
 
 
 
-mission "Omnipotence Map: Builder Negator 1"
+mission "Omnipotence Map: Builder Negator part 1"
 	landing
 	name "Graveyard: Sealed"
 	description `<destination> is marked on the Graveyard Map as "Sealed".`
 	destination "Letis'sei"
 	to offer
 		has "graveyard map"
-	to complete
-		never
-	on visit
-		dialog `Certain areas of the station can't be accessed without a functional Builder IMF Transmitter.`
+	on complete
+		dialog `Certain areas of the station can't be accessed without a functional "Builder IFF Transmitter".`
 
 
 
-mission "Omnipotence Map: Builder Negator 2"
+mission "Omnipotence Map: Builder Negator part 2"
 	landing
-	invisible
+	name "Graveyard: Sealed"
+	description `<destination> is marked on the Graveyard Map as "Sealed".`
 	source "Letis'sei"
 	to offer
-		has "Omnipotence Map: Builder Negator 1: active"
+		has "Omnipotence Map: Builder Ships part 2: failed"
 		or
 			not "Randomize Omnipotence Map: Builder Negator 2"
 			and
 				has "Randomize Omnipotence Map: Builder Negator 2"
 				random < 50
 	on offer
-		require "Builder IMF transmitter"
+		require "Builder IFF Transmitter"
 		conversation
-			scene "outfit/builder imf"
-			`The codes from the Builder IMF transmitter gives you access to a sealed cargo bay. Inside, you find a Negator cannon.`
+			scene "outfit/builder iff"
+			`The codes from the "Builder IFF Transmitter" gives you access to a sealed cargo bay. Inside, you find a Negator cannon.`
 			choice
 				`	(Take the cannon.)`
 				`	(Leave the cannon.)`
@@ -534,5 +562,4 @@ mission "Omnipotence Map: Builder Negator 2"
 		set "Randomize Omnipotence Map: Builder Negator 2"
 	on accept
 		outfit "Builder Negator" 1
-		fail "Omnipotence Map: Builder Negator 1"
 		fail
