@@ -551,14 +551,17 @@ mission "Midnight Market: Coalition Smuggling Bounty (Kimek)"
 		government "Coalition"
 	to offer
 		has "event: Coalition Patrolling Southern Rim"
-		random < 15
+		random < 25
 	npc board
 		government "Independent"
 		system
 			distance 2 3
 		personality target waiting staying uninterested
 		fleet "Independent Kimek Smuggler"
-		dialog `You've captured one of the crew members. Bring them to <destination> for questioning.`
+		dialog `You've captured one of the crew members. Bring them to <destination> for questioning. You weren't ordered to kill the crew, and doing so may have consequences that aren't readily apparent.`
+	on fail
+		"reputation: Coalition" --
+		dialog `You were only supposed to bring one of the crew in for questioning, not kill the crew! There may be consequences from this that aren't readily apparent.`
 	on complete
 		"reputation: Heliarch" ++
 		payment 150000
@@ -575,14 +578,17 @@ mission "Midnight Market: Coalition Smuggling Bounty (Saryd)"
 		government "Coalition"
 	to offer
 		has "event: Coalition Patrolling Southern Rim"
-		random < 15
+		random < 25
 	npc board
 		government "Independent"
 		system
 			distance 2 3
 		personality target waiting staying uninterested
 		fleet "Independent Saryd Smuggler"
-		dialog `You've captured one of the crew members. Bring them to <destination> for questioning.`
+		dialog `You've captured one of the crew members. Bring them to <destination> for questioning. You weren't ordered to kill the crew, and doing so may have consequences that aren't readily apparent.`
+	on fail
+		"reputation: Coalition" --
+		dialog `You were only supposed to bring one of the crew in for questioning, not kill the crew! There may be consequences from this that aren't readily apparent.`
 	on complete
 		"reputation: Heliarch" ++
 		payment 150000
@@ -599,14 +605,17 @@ mission "Midnight Market: Coalition Smuggling Bounty (Arach)"
 		government "Coalition"
 	to offer
 		has "event: Coalition Patrolling Southern Rim"
-		random < 15
+		random < 25
 	npc board
 		government "Independent"
 		system
 			distance 2 3
 		personality target waiting staying uninterested
 		fleet "Independent Arach Smuggler"
-		dialog `You've captured one of the crew members. Bring them to <destination> for questioning.`
+		dialog `You've captured one of the crew members. Bring them to <destination> for questioning. You weren't ordered to kill the crew, and doing so may have consequences that aren't readily apparent.`
+	on fail
+		"reputation: Coalition" --
+		dialog `You were only supposed to bring one of the crew in for questioning, not kill the crew! There may be consequences from this that aren't readily apparent.`
 	on complete
 		"reputation: Heliarch" ++
 		payment 150000

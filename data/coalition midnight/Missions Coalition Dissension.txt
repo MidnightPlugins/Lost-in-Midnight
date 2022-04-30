@@ -1607,9 +1607,12 @@ mission "Coalition Dissension: Heliarch Intrigues 0"
 	to offer
 		has "Kimek Student 4: done"
 	on offer
-		event "chikee break" 30
+		event "chikee intrigue" 30
 		fail
 		
+
+event "chikee intrigue"
+
 
 
 outfit "Heliarch Corruption"
@@ -1619,18 +1622,19 @@ outfit "Heliarch Corruption"
 
 mission "Coalition Dissension: Heliarch Intrigues 1"
 	name "Heliarch Intrigues"
-	description "Scan the <npc> at either the Ring of Friendship or Ring of Power and share the data collected with Chikee on <destination>."
+	description "Scan the <npc> at one of the Heliarch ringworlds and share the data collected with Chikee on <destination>."
 	source "Ring of Wisdom"
 	to offer
 		has "license: Coalition"
 		has "Kimek Student 4: done"
-		has "event: chikee break"
+		has "event: chikee intrigue"
 		has "coalition dissension"
 	on offer
+		clear "event: chikee intrigue"
 		conversation
-			scene "thumbnail/kimek bramble"
-			`You run into Chikee, the student who you helped on his path to joining the Heliarchs. He seems tired. "While I'm not on the council, I was able to convince someone who is to put forth a proposal for production of a new Kimek freighter, the Bramble. But there's opposition to the proposal, led by a Saryd named Temlamrem. I didn't realized how frustrating the inner machinations of the Heliarchs would be!"`
-			`	Such is politics. You wish Chikee luck and return to your ship, to find a data chip wedged into the entry hatch.`
+			scene "thumbnail/kimek bramble-thumb"
+			`You run into Chikee, the student who you helped on his path to joining the Heliarchs. He seems tired. "While I'm not on the council, I was able to convince someone who is to put forth a proposal for production of a new Kimek freighter, the Bramble. But there's opposition to the proposal, led by a Saryd named Temlamrem. I didn't realize how frustrating the inner machinations of the Heliarchs would be!"`
+			`	Such is politics. You wish Chikee luck and return to your ship, where you find a data chip wedged into the entry hatch.`
 			choice
 				`	(Carefully remove it.)`
 				`	(Yank it out.)`
@@ -1652,8 +1656,8 @@ mission "Coalition Dissension: Heliarch Intrigues 1"
 		government "Heliarch"
 		system "Ki War Ek" "Quaru"
 		personality target waiting staying uninterested
-		ship "Interdictor (Evidence)" "Zealous Superior"
-		dialog `Your scans revealed evidence of Temlamrem's involvement in corrupt Heliarch activities! Share the data with Chikee on <destination.>`
+		ship "Heliarch Interdictor (Evidence)" "Zealous Superior"
+		dialog `Your scans revealed evidence of Temlamrem's involvement in corrupt Heliarch activities! Share the data with Chikee on <destination>.`
 	on complete
 		event "kimek bramble preorders" 90
 		"heliarch intrigues" ++
@@ -1755,7 +1759,7 @@ mission "Coalition Dissension: Heliarch Intrigues (Repeats)"
 		random < 5
 	on offer
 		conversation
-			`After exploring the spaceport you return to your ship, only to find a data chip wedged into the entry hatch.`
+			`After exploring the spaceport you return to your ship, where you find a data chip wedged into the entry hatch.`
 			choice
 				`	(Carefully remove it.)`
 				`	(Yank it out.)`
