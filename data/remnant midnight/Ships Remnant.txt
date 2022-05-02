@@ -13,7 +13,6 @@
 
 ship "Nightingale"
 	sprite "ship/nightingale"
-	thumbnail "thumbnail/nightingale-thumb"
 	attributes
 		category "Drone"
 		licenses
