@@ -120,6 +120,7 @@ ship "Pirate Drone"
 
 ship "Amalgam"
 	sprite "ship/amalgam/amalgam"
+		"rewind"
 	thumbnail "thumbnail/amalgam-thumb"
 	attributes
 		category "Light Warship"
@@ -400,6 +401,7 @@ ship "Kestrel Prototype" "Kestrel Prototype (Void Rifle)"
 
 ship "Liberator"
 	sprite "ship/liberator"
+		"delay" 2
 	attributes
 		category "Heavy Warship"
 		licenses
@@ -480,6 +482,7 @@ ship "Liberator"
 
 ship "Vindicator"
 	sprite "ship/liberator"
+		"delay" 2
 	attributes
 		category "Heavy Warship"
 		licenses
