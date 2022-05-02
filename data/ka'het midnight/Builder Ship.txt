@@ -126,7 +126,8 @@ ship "Kai'xeris"
 		"Ka'het Reserve Accumulator" 3
 		"Ka'het Compact Engine"
 		"Hyperdrive"
-	engine 0 28 1.5
+	gun 0 -66
+	engine 0 62
 	explode "tiny explosion" 16
 	description "."
 
@@ -160,8 +161,9 @@ ship "Kai'teris"
 		"Ka'het Compact Engine"
 		"Hyperdrive"
 	
-	engine -7 34.5
-	engine 7 34.5
+	engine -7 51
+	engine 7 51
+	gun 0 -51
 	explode "tiny explosion" 19
 	description "."
 
