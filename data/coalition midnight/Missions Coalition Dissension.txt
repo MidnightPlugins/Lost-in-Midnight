@@ -1061,7 +1061,7 @@ mission "Coalition Dissension: Rogue Heliarch Arach (Interdictor)"
 		government "Heliarch"
 	destination "Ahr"
 	to offer
-		"coalition dissension" > 5
+		"coalition dissension" > 10
 		"reputation: Heliarch" > 30
 		not "Coalition Dissension: Bounty Rogue Heliarch Kimek (Interdictor): active"
 		not "Coalition Dissension: Bounty Rogue Heliarch Saryd (Interdictor): active"
@@ -1106,7 +1106,7 @@ mission "Coalition Dissension: Rogue Heliarch Kimek (Interdictor)"
 		government "Heliarch"
 	destination "Ki Patek Ka"
 	to offer
-		"coalition dissension" > 5
+		"coalition dissension" > 10
 		"reputation: Heliarch" > 30
 		not "Coalition Dissension: Bounty Rogue Heliarch Arach (Interdictor): active"
 		not "Coalition Dissension: Bounty Rogue Heliarch Saryd (Interdictor): active"
@@ -1151,7 +1151,7 @@ mission "Coalition Dissension: Rogue Heliarch Saryd (Interdictor)"
 		government "Heliarch"
 	destination "Saros"
 	to offer
-		"coalition dissension" > 5
+		"coalition dissension" > 10
 		"reputation: Heliarch" > 30
 		not "Coalition Dissension: Bounty Rogue Heliarch Arach (Interdictor): active"
 		not "Coalition Dissension: Bounty Rogue Heliarch Kimek (Interdictor): active"
@@ -1198,7 +1198,7 @@ mission "Coalition Dissension: Rogue Heliarch Arach (Hunter)"
 		government "Heliarch"
 	destination "Ahr"
 	to offer
-		"coalition dissension" > 5
+		"coalition dissension" > 10
 		"reputation: Heliarch" > 30
 		not "Coalition Dissension: Bounty Rogue Heliarch Kimek (Hunter): active"
 		not "Coalition Dissension: Bounty Rogue Heliarch Saryd (Hunter): active"
@@ -1243,7 +1243,7 @@ mission "Coalition Dissension: Rogue Heliarch Kimek (Hunter)"
 		government "Heliarch"
 	destination "Ki Patek Ka"
 	to offer
-		"coalition dissension" > 5
+		"coalition dissension" > 10
 		"reputation: Heliarch" > 30
 		not "Coalition Dissension: Bounty Rogue Heliarch Arach (Hunter): active"
 		not "Coalition Dissension: Bounty Rogue Heliarch Saryd (Hunter): active"
@@ -1288,7 +1288,7 @@ mission "Coalition Dissension: Rogue Heliarch Saryd (Hunter)"
 		government "Heliarch"
 	destination "Saros"
 	to offer
-		"coalition dissension" > 5
+		"coalition dissension" > 10
 		"reputation: Heliarch" > 30
 		not "Coalition Dissension: Bounty Rogue Heliarch Arach (Hunter): active"
 		not "Coalition Dissension: Bounty Rogue Heliarch Kimek (Hunter): active"
@@ -1335,7 +1335,7 @@ mission "Coalition Dissension: Rogue Heliarch Arach (Judicator)"
 		government "Heliarch"
 	destination "Ahr"
 	to offer
-		"coalition dissension" > 5
+		"coalition dissension" > 10
 		"reputation: Heliarch" > 30
 		not "Coalition Dissension: Bounty Rogue Heliarch Kimek (Judicator): active"
 		not "Coalition Dissension: Bounty Rogue Heliarch Saryd (Judicator): active"
@@ -1380,7 +1380,7 @@ mission "Coalition Dissension: Rogue Heliarch Kimek (Judicator)"
 		government "Heliarch"
 	destination "Ki Patek Ka"
 	to offer
-		"coalition dissension" > 5
+		"coalition dissension" > 10
 		"reputation: Heliarch" > 30
 		not "Coalition Dissension: Bounty Rogue Heliarch Arach (Judicator): active"
 		not "Coalition Dissension: Bounty Rogue Heliarch Saryd (Judicator): active"
@@ -1425,7 +1425,7 @@ mission "Coalition Dissension: Rogue Heliarch Saryd (Judicator)"
 		government "Heliarch"
 	destination "Saros"
 	to offer
-		"coalition dissension" > 5
+		"coalition dissension" > 10
 		"reputation: Heliarch" > 30
 		not "Coalition Dissension: Bounty Rogue Heliarch Arach (Judicator): active"
 		not "Coalition Dissension: Bounty Rogue Heliarch Kimek (Judicator): active"
@@ -1472,7 +1472,7 @@ mission "Coalition Dissension: Rogue Heliarch Arach (Punisher)"
 		government "Heliarch"
 	destination "Ahr"
 	to offer
-		"coalition dissension" > 5
+		"coalition dissension" > 15
 		"reputation: Heliarch" > 30
 		not "Coalition Dissension: Bounty Rogue Heliarch Kimek (Punisher): active"
 		not "Coalition Dissension: Bounty Rogue Heliarch Saryd (Punisher): active"
@@ -1517,7 +1517,7 @@ mission "Coalition Dissension: Rogue Heliarch Kimek (Punisher)"
 		government "Heliarch"
 	destination "Ki Patek Ka"
 	to offer
-		"coalition dissension" > 5
+		"coalition dissension" > 15
 		"reputation: Heliarch" > 30
 		not "Coalition Dissension: Bounty Rogue Heliarch Arach (Punisher): active"
 		not "Coalition Dissension: Bounty Rogue Heliarch Saryd (Punisher): active"
@@ -1562,7 +1562,7 @@ mission "Coalition Dissension: Rogue Heliarch Saryd (Punisher)"
 		government "Heliarch"
 	destination "Saros"
 	to offer
-		"coalition dissension" > 5
+		"coalition dissension" > 15
 		"reputation: Heliarch" > 30
 		not "Coalition Dissension: Bounty Rogue Heliarch Arach (Punisher): active"
 		not "Coalition Dissension: Bounty Rogue Heliarch Kimek (Punisher): active"
@@ -1631,7 +1631,7 @@ mission "Coalition Dissension: Heliarch Intrigues 1"
 		clear "event: chikee break"
 		conversation
 			scene "thumbnail/kimek bramble-thumb"
-			`You run into Chikee, the student who you helped on his path to joining the Heliarchs. He seems tired. "While I'm not on the council, I was able to convince someone who is to put forth a proposal for production of a new Kimek freighter, the Bramble. But there's opposition to the proposal, led by a Saryd named Temlamrem. I didn't realize how frustrating the inner machinations of the Heliarchs would be!"`
+			`You run into Chikee, the student who you helped on his path to joining the Heliarchs. He seems tired. "On the council I am not. Yet put forth a proposal for production of a new Kimek freighter, the Bramble. Able to convince someone on the council, I did. But opposition to the proposal, there is. Led by Temlamrem, a Saryd. Frustrating, the inner machinations of the Heliarchs. Not expected I did!"`
 			`	Such is politics. You wish Chikee luck and return to your ship, where you find a data chip wedged into the entry hatch.`
 			choice
 				`	(Carefully remove it.)`
@@ -1673,9 +1673,9 @@ mission "Coalition Dissension: Heliarch Intrigues 2"
 		attributes "shipyard"
 	destination "Ring of Wisdom"
 	to offer
-		has "event: kimek bramble sales"
+		has "event: kimek bramble preorders"
 	on offer
-		event "kimek bramble sales" 90
+		event "kimek bramble sales" 30
 		conversation
 			scene "thumbnail/kimek bramble"
 			`The shipyard has a new ship on display: the Kimek Bramble. It isn't ready to be sold yet, but the shipyard is taking preorders.`
@@ -1789,3 +1789,77 @@ mission "Coalition Dissension: Heliarch Intrigues (Repeats)"
 		payment 1500000
 		conversation
 			`	You find the safety deposit box and insert a data chip containing your scanner data with evidence of corrupt Heliarch activities. A few hours later, <payment> is deposited into your account.`
+
+
+
+
+mission "Coalition Dissension: Temlamrem Bounty"
+	job
+	name "Wanted Fugitive"
+	passengers 1
+	description "A former agent, Temlamrem, has fled the Heliarch. He may be hiding on one of the Saryd worlds marked on your map. Find him and bring him to <destination> to face the Heliarch's judgement. Payment is <payment>."
+	source
+		government "Heliarch"
+	destination "Ring of Power"
+	stopover
+		government "Coalition"
+		attributes "saryd"
+		attributes "spaceport"
+	stopover
+		government "Coalition"
+		attributes "saryd"
+		attributes "spaceport"
+	stopover
+		government "Coalition"
+		attributes "saryd"
+		attributes "spaceport"
+	stopover
+		government "Coalition"
+		attributes "saryd"
+		attributes "spaceport"
+	stopover
+		government "Coalition"
+		attributes "saryd"
+		attributes "spaceport"
+	stopover
+		government "Coalition"
+		attributes "saryd"
+		attributes "spaceport"
+	stopover
+		government "Coalition"
+		attributes "saryd"
+		attributes "spaceport"
+	stopover
+		government "Coalition"
+		attributes "saryd"
+		attributes "spaceport"
+	stopover
+		government "Coalition"
+		attributes "saryd"
+		attributes "spaceport"
+	stopover
+		government "Coalition"
+		attributes "saryd"
+		attributes "spaceport"
+	stopover
+		government "Coalition"
+		attributes "saryd"
+		attributes "spaceport"
+	to offer
+		has "heliarch intrigues" > 5
+	on offer
+		require "Brig"
+		"coalition dissension" ++
+
+	on stopover
+		conversation
+			scene "outfit/brig"
+			`After a long search, you find Temlamrem among the homeless population of the local spaceport. Tire, destitute, and in poor health, he is in no condition to resist being taken into your custody. With him securely locked in your brig, it's time to head for <destination>.`
+	on complete
+		"reputation: Coalition" ++
+		"coalition dissension" ++
+		"coalition jobs" ++
+		payment 5000000
+		conversation
+			scene "outfit/brig"
+			`You arrive at <planet> without incident. There is no daring last minute rescue attempt by armed dissidents. The Heliarch take Temlamrem into their custody and reward you with <payment>. You aren't certain what the Heliarch justice system has in store for him, but you're certain it won't be pleasant.`
