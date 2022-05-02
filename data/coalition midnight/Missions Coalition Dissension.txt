@@ -1607,11 +1607,9 @@ mission "Coalition Dissension: Heliarch Intrigues 0"
 	to offer
 		has "Kimek Student 4: done"
 	on offer
-		event "chikee intrigue" 30
+		event "chikee break" 30
 		fail
-		
 
-event "chikee intrigue"
 
 
 
@@ -1627,10 +1625,10 @@ mission "Coalition Dissension: Heliarch Intrigues 1"
 	to offer
 		has "license: Coalition"
 		has "Kimek Student 4: done"
-		has "event: chikee intrigue"
+		has "event: chikee break"
 		has "coalition dissension"
 	on offer
-		clear "event: chikee intrigue"
+		clear "event: chikee break"
 		conversation
 			scene "thumbnail/kimek bramble-thumb"
 			`You run into Chikee, the student who you helped on his path to joining the Heliarchs. He seems tired. "While I'm not on the council, I was able to convince someone who is to put forth a proposal for production of a new Kimek freighter, the Bramble. But there's opposition to the proposal, led by a Saryd named Temlamrem. I didn't realize how frustrating the inner machinations of the Heliarchs would be!"`
