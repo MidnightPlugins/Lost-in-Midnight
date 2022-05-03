@@ -126,7 +126,7 @@ mission "Midnight Scar: Bounty Hai"
 	name "Wanted Pirate"
 	description "The <npc> and it's fleet of pirate ships is raiding merchants in <waypoints>. Destroy the fleet, then return to <destination> for payment of <payment>."
 	source
-		near Allhome 0 2
+		near "Heia Due" 0 2
 	waypoint "Waypoint"
 	to offer
 		has "event: midnight scar's hideout (Hai)" 

@@ -42,7 +42,7 @@ mission "Bounty Hunting (Secret Prototype)"
 	on visit
 		dialog phrase "generic bounty hunting on visit"
 	on complete
-		outfit "Secret Protoype" -1
+		outfit "Secret Prototype" -1
 		payment 1500000
 		dialog "The authorities pay you <payment> for returning the secret protoype."
 
