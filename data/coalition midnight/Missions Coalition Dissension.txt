@@ -1677,7 +1677,7 @@ mission "Coalition Dissension: Heliarch Intrigues 2"
 	on offer
 		event "kimek bramble sales" 30
 		conversation
-			scene "thumbnail/kimek bramble"
+			scene "thumbnail/kimek bramble-thumb"
 			`The shipyard has a new ship on display: the Kimek Bramble. It isn't ready to be sold yet, but the shipyard is taking preorders.`
 			``
 			`When you get back to your ship, there's a data chip wedged into the entry hatch...`
