@@ -109,7 +109,7 @@ mission "Sheragi Shenanigans: Sapphire Shield 4"
 			scene "ship/sapphire shield"
 			`As you walk into the spaceport, you note a fervor spreading through the crowds. Apparently, the Sapphire Shield landed an hour ago. No sooner do you learn this when a well dressed man leading an entourage of similarly dressed individuals addresses you.`
 			`	"Captain <first> <last>! I am Dr. Wesley Stumpernickle, owner of the Sapphire Shield. The captain of my ship informed me that you took an interest in its systems. As the owner of the Emerald Sword, the only other Sheragi ship to have been found, I would like to hear your opinion on the Sapphire Shield. Why not join me on my ship, where I can give you a tour?"`
-			`	While Wesley is talking, a crowd of onlookers has gathered to watch the confrontation of sword and shield. Hiding in the crowd is Desyo, wearing a hooded cloak. She hasn't approached you, probably concerned that her status as an alien might be exposed, but she starts gesturing with hand signals once you make eye contact. Clearly, she wants to tell you something. But you have no idea, what those signals mean.`
+			`	While Wesley is talking, a crowd of onlookers has gathered to watch the confrontation of sword and shield. Hiding in the crowd is Desyo, wearing a hooded cloak. She hasn't approached you, probably concerned that her status as an alien might be exposed, but she starts gesturing with hand signals once you make eye contact. Clearly, she wants to tell you something. But you have no idea what those signals mean.`
 			choice
 				`	(Accept Wesley's invitation.)`
 				`	(Publicly accuse Wesley.)`
@@ -302,7 +302,7 @@ mission "Sheragi Shenanigans: Ruby Dagger 2"
 		attributes "pirate"
 		attributes "north"
 	to offer
-		has "Sheragi Shenanigans: Ruby Dagger 2: done"
+		has "Sheragi Shenanigans: Ruby Dagger 1: active"
 	on accept
 		conversation
 			scene "ship/ruby dagger"
@@ -340,7 +340,7 @@ mission "Sheragi Shenanigans: Ruby Dagger 3"
 		government "Free Worlds"
 	stopover Greenrock
 	to offer
-		has "Sheragi Shenanigans: Ruby Dagger 2: done"
+		has "Sheragi Shenanigans: Ruby Dagger 2: active"
 	on accept
 		conversation
 			scene "ship/ruby dagger"
@@ -414,4 +414,4 @@ mission "Sheragi Shenanigans: Ruby Dagger 4"
 	on complete
 		conversation
 			scene "ship/ruby dagger"
-			`Albert Foster greets you warmly. "So you finally caught the Ruby Dagger. Thank you for bringing it here so that we can study it." He and his associates spend the better part of the day going over the ship with various tools and taking notes. Afterwards, you join them for a celebration dinner where you catch up on what they've been up to while you were away.`
+			`Albert Foster greets you warmly. "So you finally caught the Ruby Dagger. Thank you for bringing it here so that we can study it." He and his associates spend the better part of the day going over the ship with various tools and taking notes. Afterwards, you join them for a celebration dinner where you catch up on what they've been up to while you were away.`s
