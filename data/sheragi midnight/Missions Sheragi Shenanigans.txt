@@ -230,7 +230,7 @@ mission "Sheragi Shenanigans: Sapphire Shield epilogue"
 				accept
 
 	on defer
-	 set "Randomize Sheragi Shenanigans: Sapphire Shield epilogue"
+		set "Randomize Sheragi Shenanigans: Sapphire Shield epilogue"
 
 	on decline
 		"Midnight Market" ++
