@@ -897,7 +897,7 @@ mission "Oathbreaker Poisonwood"
 		ship "Enforcer Drone" "Delta Ten"
 		ship "Enforcer Drone" "Delta Eleven"
 		ship "Enforcer Drone" "Delta Twelve"
-		dialog "You've eliminated the R.N.S. Poisonwood. Report to <desination>."
+		dialog "You've eliminated the R.N.S. Poisonwood. Report to <destination>."
 
 	on complete
 		"reputation: Free Worlds" ++
