@@ -48,7 +48,7 @@ mission "Hansel & Gretel: Medical Supply Escort 1"
 		distance 3 10
 	to offer
 		"ships: Heavy Warship" >= 1
-		random < 45 - (5 * "Hansel & Gretel: Medical Supply Escort 1: defered")
+		random < 45 - ( 5 * "Hansel & Gretel: Medical Supply Escort 1: defered" )
 	on offer
 		conversation
 			scene "scene/scene-hanselandgretel 1"
@@ -67,7 +67,7 @@ mission "Hansel & Gretel: Medical Supply Escort 1"
 					defer
 			label help
 			`	"Thanks!, By the way, I'm Hansel and she's Gretel," the man introduces himself and his sister.`
-			`	"I hope we have a safe journey," adds Gretel.
+			`	"I hope we have a safe journey," adds Gretel.`
 				accept
 	on defer
 		"Hansel & Gretel: Medical Supply Escort 1: defered" ++
@@ -112,7 +112,7 @@ mission "Hansel & Gretel: Medical Supply Escort 2"
 		"ships: Heavy Warship" >= 1
 		not "fw first chapter done"
 		not "Hansel & Gretel: Return Escort: active"
-		random < 40 - (5 * "Hansel & Gretel: Medical Supply Escort 2: done")
+		random < 40 - ( 5 * "Hansel & Gretel: Medical Supply Escort 2: done" )
 	on accept
 		conversation
 			scene "scene/scene-hanselandgretel 1"
@@ -217,6 +217,8 @@ mission "Hansel & Gretel: Rescue Hansel"
 					goto weep
 			`	"Thank you captain <last>! I last saw Hansel at <system>," she says before boarding her own ship. You notice the armament installed on it has been upgraded since the start of the war.`
 				accept
+
+			label weep
 			`	You leave Gretel as she weeps bitterly. She will probably never see her brother again.`
 				decline
 	npc accompany save
@@ -372,7 +374,7 @@ mission "Hansel & Gretel: Medical Supply Escort 3"
 
 mission "Hansel & Gretel: Pug Resistance"
 	name "Hansel & Gretel"
-	description "Hansel & Gretel will fight by your side until they or the Pug have been defeated.
+	description "Hansel & Gretel will fight by your side until they or the Pug have been defeated.`
 	source
 		government "Pug"
 		attributes "core" "dirt belt" "near earth"
@@ -390,7 +392,7 @@ mission "Hansel & Gretel: Pug Resistance"
 			`	"The big upgrade came when I decided to plunder the plunderers," adds Hansel. "Turns out they had some experimental prototypes they stole from somewhere."`
 			`	"From then on, we've been doing more to help other merchant ships fight off pirates," continues Gretel.`
 			`	"And when we heard that planets here were under attack from aliens, we decided to join the defenders," concludes Hansel.`
-			`	Gretel asks, "If you're going to resist the Pug, can we join you?"
+			`	Gretel asks, "If you're going to resist the Pug, can we join you?"`
 			choice
 				`	"Of course, I'd be glad to have you along!"`
 					accept
@@ -402,7 +404,7 @@ mission "Hansel & Gretel: Pug Resistance"
 		ship "Marauder Vanguard" "Hansel"
 		ship "Marauder Protector" "Gretel"
 	on complete
-		dialog `Hansel and Gretel congratulate you on the victory, but will part ways with your fleet here."
+		dialog `Hansel and Gretel congratulate you on the victory, but will part ways with your fleet here."`
 		
 					
 

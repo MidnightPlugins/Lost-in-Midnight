@@ -145,7 +145,8 @@ ship "Modified Roost"
 	explode "medium explosion" 30
 	explode "large explosion" 15
 	"final explode" "final explosion medium"
-	description `The rise of civilian drone use amongst pirates has had unforseen developments. This Roost is just one example of that. The previous 
+	description `The rise of civilian drone use amongst pirates has had unforseen developments. This Roost is just one example of that. The previous owner had the fighter bays modified to accomodate drones instead.`
+
 
 
 
@@ -512,10 +513,6 @@ ship "Marauder Hauler" "Marauder Hauler (weapons)"
 	turret -17.5 70 "Quad Blaster Turret"
 	turret 19 70 "Quad Blaster Turret"
 	description "The previous owner of this Hauler chose to replace the central cargo unit with an additional weapons platform. With this radical change to the ship's functionality one could argue that this model should be considered a completely different ship instead of a mere variant."
-
-
-
-owner had the fighter bays modified to accomodate drones instead.`
 	
 	
 	
