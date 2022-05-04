@@ -414,4 +414,4 @@ mission "Sheragi Shenanigans: Ruby Dagger 4"
 	on complete
 		conversation
 			scene "ship/ruby dagger"
-			`Albert Foster greets you warmly. "So you finally caught the Ruby Dagger. Thank you for bringing it here so that we can study it." He and his associates spend the better part of the day going over the ship with various tools and taking notes. Afterwards, you join them for a celebration dinner where you catch up on what they've been up to while you were away.`s
+			`Albert Foster greets you warmly. "So you finally caught the Ruby Dagger. Thank you for bringing it here so that we can study it." He and his associates spend the better part of the day going over the ship with various tools and taking notes. Afterwards, you join them for a celebration dinner where you catch up on what they've been up to while you were away.`
