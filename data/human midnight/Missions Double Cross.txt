@@ -385,7 +385,7 @@ mission "Protection: Marauder Double Cross"
 		dialog `The protection contract with <npc> has expired.`
 	on abort
 		"reputation: Independent (Killable)" >?= 1	
-	npc save
+	npc kill
 		government "Independent (Killable)"
 		personality plunders heroic
 		fleet "Marauder Independent (Killable)"

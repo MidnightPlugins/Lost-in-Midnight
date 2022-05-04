@@ -1622,3 +1622,99 @@ fleet "Derelict Northern Pirate"
 		"Derelict Corvette"
 	variant
 		"Derelict Scout"
+
+
+
+#######################		
+# Fleet modification Missions/Events
+#######################
+
+		
+mission "Add Base Heavy Syndicate Marauders"
+	landing
+	invisible
+	to offer
+		has "main plot completed"
+	on offer
+		event "add base heavy syndicate marauders"
+		fail
+
+event "add base heavy syndicate marauders"
+	fleet "Marauder Independent"
+		add variant 6
+			"Marauder Protector"
+		add variant 6
+			"Marauder Vanguard"
+	fleet "Marauder Bounty (Disguised)"
+		add variant 6
+			"Marauder Protector"
+		add variant 6
+			"Marauder Vanguard"
+	fleet "Marauder Independent (Killable)"
+		add variant 6
+			"Marauder Protector"
+		add variant 6
+			"Marauder Vanguard"
+	fleet "Marauder fleet VII"
+		add variant 18
+			"Marauder Protector"
+			"Splinter"
+			"Splinter (Mark II)"
+			"Splinter (Proton)"
+		add variant 18
+			"Marauder Vanguard"
+			"Manta"
+			"Manta (Mark II)"
+			"Manta (Proton)"
+	fleet "Marauder fleet VIII"
+		add variant 8
+			"Marauder Protector"
+			"Splinter"
+			"Splinter (Mark II)"
+			"Splinter (Proton)"
+		add variant 8
+			"Marauder Vanguard"
+			"Manta"
+			"Manta (Mark II)"
+			"Manta (Proton)"
+	fleet "Marauder fleet IX"
+		add variant 3
+			"Marauder Protector"
+			"Splinter"
+			"Splinter (Mark II)"
+			"Splinter (Proton)"
+		add variant 3
+			"Marauder Vanguard"
+			"Manta"
+			"Manta (Mark II)"
+			"Manta (Proton)"
+	fleet "Marauder fleet X"
+		variant 3
+			"Marauder Protector"
+			"Marauder Firebird"
+			"Marauder Raven (Weapons)"
+			"Marauder Quicksilver (Engines)"
+			"Marauder Arrow (Weapons)"
+			"Marauder Bounder (Engines)"
+		variant 3
+			"Marauder Protector"
+			"Marauder Firebird"
+			"Marauder Raven (Engines)"
+			"Marauder Quicksilver (Weapons)"
+			"Marauder Arrow (Engines)"
+			"Marauder Bounder (Weapons)"
+		variant 3
+			"Marauder Vanguard"
+			"Marauder Firebird"
+			"Marauder Raven (Weapons)"
+			"Marauder Quicksilver (Engines)"
+			"Marauder Arrow (Weapons)"
+			"Marauder Bounder (Engines)"
+		variant 3
+			"Marauder Vanguard"
+			"Marauder Firebird"
+			"Marauder Raven (Engines)"
+			"Marauder Quicksilver (Weapons)"
+			"Marauder Arrow (Engines)"
+			"Marauder Bounder (Weapons)"
+	

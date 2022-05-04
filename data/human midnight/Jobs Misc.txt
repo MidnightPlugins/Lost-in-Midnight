@@ -19,15 +19,15 @@ mission "Bounty Hunting (Secret Prototype)"
 	job
 	to offer
 		"combat rating" > 1000
-		random < 15
+		random < 10
 	source
 		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
 		attributes "rim" "south" "north" "dirt belt" "core" "frontier"
 	npc board
 		government "Bounty (Disguised)"
-		personality heroic staying nemesis target
+		personality heroic staying marked target
 		system
-			distance 3 4
+			distance 2 3
 		fleet
 			names "pirate"
 			variant
@@ -38,13 +38,13 @@ mission "Bounty Hunting (Secret Prototype)"
 				"Marauder Protector (Secret Prototype)"
 			variant
 				"Marauder Vanguard (Secret Prototype)"
-		dialog phrase "generic hunted bounty eliminated dialog"
+		dialog `Retrieve the Secret Prototype and return it to <destination>.`
 	on visit
 		dialog phrase "generic bounty hunting on visit"
 	on complete
 		outfit "Secret Prototype" -1
 		payment 1500000
-		dialog "The authorities pay you <payment> for returning the secret protoype."
+		dialog "The authorities pay you <payment> for returning the Secret Prototype."
 
 outfit "Secret Prototype"
 	category "Special"
@@ -72,7 +72,7 @@ mission "Protection: Heavy"
 		dialog `You pay the <npc> 125,000 credits to escort your fleet until <date>.`
 	on fail
 		dialog `The protection contract with <npc> has expired.`
-	npc save
+	npc kill
 		government "Merchant"
 		personality heroic
 		fleet "Protection Heavy"
@@ -94,7 +94,7 @@ mission "Protection: Medium"
 		dialog `You pay the <npc> 100,000 credits to escort your fleet until <date>.`
 	on fail
 		dialog `The protection contract with <npc> has expired.`
-	npc save
+	npc kill
 		government "Merchant"
 		personality heroic
 		fleet "Protection Medium"
@@ -116,7 +116,7 @@ mission "Protection: Light"
 		dialog `You pay the <npc> 80,000 credits to escort your fleet until <date>.`
 	on fail
 		dialog `The protection contract with <npc> has expired.`
-	npc save
+	npc kill
 		government "Merchant"
 		personality heroic
 		fleet "Protection Light"
@@ -136,7 +136,7 @@ mission "Protection: Marauder"
 		dialog `You pay the <npc> 100,000 credits to escort your fleet until <date>.`
 	on fail
 		dialog `The protection contract with <npc> has expired.`
-	npc save
+	npc kill
 		government "Independent"
 		personality plunders heroic
 		fleet "Marauder Independent"
