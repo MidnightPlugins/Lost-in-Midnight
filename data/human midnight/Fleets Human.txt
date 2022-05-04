@@ -408,7 +408,7 @@ fleet "L. Advanced Independent"
 		"Nest (Korath)"
 		"Splinter (Korath)"
 		"Modified Argosy (Korath)"
-		"Quicksilver (Korath)" 1
+		"Quicksilver (Korath)"
 	variant 1
 		"Shield Beetle"
 		"Geocoris"
