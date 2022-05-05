@@ -424,7 +424,6 @@ ship "Marauder Hauler" "Marauder Hauler (engines)"
 	sprite "ship/marauder hauler engines"
 	thumbnail "thumbnail/marauder hauler E-thumb"
 	add attributes
-		category "Light Warship"
 		"cost" 415480
 		"hull" -532
 		"mass" -27
@@ -470,7 +469,6 @@ ship "Marauder Hauler" "Marauder Hauler (weapons)"
 	sprite "ship/marauder hauler weapons"
 	thumbnail "thumbnail/marauder hauler W-thumb"
 	add attributes
-		category "Heavy Warship"
 		"cost" 569920
 		"shields" 1032
 		"hull" 1622
