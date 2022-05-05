@@ -374,7 +374,7 @@ mission "Hansel & Gretel: Medical Supply Escort 3"
 
 mission "Hansel & Gretel: Pug Resistance"
 	name "Hansel & Gretel"
-	description "Hansel & Gretel will fight by your side until they or the Pug have been defeated.`
+	description "Hansel & Gretel will fight by your side until they or the Pug have been defeated."
 	source
 		government "Pug"
 		attributes "core" "dirt belt" "near earth"
