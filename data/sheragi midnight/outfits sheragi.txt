@@ -18,7 +18,7 @@ outfit "Fake Sheragi Battery"
 	thumbnail "outfit/fake embattery"
 	"mass" 148
 	"outfit space" -148
-	"shield generation" 0.6
+	"shield generation" 0.7
 	"shield energy" 0.7
 	"shield heat" 0.7
 	"energy capacity" 16000
@@ -28,11 +28,11 @@ outfit "Fake Sheragi Cooling"
 	category "Systems"
 	cost 1000000
 	thumbnail "outfit/fake sheragicooling"
-	"mass" 40
-	"outfit space" -40
-	"cooling" 24
-	"active cooling" 128
-	"cooling energy" 16.2
+	"mass" 39
+	"outfit space" -39
+	"cooling" 23
+	"active cooling" 127
+	"cooling energy" 16.3
 	"fuel capacity" 200
 	description "This is a convincing recreation of the Large Hybrid Cooling on the Emerald Sword."
 
@@ -45,17 +45,17 @@ outfit "Fake Sheragi Drive"
 	"engine capacity" -226
 	"jump speed" 0.2
 	"hyperdrive" 1
-	"energy generation" 50
-	"heat generation" 155
+	"energy generation" 45
+	"heat generation" 165
 	"turn" 2469.0
-	"turning energy" 4.5
-	"turning heat" 12.3
+	"turning energy" 4.6
+	"turning heat" 12.4
 	"thrust" 180
-	"thrusting energy" 11
-	"thrusting heat" 32
+	"thrusting energy" 12
+	"thrusting heat" 34
 	"reverse thrust" 44
-	"reverse thrusting energy" 4.8
-	"reverse thrusting heat" 13.2
+	"reverse thrusting energy" 5
+	"reverse thrusting heat" 13.4
 	"flare sprite" "effect/fusionflare"
 		"frame rate" 30
 		"rewind"
@@ -80,7 +80,7 @@ outfit "Fake Sheragi EWS"
 	"radar jamming" 8
 	"tactical scan power" 20
 	"scan interference" 1.8
-	"energy consumption" .18
+	"energy consumption" .22
 	description "This is a convincing recreation of the Electronic Warfare System on the Emerald Sword."
 
 
@@ -172,7 +172,7 @@ outfit "Fake Sheragi Fabricator"
 		"homing" 3
 		"radar tracking" .6
 		"missile strength" 1
-	description "This is a convincing recreation of the Shard Fabricator on the Emerald Sword."
+	description "This is a convincing recreation of the Shard Fabricator on the Black Diamond."
 
 
 
@@ -180,7 +180,7 @@ outfit "Fake Sheragi Fabricator"
 outfit "Fake Sheragi Cyclotron"
 	category "Guns"
 	cost 1650000
-	thumbnail "outfit/fake fake hion"
+	thumbnail "outfit/fake hion"
 	"mass" 31
 	"outfit space" -31
 	"weapon capacity" -20
