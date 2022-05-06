@@ -15,7 +15,7 @@ outfit "Fake Sheragi Battery"
 	plural "Large EM Batteries"
 	category "Power"
 	cost 1000000
-	thumbnail "outfit/embattery"
+	thumbnail "outfit/fake embattery"
 	"mass" 148
 	"outfit space" -148
 	"shield generation" 0.6
@@ -27,7 +27,7 @@ outfit "Fake Sheragi Battery"
 outfit "Fake Sheragi Cooling"
 	category "Systems"
 	cost 1000000
-	thumbnail "outfit/sheragicooling"
+	thumbnail "outfit/fake sheragicooling"
 	"mass" 40
 	"outfit space" -40
 	"cooling" 24
@@ -39,7 +39,7 @@ outfit "Fake Sheragi Cooling"
 outfit "Fake Sheragi Drive"
 	category "Engines"
 	cost 80000000
-	thumbnail "outfit/fusiondrive"
+	thumbnail "outfit/fake fusiondrive"
 	"mass" 476
 	"outfit space" -476
 	"engine capacity" -226
@@ -74,7 +74,7 @@ outfit "Fake Sheragi Drive"
 outfit "Fake Sheragi EWS"
 	category "Systems"
 	cost 3400000
-	thumbnail "outfit/sheragi ews"
+	thumbnail "outfit/fake sheragi ews"
 	"mass" 5
 	"outfit space" -5
 	"radar jamming" 8
@@ -88,7 +88,7 @@ outfit "Fake Sheragi EWS"
 outfit "Fake Sheragi Anti-Missile"
 	category "Turrets"
 	cost 845000
-	thumbnail "outfit/sheragiam"
+	thumbnail "outfit/fake sheragiam"
 	"mass" 33
 	"outfit space" -33
 	"weapon capacity" -33
@@ -109,7 +109,7 @@ outfit "Fake Sheragi Anti-Missile"
 outfit "Fake Sheragi Turret"
 	category "Turrets"
 	cost 1650000
-	thumbnail "outfit/pwave turret"
+	thumbnail "outfit/fake pwave turret"
 	"mass" 45
 	"outfit space" -45
 	"weapon capacity" -45
@@ -140,7 +140,7 @@ outfit "Fake Sheragi Turret"
 outfit "Fake Sheragi Fabricator"
 	category "Secondary Weapons"
 	cost 330000
-	thumbnail "outfit/shard"
+	thumbnail "outfit/fake shard"
 	"mass" 12
 	"outfit space" -12
 	"weapon capacity" -8
@@ -180,7 +180,7 @@ outfit "Fake Sheragi Fabricator"
 outfit "Fake Sheragi Cyclotron"
 	category "Guns"
 	cost 1650000
-	thumbnail "outfit/hion"
+	thumbnail "outfit/fake fake hion"
 	"mass" 31
 	"outfit space" -31
 	"weapon capacity" -20
