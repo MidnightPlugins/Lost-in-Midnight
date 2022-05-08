@@ -16,7 +16,7 @@ mission "Sheragi Shenanigans: Sapphire Shield 1"
 	description "Visit <destination> to scan the outfits of the Sapphire Shield, then bring the data to Zug, in the Zubeneschamali system."
 	source
 		government "Republic"
-		attributes "north"
+		not attributes "paradise"
 	destination
 		attributes "paradise"
 	to offer
@@ -252,6 +252,7 @@ mission "Sheragi Shenanigans: Sapphire Shield epilogue"
 
 
 mission "Sheragi Shenanigans: Ruby Dagger 1"
+	job
 	name "Bounty: Ruby Dagger"
 	description "The Ruby Dagger is attacking merchants near <stopovers>. Destroy the ship then report to <destination>. Payment is 300,000 credits."
 	source
@@ -293,6 +294,7 @@ mission "Sheragi Shenanigans: Ruby Dagger 1"
 
 
 mission "Sheragi Shenanigans: Ruby Dagger 2"
+	job
 	name "Bounty: Ruby Dagger"
 	description "The Ruby Dagger is attacking merchants near <stopovers>. Destroy the ship then report to <destination>. Payment is 400,000 credits."
 	source
@@ -334,6 +336,7 @@ mission "Sheragi Shenanigans: Ruby Dagger 2"
 
 
 mission "Sheragi Shenanigans: Ruby Dagger 3"
+	job
 	name "Bounty: Ruby Dagger"
 	description "The Ruby Dagger is attacking merchants near <stopovers>. Destroy the ship then report to <destination>. Payment is 500,000 credits."
 	source
