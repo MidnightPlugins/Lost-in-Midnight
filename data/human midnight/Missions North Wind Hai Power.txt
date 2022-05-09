@@ -1,0 +1,613 @@
+# Copyright (c) 2021 by Michael Arsollon
+# derived from original game at https://github.com/endless-sky/endless-sky
+#
+# Endless Sky is free software: you can redistribute it and/or modify it under the
+# terms of the GNU General Public License as published by the Free Software
+# Foundation, either version 3 of the License, or (at your option) any later version.
+#
+# Endless Sky is distributed in the hope that it will be useful, but WITHOUT ANY
+# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+
+
+
+ship "Behemoth" "Behemoth (North Wind Cooling)"
+	outfits
+		"Heavy Laser Turret" 4
+		"Heavy Anti-Missile Turret" 2		
+		"NT-200 Nucleovoltaic"
+		"LP144a Battery Pack"
+		"D94-YV Shield Generator"
+		"Small Radar Jammer"
+		"Laser Rifle" 3
+		"North Wind Cooling"
+		"X3700 Ion Thruster"
+		"X3200 Ion Steering"
+		"Scram Drive"
+
+	
+
+mission "North Wind 1: Syndicate"
+	job
+	name "Escort the <npc>"
+	description "Escort the <npc> to <destination>. Pirates or Bounty Hunters may try to steal its cargo. Payment is <payment>."
+	source
+		government "Republic"
+	destination Hephaestus
+	to offer
+		"combat rating" > 100
+		random < 40
+	on accept
+		conversation
+			scene "thumbnail/behemoth"
+			`You meet the client, Yuki Onna of North Wind Cooling, a designer of refrigeration and cooling systems. "It is well known that I am seeking buyers for a new prototype cooling system that is installed on this ship. I hope you are prepared to fend off any pirates, or the bounty hunters hired by our competitors, that may try to steal it."`
+	npc evade
+		government "Bounty Hunter"
+		personality waiting nemesis plunders harvests
+		fleet "Bounty Hunters"
+	npc evade
+		government "Bounty Hunter"
+		system destination
+		personality waiting nemesis plunders harvests
+		fleet "Bounty Hunters" 2
+	npc accompany save
+		government Merchant
+		personality target escort timid
+		ship "Behemoth (North Wind Cooling)" "North Wind"
+	on abort
+		"reputation: Merchant" -= 5
+		dialog `The <npc> never reached its destination after you abandoned it. Your reputation among Merchants decreases as a result.`
+	on fail
+		"reputation: Merchant" -= 10
+		dialog `The <npc> never reached its destination. There's a nasty rumor that you hijacked the ship yourself.`
+	on visit
+		dialog `You need to land with the <npc> without dangerous bounty hunters trying to plunder it.`
+	on complete
+		payment 150000
+		event "North Wind Syndicated" 30
+		conversation
+			scene "outfit/cooling ducts hai"
+			`Yuki Onna thanks you for escorting the <npc> safely to <planet>. Before leaving to present the new prototype to Syndicated Systems, she rewards you with <payment>.`
+
+event "North Wind Syndicated"
+	outfitter "Syndicate Advanced"
+		add "North Wind Cooling"
+
+
+
+mission "North Wind 2: Lovelace"
+	job
+	name "Escort the <npc>"
+	description "Escort the <npc> to <destination>. Pirates or Bounty Hunters may try to steal its cargo. Payment is <payment>."
+	source
+		government "Syndicate"
+	destination Ada 
+	to offer
+		has "North Wind 1: Syndicate: done"
+		random < 40
+	on accept
+		conversation
+			scene "thumbnail/behemoth"
+			`Once again, you meet the client, Yuki Onna of North Wind Cooling. Apparently, she was able to form a contract with Syndicated Systems. "I hope to have similar luck with Lovelace Labs."`
+	npc evade
+		government "Bounty Hunter"
+		personality waiting nemesis plunders harvests
+		fleet "Bounty Hunters" 2
+	npc evade
+		government "Bounty Hunter"
+		system destination
+		personality waiting nemesis plunders harvests
+		fleet "Bounty Hunters" 3
+	npc accompany save
+		government Merchant
+		personality target escort timid
+		ship "Behemoth (North Wind Cooling)" "North Wind"
+	on abort
+		"reputation: Merchant" -= 5
+		dialog `The <npc> never reached its destination after you abandoned it. Your reputation among Merchants decreases as a result.`
+	on fail
+		"reputation: Merchant" -= 10
+		dialog `The <npc> never reached its destination. There's a nasty rumor that you hijacked the ship yourself.`
+	on visit
+		dialog `You need to land with the <npc> without dangerous bounty hunters trying to plunder it.`
+	on complete
+		payment 175000
+		event "North Wind Lovelace" 30
+		conversation
+			scene "outfit/cooling ducts hai"
+			`Yuki Onna thanks you for escorting the <npc> safely to <planet>. Before leaving to present the new prototype to Lovelace Labs, she rewards you with <payment>.`
+
+event "North Wind Lovelace"
+	outfitter "Lovelace Advanced"
+		add "North Wind Cooling"
+
+
+
+mission "North Wind 3: Kraz"
+	job
+	name "Escort the <npc>"
+	description "Escort the <npc> to <destination>. Pirates or Bounty Hunters may try to steal its cargo. Payment is <payment>."
+	source
+		government "Republic"
+		attributes "paradise" "north" "near earth"
+	destination Rust 
+	to offer
+		has "North Wind 2: Lovelace: done"
+		random < 40
+	on accept
+		conversation
+			scene "thumbnail/behemoth"
+			`Once again, you meet the client, Yuki Onna of North Wind Cooling. Apparently, she was able to form a contract with Lovelace Labs. "I hope to have similar luck with Kraz Cybernetics."`
+	npc evade
+		government "Bounty Hunter"
+		personality waiting nemesis plunders harvests
+		fleet "Bounty Hunters"
+	npc evade
+		government "Bounty Hunter"
+		system
+			distance 2 3
+		personality waiting nemesis plunders harvests
+		fleet "Bounty Hunters" 2
+	npc evade
+		government "Bounty Hunter"
+		system destination
+		personality waiting nemesis plunders harvests
+		fleet "Bounty Hunters" 3
+	npc accompany save
+		government Merchant
+		personality target escort timid
+		ship "Behemoth (North Wind Cooling)" "North Wind"
+	on abort
+		"reputation: Merchant" -= 5
+		dialog `The <npc> never reached its destination after you abandoned it. Your reputation among Merchants decreases as a result.`
+	on fail
+		"reputation: Merchant" -= 10
+		dialog `The <npc> never reached its destination. There's a nasty rumor that you hijacked the ship yourself.`
+	on visit
+		dialog `You need to land with the <npc> without dangerous bounty hunters trying to plunder it.`
+	on complete
+		payment 200000
+		event "North Wind Kraz" 30
+		conversation
+			scene "outfit/cooling ducts hai"
+			`Yuki Onna thanks you for escorting the <npc> safely to <planet>. Before leaving to present the new prototype to Kraz Cybernetics, she rewards you with <payment>.`
+
+event "North Wind Kraz"
+	outfitter "Kraz Advanced"
+		add "North Wind Cooling"
+
+
+
+mission "North Wind 4: Delta V"
+	job
+	name "Escort the <npc>"
+	description "Escort the <npc> to <destination>. Pirates or Bounty Hunters may try to steal its cargo. Payment is <payment>."
+	source
+		government "Republic" "Free Worlds"
+		attributes "south"
+		not attributes "frontier"
+	destination Solace
+	to offer
+		has "North Wind 3: Kraz: done"
+		random < 40
+	on accept
+		conversation
+			scene "thumbnail/behemoth"
+			`Once again, you meet the client, Yuki Onna of North Wind Cooling. Apparently, she was able to form a contract with Kraz Cybernetics. "I hope to have similar luck with Delta V."`
+	npc evade
+		government "Bounty Hunter"
+		personality waiting nemesis plunders harvests
+		fleet "Bounty Hunters"
+	npc evade
+		government "Pirate"
+		system
+			distance 2 3
+		personality waiting plunders harvests
+			confusion 20
+		fleet "pirate raid"
+	npc evade
+		government "Pirate"
+		system destination
+		personality waiting staying plunders harvests
+			confusion 20
+		fleet "Large Southern Pirates"
+		fleet "Small Southern Pirates"
+	npc accompany save
+		government Merchant
+		personality target escort timid
+		ship "Behemoth (North Wind Cooling)" "North Wind"
+	on abort
+		"reputation: Merchant" -= 5
+		dialog `The <npc> never reached its destination after you abandoned it. Your reputation among Merchants decreases as a result.`
+	on fail
+		"reputation: Merchant" -= 10
+		dialog `The <npc> never reached its destination. There's a nasty rumor that you hijacked the ship yourself.`
+	on visit
+		dialog `You need to land with the <npc> without dangerous pirates trying to plunder it.`
+	on complete
+		payment 150000
+		event "North Wind Delta V" 30
+		conversation
+			scene "outfit/cooling ducts hai"
+			`Yuki Onna thanks you for escorting the <npc> safely to <planet>. Before leaving to present the new prototype to Delta V, she rewards you with <payment>.`
+
+event "North Wind Delta V"
+	outfitter "Delta V Advanced"
+		add "North Wind Cooling"
+
+
+
+mission "North Wind 5: Deep Sky"
+	job
+	name "Escort the <npc>"
+	description "Escort the <npc> to <destination>. Pirates or Bounty Hunters may try to steal its cargo. Payment is <payment>."
+	source
+		government "Republic" "Free Worlds"
+		attributes "south"
+		not attributes "frontier"
+	destination Asgard
+	to offer
+		has "North Wind 4: Delta V: done"
+		random < 40
+	on accept
+		conversation
+			scene "thumbnail/behemoth"
+			`Once again, you meet the client, Yuki Onna of North Wind Cooling. Apparently, she was able to form a contract with Delta V. "I hope to have similar luck with Deep Sky."`
+	npc evade
+		government "Pirate"
+		personality waiting plunders harvests
+			confusion 20
+		fleet "Large Southern Pirates"
+		fleet "Small Southern Pirates"
+	npc evade
+		government "Pirate"
+		system
+			distance 2 3
+		personality waiting plunders harvests
+			confusion 20
+		fleet "pirate raid"
+	npc evade
+		government "Pirate"
+		system
+			distance 5 6
+		personality waiting plunders harvests
+			confusion 20
+		fleet "pirate raid"
+	npc evade
+		government "Bounty Hunter"
+		system destination
+		personality waiting staying nemesis plunders harvests
+		fleet
+			names "bounty hunter"
+			variant 1
+				"Bactrian (Hired Gun)"
+				"Mule (Heavy)"
+				"Mule"
+				"Dagger" 5
+	npc accompany save
+		government Merchant
+		personality target escort timid
+		ship "Behemoth (North Wind Cooling)" "North Wind"
+	on abort
+		"reputation: Merchant" -= 5
+		dialog `The <npc> never reached its destination after you abandoned it. Your reputation among Merchants decreases as a result.`
+	on fail
+		"reputation: Merchant" -= 10
+		dialog `The <npc> never reached its destination. There's a nasty rumor that you hijacked the ship yourself.`
+	on visit
+		dialog `You need to land with the <npc> without dangerous pirates trying to plunder it.`
+	on complete
+		payment 300000
+		event "North Wind Deep Sky" 30
+		conversation
+			scene "outfit/cooling ducts hai"
+			`Yuki Onna thanks you for escorting the <npc> safely to <planet>. Before leaving to present the prototype to Deep Sky, she rewards you with <payment>.`
+
+event "North Wind Deep Sky"
+	outfitter "Deep Sky Advanced"
+		add "North Wind Cooling"
+
+
+
+ship "Behemoth" "Behemoth (Ramscoop)"
+	outfits
+		"Heavy Laser Turret" 4
+		"Heavy Anti-Missile Turret" 2		
+		"NT-200 Nucleovoltaic"
+		"LP144a Battery Pack"
+		"D94-YV Shield Generator"
+		"Small Radar Jammer"
+		"Laser Rifle" 3
+		"Ramscoop"
+		"X3700 Ion Thruster"
+		"X3200 Ion Steering"
+		"Scram Drive"
+
+phrase "north wind"
+	word
+		"North Wind"
+
+outfitter "North Wind"
+	"North Wind Cooling"
+		
+fleet
+	names "north wind"
+	cargo 1
+	outfitters "North Wind"
+	variant 1
+		"Behemoth (Ramscoop)"
+
+mission "North Wind 6: Turner Inc."
+	name "North Wind Turner"
+	description "Go to <destination> to pickup Yuki Onna of North Wind Cooling."
+	source
+		government "Free Worlds" "Syndicate"
+	destination Valhalla
+	to offer
+		has "event: North Wind Deep Sky"
+		has "event: shipyard on greenwater"
+		random < 40
+	on offer
+		conversation
+			scene "outfit/cooling ducts hai"
+			`You receive a message from Yuki Onna of North Wind Cooling. "Hello <first> <last>. I've been looking to expand distribution of the North Wind Cooling systems with smaller outfitters. And while doing some research I was surprised when your name came up. Can you introduce me to David Turner? If so, find me on Valhalla."`
+			`	The North Wind Cooling systems might be a profitable addition to the outfitter on Greenwater. But Turner can be a hard man to track down. What will you do?`
+			choice
+				`	(Try to introduce her to David Turner.)`
+					accept
+				`	(Ignore her request)`
+					decline
+
+
+
+mission "North Wind 7: Turner Inc."
+	landing
+	name "North Wind Turner"
+	description "Escort the <npc> to <destination> and introduce Yuki Onna to David Turner."
+	source Valhalla
+	destination Martini
+	to offer
+		has "North Wind 6: Turner Inc.: done"
+	on offer
+		conversation
+			scene "thumbnail/behemoth"
+			`Once again you meet Yuki Onna of North Wind Cooling. "Thank you for coming. Since you're here, I take it you've decided to introduce me to Mr. Turner. I'll follow you in the <npc>."`
+				accept
+
+	npc accompany save
+		government Merchant
+		personality target escort timid
+		fleet
+			names "north wind"
+			cargo 1
+			outfitters "North Wind"
+			variant 1
+				"Behemoth (Ramscoop)"
+	on abort
+		"reputation: Merchant" -= 5
+		dialog `The <npc> never reached its destination after you abandoned it. Your reputation among Merchants decreases as a result.`
+	on fail
+		"reputation: Merchant" -= 10
+		dialog `The <npc> never reached its destination. There's a nasty rumor that you hijacked the ship yourself.`
+	on visit
+		dialog `The <npc> hasn't arrived! Return to space and find it.`
+
+
+
+mission "North Wind 8: Turner Inc."
+	landing
+	name "North Wind Turner"
+	description "Escort the <npc> to <destination> and introduce Yuki Onna to David Turner."
+	source Martini
+	destination Greenwater
+	waypoint "Ultima Thule"
+	waypoint "Waypoint"
+	to offer
+		has "North Wind 7: Turner Inc.: done"
+	on offer
+		conversation
+			scene "thumbnail/star queen"
+			`When you arrive at the Turner Inc. office, Mr. Turner's secretary informs you that he isn't in. "Sorry Captain <last>. He went onsite to review some R&D projects." When the secretary says "onsite", it's probably a reference to Greenwater. Yuki Onna asks if you'll be able to take her to wherever Mr. Turner is. What do you do?`
+			choice
+				`	"Sure. I hope you're ready for a long trip."`
+					accept
+				`	"Sorry, this is as far as I take you."`
+					decline
+	on waypoint 
+		dialog `"Captain <last>, where are we? What was that vortex?" Her reaction reminds you of your first trip through a wormhole.`
+	npc accompany save
+		government Merchant
+		personality target escort timid
+		fleet
+			names "north wind"
+			cargo 1
+			outfitters "North Wind"
+			variant 1
+				"Behemoth (Ramscoop)"
+	on abort
+		"reputation: Merchant" -= 5
+		dialog `The <npc> never reached its destination after you abandoned it. Your reputation among Merchants decreases as a result.`
+	on fail
+		"reputation: Merchant" -= 10
+		dialog `The <npc> never reached its destination. There's a nasty rumor that you hijacked the ship yourself.`
+	on visit
+		dialog `The <npc> hasn't arrived! Return to space and find it.`
+	on complete
+		event "North Wind Turner" 30
+		conversation
+			scene "outfit/cooling ducts hai"
+			`You finally introduce Yuki Onna to David Turner and he agrees to listen to her proposal regarding the North Wind Cooling systems. David asks that you wait for him at the spaceport. He needs you to make a special delivery that can't be entrusted to anyone else.`
+
+event "North Wind Turner"
+	planet "Greenwater"
+		add outfitter "North Wind"
+
+mission "North Wind 9: Greenwater stocked"
+	landing
+	invisible
+	to offer
+		has "event: North Wind Turner"
+	on offer
+		"salary: Turner Incorporated" = 4500
+		fail
+
+
+
+mission "Turner Inc.: Hai Power 1"
+	name "Hai Power: Gnome Core"
+	description "Escort the <npc> to <destination> and pickup a prototype Gnome Core for Turner Inc."
+	source Greenwater
+	destination Makerplace
+	to offer
+		has "North Wind 8: Turner Inc.: done"
+	on offer
+		conversation
+			scene "outfit/dwarf core hai"
+			`Turner finds your ship. "Yuki told me that you passed by the office on Martini. As you might have heard, I've been investing in a little R&D project that's just about ready to pay off. I need you to pick up a prototype from <destination> and deliver it to Deep Sky on Asgard in the Naos system. It's an improvement on the Dwarf Core that Deep Sky produces. While we might see some gains from adding the North Wind Cooling system to our outfitter, the joint venture with Deep Sky will push Turner Inc.'s profits to the next level." He gives you an address for a factory where the prototype was produced.`
+				accept
+	npc accompany save
+		government Merchant
+		personality target escort timid
+		fleet
+			names "north wind"
+			cargo 0
+			variant 1
+				"Behemoth (Ramscoop)"
+	on abort
+		"reputation: Merchant" -= 5
+		dialog `The <npc> never reached its destination after you abandoned it. Your reputation among Merchants decreases as a result.`
+	on fail
+		"reputation: Merchant" -= 10
+		dialog `The <npc> never reached its destination. There's a nasty rumor that you hijacked the ship yourself.`
+	on visit
+		dialog `The <npc> hasn't arrived! Return to space and find it.`
+	on complete
+		outfit "Gnome Core" 1
+		conversation
+			scene "outfit/dwarf core hai"
+			`You pick up the prototype Gnome Core from the factory Turner indicated. Visit the spaceport when you're ready to join Yuki for the journey back to the Deep.`
+
+
+ship "Behemoth" "Behemoth (Hai North Wind)"
+	outfits
+		"Pulse Turret" 6
+		"Boulder Reactor"
+		"Hai Ravine Batteries"
+		"Hai Diamond Regenerator"
+		"Large Radar Jammer"
+		"Pulse Rifle" 2
+		"Ramscoop"
+		"North Wind Cooling" 3
+		"Outfits Expansion" 6
+		`"Benga" Atomic Thruster`
+		`"Biroo" Atomic Steering`
+		`"Benga" Atomic Steering`
+		"Hyperdrive"
+
+
+
+mission "Turner Inc.: Hai Power 2"
+	name "Hai Power: Gnome Core"
+	description "Escort the <npc> to <destination>. Then continue on to Asgard."
+	source Makerplace
+	destination Valhalla
+	to offer
+		has "Turner Inc.: Hai Power 1: done"
+	on offer
+		conversation
+			scene "thumbnail/behemoth"
+			`While you were at the factory, Yuki has been upgrading the North Wind with Hai outfits. "Thank you for bringing me here," she says.` The <npc> will accompany you to <destination>. Then you'll continue the rest of the way to Asgard to deliver the Gnome Core.`
+				accept
+	npc
+		government "Pirate"
+		system "Waypoint"
+		personality waiting staying harvests plunders
+			confusion 10
+		fleet
+			names "pirate"
+			cargo 3
+			outfitters "Hai Advanced"
+			variant 1
+				"Bactrian (Hai Weapons)"
+				"Lance"
+				"Dagger" 2
+				"Sparrow"
+				"Hawk (Hai)"
+				"Fury (Hai)"
+				"Berserker (Hai)"
+				"Scout (Hai)"
+	npc
+		government "Indigenous Predator"
+		system "Ultima Thule"
+		personality waiting staying heroic disables unconstrained mute
+		fleet "Large Ionic Leech"
+	npc accompany save
+		government Merchant
+		personality target escort timid
+		fleet
+			names "north wind"
+			cargo 3
+			outfitters "Hai Advanced"
+			variant 1
+				"Behemoth (Hai North Wind)"
+	on abort
+		"reputation: Merchant" -= 5
+		dialog `The <npc> never reached its destination after you abandoned it. Your reputation among Merchants decreases as a result.`
+	on fail
+		"reputation: Merchant" -= 10
+		dialog `The <npc> never reached its destination. There's a nasty rumor that you hijacked the ship yourself.`
+	on visit
+		dialog `The <npc> hasn't arrived! Return to space and find it.`
+	on complete
+		dialog `You bid farewell to Yuki. Head to the spaceport when you're ready to leave.`
+
+
+
+mission "Turner Inc.: Hai Power 3"
+	name "Hai Power: Gnome Core"
+	description "Escort the <npc> to <stopovers>. Then deliver the prototype Gnome Core to Deep Sky on <destination> for Turner Inc."
+	source Valhalla
+	destination Asgard
+	to offer
+		has "Turner Inc.: Hai Power 2: done"
+	on offer
+		conversation
+			scene "outfit/red screwdriver"
+			`The paint around the entry hatch to your ship has been scratched and scuffed. Someone clearly tried to break in while you were gone. You'd better get this Gnome Core to <destination> before any other incidents happen.`
+				accept
+	npc evade
+		government "Bounty Hunter"
+		system destination
+		personality waiting staying nemesis plunders harvests
+		fleet "Hired Guns"
+	npc evade
+		government "Bounty Hunter"
+		system
+			distance 1 2
+		personality waiting nemesis plunders harvests
+		fleet "Hired Guns"
+	npc evade
+		government "Bounty Hunter"
+		personality waiting nemesis plunders harvests
+		fleet "Hired Guns"
+	on complete
+		outfit "Gnome Core" -1
+		event "Gnome Core Delivered" 60
+		conversation
+			scene "outfit/dwarf core hai"
+			`You successfully deliver the prototype Gnome Core to Deep Sky. It should be available in outfitters after a few months.`
+			
+event "Gnome Core Delivered"
+	outfitter "Deep Sky Advanced"
+		add "Gnome Core"
+
+
+
+mission "Turner Inc.: Hai Power Gnome Core Stocked"
+	landing
+	invisible
+	to offer
+		has "event: Gnome Core Delivered"
+	on offer
+		"salary: Turner Incorporated" = 6000
+		fail

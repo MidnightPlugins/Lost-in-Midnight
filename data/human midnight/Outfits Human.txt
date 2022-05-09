@@ -10,10 +10,6 @@
 
 
 
-#####################	
-# These special outfits cannot be purchased at outfitters, but most can be obtained via missions.
-# Exception: Ammunition and similar support outfits may be available at outfitters.
-#####################
 
 
 outfit "Drone Hacking"
@@ -23,6 +19,56 @@ outfit "Drone Hacking"
 	description `"How to Hack a Science Drone For Fun and Profit."`
 	description `This guidebook instructs the reader on how to abuse the cargo scan fining system by hacking into a drone's scanners.`
 	description `You can install this on your ship to keep it from getting mixed in with the regular cargo.`
+
+
+outfit "North Wind Cooling"
+	category "Systems"
+	cost 13000
+	thumbnail "outfit/cooling ducts hai"
+	"mass" 7
+	"outfit space" -7
+	"cooling" 8
+	description "An advanced air duct cooling system developed by North Wind. While bulkier than the industry standard cooling ducts, this new system offers improved cooling."
+
+outfit "Gnome Core"
+	category "Power"
+	cost 950000
+	thumbnail "outfit/dwarf core hai"
+	"mass" 38
+	"outfit space" -38
+	"energy generation" 5
+	"heat generation" 14.5
+	description "A collaboration between Deep Sky and Turner Inc. The Gnome Core is a more powerful Dwarf Core, offering an amazing amount of power in a compact generator."
+
+outfit "Ogre Core"
+	category "Power"
+	cost 1650000
+	thumbnail "outfit/fission hai"
+	"mass" 70
+	"outfit space" -70
+	"energy generation" 10.5
+	"heat generation" 25.5
+	description "Another collaboration between Deep Sky and Turner Inc. The Ogre Core is a new entry in the energy generator market, using innovations in reactor design to deliver a superior fission reactor."
+
+outfit "Titan Core"
+	category "Power"
+	cost 5500000
+	thumbnail "outfit/fusion hai"
+	"mass" 110
+	"outfit space" -110
+	"energy generation" 21
+	"heat generation" 42
+	description "Another collaboration between Deep Sky and Turner Inc. The Titan Core is a new entry in the energy generator market, using innovations in reactor design to deliver a superior fusion reactor."
+
+
+
+
+#####################	
+# These special outfits cannot be purchased at outfitters, but most can be obtained via missions.
+# Exception: Ammunition and similar support outfits may be available at outfitters.
+#####################
+
+
 
 outfit "Carabao AI"
 	category "Systems"
