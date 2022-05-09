@@ -20,7 +20,7 @@ mission "Sheragi Shenanigans: Sapphire Shield 1"
 	destination
 		attributes "paradise"
 	to offer
-		has "Sheragi Archaeology: Epilogue"
+		has "Sheragi Archaeology: Epilogue: done"
 		random < 25
 	on offer
 		conversation
@@ -90,7 +90,8 @@ mission "Sheragi Shenanigans: Sapphire Shield 3"
 	on offer
 		conversation
 			scene "ship/sapphire shield"
-			`You've scanned the <npc>'s outfits. Take the scanner data to Zug, in the Zubeneschamali system.`
+			`You've scanned the Sapphire Shield's outfits. Take the scanner data to <destination>.`
+				accept
 	on complete
 		conversation
 			`Desyo, Rakei, and Eyama give you a warm welcome. Albert Foster's excavation has been going well, with several discoveries that are sure to interest Hai scholars once they return home. But for the matter at hand, you share your scanner data of the Sapphire Shield's outfits with Desyo. It will take some time to analyze, so meet her in the spaceport in a few hours.`
@@ -135,7 +136,7 @@ mission "Sheragi Shenanigans: Sapphire Shield 4"
 					goto end
 				`	(Reject the bribe.)`
 
-			`	You refuse to accept the bribe. As you turn to leave, Dr. Stumpernickle shoots you in the back! "Sorry, captain <last>. But the costs for salvaging the Sapphire Shield are eating me alive. If word gets out that the ship is a fake, I could lose the Paradise planet tour gig, and that would be the end for me."`
+			`	You refuse to accept the bribe. As you turn to leave, Dr. Stumpernickle shoots you in the back! "Sorry, Captain <last>. But the costs for salvaging the Sapphire Shield are eating me alive. If word gets out that the ship is a fake, I could lose the Paradise planet tour gig, and that would be the end for me."`
 				die
 				
 			label public
@@ -171,7 +172,7 @@ event "sapphire shield financial ruin"
 
 
 
-mission "Sheragi Shenanigans: Sapphire Shield epilogue"
+mission "Sheragi Shenanigans: Sapphire Shield epilogue A"
 	invisible
 	source
 		attributes "pirate"
@@ -248,6 +249,55 @@ mission "Sheragi Shenanigans: Sapphire Shield epilogue"
 		government "Bounty Hunter"
 		personality waiting staying vindictive coward
 		fleet "Hired Guns" 4
+
+
+
+mission "Sheragi Shenanigans: Sapphire Shield Epilogue B"
+	job
+	deadline
+	name "Sheragi: Sapphire Shield"
+	description "The <npc> is hiring escorts. Join the fleet and accompany the ship to <destination>."
+	source
+		attributes "paradise"
+	destination
+		attributes "paradise"
+		distance 3 4
+	to offer
+		"salary: Sapphire Shield" > 0
+		random < 10
+	on accept
+		conversation
+			scene "ship/sapphire shield"
+			`The client, Dr. Wesley Stumpernickle, doesn't appear at the navigation review. You only meet the captain of the <npc>, who reviews the planned course to destination.`
+	on enter
+		dialog `The <npc> has assembled quite a fleet. They even convinced some Navy ships to join them.`
+	npc
+		government "Merchant"
+		personality
+			launching swarming
+		fleet "Large Northern Merchants" 4
+	npc
+		government "Republic"
+		personality
+			launching heroic
+		fleet "Small Republic"
+	npc accompany save
+		government "Merchant"
+		personality
+			target launching escort
+		ship "Sapphire Shield" "Sapphire Shield"
+	on abort
+		"reputation: Merchant" -= 100
+		"salary: Sapphire Shield" = 0
+		dialog `The <npc> never reached its destination. Rumors spread that you hijacked the ship yourself.`
+	on fail
+		"reputation: Merchant" -= 100
+		"salary: Sapphire Shield" = 0
+		dialog `The <npc> never reached its destination. Rumors spread that you hijacked the ship yourself.`
+	on complete
+		payment 150000
+		clear "Sheragi Shenanigans: Sapphire Shield Epilogue B: offered"
+		dialog `The captain of the <npc> thanks you for escorting his ship and pays you <payment>.`
 
 
 
