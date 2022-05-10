@@ -810,8 +810,8 @@ mission "Turner Inc.: Hai Power 7"
 				random < "flagship crew" - 22
 			`	Your crew fights bravely. Unfortunately, a stray bullet finds its way into your vital organs.`
 				die
-			label "tactical retreat"
-			`	Your crew overpowers the pirates. You rescue David and his crew. Time to leave!`
+			label "victory"
+			`	Your crew overpowers the pirates. You rescue David and his crew and leave!`
 				launch
 			
 			label bargain
