@@ -43,12 +43,12 @@ mission "North Wind 1: Syndicate"
 			`You meet the client, Yuki Onna of North Wind Cooling, a designer of refrigeration and cooling systems. "It is well known that I am seeking buyers for a new prototype cooling system that is installed on this ship. I hope you are prepared to fend off any pirates, or the bounty hunters hired by our competitors, that may try to steal it."`
 	npc evade
 		government "Bounty Hunter"
-		personality waiting nemesis plunders harvests
+		personality waiting nemesis plunders harvests coward
 		fleet "Bounty Hunters"
 	npc evade
 		government "Bounty Hunter"
 		system destination
-		personality waiting nemesis plunders harvests
+		personality waiting nemesis plunders harvests coward
 		fleet "Bounty Hunters" 2
 	npc accompany save
 		government Merchant
@@ -91,12 +91,12 @@ mission "North Wind 2: Lovelace"
 			`Once again, you meet the client, Yuki Onna of North Wind Cooling. Apparently, she was able to form a contract with Syndicated Systems. "I hope to have similar luck with Lovelace Labs."`
 	npc evade
 		government "Bounty Hunter"
-		personality waiting nemesis plunders harvests
+		personality waiting nemesis plunders harvests coward
 		fleet "Bounty Hunters" 2
 	npc evade
 		government "Bounty Hunter"
 		system destination
-		personality waiting nemesis plunders harvests
+		personality waiting nemesis plunders harvests coward
 		fleet "Bounty Hunters" 3
 	npc accompany save
 		government Merchant
@@ -140,18 +140,18 @@ mission "North Wind 3: Kraz"
 			`Once again, you meet the client, Yuki Onna of North Wind Cooling. Apparently, she was able to form a contract with Lovelace Labs. "I hope to have similar luck with Kraz Cybernetics."`
 	npc evade
 		government "Bounty Hunter"
-		personality waiting nemesis plunders harvests
+		personality waiting nemesis plunders harvests coward
 		fleet "Bounty Hunters"
 	npc evade
 		government "Bounty Hunter"
 		system
 			distance 2 3
-		personality waiting nemesis plunders harvests
+		personality waiting nemesis plunders harvests coward
 		fleet "Bounty Hunters" 2
 	npc evade
 		government "Bounty Hunter"
 		system destination
-		personality waiting nemesis plunders harvests
+		personality waiting nemesis plunders harvests coward
 		fleet "Bounty Hunters" 3
 	npc accompany save
 		government Merchant
@@ -196,7 +196,7 @@ mission "North Wind 4: Delta V"
 			`Once again, you meet the client, Yuki Onna of North Wind Cooling. Apparently, she was able to form a contract with Kraz Cybernetics. "I hope to have similar luck with Delta V."`
 	npc evade
 		government "Bounty Hunter"
-		personality waiting nemesis plunders harvests
+		personality waiting nemesis plunders harvests coward
 		fleet "Bounty Hunters"
 	npc evade
 		government "Pirate"
@@ -276,7 +276,7 @@ mission "North Wind 5: Deep Sky"
 	npc evade
 		government "Bounty Hunter"
 		system destination
-		personality waiting staying nemesis plunders harvests
+		personality waiting staying nemesis plunders harvests coward
 		fleet
 			names "bounty hunter"
 			variant 1
@@ -330,12 +330,6 @@ phrase "north wind"
 outfitter "North Wind"
 	"North Wind Cooling"
 		
-fleet
-	names "north wind"
-	cargo 1
-	outfitters "North Wind"
-	variant 1
-		"Behemoth (Ramscoop)"
 
 mission "North Wind 6: Turner Inc."
 	name "North Wind Turner"
@@ -516,7 +510,7 @@ mission "Turner Inc.: Hai Power 2"
 	on offer
 		conversation
 			scene "thumbnail/behemoth"
-			`While you were at the factory, Yuki has been upgrading the North Wind with Hai outfits. "Thank you for bringing me here," she says.` The <npc> will accompany you to <destination>. Then you'll continue the rest of the way to Asgard to deliver the Gnome Core.`
+			`While you were at the factory, Yuki has been upgrading the North Wind with Hai outfits. "Thank you for bringing me here," she says. The <npc> will accompany you to <destination>. Then you'll continue the rest of the way to Asgard to deliver the Gnome Core.`
 				accept
 	npc
 		government "Pirate"
@@ -578,17 +572,17 @@ mission "Turner Inc.: Hai Power 3"
 	npc evade
 		government "Bounty Hunter"
 		system destination
-		personality waiting staying nemesis plunders harvests
+		personality waiting staying nemesis plunders harvests coward
 		fleet "Hired Guns"
 	npc evade
 		government "Bounty Hunter"
 		system
 			distance 1 2
-		personality waiting nemesis plunders harvests
+		personality waiting nemesis plunders harvests coward
 		fleet "Hired Guns"
 	npc evade
 		government "Bounty Hunter"
-		personality waiting nemesis plunders harvests
+		personality waiting nemesis plunders harvests coward
 		fleet "Hired Guns"
 	on complete
 		outfit "Gnome Core" -1
@@ -611,3 +605,245 @@ mission "Turner Inc.: Hai Power Gnome Core Stocked"
 	on offer
 		"salary: Turner Incorporated" = 6000
 		fail
+
+
+
+mission "Turner Inc.: Hai Power 4"
+	name "Hai Power: Phase Two"
+	description "Travel to <destination> to assist Turner Inc. with another plan to increase profits."
+	source
+		government "Hai"
+	destination Martini
+	to offer
+		has "event: Gnome Core Delivered"
+		random < 60
+	on offer
+		dialog `You receive another message from David Turner. "Are you enjoying the increased profits from the Deep Sky collaboration? Meet me at the office on <destination> when you're ready for phase two."`
+		
+		
+		
+
+mission "Turner Inc.: Hai Power 5"
+	name "Hai Power: Diversion"
+	description "Lead the corporate espionage agents on a chase through the Deep systems marked on your map. Head to <destination> once you've managed to shake off their pursuit."
+	source Martini
+	destination Hephaestus
+	waypoint Aspidiske
+	waypoint Avior
+	waypoint Regor
+	waypoint Naos
+	to offer
+		has "Turner Inc.: Hai Power 4: done"
+	on offer
+		conversation
+			scene "outfit/fission hai"
+			`David Turner welcomes you to his office and gets to the point. "We'll be collaborating with Syndicated Systems on an upgraded fission reactor. The corporate espionage agents may be spying on our communications, which is why I brought up Deep Sky in my earlier message. This time, I want you to act as a decoy. I'm sure the bounty hunters will be on you as soon as you leave the planet. Lead them to the Deep while I take the prototype reactor to Hephaestus. You can follow me once you've shaken off their pursuit."`
+			choice
+				`	"Sounds good, I'll do it."`
+				`	"I don't like this plan."`
+					goto pushback
+			`"I knew I could count on you!" David gives you a reassuring pat on the shoulder as you prepare your ships.`
+				accept
+			label pushback
+			`"If you don't want to support Turner Inc. when it needs you most, I suppose I could cut you off."`
+			choice
+				`	"Alright, I'll do it."`
+					accept
+				`	"Go ahead. I'm done with you."`
+					decline
+	on decline
+		clear "salary: Turner Incorporated"
+	on enter
+		dialog `David wasn't kidding. There are already some bounty hunters on your tail. It's going to get very hot very quick.`
+	npc evade
+		government "Bounty Hunter"
+		personality waiting nemesis plunders harvests coward
+		fleet "Bounty Hunters"
+	npc evade
+		government "Bounty Hunter"
+		system
+			distance 1 2
+		personality waiting nemesis plunders harvests coward
+		fleet "Bounty Hunters"
+	npc evade
+		government "Bounty Hunter"
+		system
+			distance 1 2
+		personality waiting nemesis plunders harvests coward
+		fleet "Bounty Hunters"
+	npc evade
+		government "Bounty Hunter"
+		system
+			distance 3 4
+		personality waiting nemesis plunders harvests coward
+		fleet "Bounty Hunters"
+	npc evade
+		government "Bounty Hunter"
+		system
+			distance 3 4
+		personality waiting nemesis plunders harvests coward
+		fleet "Bounty Hunters"
+	npc evade
+		government "Bounty Hunter"
+		system
+			distance 3 4
+		personality waiting nemesis plunders harvests coward
+		fleet "Bounty Hunters"
+	npc evade
+		government "Bounty Hunter"
+		system
+			distance 5 6
+		personality waiting nemesis plunders harvests coward
+		fleet "Hired Guns"
+	npc evade
+		government "Bounty Hunter"
+		system
+			distance 5 6
+		personality waiting nemesis plunders harvests coward
+		fleet "Hired Guns"
+	npc evade
+		government "Bounty Hunter"
+		system
+			distance 5 6
+		personality waiting nemesis plunders harvests coward
+		fleet "Hired Guns"
+	npc evade
+		government "Bounty Hunter"
+		system
+			distance 5 6
+		personality waiting nemesis plunders harvests coward
+		fleet "Hired Guns"
+	npc evade
+		government "Bounty Hunter"
+		system destination
+		personality waiting nemesis plunders harvests coward
+		fleet "Hired Guns"
+		fleet "Bounty Hunters" 4
+	on visit
+		dialog `Looks like corporate agents are still following you. You might have to use violence to drive them off.`
+	on complete
+		dialog `David isn't responding. Head to the spaceport and find out what's going on.`
+		
+		
+		
+mission "Turner Inc.: Hai Power 6"
+	name "Hai Power: Ransom"
+	description "Head to <destination> to rescue David Turner."
+	source Hephaestus
+	destination "Deadman's Cove"
+	to offer
+		has "Turner Inc.: Hai Power 5: done"
+	on offer
+		conversation
+			scene "thumbnail/star queen"
+			`You search the spaceport and Syndicate offices, but there's no sign of David or his ship, the Chryso Vasilia. According to the Syndicate receptionist, David never arrived. When you get back to your own ship, you find a note.`
+			`	"Bring 40,000,000 credits to <destination> or Turner's a dead man. If the authorities come snooping around, he's a dead man." It lists an address for an abandoned warehouse on that planet.`
+				accept
+	npc
+		government "Korath"
+		system destination
+		personality waiting staying harvests plunders
+		fleet
+			names "korath"
+			variant
+				"Korath Dredger"
+				"Korath Raider"
+				"Korath Chaser" 6
+	npc
+		government "Pirate"
+		system destination
+		personality waiting staying harvests plunders
+		fleet
+			names "pirate"
+			variant
+				"Falcon (Korath)"
+				"Protector (Korath)"
+				"Vanguard (Korath)"
+				"Splinter (Korath)"
+				"Quicksilver (Korath)" 2
+	on complete
+		dialog `Head for the spaceport when you're ready to rescue David Turner.`
+		
+		
+
+ship "Star Queen" "Star Queen (Fission S2)"
+	outfits
+		"Pulse Cannon" 3
+		"Chameleon Anti-Missile" 2
+		"Fission S2 Reactor"
+		"Hai Chasm Batteries"
+		"D94-YV Shield Generator"
+		"Small Radar Jammer"
+		"X3700 Ion Thruster"
+		"A375 Atomic Steering"
+		"Luxury Accommodations"
+		"Hyperdrive"
+		
+mission "Turner Inc.: Hai Power 7"
+	name "Hai Power: Daring Rescue"
+	description "Escort the <npc> to <destination>."
+	source "Deadman's Cove"
+	destination Hephaestus
+	to offer
+		has "Turner Inc.: Hai Power 6: done"
+	on offer
+		conversation
+			scene "thumbnail/star queen"
+			`You find the <npc> parked behind the abandoned warehouse mentioned in the note. There aren't any guards, but marks on the ground indicate other ships were parked here recently.`
+			choice
+				`	(Explore the warehouse.)`
+					goto warehouse
+				`	(Explore the ship.)`
+			scene "outfit/fission hai"
+			`Exploring the ship, there's no one aboard, but you find the prototype fission reactor still installed on the ship.`
+			choice
+				`	(Explore the warehouse.)`
+						
+			label warehouse
+			`Exploring the warehouse, you find the hostages watched over by pirates!`
+			choice
+				`	(Rescue them from the pirates.)`
+				`	(Bargain with the pirates.)`
+					goto bargain
+					
+			branch "victory"
+				random < "flagship crew" - 22
+			`	Your crew fights bravely. Unfortunately, a stray bullet finds its way into your vital organs.`
+				die
+			label "tactical retreat"
+			`	Your crew overpowers the pirates. You rescue David and his crew. Time to leave!`
+				launch
+			
+			label bargain
+			`	The pirates take your money and add you to their captured hostages. You eventually get sold as a slave working latrine duty for an illegal zoo stocked with exotic animals. Your days traveling the stars are over.`
+				die
+				
+	npc accompany save
+		personality escort
+		government "Merchant"
+		ship "Star Queen (Fission S2)" "Chryso Vasilia"
+
+	on complete
+		event "Fission S2 Reactor Delivered" 60
+		dialog `David thanks you for rescuing him and his crew.`
+		conversation
+			scene "outfit/fission hai"
+			`You've delivered the prototype reactor to Syndicated Systems. It may be a few months before they have it stocked in their outfitters.`
+
+event "Fission S2 Reactor Delivered"
+	outfitter "Syndicate Advanced"
+		add "Fission S2 Reactor"
+
+
+
+mission "Turner Inc.: Hai Power Fission S2 Reactor Stocked"
+	landing
+	invisible
+	to offer
+		has "event: Fission S2 Reactor Delivered"
+	on offer
+		"salary: Turner Incorporated" = 8000
+		fail
+
+
+

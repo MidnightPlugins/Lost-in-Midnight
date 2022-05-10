@@ -40,7 +40,7 @@ outfit "Gnome Core"
 	"heat generation" 14.5
 	description "A collaboration between Deep Sky and Turner Inc. The Gnome Core is a more powerful Dwarf Core, offering an amazing amount of power in a compact generator."
 
-outfit "Ogre Core"
+outfit "Fission S2 Reactor"
 	category "Power"
 	cost 1650000
 	thumbnail "outfit/fission hai"
@@ -48,9 +48,9 @@ outfit "Ogre Core"
 	"outfit space" -70
 	"energy generation" 10.5
 	"heat generation" 25.5
-	description "Another collaboration between Deep Sky and Turner Inc. The Ogre Core is a new entry in the energy generator market, using innovations in reactor design to deliver a superior fission reactor."
+	description "Another collaboration between Syndicated Systems and Turner Inc. The Fission S2 Reactor is a new entry in the energy generator market, using innovations in reactor design to deliver a superior fission reactor."
 
-outfit "Titan Core"
+outfit "Heavy Fusion Core"
 	category "Power"
 	cost 5500000
 	thumbnail "outfit/fusion hai"
@@ -58,7 +58,7 @@ outfit "Titan Core"
 	"outfit space" -110
 	"energy generation" 21
 	"heat generation" 42
-	description "Another collaboration between Deep Sky and Turner Inc. The Titan Core is a new entry in the energy generator market, using innovations in reactor design to deliver a superior fusion reactor."
+	description "Another collaboration between Lovelace Labs and Turner Inc. The Heavy Fusion Core is a new entry in the energy generator market, using innovations in reactor design to deliver a superior fusion reactor."
 
 
 
