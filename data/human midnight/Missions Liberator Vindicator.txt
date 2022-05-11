@@ -78,7 +78,7 @@ mission "SB-Labs Vindicator 3"
 	on offer
 		conversation
 			scene "scene/scene-liberator"
-			`You meet Barmy Edward overseeing repairs at the hangar. The Vindicator towers over you. What looked like a massive cannon from a distance is, in actuality, a cluster of regular plasma cannons crammed together into a single firing module.`
+			`You meet Barmy Edward overseeing repairs at the hangar. The Vindicator towers over you. What looked like a massive cannon from a distance is, in actuality, a cluster of what appear to be several modified plasma cannons crammed together into a single firing module.`
 			`	"It's your fault, you know." Barmy notices you eyeing the cannons. "From what I've been told, the entire forward section was originally supposed to be a fighter bay. But then you discovered that alien ship out past the edges of The Rim. Of course, word got out about the alien ship with the giant super gun mounted on it. After that, the Southbound Shipyard engineers became obsessed with putting together this monstrosity. They couldn't replicate the spinal mount of your Emerald Sword, so they improvised this concentrated firing mount instead."`
 			label questions
 			choice
@@ -309,7 +309,7 @@ mission "Oathbreaker Liberator 3"
 	on offer
 		conversation
 			scene "scene/scene-liberator"
-			`You meet Barmy Edward overseeing repairs at the hangar. The Liberator towers over you. What looked like a massive cannon from a distance is, in actuality, a cluster of regular plasma cannons crammed together into a single firing module.`
+			`You meet Barmy Edward overseeing repairs at the hangar. The Liberator towers over you. What looked like a massive cannon from a distance is, in actuality, a cluster of what appear to be several modified plasma cannons crammed together into a single firing module.`
 			`	"It's your fault, you know." Barmy notices you eyeing the cannons. "From what I've been told, the entire forward section was originally supposed to be a fighter bay. But then you discovered that alien ship out past the edges of The Rim. Of course, word got out about the alien ship with the giant super gun mounted on it. After that, the Southbound Shipyard engineers became obsessed with putting together this monstrosity. They couldn't replicate the spinal mount of your Emerald Sword, so they improvised this concentrated firing mount instead."`
 			label questions
 			choice

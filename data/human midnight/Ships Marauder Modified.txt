@@ -10,8 +10,66 @@
 # PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 
 
+##################
+# Modified
+##################
 
-# Modified Nest
+
+
+ship "Modified Firebird"
+	sprite "ship/modified firebird"
+	thumbnail "thumbnail/firebird"
+	attributes
+		category "Freighter"
+		"cost" 2700000
+		"shields" 5800
+		"hull" 3400
+		"required crew" 5
+		"bunks" 14
+		"mass" 290
+		"drag" 4.5
+		"heat dissipation" .6
+		"fuel capacity" 400
+		"cargo space" 135
+		"outfit space" 340
+		"weapon capacity" 100
+		"engine capacity" 100
+		weapon
+			"blast radius" 100
+			"shield damage" 1000
+			"hull damage" 500
+			"hit force" 1500
+	outfits
+		"Energy Cannon" 4
+		"Anti-Missile Turret"
+		
+		"RT-I Radiothermal"
+		"LP144a Battery Pack"
+		"D41-HY Shield Generator"
+		"Cargo Expansion"
+		"Small Radar Jammer"
+		
+		"X3700 Ion Thruster"
+		"X3200 Ion Steering"
+		"Hyperdrive"
+		
+	engine -31.5 67
+	engine 31.5 67
+	gun -27 -28 "Energy Cannon"
+	gun 27 -28 "Energy Cannon"
+	gun -38 -13 "Energy Cannon"
+	gun 38 -13 "Energy Cannon"
+	turret 0 3 "Anti-Missile Turret"	
+	leak "leak" 50 50
+	leak "flame" 30 80
+	explode "tiny explosion" 18
+	explode "small explosion" 36
+	explode "medium explosion" 24
+	explode "large explosion" 8
+	"final explode" "final explosion medium"
+	description "This is a Firebird that has been heavily modified for use as a freighter. The weapon capacity has been severely downgraded in order to accomodate more cargo. One of the turret mounts has even been completely removed."
+
+
 
 ship "Modified Nest"
 	sprite "ship/modified nest"
@@ -76,8 +134,6 @@ ship "Modified Nest"
 	description `It's no secret that pilots find the fighter bays on a nest inconvenient to access. The previous owner of this Nest attempted to fix this issue by modifying the fighter bays to accomodate drones instead.`
 
 
-
-# Modified Roost
 
 ship "Modified Roost"
 	sprite "ship/modified roost"

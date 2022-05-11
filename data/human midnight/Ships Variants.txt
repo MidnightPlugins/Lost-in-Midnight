@@ -122,6 +122,25 @@ ship "Kestrel" "Kestrel (Battle Weapons)"
 
 
 
+ship "Aerie" "Aerie (Energy Cannons)"
+	outfits
+		"Energy Cannon"
+		"Laser Turret" 2
+		"Anti-Missile Turret"
+		
+		"RT-I Radiothermal"
+		"KP-6 Photovoltaic Panel" 2
+		"LP072a Battery Pack"
+		"D67-TM Shield Generator"
+		"Cargo Expansion" 4
+		"Large Radar Jammer"
+		"Laser Rifle" 3
+		
+		"X3700 Ion Thruster"
+		"X3200 Ion Steering"
+		"Hyperdrive"
+
+
 ship "Aerie" "Aerie (Hai)"
 	outfits
 		"Chameleon Anti-Missile"
@@ -168,6 +187,36 @@ ship "Aerie" "Aerie (Korath)"
 
 
 
+ship "Auxiliary" "Auxiliary (Battle)"
+	outfits
+		"Sidewinder Missile Launcher" 2
+		"Sidewinder Missile" 100
+		"Quad Blaster Turret" 2
+		"Heavy Anti-Missile Turret" 2
+		
+		"Fusion Reactor"
+		"LP288a Battery Pack"
+		"D94-YV Shield Generator"
+		"D67-TM Shield Generator"
+		"Water Coolant System"
+		"Large Radar Jammer"
+		"Ramscoop"
+		
+		"X4700 Ion Thruster"
+		"X1700 Ion Thruster"
+		"X5200 Ion Steering"
+		"Scram Drive"
+		"Sniper Rifle"
+		"Fragmentation Grenades" 43
+		"Laser Rifle" 87
+
+	turret "Heavy Anti-Missile Turret"
+	turret "Quad Blaster Turret"
+	turret "Quad Blaster Turret"
+	turret "Heavy Anti-Missile Turret"
+
+
+
 ship "Bastion" "Bastion (Korath)"
 	outfits
 		"Plasma Repeater" 2
@@ -193,6 +242,24 @@ ship "Bastion" "Bastion (Korath)"
 	turret "Quad Blaster Turret"
 	turret "Quad Blaster Turret"
 	turret "Korath Warder"
+
+
+
+ship "Berserker" "Berserker (Energy Cannons)"
+	outfits
+		"Energy Cannon" 2
+		"Energy Blaster" 2
+		"nGVF-CC Fuel Cell"
+		"LP072a Battery Pack"
+		"D23-QP Shield Generator"
+		"X2700 Ion Thruster"
+		"X3200 Ion Steering"
+		"Hyperdrive"
+	gun "Energy Cannon"
+	gun "Energy Cannon"
+	gun "Energy Blaster"
+	gun "Energy Blaster"
+
 
 
 
@@ -588,6 +655,20 @@ ship "Gunboat" "Gunboat (Pug)"
 		Supercapacitor 3
 
 
+
+ship "Hauler" "Hauler (Energy Cannons)"
+	outfits
+		"Energy Cannon" 2
+		"Meteor Missile" 60
+		"Quad Blaster Turret" 2
+		"Heavy Anti-Missile Turret" 2
+		"S3 Thermionic"
+		"LP072a Battery Pack"
+		"D23-QP Shield Generator"
+		"Small Radar Jammer"
+		"Greyhound Plasma Thruster"
+		"Impala Plasma Steering"
+		"Hyperdrive"
 
 
 

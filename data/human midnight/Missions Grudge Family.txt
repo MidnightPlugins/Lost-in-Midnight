@@ -435,9 +435,9 @@ mission "Grudge Fight 5"
 		
 ship "War Hauler" "Grudge Hammer"
 	outfits
-		"Meteor Missile Launcher" 2
-		"Meteor Missile" 75
-		"Meteor Missile Box"
+		"Energy Cannon" 2
+		"Meteor Missile Launcher"
+		"Meteor Missile" 30
 		"Quad Blaster Turret" 6
 		"Anti-Missile Turret" 2
 		"Fission Reactor"
@@ -451,7 +451,10 @@ ship "War Hauler" "Grudge Hammer"
 		"Laser Rifle" 3
 		"Fragmentation Grenades"
 		"Microwave Cannon"
-		"Security Station" 2
+		"Security Station" 4
+	gun "Energy Cannon"
+	gun "Meteor Missile Launcher"
+	gun "Energy Cannon"
 	turret "Quad Blaster Turret"
 	turret "Quad Blaster Turret"
 	turret "Quad Blaster Turret"

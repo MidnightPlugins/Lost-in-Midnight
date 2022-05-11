@@ -11,6 +11,78 @@
 
 
 
+mission "Bounty Hunting: Angry Chicken"
+	job
+	name "Wanted Pirate near <system>"
+	description "An old Firebird named the <npc> has been attacking merchants near <system>. Eliminate the ship, then report to <destination>. Payment is <payment>."
+	source
+		attributes "dirt belt"
+	to offer
+		random < 50
+	npc kill
+		government "Bounty"
+		system
+			distance 1 2
+		personality target waiting staying plunders harvests
+			confusion 20
+		ship "Modified Firebird" "Angry Chicken"
+		dialog phrase "generic hunted bounty eliminated dialog"
+	on visit
+		dialog phrase "generic bounty hunting on visit"
+	on complete
+		payment 100000
+		event "add energy cannons"
+		dialog phrase "generic bounty hunting payment dialog"
+
+event "add energy cannons"
+	fleet "Small Southern Merchants"
+		add variant 1
+			"Hauler (Energy Cannons)"
+	fleet "Large Southern Merchants"
+		add variant 1
+			"Modified Firebird"
+			"Berserker" 2
+	fleet "Small Core Merchants"
+		add variant 1
+			"Modified Firebird"
+		add variant 1
+			"Hauler (Energy Cannons)"
+	fleet "Small Northern Merchants"
+		add variant 1
+			"Modified Firebird"
+		add variant 1
+			"Hauler (Energy Cannons)"
+	fleet "Large Northern Merchants"
+		add variant 1
+			"Aerie (Energy Cannons)"
+			"Dagger" 2
+	fleet "Small Deep Merchants"
+		add variant 1
+			"Aerie (Energy Cannons)"
+			"Dagger" 2
+	fleet "Human Miners"
+		add variant 1
+			"Berserker (Energy Cannons)"
+	fleet "Bounty Hunters"
+		add variant 1
+			"Firebird"
+			"Berserker"
+			"Berserker (Energy Cannons)"
+	fleet "pirate raid"
+		add variant 1
+			"Firebird"
+			"Berserker"
+			"Berserker (Energy Cannons)"
+	fleet "Small Northern Pirates"
+		add variant 1
+			"Berserker (Energy Cannons)"
+	fleet "Large Northern Pirates"
+		add variant 1
+			"Firebird"
+			"Berserker"
+			"Berserker (Energy Cannons)"
+
+
 
 mission "Bounty Hunting (Secret Prototype)"
 	name "Stolen prototype near <system>"
