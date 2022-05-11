@@ -66,7 +66,7 @@ outfit "Energy Cannon"
 	category "Guns"
 	cost 32000
 	thumbnail "outfit/energy cannon"
-	"mass" 10
+	"mass" 12
 	"outfit space" -12
 	"weapon capacity" -12
 	"gun ports" -1
@@ -77,14 +77,14 @@ outfit "Energy Cannon"
 		"inaccuracy" 4
 		"velocity" 10
 		"lifetime" 36
-		"reload" 18
+		"reload" 15
 		"firing energy" 19.2
 		"firing heat" 60
 		"shield damage" 19.2
 		"hull damage" 12
 		"cluster"
 		"submunition" "Energy Blast" 1
-	description "A relic from the Alpha War, Energy Cannons fell into disuse once the war ended. Occasionally they can still be found outfitted on older ships. They have a longer range than Energy Blasters, but the effectiveness of the projectiles diminishes the more distant the target."
+	description "A relic from the Alpha War, Energy Cannons fell into disuse once the war ended. Occasionally they can still be found outfitted on older ships. They have a longer range than Energy Blasters and are more powerful. But the effectiveness of the projectiles diminishes the more distant the target."
 
 outfit "Energy Blast"
 	weapon

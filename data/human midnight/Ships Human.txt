@@ -712,8 +712,7 @@ ship "Science Drone"
 		"X1700 Ion Thruster"
 		"X1200 Ion Steering"
 		
-	engine -15 30
-	engine 15 30
+	engine 0 30
 	leak "flame" 60 80
 	explode "tiny explosion" 15
 	explode "small explosion" 5
