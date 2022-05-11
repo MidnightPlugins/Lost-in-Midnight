@@ -124,12 +124,11 @@ ship "Kestrel" "Kestrel (Battle Weapons)"
 
 ship "Aerie" "Aerie (Energy Cannons)"
 	outfits
-		"Energy Cannon"
+		"Energy Cannon" 2
 		"Laser Turret" 2
 		"Anti-Missile Turret"
 		
 		"RT-I Radiothermal"
-		"KP-6 Photovoltaic Panel" 2
 		"LP072a Battery Pack"
 		"D67-TM Shield Generator"
 		"Cargo Expansion" 4
@@ -659,12 +658,11 @@ ship "Gunboat" "Gunboat (Pug)"
 ship "Hauler" "Hauler (Energy Cannons)"
 	outfits
 		"Energy Cannon" 2
-		"Meteor Missile" 60
 		"Quad Blaster Turret" 2
 		"Heavy Anti-Missile Turret" 2
 		"S3 Thermionic"
 		"LP072a Battery Pack"
-		"D23-QP Shield Generator"
+		"D41-HY Shield Generator"
 		"Small Radar Jammer"
 		"Greyhound Plasma Thruster"
 		"Impala Plasma Steering"

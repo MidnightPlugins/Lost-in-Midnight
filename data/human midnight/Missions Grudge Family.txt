@@ -451,7 +451,7 @@ ship "War Hauler" "Grudge Hammer"
 		"Laser Rifle" 3
 		"Fragmentation Grenades"
 		"Microwave Cannon"
-		"Security Station" 4
+		"Security Station" 2
 	gun "Energy Cannon"
 	gun "Meteor Missile Launcher"
 	gun "Energy Cannon"

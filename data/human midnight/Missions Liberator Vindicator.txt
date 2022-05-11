@@ -470,3 +470,34 @@ event "Oathbreaker Glaze Reinforcements"
 
 
 
+mission "Plasma Cluster Cannons"
+	invisible
+	source Rust
+	to offer
+		or
+			has "SB-Labs Vindicator 4: done"
+			has "Oathbreaker Liberator 4: done"
+		"credits" > 2660000
+	on offer
+		require "Plasma Cluster Cannon" 0
+		conversation
+			scene "outfit/plasma cluster cannon"
+			branch "liberator"
+				has "Oathbreaker Liberator 4: done"
+			`You bump into Barmy Edwards at the spaceport convenience store. "Oh, <first>! I forgot to mention we have a spare set of Plasma Cluster Cannons set aside. Since production of the Vindicator was cancelled, Kraz has no plans to add them to our regular inventory. So they're just gathering dust. Would you be interested in buying them? They're the same price as regular Plasma Cannons, so the full set comes to 1,330,000 credits."`
+			choice
+				`	(Buy them.)`
+					accept
+				`	(Don't buy them.)`
+					decline
+			label "liberator"
+			`You bump into Barmy Edwards at the spaceport convenience store. "Oh, <first>! I forgot to mention we have a spare set of Plasma Cluster Cannons set aside. Since production of the Liberator was cancelled, Kraz has no plans to add them to our regular inventory. So they're just gathering dust. Would you be interested in buying them? They're the same price as regular Plasma Cannons, so the full set comes to 1,330,000 credits."`
+			choice
+				`	(Buy them.)`
+					accept
+				`	(Don't buy them.)`
+					decline
+	on accept
+		payment 1330000
+		outfit "Plasma Cluster Cannon" 7
+		fail

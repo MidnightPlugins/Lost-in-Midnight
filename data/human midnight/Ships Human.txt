@@ -1051,7 +1051,7 @@ ship "War Hauler"
 		"fuel capacity" 400
 		"cargo space" 40
 		"outfit space" 464
-		"weapon capacity" 230
+		"weapon capacity" 220
 		"engine capacity" 80
 		weapon
 			"blast radius" 60
@@ -1076,7 +1076,6 @@ ship "War Hauler"
 		"Hyperdrive"
 		"Fragmentation Grenades"
 		"Laser Rifle" 3
-		"Security Station" 2
 
 	engine -44.5 140.5
 	engine 45 140.5

@@ -20,7 +20,7 @@ ship "Modified Firebird"
 	sprite "ship/modified firebird"
 	thumbnail "thumbnail/firebird"
 	attributes
-		category "Freighter"
+		category "Light Freighter"
 		"cost" 2700000
 		"shields" 5800
 		"hull" 3400
@@ -30,8 +30,8 @@ ship "Modified Firebird"
 		"drag" 4.5
 		"heat dissipation" .6
 		"fuel capacity" 400
-		"cargo space" 135
-		"outfit space" 340
+		"cargo space" 150
+		"outfit space" 320
 		"weapon capacity" 100
 		"engine capacity" 100
 		weapon

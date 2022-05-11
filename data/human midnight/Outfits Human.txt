@@ -67,8 +67,8 @@ outfit "Energy Cannon"
 	cost 32000
 	thumbnail "outfit/energy cannon"
 	"mass" 10
-	"outfit space" -10
-	"weapon capacity" -10
+	"outfit space" -12
+	"weapon capacity" -12
 	"gun ports" -1
 	weapon
 		sprite "projectile/energy cannon"
