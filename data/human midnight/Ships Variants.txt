@@ -1027,21 +1027,36 @@ ship "Quicksilver" "Quicksilver (Korath)"
 
 ship "Vanguard" "Vanguard (Korath)"
 	outfits
-		"Proton Gun" 7
-		"Anti-Missile Turret"
-
+		"Korath Fire-Lance" 7
+		"Korath Warder"
 		"Fusion Reactor"
+		"LP144a Battery Pack"
 		"Systems Core (Medium)" 1
-		"Large Heat Shunt" 2
+		"Large Heat Shunt"
 		"Small Heat Shunt"
 		"Interference Plating" 3
 		"Brig"
 		"Korath Repeater Rifle" 4
-		"Laser Rifle" 23
-		
+		"Laser Rifle" 23		
 		"X3700 Ion Thruster"
 		"X4200 Ion Steering"
 		"Jump Drive"
+
+
+
+ship "Vanguard" "Vanguard (Proton Gun-CF8)"
+	outfits
+		"Proton Gun-CF8" 7
+		"Proton Gun" 7
+		"Anti-Missile Turret"
+		"Fusion Reactor"
+		"LP072a Battery Pack"
+		"D67-TM Shield Generator"
+		"Liquid Nitrogen Cooler"
+		"Laser Rifle" 4		
+		"X3700 Ion Thruster"
+		"X4200 Ion Steering"
+		"Hyperdrive"
 
 
 

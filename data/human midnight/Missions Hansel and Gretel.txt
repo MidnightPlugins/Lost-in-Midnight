@@ -429,6 +429,8 @@ mission "Hansel & Gretel: Protection (Epilogue)"
 		personality heroic
 		ship "Marauder Vanguard" "Hansel"
 		ship "Marauder Protector" "Gretel"
+	on fail
+		dialog `The protection contract with Hansel & Gretel has expired.`
 
 
 
@@ -449,3 +451,5 @@ mission "Hansel & Gretel: Protection (Normal)"
 		personality heroic
 		ship "Marauder Vanguard" "Hansel"
 		ship "Marauder Protector" "Gretel"
+	on fail
+		dialog `The protection contract with Hansel & Gretel has expired.`

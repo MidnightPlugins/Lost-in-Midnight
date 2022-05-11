@@ -321,7 +321,7 @@ ship "Marauder Vanguard"
 			"hull damage" 800
 			"hit force" 2400
 	outfits
-		"Proton Gun" 7
+		"Proton Gun-CF8" 7
 		"Anti-Missile Turret"
 
 		"Fusion Reactor"
@@ -339,19 +339,19 @@ ship "Marauder Vanguard"
 	
 	engine -15 127
 	engine 15 127
-	gun 0 -129 "Proton Gun"
+	gun 0 -129 "Proton Gun-CF8"
 		parallel
-	gun -23 -119 "Proton Gun"
+	gun -23 -119 "Proton Gun-CF8"
 		parallel
-	gun 23 -119 "Proton Gun"
+	gun 23 -119 "Proton Gun-CF8"
 		parallel
-	gun -31 -41 "Proton Gun"
+	gun -31 -41 "Proton Gun-CF8"
 		parallel
-	gun 31 -41 "Proton Gun"
+	gun 31 -41 "Proton Gun-CF8"
 		parallel
-	gun -23 -41 "Proton Gun"
+	gun -23 -41 "Proton Gun-CF8"
 		parallel
-	gun 23 -41 "Proton Gun"
+	gun 23 -41 "Proton Gun-CF8"
 		parallel
 	turret 0 42 "Anti-Missile Turret"
 	leak "leak" 60 50

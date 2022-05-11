@@ -1629,6 +1629,56 @@ fleet "Derelict Northern Pirate"
 # Fleet modification Missions/Events
 #######################
 
+
+# From mission "Bounty Hunting: Angry Chicken" in Jobs Misc.
+event "add energy cannon variants"
+	fleet "Small Southern Merchants"
+		add variant 1
+			"Hauler (Energy Cannons)"
+	fleet "Large Southern Merchants"
+		add variant 1
+			"Modified Firebird"
+			"Berserker" 2
+	fleet "Small Core Merchants"
+		add variant 1
+			"Modified Firebird"
+		add variant 1
+			"Hauler (Energy Cannons)"
+	fleet "Small Northern Merchants"
+		add variant 1
+			"Modified Firebird"
+		add variant 1
+			"Hauler (Energy Cannons)"
+	fleet "Large Northern Merchants"
+		add variant 1
+			"Aerie (Energy Cannons)"
+			"Dagger" 2
+	fleet "Small Deep Merchants"
+		add variant 1
+			"Aerie (Energy Cannons)"
+			"Dagger" 2
+	fleet "Human Miners"
+		add variant 1
+			"Berserker (Energy Cannons)"
+	fleet "Bounty Hunters"
+		add variant 1
+			"Firebird"
+			"Berserker"
+			"Berserker (Energy Cannons)"
+	fleet "pirate raid"
+		add variant 1
+			"Firebird"
+			"Berserker"
+			"Berserker (Energy Cannons)"
+	fleet "Small Northern Pirates"
+		add variant 1
+			"Berserker (Energy Cannons)"
+	fleet "Large Northern Pirates"
+		add variant 1
+			"Firebird"
+			"Berserker"
+			"Berserker (Energy Cannons)"
+
 		
 mission "Add Base Heavy Syndicate Marauders"
 	landing

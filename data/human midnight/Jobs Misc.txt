@@ -31,58 +31,74 @@ mission "Bounty Hunting: Angry Chicken"
 		dialog phrase "generic bounty hunting on visit"
 	on complete
 		payment 100000
-		event "add energy cannons"
+		event "add energy cannon variants"
 		dialog phrase "generic bounty hunting payment dialog"
 
-event "add energy cannons"
-	fleet "Small Southern Merchants"
-		add variant 1
-			"Hauler (Energy Cannons)"
-	fleet "Large Southern Merchants"
-		add variant 1
-			"Modified Firebird"
-			"Berserker" 2
-	fleet "Small Core Merchants"
-		add variant 1
-			"Modified Firebird"
-		add variant 1
-			"Hauler (Energy Cannons)"
-	fleet "Small Northern Merchants"
-		add variant 1
-			"Modified Firebird"
-		add variant 1
-			"Hauler (Energy Cannons)"
-	fleet "Large Northern Merchants"
-		add variant 1
-			"Aerie (Energy Cannons)"
-			"Dagger" 2
-	fleet "Small Deep Merchants"
-		add variant 1
-			"Aerie (Energy Cannons)"
-			"Dagger" 2
-	fleet "Human Miners"
-		add variant 1
-			"Berserker (Energy Cannons)"
-	fleet "Bounty Hunters"
-		add variant 1
-			"Firebird"
-			"Berserker"
-			"Berserker (Energy Cannons)"
-	fleet "pirate raid"
-		add variant 1
-			"Firebird"
-			"Berserker"
-			"Berserker (Energy Cannons)"
-	fleet "Small Northern Pirates"
-		add variant 1
-			"Berserker (Energy Cannons)"
-	fleet "Large Northern Pirates"
-		add variant 1
-			"Firebird"
-			"Berserker"
-			"Berserker (Energy Cannons)"
 
 
+
+mission "Testing: Plasma Gun-CF8"
+	name "Syndicate weapons test"
+	job
+	description "Disable the robotic target dummy ship in <system>, collect test data for Syndicate engineers by scanning its outfits, and land on <planet>. Warning: the target ship is programmed to engage in self-defense behaviors to ensure a realistic simulation. Payment is <payment>."
+	source
+		government Syndicate
+	destination
+		distance 1 3
+		government Syndicate
+	to offer
+		has "main plot completed"
+		random < 60
+		"combat rating" > 1000
+		"destroyed Syndicate target ship" < 3
+	npc save disable "scan outfits"
+		government "Test Dummy"
+		personality disables staying heroic target
+			confusion 120
+		system destination
+		ship "Vanguard Test-PGCF8" "Syndicate Test Vessel"
+		conversation
+			scene "outfit/proton gun-cf8"
+			"You scan the disabled craft and take careful measurements of the battle damage. While doing so, you notice the Proton Guns on this ship must be some new model they wanted to test. Time to deliver the results on <planet>."
+	on visit
+		dialog "You forgot to either disable or scan the target dummy ship in <system>! You'll need to head back there and do that before you can return here for payment."
+	on abort
+		# No penalty
+	on fail
+		dialog "The robotic target ship has been destroyed. You are hailed by an angry Syndicate official who fines you <payment> and warns you that further mistakes of this nature may remove you from eligibility for these jobs."
+		"destroyed Syndicate target ship" += 3
+		"reputation: Syndicate" -= 3
+		payment -2000000
+	on complete
+		payment 125000
+		event "Proton Gun-CF8 added to outfitters" 30
+		dialog "You transmit the scan results to a team of eager engineers and collect your payment of <payment>."
+
+event "Proton Gun-CF8 added to outfitters"
+	outfitter "Syndicate Advanced"
+		add "Proton Gun-CF8"
+
+ship "Vanguard" "Vanguard Test-PGCF8"
+	add attributes
+		"automaton" 1
+		"self destruct" 1
+	outfits
+		"Proton Gun-CF8" 7
+		"Anti-Missile Turret"
+		"Fusion Reactor"
+		"LP144a Battery Pack"
+		"S-970 Regenerator"
+		"Liquid Nitrogen Cooler"
+		"Laser Rifle" 4
+		"X3700 Ion Thruster"
+		"X4200 Ion Steering"
+		"Hyperdrive"
+
+
+
+##########################
+# Jobs that repeat
+##########################
 
 mission "Bounty Hunting (Secret Prototype)"
 	name "Stolen prototype near <system>"

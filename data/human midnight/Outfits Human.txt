@@ -62,6 +62,40 @@ outfit "Heavy Fusion Core"
 
 
 
+outfit "Proton Gun-CF8"
+	category "Guns"
+	cost 175000
+	thumbnail "outfit/proton gun-cf8"
+	"mass" 28
+	"outfit space" -28
+	"weapon capacity" -28
+	"gun ports" -1
+	weapon
+		sprite "projectile/proton"
+		sound "proton"
+		"hit effect" "proton impact" 3
+		"inaccuracy" 4
+		"submunition" "Proton Fragment" 3
+		"velocity" 24
+		"lifetime" 2
+		"reload" 8
+		"firing energy" 15
+		"firing force" 2
+		"firing heat" 60
+		"cluster"
+	description `Criticized by Stars and Starships Magazine as a blatant marketing gimmick meant to appeal to Vanguard aficionados, the Proton Gun-CF8 has been modified to fire in "cluster" mode. When multiple copies of this weapon are installed, their rate of fire will be synchronized.`
+
+
+
+
+
+#####################	
+# These special outfits cannot be purchased at outfitters, but most can be obtained via missions.
+# Exception: Ammunition and similar support outfits may be available at outfitters.
+#####################
+
+
+
 outfit "Energy Cannon"
 	category "Guns"
 	cost 32000
@@ -104,15 +138,6 @@ outfit "Residual Energy Blast"
 		"lifetime" 12
 		"shield damage" 9.6
 		"hull damage" 6
-
-
-
-
-
-#####################	
-# These special outfits cannot be purchased at outfitters, but most can be obtained via missions.
-# Exception: Ammunition and similar support outfits may be available at outfitters.
-#####################
 
 
 
