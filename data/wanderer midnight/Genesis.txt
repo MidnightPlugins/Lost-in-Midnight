@@ -178,8 +178,7 @@ ship "Genesis Probe"
 		
 		"Afterburner"
 		
-	engine -15 30
-	engine 15 30
+	engine 0 30
 	leak "flame" 60 80
 	explode "tiny explosion" 15
 	explode "small explosion" 5
