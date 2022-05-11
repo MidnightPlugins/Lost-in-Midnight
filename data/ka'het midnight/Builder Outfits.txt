@@ -49,7 +49,7 @@ outfit "Ka'het Scanner"
 	"cargo scan power" 18
 	"cargo scan speed" 2
 	"tactical scan power" 64
-	description "A powerful scanner outfitted onto the Ka'het to gather information on hostile alien species. The Builders never envisioned it being used to gather inforation on them."
+	description "A powerful scanner outfitted onto the Ka'het to gather information on hostile alien species. The Builders never envisioned it being used to gather information on them."
 
 
 outfit "Graveyard Map"
