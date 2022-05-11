@@ -233,8 +233,8 @@ ship "Star Gazer"
 		"jump fuel" 250
 		"jump range" 150
 		"jump effect" "jump drive sg"
-		"jump in sound" "hyperdrive out"
-		"jump out sound" "hyperdrive in"
+		"jump in sound" "jump_drive-ver8"
+		"jump out sound" "jump_drive-ver8"
 		"ramscoop" 1
 		"outfit scan power" 32
 		"outfit scan speed" 4
