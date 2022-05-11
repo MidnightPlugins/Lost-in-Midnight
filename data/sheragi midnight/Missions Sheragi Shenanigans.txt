@@ -288,11 +288,11 @@ mission "Sheragi Shenanigans: Sapphire Shield Epilogue B"
 		ship "Sapphire Shield" "Sapphire Shield"
 	on abort
 		"reputation: Merchant" -= 100
-		"salary: Sapphire Shield" = 0
+		clear "salary: Sapphire Shield"
 		dialog `The <npc> never reached its destination. Rumors spread that you hijacked the ship yourself.`
 	on fail
 		"reputation: Merchant" -= 100
-		"salary: Sapphire Shield" = 0
+		clear "salary: Sapphire Shield"
 		dialog `The <npc> never reached its destination. Rumors spread that you hijacked the ship yourself.`
 	on complete
 		payment 150000
