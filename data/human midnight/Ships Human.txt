@@ -289,6 +289,82 @@ ship "Carabao" "Carabao (Quash)"
 
 
 
+# Executive Guard appears in 
+ship "Executive Guard"
+	sprite "ship/executive guard/executive guard"
+		"frame rate" 7
+		"delay" 7
+	attributes
+		category "Heavy Warship"
+		"cost" 12700000
+		"shields" 19000
+		"hull" 12500
+		"required crew" 53
+		"bunks" 114
+		"mass" 1000
+		"drag" 14.3
+		"heat dissipation" .6
+		"fuel capacity" 600
+		"cargo space" 100
+		"outfit space" 835
+		"weapon capacity" 400
+		"engine capacity" 130
+		weapon
+			"blast radius" 318
+			"shield damage" 3180
+			"hull damage" 1600
+			"hit force" 4800
+	outfits
+		"Proton Gun-CF8" 7
+		"Proton Turret" 4
+		"Heavy Anti-Missile Turret" 2
+		
+		"Fusion Reactor"
+		"LP288a Battery Pack"
+		"S-970 Regenerator"
+		"S-270 Regenerator"
+		"Liquid Helium Cooler"
+		"Outfits Expansion"
+		"Large Radar Jammer"
+		"Small Radar Jammer"
+		"Cargo Scanner"
+		"Outfit Scanner"
+		"Tactical Scanner"
+		"Luxury Accommodations"
+		"Security Station"
+		"Laser Rifle" 55
+
+		"Ionic Afterburner"
+		"X3700 Ion Thruster"
+		"X4200 Ion Steering"
+		"Hyperdrive"
+
+	engine -32 185 .6
+	engine 32 185 .6
+	engine -16 201 .8
+	engine 16 201 .8
+	gun 0 -205 "Proton Gun-CF8"
+	gun -24 -196 "Proton Gun-CF8"
+	gun 24 -196 "Proton Gun-CF8"
+	gun -40 -121 "Proton Gun-CF8"
+	gun 40 -121 "Proton Gun-CF8"
+	gun -35 -116 "Proton Gun-CF8"
+	gun 35 -116 "Proton Gun-CF8"
+	turret 0 -33 "Heavy Anti-Missile Turret"
+	turret 0 -1 "Proton Turret"
+	turret 0 28 "Proton Turret"
+	turret 0 58 "Proton Turret"
+	turret 0 88 "Proton Turret"
+	turret 0 119 "Heavy Anti-Missile Turret"
+	bay "Fighter" -39 -18 under left
+	bay "Fighter" 39 -18 under right
+	bay "Fighter" -39 43 under left
+	bay "Fighter" 39 43 under right
+	bay "Fighter" -39 104 under left
+	bay "Fighter" 39 104 under right
+
+
+
 # A unique prototype Kestrel from the Grave Digger missions.
 # The two different versions represent the player's mission path choices.
 

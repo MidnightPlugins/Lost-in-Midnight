@@ -944,6 +944,7 @@ mission "Metropolis Epilogue: Hiding in Plain Sight 2 (Balthazar model)"
 	source "Hai-home"
 	to offer
 		has "Metropolis Epilogue: Hiding in Plain Sight 1: done"
+		not "Metropolis Epilogue: Hiding in Plain Sight 2 (Balthazar model): declined"
 	on offer
 		require "Balthazar Model" 1
 		conversation
@@ -994,6 +995,9 @@ mission "Metropolis Epilogue: Hiding in Plain Sight 2 (no Balthazar model)"
 	source "Hai-home"
 	to offer
 		has "Metropolis Epilogue: Hiding in Plain Sight 1: done"
+		or
+			not "Metropolis Epilogue: Hiding in Plain Sight 2 (Balthazar model): failed"
+			not "Metropolis Epilogue: Hiding in Plain Sight 2 (Balthazar model): declined"
 	on offer
 		require "Balthazar Model" 0
 		conversation
