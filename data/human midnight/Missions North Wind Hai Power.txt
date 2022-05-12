@@ -510,7 +510,7 @@ mission "Turner Inc.: Hai Power 2"
 	on offer
 		conversation
 			scene "thumbnail/behemoth"
-			`While you were at the factory, Yuki has been upgrading the North Wind with Hai outfits. "Thank you for bringing me here," she says. The <npc> will accompany you to <destination>. Then you'll continue the rest of the way to Asgard to deliver the Gnome Core.`
+			`While you were at the factory, Yuki has been upgrading her Behemoth with Hai outfits. "Thank you for bringing me here," she says. The <npc> will accompany you to <destination>. Then you'll continue the rest of the way to Asgard to deliver the Gnome Core.`
 				accept
 	npc
 		government "Pirate"
@@ -624,6 +624,7 @@ mission "Turner Inc.: Hai Power 4"
 		
 
 mission "Turner Inc.: Hai Power 5"
+	landing
 	name "Hai Power: Diversion"
 	description "Lead the corporate espionage agents on a chase through the Deep systems marked on your map. Head to <destination> once you've managed to shake off their pursuit."
 	source Martini
@@ -795,7 +796,7 @@ mission "Turner Inc.: Hai Power 7"
 					goto warehouse
 				`	(Explore the ship.)`
 			scene "outfit/fission hai"
-			`Exploring the ship, there's no one aboard, but you find the prototype fission reactor still installed on the ship.`
+			`Exploring the ship, there's no one aboard, but you find that the prototype fission reactor is still installed.`
 			choice
 				`	(Explore the warehouse.)`
 						
@@ -811,7 +812,7 @@ mission "Turner Inc.: Hai Power 7"
 			`	Your crew fights bravely. Unfortunately, a stray bullet finds its way into your vital organs.`
 				die
 			label "victory"
-			`	Your crew overpowers the pirates. You rescue David and his crew and leave!`
+			`	Your crew overpowers the pirates! You rescue David and his crew then leave.`
 				launch
 			
 			label bargain
@@ -847,3 +848,141 @@ mission "Turner Inc.: Hai Power Fission S2 Reactor Stocked"
 
 
 
+mission "Turner Inc.: Hai Power 8"
+	name "Hai Power: Phase Three"
+	description "Travel to <system> to assist Turner Inc. with another plan to increase profits."
+	source
+		government "Hai"
+	destination Greenwater
+	to offer
+		has "event: Fission S2 Reactor Delivered"
+		random < 60
+	on offer
+		dialog `You receive another message from David Turner. "Are you enjoying the increased profits from the Syndicated Systems collaboration? Meet me at the office on <destination> when you're ready for phase three."`
+
+
+
+outfitter "Heavy Fusion Core"
+	"Heavy Fusion Core"
+	
+mission "Turner Inc.: Hai Power 9"
+	landing
+	name "Hai Power: Unfettered Raiders"
+	description "Search the systems near <waypoints> for the Unfettered ship that stole the Heavy Fusion Core. Return to <destination> once you've recovered the prototype."
+	source Greenwater
+	waypoint "Wah Ki"
+	to offer
+		has "Turner Inc.: Hai Power 8: done"
+	on offer
+		conversation
+			`You find David at the outfitter with a Hai freighter captain. "... And that's where the cargo was stolen."`
+			choice
+				`	"Am I interrupting?"`
+				`	"What got stolen?"`
+			scene "outfit/fusion hai"
+			`"Ah, Captain <last>! Perfect timing. Captain Ang Soong here was telling me the details of how our latest prototype, the Heavy Fusion Core, was stolen by Unfettered raiders near Wah Ki. Their ship is an old transport called a Millipede. I don't suppose you'd be up for tracking it down?"`
+			choice
+				`	"Sure. I was getting bored."`
+					accept
+				`	"Wah Ki... Isn't that a war zone?"`
+			`"I'm sure you can handle it," David tries to reassure you.`
+			choice
+				`	"Alright, I'll go."`
+					accept
+				`	"No way, I'm done getting shot at for you."`
+			`David seems thoughtful for a moment. Perhaps being kidnapped by pirates has given him some perspective on the dangers of space travel. "I understand. Don't worry about your share of the profits. I won't increase them if I find some other way to make this venture work. But I won't decrease them either."`
+				decline
+	on enter "Wah Ki"
+		dialog `There's no sign of the Unfettered ship that stole the prototype. Hopefully it wasn't destroyed in the crossfire and is hiding out in one of the nearby systems.`
+	on enter "Imo Dep"
+		conversation
+			scene "ship/hai millipede"
+			`That must be the Millipede David mentioned. The Heavy Fusion Core should be on board.`
+	npc board
+		government "Hai (Unfettered)"
+		system "Imo Dep"
+		personality target waiting staying harvests plunders unconstrained
+		fleet
+			names "Hai"
+			cargo 1
+			outfitters "Heavy Fusion Core"
+			variant
+				"Millipede"
+		dialog `Once you take the back the Heavy Fusion Core, return to <destination>.`
+	on fail
+		dialog `[MISSION FAILED] You've failed an essential part of the Hai Power mission chain. If life were a game, you could load a save file and try again.`
+	on complete
+		dialog `You've returned the stolen prototype. David says he wants to run some tests to make sure it wasn't damaged. Head to the spaceport to check up on him and get started on the next step to increased profits.`
+		
+		
+		
+mission "Turner Inc.: Hai Power 10"
+	landing
+	name "Hai Power: Heavy Fusion Core"
+	description "Deliver the Heavy Fusion Core to Lovelace Labs on <destination>."
+	source Greenwater
+	destination Ada 
+	to offer
+		has "Turner Inc.: Hai Power 9: done"
+	on offer
+		conversation
+			scene "outfit/fusion hai"
+			`David is packing up the Heavy Fusion Core when you find him. "Thankfully the protoype wasn't damaged. That would have caused us to be setback for several months. This needs to get to Lovelace Labs on <destination>. Trust me, it will push us to our biggest profits yet!"`
+				accept
+	on accept
+		outfit "Heavy Fusion Core" 1
+	npc
+		to spawn
+			has "event: midnight scar's hideout (Hai)"
+		government "Scar's Legion"
+		system "Waypoint"
+		personality waiting staying plunders harvests coward
+			confusion 20
+		fleet "Large Scar's Legion" 1
+		fleet "Small Scar's Legion" 2
+	npc
+		government "Pirate"
+		system destination
+		personality waiting plunders harvests
+			confusion 20
+		fleet "Large Northern Pirates" 1
+	npc
+		government "Pirate"
+		system destination
+		personality waiting plunders harvests
+			confusion 20
+		fleet "Small Northern Pirates" 2
+	npc
+		government "Pirate"
+		system destination
+		personality waiting plunders harvests
+			confusion 20
+		fleet "pirate raid"
+	npc evade
+		government "Bounty Hunter"
+		system destination
+		personality waiting staying nemesis plunders harvests coward
+		fleet "Hired Guns"
+		fleet "Bounty Hunters" 2
+	on visit
+		dialog `Looks like corporate agents set up an ambush for you. You might have to use violence to drive them off.`
+	on complete
+		outfit "Heavy Fusion Core" -1
+		event "Heavy Fusion Core Delivered" 60
+			scene "outfit/fusion hai"
+			`You successfully deliver the prototype Heavy Fusion Core to Lovelace Labs. It should be available in outfitters after a few months.`
+			
+event "Heavy Fusion Core Delivered"
+	outfitter "Lovelace Advanced"
+		add "Heavy Fusion Core"
+
+
+
+mission "Turner Inc.: Hai Power Heavy Fusion Core Stocked"
+	landing
+	invisible
+	to offer
+		has "event: Heavy Fusion Core Delivered"
+	on offer
+		"salary: Turner Incorporated" = 10000
+		fail

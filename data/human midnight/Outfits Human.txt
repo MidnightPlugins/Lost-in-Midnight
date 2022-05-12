@@ -27,8 +27,10 @@ outfit "North Wind Cooling"
 	thumbnail "outfit/cooling ducts hai"
 	"mass" 7
 	"outfit space" -7
-	"cooling" 8
-	description "An advanced air duct cooling system developed by North Wind. While bulkier than the industry standard cooling ducts, this new system offers improved cooling."
+	"cooling" 5
+	"active cooling" 3
+	"cooling energy" .2
+	description "An advanced air duct cooling system developed by North Wind. While bulkier than the industry standard cooling ducts, this new system offers additional emergency cooling if the ship starts to overheat."
 
 outfit "Gnome Core"
 	category "Power"

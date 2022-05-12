@@ -38,13 +38,13 @@ event "midnight scar's hideout"
 
 
 
-mission "Midnight Scar (Hai)"
+mission "Midnight Scar (Hai) patched"
 	landing
 	invisible
 	to offer
 		has "Pirate Troubles [4]: done"
 	on offer
-		event "midnight scar's hideout"
+		event "midnight scar's hideout (Hai)"
 		fail
 
 event "midnight scar's hideout (Hai)"
