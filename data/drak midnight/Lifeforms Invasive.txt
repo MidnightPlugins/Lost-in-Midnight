@@ -232,7 +232,7 @@ ship "Star Gazer"
 		"jump speed" .2
 		"jump fuel" 250
 		"jump range" 150
-		"jump effect" "jump drive sg"
+		"jump effect" "jump drive wisp"
 		"jump in sound" "jump_drive-ver8"
 		"jump out sound" "jump_drive-ver8"
 		"ramscoop" 1
@@ -257,14 +257,14 @@ ship "Star Gazer"
 	"final explode" "blood"
 	description "An invasive species from beyond our galaxy. While not particularly aggressive, they can be dangerous if provoked. Their bodies generate replacement quills quickly, allowing them to maintain a constant stream of fire. These projectiles are made of a material that evades detection by anti-missile systems."
 
-effect "jump drive sg"
-	sprite "effect/jump drive sg"
+effect "jump drive wisp"
+	sprite "effect/jump drive wisp"
 		"no repeat"
 		"frame rate" 12
-	"lifetime" 10
-	"random angle" 180
+	"lifetime" 200
+	"random spin" 180
 	"velocity scale" 0.
-
+	"sound" "jump_drive-ver8"
 
 outfit "Quill Launcher?"
 	category "Turrets"
