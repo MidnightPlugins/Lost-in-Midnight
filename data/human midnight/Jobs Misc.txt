@@ -36,7 +36,48 @@ mission "Bounty Hunting: Angry Chicken"
 
 
 
+mission "Executive Guard: Syndicate Extremists"
+	landing
+	invisible
+	destination "Buccaneer Bay"
+	clearance
+	to offer
+		has "FW Syndicate Extremists 1A: done"
+		"ships: Heavy Freighter" + "ships: Medium Warship" + "ships: Heavy Warship" > 7
+	npc
+		government "Syndicate (Extremist)"
+		system Algenib
+		personality waiting staying heroic
+		ship "Executive Guard" "S.S. Longinus"
+		ship "Barb (Proton)" "F-001" 
+		ship "Barb (Proton)" "F-002"
+		ship "Barb (Proton)" "F-003"
+		ship "Barb (Proton)" "F-004"
+		ship "Barb (Proton)" "F-005"
+		ship "Barb (Proton)" "F-006"
+	npc evade
+		to spawn
+			"ships: Heavy Freighter" + "ships: Medium Warship" + "ships: Heavy Warship" > 9
+		government "Syndicate (Extremist)"
+		system Algenib
+		personality waiting staying heroic
+		fleet
+			names "syndicate small"
+			variant
+				"Protector (Proton)" 2
+	npc evade
+		to spawn
+			"ships: Heavy Freighter" + "ships: Medium Warship" + "ships: Heavy Warship" > 11
+		government "Syndicate (Extremist)"
+		system Algenib
+		personality waiting staying heroic
+		fleet
+			names "syndicate capital"
+			variant
+				"Vanguard" 2
 
+
+				
 mission "Testing: Plasma Gun-CF8"
 	name "Syndicate weapons test"
 	job

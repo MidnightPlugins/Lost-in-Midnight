@@ -362,6 +362,7 @@ ship "Executive Guard"
 	bay "Fighter" 39 43 under right
 	bay "Fighter" -39 104 under left
 	bay "Fighter" 39 104 under right
+	description "Featuring luxury accommodations and cutting edge Syndicate technology, the Executive Guard is reserved for the exclusive use of Syndicate VIPs."
 
 
 

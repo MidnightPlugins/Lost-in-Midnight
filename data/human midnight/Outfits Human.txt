@@ -111,7 +111,7 @@ outfit "Energy Cannon"
 		"inaccuracy" 4
 		"velocity" 10
 		"lifetime" 36
-		"reload" 15
+		"reload" 13
 		"firing energy" 19.2
 		"firing heat" 60
 		"shield damage" 19.2

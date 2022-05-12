@@ -1047,7 +1047,6 @@ ship "Vanguard" "Vanguard (Korath)"
 ship "Vanguard" "Vanguard (Proton Gun-CF8)"
 	outfits
 		"Proton Gun-CF8" 7
-		"Proton Gun" 7
 		"Anti-Missile Turret"
 		"Fusion Reactor"
 		"LP072a Battery Pack"
