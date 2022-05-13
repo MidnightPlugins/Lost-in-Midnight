@@ -62,7 +62,7 @@ mission "Executive Guard: Syndicate Extremists"
 		system Algenib
 		personality waiting staying heroic
 		fleet
-			names "syndicate small"
+			names "syndicate capital"
 			variant
 				"Protector (Proton)" 2
 	npc evade
@@ -77,8 +77,128 @@ mission "Executive Guard: Syndicate Extremists"
 				"Vanguard" 2
 
 
-				
-mission "Testing: Plasma Gun-CF8"
+
+mission "Executive Guard: Syndicated Systems"
+	job
+	passengers 1
+	name "Ransom: Syndicated Systems"
+	description "Kidnap the president of Syndicated Systems, who usually rides on the S.S. Magnus at <waypoints>. Then return to <destination> with him, where he will be held for ransom. Payment is <payment>."
+	waypoint "Markab"
+	source
+		government "Pirate"
+	to offer
+		has "main plot completed"
+	on offer
+		require "Brig"
+	on accept
+		conversation
+			scene "ship/executive guard"
+			`This is no small job. The CEO of Syndicated Systems will be riding an Executive Guard, a powerful warship the Syndicate reserves for use only by corporate VIPs.`
+				accept
+	npc
+		to spawn
+			or
+				has "Executive Guard: Syndicated Shipyards: active"
+				has "Executive Guard: Syndicated Shipyards: done"
+				has "Executive Guard: Syndicated Shipyards: failed"
+		government "Syndicate"
+		system Achernar
+		personality waiting staying heroic
+		fleet
+			names "syndicate capital"
+			variant
+				"Vanguard (Proton Gun-CF8)"
+				"Vanguard"
+				"Protector (Proton)" 2
+		fleet
+			names "syndicate small"
+			variant
+				"Quicksilver (Proton)" 5
+	npc board
+		government "Syndicate"
+		system Markab
+		personality waiting staying heroic
+		ship "Executive Guard" "S.S. Magnus"
+		ship "Barb (Proton)" "F-001" 
+		ship "Barb (Proton)" "F-002"
+		ship "Barb (Proton)" "F-003"
+		ship "Barb (Proton)" "F-004"
+		ship "Barb (Proton)" "F-005"
+		ship "Barb (Proton)" "F-006"
+		dialog `You've captured the CEO of Syndicated Systems! Return to <destination> where he'll be held for ransom.`
+	on fail
+		"reputation: Pirate" --
+		"reputation: Syndicate" <?= -1000
+	on complete
+		payment 10000000
+		"reputation: Pirate" += 100
+		"reputation: Syndicate" <?= -1000
+		conversation
+			scene "outfit/brig"
+			`The pirates are in awe of your accomplishment. The CEO is easily ransomed off for the requested amount. You claim your share of the ransom money, <payment>. Naturally, this stunt has made you an enemy of the Syndicate. Their security forces will be looking to collect bonus pay for your head.`
+
+mission "Executive Guard: Syndicated Shipyards"
+	job
+	passengers 1
+	name "Ransom: Syndicated Shipyards"
+	description "Kidnap the president of Syndicated Shipyards, who usually rides on the S.S. Magnus at <waypoints>. Then return to <destination> with him, where he will be held for ransom. Payment is <payment>."
+	waypoint "Achernar"
+	source
+		government "Pirate"
+	to offer
+		has "main plot completed"
+	on offer
+		require "Brig"
+	on accept
+		conversation
+			scene "ship/executive guard"
+			`This is no small job. The CEO of Syndicated Systems will be riding an Executive Guard, a powerful warship the Syndicate reserves for use only by corporate VIPs.`
+				accept
+	npc
+		to spawn
+			or
+				has "Executive Guard: Syndicated Systems: active"
+				has "Executive Guard: Syndicated Systems: done"
+				has "Executive Guard: Syndicated Systems: failed"
+		government "Syndicate"
+		system Achernar
+		personality waiting staying heroic
+		fleet
+			names "syndicate capital"
+			variant
+				"Vanguard (Proton Gun-CF8)"
+				"Vanguard"
+				"Protector (Proton)" 2
+		fleet
+			names "syndicate small"
+			variant
+				"Quicksilver (Proton)" 5
+	npc board
+		government "Syndicate"
+		system Achernar
+		personality waiting staying heroic
+		ship "Executive Guard" "S.S. Decimus"
+		ship "Barb (Proton)" "F-001" 
+		ship "Barb (Proton)" "F-002"
+		ship "Barb (Proton)" "F-003"
+		ship "Barb (Proton)" "F-004"
+		ship "Barb (Proton)" "F-005"
+		ship "Barb (Proton)" "F-006"	
+		dialog `You've captured the CEO of Syndicated Systems! Return to <destination> where he'll be held for ransom.`
+	on fail
+		"reputation: Pirate" --
+		"reputation: Syndicate" <?= -1000
+	on complete
+		payment 10000000
+		"reputation: Pirate" += 100
+		"reputation: Syndicate" <?= -1000
+		conversation
+			scene "outfit/brig"
+			`The pirates are in awe of your accomplishment. The CEO is easily ransomed off for the requested amount. You claim your share of the ransom money, <payment>. Naturally, this stunt has made you an enemy of the Syndicate. Their security forces will be looking to collect bonus pay for your head.`
+
+
+
+mission "Testing: Proton Gun-CF8"
 	name "Syndicate weapons test"
 	job
 	description "Disable the robotic target dummy ship in <system>, collect test data for Syndicate engineers by scanning its outfits, and land on <planet>. Warning: the target ship is programmed to engage in self-defense behaviors to ensure a realistic simulation. Payment is <payment>."
