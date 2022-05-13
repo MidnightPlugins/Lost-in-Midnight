@@ -791,7 +791,7 @@ mission "Coalition Dissension: Rogue Heliarch Arach (Neutralizer)"
 		random < 3
 	on offer
 		conversation
-			`While waiting for a Heliarch agent to finish inspecting your ship, the conversation of nearby Heliarch soldiers gets picked up by the agents's translation device.`
+			`While waiting for a Heliarch agent to finish inspecting your ship, the conversation of nearby Heliarch soldiers gets picked up by the agent's translation device.`
 			choice
 				`	(Listen in.)`
 				`	(Ignore them.)`
@@ -837,7 +837,7 @@ mission "Coalition Dissension: Rogue Heliarch Kimek (Neutralizer)"
 		random < 3
 	on offer
 		conversation
-			`While waiting for a Heliarch agent to finish inspecting your ship, the conversation of nearby Heliarch soldiers gets picked up by the agents's translation device.`
+			`While waiting for a Heliarch agent to finish inspecting your ship, the conversation of nearby Heliarch soldiers gets picked up by the agent's translation device.`
 			choice
 				`	(Listen in.)`
 				`	(Ignore them.)`
@@ -882,7 +882,7 @@ mission "Coalition Dissension: Rogue Heliarch Saryd (Neutralizer)"
 		random < 3
 	on offer
 		conversation
-			`While waiting for a Heliarch agent to finish inspecting your ship, the conversation of nearby Heliarch soldiers gets picked up by the agents's translation device.`
+			`While waiting for a Heliarch agent to finish inspecting your ship, the conversation of nearby Heliarch soldiers gets picked up by the agent's translation device.`
 			choice
 				`	(Listen in.)`
 				`	(Ignore them.)`
@@ -930,7 +930,7 @@ mission "Coalition Dissension: Rogue Heliarch Arach (Breacher)"
 		random < 3
 	on offer
 		conversation
-			`While waiting for a Heliarch agent to finish inspecting your ship, the conversation of nearby Heliarch soldiers gets picked up by the agents's translation device.`
+			`While waiting for a Heliarch agent to finish inspecting your ship, the conversation of nearby Heliarch soldiers gets picked up by the agent's translation device.`
 			choice
 				`	(Listen in.)`
 				`	(Ignore them.)`
@@ -975,7 +975,7 @@ mission "Coalition Dissension: Rogue Heliarch Kimek (Breacher)"
 		random < 3
 	on offer
 		conversation
-			`While waiting for a Heliarch agent to finish inspecting your ship, the conversation of nearby Heliarch soldiers gets picked up by the agents's translation device.`
+			`While waiting for a Heliarch agent to finish inspecting your ship, the conversation of nearby Heliarch soldiers gets picked up by the agent's translation device.`
 			choice
 				`	(Listen in.)`
 				`	(Ignore them.)`
@@ -1021,7 +1021,7 @@ mission "Coalition Dissension: Rogue Heliarch Saryd (Breacher)"
 		random < 3
 	on offer
 		conversation
-			`While waiting for a Heliarch agent to finish inspecting your ship, the conversation of nearby Heliarch soldiers gets picked up by the agents's translation device.`
+			`While waiting for a Heliarch agent to finish inspecting your ship, the conversation of nearby Heliarch soldiers gets picked up by the agent's translation device.`
 			choice
 				`	(Listen in.)`
 				`	(Ignore them.)`
@@ -1068,7 +1068,7 @@ mission "Coalition Dissension: Rogue Heliarch Arach (Interdictor)"
 		random < 2
 	on offer
 		conversation
-			`While waiting for a Heliarch agent to finish inspecting your ship, the conversation of nearby Heliarch soldiers gets picked up by the agents's translation device.`
+			`While waiting for a Heliarch agent to finish inspecting your ship, the conversation of nearby Heliarch soldiers gets picked up by the agent's translation device.`
 			choice
 				`	(Listen in.)`
 				`	(Ignore them.)`
@@ -1113,7 +1113,7 @@ mission "Coalition Dissension: Rogue Heliarch Kimek (Interdictor)"
 		random < 2
 	on offer
 		conversation
-			`While waiting for a Heliarch agent to finish inspecting your ship, the conversation of nearby Heliarch soldiers gets picked up by the agents's translation device.`
+			`While waiting for a Heliarch agent to finish inspecting your ship, the conversation of nearby Heliarch soldiers gets picked up by the agent's translation device.`
 			choice
 				`	(Listen in.)`
 				`	(Ignore them.)`
@@ -1158,7 +1158,7 @@ mission "Coalition Dissension: Rogue Heliarch Saryd (Interdictor)"
 		random < 2
 	on offer
 		conversation
-			`While waiting for a Heliarch agent to finish inspecting your ship, the conversation of nearby Heliarch soldiers gets picked up by the agents's translation device.`
+			`While waiting for a Heliarch agent to finish inspecting your ship, the conversation of nearby Heliarch soldiers gets picked up by the agent's translation device.`
 			choice
 				`	(Listen in.)`
 				`	(Ignore them.)`
@@ -1205,7 +1205,7 @@ mission "Coalition Dissension: Rogue Heliarch Arach (Hunter)"
 		random < 2
 	on offer
 		conversation
-			`While waiting for a Heliarch agent to finish inspecting your ship, the conversation of nearby Heliarch soldiers gets picked up by the agents's translation device.`
+			`While waiting for a Heliarch agent to finish inspecting your ship, the conversation of nearby Heliarch soldiers gets picked up by the agent's translation device.`
 			choice
 				`	(Listen in.)`
 				`	(Ignore them.)`
@@ -1250,7 +1250,7 @@ mission "Coalition Dissension: Rogue Heliarch Kimek (Hunter)"
 		random < 2
 	on offer
 		conversation
-			`While waiting for a Heliarch agent to finish inspecting your ship, the conversation of nearby Heliarch soldiers gets picked up by the agents's translation device.`
+			`While waiting for a Heliarch agent to finish inspecting your ship, the conversation of nearby Heliarch soldiers gets picked up by the agent's translation device.`
 			choice
 				`	(Listen in.)`
 				`	(Ignore them.)`
@@ -1295,7 +1295,7 @@ mission "Coalition Dissension: Rogue Heliarch Saryd (Hunter)"
 		random < 2
 	on offer
 		conversation
-			`While waiting for a Heliarch agent to finish inspecting your ship, the conversation of nearby Heliarch soldiers gets picked up by the agents's translation device.`
+			`While waiting for a Heliarch agent to finish inspecting your ship, the conversation of nearby Heliarch soldiers gets picked up by the agent's translation device.`
 			choice
 				`	(Listen in.)`
 				`	(Ignore them.)`
@@ -1342,7 +1342,7 @@ mission "Coalition Dissension: Rogue Heliarch Arach (Judicator)"
 		random < 2
 	on offer
 		conversation
-			`While waiting for a Heliarch agent to finish inspecting your ship, the conversation of nearby Heliarch soldiers gets picked up by the agents's translation device.`
+			`While waiting for a Heliarch agent to finish inspecting your ship, the conversation of nearby Heliarch soldiers gets picked up by the agent's translation device.`
 			choice
 				`	(Listen in.)`
 				`	(Ignore them.)`
@@ -1387,7 +1387,7 @@ mission "Coalition Dissension: Rogue Heliarch Kimek (Judicator)"
 		random < 2
 	on offer
 		conversation
-			`While waiting for a Heliarch agent to finish inspecting your ship, the conversation of nearby Heliarch soldiers gets picked up by the agents's translation device.`
+			`While waiting for a Heliarch agent to finish inspecting your ship, the conversation of nearby Heliarch soldiers gets picked up by the agent's translation device.`
 			choice
 				`	(Listen in.)`
 				`	(Ignore them.)`
@@ -1432,7 +1432,7 @@ mission "Coalition Dissension: Rogue Heliarch Saryd (Judicator)"
 		random < 2
 	on offer
 		conversation
-			`While waiting for a Heliarch agent to finish inspecting your ship, the conversation of nearby Heliarch soldiers gets picked up by the agents's translation device.`
+			`While waiting for a Heliarch agent to finish inspecting your ship, the conversation of nearby Heliarch soldiers gets picked up by the agent's translation device.`
 			choice
 				`	(Listen in.)`
 				`	(Ignore them.)`
@@ -1479,7 +1479,7 @@ mission "Coalition Dissension: Rogue Heliarch Arach (Punisher)"
 		random < 1
 	on offer
 		conversation
-			`While waiting for a Heliarch agent to finish inspecting your ship, the conversation of nearby Heliarch soldiers gets picked up by the agents's translation device.`
+			`While waiting for a Heliarch agent to finish inspecting your ship, the conversation of nearby Heliarch soldiers gets picked up by the agent's translation device.`
 			choice
 				`	(Listen in.)`
 				`	(Ignore them.)`
@@ -1524,7 +1524,7 @@ mission "Coalition Dissension: Rogue Heliarch Kimek (Punisher)"
 		random < 1
 	on offer
 		conversation
-			`While waiting for a Heliarch agent to finish inspecting your ship, the conversation of nearby Heliarch soldiers gets picked up by the agents's translation device.`
+			`While waiting for a Heliarch agent to finish inspecting your ship, the conversation of nearby Heliarch soldiers gets picked up by the agent's translation device.`
 			choice
 				`	(Listen in.)`
 				`	(Ignore them.)`
@@ -1569,7 +1569,7 @@ mission "Coalition Dissension: Rogue Heliarch Saryd (Punisher)"
 		random < 1
 	on offer
 		conversation
-			`While waiting for a Heliarch agent to finish inspecting your ship, the conversation of nearby Heliarch soldiers gets picked up by the agents's translation device.`
+			`While waiting for a Heliarch agent to finish inspecting your ship, the conversation of nearby Heliarch soldiers gets picked up by the agent's translation device.`
 			choice
 				`	(Listen in.)`
 				`	(Ignore them.)`
