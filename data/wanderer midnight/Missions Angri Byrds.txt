@@ -246,7 +246,7 @@ mission "Angri Byrds: Hai Millipede 1"
 	source
 		government "Wanderer"
 		not attributes "korath"
-	waypoints "Prakacha'a"
+	waypoint "Prakacha'a"
 	to offer
 		has "Wanderers: Alpha Surveillance J: done"
 	on accept
@@ -289,7 +289,7 @@ mission "Angri Byrds: Hai Millipede 2"
 	source
 		government "Wanderer"
 		not attributes "korath"
-	waypoints "Prakacha'a"
+	waypoint "Prakacha'a"
 	to offer
 		has "Angri Byrds: Hai Millipede 1: done"
 	on accept
