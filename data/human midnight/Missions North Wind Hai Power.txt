@@ -903,7 +903,7 @@ mission "Turner Inc.: Hai Power 9"
 		system "Imo Dep"
 		personality target waiting staying harvests plunders unconstrained
 		fleet
-			names "Hai"
+			names "hai"
 			cargo 1
 			outfitters "Heavy Fusion Core"
 			variant

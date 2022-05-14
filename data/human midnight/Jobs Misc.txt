@@ -92,7 +92,7 @@ mission "Executive Guard: Syndicated Systems"
 		require "Brig"
 	on accept
 		conversation
-			scene "ship/executive guard"
+			scene "ship/executive guard/executive guard"
 			`This is no small job. The CEO of Syndicated Systems will be riding an Executive Guard, a powerful warship the Syndicate reserves for use only by corporate VIPs.`
 				accept
 	npc
@@ -151,7 +151,7 @@ mission "Executive Guard: Syndicated Shipyards"
 		require "Brig"
 	on accept
 		conversation
-			scene "ship/executive guard"
+			scene "ship/executive guard/executive guard"
 			`This is no small job. The CEO of Syndicated Systems will be riding an Executive Guard, a powerful warship the Syndicate reserves for use only by corporate VIPs.`
 				accept
 	npc
