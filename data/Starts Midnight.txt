@@ -83,11 +83,11 @@ start "Blood Rage"
 conversation "blood rage intro"
 	scene "scene/lobby"
 	`The law office's architecture is what you would have called "futuristic" back when you dreamed that the future would be less squalid than the present: story above story of curves and spires and balconies, all in gleaming metal. A doorman stands by each of the heavy glass doors. You are wearing your very best clothes, but you feel shabby next to them.`
-	`	The pen is heavy as lead but glides almost without friction as you print your initials on the bottom of page after page of ominous legal documents and sign several dozen statements, notices, and agreements. The estate processor, a balding middle-aged man in a suit that you suspect costs more than the spaceship you are about to inherit, flips the pages past you quickly, uttering a curt, "Sign here. Now here," as he points to each page. He moves swiftly, mechanically.`
+	`	The reason you're here is to sign the paperwork that legally transfer ownership of the inheritance your uncle left behind to you. The pen is heavy as lead but glides almost without friction as you print your initials on the bottom of page after page of ominous legal documents and sign several dozen statements, notices, and agreements. The estate processor, a balding middle-aged man in a suit that you suspect costs more than the spaceship you are about to inherit, flips the pages past you quickly, uttering a curt, "Sign here. Now here," as he points to each page. He moves swiftly, mechanically.`
 	`	The only moment when he becomes truly animated is when you reach the final page. Sign here." He grins.`
 	`	You sign your name one final time:`
 	name
-	scene "ship/berserker"
+	scene "ship/blood rage"
 	`	"Congratulations! You are now the owner of the 'Blood Rage', an antique Berserker, with all the associated assets and liabilities tied to it." You notice the desk monitor displaying a long list of numbers in red...`
 	choice
 		`	"Why are all the numbers red?"`
@@ -99,7 +99,7 @@ conversation "blood rage intro"
 	choice
 		`	(Inspect the ship.)`
 	scene "outfit/energy cannon"
-	`	You smell grease and dirt and rocket fuel; wonderful smells. You note the guns mounted on the ship are two different sizes. The larger one is an Energy Cannon, a brutal relic from a war that occured long ago. Hopefully you won't have to actually kill someone with this...`
+	`	You smell grease and dirt and rocket fuel; wonderful smells. As you understand it, your uncle bought this Berserker used. The previous owner  salvaged it from a war zone. Its weapons layout is different from the standard Berserker. The weapons pods on the wingtips have been converted into cargo pods while a gun has been installed in the ship's foreward section. You note the guns mounted on the ship are two different sizes. The larger one is an Energy Cannon, a brutal relic from a war that occured long ago. Hopefully you won't have to actually kill someone with this...`
 
 
 
