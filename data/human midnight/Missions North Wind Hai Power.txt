@@ -457,7 +457,7 @@ mission "Turner Inc.: Hai Power 1"
 	on offer
 		conversation
 			scene "outfit/dwarf core hai"
-			`Turner finds your ship. "Yuki told me that you passed by the office on Martini. As you might have heard, I've been investing in a little R&D project that's just about ready to pay off. I need you to pick up a prototype from <destination> and deliver it to Deep Sky on Asgard in the Naos system. It's an improvement on the Dwarf Core that Deep Sky produces. While we might see some gains from adding the North Wind Cooling system to our outfitter, the joint venture with Deep Sky will push Turner Inc.'s profits to the next level." He gives you an address for a factory where the prototype was produced.`
+			`Turner finds your ship. "Yuki told me that you passed by the office on Martini. As you might have heard, I've been investing in a little R&D project that's just about ready to pay off. I need you to pick up a prototype from <destination> and deliver it to Deep Sky on Asgard in the Naos system. It's an improvement on the Dwarf Core that Deep Sky produces. While we might see some gains from dealing with North Wind directly, the joint venture with Deep Sky will push Turner Inc.'s profits to the next level." He gives you an address for a factory where the prototype was produced.`
 				accept
 	npc accompany save
 		government Merchant
@@ -986,3 +986,235 @@ mission "Turner Inc.: Hai Power Heavy Fusion Core Stocked"
 	on offer
 		"salary: Turner Incorporated" = 10000
 		fail
+
+
+
+outfitter "Turner Hai Power"
+	"Gnome Core"
+	"Fission S2 Reactor"
+	"Heavy Fusion Core"
+
+mission "Turner Inc.: Hai Power Epilogue"
+	landing
+	invisible
+	source 
+		government "Hai" "Republic"
+	to offer
+		has "event: Heavy Fusion Core Delivered"
+	on offer
+		event "turner hai power expansion"
+		conversation
+			scene "scene/scene-hai power"
+			`You receive a message from David Turner: "Hello Captain <last>. Are you enjoying the increased profits from the Lovelace Labs collaboration? I just wanted you to know that the final part of my plan kicked in. You should visit the outfitter on your next stop at Greenwater. Our inventory selection has been greatly expanded!"`
+				decline
+
+event "turner hai power expansion"
+	planet "Greenwater"
+		add outfitter "Turner Hai Power"
+		add outfitter "Deep Sky Advanced"
+		add outfitter "Lovelace Advanced"
+	fleet "Small Deep Merchants"
+		variant 1
+			"Headhunter (Turner Power)"
+		variant 1
+			"Scout (Turner Power)"
+	fleet "Large Deep Merchants"
+		variant 1
+			"Headhunter (Turner Power)" 2
+		variant 1
+			"Star Queen"
+			"Headhunter (Turner Power)" 2
+		variant 1
+			"Aerie"
+			"Dagger" 2
+			"Raven (Turner Power)" 2
+		variant 1
+			"Bactrian"
+			"Dagger" 3
+			"Raven (Turner Power)" 2
+			"Aerie"
+			"Dagger" 2
+		variant 1
+			"Star Queen"
+			"Raven (Turner Power)" 2
+	fleet "Small Deep Security"
+		variant 1
+			"Headhunter (Turner Power)"
+		variant 1
+			"Raven (Turner Power)"
+	fleet "Large Deep Security"
+		variant 1
+			"Aerie"
+			"Dagger" 2
+			"Raven (Turner Power)" 2
+		variant 1
+			"Raven (Turner Power)" 2
+		variant 1
+			"Headhunter (Turner Power)" 2
+		variant 1
+			"Corvette"
+			"Raven (Turner Power)"
+	fleet "Small Core Merchants"
+		variant 1
+			"Mule (Turner Power)"
+			"Dagger"
+		variant 1
+			"Freighter (Turner Power)"
+		variant 1
+			"Freighter (Turner Power)"
+			"Wasp"
+		variant 1
+			"Freighter (Turner Power)"
+			"Star Barge (Armed)" 2
+		variant 1
+			"Freighter (Turner Power)"
+			"Shuttle" 2
+			"Quicksilver"
+		variant 1
+			"Freighter (Turner Power)"
+			"Wasp" 2
+	fleet "Large Core Merchants"
+		variant 1
+			"Freighter (Turner Power)" 2
+			"Quicksilver" 2
+		variant 1
+			"Freighter (Turner Power)" 4
+			"Quicksilver" 2
+			"Splinter (Proton)" 1
+		variant 1
+			"Freighter (Turner Power)" 4
+			"Protector (Proton)" 1			
+		variant 1
+			"Container Transport (Turner Power)"
+		variant 1
+			"Container Transport (Turner Power)"
+			"Wasp (Proton)" 2
+		variant 1
+			"Container Transport (Turner Power)"
+			"Wasp (Proton)"
+			"Wasp (Meteor)"
+		variant 1
+			"Container Transport (Turner Power)" 2
+			"Quicksilver" 1
+			"Splinter (Proton)" 1
+		variant 1
+			"Container Transport (Turner Power)" 2
+			"Protector (Proton)" 1
+		variant 1
+			"Container Transport (Turner Power)" 2
+			"Wasp (Proton)" 3
+			"Wasp (Meteor)" 2
+		variant 1
+			"Container Transport (Turner Power)" 2
+			"Vanguard" 1
+		variant 1
+			"Bulk Freighter (Turner Power)"
+		variant 1
+			"Bulk Freighter (Turner Power)"
+			"Wasp (Proton)" 2
+		variant 1
+			"Bulk Freighter (Turner Power)"
+			"Wasp (Proton)"
+			"Wasp (Meteor)"
+		variant 1
+			"Bulk Freighter (Turner Power)"
+			"Quicksilver" 1
+			"Splinter (Proton)" 1
+		variant 1
+			"Bulk Freighter (Turner Power)" 2
+			"Protector (Proton)" 1
+		variant 1
+			"Bulk Freighter (Turner Power)" 2
+			"Wasp (Proton)" 3
+			"Wasp (Meteor)" 2
+		variant 1
+			"Bulk Freighter (Turner Power)" 2
+			"Vanguard" 1
+	fleet "Small Human Merchants (Hai)"
+		variant 1
+			"Freighter (Turner Power)"
+		variant 1
+			"Freighter (Turner Power)"
+			"Shuttle" 4
+		variant 1
+			"Freighter (Turner Power)"
+			"Berserker"
+		variant 1
+			"Freighter (Turner Power)"
+			"Berserker (Afterburner)"
+		variant 1
+			"Freighter (Turner Power)" 3
+			"Sparrow" 1
+	fleet "Large Human Merchants (Hai)"
+		variant 2
+			"Freighter (Turner Power)" 2
+			"Firebird (Hai Shields)"
+		variant 1
+			"Freighter (Turner Power)" 2
+			"Berserker" 2
+		variant 1
+			"Freighter (Turner Power)" 2
+			"Berserker (Afterburner)" 2
+		variant 2
+			"Freighter (Turner Power)" 2
+			"Firebird (Hai Weapons)"
+		variant 2
+			"Freighter (Turner Power)" 3
+			"Firebird (Hai Weapons)"
+		variant 1
+			"Freighter (Turner Power)" 3
+		variant 1
+			"Freighter (Turner Power)" 2
+		variant 2
+			"Freighter (Turner Power)" 2
+			"Corvette (Hai)"
+		variant 2
+			"Freighter (Turner Power)" 2
+			"Leviathan (Hai Weapons)"
+		variant 2
+			"Freighter (Turner Power)" 2
+			"Leviathan (Hai Engines)"
+		variant 1
+			"Behemoth (Turner Power)"
+		variant 1
+			"Behemoth (Turner Power)" 2
+		variant 2
+			"Behemoth (Turner Power)"
+			"Headhunter (Hai)" 2
+		variant 2
+			"Bulk Freighter (Turner Power)"
+			"Headhunter (Hai)" 2
+		variant 2
+			"Behemoth (Turner Power)" 2
+			"Firebird (Hai Weapons)"
+		variant 2
+			"Freighter (Turner Power)" 4
+			"Sparrow" 2
+			"Firebird (Hai Weapons)"
+		variant 2
+			"Hauler III (Turner Power)"
+			"Hauler II (Hai)"
+		variant 2
+			"Hauler II (Turner Power)"
+			"Hauler (Hai)" 3
+		variant 1
+			"Hauler III (Turner Power)" 2
+		variant 2
+			"Hauler III (Hai)"
+			"Hauler II (Turner Power)"
+			"Headhunter (Hai)" 3
+		variant 1
+			"Hauler II (Turner Power)" 2
+			"Water Bug"
+		variant 2
+			"Container Transport (Turner Power)"
+			"Headhunter (Hai)" 2
+		variant 1
+			"Container Transport (Turner Power)"
+			"Sparrow" 2
+		variant 1
+			"Container Transport (Turner Power)"
+			"Berserker" 2
+		variant 1
+			"Container Transport (Turner Power)"
+			"Berserker (Afterburner)"

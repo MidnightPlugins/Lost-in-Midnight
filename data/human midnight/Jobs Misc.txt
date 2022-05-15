@@ -13,10 +13,10 @@
 
 mission "Bounty Hunting: Angry Chicken"
 	job
-	name "Wanted Pirate near <system>"
+	name "Wanted Bandit near <system>"
 	description "An old Firebird named the <npc> has been attacking merchants near <system>. Eliminate the ship, then report to <destination>. Payment is <payment>."
 	source
-		attributes "dirt belt"
+		attributes "dirt belt" "south" "rim" "frontier"
 	to offer
 		random < 50
 	npc kill
@@ -32,6 +32,78 @@ mission "Bounty Hunting: Angry Chicken"
 	on complete
 		payment 100000
 		event "add energy cannon variants"
+		dialog phrase "generic bounty hunting payment dialog"
+
+mission "Bounty Hunting: Tweedledee & Tweedledum"
+	job
+	name "Wanted Bandit near <system>"
+	description "A pair of old Berserkers named the Tweedledee & Tweedledum have been attacking merchants near <system>. Eliminate these ships, then report to <destination>. Payment is <payment>."
+	source
+		attributes "dirt belt" "south" "rim" "frontier"
+	to offer
+		has "Bounty Hunting: Angry Chicken: done"
+		random < 50
+	npc kill
+		government "Bounty"
+		system
+			distance 1 2
+		personality target waiting staying plunders harvests
+			confusion 20
+		ship "Berserker (Energy Cannons)" "Tweedledee"
+		ship "Berserker (Energy Cannons)" "Tweedledum"
+		dialog `Tweedledee & Tweedledum have been eliminated. You can claim the bounty payment by returning to <destination>.`
+	on visit
+		dialog `You've landed on <planet>, but Tweedledee & Tweedledum have not been eliminated yet. Hunt them down and destroy them before returning.`
+	on complete
+		payment 125000
+		dialog `The government of <planet> gratefully pays you <payment> for eliminating Tweedledee & Tweedledum.`
+
+mission "Bounty Hunting: Mother Goose"
+	job
+	name "Wanted Bandit near <system>"
+	description "An old Aerie named the Mother Goose and its fighters have been attacking merchants near <system>. Eliminate the fleet, then report to <destination>. Payment is <payment>."
+	source
+		attributes "dirt belt" "south" "rim" "frontier"
+	to offer
+		has "Bounty Hunting: Tweedledee & Tweedledum: done"
+		random < 50
+	npc kill
+		government "Bounty"
+		system
+			distance 1 2
+		personality target waiting staying plunders harvests
+			confusion 20
+		ship "Aerie (Energy Cannons)" "Mother Goose"
+		ship "Dagger" "Jack"
+		ship "Dagger" "Jill"
+		dialog `The Mother Goose and their fleet have been eliminated. You can claim the bounty payment by returning to <destination>.`
+	on visit
+		dialog `You've landed on <planet>, but the Mother Goose has not been eliminated yet. Hunt it down and destroy it before returning.`
+	on complete
+		payment 150000
+		dialog `The government of <planet> gratefully pays you <payment> for eliminating the Mother Goose and their fleet.`
+
+mission "Bounty Hunting: Humpty Dumpty"
+	job
+	name "Wanted Bandit near <system>"
+	description "An old Hauler named the <npc> has been attacking merchants near <system>. Eliminate the ship, then report to <destination>. Payment is <payment>."
+	source
+		attributes "dirt belt" "south" "rim" "frontier"
+	to offer
+		has "Bounty Hunting: Mother Goose: done"
+		random < 50
+	npc kill
+		government "Bounty"
+		system
+			distance 1 2
+		personality target waiting staying plunders harvests
+			confusion 20
+		ship "Hauler (Energy Cannons)" "Humpty Dumpty"
+		dialog phrase "generic hunted bounty eliminated dialog"
+	on visit
+		dialog phrase "generic bounty hunting on visit"
+	on complete
+		payment 175000
 		dialog phrase "generic bounty hunting payment dialog"
 
 

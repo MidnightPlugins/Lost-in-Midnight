@@ -1215,3 +1215,201 @@ ship "Derelict Scout"
 	explode "small explosion" 20
 
 
+############
+# Hai Power
+############
+
+ship "Scout" "Scout (Turner Power)"
+	outfits
+		"Energy Blaster" 2
+		"Anti-Missile Turret"
+		
+		"Gnome Core"
+		"LP036a Battery Pack"
+		"D14-RN Shield Generator"
+		"North Wind Cooling"
+		"Small Radar Jammer"
+		"Ramscoop"
+		
+		"X3700 Ion Thruster"
+		"X3200 Ion Steering"
+		"Hyperdrive"
+
+
+
+ship "Headhunter" "Headhunter (Turner Power)"
+	outfits
+		"Heavy Laser" 2
+		"Heavy Anti-Missile Turret"
+		
+		"Gnome Core"
+		"KP-6 Photovoltaic Array"
+		"LP072a Battery Pack"
+		"D23-QP Shield Generator"
+		
+		"Greyhound Plasma Thruster"
+		"Greyhound Plasma Steering"
+		"Hyperdrive"
+
+
+
+ship "Raven" "Raven (Turner Power)"
+	outfits
+		"Heavy Laser" 2
+		"Torpedo Launcher" 2
+		"Torpedo" 60
+		
+		"Gnome Core"
+		"KP-6 Photovoltaic Panel" 2
+		"LP072a Battery Pack"
+		"D41-HY Shield Generator"
+		"Laser Rifle" 2
+		
+		"X3700 Ion Thruster"
+		"X3200 Ion Steering"
+		"Hyperdrive"
+
+
+
+ship "Mule" "Mule (Turner Power)"
+	outfits
+		"Sidewinder Missile Launcher" 2
+		"Sidewinder Missile" 136
+		"Sidewinder Missile Rack" 2
+		"Heavy Laser Turret" 2
+		"Heavy Anti-Missile Turret" 2
+		
+		"Fission S2 Reactor"
+		"LP072a Battery Pack"
+		"D41-HY Shield Generator"
+		"North Wind Cooling"
+		"Small Radar Jammer" 2
+		"Ramscoop"
+		"Laser Rifle"
+		
+		"X3700 Ion Thruster"
+		"X3200 Ion Steering"
+		"Hyperdrive"
+
+
+
+ship "Freighter" "Freighter (Turner Power)"
+	outfits
+		"Blaster Turret" 2
+		"Heavy Anti-Missile Turret"
+		
+		"Fission S2 Reactor"
+		"LP036a Battery Pack"
+		"D14-RN Shield Generator"
+		"North Wind Cooling" 2
+		
+		"X2700 Ion Thruster"
+		"X2200 Ion Steering"
+		"Scram Drive"
+		
+
+
+ship "Bulk Freighter" "Bulk Freighter (Turner Power)"
+	outfits
+		"Sidewinder Missile Launcher" 2
+		"Sidewinder Missile" 90
+		"Laser Turret" 3
+		"Heavy Anti-Missile Turret" 2
+		
+		"Fission S2 Reactor"
+		"LP144a Battery Pack"
+		"D23-QP Shield Generator"
+		"Laser Rifle"
+		
+		"X3700 Ion Thruster"
+		"X3200 Ion Steering"
+		"Scram Drive"
+
+ship "Container Transport" "Container Transport (Turner Power)"
+	outfits
+		"Sidewinder Missile Launcher" 2
+		"Sidewinder Missile" 90
+		"Laser Turret" 3
+		"Heavy Anti-Missile Turret" 2
+		
+		"Fission S2 Reactor"
+		"LP144a Battery Pack"
+		"D23-QP Shield Generator"
+		"Laser Rifle"
+		
+		"X3700 Ion Thruster"
+		"X3200 Ion Steering"
+		"Scram Drive"
+
+
+
+ship "Behemoth" "Behemoth (Turner Power)"
+	outfits
+		"Heavy Laser Turret" 4
+		"Heavy Anti-Missile Turret" 2
+		
+		"Fission S2 Reactor"
+		"LP144a Battery Pack"
+		"D41-HY Shield Generator"
+		"North Wind Cooling" 2
+		"Small Radar Jammer"
+		"Laser Rifle" 3
+		
+		"X3700 Ion Thruster"
+		"X3200 Ion Steering"
+		"Scram Drive"
+
+
+
+ship "Hauler" "Hauler (Turner Power)"
+	outfits
+		"Meteor Missile Launcher" 2
+		"Meteor Missile" 60
+		"Quad Blaster Turret" 2
+		"Heavy Anti-Missile Turret" 2
+		
+		"Gnome Core"
+		"LP072a Battery Pack"
+		"D23-QP Shield Generator"
+		"North Wind Cooling" 2
+		"Small Radar Jammer"
+		
+		"Greyhound Plasma Thruster"
+		"Impala Plasma Steering"
+		"Hyperdrive"
+
+ship "Hauler II" "Hauler II (Turner Power)"
+	outfits
+		"Meteor Missile Launcher" 2
+		"Meteor Missile" 60
+		"Quad Blaster Turret" 2
+		"Heavy Anti-Missile Turret" 2
+		
+		"Gnome Core"
+		"LP072a Battery Pack"
+		"D23-QP Shield Generator"
+		"North Wind Cooling" 2
+		"Small Radar Jammer"
+		"Laser Rifle"
+		
+		"Greyhound Plasma Thruster"
+		"Impala Plasma Steering"
+		"Hyperdrive"
+		
+ship "Hauler III" "Hauler III (Turner Power)"
+	outfits
+		"Meteor Missile Launcher" 2
+		"Meteor Missile" 60
+		"Quad Blaster Turret" 2
+		"Heavy Anti-Missile Turret" 2
+		
+		"Gnome Core"
+		"LP072a Battery Pack"
+		"D23-QP Shield Generator"
+		"North Wind Cooling" 2
+		"Small Radar Jammer"
+		"Laser Rifle"
+		
+		"Greyhound Plasma Thruster"
+		"Impala Plasma Steering"
+		"Hyperdrive"
