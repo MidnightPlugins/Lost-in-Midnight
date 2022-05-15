@@ -26,6 +26,7 @@ start "Blood Rage"
 			principal 900000
 			interest 0.004
 			term 365
+	set "Blood Rage start"
 	set "license: Pilot's"
 	set "Intro [0]: offered"
 	set "Intro [0]: declined"
