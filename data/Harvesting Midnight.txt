@@ -12,7 +12,7 @@
 
 
 minable "quantumium"
-	sprite "asteroid/lead/spin"
+	sprite "asteroid/quantumium/spin"
 	hull 400
 	payload "Quantumium" 5
 	explode "smoke" 40
@@ -31,7 +31,7 @@ outfit "Quantumium"
 	description "The raw ore used to make Quantum Keystones. Since it has not been processed, it occupies more space than a Quantum Keystone does."
 
 minable "fossil"
-	sprite "asteroid/iron/spin"
+	sprite "asteroid/fossil/spin"
 	hull 400
 	payload "Fossil" 5
 	explode "smoke" 40
