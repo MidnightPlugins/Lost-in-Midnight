@@ -175,6 +175,28 @@ mission "Executive Guard: Syndicated Systems"
 				has "Executive Guard: Syndicated Shipyards: failed"
 		government "Syndicate"
 		system Achernar
+		personality entering nemesis heroic vindictive
+		fleet "Hired Guns"
+		fleet "Bounty Hunter" 2
+	npc
+		to spawn
+			or
+				has "Executive Guard: Syndicated Shipyards: active"
+				has "Executive Guard: Syndicated Shipyards: done"
+				has "Executive Guard: Syndicated Shipyards: failed"
+		government "Syndicate"
+		system Markab
+		personality entering nemesis heroic vindictive
+		fleet "Hired Guns"
+		fleet "Bounty Hunter" 2
+	npc
+		to spawn
+			or
+				has "Executive Guard: Syndicated Shipyards: active"
+				has "Executive Guard: Syndicated Shipyards: done"
+				has "Executive Guard: Syndicated Shipyards: failed"
+		government "Syndicate"
+		system Markab
 		personality waiting staying heroic
 		fleet
 			names "syndicate capital"
@@ -185,7 +207,10 @@ mission "Executive Guard: Syndicated Systems"
 		fleet
 			names "syndicate small"
 			variant
+				"Splinter (Proton)" 2
+				"Manta (Proton)" 4
 				"Quicksilver (Proton)" 5
+				"Wasp (Proton)" 5
 	npc board
 		government "Syndicate"
 		system Markab
@@ -207,13 +232,14 @@ mission "Executive Guard: Syndicated Systems"
 		"reputation: Syndicate" <?= -1000
 		conversation
 			scene "outfit/brig"
-			`The pirates are in awe of your accomplishment. The CEO is easily ransomed off for the requested amount. You claim your share of the ransom money, <payment>. Naturally, this stunt has made you an enemy of the Syndicate. Their security forces will be looking to collect bonus pay for your head.`
+			`You present the CEO to the pirates. They are in awe of your accomplishment. A few warlords confide to you that this job was only intended as a joke and they never actually expected anyone to pull it off.`
+			`	Despite this, the pirates are able to negotiate with the Syndicate. The CEO is easily ransomed off for the requested amount. You claim your share of the ransom money, <payment>. Naturally, this stunt has made you an enemy of the Syndicate. Their security forces will be looking to collect bonus pay for your head.`
 
 mission "Executive Guard: Syndicated Shipyards"
 	job
 	passengers 1
 	name "Ransom: Syndicated Shipyards"
-	description "Kidnap the president of Syndicated Shipyards, who usually rides on the S.S. Magnus at <waypoints>. Then return to <destination> with him, where he will be held for ransom. Payment is <payment>."
+	description "Kidnap the president of Syndicated Shipyards, who usually rides on the S.S. Decimus at <waypoints>. Then return to <destination> with him, where he will be held for ransom. Payment is <payment>."
 	waypoint "Achernar"
 	source
 		government "Pirate"
@@ -233,6 +259,28 @@ mission "Executive Guard: Syndicated Shipyards"
 				has "Executive Guard: Syndicated Systems: done"
 				has "Executive Guard: Syndicated Systems: failed"
 		government "Syndicate"
+		system Markab
+		personality entering nemesis heroic vindictive
+		fleet "Hired Guns"
+		fleet "Bounty Hunter" 2
+	npc
+		to spawn
+			or
+				has "Executive Guard: Syndicated Systems: active"
+				has "Executive Guard: Syndicated Systems: done"
+				has "Executive Guard: Syndicated Systems: failed"
+		government "Syndicate"
+		system Achernar
+		personality entering nemesis heroic vindictive
+		fleet "Hired Guns"
+		fleet "Bounty Hunter" 2
+	npc
+		to spawn
+			or
+				has "Executive Guard: Syndicated Systems: active"
+				has "Executive Guard: Syndicated Systems: done"
+				has "Executive Guard: Syndicated Systems: failed"
+		government "Syndicate"
 		system Achernar
 		personality waiting staying heroic
 		fleet
@@ -244,7 +292,10 @@ mission "Executive Guard: Syndicated Shipyards"
 		fleet
 			names "syndicate small"
 			variant
+				"Splinter (Proton)" 2
+				"Manta (Proton)" 4
 				"Quicksilver (Proton)" 5
+				"Wasp (Proton)" 5
 	npc board
 		government "Syndicate"
 		system Achernar
@@ -266,7 +317,8 @@ mission "Executive Guard: Syndicated Shipyards"
 		"reputation: Syndicate" <?= -1000
 		conversation
 			scene "outfit/brig"
-			`The pirates are in awe of your accomplishment. The CEO is easily ransomed off for the requested amount. You claim your share of the ransom money, <payment>. Naturally, this stunt has made you an enemy of the Syndicate. Their security forces will be looking to collect bonus pay for your head.`
+			`You present the CEO to the pirates. They are in awe of your accomplishment. A few warlords confide to you that this job was only intended as a joke and they never actually expected anyone to pull it off.`
+			`	Despite this, the pirates are able to negotiate with the Syndicate. The CEO is easily ransomed off for the requested amount. You claim your share of the ransom money, <payment>. Naturally, this stunt has made you an enemy of the Syndicate. Their security forces will be looking to collect bonus pay for your head.`
 
 
 

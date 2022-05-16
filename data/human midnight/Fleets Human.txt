@@ -217,7 +217,7 @@ fleet "Science Drone"
 	personality surveillance
 	variant
 		"Phantom Drone Launcher"
-		"Science Drone"
+		"Hacker Drone"
 
 
 fleet "Protection Heavy"

@@ -289,7 +289,7 @@ ship "Carabao" "Carabao (Quash)"
 
 
 
-# Executive Guard appears in 
+# Executive Guard appears in some miscellaneous jobs/missions
 ship "Executive Guard"
 	sprite "ship/executive guard/executive guard"
 		"frame rate" 7
@@ -363,6 +363,78 @@ ship "Executive Guard"
 	bay "Fighter" -39 104 under left
 	bay "Fighter" 39 104 under right
 	description "Featuring luxury accommodations and cutting edge Syndicate technology, the Executive Guard is reserved for the exclusive use of Syndicate VIPs."
+
+
+
+# Hipparion
+
+ship "Hipparion"
+	sprite "ship/hipparion"
+		"delay" 4
+		"frame rate" 6
+	attributes
+		category "Medium Warship"
+		"cost" 6120000
+		"shields" 8100
+		"hull" 6600
+		"required crew" 28
+		"bunks" 85
+		"mass" 510
+		"drag" 6.7
+		"heat dissipation" .5
+		"fuel capacity" 600
+		"cargo space" 255
+		"outfit space" 610
+		"weapon capacity" 225
+		"engine capacity" 115
+		"atmosphere scan" 100
+		weapon
+			"blast radius" 140
+			"shield damage" 1400
+			"hull damage" 700
+			"hit force" 2200
+	outfits
+		"Meteor Missile Launcher" 3
+		"Meteor Missile" 135
+		"Meteor Missile Box" 3
+		"Blaster Turret" 3
+		"Anti-Missile Turret" 2
+		
+		"RT-I Radiothermal"
+		"KP-6 Photovoltaic Array" 2
+		"LP072a Battery Pack"
+		"D41-HY Shield Generator"
+		"Small Radar Jammer" 3
+		"Asteroid Scanner"
+		"Cargo Scanner"
+		"Outfit Scanner"
+		"Ramscoop"
+		"Laser Rifle"
+		
+		"X3700 Ion Thruster"
+		"X3200 Ion Steering"
+		"Hyperdrive"
+		
+	engine -12 123
+	engine 12 123
+	gun -9 -119 "Meteor Missile Launcher"
+	gun 0 -121 "Meteor Missile Launcher"
+	gun 9 -119 "Meteor Missile Launcher"
+	turret 22 -65 "Anti-Missile Turret"
+	turret -37 -21 "Blaster Turret"
+	turret -43 35 "Blaster Turret"
+	turret 39 35 "Blaster Turret"
+	turret -9 59 "Anti-Missile Turret"
+	bay "Fighter" -16 -9
+	bay "Fighter" -16 -9
+	leak "leak" 60 60
+	leak "flame" 90 90
+	leak "big leak" 90 40
+	explode "tiny explosion" 20
+	explode "small explosion" 40
+	explode "medium explosion" 30
+	"final explode" "final explosion medium"
+	description "The Hipparion was an exploration vessel used in the early days of hyperspace travel. City ships often followed the paths mapped out by explorers who preceded them in ships such as the Hipparion. It has been suggested that the Mule was created as a more economically viable successor to this antiquated design."
 
 
 
@@ -759,7 +831,7 @@ ship "Parade Float"
 
 # Science Drones appear in or trigger Hackerz missions
 
-ship "Science Drone"
+ship "Science Drone" "Hacker Drone"
 	sprite "ship/science drone"
 	attributes
 		category "Drone"
