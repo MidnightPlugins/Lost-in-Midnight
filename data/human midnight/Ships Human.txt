@@ -370,7 +370,7 @@ ship "Executive Guard"
 
 ship "Hipparion"
 	sprite "ship/hipparion"
-		"delay" 4
+		"delay" 2
 	attributes
 		category "Medium Warship"
 		"cost" 6120000
@@ -414,7 +414,8 @@ ship "Hipparion"
 		"X3200 Ion Steering"
 		
 	engine -12 123
-	engine 12 123
+	engine 3 123
+	engine 18 123
 	gun -9 -119 "Meteor Missile Launcher"
 	gun 0 -121 "Meteor Missile Launcher"
 	gun 9 -119 "Meteor Missile Launcher"
@@ -975,6 +976,7 @@ ship "Shield Fortress"
 
 ship "Strategos"
 	sprite "ship/strategos/strategos"
+		"delay" 2
 	thumbnail "thumbnail/strategos-thumb"
 	attributes
 		category "Heavy Warship"
@@ -1252,6 +1254,7 @@ ship "War Hauler"
 
 ship "Metropolis"
 	sprite "ship/metropolis"
+		"delay" 2
 	thumbnail "thumbnail/metropolis-thumb"
 	attributes
 		category "Heavy Warship"
