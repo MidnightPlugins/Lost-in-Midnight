@@ -371,7 +371,6 @@ ship "Executive Guard"
 ship "Hipparion"
 	sprite "ship/hipparion"
 		"delay" 4
-		"frame rate" 6
 	attributes
 		category "Medium Warship"
 		"cost" 6120000
@@ -413,7 +412,6 @@ ship "Hipparion"
 		
 		"X3700 Ion Thruster"
 		"X3200 Ion Steering"
-		"Hyperdrive"
 		
 	engine -12 123
 	engine 12 123

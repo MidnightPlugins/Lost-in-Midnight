@@ -11,6 +11,86 @@
 
 
 
+mission "Blue Ridge 1"
+	name "Auction: Blue Ridge"
+	description "The Blue Ridge is up for auction on <destination>. They are only accepting bids from pilots with a valid Militia License. You'll need several million credits to even consider placing a bid."
+	source
+		government "Free Worlds"
+		not planet "Longjump"
+	destination Longjump
+	to offer
+		month == 8
+	on offer
+		conversation
+			scene "ship/hipparion"
+			`You notice a crowd gathered around a bulletin board. Checking to see what has their interest, it's a posted flyer: "In order to raise funds, the Museum of Space Exploration on <destination> will be auctioning off the Blue Ridge, the ship Han Sizer used to explore the Southern Rim. Participation in this auction is limited to pilots with a valid Militia license.`
+			`	"Smart move," comments a freighter captain. "They can raise funds for the government while ensuring that the ship remains in the hands of someone loyal to the Free Worlds."`
+			`	A militia pilot adds, "They also made the announcement during Han Sizer month to maximize interest. Bidding will definitely reach several million credits."`
+			choice
+				`	(Remember this for later.)`
+				`	(Forget about it.)`
+					decline
+			scene "outfit/militia license"
+			branch "militia license"
+				has "license: Militia"
+			`	You'll need a Militia license. If you ever manage to get one, stop by <destination>.`
+				accept
+			label "militia license"
+			`	You have a Militia license. To place a bid, stop by <destination>.`
+				accept
+	to fail
+		has "main plot completed"
+		not "license: Militia"
+	to complete
+		has "license: Militia"
+		"credits" >= 6000000
+	on visit
+		dialog `You'll need a Militia license to bid on the Blue Ridge. The current bid is at 5,900,000 credits.`
+
+
+mission "Blue Ridge 2"
+	landing
+	invisible
+	source Longjump
+	to offer
+		has "license: Militia"
+		has "Blue Ridge 1: offered"
+		not "Blue Ridge 1: declined"
+		"credits" >= 6000000
+	on offer
+		conversation
+			scene "outfit/militia license"
+			`You visit the Museum of Space Exploration to place a bid on the Blue Ridge, the ship Han Sizer used to explore the Southern Rim. To prove your eligibility, you show the receptionist your Militia license.`
+			`	"Your license checks out," she says after looking you up in the computer system. "You have perfect timing Captain <last>! The auction ends today. Once bidding hit a million credits, we started only accepting bids in increments of 100,000 credits to help limit the auction to serious bidders only. The current bid is at 5,900,000 credits. Would you like to place a bid for 6,000,000 credits?"
+			choice
+				`	(Bid 6,000,000 credits.)`
+					goto win
+				`	(Do not bid.)`
+			`	"I'm sorry to hear that," she says. "The 5,900,000 credit bid has been up for a while now and no one seems willing to go over that. With 6,000,000 credits, I'm certain you'd win."`
+			choice
+				`	(Bid 6,000,000 credits.)`
+					goto win
+				`	(Do not bid.)`
+					decline
+			label win
+			`	"I've placed your bid into the system," she says. "Come back once the Museum closes to learn the result."`
+			choice
+				`	(Return later.)`
+			scene "ship/hipparion"
+			`You stop by the museum as it is about to close. "Congratulations Captain <last>. You are the winner of the Blue Ridge," says the receptionist. "Let's process the payment and legal transfer of ownership."`
+			`	Once that gets taken care of, she shows you where the ship is stored. You look over the ship and notice that the weapons are archaic, but functional. More concerning is the lack of a Hyperdrive. You can drop by the outfitter later to buy one, but your curiosity has been piqued.`
+			choice
+				`	"Why isn't there a Hyperdrive?"
+			scene "outfit/unknown"
+			`	She grins and answers, "It's for security, so thieves can't just take the ship and flee the system." It sounds like a reasonable explanation.`
+			`	But then she leans in and whispers conspiratorially, "There are rumors that Han Sizer got ahold of some alien device, like the ones the Quarg use instead of a Hyperdrive. Supposedly the government confiscated it after he died." She leans back, "But whether that's true or not, who can say?" She smiles mishieviously and you wonder if that's just a story they tell museum guests to enhance the legend of Han Sizer.`
+				decline
+	on decline
+		payment -6,000,000
+		give ship "Hipparion" "Blue Ridge"
+
+
+
 mission "Bounty Hunting: Angry Chicken"
 	job
 	name "Wanted Bandit near <system>"
