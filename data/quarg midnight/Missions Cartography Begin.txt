@@ -214,12 +214,12 @@ mission "Cartography: Poisonwood Trailblazer"
 	source Poisonwood
 	to offer
 		has "event: Poisonwood Trailblazer Excavation"
-		"credits" > 5400000
+		"credits" > 44000000
 	on offer
 		conversation
 			scene "scene/scene-trailblazerdesert"
 			`It's been a while since you last visited the archaeological dig site and you are curious at how they have progressed in excavating the hull of that crashed ship. When you arrive, you find that they have excavated what remains of the ship, but have left it to languish exposed to the elements.`
-			`	Millie arrives to greet you. "Welcome back, Captain <last>. We were hoping to find more buried beyond the ship, but this is all we've found for now. The local government has no plans to keep the wrecked hull. Things might've turned out differently if Foster had shown up, but all we have is you. Would you be interested in purchasing it? We estimate 4,400,000 credits is a fair price for an empty hull of this size and condition."`
+			`	Millie arrives to greet you. "Welcome back, Captain <last>. We were hoping to find more buried beyond the ship, but this is all we've found for now. The local government has no plans to keep the wrecked hull. Things might've turned out differently if Foster had shown up, but all we have is you. Would you be interested in purchasing it? We estimate 22,000,000 credits is a fair price for an empty hull of this size and condition."`
 			choice
 				`	"Sure, I enjoy restoring old ships to working condition."`
 					goto purchase
@@ -231,7 +231,7 @@ mission "Cartography: Poisonwood Trailblazer"
 			`(Remember to visit the outfitter and make sure your new ship is properly outfitted for flight! You may need to import outfits from other worlds in order to make the ship spaceworthy. If so, press "i" to open the info screen and park the ship until you return with the necessary outfits.)`
 				accept
 	on accept
-		payment -4400000
+		payment -22000000
 		give ship "Saryd Trailblazer" "Name Unknown"
 		log `Acquired the hull of an old Coalition war ship that was found on Poisonwood. Restoring it to working condition will take considerable resources and effort.`
 		fail
