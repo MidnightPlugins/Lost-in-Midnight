@@ -11,7 +11,6 @@
 
 
 
-
 ship "Kimek Bramble"
 	sprite "ship/kimek bramble"
 	thumbnail "thumbnail/kimek bramble-thumb"
@@ -19,16 +18,16 @@ ship "Kimek Bramble"
 		category "Heavy Freighter"
 		licenses
 			Coalition
-		"cost" 11718750
-		"shields" 17750
-		"hull" 6125
-		"required crew" 16
-		"bunks" 46
+		"cost" 14062500
+		"shields" 21300
+		"hull" 7350
+		"required crew" 19
+		"bunks" 64
 		"mass" 712
-		"drag" 8.9
-		"heat dissipation" .75
+		"drag" 9.2
+		"heat dissipation" .7
 		"fuel capacity" 800
-		"cargo space" 278
+		"cargo space" 197
 		"outfit space" 498
 		"weapon capacity" 256
 		"engine capacity" 129
@@ -69,9 +68,8 @@ ship "Kimek Bramble"
 
 
 # This empty hull can be obtained from a Cartography mission.
-# A variant appears in an Oathbreaker mission.
-# One of multiple variants can be obtained from a Midnight Market mission.
-# A fully outfitted variant appears in a Ghost Hunting mission.
+# One of multiple variants can be obtained from Midnight Market missions or an Oathbreaker mission.
+# A properly outfitted variant appears in a Ghost Hunting mission.
 
 ship "Saryd Trailblazer"
 	sprite "ship/saryd trailblazer"
@@ -80,24 +78,24 @@ ship "Saryd Trailblazer"
 		category "Heavy Warship"
 		licenses
 			Coalition
-		"cost" 44000000
-		"shields" 16600
-		"hull" 9900
-		"required crew" 25
-		"bunks" 105
-		"mass" 850
-		"drag" 14.1
+		"cost" 22150000
+		"shields" 26000
+		"hull" 15400
+		"required crew" 34
+		"bunks" 168
+		"mass" 960
+		"drag" 14.2
 		"heat dissipation" .60
 		"fuel capacity" 800
 		"cargo space" 260
-		"outfit space" 835
+		"outfit space" 852
 		"weapon capacity" 306
 		"engine capacity" 196
 		weapon
-			"blast radius" 260
-			"shield damage" 2600
-			"hull damage" 1300
-			"hit force" 3300
+			"blast radius" 410
+			"shield damage" 4100
+			"hull damage" 2100
+			"hit force" 6200
 	outfits
 		"Jump Drive (Broken)"
 		
