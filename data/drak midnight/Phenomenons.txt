@@ -58,7 +58,7 @@ fleet "Watcher's Nest Phenomenon (harmless)"
 		"Nightingale"
 	variant 1
 		"Unstable Wormhole (?)"
-		"Science Drone"
+		"Hacker Drone"
 	variant 1
 		"Unstable Wormhole (?)"
 		"Surveillance Drone"

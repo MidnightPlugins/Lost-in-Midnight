@@ -368,6 +368,23 @@ ship "Subsidurial" "Subsidurial Weaponized B"
 		"weapon capacity" 80
 	outfits
 		Mouthparts? 3
+		"Laser Turret" 2
+	gun Mouthparts?
+	gun Mouthparts?
+	gun Mouthparts?
+	turret "Laser Turret"
+	turret "Laser Turret"
+
+ship "Subsidurial" "Subsidurial Weaponized C"
+	sprite "ship/subsidurial weaponized"
+	"never disabled"
+	"swizzle" 0
+	add attributes
+		"cargo space" -35
+		"outfit space" 80
+		"weapon capacity" 80
+	outfits
+		Mouthparts? 3
 		"Modified Blaster Turret" 2
 	gun Mouthparts?
 	gun Mouthparts?
@@ -412,8 +429,9 @@ mission "Day of Subsidurius"
 			confusion 120
 		fleet
 			variant
-				"Subsidurial Weaponized A" 8
-				"Subsidurial Weaponized B" 8
+				"Subsidurial Weaponized A" 4
+				"Subsidurial Weaponized B" 4
+				"Subsidurial Weaponized C" 8
 	npc kill
 		government "Pirate"
 		personality target waiting staying vindictive
@@ -468,7 +486,7 @@ mission "Weaponized Subsidurial Stray"
 	npc accompany save
 		government "Indigenous Lifeform"
 		system
-			distance 1
+			distance 10
 		personality target mining harvests mute
 			confusion 120
 		fleet
@@ -476,6 +494,8 @@ mission "Weaponized Subsidurial Stray"
 				"Subsidurial Weaponized A"
 			variant
 				"Subsidurial Weaponized B"
+			variant
+				"Subsidurial Weaponized C"
 	on complete
 		payment 100000
 		dialog `The government of <planet> pays you <payment> for helping de-weaponize the Subsidurial.`
@@ -520,7 +540,7 @@ mission "Midnight Market: Pet Subsidurial"
 		payment -1000000
 	npc kill
 		government "Escort"
-		personality escort mute mining harvests
+		personality escort mute mining harvests marked
 		ship "Subsidurial Tamed"
 		dialog "Your pet Subsidurial has passed away..."
 	on complete
