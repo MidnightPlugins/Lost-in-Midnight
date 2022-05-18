@@ -1116,17 +1116,17 @@ ship "Enforcer Drone"
 ship "Subsidurius"
 	sprite "ship/subsidurius"
 	attributes
-		category "Heavy Freighter"
+		category "Light Warship"
 		"cost" 1230000
 		"shields" 6800
 		"hull" 4800
 		"required crew" 7
 		"bunks" 19
-		"mass" 440
-		"drag" 5.6
-		"heat dissipation" .6
-		"fuel capacity" 600
-		"cargo space" 250
+		"mass" 700
+		"drag" 8.2
+		"heat dissipation" .8
+		"fuel capacity" 400
+		"cargo space" 70
 		"outfit space" 490
 		"weapon capacity" 140
 		"engine capacity" 150
