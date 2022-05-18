@@ -160,7 +160,7 @@ mission "Balthazar 4"
 				`	(Tell him about the Balthazar.)`
 			
 			scene "scene/scene-balthazarbattle"
-			`	"Wow, you should have said that sooner! The story of the Balthazar is famous here. During a pirate raid in 3125, it was the largest ship in the planetary defense fleet. Unfortunately, it crashed into the ocean. If you want, I can give you information on where the wreck is located. Just give me your messaging address." After you give him the address, he forwards the data to you.`
+			`	"Wow, you should have said that sooner! The story of the Balthazar is famous here. During a pirate raid in 2925, it was the largest ship in the planetary defense fleet. Unfortunately, it crashed into the ocean. If you want, I can give you information on where the wreck is located. Just give me your messaging address." After you give him the address, he forwards the data to you.`
 			choice
 				`	(Visit the crash site.)`
 			
