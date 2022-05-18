@@ -286,7 +286,7 @@ mission "Executive Guard: Syndicated Systems"
 		system Achernar
 		personality entering nemesis heroic vindictive
 		fleet "Hired Guns"
-		fleet "Bounty Hunter" 2
+		fleet "Bounty Hunters" 2
 	npc
 		to spawn
 			or
@@ -297,7 +297,7 @@ mission "Executive Guard: Syndicated Systems"
 		system Markab
 		personality entering nemesis heroic vindictive
 		fleet "Hired Guns"
-		fleet "Bounty Hunter" 2
+		fleet "Bounty Hunters" 2
 	npc
 		to spawn
 			or
@@ -371,7 +371,7 @@ mission "Executive Guard: Syndicated Shipyards"
 		system Markab
 		personality entering nemesis heroic vindictive
 		fleet "Hired Guns"
-		fleet "Bounty Hunter" 2
+		fleet "Bounty Hunters" 2
 	npc
 		to spawn
 			or
@@ -382,7 +382,7 @@ mission "Executive Guard: Syndicated Shipyards"
 		system Achernar
 		personality entering nemesis heroic vindictive
 		fleet "Hired Guns"
-		fleet "Bounty Hunter" 2
+		fleet "Bounty Hunters" 2
 	npc
 		to spawn
 			or
