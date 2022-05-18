@@ -11,6 +11,21 @@
 
 
 
+fleet "Treasure Hunters"
+	government "Independent"
+	names "independent"
+	personality mining harvests
+	variant 1	
+		"Modified Argosy (Blaster)"
+	variant 1	
+		"Modified Aerie"
+	variant 1	
+		"Modified Firebird"
+	variant 1	
+		"Modified Berserker"
+
+
+
 fleet "Poachers"
 	government "Creature Hunter"
 	personality vindictive harvests coward
@@ -1639,6 +1654,10 @@ event "add energy cannon variants"
 		add variant 1
 			"Modified Firebird"
 			"Berserker" 2
+		add variant 1
+			"Modified Firebird"
+			"Berserker"
+			"Modified Berserker"
 	fleet "Small Core Merchants"
 		add variant 1
 			"Modified Firebird"
@@ -1650,30 +1669,50 @@ event "add energy cannon variants"
 		add variant 1
 			"Hauler (Energy Cannons)"
 	fleet "Large Northern Merchants"
+		add variant 1	
+			"Modified Aerie"
 		add variant 1
 			"Aerie (Energy Cannons)"
 			"Dagger" 2
 	fleet "Small Deep Merchants"
+		add variant 1	
+			"Modified Aerie"
 		add variant 1
 			"Aerie (Energy Cannons)"
 			"Dagger" 2
 	fleet "Human Miners"
+		add variant 1	
+			"Modified Berserker"
 		add variant 1
 			"Berserker (Energy Cannons)"
 	fleet "Bounty Hunters"
+		add variant 1	
+			"Modified Aerie"
+			"Berserker"
+			"Berserker (Energy Cannons)"
 		add variant 1
 			"Firebird"
 			"Berserker"
 			"Berserker (Energy Cannons)"
 	fleet "pirate raid"
+		add variant 1	
+			"Modified Aerie"
+			"Berserker"
+			"Berserker (Energy Cannons)"
 		add variant 1
 			"Firebird"
 			"Berserker"
 			"Berserker (Energy Cannons)"
 	fleet "Small Northern Pirates"
+		add variant 1	
+			"Modified Aerie"
 		add variant 1
 			"Berserker (Energy Cannons)"
 	fleet "Large Northern Pirates"
+		add variant 1	
+			"Modified Aerie"
+			"Berserker"
+			"Berserker (Energy Cannons)"
 		add variant 1
 			"Firebird"
 			"Berserker"

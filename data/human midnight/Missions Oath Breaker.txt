@@ -944,7 +944,7 @@ mission "Oathbreaker Metallic Asteroids 1"
 		random < 60
 	on offer
 		conversation
-			scene "outfit/metallic asteroid"
+			scene "asteroid/metallic/spin"
 			`You notice a ship loading several metallic asteroids. They don't look particularly valuable. Weird.`
 			choice
 				`	(Ask them about the asteroids.)`

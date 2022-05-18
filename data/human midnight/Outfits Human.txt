@@ -223,7 +223,7 @@ outfit "Metallic Asteroid"
 	category "Ammunition"
 	cost 3000
 	thumbnail "outfit/metallic asteroid"
-	"flotsam sprite" "asteroid/small metal/spin"
+	"flotsam sprite" "effect/flotsam metallic"
 	"mass" 10
 	"asteroid capacity" -1
 	description `The most difficult part of operating an Asteroid Catapult is locating ammunition with the right size, shape, density, and magnetic properties.`
@@ -243,9 +243,7 @@ outfit "Asteroid Catapult"
 	"gun ports" -1
 	"asteroid capacity" 30
 	weapon
-		sprite "asteroid/small metal/spin"
-			"frame rate" 15
-			"random start frame"
+		sprite "projectile/asteroid catapult"
 		sound "ionball"
 		ammo "Metallic Asteroid"
 		icon "icon/masteroid"

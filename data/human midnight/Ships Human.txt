@@ -1355,6 +1355,7 @@ ship "District"
 		"outfit space" 573
 		"weapon capacity" 184
 		"engine capacity" 194
+		"threshold percentage" 0.5
 		weapon
 			"blast radius" 260
 			"shield damage" 2600
@@ -1413,6 +1414,7 @@ ship "Prefecture"
 		"outfit space" 543
 		"weapon capacity" 147
 		"engine capacity" 179
+		"threshold percentage" 0.5
 		weapon
 			"blast radius" 260
 			"shield damage" 2600
@@ -1470,6 +1472,7 @@ ship "Municipality"
 		"weapon capacity" 114
 		"engine capacity" 179
 		"atmosphere scan" 100
+		"threshold percentage" 0.5
 		weapon
 			"blast radius" 260
 			"shield damage" 2600

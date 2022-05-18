@@ -61,7 +61,7 @@ mission "Blue Ridge 2"
 		conversation
 			scene "outfit/militia license"
 			`You visit the Museum of Space Exploration to place a bid on the Blue Ridge, the ship Han Sizer used to explore the Southern Rim. To prove your eligibility, you show the receptionist your Militia license.`
-			`	"Your license checks out," she says after looking you up in the computer system. "You have perfect timing Captain <last>! The auction ends today. Once bidding hit a million credits, we started only accepting bids in increments of 100,000 credits to help limit the auction to serious bidders only. The current bid is at 5,900,000 credits. Would you like to place a bid for 6,000,000 credits?"
+			`	"Your license checks out," she says after looking you up in the computer system. "You have perfect timing Captain <last>! The auction ends today. Once bidding hit a million credits, we started only accepting bids in increments of 100,000 credits to help limit the auction to serious bidders only. The current bid is at 5,900,000 credits. Would you like to place a bid for 6,000,000 credits?"`
 			choice
 				`	(Bid 6,000,000 credits.)`
 					goto win
@@ -80,13 +80,13 @@ mission "Blue Ridge 2"
 			`You stop by the museum as it is about to close. "Congratulations Captain <last>. You are the winner of the Blue Ridge," says the receptionist. "Let's process the payment and legal transfer of ownership."`
 			`	Once that gets taken care of, she shows you where the ship is stored. You look over the ship and notice that the weapons are archaic, but functional. More concerning is the lack of a Hyperdrive. You can drop by the outfitter later to buy one, but your curiosity has been piqued.`
 			choice
-				`	"Why isn't there a Hyperdrive?"
+				`	"Why isn't there a Hyperdrive?"`
 			scene "outfit/unknown"
 			`	She grins and answers, "It's for security, so thieves can't just take the ship and flee the system." It sounds like a reasonable explanation.`
 			`	But then she leans in and whispers conspiratorially, "There are rumors that Han Sizer got ahold of some alien device, like the ones the Quarg use instead of a Hyperdrive. Supposedly the government confiscated it after he died." She leans back, "But whether that's true or not, who can say?" She smiles mishieviously and you wonder if that's just a story they tell museum guests to enhance the legend of Han Sizer.`
 				decline
 	on decline
-		payment -6,000,000
+		payment -6000000
 		give ship "Hipparion" "Blue Ridge"
 
 
@@ -94,8 +94,9 @@ mission "Blue Ridge 2"
 mission "Bounty Hunting: Angry Chicken"
 	job
 	name "Wanted Bandit near <system>"
-	description "An old Firebird named the <npc> has been attacking merchants near <system>. Eliminate the ship, then report to <destination>. Payment is <payment>."
+	description "A Modified Firebird named the <npc> has been attacking merchants near <system>. Eliminate the ship, then report to <destination>. Payment is <payment>."
 	source
+		government "Republic" "Free Worlds" "Syndicate"
 		attributes "dirt belt" "south" "rim" "frontier"
 	to offer
 		random < 50
@@ -119,6 +120,7 @@ mission "Bounty Hunting: Tweedledee & Tweedledum"
 	name "Wanted Bandit near <system>"
 	description "A pair of old Berserkers named the Tweedledee & Tweedledum have been attacking merchants near <system>. Eliminate these ships, then report to <destination>. Payment is <payment>."
 	source
+		government "Republic" "Free Worlds" "Syndicate"
 		attributes "dirt belt" "south" "rim" "frontier"
 	to offer
 		has "Bounty Hunting: Angry Chicken: done"
@@ -143,6 +145,7 @@ mission "Bounty Hunting: Mother Goose"
 	name "Wanted Bandit near <system>"
 	description "An old Aerie named the Mother Goose and its fighters have been attacking merchants near <system>. Eliminate the fleet, then report to <destination>. Payment is <payment>."
 	source
+		government "Republic" "Free Worlds" "Syndicate"
 		attributes "dirt belt" "south" "rim" "frontier"
 	to offer
 		has "Bounty Hunting: Tweedledee & Tweedledum: done"
@@ -168,6 +171,7 @@ mission "Bounty Hunting: Humpty Dumpty"
 	name "Wanted Bandit near <system>"
 	description "An old Hauler named the <npc> has been attacking merchants near <system>. Eliminate the ship, then report to <destination>. Payment is <payment>."
 	source
+		government "Republic" "Free Worlds" "Syndicate"
 		attributes "dirt belt" "south" "rim" "frontier"
 	to offer
 		has "Bounty Hunting: Mother Goose: done"
@@ -185,6 +189,31 @@ mission "Bounty Hunting: Humpty Dumpty"
 	on complete
 		payment 175000
 		dialog phrase "generic bounty hunting payment dialog"
+
+mission "Bounty Hunting: Jabberwocky"
+	job
+	name "Wanted Bandit near <system>"
+	description "A Modified Aerie named the <npc> has been attacking merchants near <system>. Eliminate the ship, then report to <destination>. Payment is <payment>."
+	source
+		government "Republic" "Free Worlds" "Syndicate"
+		attributes "dirt belt" "south" "rim" "frontier"
+	to offer
+		has "Bounty Hunting: Humpty Dumpty: done"
+		random < 50
+	npc kill
+		government "Bounty"
+		system
+			distance 1 2
+		personality target waiting staying plunders harvests
+			confusion 20
+		ship "Modified Aerie" "Jabberwocky"
+		dialog phrase "generic hunted bounty eliminated dialog"
+	on visit
+		dialog phrase "generic bounty hunting on visit"
+	on complete
+		payment 200000
+		dialog phrase "generic bounty hunting payment dialog"
+
 
 
 
