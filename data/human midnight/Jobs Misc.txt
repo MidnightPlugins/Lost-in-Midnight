@@ -99,7 +99,7 @@ mission "Bounty Hunting: Angry Chicken"
 		government "Republic" "Free Worlds" "Syndicate"
 		attributes "dirt belt" "south" "rim" "frontier"
 	to offer
-		random < 50
+		random < 25
 	npc kill
 		government "Bounty"
 		system
@@ -124,7 +124,7 @@ mission "Bounty Hunting: Tweedledee & Tweedledum"
 		attributes "dirt belt" "south" "rim" "frontier"
 	to offer
 		has "Bounty Hunting: Angry Chicken: done"
-		random < 50
+		random < 25
 	npc kill
 		government "Bounty"
 		system
@@ -149,7 +149,7 @@ mission "Bounty Hunting: Mother Goose"
 		attributes "dirt belt" "south" "rim" "frontier"
 	to offer
 		has "Bounty Hunting: Tweedledee & Tweedledum: done"
-		random < 50
+		random < 25
 	npc kill
 		government "Bounty"
 		system
@@ -175,7 +175,7 @@ mission "Bounty Hunting: Humpty Dumpty"
 		attributes "dirt belt" "south" "rim" "frontier"
 	to offer
 		has "Bounty Hunting: Mother Goose: done"
-		random < 50
+		random < 25
 	npc kill
 		government "Bounty"
 		system
@@ -199,7 +199,7 @@ mission "Bounty Hunting: Jabberwocky"
 		attributes "dirt belt" "south" "rim" "frontier"
 	to offer
 		has "Bounty Hunting: Humpty Dumpty: done"
-		random < 50
+		random < 25
 	npc kill
 		government "Bounty"
 		system
@@ -611,7 +611,7 @@ mission "Mining: Silicon"
 	job
 	deadline 14
 	name "Mining: Silicon to <system>"
-	descripion "The shipyard on <destination> has a shortage of Silicon. Bring 20 tons of Silicon to the shipyard by <date>. Payment is <payment>, 50% above the usual market rate for Silicon."
+	description "The shipyard on <destination> has a shortage of Silicon. Bring 20 tons of Silicon to the shipyard by <date>. Payment is <payment>, 50% above the usual market rate for Silicon."
 	source
 		government "Republic" "Syndicate" "Free Worlds" "Independent" "Neutral"
 		attributes shipyard
@@ -626,7 +626,7 @@ mission "Mining: Lead"
 	job
 	deadline 14
 	name "Mining: Lead to <system>"
-	descripion "The shipyard on <destination> has a shortage of Lead. Bring 20 tons of Lead to the shipyard by <date>. Payment is <payment>, 50% above the usual market rate for Lead."
+	description "The shipyard on <destination> has a shortage of Lead. Bring 20 tons of Lead to the shipyard by <date>. Payment is <payment>, 50% above the usual market rate for Lead."
 	source
 		government "Republic" "Syndicate" "Free Worlds" "Independent" "Neutral"
 		attributes shipyard
@@ -641,7 +641,7 @@ mission "Mining: Iron"
 	job
 	deadline 14
 	name "Mining: Iron to <system>"
-	descripion "The shipyard on <destination> has a shortage of Iron. Bring 20 tons of Copper to the shipyard by <date>. Payment is <payment>, 50% above the usual market rate for Iron."
+	description "The shipyard on <destination> has a shortage of Iron. Bring 20 tons of Copper to the shipyard by <date>. Payment is <payment>, 50% above the usual market rate for Iron."
 	source
 		government "Republic" "Syndicate" "Free Worlds" "Independent" "Neutral"
 		attributes shipyard
@@ -656,7 +656,7 @@ mission "Mining: Aluminum"
 	job
 	deadline 14
 	name "Mining: Aluminum to <system>"
-	descripion "The shipyard on <destination> has a shortage of Aluminum. Bring 20 tons of Aluminum to the shipyard by <date>. Payment is <payment>, 50% above the usual market rate for Aluminum."
+	description "The shipyard on <destination> has a shortage of Aluminum. Bring 20 tons of Aluminum to the shipyard by <date>. Payment is <payment>, 50% above the usual market rate for Aluminum."
 	source
 		government "Republic" "Syndicate" "Free Worlds" "Independent" "Neutral"
 		attributes shipyard
@@ -671,7 +671,7 @@ mission "Mining: Titanium"
 	job
 	deadline 14
 	name "Mining: Titanium to <system>"
-	descripion "The shipyard on <destination> has a shortage of Titanium. Bring 20 tons of Copper to the shipyard by <date>. Payment is <payment>, 50% above the usual market rate for Titanium."
+	description "The shipyard on <destination> has a shortage of Titanium. Bring 20 tons of Copper to the shipyard by <date>. Payment is <payment>, 50% above the usual market rate for Titanium."
 	source
 		government "Republic" "Syndicate" "Free Worlds" "Independent" "Neutral"
 		attributes shipyard
@@ -686,7 +686,7 @@ mission "Mining: Copper"
 	job
 	deadline 14
 	name "Mining: Copper to <system>"
-	descripion "The shipyard on <destination> has a shortage of Copper. Bring 20 tons of Copper to the shipyard by <date>. Payment is <payment>, 50% above the usual market rate for Copper."
+	description "The shipyard on <destination> has a shortage of Copper. Bring 20 tons of Copper to the shipyard by <date>. Payment is <payment>, 50% above the usual market rate for Copper."
 	source
 		government "Republic" "Syndicate" "Free Worlds" "Independent" "Neutral"
 		attributes shipyard
@@ -701,7 +701,7 @@ mission "Mining: Neodymium"
 	job
 	deadline 14
 	name "Mining: Neodymium to <system>"
-	descripion "The shipyard on <destination> has a shortage of Neodymium. Bring 20 tons of Neodymium to the shipyard by <date>. Payment is <payment>, 50% above the usual market rate for Neodymium."
+	description "The shipyard on <destination> has a shortage of Neodymium. Bring 20 tons of Neodymium to the shipyard by <date>. Payment is <payment>, 50% above the usual market rate for Neodymium."
 	source
 		government "Republic" "Syndicate" "Free Worlds" "Independent" "Neutral"
 		attributes shipyard
@@ -716,7 +716,7 @@ mission "Mining: Tungsten"
 	job
 	deadline 14
 	name "Mining: Tungsten to <system>"
-	descripion "The shipyard on <destination> has a shortage of Tungsten. Bring 20 tons of Tungsten to the shipyard by <date>. Payment is <payment>, 50% above the usual market rate for Tungsten."
+	description "The shipyard on <destination> has a shortage of Tungsten. Bring 20 tons of Tungsten to the shipyard by <date>. Payment is <payment>, 50% above the usual market rate for Tungsten."
 	source
 		government "Republic" "Syndicate" "Free Worlds" "Independent" "Neutral"
 		attributes shipyard
@@ -731,7 +731,7 @@ mission "Mining: Uranium"
 	job
 	deadline 14
 	name "Mining: Uranium to <system>"
-	descripion "The shipyard on <destination> has a shortage of Uranium. Bring 20 tons of Uranium to the shipyard by <date>. Payment is <payment>, 50% above the usual market rate for Uranium."
+	description "The shipyard on <destination> has a shortage of Uranium. Bring 20 tons of Uranium to the shipyard by <date>. Payment is <payment>, 50% above the usual market rate for Uranium."
 	source
 		government "Republic" "Syndicate" "Free Worlds" "Independent" "Neutral"
 		attributes shipyard
@@ -746,7 +746,7 @@ mission "Mining: Silver"
 	job
 	deadline 7
 	name "Mining: Silver to <system>"
-	descripion "Market speculation on <destination> has created a run on Silver. Bring 10 tons of Silver to the metals exchange by <date>. Payment is <payment>, 100% above the usual market rate for Silver. Due to market volatility, this offer may be rescinded at any time."
+	description "Market speculation on <destination> has created a run on Silver. Bring 10 tons of Silver to the metals exchange by <date>. Payment is <payment>, 100% above the usual market rate for Silver. Due to market volatility, this offer may be rescinded at any time."
 	source
 		government "Republic" "Syndicate" "Free Worlds" "Independent" "Neutral"
 		attributes urban
@@ -765,7 +765,7 @@ mission "Mining: Gold"
 	job
 	deadline 7
 	name "Mining: Gold to <system>"
-	descripion "Market speculation on <destination> has created a run on Gold. Bring 10 tons of Gold to the metals exchange by <date>. Payment is <payment>, 100% above the usual market rate for Gold. Due to market volatility, this offer may be rescinded at any time."
+	description "Market speculation on <destination> has created a run on Gold. Bring 10 tons of Gold to the metals exchange by <date>. Payment is <payment>, 100% above the usual market rate for Gold. Due to market volatility, this offer may be rescinded at any time."
 	source
 		government "Republic" "Syndicate" "Free Worlds" "Independent" "Neutral"
 		attributes urban
@@ -784,7 +784,7 @@ mission "Mining: Platinum"
 	job
 	deadline 7
 	name "Mining: Platinum to <system>"
-	descripion "Market speculation on <destination> has created a run on Platinum. Bring 10 tons of Platinum to the metals exchange by <date>. Payment is <payment>, 100% above the usual market rate for Platinum. Due to market volatility, this offer may be rescinded at any time."
+	description "Market speculation on <destination> has created a run on Platinum. Bring 10 tons of Platinum to the metals exchange by <date>. Payment is <payment>, 100% above the usual market rate for Platinum. Due to market volatility, this offer may be rescinded at any time."
 	source
 		government "Republic" "Syndicate" "Free Worlds" "Independent" "Neutral"
 		attributes urban
