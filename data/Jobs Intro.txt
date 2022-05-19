@@ -60,7 +60,6 @@ mission "Cargo Intro [2 Transport]"
 	job
 	name "Liquid Nitrogen to <planet>"
 	description "Buy a Liquid Nitrogen Cooler from the outfitter and deliver them to <destination>. Payment is <payment>."
-	landing
 	source "New China"
 	destination "Earth"
 	to offer
@@ -82,7 +81,6 @@ mission "Intro Cargo [3 Transport]"
 	job
 	name "Chipmunk Plasma Steering to <planet>"
 	description "Buy Chipmunk Plasma Steering from the outfitter and deliver it to <destination>. Payment is <payment>."
-	landing
 	source "Earth"
 	destination "Hestia"
 	to offer
@@ -144,7 +142,6 @@ mission "Intro Cargo [2 Freighter]"
 	job
 	name "Heavy Rockets to <planet>"
 	description "Buy 20 Heavy Rockets from the outfitter and deliver them to <destination>. Payment is <payment>."
-	landing
 	source "Heartland"
 	destination "Ingot"
 	to offer
@@ -393,14 +390,14 @@ mission "Intro Bounty Hunting 5"
 
 
 #################
-# Blood Rage start exlusive
+# Blood Rage start exclusive
 #################
 
 mission "Intro Mining [Blood Rage]"
 	job
 	deadline 7
 	name "Mining: Copper to <system>"
-	descripion "The shipyard on <destination> has a shortage of Copper. Bring 20 tons of Copper to the shipyard by <date>. Payment is <payment>, 50% above the usual market rate for Copper."
+	description "The shipyard on <destination> has a shortage of Copper. Bring 20 tons of Copper to the shipyard by <date>. Payment is <payment>, 50% above the usual market rate for Copper."
 	source "Hestia"
 	to offer
 		has "Blood Rage start"
@@ -416,7 +413,7 @@ mission "Intro Mining [Blood Rage]"
 
 
 #################
-# Mata Hari start exlusive
+# Mata Hari start exclusive
 #################
 
 mission "Intro Corporate espionage [Mata Hari]"
