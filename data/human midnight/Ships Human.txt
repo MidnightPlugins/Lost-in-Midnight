@@ -437,6 +437,68 @@ ship "Hipparion"
 
 
 
+# Infiltrator
+
+ship "Infiltrator"
+	sprite "ship/infiltrator/infiltrator"
+		"rewind"
+	thumbnail "thumbnail/infiltrator-thumb"
+	attributes
+		category "Transport"
+		"cost" 1700000
+		"shields" 1200
+		"hull" 400
+		"required crew" 1
+		"bunks" 6
+		"mass" 110
+		"drag" 3.4
+		"heat dissipation" .7
+		"fuel capacity" 600
+		"cargo space" 35
+		"outfit space" 155
+		"weapon capacity" 35
+		"engine capacity" 60
+		"inscrutable" 1
+		"scan interference" 4
+		"radar jamming" 20
+		"tactical scan power" 32
+		"atmosphere scan" 100
+		weapon
+			"blast radius" 16
+			"shield damage" 160
+			"hull damage" 80
+			"hit force" 240
+	outfits
+		"Silencer Beam" 2
+		"Anti-Missile Turret"
+		
+		"nGVF-BB Fuel Cell"
+		"LP036a Battery Pack"
+		"D14-RN Shield Generator"
+		"Brig"
+		"Cargo Scanner"
+		"Outfit Scanner"
+
+		"A120 Atomic Thruster"
+		"A125 Atomic Steering"
+		"Hyperdrive"
+		
+	engine -8 46
+	engine 8 46
+	gun -20 -7 "Silencer Beam"
+	gun 20 -7 "Silencer Beam"
+	turret 0 -7 "Anti-Missile Turret"
+	explode "tiny explosion" 10
+	explode "small explosion" 20
+	explode "medium explosion" 15
+	leak "leak" 50 50
+	leak "flame" 60 80
+	"final explode" "final explosion small"
+	description "Featuring integrated tactical scanning, scanning interference and radar jamming, this is a specialized Scout used by Republic Intelligence operatives for espionage missions. They have rarely been seen in public, leading some to speculate that this ship doesn't actually exist and is nothing more than an urban legend." 
+
+
+
+
 # A unique prototype Kestrel from the Grave Digger missions.
 # The two different versions represent the player's mission path choices.
 

@@ -98,6 +98,42 @@ outfit "Proton Gun-CF8"
 
 
 
+# Silencer Beams are installed on Infiltrators
+outfit "Silencer Beam"
+	category "Guns"
+	cost 31900
+	thumbnail "outfit/silencer beam"
+	"mass" 8
+	"outfit space" -8
+	"weapon capacity" -8
+	"gun ports" -1
+	weapon
+		sprite "projectile/silencer beam"
+			"frame rate" 1
+		sound "laser-ver8"
+		"hit effect" "silencer beam impact"
+		"inaccuracy" .5
+		"velocity" 300
+		"lifetime" 1
+		"reload" 1
+		"firing energy" .5
+		"firing heat" 2.4
+		"shield damage" 1.3
+		"hull damage" 1
+	description "A specialized weapon used by Republic Intelligence operatives, the Silencer Beam is optimized for disabling ships instead of destroying them. Its name refers to how the weapon produces less sound compared to a regular Beam Laser. This comes at the cost of increased heat accumulation."
+
+effect "silencer beam impact"
+	sprite "effect/silencer impact"
+		"no repeat"
+		"frame rate" 30
+	"lifetime" 5
+	"random angle" 2
+	"random spin" 1
+	"velocity scale" -.005
+
+
+
+# Energy Cannons are installed on older model ships or their variants
 outfit "Energy Cannon"
 	category "Guns"
 	cost 32000

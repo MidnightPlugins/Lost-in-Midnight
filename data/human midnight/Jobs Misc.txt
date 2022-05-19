@@ -216,6 +216,59 @@ mission "Bounty Hunting: Jabberwocky"
 
 
 
+mission "Corporate espionage [1]"
+	name "Corporate espionage"
+	description "The <npc> is about to enter this system. Locate it and make detailed scans of its cargo, which are of considerable interest to a team of Syndicate researchers on <destination>; proceed there for <payment> after retrieving the data."
+	job
+	repeat
+	to offer
+		random < 10
+	source
+		government "Free Worlds" Syndicate Neutral
+	destination
+		government Syndicate
+		attributes research
+		distance 3 12
+	npc "scan cargo"
+		government Merchant
+		personality fleeing uninterested entering target
+		fleet
+			names "civilian"
+			variant
+				"Blackbird"
+			variant
+				"Arrow"
+		dialog "You manage to make the requested scans of the <npc>'s cargo. Time to head to <planet>."
+	on complete
+		dialog `You transmit your scans and receive a hearty congratulations, as well as <payment>. "This will save us months!" you hear someone say in the background as you close the audio link.`
+		payment 50000
+
+mission "Corporate espionage [2]"
+	name "Corporate espionage"
+	description "The <npc> is about to enter this system. Locate it and make detailed scans of its cargo, which are of considerable interest to a team of Syndicate researchers on <destination>; proceed there for <payment> after retrieving the data."
+	job
+	repeat
+	to offer
+		random < 10
+	source
+		government Republic Syndicate Neutral
+	destination
+		government Syndicate
+		attributes research
+		distance 3 12
+	npc "scan cargo"
+		government Merchant
+		personality fleeing uninterested entering target
+		fleet
+			names "civilian"
+			variant
+				"Star Queen"
+		dialog "You manage to make the requested scans of the <npc>'s cargo. Time to head to <planet>."
+	on complete
+		dialog `You transmit your scans and receive a hearty congratulations, as well as <payment>. "This will save us months!" you hear someone say in the background as you close the audio link.`
+		payment 50000
+
+
 
 mission "Executive Guard: Syndicate Extremists"
 	landing
@@ -428,6 +481,323 @@ mission "Executive Guard: Syndicated Shipyards"
 			scene "outfit/brig"
 			`You present the CEO to the pirates. They are in awe of your accomplishment. A few warlords confide to you that this job was only intended as a joke and they never actually expected anyone to pull it off.`
 			`	Despite this, the pirates are able to negotiate with the Syndicate. The CEO is easily ransomed off for the requested amount. You claim your share of the ransom money, <payment>. Naturally, this stunt has made you an enemy of the Syndicate. Their security forces will be looking to collect bonus pay for your head.`
+
+
+
+mission "Free Worlds espionage"
+	description "The <npc> is about to enter this system. Locate it and make detailed scans of its cargo, which are of considerable interest to a team of Syndicate researchers on <destination>; proceed there for <payment> after retrieving the data."
+	job
+	repeat
+	to offer
+		random < 10
+		has "salary: Free Worlds"
+		not "event: fw armistice"
+	source
+		government "Free Worlds"
+	destination
+		government "Free Worlds"
+		attributes spaceport
+		distance 3 12
+	npc "scan cargo"
+		government Merchant
+		personality fleeing uninterested entering target
+		fleet
+			names "civilian"
+			variant
+				"Scout"
+			variant
+				"Flivver"
+		dialog "You manage to make the requested scans of the <npc>'s cargo. Time to head to <planet>."
+	on complete
+		"reputation: Free Worlds" ++
+		dialog `You transmit your scans and receive a hearty congratulations, as well as <payment>. "This information changes everything!" you hear someone say in the background as you close the audio link.`
+		payment 40000
+
+
+
+mission "Free Worlds Infiltrator 1"
+	landing
+	deadline 7
+	name "Free Worlds Infiltrator"
+	description "A Republic Intelligence spy ship named the <npc> was spotted near <origin>. Catch the fleeing ship before <date> and retrieve whatever data they've acquired. Then deliver it to <destination>."
+	source
+		government "Free Worlds"
+	destination
+		government "Free Worlds"
+		attributes urban
+		distance 3 12
+	to offer
+		random < 25
+		has "salary: Free Worlds"
+		not "event: fw armistice"
+		has "fw first chapter done"
+		not "FW Pirates 4.1: offered"
+		not "event: navy occupying the south"
+	on offer
+		conversation
+			scene "thumbnail/infiltrator-thumb"
+			`You receive a message from JJ. "Sorry to bother you even though we were hoping to enoy a break, but a Republic spy ship was spotted near <origin>. Since you're in the area, keep an eye out for it and retrieve any secret data they might've gotten their hands on. If you haven't caught the ship by <date>, we'll assume it escaped.`
+				accept
+	npc "board"
+		government Republic
+		personality fleeing uninterested entering target marked
+		ship "Infiltrator" "Provocateur"
+		dialog "You've recovered the secret data. It doesn't look like they've had a chance to decrypt it. Time to head to <planet>."
+	on fail
+		event "navy plasma gunboats" 60
+	on complete
+		"reputation: Free Worlds" ++
+		payment 50000
+		dialog `The Free Worlds appreciates the retrieval of the stolen data and gives you <payment> in bonus pay.`
+
+mission "Free Worlds Infiltrator 1 failure"
+	landing
+	source
+		government "Free Worlds"
+	to offer
+		has "Free Worlds Infiltrator 1: failed"
+		has "event: navy plasma gunboats"
+	on offer
+		dialog "Eyewitness reports of Navy Gunboats armed with Plasma Cannnons indicate that designs for the Plasma Cannon was among the data stolen by that Republic Intelligence spy ship you were unable to catch."
+			decline
+	
+mission "Free Worlds Infiltrator 2"
+	landing
+	deadline 7
+	name "Free Worlds Infiltrator"
+	description "A Republic Intelligence spy ship named the <npc> was spotted near <origin>. Catch the fleeing ship before <date> and retrieve whatever data they've acquired. Then deliver it to <destination>."
+	source
+		government "Free Worlds"
+	destination
+		government "Free Worlds"
+		attributes urban
+		distance 3 12
+	to offer
+		random < 25
+		has "salary: Free Worlds"
+		not "event: fw armistice"
+		has "fw delivered prisoners"
+		not "event: fw occupying the north"
+	on offer
+		conversation
+			scene "thumbnail/infiltrator-thumb"
+			`You receive a message from Freya. "Sorry to bother you even though we were hoping to enoy a break, but a Republic spy ship was spotted near <origin>. Since you're in the area, keep an eye out for it and retrieve any secret data they might've gotten their hands on. If you haven't caught the ship by <date>, we'll assume it escaped.`
+				accept
+	npc "board"
+		government Republic
+		personality fleeing uninterested entering target marked
+		ship "Infiltrator" "Clandestine"
+		dialog "You've recovered the secret data. It doesn't look like they've had a chance to decrypt it. Time to head to <planet>."
+	on fail
+		event "navy flamethrower gunboats" 60
+	on complete
+		"reputation: Free Worlds" ++
+		payment 50000
+		dialog `The Free Worlds appreciates the retrieval of the stolen data and gives you <payment> in bonus pay.`
+
+mission "Free Worlds Infiltrator 2 failure"
+	landing
+	source
+		government "Free Worlds"
+	to offer
+		has "Free Worlds Infiltrator 2: failed"
+		has "event: navy flamethrower gunboats"
+	on offer
+		dialog "Eyewitness reports of Navy Gunboats armed with Flamethrowers indicate that designs for the Flamethrower was among the data stolen by that Republic Intelligence spy ship you were unable to catch."
+			decline
+
+
+mission "Mining: Silicon"
+	job
+	deadline 14
+	name "Mining: Silicon to <system>"
+	descripion "The shipyard on <destination> has a shortage of Silicon. Bring 20 tons of Silicon to the shipyard by <date>. Payment is <payment>, 50% above the usual market rate for Silicon."
+	source
+		government "Republic" "Syndicate" "Free Worlds" "Independent" "Neutral"
+		attributes shipyard
+	to offer
+		random < 1
+	on complete
+		outfit "Silicon" -20
+		payment 12000
+		dialog `The shipyards on <planet> accept your delivery of Silicon and pay you <payment>.`
+
+mission "Mining: Lead"
+	job
+	deadline 14
+	name "Mining: Lead to <system>"
+	descripion "The shipyard on <destination> has a shortage of Lead. Bring 20 tons of Lead to the shipyard by <date>. Payment is <payment>, 50% above the usual market rate for Lead."
+	source
+		government "Republic" "Syndicate" "Free Worlds" "Independent" "Neutral"
+		attributes shipyard
+	to offer
+		random < 1
+	on complete
+		outfit "Lead" -20
+		payment 27000
+		dialog `The shipyards on <planet> accept your delivery of Lead and pay you <payment>.`
+
+mission "Mining: Iron"
+	job
+	deadline 14
+	name "Mining: Iron to <system>"
+	descripion "The shipyard on <destination> has a shortage of Iron. Bring 20 tons of Copper to the shipyard by <date>. Payment is <payment>, 50% above the usual market rate for Iron."
+	source
+		government "Republic" "Syndicate" "Free Worlds" "Independent" "Neutral"
+		attributes shipyard
+	to offer
+		random < 1
+	on complete
+		outfit "Iron" -20
+		payment 36000
+		dialog `The shipyards on <planet> accept your delivery of Iron and pay you <payment>.`
+
+mission "Mining: Aluminum"
+	job
+	deadline 14
+	name "Mining: Aluminum to <system>"
+	descripion "The shipyard on <destination> has a shortage of Aluminum. Bring 20 tons of Aluminum to the shipyard by <date>. Payment is <payment>, 50% above the usual market rate for Aluminum."
+	source
+		government "Republic" "Syndicate" "Free Worlds" "Independent" "Neutral"
+		attributes shipyard
+	to offer
+		random < 1
+	on complete
+		outfit "Aluminum" -20
+		payment 54000
+		dialog `The shipyards on <planet> accept your delivery of Aluminum and pay you <payment>.`
+
+mission "Mining: Titanium"
+	job
+	deadline 14
+	name "Mining: Titanium to <system>"
+	descripion "The shipyard on <destination> has a shortage of Titanium. Bring 20 tons of Copper to the shipyard by <date>. Payment is <payment>, 50% above the usual market rate for Titanium."
+	source
+		government "Republic" "Syndicate" "Free Worlds" "Independent" "Neutral"
+		attributes shipyard
+	to offer
+		random < 1
+	on complete
+		outfit "Titanium" -20
+		payment 75000
+		dialog `The shipyards on <planet> accept your delivery of Titanium and pay you <payment>.`
+
+mission "Mining: Copper"
+	job
+	deadline 14
+	name "Mining: Copper to <system>"
+	descripion "The shipyard on <destination> has a shortage of Copper. Bring 20 tons of Copper to the shipyard by <date>. Payment is <payment>, 50% above the usual market rate for Copper."
+	source
+		government "Republic" "Syndicate" "Free Worlds" "Independent" "Neutral"
+		attributes shipyard
+	to offer
+		random < 1
+	on complete
+		outfit "Copper" -20
+		payment 90000
+		dialog `The shipyards on <planet> accept your delivery of Copper and pay you <payment>.`
+
+mission "Mining: Neodymium"
+	job
+	deadline 14
+	name "Mining: Neodymium to <system>"
+	descripion "The shipyard on <destination> has a shortage of Neodymium. Bring 20 tons of Neodymium to the shipyard by <date>. Payment is <payment>, 50% above the usual market rate for Neodymium."
+	source
+		government "Republic" "Syndicate" "Free Worlds" "Independent" "Neutral"
+		attributes shipyard
+	to offer
+		random < 1
+	on complete
+		outfit "Neodymium" -20
+		payment 114000
+		dialog `The shipyards on <planet> accept your delivery of Neodymium and pay you <payment>.`
+
+mission "Mining: Tungsten"
+	job
+	deadline 14
+	name "Mining: Tungsten to <system>"
+	descripion "The shipyard on <destination> has a shortage of Tungsten. Bring 20 tons of Tungsten to the shipyard by <date>. Payment is <payment>, 50% above the usual market rate for Tungsten."
+	source
+		government "Republic" "Syndicate" "Free Worlds" "Independent" "Neutral"
+		attributes shipyard
+	to offer
+		random < 1
+	on complete
+		outfit "Tungsten" -20
+		payment 135000
+		dialog `The shipyards on <planet> accept your delivery of Tungsten and pay you <payment>.`
+
+mission "Mining: Uranium"
+	job
+	deadline 14
+	name "Mining: Uranium to <system>"
+	descripion "The shipyard on <destination> has a shortage of Uranium. Bring 20 tons of Uranium to the shipyard by <date>. Payment is <payment>, 50% above the usual market rate for Uranium."
+	source
+		government "Republic" "Syndicate" "Free Worlds" "Independent" "Neutral"
+		attributes shipyard
+	to offer
+		random < 1
+	on complete
+		outfit "Uranium" -20
+		payment 150000
+		dialog `The shipyards on <planet> accept your delivery of Uranium and pay you <payment>.`
+
+mission "Mining: Silver"
+	job
+	deadline 7
+	name "Mining: Silver to <system>"
+	descripion "Market speculation on <destination> has created a run on Silver. Bring 10 tons of Silver to the metals exchange by <date>. Payment is <payment>, 100% above the usual market rate for Silver. Due to market volatility, this offer may be rescinded at any time."
+	source
+		government "Republic" "Syndicate" "Free Worlds" "Independent" "Neutral"
+		attributes urban
+	to offer
+		random < 2
+	to fail
+		random < 1
+	on fail
+		dialog `The market rate for Silver has returned to normal on <destination>. Your Silver contract is cancelled.`
+	on complete
+		outfit "Silver" -10
+		payment 120000
+		dialog `The metals exchange on <planet> accepts your delivery of Silver and pays you <payment>.`
+
+mission "Mining: Gold"
+	job
+	deadline 7
+	name "Mining: Gold to <system>"
+	descripion "Market speculation on <destination> has created a run on Gold. Bring 10 tons of Gold to the metals exchange by <date>. Payment is <payment>, 100% above the usual market rate for Gold. Due to market volatility, this offer may be rescinded at any time."
+	source
+		government "Republic" "Syndicate" "Free Worlds" "Independent" "Neutral"
+		attributes urban
+	to offer
+		random < 2
+	to fail
+		random < 1
+	on fail
+		dialog `The market rate for Gold has returned to normal on <destination>. Your Gold contract is cancelled.`
+	on complete
+		outfit "Gold" -10
+		payment 160000
+		dialog `The metals exchange on <planet> accepts your delivery of Gold and pays you <payment>.`
+
+mission "Mining: Platinum"
+	job
+	deadline 7
+	name "Mining: Platinum to <system>"
+	descripion "Market speculation on <destination> has created a run on Platinum. Bring 10 tons of Platinum to the metals exchange by <date>. Payment is <payment>, 100% above the usual market rate for Platinum. Due to market volatility, this offer may be rescinded at any time."
+	source
+		government "Republic" "Syndicate" "Free Worlds" "Independent" "Neutral"
+		attributes urban
+	to offer
+		random < 2
+	to fail
+		random < 1
+	on fail
+		dialog `The market rate for Platinum has returned to normal on <destination>. Your Platinum contract is cancelled.`
+	on complete
+		outfit "Platinum" -10
+		payment 200000
+		dialog `The metals exchange on <planet> accepts your delivery of Platinum and pays you <payment>.`
 
 
 

@@ -1642,6 +1642,29 @@ fleet "Derelict Northern Pirate"
 #######################
 
 
+# From mission "Free Worlds Infiltrator 1"
+event "navy plasma gunboats"
+	fleet "Small Republic"
+		add variant 1
+			"Gunboat (Plasma)"
+			"Rainmaker"
+		add variant 1
+			"Gunboat (Plasma)" 2
+		add variant 1
+			"Gunboat (Plasma)"
+
+# From mission "Free Worlds Infiltrator 2"
+event "navy flamethrower gunboats"
+	fleet "Small Republic"
+		add variant 1
+			"Gunboat (Flamethrower)"
+			"Rainmaker"
+		add variant 1
+			"Gunboat (Flamethrower)" 2
+		add variant 1
+			"Gunboat (Flamethrower)"
+
+
 # From mission "Bounty Hunting: Angry Chicken" in Jobs Misc.
 event "add energy cannon variants"
 	fleet "Small Southern Merchants"
