@@ -388,3 +388,61 @@ mission "Intro Bounty Hunting 5"
 	on complete
 		payment 125000
 		dialog phrase "generic bounty hunting payment dialog"
+
+
+
+
+#################
+# Blood Rage start exlusive
+#################
+
+mission "Intro Mining [Blood Rage]"
+	job
+	deadline 7
+	name "Mining: Copper to <system>"
+	descripion "The shipyard on <destination> has a shortage of Copper. Bring 20 tons of Copper to the shipyard by <date>. Payment is <payment>, 50% above the usual market rate for Copper."
+	source "Hestia"
+	to offer
+		has "Blood Rage start"
+		has "Intro [3 Interceptor]: done"
+	on accept
+		conversation
+			scene "asteroid/gold/spin"
+			`Valuable ore can be mined from certain asteroids if you shoot at them enough. These asteroids look slightly different from the common metal and rock asteroids. If you are having trouble telling them apart, an Asteroid Scanner will highlight these asteroids for you.`
+	on complete
+		outfit "Copper" -20
+		payment 90000
+		dialog `The shipyards on <planet> accept your delivery of Copper and pay you <payment>.`
+
+
+#################
+# Mata Hari start exlusive
+#################
+
+mission "Intro Corporate espionage [Mata Hari]"
+	name "Corporate espionage"
+	description "The <npc> is about to enter this system. Locate it and make detailed scans of its cargo, which are of considerable interest to a team of Syndicate researchers on <destination>; proceed there for <payment> after retrieving the data."
+	job
+	to offer
+		has "Mata Hari start"
+		has "Intro [3 Transport]: done"
+	source "Hestia"
+	destination
+		government Syndicate
+		attributes research
+		distance 3 12
+	on accept
+		conversation
+			scene "ship/bounder"
+			`The target should arrive soon after you launch. Use a Cargo Scanner to scan the ship before it leaves! Then head to <destination> to complete this mission."
+	npc "scan cargo"
+		government Merchant
+		personality uninterested entering target
+		fleet
+			names "civilian"
+			variant
+				"Bounder"
+		dialog "You manage to make the requested scans of the <npc>'s cargo. Time to head to <planet>."
+	on complete
+		dialog `You transmit your scans and receive a hearty congratulations, as well as <payment>. "This will save us months!" you hear someone say in the background as you close the audio link.`
+		payment 50000
