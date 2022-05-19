@@ -35,7 +35,7 @@ mission "Sheragi Shenanigans: Sapphire Shield 1"
 	on complete
 		conversation
 			scene "ship/sapphire shield"
-			`The Sapphire Shield is on display at the <planet> Ship Expo. Unfortunately, the line to get in is so long, the expo will close before you'll reach the front. There must be some other way for you to get close to the ship.`
+			`The Sapphire Shield is on display at the <planet> Ship Expo. Unfortunately, the line to get in is so long, the expo will close before you'll reach the front. There must be some other way for you to get close to the ship. Maybe they're hiring escorts through the job board.`
 
 mission "Sheragi Shenanigans: Sapphire Shield 2"
 	job
@@ -299,6 +299,43 @@ mission "Sheragi Shenanigans: Sapphire Shield Epilogue B"
 		clear "Sheragi Shenanigans: Sapphire Shield Epilogue B: offered"
 		dialog `The captain of the <npc> thanks you for escorting his ship and pays you <payment>.`
 
+
+
+phrase "Ruby Dagger Clue"
+	word
+		`At the bar you overhear `
+	word
+		`some bounty hunters `
+		`some Syndicate security officers `
+		`some freighter captains `
+		`some mercenaries `
+	word
+		`talking about an alien ship `
+	word
+		`attacking `
+		`raiding `
+		`plundering `
+	word
+		`merchant ships in the area. They call it the Ruby Dagger. From the way they describe the vessel, it sounds like a smaller version of the Emerald Sword. Some planets are already offering bounties on it.`
+
+
+mission "Sheragi Shenanigans: Ruby Dagger Hint"
+	invisible
+	repeat
+	source
+		government "Syndicate"
+	to offer
+		has "Sheragi Archaeology: Epilogue: done"
+		not "Sheragi Shenanigans: Ruby Dagger 1: active"
+		not "Sheragi Shenanigans: Ruby Dagger 1: done"
+		random < 25 - "Ruby Dagger Rumors"
+	on offer
+		dialog phrase "Ruby Dagger Clue"
+	on decline
+		"Ruby Dagger Rumors" ++
+	on accept
+		"Ruby Dagger Rumors" ++
+		fail
 
 
 mission "Sheragi Shenanigans: Ruby Dagger 1"
