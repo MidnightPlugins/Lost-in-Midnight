@@ -418,7 +418,7 @@ mission "Intro Mining [Blood Rage]"
 
 mission "Intro Corporate espionage [Mata Hari]"
 	name "Corporate espionage"
-	description "The <npc> is about to enter this system. Locate it and make detailed scans of its cargo, which are of considerable interest to a team of Syndicate researchers on <destination>; proceed there for <payment> after retrieving the data."
+	description "The <npc> is about to enter this system. Locate it and make detailed scans of its cargo, which are of considerable interest to a team of Syndicate researchers on <destination>; proceed there for <payment> after retrieving the data."`
 	job
 	to offer
 		has "Mata Hari start"
