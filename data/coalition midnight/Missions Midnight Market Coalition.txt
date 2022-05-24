@@ -102,11 +102,9 @@ mission "Midnight Market: Trailblazer Auction"
 			`	After signing off on the transfer forms, you look upon your new ship. You make a mental note to take it to an outfitter as soon as possible to get a closer look at those guns...`
 				accept
 	on decline
-		set "trailblazer encountered"
 		event "stolen trailblazer timer" 30
 		log `I saw a Saryd Trailblazer sold at a Coalition auction. I was amazed that the Heliarch allowed the ship to be sold with its guns installed. There is still much for me to learn about the Coalition's legal system regarding civilian weapon ownership.`
 	on accept
-		set "trailblazer encountered"
 		event "Model Guns For Sale"
 		payment -33000000
 		give ship "Saryd Trailblazer (Antique)" "Exturebus Maglorumus"
