@@ -448,21 +448,32 @@ mission "Day of Subsidurius"
 
 
 mission "Weaponized Subsidurial Bounty"
+	job
+	repeat
 	name "Weaponized Subsidurials near <system>"
 	description "The <npc> and its herd of weaponized Subsidurials are attacking merchants near <system>. Destroy the <npc> and report to <destination>. Payment is payment." 
 	source
 		government "Free Worlds"
 	to offer
 		has "Day of Subsidurius: done"
-		random < 10
+		random < 5
 	npc
 		government "Bounty"
 		personality target entering harvests mute
 			confusion 120
 		fleet
 			variant
-				"Subsidurial Weaponized A" 3
-				"Subsidurial Weaponized B" 4
+				"Subsidurial Weaponized A" 1
+				"Subsidurial Weaponized B" 2
+				"Subsidurial Weaponized C" 4
+			variant
+				"Subsidurial Weaponized A" 2
+				"Subsidurial Weaponized B" 1
+				"Subsidurial Weaponized C" 4
+			variant
+				"Subsidurial Weaponized A" 2
+				"Subsidurial Weaponized B" 2
+				"Subsidurial Weaponized C" 3
 	npc kill
 		government "Bounty"
 		personality target entering staying vindictive
@@ -476,6 +487,8 @@ mission "Weaponized Subsidurial Bounty"
 
 
 mission "Weaponized Subsidurial Stray"
+	job
+	repeat
 	name "Stray Weaponized Subsidurial"
 	description "A stray weaponized Subsidurial is wandering near <system>. Find and herd it back to <destination> to be de-weaponized. Payment is <payment>."
 	source
@@ -499,7 +512,191 @@ mission "Weaponized Subsidurial Stray"
 	on complete
 		payment 100000
 		dialog `The government of <planet> pays you <payment> for helping de-weaponize the Subsidurial.`
-		
+
+
+
+ship "Subsidurial" "Subsidurial Porter"
+	sprite "ship/subsidurial porter"
+	"uncapturable"
+	"swizzle" 0
+	add attributes
+		"outfit space" 200
+		"threshold percentage" .75
+	outfits
+		"Cargo Expansion" 10
+
+mission "Subsidurial Porter"
+	job
+	name "Subsidurial Porter"
+	description "A merchant wants to see if Subsidurial porters are a viable business strategy. Herd the Subsidurial porter to <destination>. The client will ride along on your ship to observe. Payment is <payment>."
+	source
+		government "Syndicate"
+		attributes "frontier"
+	destination
+		government "Republic" "Free Worlds"
+		attributes "frontier"
+	passengers 1
+	to offer
+		has "Day of Subsidurius: done"
+		random < 5
+	npc evade
+		government "Pirate"
+		personality entering harvests plunders
+			confusion 20
+		fleet "Large Core Pirates"
+		fleet "Small Core Pirates"
+	npc evade
+		to spawn
+			"combat rating" > 600
+		government "Pirate"
+		system
+			distance 1 2
+		personality harvests plunders
+			confusion 10
+		fleet "Marauder fleet VI"
+	npc evade
+		government "Pirate"
+		system
+			distance 2 3
+		personality harvests plunders
+			confusion 20
+		fleet "Large Core Pirates"
+		fleet "Small Core Pirates"
+	npc evade
+		government "Pirate"
+		system
+			distance 3 4
+		personality harvests plunders
+			confusion 20
+		fleet "Large Core Pirates"
+		fleet "pirate raid"
+	npc evade
+		to spawn
+			"combat rating" > 800
+		government "Pirate"
+		system
+			distance 4 5
+		personality harvests plunders
+			confusion 10
+		fleet "Marauder fleet VIII"
+	npc evade
+		government "Pirate"
+		system destination
+		personality staying harvests plunders
+			confusion 20
+		fleet "Large Core Pirates"
+		fleet "Small Core Pirates"
+		fleet "pirate raid"
+	npc evade
+		to spawn
+			"combat rating" > 1000
+		government "Pirate"
+		system destination
+		personality staying harvests plunders
+			confusion 10
+		fleet "Marauder fleet X"
+	npc accompany save
+		government "Merchant"
+		personality target escort mute
+		cargo 3
+		fleet
+			variant
+				"Subsidurial Porter"
+	on fail
+		dialog `Your client muses that perhaps Subsidurial porters aren't a viable business strategy afterall...`
+	on complete
+		clear "Subsidurial Porter: offered"
+		payment 500000
+		dialog `The owner of the Subsidurial porter pays you <payment> for safely herding the Subsidurial and its cargo to <planet>.`
+
+
+
+outfitter "Gold"
+	"Gold"
+
+mission "Golden Subsidurials"
+	deadline 7
+	name "Golden Subsidurials"
+	description "Stray Subsidurial porters carrying precious Gold were last spotted near <system>. It's a race to find them before the pirates do!"
+	source
+		government "Pirate"
+	to offer
+		has "Subsidurial Porter: done"
+		random < 5
+	on offer
+		conversation
+			`The spaceport is in a flurry of activity as pirates are rushing to refuel their ships and take off. If this weren't a pirate world, you'd think the planet was being raided by pirates or something.`
+			choice
+				`	(Ask what's going on.)`
+				`	(Ignore them.)`
+					defer
+			scene "ship/subsidurial porter"
+			`One pirate answers your question while pouring fuel into his ship. "Someone plundered a merchant fleet that included Subsidurials with cargo containers on their backs. When they opened the container on one of the Subsidurials they found Gold. Now everone's in a rush to find the Subsidurials that ran when the fleet was attacked."`
+				accept
+	npc
+		government "Pirate"
+		system
+			distance 1 2
+		personality harvests plunders uninterested
+			confusion 20
+		fleet "pirate raid"
+	npc
+		government "Pirate"
+		system
+			distance 2 3
+		personality harvests plunders uninterested
+			confusion 20
+		fleet "pirate raid"
+	npc
+		government "Pirate"
+		system
+			distance 3 4
+		personality harvests plunders uninterested
+			confusion 20
+		fleet "pirate raid"
+	npc board
+		government "Merchant"
+		system
+			distance 1 2
+		personality target staying uninterested mute
+		cargo 1
+		outfitters "Gold"
+		fleet
+			variant 10
+				"Subsidurial Porter"
+			variant 2
+				"Subsidurial Porter" 2
+			variant 1
+				"Subsidurial Porter" 3
+	npc board
+		government "Merchant"
+		system
+			distance 2 3
+		personality target staying uninterested mute
+		cargo 1
+		outfitters "Gold"
+		fleet
+			variant 10
+				"Subsidurial Porter"
+			variant 2
+				"Subsidurial Porter" 2
+			variant 1
+				"Subsidurial Porter" 3
+	npc board
+		government "Merchant"
+		system
+			distance 3 4
+		personality target staying uninterested mute
+		cargo 1
+		outfitters "Gold"
+		fleet
+			variant 10
+				"Subsidurial Porter"
+			variant 2
+				"Subsidurial Porter" 2
+			variant 1
+				"Subsidurial Porter" 3
+
 
 
 mission "Midnight Market: Pet Subsidurial"
