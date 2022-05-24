@@ -747,7 +747,7 @@ mission "Ghost Hunting: Zubenelgenubi Ghost Ship"
 		attributes "dirt belt"
 	waypoint Zubenelgenubi
 	to offer
-		"month" == 10
+#		"month" == 10
 		has "Coalition: First Contact: done"
 		has "Ghost Hunting: Poltergeist King 2: done"
 	on offer
@@ -770,17 +770,19 @@ mission "Ghost Hunting: Zubenelgenubi Ghost Ship"
 
 	on enter Zubenelgenubi
 		conversation
+			scene "scene/scene-trailblazerzubenelgenubi"
 			branch "trailblazer encountered"
 				has "trailblazer encountered"
 
-			`	While you haven't seen this ship before, the derelict you've found strongly resembles a Coalition design. Perhaps it spent hundreds or even thousands of years floating through the empty void to get here. Unfortunately, it did not make the journey unscathed. A tiny asteroid has wedged itself into the hull. Also, it looks like you weren't the first one to find this derelict.`
-			scene "scene/scene-trailblazerzubenelgenubi"
-				accept
+			`	While you haven't seen this ship before, the derelict you've found strongly resembles a Coalition design. Perhaps it spent hundreds or even thousands of years floating through the empty void to get here. Unfortunately, it did not make the journey unscathed. A tiny asteroid has wedged itself into the hull.`
+				goto company
 			
 			label "trailblazer encountered"
-			`	You've seen this type of ship before. The derelict you've found is a rare Coalition design. Perhaps it spent hundreds or even thousands of years floating through the empty void to get here. Unfortunately, it did not make the journey unscathed. A tiny asteroid has wedged itself into the hull. Also, it looks like you weren't the first one to find this derelict.`
-			scene "scene/scene-trailblazerzubenelgenubi"
-				accept
+			`	You've seen this type of ship before. The derelict you've found is a rare Coalition design. Perhaps it spent hundreds or even thousands of years floating through the empty void to get here. Unfortunately, it did not make the journey unscathed. A tiny asteroid has wedged itself into the hull.`
+				goto company
+
+			label company
+			`Also, it looks like you weren't the first one to find this derelict.`
 
 	npc
 		system Zubenelgenubi
@@ -880,6 +882,7 @@ mission "Ghost Hunting: Zubenelgenubi Ghost Ship"
 		event "Ghost restore Zubenelgenubi"
 	on fail
 		event "Ghost restore Zubenelgenubi"
+		set "trailblazer encountered"
 	on complete
 		event "Ghost restore Zubenelgenubi"
 		log `Salvaged an old Saryd warship from the era of the Coalition's rebellion against the Quarg. After a tiny asteroid crashed into the ship, some sort of alien virus it contained had infected the crew and turned them into zombies. Fortunately, the virus doesn't seem to infect humans and I was able to sterilize the ship.`
