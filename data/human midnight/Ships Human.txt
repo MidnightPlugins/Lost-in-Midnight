@@ -440,7 +440,7 @@ ship "Hipparion"
 
 
 
-# Infiltrator
+# Infiltrators are available as an alternate start and in some missions.
 
 ship "Infiltrator"
 	sprite "ship/infiltrator/infiltrator"

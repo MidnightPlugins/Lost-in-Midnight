@@ -158,7 +158,7 @@ mission "Free Worlds Infiltrator 1"
 				accept
 	npc "board"
 		government Republic
-		personality fleeing uninterested entering target marked
+		personality fleeing uninterested entering target marked mute
 		ship "Infiltrator" "Provocateur"
 		dialog "You've recovered the secret data. It doesn't look like they've had a chance to decrypt it. Time to head to <planet>."
 	on fail
@@ -203,7 +203,7 @@ mission "Free Worlds Infiltrator 2"
 				accept
 	npc "board"
 		government Republic
-		personality fleeing uninterested entering target marked
+		personality fleeing uninterested entering target marked mute
 		ship "Infiltrator" "Clandestine"
 		dialog "You've recovered the secret data. It doesn't look like they've had a chance to decrypt it. Time to head to <planet>."
 	on fail
@@ -225,6 +225,59 @@ mission "Free Worlds Infiltrator 2 failure"
 			decline
 
 
+
+mission "Infiltrator: Secret Data"
+	landing
+	invisible
+	deadline
+	source
+		government "Pirate"
+	destination Earth
+	npc board
+		government "Derelict (Killable)"
+		personality derelict mute marked
+		ship "Infiltrator (Derelict)" "Conundrum"
+		dialog `The pilot is mortally wounded. He asks you to take the Secret Data on an encrypted data chip in his cargo hold to the office of Republic Intelligence on Earth by <date>.`
+	on fail
+		outfit "Secret Data" -1
+	on complete
+		payment 15000
+		outfit "Secret Data" -1
+		conversation
+			scene "outfit/unknown"
+			`You deliver the encrypted data chip to the office of Republic Intelligence on Earth. The agents interrogate you about how you got it. After a few hours, they let you go with a small reward for your trouble. You never actually learn the contents of the data chip.`
+
+ship "Infiltrator" "Infiltrator (Derelict)"
+	"uncapturable"
+	outfits
+		"Secret Data"
+		"Silencer Beam" 2
+
+outfit "Secret Data"
+	category "Special"
+	thumbnail "outfit/unknown"
+	description "Secret data on an encrypted data chip. You have no clue what the contents are."
+
+
+
+mission "Infiltrator: War Begins"
+	landing
+	invisible
+	deadline 30
+	to offer
+		has "event: war begins"
+	npc kill
+		government "Republic"
+		system Castor
+		personality waiting staying surveillance timid mute
+		ship "Infiltrator" "Subterfuge"
+	npc kill
+		government "Republic"
+		system Pollux
+		personality waiting staying surveillance timid mute
+		ship "Infiltrator" "Discretion"
+
+		
 
 mission "Star Explorer Fan Tour"
 	name "Star Explorer Fan Tour"
@@ -364,7 +417,7 @@ ship "Blackbird" "Alien Blackbird"
 		"Hyperdrive"
 
 
-		
+
 #########################
 # missions that repeat
 #########################
