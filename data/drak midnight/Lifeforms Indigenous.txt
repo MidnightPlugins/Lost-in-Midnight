@@ -598,8 +598,8 @@ mission "Subsidurial Porter"
 	npc accompany save
 		government "Merchant"
 		personality target escort mute
-		cargo 3
 		fleet
+			cargo 3
 			variant
 				"Subsidurial Porter"
 	on fail
@@ -659,9 +659,9 @@ mission "Golden Subsidurials"
 		system
 			distance 1 2
 		personality target staying uninterested mute
-		cargo 1
-		outfitters "Gold"
 		fleet
+			cargo 1
+			outfitters "Gold"
 			variant 10
 				"Subsidurial Porter"
 			variant 2
@@ -673,9 +673,9 @@ mission "Golden Subsidurials"
 		system
 			distance 2 3
 		personality target staying uninterested mute
-		cargo 1
-		outfitters "Gold"
 		fleet
+			cargo 1
+			outfitters "Gold"
 			variant 10
 				"Subsidurial Porter"
 			variant 2
@@ -687,9 +687,9 @@ mission "Golden Subsidurials"
 		system
 			distance 3 4
 		personality target staying uninterested mute
-		cargo 1
-		outfitters "Gold"
 		fleet
+			cargo 1
+			outfitters "Gold"
 			variant 10
 				"Subsidurial Porter"
 			variant 2
