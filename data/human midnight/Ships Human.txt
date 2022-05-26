@@ -1062,10 +1062,10 @@ ship "Star Explorer"
 		"engine capacity" 150
 		"atmosphere scan" 100
 		weapon
-			"blast radius" 60
-			"shield damage" 600
-			"hull damage" 300
-			"hit force" 900
+			"blast radius" 130
+			"shield damage" 1250
+			"hull damage" 630
+			"hit force" 1900
 	outfits
 		"Laser Turret" 6
 		"Torpedo Launcher"
