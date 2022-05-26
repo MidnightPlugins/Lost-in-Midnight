@@ -1100,8 +1100,8 @@ ship "Star Explorer"
 		right
 	"steering engine" 36 151
 		left
-	reverse engine -36 52
-	reverse engine 36 52
+	"reverse engine" -36 52
+	"reverse engine" 36 52
 	gun 0 -111
 	turret -20 -110
 	turret 20 -110

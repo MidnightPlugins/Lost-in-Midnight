@@ -717,7 +717,7 @@ mission "Free Worlds espionage"
 
 
 
-mission "Medical Bay: Patient Transport
+mission "Medical Bay: Patient Transport"
 	job
 	deadline
 	repeat

@@ -237,9 +237,9 @@ ship "Bastion" "Bastion (Korath)"
 		"Jump Drive"
 
 	gun
-	gun "Plasma Repeater"
+	gun "Plasma Cannon"
 	gun
-	gun "Plasma Repeater"
+	gun "Plasma Cannon"
 	turret "Quad Blaster Turret"
 	turret "Quad Blaster Turret"
 	turret "Korath Warder"
