@@ -1665,6 +1665,26 @@ event "navy flamethrower gunboats"
 			"Gunboat (Flamethrower)"
 
 
+
+# From mission "Star Explorer Fan Tour"
+event "star explorer added to merchant fleets"
+	fleet "Large Southern Merchants"
+		add variant 1
+			"Star Explorer"
+			"Dagger"
+			"Hacker Drone"			
+	fleet "Large Northern Merchants"
+		add variant 1	
+			"Star Explorer"
+			"Dagger"
+			"Hacker Drone"
+	fleet "Large Core Merchants"
+		add variant 1	
+			"Star Explorer"
+			"Dagger"
+			"Hacker Drone"
+
+
 # From mission "Bounty Hunting: Angry Chicken" in Jobs Misc.
 event "add energy cannon variants"
 	fleet "Small Southern Merchants"

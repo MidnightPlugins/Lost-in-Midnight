@@ -1,0 +1,586 @@
+# Copyright (c) 2021 by Michael Arsollon
+# derived from original game at https://github.com/endless-sky/endless-sky
+#
+# Endless Sky is free software: you can redistribute it and/or modify it under the
+# terms of the GNU General Public License as published by the Free Software
+# Foundation, either version 3 of the License, or (at your option) any later version.
+#
+# Endless Sky is distributed in the hope that it will be useful, but WITHOUT ANY
+# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+
+
+
+mission "Blue Ridge 1"
+	name "Auction: Blue Ridge"
+	description "The Blue Ridge is up for auction on <destination>. They are only accepting bids from pilots with a valid Militia License. You'll need several million credits to even consider placing a bid."
+	source
+		government "Free Worlds"
+		not planet "Longjump"
+	destination Longjump
+	to offer
+		month == 8
+	on offer
+		conversation
+			scene "ship/hipparion"
+			`You notice a crowd gathered around a bulletin board. Checking to see what has their interest, it's a posted flyer: "In order to raise funds, the Museum of Space Exploration on <destination> will be auctioning off the Blue Ridge, the ship Han Sizer used to explore the Southern Rim. Participation in this auction is limited to pilots with a valid Militia license.`
+			`	"Smart move," comments a freighter captain. "They can raise funds for the government while ensuring that the ship remains in the hands of someone loyal to the Free Worlds."`
+			`	A militia pilot adds, "They also made the announcement during Han Sizer month to maximize interest. Bidding will definitely reach several million credits."`
+			choice
+				`	(Remember this for later.)`
+				`	(Forget about it.)`
+					decline
+			scene "outfit/militia license"
+			branch "militia license"
+				has "license: Militia"
+			`	You'll need a Militia license. If you ever manage to get one, stop by <destination>.`
+				accept
+			label "militia license"
+			`	You have a Militia license. To place a bid, stop by <destination>.`
+				accept
+	to fail
+		has "main plot completed"
+		not "license: Militia"
+	to complete
+		has "license: Militia"
+		"credits" >= 6000000
+	on visit
+		dialog `You'll need a Militia license to bid on the Blue Ridge. The current bid is at 5,900,000 credits.`
+
+
+mission "Blue Ridge 2"
+	landing
+	invisible
+	source Longjump
+	to offer
+		has "license: Militia"
+		has "Blue Ridge 1: offered"
+		not "Blue Ridge 1: declined"
+		"credits" >= 6000000
+	on offer
+		conversation
+			scene "outfit/militia license"
+			`You visit the Museum of Space Exploration to place a bid on the Blue Ridge, the ship Han Sizer used to explore the Southern Rim. To prove your eligibility, you show the receptionist your Militia license.`
+			`	"Your license checks out," she says after looking you up in the computer system. "You have perfect timing Captain <last>! The auction ends today. Once bidding hit a million credits, we started only accepting bids in increments of 100,000 credits to help limit the auction to serious bidders only. The current bid is at 5,900,000 credits. Would you like to place a bid for 6,000,000 credits?"`
+			choice
+				`	(Bid 6,000,000 credits.)`
+					goto win
+				`	(Do not bid.)`
+			`	"I'm sorry to hear that," she says. "The 5,900,000 credit bid has been up for a while now and no one seems willing to go over that. With 6,000,000 credits, I'm certain you'd win."`
+			choice
+				`	(Bid 6,000,000 credits.)`
+					goto win
+				`	(Do not bid.)`
+					decline
+			label win
+			`	"I've placed your bid into the system," she says. "Come back once the Museum closes to learn the result."`
+			choice
+				`	(Return later.)`
+			scene "ship/hipparion"
+			`You stop by the museum as it is about to close. "Congratulations Captain <last>. You are the winner of the Blue Ridge," says the receptionist. "Let's process the payment and legal transfer of ownership."`
+			`	Once that gets taken care of, she shows you where the ship is stored. You look over the ship and notice that the weapons are archaic, but functional. More concerning is the lack of a Hyperdrive. You can drop by the outfitter later to buy one, but your curiosity has been piqued.`
+			choice
+				`	"Why isn't there a Hyperdrive?"`
+			scene "outfit/unknown"
+			`	She grins and answers, "It's for security, so thieves can't just take the ship and flee the system." It sounds like a reasonable explanation.`
+			`	But then she leans in and whispers conspiratorially, "There are rumors that Han Sizer got ahold of some alien device, like the ones the Quarg use instead of a Hyperdrive. Supposedly the government confiscated it after he died." She leans back, "But whether that's true or not, who can say?" She smiles mishieviously and you wonder if that's just a story they tell museum guests to enhance the legend of Han Sizer.`
+				decline
+	on decline
+		payment -6000000
+		give ship "Hipparion" "Blue Ridge"
+
+
+
+mission "Executive Guard: Syndicate Extremists"
+	landing
+	invisible
+	destination "Buccaneer Bay"
+	clearance
+	to offer
+		has "FW Syndicate Extremists 1A: done"
+		"ships: Heavy Freighter" + "ships: Medium Warship" + "ships: Heavy Warship" > 7
+	npc
+		government "Syndicate (Extremist)"
+		system Algenib
+		personality waiting staying heroic
+		ship "Executive Guard" "S.S. Longinus"
+		ship "Barb (Proton)" "F-001" 
+		ship "Barb (Proton)" "F-002"
+		ship "Barb (Proton)" "F-003"
+		ship "Barb (Proton)" "F-004"
+		ship "Barb (Proton)" "F-005"
+		ship "Barb (Proton)" "F-006"
+	npc evade
+		to spawn
+			"ships: Heavy Freighter" + "ships: Medium Warship" + "ships: Heavy Warship" > 9
+		government "Syndicate (Extremist)"
+		system Algenib
+		personality waiting staying heroic
+		fleet
+			names "syndicate capital"
+			variant
+				"Protector (Proton)" 2
+	npc evade
+		to spawn
+			"ships: Heavy Freighter" + "ships: Medium Warship" + "ships: Heavy Warship" > 11
+		government "Syndicate (Extremist)"
+		system Algenib
+		personality waiting staying heroic
+		fleet
+			names "syndicate capital"
+			variant
+				"Vanguard" 2
+
+
+
+mission "Free Worlds Infiltrator 1"
+	landing
+	deadline 7
+	name "Free Worlds Infiltrator"
+	description "A Republic Intelligence spy ship named the <npc> was spotted near <origin>. Catch the fleeing ship before <date> and retrieve whatever data they've acquired. Then deliver it to <destination>."
+	source
+		government "Free Worlds"
+	destination
+		government "Free Worlds"
+		attributes urban
+		distance 3 12
+	to offer
+		random < 25
+		has "salary: Free Worlds"
+		not "event: fw armistice"
+		has "fw first chapter done"
+		not "FW Pirates 4.1: offered"
+		not "event: navy occupying the south"
+	on offer
+		conversation
+			scene "thumbnail/infiltrator-thumb"
+			`You receive a message from JJ. "Sorry to bother you even though we were hoping to enoy a break, but a Republic spy ship was spotted near <origin>. Since you're in the area, keep an eye out for it and retrieve any secret data they might've gotten their hands on. If you haven't caught the ship by <date>, we'll assume it escaped.`
+				accept
+	npc "board"
+		government Republic
+		personality fleeing uninterested entering target marked
+		ship "Infiltrator" "Provocateur"
+		dialog "You've recovered the secret data. It doesn't look like they've had a chance to decrypt it. Time to head to <planet>."
+	on fail
+		event "navy plasma gunboats" 60
+	on complete
+		"reputation: Free Worlds" ++
+		payment 50000
+		dialog `The Free Worlds appreciates the retrieval of the stolen data and gives you <payment> in bonus pay.`
+
+mission "Free Worlds Infiltrator 1 failure"
+	landing
+	source
+		government "Free Worlds"
+	to offer
+		has "Free Worlds Infiltrator 1: failed"
+		has "event: navy plasma gunboats"
+	on offer
+		dialog "Eyewitness reports of Navy Gunboats armed with Plasma Cannnons indicate that designs for the Plasma Cannon was among the data stolen by that Republic Intelligence spy ship you were unable to catch."
+			decline
+	
+mission "Free Worlds Infiltrator 2"
+	landing
+	deadline 7
+	name "Free Worlds Infiltrator"
+	description "A Republic Intelligence spy ship named the <npc> was spotted near <origin>. Catch the fleeing ship before <date> and retrieve whatever data they've acquired. Then deliver it to <destination>."
+	source
+		government "Free Worlds"
+	destination
+		government "Free Worlds"
+		attributes urban
+		distance 3 12
+	to offer
+		random < 25
+		has "salary: Free Worlds"
+		not "event: fw armistice"
+		has "fw delivered prisoners"
+		not "event: fw occupying the north"
+	on offer
+		conversation
+			scene "thumbnail/infiltrator-thumb"
+			`You receive a message from Freya. "Sorry to bother you even though we were hoping to enoy a break, but a Republic spy ship was spotted near <origin>. Since you're in the area, keep an eye out for it and retrieve any secret data they might've gotten their hands on. If you haven't caught the ship by <date>, we'll assume it escaped.`
+				accept
+	npc "board"
+		government Republic
+		personality fleeing uninterested entering target marked
+		ship "Infiltrator" "Clandestine"
+		dialog "You've recovered the secret data. It doesn't look like they've had a chance to decrypt it. Time to head to <planet>."
+	on fail
+		event "navy flamethrower gunboats" 60
+	on complete
+		"reputation: Free Worlds" ++
+		payment 50000
+		dialog `The Free Worlds appreciates the retrieval of the stolen data and gives you <payment> in bonus pay.`
+
+mission "Free Worlds Infiltrator 2 failure"
+	landing
+	source
+		government "Free Worlds"
+	to offer
+		has "Free Worlds Infiltrator 2: failed"
+		has "event: navy flamethrower gunboats"
+	on offer
+		dialog "Eyewitness reports of Navy Gunboats armed with Flamethrowers indicate that designs for the Flamethrower was among the data stolen by that Republic Intelligence spy ship you were unable to catch."
+			decline
+
+
+
+mission "Star Explorer Fan Tour"
+	name "Star Explorer Fan Tour"
+	description "Escort the <npc> through the systems marked on your map. Be prepared to engage in mock battles with 'aliens'. Once all of the systems have been visited, return them safely to <destination> for <payment>."
+	source
+		attributes "paradise"
+	waypoint Mirzam
+	waypoint Sospi
+	waypoint Acamar
+	to offer
+		"combat rating" > 200
+		or
+			not "Randomize Star Explorer Fan Tour"
+			and
+				has "Randomize Star Explorer Fan Tour"
+				random < 5			
+	on offer
+		conversation
+			scene "ship/star explorer"
+			`You notice a long line of strangely dressed passengers waiting to board one particular ship.`
+			choice
+				`	(Ask what's going on.)`
+				`	(Ignore them.)`
+					defer
+			`	"It's a cruise for fans of Star Explorer, an old Earth science fiction show," one of the people waiting in line exclaims. You find it hard to believe that all these costumes came from the same show. Some fans are dressed in simple black pants and shirts of various colors while others are wearing elaborate battle armor and make-up.`
+			`	Before the rabid fan can begin talking your ear off about the show, the ship's captain approaches and asks, "Excuse me, would you happen to have a pilot's license?"`
+			choice
+				`	"Sure. Do you need a pilot?"`
+				`	"Uh, no. No pilot's license here."`
+					decline
+			scene "ship/blackbird alien"
+			`	"As a matter of fact, our escort cancelled on us and we're in urgent need of a replacement. Just accompany us to <waypoints>. We'll be engaging in mock battles with 'aliens' flying some custom painted Blackbirds. Of course that's just for show, so make sure not to destroy them. We'll return here when we're done. Oh, and of course we'll need protection in case real pirates show up."`
+			`	Could be an interesting job.`
+			choice
+				`	(Escort the Star Explorer.)`
+					accept
+				`	(Do not escort the Star Explorer.)`
+					decline
+	on defer
+		set "Randomize Star Explorer Fan Tour"
+	on accept
+		clear "star explorer pirate raid activated"
+		event "star explorer added to merchant fleets"
+	on decline
+		event "star explorer added to merchant fleets"
+	on enter
+		conversation
+			scene "ship/star explorer"
+			`	Orchestral music plays as a message from the Star Explorer's captain is transmitted, "This is Captain Tim Smirk of the Last Frontier. The Star Explorer wasn't just a show. It was an ancient space exploration vessel from the early days of Hyperspace travel. It's design was heavily influenced by an old Earth science-fiction show with the same name as a marketing gimmick to entice young people to leave Sol and risk their lives exploring the vast unknown. Of the few that haven't been lost or destroyed, there are some still being used as actual science and exploration vessels. We'll be traveling to <waypoints> in search of new life and peaceful civilizations as we explore in the Last Frontier. But beware! The dreaded Grabons could attack us along the way! Rest assured I will endeavor to keep us safe along with our escort, Captain <first> <last> and his <ship>." Apparently that was an address meant for the passengers. Nice touch, adding your name at the end."
+
+	on enter "Mirzam"
+		dialog `Captain Smirk sends out a message, "Red Alert! Hostile Grabons are attacking!" This must be one of the mock battles. You're only supposed to disable them, but those lasers are real...`
+		
+	npc save disable
+		government "Phenomenon (dangerous)"
+		system Mirzam
+		personality target waiting staying disables marked opportunistic
+		ship "Alien Blackbird" "Grabon Warship"
+		dialog `Captain Smirk sends out a message, "The Grabons have stopped attacking thanks to the help of the <ship>! To celebrate, drinks and snacks are 10% off for the next hour at the ship lounge."`
+		
+	on enter "Sospi"
+		dialog `Captain Smirk sends out a message, "You are seeing a rare site folks. This is a Wolf-Rayet star. The galaxy is filled with awesome wonders like this. You just have to search for them."`
+
+	on enter "Acamar"
+		dialog `Captain Smirk sends out a message, "Red Alert! Hostile Grabons are attacking!" This must be one of the mock battles. You're only supposed to disable them, but those lasers are real...`
+		
+	npc save disable
+		government "Phenomenon (dangerous)"
+		system Acamar
+		personality target waiting staying disables marked opportunistic
+		ship "Alien Blackbird" "Grabon Warship"
+		dialog `Captain Smirk sends out a message, "The Grabons have stopped attacking thanks to the help of the <ship>! To celebrate, drinks and snacks are 10% off for the next hour at the ship lounge."`
+		
+	on waypoint
+		set "star explorer pirate raid activated"
+		dialog `You've visited all the systems on the route. If you disabled all the Grabon Warships you've encountered, it's time to set a course for <destination>.`
+
+	npc
+		to spawn
+			has "star explorer pirate raid activated"
+		government "Pirate"
+		system destination
+		personality waiting staying harvests plunders
+		ship "Berserker (Energy Cannons)" "Dueces Wild"
+		ship "Modified Berserker" "Snake Eyes"
+	npc
+		to spawn
+			has "star explorer pirate raid activated"
+			"combat rating" > 300
+		government "Pirate"
+		system destination
+		personality waiting staying harvests plunders
+		ship "Modified Firebird" "Warbird"
+	npc
+		to spawn
+			has "star explorer pirate raid activated"
+			"combat rating" > 600
+		government "Pirate"
+		system destination
+		personality waiting staying harvests plunders
+		ship "Aerie (Energy Cannons)" "Warnest"
+		ship "Dagger" "Soft Boil"
+		ship "Dagger" "Hard Boil"
+
+	npc assist accompany save
+		government "Merchant"
+		personality target escort disables timid
+		ship "Star Explorer" "Last Frontier"
+
+	on fail
+		dialog `[MISSION FAILED]: Either you destroyed one of the mock battle ships or you failed to protect the Last Frontier from a real threat. If life were a game, you could load a save file and try again.`
+
+	on complete
+		payment 300000
+		clear "star explorer pirate raid activated"
+		conversation
+			scene "ship/star explorer"
+			`	"This is Captain Tim Smirk of the Last Frontier. Our Star Explorer has safely returned to <planet> with the help of Captain <first> <last> and his <ship>. Even though the Grabons are still a threat, we will continue our mission to search for new life and peaceful civilizations as we explore in the Last Frontier. Remember to stop by the gift shop as you exit the ship!" Orchestral music plays while you find <payment> deposited into your account.`
+		
+ship "Blackbird" "Alien Blackbird"
+	sprite "ship/blackbird alien"
+	"swizzle" 5
+	add attributes
+		"threshold percentage" 0.5
+	outfits
+		"Laser Turret" 2
+		
+		"S3 Thermionic"
+		"KP-6 Photovoltaic Array" 3
+		"LP072a Battery Pack"
+		"D23-QP Shield Generator"
+		"Small Radar Jammer"
+		"Luxury Accommodations"
+		
+		"Impala Plasma Thruster"
+		"Impala Plasma Steering"
+		"Hyperdrive"
+
+
+		
+#########################
+# missions that repeat
+#########################
+
+
+
+mission "Engineering Room: Salvaged Supercapacitor"
+	boarding
+	repeat
+	invisible
+	source
+		not category "Drone"
+		attributes "automaton"
+	destination Earth
+	to offer
+		random < 10 + "engineer salvaged supercapacitor"
+	on offer
+		require "Engineering Room"
+		conversation
+			scene "outfit/supercapacitor"
+			`While searching the derelict, your engineer finds a loose component that is the equivalent of a Supercapacitor. Take it?`
+			choice
+				`	(Take it.)`
+					accept
+				`	(Leave it.)`
+					decline
+	on accept
+		outfit "Supercapacitor" 1
+		"engineer salvaged supercapacitor" ++
+		fail
+	on decline
+		"engineer salvaged supercapacitor" --
+
+
+
+mission "Medical Bay: Injured Crewmember (Coalition)"
+	assisting
+	deadline
+	repeat
+	name "Injured Crewmember"
+	description "Bring an injured crewmember to <destination>."
+	passengers 1
+	source
+		government "Coalition" "Heliarch"
+		not attributes "automaton"
+	destination
+		government "Coalition" "Heliarch"
+		attributes "spaceport"
+		not attributes "uninhabited"
+	to offer
+		has "known to the heliarchs"
+		random < 5
+	on offer
+		require "Medical Bay"
+		conversation
+			scene "outfit/medical bay"
+			`You've helped repair the ship, but one of their crewmembers was critically injured and needs to be transported in your medical bay to a nearby hospital by <date> for adequate treatment.`
+	on fail
+		dialog `You failed to deliver the injured crewmember to a hospital in time...`
+	on complete
+		"reputation: Coalition" ++
+		"reputation: Heliarch" ++
+		dialog `You inform the spaceport that you have an injured crewmember who needs to be taken to the hospital. An emergency transport arrives shortly and whisks the injured crewmember away.`
+
+
+
+mission "Medical Bay: Injured Crewmember (Hai)"
+	assisting
+	deadline
+	repeat
+	name "Injured Crewmember"
+	description "Bring an injured crewmember to <destination>."
+	passengers 1
+	source
+		government "Hai"
+		not attributes "automaton"
+	destination
+		government "Hai"
+		attributes "spaceport"
+		not attributes "uninhabited"
+	to offer
+		has "First Contact: Hai: declined"
+		random < 5
+	on offer
+		require "Medical Bay"
+		conversation
+			scene "outfit/medical bay"
+			`You've helped repair the ship, but one of their crewmembers was critically injured and needs to be transported in your medical bay to a nearby hospital by <date> for adequate treatment.`
+	on fail
+		dialog `You failed to deliver the injured crewmember to a hospital in time...`
+	on complete
+		"reputation: Hai" ++
+		dialog `You inform the spaceport that you have an injured crewmember who needs to be taken to the hospital. An emergency transport arrives shortly and whisks the injured crewmember away.`
+
+
+
+mission "Medical Bay: Injured Crewmember (Human)"
+	assisting
+	deadline
+	repeat
+	name "Injured Crewmember"
+	description "Bring an injured crewmember to <destination>."
+	passengers 1
+	source
+		government "Republic" "Syndicate" "Free Worlds"
+		not attributes "automaton"
+	destination
+		government "Republic" "Syndicate" "Free Worlds" "Independent" "Neutral"
+		attributes "spaceport"
+		not attributes "uninhabited"
+	to offer
+		random < 5
+	on offer
+		require "Medical Bay"
+		conversation
+			scene "outfit/medical bay"
+			`You've helped repair the ship, but one of their crewmembers was critically injured and needs to be transported in your medical bay to a nearby hospital by <date> for adequate treatment.`
+	on fail
+		dialog `You failed to deliver the injured crewmember to a hospital in time...`
+	on complete
+		payment
+		dialog `You inform the spaceport that you have an injured crewmember who needs to be taken to the hospital. An emergency transport arrives shortly and whisks the injured crewmember away. An insurance company deposits <payment> into your account.`
+
+
+
+mission "Medical Bay: Injured Crewmember (Kor Efret)"
+	assisting
+	deadline
+	repeat
+	name "Injured Crewmember"
+	description "Bring an injured crewmember to <destination>."
+	passengers 1
+	source
+		government "Kor Efret"
+		not attributes "automaton"
+	destination
+		government "Kor Efret"
+		attributes "spaceport"
+		not attributes "uninhabited"
+	to offer
+		or
+			has "First Contact: Korati Efreti: declined"
+			has "First Contact: Laki Nemparu: declined"
+			has "First Contact: Karek Fornati: declined"
+			has "First Contact: Setar Fort: declined"
+		random < 5
+	on offer
+		require "Medical Bay"
+		conversation
+			scene "outfit/medical bay"
+			`You've helped repair the ship, but one of their crewmembers was critically injured and needs to be transported in your medical bay to a nearby hospital by <date> for adequate treatment.`
+	on fail
+		dialog `You failed to deliver the injured crewmember to a hospital in time...`
+	on complete
+		"reputation: Kor Efret" ++
+		dialog `Despite the language barrier, you manage to inform the spaceport that you have an injured crewmember who needs to be taken to the hospital. An emergency transport arrives shortly and whisks the injured crewmember away.`
+
+
+
+mission "Medical Bay: Injured Crewmember (Remnant)"
+	assisting
+	deadline
+	repeat
+	name "Injured Crewmember"
+	description "Bring an injured crewmember to <destination>."
+	passengers 1
+	source
+		government "Remnant"
+		not attributes "automaton"
+	destination
+		government "Remnant"
+		attributes "spaceport"
+		not attributes "uninhabited"
+	to offer
+		has "remnant blood test pure"
+		random < 5
+	on offer
+		require "Medical Bay"
+		conversation
+			scene "outfit/medical bay"
+			`You've helped repair the ship, but one of their crewmembers was critically injured and needs to be transported in your medical bay to a nearby hospital by <date> for adequate treatment.`
+	on fail
+		dialog `You failed to deliver the injured crewmember to a hospital in time...`
+	on complete
+		"reputation: Remnant" ++
+		dialog `You inform the spaceport that you have an injured crewmember who needs to be taken to the hospital. An emergency transport arrives shortly and whisks the injured crewmember away.`
+
+
+
+mission "Medical Bay: Injured Crewmember (Wanderer)"
+	assisting
+	deadline
+	repeat
+	name "Injured Crewmember"
+	description "Bring an injured crewmember to <destination>."
+	passengers 1
+	source
+		government "Wanderer"
+		not attributes "automaton"
+	destination
+		government "Wanderer"
+		attributes "spaceport"
+		not attributes "uninhabited"
+	to offer
+		has "language: Wanderer"
+		random < 5
+	on offer
+		require "Medical Bay"
+		conversation
+			scene "outfit/medical bay"
+			`You've helped repair the ship, but one of their crewmembers was critically injured and needs to be transported in your medical bay to a nearby hospital by <date> for adequate treatment.`
+	on fail
+		dialog `You failed to deliver the injured crewmember to a hospital in time...`
+	on complete
+		"reputation: Wanderer" ++
+		dialog `You inform the spaceport that you have an injured crewmember who needs to be taken to the hospital. An emergency transport arrives shortly and whisks the injured crewmember away.`
+
+
+
