@@ -65,8 +65,8 @@ ship "Kestrel" "Kestrel (Battle Shields)"
 		"Fusion Reactor"
 		"LP072a Battery Pack"
 
-		"D94-YV Shield Generator"
-		"D41-HY Shield Generator"
+		"D94-YV Shield Generator" 2
+		"D14-RN Shield Generator"
 		"Liquid Nitrogen Cooler"
 		"Tactical Scanner" 2
 		
@@ -205,6 +205,8 @@ ship "Auxiliary" "Auxiliary (Battle)"
 		"X1700 Ion Thruster"
 		"X5200 Ion Steering"
 		"Scram Drive"
+		"Engineering Room"
+		"Medical Bay"
 		"Sniper Rifle"
 		"Fragmentation Grenades" 43
 		"Laser Rifle" 87
@@ -218,7 +220,7 @@ ship "Auxiliary" "Auxiliary (Battle)"
 
 ship "Bastion" "Bastion (Korath)"
 	outfits
-		"Plasma Repeater" 2
+		"Plasma Cannon" 2
 		"Quad Blaster Turret" 2
 		"Korath Warder"
 		
@@ -272,7 +274,7 @@ ship "Berserker" "Berserker (Hai)"
 		Hyperdrive
 		"Pebble Core"
 		"Pulse Cannon" 2
-
+		"Cargo Expansion" 2
 
 
 ship "Bulk Freighter" "Bulk Freighter (Korath)"
@@ -353,10 +355,11 @@ ship "Carrier" "Carrier (Pug)"
 		"Armageddon Core"
 		Brig
 		"D94-YV Shield Generator"
+		"D23-QP Shield Generator"
 		"Dwarf Core"
 		"Fragmentation Grenades" 45
 		Hyperdrive
-		"LP036a Battery Pack"
+		"LP144a Battery Pack"
 		"Large Radar Jammer" 2
 		"Laser Rifle" 90
 		"Liquid Helium Cooler"
@@ -367,6 +370,7 @@ ship "Carrier" "Carrier (Pug)"
 		"Pug Zapper" 4
 		"Pug Zapper Turret" 2
 		Supercapacitor 3
+		"Engineering Room"
 
 
 
@@ -535,6 +539,7 @@ ship "Falcon" "Falcon (Korath)"
 		"Systems Core (Medium)"
 		"Small Heat Shunt" 2
 		"Brig"
+		"Medical Bay"
 		"Korath Repeater Rifle" 15
 		"Laser Rifle" 52
 
@@ -599,7 +604,8 @@ ship "Frigate" "Frigate (Pug)"
 		"Pug Zapper" 2
 		"Small Radar Jammer"
 		Supercapacitor
-
+		"Engineering Room"
+		
 
 
 ship "Fury" "Fury (Hai)"
@@ -644,6 +650,7 @@ ship "Gunboat" "Gunboat (Flamethrower)"
 		"Water Coolant System"
 		"Outfits Expansion" 2
 		"Brig"
+		"Fuel Pod" 4
 		"A250 Atomic Thruster"
 		"A255 Atomic Steering"
 		"Hyperdrive"
@@ -692,6 +699,7 @@ ship "Hauler" "Hauler (Energy Cannons)"
 		"S3 Thermionic"
 		"LP072a Battery Pack"
 		"D41-HY Shield Generator"
+		"Water Coolant System"
 		"Small Radar Jammer"
 		"Greyhound Plasma Thruster"
 		"Impala Plasma Steering"
@@ -800,7 +808,8 @@ ship "Nest" "Nest (Korath)"
 		"Korath Warder" 2
 		
 		"NT-200 Nucleovoltaic"
-		"Systems Core (Small)"
+		"Generator (Furnace Class)"
+		"Systems Core (Medium)"
 		"Large Heat Shunt"
 		"Brig"
 		"Korath Repeater Rifle" 2
@@ -855,6 +864,7 @@ ship "Protector" "Protector (Korath)"
 
 		"Fusion Reactor"
 		"Generator (Furnace Class)"
+		"LP072a Battery Pack"
 		"Systems Core (Medium)"
 		"Large Heat Shunt" 
 		"Korath Repeater Rifle" 6		
@@ -1030,6 +1040,9 @@ ship "Star Queen" "Star Queen (Advanced Research)"
 		"Luxury Accommodations"
 		"Asteroid Scanner"
 		"Outfit Scanner"
+		"Cargo Scanner"
+		"Tactical Scanner"		
+		"Medical Bay"
 		"X3700 Ion Thruster"
 		"X3200 Ion Steering"
 		"Jump Drive"
@@ -1079,8 +1092,9 @@ ship "Vanguard" "Vanguard (Proton Gun-CF8)"
 		"Anti-Missile Turret"
 		"Fusion Reactor"
 		"LP072a Battery Pack"
-		"D67-TM Shield Generator"
+		"D94-YV Shield Generator"
 		"Liquid Nitrogen Cooler"
+		"Engineering Room"
 		"Laser Rifle" 4		
 		"X3700 Ion Thruster"
 		"X4200 Ion Steering"
@@ -1274,7 +1288,7 @@ ship "Headhunter" "Headhunter (Turner Power)"
 		"Gnome Core"
 		"KP-6 Photovoltaic Array"
 		"LP072a Battery Pack"
-		"D23-QP Shield Generator"
+		"D41-HY Shield Generator"
 		
 		"Greyhound Plasma Thruster"
 		"Greyhound Plasma Steering"
@@ -1318,7 +1332,7 @@ ship "Mule" "Mule (Turner Power)"
 		
 		"X3700 Ion Thruster"
 		"X3200 Ion Steering"
-		"Hyperdrive"
+		"Scram Drive"
 
 
 
@@ -1347,7 +1361,7 @@ ship "Bulk Freighter" "Bulk Freighter (Turner Power)"
 		
 		"Fission S2 Reactor"
 		"LP144a Battery Pack"
-		"D23-QP Shield Generator"
+		"D41-HY Shield Generator"
 		"Laser Rifle"
 		
 		"X3700 Ion Thruster"
@@ -1363,7 +1377,7 @@ ship "Container Transport" "Container Transport (Turner Power)"
 		
 		"Fission S2 Reactor"
 		"LP144a Battery Pack"
-		"D23-QP Shield Generator"
+		"D41-HY Shield Generator"
 		"Laser Rifle"
 		
 		"X3700 Ion Thruster"
@@ -1379,7 +1393,7 @@ ship "Behemoth" "Behemoth (Turner Power)"
 		
 		"Fission S2 Reactor"
 		"LP144a Battery Pack"
-		"D41-HY Shield Generator"
+		"D67-TM Shield Generator"
 		"North Wind Cooling" 2
 		"Small Radar Jammer"
 		"Laser Rifle" 3
@@ -1399,7 +1413,7 @@ ship "Hauler" "Hauler (Turner Power)"
 		
 		"Gnome Core"
 		"LP072a Battery Pack"
-		"D23-QP Shield Generator"
+		"D41-HY Shield Generator"
 		"North Wind Cooling" 2
 		"Small Radar Jammer"
 		
@@ -1416,7 +1430,7 @@ ship "Hauler II" "Hauler II (Turner Power)"
 		
 		"Gnome Core"
 		"LP072a Battery Pack"
-		"D23-QP Shield Generator"
+		"D41-HY Shield Generator"
 		"North Wind Cooling" 2
 		"Small Radar Jammer"
 		"Laser Rifle"
@@ -1434,7 +1448,7 @@ ship "Hauler III" "Hauler III (Turner Power)"
 		
 		"Gnome Core"
 		"LP072a Battery Pack"
-		"D23-QP Shield Generator"
+		"D41-HY Shield Generator"
 		"North Wind Cooling" 2
 		"Small Radar Jammer"
 		"Laser Rifle"

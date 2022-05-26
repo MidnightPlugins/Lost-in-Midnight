@@ -23,7 +23,7 @@ mission "Drone Hacking 1"
 	minor
 	source
 		category "Drone"
-		attributes "cargo scan power"
+		attributes "cargo scan power" "outfit scan power"
 		attributes "automaton"
 	to offer
 		random < 50

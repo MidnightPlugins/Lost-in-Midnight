@@ -17,8 +17,38 @@ outfit "Drone Hacking"
 	cost 30
 	thumbnail "outfit/data pad"
 	description `"How to Hack a Science Drone For Fun and Profit."`
-	description `This guidebook instructs the reader on how to abuse the cargo scan fining system by hacking into a drone's scanners.`
+	description `This guidebook instructs the reader on how to abuse the cargo scan fining system by hacking into a drone's scanners. Contrary to the title, it works on any drone setup for scanning cargo or outfits. One important detail buried in the text is that the drone must not be hostile towards you.`
 	description `You can install this on your ship to keep it from getting mixed in with the regular cargo.`
+
+
+
+outfit "Engineering Room"
+	category "Systems"
+	cost 250000
+	thumbnail "outfit/engineering room"
+	"mass" 10
+	"outfit space" -10
+	"shield energy multiplier" -.1
+	"hull energy multiplier" -.1
+	"ion resistance" 0.01
+	"energy protection" .1
+	"self destruct" .15
+	"required crew" 1
+	"operating costs" 200
+	description "Despite its name, an Engineering Room has little to do with engines. Instead, it acts as a centralized control center for regulating the flow of energy on your ship. This can make energy usage by certain outfits more efficient while also alleviating effects that would drain your energy reserves. Of course, a skilled engineer who understands how these systems work and interact with each other is essential to Engineering Room operations."
+	description "	Engineering Rooms are also often the location where a ship's self-destruct sequence is activated. Typically it involves deliberately causing a reactor meltdown in the ship's power systems or some similar catastrophic failure. This usually requires the cooperation of both the captain and the second in command."
+	
+outfit "Medical Bay"
+	category "Hand to Hand"
+	cost 250000
+	thumbnail "outfit/medical bay"
+	"mass" 10
+	"outfit space" -10
+	"capture defense" 25
+	"unplunderable" 1
+	"required crew" 1
+	"operating costs" 200
+	description "A medical bay staffed by a trained doctor helps keep your crew in good health, boosting morale. When defending the ship, injured crew members will likely be brought here for treatment, often making defense of the medical bay a rallying point of interest in tense boarding battles."
 
 
 outfit "North Wind Cooling"
