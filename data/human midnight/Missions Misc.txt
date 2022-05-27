@@ -143,9 +143,8 @@ mission "Free Worlds Infiltrator 1"
 	destination
 		government "Free Worlds"
 		attributes urban
-		distance 3 12
+		distance 1 4
 	to offer
-		random < 25
 		has "salary: Free Worlds"
 		not "event: fw armistice"
 		has "fw first chapter done"
@@ -154,9 +153,9 @@ mission "Free Worlds Infiltrator 1"
 	on offer
 		conversation
 			scene "thumbnail/infiltrator-thumb"
-			`You receive a message from JJ. "Sorry to bother you even though we were hoping to enoy a break, but a Republic spy ship was spotted near <origin>. Since you're in the area, keep an eye out for it and retrieve any secret data they might've gotten their hands on. If you haven't caught the ship by <date>, we'll assume it escaped.`
+			`You receive a message from JJ. "Sorry to bother you even though we were hoping to enoy a break, but a Republic spy ship was spotted near <origin>. Since you're in the area, catch it and retrieve any secret data they might've gotten their hands on. If you haven't brought the data in by <date>, we'll assume it's been transmitted to the Republic.`
 				accept
-	npc "board"
+	npc capture
 		government Republic
 		personality fleeing uninterested entering target marked mute
 		ship "Infiltrator" "Provocateur"
@@ -173,11 +172,11 @@ mission "Free Worlds Infiltrator 1 failure"
 	source
 		government "Free Worlds"
 	to offer
-		has "Free Worlds Infiltrator 1: failed"
 		has "event: navy plasma gunboats"
 	on offer
-		dialog "Eyewitness reports of Navy Gunboats armed with Plasma Cannnons indicate that designs for the Plasma Cannon was among the data stolen by that Republic Intelligence spy ship you were unable to catch."
-			decline
+		dialog "Eyewitness reports of Navy Gunboats armed with Plasma Cannnons indicate that designs for the Plasma Cannon was among the data stolen by that Republic Intelligence spy ship."
+	on accept
+		fail
 	
 mission "Free Worlds Infiltrator 2"
 	landing
@@ -189,9 +188,8 @@ mission "Free Worlds Infiltrator 2"
 	destination
 		government "Free Worlds"
 		attributes urban
-		distance 3 12
+		distance 1 4
 	to offer
-		random < 25
 		has "salary: Free Worlds"
 		not "event: fw armistice"
 		has "fw delivered prisoners"
@@ -199,9 +197,9 @@ mission "Free Worlds Infiltrator 2"
 	on offer
 		conversation
 			scene "thumbnail/infiltrator-thumb"
-			`You receive a message from Freya. "Sorry to bother you even though we were hoping to enoy a break, but a Republic spy ship was spotted near <origin>. Since you're in the area, keep an eye out for it and retrieve any secret data they might've gotten their hands on. If you haven't caught the ship by <date>, we'll assume it escaped.`
+			`You receive a message from Freya. "Sorry to bother you even though we were hoping to enoy a break, but a Republic spy ship was spotted near <origin>. Since you're in the area, catch it and retrieve any secret data they might've gotten their hands on. If you haven't brought the data in by <date>, we'll assume it's been transmitted to the Republic.`
 				accept
-	npc "board"
+	npc capture
 		government Republic
 		personality fleeing uninterested entering target marked mute
 		ship "Infiltrator" "Clandestine"
@@ -218,11 +216,11 @@ mission "Free Worlds Infiltrator 2 failure"
 	source
 		government "Free Worlds"
 	to offer
-		has "Free Worlds Infiltrator 2: failed"
 		has "event: navy flamethrower gunboats"
 	on offer
-		dialog "Eyewitness reports of Navy Gunboats armed with Flamethrowers indicate that designs for the Flamethrower was among the data stolen by that Republic Intelligence spy ship you were unable to catch."
-			decline
+		dialog "Eyewitness reports of Navy Gunboats armed with Flamethrowers indicate that designs for the Flamethrower was among the data stolen by that Republic Intelligence spy ship."
+	on accept
+		fail
 
 
 
