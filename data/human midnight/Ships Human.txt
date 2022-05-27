@@ -804,7 +804,10 @@ ship "Mastodon"
 		"Anti-Missile Turret" 3
 		
 		"Fission Reactor"
-		"LP576a Battery Pack"
+		"LP288a Battery Pack"
+		"D14-RN Shield Generator"
+		"D23-QP Shield Generator"
+		"D41-HY Shield Generator"
 		"D67-TM Shield Generator"
 		"D94-YV Shield Generator"
 		"Large Radar Jammer"
@@ -1119,6 +1122,33 @@ ship "Star Explorer"
 	explode "large explosion" 20
 	"final explode" "final explosion large"
 	description "An ancient space exploration vessel from the early days of Hyperspace travel. Many claim the Star Explorer's design was heavily influenced by an old Earth science-fiction show as a marketing gimmick to entice young people to leave Sol and risk their lives exploring the vast unknown. Of the few that haven't been lost or destroyed, there are some still being used as actual science and exploration vessels. The rest are held in private collections by fans of antiquities."
+
+ship "Star Explorer" "Star Explorer (Jump)"
+	outfits
+		"Laser Turret" 6
+		"Torpedo Launcher"
+		Torpedo 30
+		"Fission Reactor"
+		"LP072a Battery Pack"
+		"D67-TM Shield Generator"
+		"D94-YV Shield Generator"
+		"Outfits Expansion"
+		"Brig"
+		"Large Radar Jammer"
+		"Luxury Accommodations"
+		"Engineering Room"
+		Ramscoop
+		"Asteroid Scanner"
+		"Cargo Scanner"
+		"Outfit Scanner"
+		"Tactical Scanner"
+		"Medical Bay"
+		"Laser Rifle" 60
+		Afterburner
+		"AR120 Reverse Thruster"
+		"A250 Atomic Thruster"
+		"A375 Atomic Steering"
+		"Jump Drive"
 
 
 
