@@ -987,6 +987,11 @@ mission "Ghost Hunting: Curse of the Carabao 1"
 		attributes "deep"
 		not attributes "station" "uninhabited" "pirate" "shipyard"
 	to offer
+#
+# The game isn't detecting the "Carabao AI" from an escort. Deactivating this mission until this is fixed.
+#
+		has "curse of the carabao"
+#
 		"credits" >= 18000000
 		or
 			not "Randomize Ghost Hunting: Curse of the Carabao 1"
