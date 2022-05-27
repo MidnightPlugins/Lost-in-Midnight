@@ -218,6 +218,37 @@ ship "Auxiliary" "Auxiliary (Battle)"
 
 
 
+ship "Bastion" "Bastion (Flamethrower)"
+	outfits
+		"Plasma Cannon" 2
+		"Flamethrower" 2
+		"Blaster Turret" 2
+		"Anti-Missile Turret"
+		
+		"S3 Thermionic"
+		"LP144a Battery Pack"
+		"nGVF-BB Fuel Cell"
+		"D67-TM Shield Generator"
+		"Water Coolant System"
+		"Tactical Scanner"
+		"Fuel Pod" 4
+		"Laser Rifle" 7
+		
+		"Impala Plasma Thruster"
+		"Impala Plasma Steering"
+		"Hyperdrive"
+
+	gun "Flamethrower"
+	gun "Plasma Cannon"
+	gun "Flamethrower"
+	gun "Plasma Cannon"
+	turret "Blaster Turret"
+	turret "Blaster Turret"
+	turret "Anti-Missile Turret"
+
+
+
+
 ship "Bastion" "Bastion (Korath)"
 	outfits
 		"Plasma Cannon" 2
@@ -374,6 +405,25 @@ ship "Carrier" "Carrier (Pug)"
 
 
 
+ship "Clipper" "Clipper (Flamethrower)"
+	outfits
+		"Heavy Laser" 2
+		"Flamethrower" 2
+		"Fission Reactor"
+		"Supercapacitor"
+		"D41-HY Shield Generator"
+		"Cooling Ducts"
+		"Ramscoop"
+		"A370 Atomic Thruster"
+		"A255 Atomic Steering"
+		"Hyperdrive"
+	gun "Heavy Laser"
+	gun "Heavy Laser"
+	gun "Flamethrower"
+	gun "Flamethrower"
+
+
+
 ship "Container Transport" "Container Transport (Billboard TMBR)"
 	sprite "ship/billboard ships/billboard tmbr"
 		"frame rate" 0.1
@@ -527,6 +577,58 @@ ship "Cruiser" "Cruiser (Pug)"
 
 
 
+ship "Dreadnought" "Dreadnought (Flamethrower)"
+	outfits
+		"Flamethrower" 4
+		"Plasma Turret" 3
+		"Heavy Anti-Missile Turret" 2
+		"Breeder Reactor"
+		"S3 Thermionic"
+		"LP144a Battery Pack"
+		"D41-HY Shield Generator"
+		"Small Radar Jammer"
+		"Liquid Helium Cooler"
+		"Tactical Scanner"
+		"Fuel Pod" 5
+		"Ramscoop"
+		"Laser Rifle" 25		
+		"Orca Plasma Thruster"
+		"Orca Plasma Steering"
+		"Hyperdrive"
+	turret "Plasma Turret"
+	turret "Heavy Anti-Missile Turret"
+	turret "Heavy Anti-Missile Turret"
+	turret "Plasma Turret"
+	turret "Plasma Turret"
+
+
+
+
+ship "Falcon" "Falcon (Flamethrower)"
+	outfits
+		"Plasma Cannon" 2
+		"Flamethrower" 2
+		"Quad Blaster Turret" 3
+		"Heavy Anti-Missile Turret"
+		
+		"Breeder Reactor"
+		"KP-6 Photovoltaic Array"
+		"KP-6 Photovoltaic Panel" 2
+		"LP144a Battery Pack"
+		"D41-HY Shield Generator"
+		"Large Radar Jammer"
+		"Liquid Nitrogen Cooler"
+		"Fuel Pod" 3
+		"Laser Rifle" 15
+		
+		"Impala Plasma Thruster"
+		"Impala Plasma Steering"
+		"Hyperdrive"
+	gun "Plasma Cannon"
+	gun "Plasma Cannon"
+	gun "Flamethrower"
+	gun "Flamethrower"
+
 ship "Falcon" "Falcon (Korath)"
 	outfits
 		"Plasma Cannon" 2
@@ -584,6 +686,19 @@ ship "Falcon" "Falcon (Remnant)"
 	turret "Thrasher Turret"
 	turret "Point Defense Turret"
 	turret "Point Defense Turret"
+
+
+
+ship "Finch" "Finch (Flamethrower)"
+	outfits
+		"Flamethrower"
+		"Fuel Pod"		
+		"nGVF-BB Fuel Cell"
+		"LP036a Battery Pack"
+		"D14-RN Shield Generator"
+		"Chipmunk Plasma Thruster"
+		"Chipmunk Plasma Steering"
+
 
 
 
@@ -742,6 +857,32 @@ ship "Hawk" "Hawk (Remnant)"
 
 
 
+ship "Modified Argosy" "Modified Argosy (Flamethrower)"
+	outfits
+		"Heavy Laser" 2
+		"Flamethrower" 2
+		"Heavy Anti-Missile Turret" 2
+
+		"Fission Reactor"
+		"LP036a Battery Pack"
+		"D23-QP Shield Generator"
+		"Outfits Expansion"
+		"Water Coolant System"
+		"Laser Rifle" 5
+		"Fragmentation Grenades" 3
+		"Sniper Rifle"
+		"Fuel Pod" 2
+
+		"A250 Atomic Thruster"
+		"A375 Atomic Steering"
+		"Scram Drive"
+
+	gun "Heavy Laser"
+	gun "Heavy Laser"
+	gun "Flamethrower"
+	gun "Flamethrower"
+
+
 
 ship "Modified Argosy" "Modified Argosy (Korath)"
 	outfits
@@ -797,8 +938,6 @@ ship "Modified Argosy" "Modified Argosy (Nuclear)"
 	gun "Nuclear Missile"
 	gun "Torpedo Launcher"
 	gun "Torpedo Launcher"
-	turret "Heavy Anti-Missile Turret"
-	turret "Heavy Anti-Missile Turret"
 
 	
 
@@ -807,8 +946,7 @@ ship "Nest" "Nest (Korath)"
 		"Korath Banisher" 2
 		"Korath Warder" 2
 		
-		"NT-200 Nucleovoltaic"
-		"Generator (Furnace Class)"
+		"Generator (Furnace Class)" 2
 		"Systems Core (Medium)"
 		"Large Heat Shunt"
 		"Brig"
@@ -823,6 +961,34 @@ ship "Nest" "Nest (Korath)"
 	turret "Korath Warder"
 	turret "Korath Warder"
 	turret "Korath Banisher"
+
+
+
+ship "Osprey" "Osprey (Flamethrower)"
+	outfits
+		"Plasma Cannon" 2
+		"Flamethrower" 2
+		"Quad Blaster Turret"
+		"Heavy Anti-Missile Turret"
+		
+		"Breeder Reactor"
+		"LP036a Battery Pack"
+		"D41-HY Shield Generator"
+		"Large Radar Jammer"
+		"Liquid Helium Cooler"
+		"Laser Rifle" 3
+		"Fuel Pod" 3
+		
+		"Impala Plasma Thruster"
+		"Impala Plasma Steering"
+		"Hyperdrive"
+	gun "Plasma Cannon"
+	gun "Flamethrower"
+	gun "Plasma Cannon"
+	gun "Flamethrower"
+	turret "Quad Blaster Turret"
+	turret "Heavy Anti-Missile Turret"
+
 
 
 
@@ -999,6 +1165,25 @@ ship "Scout" "Scout (Hai)"
 		"Pulse Cannon" 2
 		Ramscoop
 		"Small Radar Jammer"
+
+
+
+ship "Skein" "Skein (Catalytic)"
+	outfits
+		"Heavy Anti-Missile Turret" 4
+		
+		"S3 Thermionic"
+		"LP072a Battery Pack"
+		"D67-TM Shield Generator" 4
+		"Small Radar Jammer"
+		"Tactical Scanner"
+		"Catalytic Ramscoop"
+		"Laser Rifle" 4
+		
+		"Greyhound Plasma Thruster"
+		"Impala Plasma Steering"
+		"Hyperdrive"
+
 
 
 

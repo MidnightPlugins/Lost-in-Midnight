@@ -217,6 +217,57 @@ event "southern fleet flamethrowers"
 			"Sparrow" 4
 
 
+
+mission "Southern Dreadnought Flamethrowers"
+	landing
+	invisible
+	to offer
+		has "event: dreadnought deployment"
+	on offer
+		event "southern dreadnought flamethrowers"
+		fail
+
+event "southern dreadnought flamethrowers"
+	fleet "Large Free Worlds"
+		add variant 1
+			"Dreadnought"
+			"Bastion"
+			"Fury (Flamethrower)" 4
+		add variant 1
+			"Dreadnought"
+			"Skein"
+			"Finch" 6
+			"Fury (Flamethrower)" 4
+		add variant 1
+			"Dreadnought (Flamethrower)"
+
+
+
+mission "Southern Skein Flamethrowers"
+	landing
+	invisible
+	to offer
+		has "event: flamethrower available"
+		or
+			has "event: catalytic ramscoop available"
+			has "event: deep sky tech available"
+	on offer
+			event "southern skein flamethrowers"
+		fail
+
+event "southern skein flamethrowers"
+	fleet "Large Free Worlds"
+		add variant 1
+			"Skein (Catalytic)"
+			"Finch (Flamethrower)" 6
+			"Fury (Flamethrower)" 4
+		add variant 1
+			"Skein (Catalytic)"
+			"Finch (Flamethrower)" 6
+
+
+
+
 mission "Northern Pirate Drones"
 	landing
 	invisible
