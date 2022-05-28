@@ -324,7 +324,7 @@ mission "Star Explorer Fan Tour"
 	on enter
 		conversation
 			scene "ship/star explorer"
-			`	Orchestral music plays as a message from the Star Explorer's captain is transmitted, "This is Captain Tim Smirk of the Last Frontier. The Star Explorer wasn't just a show. It was an ancient space exploration vessel from the early days of Hyperspace travel. It's design was heavily influenced by an old Earth science-fiction show with the same name as a marketing gimmick to entice young people to leave Sol and risk their lives exploring the vast unknown. Of the few that haven't been lost or destroyed, there are some still being used as actual science and exploration vessels. We'll be traveling to <waypoints> in search of new life and peaceful civilizations as we explore in the Last Frontier. But beware! The dreaded Grabons could attack us along the way! Rest assured I will endeavor to keep us safe along with our escort, Captain <first> <last> and his <ship>." Apparently that was an address meant for the passengers. Nice touch, adding your name at the end."`
+			`	Orchestral music plays as a message from the Star Explorer's captain is transmitted, "This is Captain Tim Smirk of the Last Frontier. The Star Explorer wasn't just a show. It was an ancient space exploration vessel from the early days of Hyperspace travel. Its design was heavily influenced by an old Earth science-fiction show with the same name as a marketing gimmick to entice young people to leave Sol and risk their lives exploring the vast unknown. Of the few that haven't been lost or destroyed, there are some still being used as actual science and exploration vessels. We'll be traveling to <waypoints> in search of new life and peaceful civilizations as we explore in the Last Frontier. But beware! The dreaded Grabons could attack us along the way! Rest assured I will endeavor to keep us safe along with our escort, Captain <first> <last> and his <ship>." Apparently that was an address meant for the passengers. Nice touch, adding your name at the end."`
 
 	on enter "Mirzam"
 		dialog `Captain Smirk sends out a message, "Red Alert! Hostile Grabons are attacking!" This must be one of the mock battles. You're only supposed to disable them, but those lasers are real...`
@@ -334,7 +334,7 @@ mission "Star Explorer Fan Tour"
 		system Mirzam
 		personality target waiting staying disables marked opportunistic
 		ship "Alien Blackbird" "Grabon Warship"
-		dialog `Captain Smirk sends out a message, "The Grabons have stopped attacking thanks to the help of the <ship>! To celebrate, drinks and snacks are 10% off for the next hour at the ship lounge."`
+		dialog `Captain Smirk sends out a message, "The Grabons have stopped attacking thanks to the help of our escort! To celebrate, drinks and snacks are 10% off for the next hour at the ship lounge."`
 		
 	on enter "Sospi"
 		dialog `Captain Smirk sends out a message, "You are seeing a rare site folks. This is a Wolf-Rayet star. The galaxy is filled with awesome wonders like this. You just have to search for them."`
@@ -347,7 +347,7 @@ mission "Star Explorer Fan Tour"
 		system Acamar
 		personality target waiting staying disables marked opportunistic
 		ship "Alien Blackbird" "Grabon Warship"
-		dialog `Captain Smirk sends out a message, "The Grabons have stopped attacking thanks to the help of the <ship>! To celebrate, drinks and snacks are 10% off for the next hour at the ship lounge."`
+		dialog `Captain Smirk sends out a message, "The Grabons have stopped attacking thanks to the help of our escort! To celebrate, drinks and snacks are 10% off for the next hour at the ship lounge."`
 		
 	on waypoint
 		set "star explorer pirate raid activated"
@@ -380,7 +380,7 @@ mission "Star Explorer Fan Tour"
 		ship "Dagger" "Soft Boil"
 		ship "Dagger" "Hard Boil"
 
-	npc assist accompany save
+	npc accompany save
 		government "Merchant"
 		personality target escort disables timid
 		ship "Star Explorer" "Last Frontier"
@@ -413,6 +413,74 @@ ship "Blackbird" "Alien Blackbird"
 		"Impala Plasma Thruster"
 		"Impala Plasma Steering"
 		"Hyperdrive"
+
+
+
+mission "Star Explorer Korath Raid"
+	landing
+	invisible
+	source
+		attributes "core"
+	destination Earth
+	to offer
+		has "event: star explorer added to merchant fleets"
+	on offer
+		require "Jump Drive"
+	on enter "Kor Ak'Mari"
+		dialog `The Korath are in the process of plundering a disabled Star Explorer...`
+	npc 
+		government "Korath"
+		system "Kor Ak'Mari"
+		personality waiting staying disables plunders opportunistic harvests
+		ship "Korath Raider" "Bar Ertakoshtar"
+	npc
+		government "Korath"
+		system "Kor Ak'Mari"
+		personality derelict waiting staying disables plunders opportunistic harvests
+		ship "Korath Chaser" "Grakprukat"
+		ship "Korath Chaser" "Artefaristek"
+	npc capture
+		government "Korath"
+		system "Kor Ak'Mari"
+		personality target derelict waiting staying disables plunders opportunistic harvests
+		ship "Star Explorer (Korath)" "Icarus"
+		conversation
+			scene "outfit/data pad"
+			`The original crew was killed by the Korath. You find the captain's log. Read it?"`
+			choice
+				`	(Read it.)`
+				`	(Ignore it.)`
+					decline
+			scene "outfit/jump drive"
+			`	Only the final entry survived. "We landed on Sundive after testing out the strange device. It was only by chance we had the opportunity to acquire it from an alien vessel which pirates had disabled. Our journey from Polaris took but a single day! But this device, amazing as it is, consumes double the fuel of a Hyperdrive. Despite this, I have decided to set course for the systems to the east. We finally have the opportunity to explore a region of space that is truly unknown. Perhaps we may even reach the center of the galaxy! As we boldly set forth to where no human has gone before, we carry the hopes and dreams of those who precede us: to search for new life and peaceful civilizations as we explore the last frontier."`
+
+ship "Star Explorer" "Star Explorer (Korath)"
+	outfits
+		"Laser Turret" 6
+		"Torpedo Launcher"
+		Torpedo 5
+		"Fission Reactor"
+		"Systems Core (Medium)"
+		"D94-YV Shield Generator"
+		"Outfits Expansion"
+		"Brig"
+		"Large Radar Jammer"
+		"Luxury Accommodations"
+		"Engineering Room"
+		"Fuel Processor"
+		"Small Heat Shunt"
+		"Asteroid Scanner"
+		"Cargo Scanner"
+		"Outfit Scanner"
+		"Tactical Scanner"
+		"Medical Bay"
+		"Laser Rifle" 60
+		"Korath Repeater Rifle" 60
+		Afterburner
+		"AR120 Reverse Thruster"
+		"A250 Atomic Thruster"
+		"A375 Atomic Steering"
+		"Jump Drive"
 
 
 
