@@ -755,6 +755,7 @@ mission "Peace Tour 1"
 		has "main plot completed"
 		random < 30
 	on offer
+		"reputation: Bounty (Disguised)" >?= 1
 		conversation
 			scene "portrait/human59"
 			`A freighter captain approaches you from his ship. "Sorry to ask this of you, but my escort ditched me. I still have several more stops to spread the message of intergalactic peace. Won't you help me?"`
@@ -767,6 +768,7 @@ mission "Peace Tour 1"
 	on stopover
 		dialog `It was a long trip, but the <npc> finally finished spreading it's message of peace. It's time to take it home to <destination>.`
 	on abort
+		"reputation: Bounty (Disguised)" >?= 1
 		conversation
 			scene "portrait/human59"
 			`"You're leaving me stranded here? Thanks for nothing."`
@@ -775,6 +777,7 @@ mission "Peace Tour 1"
 		personality target timid
 		fleet "TMBR Billboard"
 	on complete
+		"reputation: Bounty (Disguised)" >?= 1
 		event "add nukes of peace"
 		conversation
 			scene "portrait/human59"
@@ -1185,7 +1188,12 @@ mission "Pot-o'-honey"
 				"reputation: Bounty (Disguised)" >?= 1
 			`The Pot-o'-honey and its drones have been defeated. You make a mental note to check with the authorities on <destination> to see if there is any reward for your effort.`
 
+	on abort
+		"reputation: Bounty (Disguised)" >?= 1
+	on fail
+		"reputation: Bounty (Disguised)" >?= 1
 	on complete
+		"reputation: Bounty (Disguised)" >?= 1
 		payment 150000
 		log `Took on a simple escort job that turned out to be a trap set by pirates. I can't believe they turned an ordinary Bulk Freighter into a drone carrier. If more pirates start using this trick, taking on escort jobs will be even more risky than they already are.`
 		conversation
