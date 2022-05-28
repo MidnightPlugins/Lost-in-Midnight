@@ -356,6 +356,10 @@ mission "Escort Requiem Alpha"
 		personality launching escort timid
 		ship "War Hauler" "Requiem Alpha"
 		dialog `The <npc> has been defeated. You make a mental note to check with the local authorities to see if there is any reward for your effort.`
+	on abort
+		"reputation: Independent (Killable)" >?= 10
+	on fail
+		"reputation: Independent (Killable)" >?= 10
 
 	on complete
 		payment 150000
@@ -377,6 +381,8 @@ mission "Protection: Marauder Double Cross"
 		attributes "frontier" "rim"
 	to offer
 		random < 30
+	to complete
+		never
 	on accept
 		payment -100000
 		dialog `You pay the <npc> 100,000 credits to escort your fleet until <date>.`
@@ -776,6 +782,8 @@ mission "Peace Tour 1"
 		government "Bounty (Disguised)"
 		personality target timid
 		fleet "TMBR Billboard"
+	on fail
+		"reputation: Bounty (Disguised)" >?= 1
 	on complete
 		"reputation: Bounty (Disguised)" >?= 1
 		event "add nukes of peace"

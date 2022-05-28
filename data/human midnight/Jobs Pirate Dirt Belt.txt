@@ -970,6 +970,10 @@ mission "Underworld Meeting (hard)"
 		government "Independent (Killable)"
 		personality launching heroic vindictive
 		fleet "Marauder Independent (Killable)" 5
+	on fail
+		clear "Underworld Meeting (hard): offered"
+		clear "Underworld Meeting goes badly"
+		"reputation: Independent (Killable)" >?= 10
 	on abort
 		clear "Underworld Meeting (hard): offered"
 		clear "Underworld Meeting goes badly"

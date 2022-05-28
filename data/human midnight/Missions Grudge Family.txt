@@ -981,6 +981,7 @@ mission "Grudge Mama"
 				`	"Zzz..."`
 			scene "outfit/alien torture device"
 			`	You are startled awake by an intense pain in your head. You open your eyes to see Mara standing next to you with a strange device in her hand! She presses a button and the pain in your head intensifies! You try to move but your body stumbles and you collapse onto the floor.`
+			scene "scene/scene-airlock"
 			`	"My trade name is Mama Grudge. This is payback for killing my family." You have a vague sense of being dragged somewhere on the floor. Suddenly, you hear a warning alarm. You must be in the air lock. The hatch is opening. You realize that she's jettisoning you out into space...`
 				die
 	on enter "Cebalrai"
