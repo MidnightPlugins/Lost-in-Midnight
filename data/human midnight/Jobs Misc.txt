@@ -1029,7 +1029,7 @@ mission "Protection: Marauder"
 	on fail
 		dialog `The protection contract with <npc> has expired.`
 	npc kill
-		government "Independent"
+		government "Merchant"
 		personality plunders heroic
 		fleet "Marauder Independent"
 
