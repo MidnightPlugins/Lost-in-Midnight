@@ -364,7 +364,7 @@ mission "Star Explorer Fan Tour"
 	npc
 		to spawn
 			has "star explorer pirate raid activated"
-			"combat rating" > 300
+			"combat rating" > 400
 		government "Pirate"
 		system destination
 		personality waiting staying harvests plunders
@@ -397,7 +397,7 @@ mission "Star Explorer Fan Tour"
 		
 ship "Blackbird" "Alien Blackbird"
 	sprite "ship/blackbird alien"
-	"swizzle" 5
+	"swizzle" 0
 	add attributes
 		"threshold percentage" 0.5
 	outfits
@@ -533,6 +533,7 @@ mission "Medical Bay: Injured Crewmember (Coalition)"
 		government "Coalition" "Heliarch"
 		attributes "spaceport"
 		not attributes "uninhabited"
+		distance 1 3
 	to offer
 		has "known to the heliarchs"
 		random < 5
@@ -564,6 +565,7 @@ mission "Medical Bay: Injured Crewmember (Hai)"
 		government "Hai"
 		attributes "spaceport"
 		not attributes "uninhabited"
+		distance 1 3
 	to offer
 		has "First Contact: Hai: declined"
 		random < 5
@@ -594,6 +596,7 @@ mission "Medical Bay: Injured Crewmember (Human)"
 		government "Republic" "Syndicate" "Free Worlds" "Independent" "Neutral"
 		attributes "spaceport"
 		not attributes "uninhabited"
+		distance 1 3
 	to offer
 		random < 5
 	on offer
@@ -690,6 +693,7 @@ mission "Medical Bay: Injured Crewmember (Wanderer)"
 	to offer
 		has "language: Wanderer"
 		random < 5
+		distance 1 3
 	on offer
 		require "Medical Bay"
 		conversation

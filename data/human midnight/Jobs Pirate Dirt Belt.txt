@@ -209,10 +209,10 @@ mission "Escort Core Pirate to Dirt Belt"
 		government "Pirate"
 		attributes "dirt belt pirate"
 	to offer
+		has "event: Archipelago reveal"
 		random < 40
 		"combat rating" > 400
 		"reputation: Pirate" > 0
-
 	npc
 		government "Syndicate"
 		system
@@ -335,6 +335,7 @@ mission "Escort North Pirate to Dirt Belt"
 		government "Pirate"
 		attributes "dirt belt pirate"
 	to offer
+		has "event: Archipelago reveal"
 		random < 40
 		"combat rating" > 400
 		"reputation: Pirate" > 0
@@ -459,6 +460,7 @@ mission "Escort South Pirate to Dirt Belt"
 		government "Pirate"
 		attributes "dirt belt pirate"
 	to offer
+		has "event: Archipelago reveal"
 		random < 40
 		"combat rating" > 400
 		"reputation: Pirate" > 0
@@ -720,13 +722,11 @@ mission "Jail Break Fake"
 
 
 mission "Lares Camping (Bums)"
+	minor
 	invisible
 	source "Lares"
 	to offer
 		random < "day"
-		or
-			not "Lares Camping (Raiders): active"
-			not "Lares Camping (Scavenger): active"
 	on offer
 		conversation
 			`Despte being abandoned, the nearby cabins are well furnished. It might be a nice change of pace to sleep somewhere other than the cramped bunk on your ship.`
@@ -769,13 +769,11 @@ mission "Lares Camping (Bums)"
 				decline
 
 mission "Lares Camping (Raiders)"
+	minor
 	invisible
 	source "Lares"
 	to offer
 		random < 50
-		or
-			not "Lares Camping (Scavenger): active"
-			not "Lares Camping (Bums): active"
 	on offer
 		conversation
 			`Despite being abandoned, the nearby cabins are well furnished. It might be a nice change of pace to sleep somewhere other than the cramped bunk on your ship.`
@@ -805,13 +803,11 @@ event "Lares Midnight Crash"
 		spaceport `The spaceport is a concrete slab forming a large forest clearing surrounded by some log cabins. The burnt wreckage of a pirate interceptor sits on the edge of the slab. You see no other parked ships and the area looks deserted.`
 
 mission "Lares Camping (Scavenger)"
+	minor
 	invisible
 	source "Lares"
 	to offer
 		random < 30 - "day"
-		or
-			not "Lares Camping (Raiders): active"
-			not "Lares Camping (Bums): active"
 	on offer
 		conversation
 			`Despte being abandoned, the nearby cabins are well furnished. It might be a nice change of pace to sleep somewhere other than the cramped bunk on your ship.`
