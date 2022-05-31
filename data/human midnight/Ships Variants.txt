@@ -133,6 +133,7 @@ ship "Aerie" "Aerie (Energy Cannons)"
 		"D67-TM Shield Generator"
 		"Cargo Expansion" 4
 		"Large Radar Jammer"
+		"Sniper Rifle"
 		"Laser Rifle" 3
 		
 		"X3700 Ion Thruster"
@@ -154,6 +155,7 @@ ship "Aerie" "Aerie (Hai)"
 		"KP-6 Photovoltaic Panel" 2
 		"Large Radar Jammer"
 		"Pulse Rifle" 3
+		"Dual Pulse Pistols"
 		"Pulse Turret" 2
 		"Tracker Storage Pod"
 		"X3200 Ion Steering"
@@ -287,6 +289,7 @@ ship "Berserker" "Berserker (Energy Cannons)"
 		"X2700 Ion Thruster"
 		"X3200 Ion Steering"
 		"Hyperdrive"
+		"Sniper Rifle"
 	gun "Energy Cannon"
 	gun "Energy Cannon"
 	gun "Energy Blaster"
@@ -306,6 +309,7 @@ ship "Berserker" "Berserker (Hai)"
 		"Pebble Core"
 		"Pulse Cannon" 2
 		"Cargo Expansion" 2
+		"Dual Pulse Pistols"
 
 
 ship "Bulk Freighter" "Bulk Freighter (Korath)"
@@ -359,6 +363,7 @@ ship "Carrier" "Carrier (Coalition)"
 		"Large Radar Jammer"
 		"Outfits Expansion" 4
 		"Brig"
+		"Sniper Rifle"
 		"Laser Rifle" 40
 		"Fragmentation Grenades" 40
 
@@ -388,6 +393,7 @@ ship "Carrier" "Carrier (Pug)"
 		"D94-YV Shield Generator"
 		"D23-QP Shield Generator"
 		"Dwarf Core"
+		"Sniper Rifle"
 		"Fragmentation Grenades" 45
 		Hyperdrive
 		"LP144a Battery Pack"
@@ -440,6 +446,7 @@ ship "Container Transport" "Container Transport (Billboard TMBR)"
 		"LP144a Battery Pack"
 		"D23-QP Shield Generator"
 		"Interference Plating" 9
+		"Sniper Rifle"
 		"Laser Rifle" 9
 		"Nerve Gas" 9
 		
@@ -536,6 +543,7 @@ ship "Cruiser" "Cruiser (Coalition)"
 		"Fuel Pod" 2
 		"Ramscoop"
 		"Outfits Expansion" 2
+		"Sniper Rifle"
 		"Laser Rifle" 20
 		"Fragmentation Grenades" 20
 
@@ -560,6 +568,7 @@ ship "Cruiser" "Cruiser (Pug)"
 	outfits
 		"Armageddon Core"
 		"D94-YV Shield Generator"
+		"Sniper Rifle"
 		"Fragmentation Grenades" 25
 		"Fuel Pod"
 		Hyperdrive
@@ -711,6 +720,7 @@ ship "Frigate" "Frigate (Pug)"
 		"Fragmentation Grenades" 8
 		Hyperdrive
 		"LP072a Battery Pack"
+		"Sniper Rifle"
 		"Laser Rifle" 8
 		"NT-200 Nucleovoltaic"
 		"Outfits Expansion"
@@ -733,6 +743,7 @@ ship "Fury" "Fury (Hai)"
 		"Pebble Core"
 		"Pulse Cannon" 2
 		"Small Radar Jammer" 2
+		"Dual Pulse Pistols"
 
 
 
@@ -750,6 +761,7 @@ ship "Gunboat" "Gunboat (Coalition)"
 		"Brig"
 		"A250 Atomic Thruster"
 		"A255 Atomic Steering"
+		"Sniper Rifle"
 		"Hyperdrive"
 
 
@@ -802,6 +814,7 @@ ship "Gunboat" "Gunboat (Pug)"
 		"Pug Akfar Steering"
 		"Pug Akfar Thruster"
 		"Pug Seeker" 2
+		"Sniper Rifle"
 		Supercapacitor 3
 
 
@@ -816,6 +829,7 @@ ship "Hauler" "Hauler (Energy Cannons)"
 		"D41-HY Shield Generator"
 		"Water Coolant System"
 		"Small Radar Jammer"
+		"Sniper Rifle"
 		"Greyhound Plasma Thruster"
 		"Impala Plasma Steering"
 		"Hyperdrive"
@@ -834,6 +848,7 @@ ship "Hawk" "Hawk (Hai)"
 		"Pebble Core"
 		"Pulse Cannon" 2
 		"Small Radar Jammer"
+		"Dual Pulse Pistols"
 
 
 ship "Hawk" "Hawk (Remnant)"
@@ -1084,6 +1099,7 @@ ship "Rainmaker" "Rainmaker (Wanderer)"
 		"Bright Cloud Shielding"
 		"Small Radar Jammer"
 		"Wanderer Ramscoop"
+		"Sniper Rifle"
 		
 		"Type 2 Radiant Thruster"
 		"Type 2 Radiant Steering"
@@ -1104,6 +1120,7 @@ ship "Raven" "Raven (Hai)"
 		"Pulse Cannon" 2
 		"X3200 Ion Steering"
 		"X3700 Ion Thruster"
+		"Dual Pulse Pistols"
 
 
 
@@ -1165,6 +1182,7 @@ ship "Scout" "Scout (Hai)"
 		"Pulse Cannon" 2
 		Ramscoop
 		"Small Radar Jammer"
+		"Dual Pulse Pistols"
 
 
 
@@ -1664,6 +1682,7 @@ ship "Bastion" "Bastion (Inferno Rockets)"
 		"Water Coolant System"
 		"Tactical Scanner"
 		"Laser Rifle" 7
+		"Sniper Rifle"
 		
 		"Impala Plasma Thruster"
 		"Impala Plasma Steering"
@@ -1684,6 +1703,7 @@ ship "Berserker" "Berserker (Inferno Rockets)"
 		"Supercapacitor"
 		"D23-QP Shield Generator"
 		"Ramscoop"
+		"Sniper Rifle"
 		"Chipmunk Plasma Thruster"
 		"Chipmunk Plasma Steering"
 		"Hyperdrive"
@@ -1698,6 +1718,7 @@ ship "Clipper" "Clipper (Inferno Rockets)"
 		"RT-I Radiothermal"
 		"Supercapacitor"
 		"D67-TM Shield Generator"
+		"Sniper Rifle"
 		"Greyhound Plasma Thruster"
 		"Impala Plasma Steering"
 		"Scram Drive"
@@ -1717,6 +1738,7 @@ ship "Corvette" "Corvette (Inferno Rockets)"
 		"Cooling Ducts"
 		"Cargo Expansion"
 		"Laser Rifle" 4
+		"Sniper Rifle"
 		"A370 Atomic Thruster"
 		"A375 Atomic Steering"
 		"Hyperdrive"
@@ -1735,6 +1757,7 @@ ship "Cruiser" "Cruiser (Inferno Rockets)"
 		"Heavy Laser Turret" 2
 		"Heavy Anti-Missile Turret"
 		"Quad Blaster Turret"
+		"Sniper Rifle"
 		"Laser Rifle" 20
 		"Fragmentation Grenades" 20
 		"Armageddon Core"
@@ -1779,6 +1802,7 @@ ship "Falcon" "Falcon (Inferno Rockets)"
 		"Large Radar Jammer"
 		"Liquid Nitrogen Cooler"
 		"Laser Rifle" 15		
+		"Sniper Rifle"
 		"Impala Plasma Thruster"
 		"Impala Plasma Steering"
 		"Hyperdrive"
@@ -1803,6 +1827,7 @@ ship "Firebird" "Firebird (Inferno Rockets)"
 		"Liquid Nitrogen Cooler"
 		"Outfits Expansion"
 		"Laser Rifle" 3
+		"Sniper Rifle"
 		"X3700 Ion Thruster"
 		"A375 Atomic Steering"
 		"Hyperdrive"
@@ -1828,6 +1853,7 @@ ship "Frigate" "Frigate (Inferno Rockets)"
 		"Outfits Expansion"
 		"Laser Rifle" 8
 		"Fragmentation Grenades" 8
+		"Sniper Rifle"
 		"A250 Atomic Thruster"
 		"A375 Atomic Steering"
 		"Hyperdrive"
@@ -1851,6 +1877,7 @@ ship "Fury" "Fury (Inferno Rockets)"
 		"Supercapacitor"
 		"D14-RN Shield Generator"
 		"Small Radar Jammer" 2
+		"Sniper Rifle"
 		"X2700 Ion Thruster"
 		"Chipmunk Plasma Steering"
 		"Hyperdrive"
@@ -1863,6 +1890,7 @@ ship "Hawk" "Hawk (Inferno Rockets)"
 		"RT-I Radiothermal"
 		"Supercapacitor" 2
 		"D41-HY Shield Generator"
+		"Sniper Rifle"
 		"Greyhound Plasma Thruster"
 		"Greyhound Plasma Steering"
 		"Hyperdrive"
@@ -1882,6 +1910,7 @@ ship "Leviathan" "Leviathan (Inferno Rockets)"
 		"D67-TM Shield Generator"
 		"Liquid Helium Cooler"
 		"Laser Rifle" 15
+		"Sniper Rifle"
 		"X3700 Ion Thruster"
 		"X4200 Ion Steering"
 		"Hyperdrive"
@@ -1908,6 +1937,7 @@ ship "Modified Argosy" "Modified Argosy (Inferno Rocket)"
 		"Brig"
 		"Outfits Expansion"
 		"Laser Rifle"
+		"Sniper Rifle"
 		"X3700 Ion Thruster"
 		"Greyhound Plasma Steering"
 		"Hyperdrive"
@@ -1931,6 +1961,7 @@ ship "Osprey" "Osprey (Inferno Rockets)"
 		"Tactical Scanner"
 		"Outfits Expansion"
 		"Laser Rifle" 3
+		"Sniper Rifle"
 		"A520 Atomic Thruster"
 		"A375 Atomic Steering"
 		"Hyperdrive"
@@ -1952,6 +1983,7 @@ ship "Raven" "Raven (Inferno Rockets)"
 		"LP072a Battery Pack"
 		"D41-HY Shield Generator"
 		"Laser Rifle" 2
+		"Sniper Rifle"
 		
 		"X3700 Ion Thruster"
 		"X3200 Ion Steering"
@@ -1976,6 +2008,7 @@ ship "Splinter" "Splinter (Inferno Rockets)"
 		"LP036a Battery Pack"
 		"D94-YV Shield Generator"
 		"Laser Rifle" 2
+		"Sniper Rifle"
 		"X3700 Ion Thruster"
 		"Impala Plasma Steering"
 		"Hyperdrive"
@@ -1996,6 +2029,7 @@ ship "Vanguard" "Vanguard (Inferno Rockets)"
 		"D67-TM Shield Generator"
 		"Liquid Nitrogen Cooler"
 		"Laser Rifle" 6
+		"Sniper Rifle"
 		"X3700 Ion Thruster"
 		"X4200 Ion Steering"
 		"Hyperdrive"
