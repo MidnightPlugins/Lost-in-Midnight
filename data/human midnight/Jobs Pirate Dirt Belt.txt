@@ -825,8 +825,138 @@ mission "Lares Camping (Scavenger)"
 			label morning
 			`	After a restful night, you clean up the cabin and head back to your ship.`
 				decline
-			
 
+mission "Lares Exploring"
+	minor
+	repeat
+	source "Lares"
+	to offer
+		random < 15
+	on offer
+		conversation
+			`It's a beautiful day for a hike...`
+			choice
+				`	(Explore the wilderness.)`
+				`	(Not now...)`
+					defer
+			branch "cave"
+				random < 50
+
+			branch "lake"
+				random < 50
+
+			`During your hike you spot several new types of animals you've never seen before. Eventually, you find a forest clearing.`
+			choice
+				`	(Stop for a picnic.)`
+				`	(Return to your ship.)`
+					defer
+			`	While eating lunch, you notice something weird about the ground nearby.`
+			choice
+				`	(Dig it up.)`
+				`	(Ignore it and return to your ship.)`
+					defer
+			branch "predator"
+				random < 20
+			
+			branch "weapons"
+				random < 50
+			
+			branch "treasure"
+				random < 20
+
+			scene "scene/scene-empty box"
+			`	You find an old empty crate. From the way the wood is rotted, it must have been here for a very long time.`
+				defer
+
+			label "treasure"
+			scene "outfit/treasure"
+			`	You find an old crate. Inside is a Mysterious Treasure! You could probably sell it for a decent sum anywhere, but getting it appraised by someone knowledgeable about archaeology might yield better results.`
+				accept
+			
+			label "weapons"
+			scene "scene/scene-weapons cache"
+			`	You find an old weapons cache. These look ancient, but probably still work.
+				decline
+			
+			label "predator"
+			scene "outfit/mouthparts"
+			`	Suddenly you are attacked by a vicious predator!`
+			choice
+				`	(Run back to your ship!)`
+					defer
+				`	(Kill the beast!)`
+
+			branch "death"
+				random < 20
+			scene "outfit/laser rifle"
+			`	Fortunately, you happen to be armed and have no trouble putting down the creature. At least tonight's dinner is covered!`
+				defer
+			
+			label "death"
+			scene "scene/scene-devoured"
+			`	Before you can properly aim, the beast has taken your arm! The pain and shock renders you unable to escape as the beast devours you alive...`
+				die
+			
+			label lake
+			`During your hike you spot several new types of animals you've never seen before. Eventually, you find a lake.`
+			choice
+				`	(Go for a swim.)`
+				`	(Return to your ship.)`
+					defer
+			branch "predator"
+				random < 33
+			
+			`	While swimming you notice an unnatural object beneath the water.`
+			choice
+				`	(Bring it back to the surface.)`
+				`	(Ignore it and return to your ship.)`
+					defer
+			branch "predator"
+				random < 50
+
+			branch "weapons"
+				random < 50
+			
+			branch "treasure"
+				random < 20
+
+			scene "scene/scene-empty box"
+			`	You find an old empty crate. From the way the wood is rotted, it must have been here for a very long time.`
+				defer
+			
+			label cave
+			`During your hike you spot several new types of animals you've never seen before. Eventually, you find a cave.`
+			choice
+				`	(Search the cave.)`
+				`	(Ignore it and return to your ship.)`
+					defer
+			branch "predator"
+				random < 25
+
+			branch "empty"
+				random < 50
+			
+			branch "weapons"
+				random < 50
+			
+			branch "treasure"
+				random < 20
+
+			scene "scene/scene-empty box"
+			`	You find an old empty crate. From the way the wood is rotted, it must have been here for a very long time.`
+				defer
+
+			label "empty"
+			`	The cavern is empty. Perhaps you are the first living creature to set eyes on these rock formations.`
+				defer
+	on decline
+		outfit "Sniper Rifle" 1
+		outfit "Fragmentation Grenades" 1
+		outfit "Bullet Boxes" 1
+		outfit "Gatling Gun Ammo" 1500
+	on accept
+		outfit "Mysterious Treasure" 1
+		fail
 
 mission "New China Supplies to Diyu"
 	job

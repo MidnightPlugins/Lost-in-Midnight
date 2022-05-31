@@ -94,6 +94,95 @@ outfit "Heavy Fusion Core"
 
 
 
+outfit "Inferno Rocket"
+	category "Ammunition"
+	cost 2000
+	thumbnail "outfit/inferno rocket"
+	"mass" .5
+	"inferno rocket capacity" -1
+	description "Inferno Rockets are ammunition for the Inferno Rocket Launcher. You cannot install one unless you have first installed a launcher to fire it from. Each launcher holds up to 20 rockets."
+
+outfit "Inferno Rocket Rack"
+	category "Ammunition"
+	cost 20000
+	thumbnail "outfit/inferno rocket storage"
+	"mass" 2
+	"outfit space" -7
+	"inferno rocket capacity" 10
+	ammo "Inferno Rocket"
+	description "The Inferno Rocket Rack is used to store extra ammunition for Inferno Rocket Launchers."
+
+outfit "Inferno Rocket Launcher"
+	category "Secondary Weapons"
+	cost 40000
+	thumbnail "outfit/inferno rocket launcher"
+	"mass" 10
+	"outfit space" -20
+	"weapon capacity" -20
+	"gun ports" -1
+	"inferno rocket capacity" 20
+	weapon
+		sprite "projectile/inferno rocket"
+			"frame rate" 4
+		sound "rocket"
+		ammo "Inferno Rocket"
+		icon "icon/inferno rocket"
+		"hit effect" "inferno rocket burn medium" 5
+		"hit effect" "inferno rocket burn small" 10
+		"hit effect" "inferno rocket burn tiny" 20
+		"die effect" "large explosion"
+		"inaccuracy" 1
+		"velocity" 8
+		"lifetime" 125
+		"reload" 240
+		"firing energy" 1
+		"firing heat" 250
+		"acceleration" .8
+		"drag" .1
+		"trigger radius" 20
+		"blast radius" 50
+		"shield damage" 85
+		"hull damage" 72
+		"hit force" 6
+		"missile strength" 8
+		"heat damage" 45000
+	description "A weapon developed through cooperation between different pirate factions, Inferno Rockets splatter their targets with a highly flammable substance."
+
+effect "inferno rocket burn medium"
+	sprite "effect/explosion/medium"
+		"frame rate" 15
+	sound "flamethrower"
+	"lifetime" 180
+	"random angle" 360
+	"random frame rate" 5
+	"random spin" 5
+	"random velocity" .1
+	"velocity scale" .11
+
+effect "inferno rocket burn small"
+	sprite "effect/explosion/small"
+		"frame rate" 15
+	sound "flamethrower"
+	"lifetime" 180
+	"random angle" 360
+	"random frame rate" 5
+	"random spin" 5
+	"random velocity" .1
+	"velocity scale" .08
+
+effect "inferno rocket burn tiny"
+	sprite "effect/explosion/tiny"
+		"frame rate" 15
+	sound "flamethrower"
+	"lifetime" 180
+	"random angle" 360
+	"random frame rate" 5
+	"random spin" 5
+	"random velocity" .1
+	"velocity scale" .05
+
+
+
 outfit "Proton Gun-CF8"
 	category "Guns"
 	cost 175000
