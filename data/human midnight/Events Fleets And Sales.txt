@@ -19,10 +19,6 @@ mission "Midnight Sales Update 1"
 		fail
 
 event "midnight sales update 1"
-	shipyard "Advanced Northern Pirates"
-		add "Modified Berserker"
-		add "Modified Firebird"
-		add "Modified Aerie"
 	outfitter "Deep Sky Advanced"
 		add "Engineering Room"
 		add "Medical Bay"
@@ -38,6 +34,124 @@ event "midnight sales update 1"
 	outfitter "Kraz Advanced"
 		add "Engineering Room"
 		add "Medical Bay"
+
+
+
+mission "Add Energy Cannons"
+	landing
+	invisible
+	on offer
+		event "add energy cannons"
+		fail
+
+event "add energy cannons"
+	shipyard "Advanced Northern Pirates"
+		add "Modified Berserker"
+		add "Modified Firebird"
+		add "Modified Aerie"
+	fleet "Small Southern Merchants"
+		add variant 1
+			"Hauler (Energy Cannons)"
+	fleet "Large Southern Merchants"
+		add variant 1
+			"Modified Firebird"
+			"Berserker" 2
+		add variant 1
+			"Modified Firebird"
+			"Berserker"
+			"Modified Berserker"
+	fleet "Small Core Merchants"
+		add variant 1
+			"Modified Firebird"
+		add variant 1
+			"Hauler (Energy Cannons)"
+	fleet "Small Northern Merchants"
+		add variant 1
+			"Modified Firebird"
+		add variant 1
+			"Hauler (Energy Cannons)"
+	fleet "Large Northern Merchants"
+		add variant 1	
+			"Modified Aerie"
+		add variant 1
+			"Aerie (Energy Cannons)"
+			"Dagger" 2
+	fleet "Small Deep Merchants"
+		add variant 1	
+			"Modified Aerie"
+		add variant 1
+			"Aerie (Energy Cannons)"
+			"Dagger" 2
+	fleet "Human Miners"
+		add variant 1	
+			"Modified Berserker"
+		add variant 1
+			"Berserker (Energy Cannons)"
+	fleet "Bounty Hunters"
+		add variant 1	
+			"Berserker (Energy Cannons)"
+			"Quicksilver"
+		add variant 1	
+			"Modified Aerie"
+			"Berserker"
+			"Berserker (Energy Cannons)"
+		add variant 1	
+			"Firebird (Energy Cannons)"
+			"Berserker" 2
+		add variant 1
+			"Firebird"
+			"Berserker"
+			"Berserker (Energy Cannons)"
+		add variant 1	
+			"Firebird (Energy Cannons)"
+			"Fury (Missile)"
+	fleet "pirate raid"
+		add variant 1	
+			"Modified Aerie"
+			"Berserker"
+			"Berserker (Energy Cannons)"
+		add variant 1	
+			"Firebird (Energy Cannons)"
+		add variant 1	
+			"Firebird (Energy Cannons)"
+			"Berserker" 2
+		add variant 1
+			"Firebird"
+			"Berserker"
+			"Berserker (Energy Cannons)"
+		add variant 1	
+			"Firebird (Energy Cannons)"
+			"Fury (Heavy)" 2
+		add variant 1	
+			"Firebird (Energy Cannons)"
+			"Leviathan (Heavy)"
+	fleet "Small Northern Pirates"
+		add variant 1	
+			"Modified Aerie"
+		add variant 1
+			"Berserker (Energy Cannons)"
+	fleet "Large Northern Pirates"
+		add variant 1	
+			"Firebird (Energy Cannons)"
+		add variant 1	
+			"Firebird (Energy Cannons)"
+			"Berserker" 2
+		add variant 1
+			"Firebird"
+			"Berserker"
+			"Berserker (Energy Cannons)"
+		add variant 1	
+			"Firebird (Energy Cannons)"
+			"Fury (Heavy)" 2
+		add variant 1	
+			"Firebird (Energy Cannons)"
+			"Leviathan (Heavy)"
+		add variant 1	
+			"Modified Aerie"
+			"Berserker"
+			"Berserker (Energy Cannons)"
+
+
 
 
 
@@ -455,80 +569,7 @@ event "star explorer added to merchant fleets"
 			"Hacker Drone"
 
 
-# From mission "Bounty Hunting: Angry Chicken" in Jobs Misc.
-event "add energy cannon variants"
-	fleet "Small Southern Merchants"
-		add variant 1
-			"Hauler (Energy Cannons)"
-	fleet "Large Southern Merchants"
-		add variant 1
-			"Modified Firebird"
-			"Berserker" 2
-		add variant 1
-			"Modified Firebird"
-			"Berserker"
-			"Modified Berserker"
-	fleet "Small Core Merchants"
-		add variant 1
-			"Modified Firebird"
-		add variant 1
-			"Hauler (Energy Cannons)"
-	fleet "Small Northern Merchants"
-		add variant 1
-			"Modified Firebird"
-		add variant 1
-			"Hauler (Energy Cannons)"
-	fleet "Large Northern Merchants"
-		add variant 1	
-			"Modified Aerie"
-		add variant 1
-			"Aerie (Energy Cannons)"
-			"Dagger" 2
-	fleet "Small Deep Merchants"
-		add variant 1	
-			"Modified Aerie"
-		add variant 1
-			"Aerie (Energy Cannons)"
-			"Dagger" 2
-	fleet "Human Miners"
-		add variant 1	
-			"Modified Berserker"
-		add variant 1
-			"Berserker (Energy Cannons)"
-	fleet "Bounty Hunters"
-		add variant 1	
-			"Modified Aerie"
-			"Berserker"
-			"Berserker (Energy Cannons)"
-		add variant 1
-			"Firebird"
-			"Berserker"
-			"Berserker (Energy Cannons)"
-	fleet "pirate raid"
-		add variant 1	
-			"Modified Aerie"
-			"Berserker"
-			"Berserker (Energy Cannons)"
-		add variant 1
-			"Firebird"
-			"Berserker"
-			"Berserker (Energy Cannons)"
-	fleet "Small Northern Pirates"
-		add variant 1	
-			"Modified Aerie"
-		add variant 1
-			"Berserker (Energy Cannons)"
-	fleet "Large Northern Pirates"
-		add variant 1	
-			"Modified Aerie"
-			"Berserker"
-			"Berserker (Energy Cannons)"
-		add variant 1
-			"Firebird"
-			"Berserker"
-			"Berserker (Energy Cannons)"
 
-		
 mission "Add Base Heavy Syndicate Marauders"
 	landing
 	invisible

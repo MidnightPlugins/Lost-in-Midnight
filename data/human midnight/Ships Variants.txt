@@ -125,21 +125,26 @@ ship "Kestrel" "Kestrel (Battle Weapons)"
 ship "Aerie" "Aerie (Energy Cannons)"
 	outfits
 		"Energy Cannon" 2
-		"Laser Turret" 2
+		"Quad Blaster Turret" 2
 		"Anti-Missile Turret"
 		
 		"RT-I Radiothermal"
 		"LP072a Battery Pack"
 		"D67-TM Shield Generator"
-		"Cargo Expansion" 4
+		"Cargo Expansion" 3
 		"Large Radar Jammer"
+		"Ramscoop"
 		"Sniper Rifle"
 		"Laser Rifle" 3
 		
 		"X3700 Ion Thruster"
 		"X3200 Ion Steering"
 		"Hyperdrive"
-
+	turret "Anti-Missile Turret"
+	turret "Quad Blaster Turret"
+	turret "Quad Blaster Turret"
+	
+	
 
 ship "Aerie" "Aerie (Hai)"
 	outfits
@@ -160,6 +165,9 @@ ship "Aerie" "Aerie (Hai)"
 		"Tracker Storage Pod"
 		"X3200 Ion Steering"
 		"X3700 Ion Thruster"
+	turret "Chameleon Anti-Missile"
+	turret "Pulse Turret"
+	turret "Pulse Turret"
 
 
 ship "Aerie" "Aerie (Korath)"
@@ -707,6 +715,29 @@ ship "Finch" "Finch (Flamethrower)"
 		"D14-RN Shield Generator"
 		"Chipmunk Plasma Thruster"
 		"Chipmunk Plasma Steering"
+
+
+
+ship "Firebird" "Firebird (Energy Cannons)"
+	outfits
+		"Energy Cannon" 2
+		"Torpedo Launcher" 2
+		"Torpedo Storage Rack" 2
+		"Torpedo" 90
+		
+		"Quad Blaster Turret"
+		"Anti-Missile Turret"
+		
+		"RT-I Radiothermal"
+		"nGVF-AA Fuel Cell"
+		"LP144a Battery Pack"
+		"D41-HY Shield Generator"
+		"Cargo Expansion"
+		"Laser Rifle" 3
+		
+		"X3700 Ion Thruster"
+		"X3200 Ion Steering"
+		"Hyperdrive"
 
 
 

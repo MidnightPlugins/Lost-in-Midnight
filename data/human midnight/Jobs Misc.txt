@@ -32,7 +32,6 @@ mission "Bounty Hunting: Angry Chicken"
 		dialog phrase "generic bounty hunting on visit"
 	on complete
 		payment 100000
-		event "add energy cannon variants"
 		dialog phrase "generic bounty hunting payment dialog"
 
 mission "Bounty Hunting: Tweedledee & Tweedledum"
