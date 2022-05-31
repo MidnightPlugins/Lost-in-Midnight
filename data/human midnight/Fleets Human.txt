@@ -29,6 +29,7 @@ fleet "Treasure Hunters"
 
 fleet "Poachers"
 	government "Creature Hunter"
+	names "independent"
 	personality vindictive harvests coward
 		confusion 20
 	cargo 0
@@ -50,6 +51,7 @@ fleet "Poachers"
 
 fleet "Large Scar's Legion"
 	government "Scar's Legion"
+	names "pirate"
 	personality plunders harvests
 		confusion 20
 	outfitters "Hai Advanced"
@@ -160,6 +162,7 @@ fleet "Large Scar's Legion"
 
 fleet "Small Scar's Legion"
 	government "Scar's Legion"
+	names "pirate"
 	personality plunders harvests
 		confusion 20
 	outfitters "Hai Advanced"
