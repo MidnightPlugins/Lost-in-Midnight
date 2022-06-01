@@ -118,9 +118,9 @@ mission "Midnight Market: Hauler VI Prototype 1"
 	destination Stormhold
 	to offer
 		has "event: stolen Hauler VI timer"
-		"Bulk Delivery [2]: done" > 2
 		"net worth" > 28000000
 		"credits" > 14000000
+	"Bulk Delivery [0]: done" + "Bulk Delivery [1]: done" + "Bulk Delivery [2]: done" + "Large Bulk Delivery [0]: done" + "Large Bulk Delivery [1]: done" + "Large Bulk Delivery [2]: done" >= 6
 	to complete
 		"credits" >= 7000000
 	on offer
@@ -379,7 +379,7 @@ mission "Midnight Market: Cloaking Device 1"
 	destination Freedom
 	to offer
 		"Midnight Market" > 4
-		"Corporate espionage: done" > 2
+		"Corporate espionage: done" + "Corporate espionage [1]: done" + "Corporate espionage [2]: done" + "Free Worlds espionage: done" >= 4
 		has "event: Stolen Cloaking Device"		
 		"net worth" > 8000000
 		"credits" >= 6000000

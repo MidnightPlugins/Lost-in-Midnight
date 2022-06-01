@@ -747,7 +747,7 @@ mission "Ghost Hunting: Zubenelgenubi Ghost Ship"
 		attributes "dirt belt"
 	waypoint Zubenelgenubi
 	to offer
-#		"month" == 10
+		"month" == 10
 		has "Coalition: First Contact: done"
 		has "Ghost Hunting: Poltergeist King 2: done"
 	on offer
@@ -980,6 +980,102 @@ mission "Ghost Hunting: Friendship 1"
 		log `Repaired Friendship 1, a Republic drone that was abandoned during the war. Instead of taking it back after the war was over, it was left to guard the system from pirates. It seems the local kids are fans of it. Perhaps they regard it as a symbol of hope for galactic peace.`
 
 
+
+
+phrase "error test ship"
+	word
+		"_est Ship"
+		"T_st Ship"
+		"Te_t Ship"
+		"Tes_ Ship"
+		"Test _hip"
+		"Test S_ip"
+		"Test Sh_p"
+		"Test Shi_"
+	word
+		" ERROR:"
+	phrase
+		"digit"
+	phrase
+		"digit"
+	phrase
+		"digit"
+		
+phrase "ghost fleet test dummy offer"
+	word
+		"You overhear "
+	word
+		"some "
+		"a couple of "
+		"a group of "
+	word
+		"bounty hunters "
+	word
+		"talking about a fleet of ghost ships that has been attacking ships in nearby systems. It seems there's a reward for destroying it."
+
+
+mission "Ghost Hunting: Ghost Fleet"
+	name "Ghost Ship?"
+	description "There are rumors of fleet of ghost ships attacking solitary ships near <destination>... The reward for destroying it is <payment>."
+	source
+		attributes "frontier"
+	to offer
+		"month" == 10
+		has "Ghost Hunting: Poltergeist King 2: done"
+		"Syndicate target practice [0]: done" + "Syndicate target practice [1]: done" + "Syndicate target practice [2]: done" + "Syndicate target practice [3]: done" + "Kestrel Testing: done" >= 1
+	on offer
+		clear "Ghost Hunting: Ghost Fleet Reset: offered"
+		dialog phrase "ghost fleet test dummy offer"
+	npc kill
+		government "Phenomenon (dangerous)"
+		system
+			distance 1 2
+		personality target waiting staying vindictive marked mute
+			confusion 60
+		ship "Hackerz Drone" "Poltergeist King"
+		fleet
+			names "error test ship"
+			variant
+				"Quicksilver Test Dummy"
+				"Argosy Test Dummy"
+				"Splinter Test Dummy"
+				"Vanguard Test Dummy"
+			variant
+				"Berserker Test Dummy"
+				"Argosy Test Dummy"
+				"Mule Test Dummy"
+				"Leviathan Test Dummy"
+			variant
+				"Hauler Test Dummy"
+				"Freighter Test Dummy"
+				"Argosy Test Dummy"
+				"Falcon Test Dummy"
+	on complete
+		payment 500000
+		dialog "The government of <planet> rewards you with <payment> for eliminating the fleet of ghost ships."
+
+ship "Leviathan" "Leviathan Test Dummy"
+	add attributes
+		"automaton" 1
+		"self destruct" 1
+ship "Falcon" "Falcon Test Dummy"
+	add attributes
+		"automaton" 1
+		"self destruct" 1
+
+mission "Ghost Hunting: Ghost Fleet Reset"
+	landing
+	invisible
+	to offer
+		"month" == 9
+	on offer
+		clear "Ghost Hunting: Ghost Fleet: offered"
+		fail
+
+
+
+
+######################################################################
 
 mission "Ghost Hunting: Curse of the Carabao 1"
 	source
