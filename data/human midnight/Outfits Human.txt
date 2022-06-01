@@ -144,7 +144,7 @@ outfit "Inferno Rocket Launcher"
 		"blast radius" 50
 		"shield damage" 85
 		"hull damage" 72
-		"hit force" 6
+		"hit force" 60
 		"missile strength" 8
 		"heat damage" 48000
 	description "A weapon developed through cooperation between different pirate factions, Inferno Rockets splatter their targets with a highly flammable substance."

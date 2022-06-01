@@ -465,6 +465,17 @@ ship "War Hauler" "Grudge Hammer"
 	turret "Quad Blaster Turret"
 	
 event "Grudge Legacy"
+	fleet "Marauder Bounty (Disguised)"
+		add variant 3
+			"Marauder Hauler"
+		add variant 2
+			"Marauder Hauler B"
+		add variant 1
+			"Marauder Hauler C"
+		add variant 6
+			"Marauder Hauler (engines)"
+		add variant 6
+			"Marauder Hauler (weapons)"
 	fleet "Marauder Independent (Killable)"
 		add variant 3
 			"Marauder Hauler"
@@ -487,6 +498,60 @@ event "Grudge Legacy"
 			"Marauder Hauler (engines)"
 		add variant 6
 			"Marauder Hauler (weapons)"
+	fleet "Marauder fleet II"
+		add variant 2
+			"Marauder Hauler"
+			"Marauder Arrow (Weapons)"
+			"Marauder Bounder (Engines)"
+		add variant 2
+			"Marauder Hauler"
+			"Marauder Arrow (Engines)"
+			"Marauder Bounder (Weapons)"
+		add variant 2
+			"Marauder Hauler B"
+			"Marauder Arrow (Weapons)"
+			"Marauder Bounder (Engines)"
+		add variant 1
+			"Marauder Hauler B"
+			"Marauder Arrow (Engines)"
+			"Marauder Bounder (Weapons)"
+		add variant 1
+			"Marauder Hauler C"
+			"Marauder Arrow (Weapons)"
+			"Marauder Bounder (Engines)"
+		add variant 2
+			"Marauder Hauler C"
+			"Marauder Arrow (Engines)"
+			"Marauder Bounder (Weapons)"
+	fleet "Marauder fleet III"
+		add variant 3
+			"Marauder Hauler (engines)"
+			"Marauder Arrow (Weapons)"
+			"Marauder Bounder (Engines)"
+		add variant 3
+			"Marauder Hauler (engines)"
+			"Marauder Arrow (Engines)"
+			"Marauder Bounder (Weapons)"
+		add variant 2
+			"Marauder Hauler (engines)"
+			"Marauder Arrow" 2
+			"Marauder Bounder" 2
+	fleet "Marauder fleet IV"
+		add variant 10
+			"Marauder Hauler (weapons)"
+			"Marauder Raven"
+			"Marauder Quicksilver"
+	fleet "Marauder fleet V"
+		add variant 8
+			"Marauder Hauler (weapons)"
+			"Marauder Raven"
+			"Marauder Quicksilver"
+	fleet "Marauder fleet VI"
+		add variant 4
+			"Marauder Hauler (weapons)"
+			"Marauder Raven"
+			"Marauder Quicksilver"
+
 
 
 # Alternate paths to the main Grudge Fight mission chain:
