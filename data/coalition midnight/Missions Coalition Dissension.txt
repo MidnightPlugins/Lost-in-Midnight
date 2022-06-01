@@ -25,8 +25,8 @@ mission "Coalition Dissension: Model Guns Delivery (Arach)"
 		not attributes "uninhabited"
 	to offer
 		"coalition jobs" >= 15
-		not "Coalition Dissension: Model Guns Delivery (Kimek): done"
-		not "Coalition Dissension: Model Guns Delivery (Saryd): done"
+		not "Coalition Dissension: Model Guns Delivery (Kimek): active"
+		not "Coalition Dissension: Model Guns Delivery (Saryd): active"
 		or
 			not "Randomize Coalition Dissension: Model Guns Delivery"
 			and
@@ -70,8 +70,8 @@ mission "Coalition Dissension: Model Guns Delivery (Kimek)"
 		not attributes "uninhabited"
 	to offer
 		"coalition jobs" >= 15
-		not "Coalition Dissension: Model Guns Delivery (Arach): done"
-		not "Coalition Dissension: Model Guns Delivery (Saryd): done"
+		not "Coalition Dissension: Model Guns Delivery (Arach): active"
+		not "Coalition Dissension: Model Guns Delivery (Saryd): active"
 		or
 			not "Randomize Coalition Dissension: Model Guns Delivery"
 			and
@@ -115,8 +115,8 @@ mission "Coalition Dissension: Model Guns Delivery (Saryd)"
 		not attributes "uninhabited"
 	to offer
 		"coalition jobs" >= 15
-		not "Coalition Dissension: Model Guns Delivery (Kimek): done"
-		not "Coalition Dissension: Model Guns Delivery (Arach): done"
+		not "Coalition Dissension: Model Guns Delivery (Kimek): active"
+		not "Coalition Dissension: Model Guns Delivery (Arach): active"
 		or
 			not "Randomize Coalition Dissension: Model Guns Delivery"
 			and
