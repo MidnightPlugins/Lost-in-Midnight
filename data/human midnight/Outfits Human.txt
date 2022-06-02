@@ -128,9 +128,9 @@ outfit "Inferno Rocket Launcher"
 		ammo "Inferno Rocket"
 		icon "icon/inferno rocket"
 		"hit effect" "inferno rocket hit"
-		"hit effect" "inferno rocket burn medium" 5
-		"hit effect" "inferno rocket burn small" 10
-		"hit effect" "inferno rocket burn tiny" 20
+		"hit effect" "inferno rocket burn large" 5
+		"hit effect" "inferno rocket burn medium" 10
+		"hit effect" "inferno rocket burn small" 20
 		"die effect" "medium explosion"
 		"inaccuracy" 1
 		"velocity" 8
@@ -147,7 +147,7 @@ outfit "Inferno Rocket Launcher"
 		"hit force" 60
 		"missile strength" 8
 		"heat damage" 48000
-	description "A weapon developed through cooperation between different pirate factions, Inferno Rockets splatter their targets with a highly flammable substance."
+	description "A weapon secretly developed through cooperation between different pirate factions, Inferno Rockets splatter their targets with a highly flammable substance."
 
 effect "inferno rocket hit"
 	sprite "effect/explosion/huge"
@@ -161,7 +161,7 @@ effect "inferno rocket hit"
 	"random velocity" 1
 	"velocity scale" .4
 
-effect "inferno rocket burn medium"
+effect "inferno rocket burn large"
 	sprite "effect/explosion/large"
 		"frame rate" 15
 	sound "flamethrower"
@@ -172,7 +172,7 @@ effect "inferno rocket burn medium"
 	"random velocity" .1
 	"velocity scale" .11
 
-effect "inferno rocket burn small"
+effect "inferno rocket burn medium"
 	sprite "effect/explosion/medium"
 		"frame rate" 15
 	sound "flamethrower"
@@ -183,7 +183,7 @@ effect "inferno rocket burn small"
 	"random velocity" .1
 	"velocity scale" .08
 
-effect "inferno rocket burn tiny"
+effect "inferno rocket burn small"
 	sprite "effect/explosion/small"
 		"frame rate" 15
 	sound "flamethrower"
