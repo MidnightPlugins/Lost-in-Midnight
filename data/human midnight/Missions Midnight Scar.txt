@@ -94,6 +94,29 @@ event "midnight scar's hideout (Hai)"
 			fleet "Small Scar's Legion" 8
 			fleet "Scar's Asteroid Defense" 8
 
+
+mission "Midnight Scar (Hai) patch 2"
+	landing
+	invisible
+	to offer
+		has "event: midnight scar's hideout (Hai)"
+	on offer
+		event "midnight scar's hideout (Hai) patch 2"
+		fail
+
+event "midnight scar's hideout (Hai) patch 2"
+	system Danoa
+		add fleet "Small Scar's Legion" 5000
+		add fleet "Large Scar's Legion" 15000
+		add fleet "Scar's Asteroid Defense" 10000
+		add fleet "Small Ionic Leech" 40000
+		add fleet "Small Northern Merchants" 15000
+		add fleet "Small Northern Pirates" 5000
+		add fleet "Large Northern Pirates" 16000
+		add fleet "Large Republic" 30000
+		add fleet "Human Miners" 1600
+
+
 fleet "Scar's Asteroid Defense"
 	government "Scar's Legion"
 	personality vindictive
