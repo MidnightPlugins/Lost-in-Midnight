@@ -17,10 +17,12 @@ mission "Midnight Scar (non-Hai)"
 	to offer
 		has "defeated scar's legion"
 	on offer
-		event "midnight scar's hideout"
+		event "midnight scar's hideout (non-Hai)"
 		fail
 
-event "midnight scar's hideout"
+event "midnight scar's hideout (non-Hai)"
+	system Danoa
+		add fleet "Pirate Asteroid Defense" 10000
 	planet "Scar's Hideout"
 		attributes north pirate station
 		description "Scar's Hideout is a hollowed-out asteroid used by Scar's Legion as their main base of operations. From here they harass anyone making the journey through the uninhabited systems of the Far North. Recently the gang has reduced their activities due a change of leadership."
@@ -34,11 +36,21 @@ event "midnight scar's hideout"
 			threshold 625
 			fleet "Large Northern Pirates" 1
 			fleet "Small Northern Pirates" 8
-			fleet "Scar's Asteroid Defense" 8
+			fleet "Pirate Asteroid Defense" 8
+
+fleet "Pirate Asteroid Defense"
+	government "Pirate"
+	personality vindictive
+		confusion 120
+	cargo 0	
+	variant
+		"Asteroid Defense"
+		"Phantom Drone Launcher"
 
 
 
-mission "Midnight Scar (Hai) patched"
+
+mission "Midnight Scar (Hai)"
 	landing
 	invisible
 	to offer
@@ -68,7 +80,7 @@ event "midnight scar's hideout (Hai)"
 	system Danoa
 		add fleet "Small Scar's Legion" 5000
 		add fleet "Large Scar's Legion" 15000
-		fleet "Scar's Asteroid Defense" 20000
+		add fleet "Scar's Asteroid Defense" 10000
 	planet "Scar's Hideout"
 		attributes north pirate station
 		outfitter "Ammo North"
@@ -88,18 +100,19 @@ fleet "Scar's Asteroid Defense"
 		confusion 120
 	cargo 0	
 	variant
-		"Asteroid Defense Turret"
+		"Asteroid Defense"
+		"Phantom Drone Launcher"
 
-ship "Asteroid Defense Turret"
+ship "Asteroid Defense"
 	sprite "ship/asteroid defense"
 	attributes
 		category "Drone"
 		"cost" 50000
-		"hull" 400
+		"hull" 4000
 		"automaton" 1
-		"mass" 20
+		"mass" 45
 		"drag" .8
-		"heat dissipation" .9
+		"heat dissipation" 1.05
 		"outfit space" 38
 		"weapon capacity" 18
 		weapon
@@ -207,3 +220,4 @@ mission "Midnight Scar: Scar's Legion Raid"
 	on complete
 		payment 1000000
 		dialog phrase "generic pirate attack payment dialog"
+ 

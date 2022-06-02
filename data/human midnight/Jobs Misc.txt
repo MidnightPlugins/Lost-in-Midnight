@@ -11,39 +11,16 @@
 
 
 
-mission "Bounty Hunting: Angry Chicken"
-	job
-	name "Wanted Bandit near <system>"
-	description "A Modified Firebird named the <npc> has been attacking merchants near <system>. Eliminate the ship, then report to <destination>. Payment is <payment>."
-	source
-		government "Republic" "Free Worlds" "Syndicate"
-		attributes "dirt belt" "south" "rim" "frontier"
-	to offer
-		random < 25
-	npc kill
-		government "Bounty"
-		system
-			distance 1 2
-		personality target waiting staying plunders harvests
-			confusion 20
-		ship "Modified Firebird" "Angry Chicken"
-		dialog phrase "generic hunted bounty eliminated dialog"
-	on visit
-		dialog phrase "generic bounty hunting on visit"
-	on complete
-		payment 100000
-		dialog phrase "generic bounty hunting payment dialog"
-
 mission "Bounty Hunting: Tweedledee & Tweedledum"
 	job
 	name "Wanted Bandit near <system>"
 	description "A pair of old Berserkers named the Tweedledee & Tweedledum have been attacking merchants near <system>. Eliminate these ships, then report to <destination>. Payment is <payment>."
 	source
-		government "Republic" "Free Worlds" "Syndicate"
-		attributes "dirt belt" "south" "rim" "frontier"
+		government "Republic" "Free Worlds"
+		attributes "dirt belt"
 	to offer
-		has "Bounty Hunting: Angry Chicken: done"
-		random < 25
+		"combat rating" >= 100
+		random < 10
 	npc kill
 		government "Bounty"
 		system
@@ -56,19 +33,43 @@ mission "Bounty Hunting: Tweedledee & Tweedledum"
 	on visit
 		dialog `You've landed on <planet>, but Tweedledee & Tweedledum have not been eliminated yet. Hunt them down and destroy them before returning.`
 	on complete
-		payment 125000
+		payment 100000
 		dialog `The government of <planet> gratefully pays you <payment> for eliminating Tweedledee & Tweedledum.`
+
+mission "Bounty Hunting: Angry Chicken"
+	job
+	name "Wanted Bandit near <system>"
+	description "A Modified Firebird named the <npc> has been attacking merchants near <system>. Eliminate the ship, then report to <destination>. Payment is <payment>."
+	source
+		government "Republic" "Free Worlds"
+		attributes "south"
+	to offer
+		"combat rating" >= 100
+		random < 10
+	npc kill
+		government "Bounty"
+		system
+			distance 1 2
+		personality target waiting staying plunders harvests
+			confusion 20
+		ship "Modified Firebird" "Angry Chicken"
+		dialog phrase "generic hunted bounty eliminated dialog"
+	on visit
+		dialog phrase "generic bounty hunting on visit"
+	on complete
+		payment 125000
+		dialog phrase "generic bounty hunting payment dialog"
 
 mission "Bounty Hunting: Mother Goose"
 	job
 	name "Wanted Bandit near <system>"
 	description "An old Aerie named the Mother Goose and its fighters have been attacking merchants near <system>. Eliminate the fleet, then report to <destination>. Payment is <payment>."
 	source
-		government "Republic" "Free Worlds" "Syndicate"
-		attributes "dirt belt" "south" "rim" "frontier"
+		government "Republic"
+		attributes "deep"
 	to offer
-		has "Bounty Hunting: Tweedledee & Tweedledum: done"
-		random < 25
+		"combat rating" >= 100
+		random < 10
 	npc kill
 		government "Bounty"
 		system
@@ -90,11 +91,11 @@ mission "Bounty Hunting: Humpty Dumpty"
 	name "Wanted Bandit near <system>"
 	description "An old Hauler named the <npc> has been attacking merchants near <system>. Eliminate the ship, then report to <destination>. Payment is <payment>."
 	source
-		government "Republic" "Free Worlds" "Syndicate"
-		attributes "dirt belt" "south" "rim" "frontier"
+		government "Syndicate"
+		attributes "frontier"
 	to offer
-		has "Bounty Hunting: Mother Goose: done"
-		random < 25
+		"combat rating" >= 100
+		random < 10
 	npc kill
 		government "Bounty"
 		system
@@ -114,11 +115,11 @@ mission "Bounty Hunting: Jabberwocky"
 	name "Wanted Bandit near <system>"
 	description "A Modified Aerie named the <npc> has been attacking merchants near <system>. Eliminate the ship, then report to <destination>. Payment is <payment>."
 	source
-		government "Republic" "Free Worlds" "Syndicate"
-		attributes "dirt belt" "south" "rim" "frontier"
+		government "Republic"
+		attributes "frontier"
 	to offer
-		has "Bounty Hunting: Humpty Dumpty: done"
-		random < 25
+		"combat rating" >= 100
+		random < 10
 	npc kill
 		government "Bounty"
 		system
@@ -140,143 +141,16 @@ ship "Firebird" "Firebird Test Dummy"
 		"automaton" 1
 		"self destruct" 1
 
-mission "Engineering Room: Prototype Cooling HGX"
+mission "Engineering Room: Prototype Test 1"
 	name "Prototype Test"
 	job
-	description "The prototype will be installed on your ship. Disable the robotic target dummy ship in <system> then land on <planet>. Warning: the target ship is programmed to engage in self-defense behaviors to ensure a realistic simulation. Payment is <payment>."
+	description "A prototype will be installed on your ship. Disable the robotic target dummy ship in <system> then land on <planet>. Warning: the target ship is programmed to engage in self-defense behaviors to ensure a realistic simulation. Payment is <payment>."
 	source
 		attributes "research"
 		not attributes "outfitter"
 	to offer
 		random < 15
-		"combat rating" > 300
-	on offer
-		require "Engineering Room"
-	on accept
-		outfit "Prototype Cooling HGX" 1
-		dialog `The researchers install the Cooling HGX onto your ship. There are still wires jutting out from where it's installed...`
-	npc save disable
-		government "Test Dummy"
-		personality disables staying heroic target
-			confusion 120
-		system destination
-		ship "Firebird Test Dummy" "Test Vessel"
-		dialog "Somehow, you survived. This prototype needs some serious rework. The sooner you get it off your ship, the better!"
-	on visit
-		dialog "You forgot to disable the target dummy ship in <system>! You'll need to head back there and do that before you can return here for payment."
-	on abort
-		outfit "Prototype Cooling HGX" -1
-	on fail
-		outfit "Prototype Cooling HGX" -1
-		dialog "The robotic target ship has been destroyed. You are hailed by an angry researcher who fines you <payment>."
-		payment -200000
-	on complete
-		payment 100000
-		outfit "Prototype Cooling HGX" -1
-		dialog "The Cooling HGX is uninstalled from your ship. You collect your payment of <payment> while your engineer gives the researchers the harsh truth about their prototype."
-
-outfit "Prototype Cooling HGX"
-	category "Systems"
-	thumbnail "outfit/unknown"
-	"heat generation" 800
-
-
-
-mission "Engineering Room: Prototype Lodestone Engine MDX"
-	name "Prototype Test"
-	job
-	description "The prototype will be installed on your ship. Disable the robotic target dummy ship in <system> then land on <planet>. Warning: the target ship is programmed to engage in self-defense behaviors to ensure a realistic simulation. Payment is <payment>."
-	source
-		attributes "research"
-		not attributes "outfitter"
-	to offer
-		random < 15
-		"combat rating" > 300
-	on offer
-		require "Engineering Room"
-	on accept
-		outfit "Prototype Lodestone Engine MDX" 1
-		dialog `The researchers install the Lodestone Engine MDX onto your ship. There are still wires jutting out from where it's installed...`
-	npc save disable
-		government "Test Dummy"
-		personality disables staying heroic target
-			confusion 120
-		system destination
-		ship "Firebird Test Dummy" "Test Vessel"
-		dialog "Somehow, you survived. This prototype needs some serious rework. The sooner you get it off your ship, the better!"
-	on visit
-		dialog "You forgot to disable the target dummy ship in <system>! You'll need to head back there and do that before you can return here for payment."
-	on abort
-		outfit "Prototype Lodestone Engine MDX" -1
-	on fail
-		outfit "Prototype Lodestone Engine MDX" -1
-		dialog "The robotic target ship has been destroyed. You are hailed by an angry researcher who fines you <payment>."
-		payment -200000
-	on complete
-		payment 100000
-		outfit "Prototype Lodestone Engine MDX" -1
-		dialog "The Lodestone Engine is uninstalled from your ship. You collect your payment of <payment> while your engineer gives the researchers the harsh truth about their prototype."
-
-outfit "Prototype Lodestone Engine MDX"
-	category "Systems"
-	thumbnail "outfit/unknown"
-	"mass" 1000
-	"drag" 100
-
-
-
-mission "Engineering Room: Prototype Power Converter ECX"
-	name "Prototype Test"
-	job
-	description "The prototype will be installed on your ship. Disable the robotic target dummy ship in <system> then land on <planet>. Warning: the target ship is programmed to engage in self-defense behaviors to ensure a realistic simulation. Payment is <payment>."
-	source
-		attributes "research"
-		not attributes "outfitter"
-	to offer
-		random < 15
-		"combat rating" > 300
-	on offer
-		require "Engineering Room"
-	on accept
-		outfit "Prototype Power Converter ECX" 1
-		dialog `The researchers install the Power Converter ECX onto your ship. There are still wires jutting out from where it's installed...`
-	npc save disable
-		government "Test Dummy"
-		personality disables staying heroic target
-			confusion 120
-		system destination
-		ship "Firebird Test Dummy" "Test Vessel"
-		dialog "Somehow, you survived. This prototype needs some serious rework. The sooner you get it off your ship, the better!"
-	on visit
-		dialog "You forgot to disable the target dummy ship in <system>! You'll need to head back there and do that before you can return here for payment."
-	on abort
-		outfit "Prototype Power Converter ECX" -1
-	on fail
-		outfit "Prototype Power Converter ECX" -1
-		dialog "The robotic target ship has been destroyed. You are hailed by an angry researcher who fines you <payment>."
-		payment -200000
-	on complete
-		payment 100000
-		outfit "Prototype Power Converter ECX" -1
-		dialog "The Power Converter ECX is uninstalled from your ship. You collect your payment of <payment> while your engineer gives the researchers the harsh truth about their prototype."
-
-outfit "Prototype Power Converter ECX"
-	category "Systems"
-	thumbnail "outfit/unknown"
-	"energy consumption" 100
-
-
-
-mission "Engineering Room: Prototype Ramscoop FCX"
-	name "Prototype Test"
-	job
-	description "The prototype will be installed on your ship. Disable the robotic target dummy ship in <system> then land on <planet>. Warning: the target ship is programmed to engage in self-defense behaviors to ensure a realistic simulation. Payment is <payment>."
-	source
-		attributes "research"
-		not attributes "outfitter"
-	to offer
-		random < 15
-		"combat rating" > 300
+		"combat rating" > 1000
 	on offer
 		require "Engineering Room"
 	on accept
@@ -293,23 +167,73 @@ mission "Engineering Room: Prototype Ramscoop FCX"
 		dialog "You forgot to disable the target dummy ship in <system>! You'll need to head back there and do that before you can return here for payment."
 	on abort
 		outfit "Prototype Ramscoop FCX" -1
+		clear "Engineering Room: Prototype Test 2: offered"
 	on fail
 		outfit "Prototype Ramscoop FCX" -1
+		clear "Engineering Room: Prototype Test 2: offered"
 		dialog "The robotic target ship has been destroyed. You are hailed by an angry researcher who fines you <payment>."
 		payment -200000
 	on complete
-		payment 100000
+		payment 200000
 		outfit "Prototype Ramscoop FCX" -1
+		clear "Engineering Room: Prototype Test 2: offered"
 		dialog "The Ramscoop FCX is uninstalled from your ship. You collect your payment of <payment> while your engineer gives the researchers the harsh truth about their prototype."
 
 outfit "Prototype Ramscoop FCX"
 	category "Systems"
 	thumbnail "outfit/unknown"
-	"fuel consumption" 4
+	"fuel consumption" 100
+	"shield fuel" 10
+	"hull fuel" 10
+	"afterburner fuel" 10
+	"cloaking fuel" 10
 
+mission "Engineering Room: Prototype Test 2"
+	name "Prototype Test"
+	job
+	description "A prototype will be installed on your ship. Disable the robotic target dummy ship in <system> then land on <planet>. Warning: the target ship is programmed to engage in self-defense behaviors to ensure a realistic simulation. Payment is <payment>."
+	source
+		attributes "research"
+		not attributes "outfitter"
+	to offer
+		has "Engineering Room: Prototype Test 1: done"
+		random < 15
+		"combat rating" > 1000
+	on offer
+		require "Engineering Room"
+	on accept
+		outfit "Prototype Lodestone Engine MDX" 1
+		dialog `The researchers install the Lodestone Engine MDX onto your ship. There are still wires jutting out from where it's installed...`
+	npc save disable
+		government "Test Dummy"
+		personality disables staying heroic target
+			confusion 120
+		system destination
+		ship "Firebird Test Dummy" "Test Vessel"
+		dialog "Somehow, you survived. This prototype needs some serious rework. The sooner you get it off your ship, the better!"
+	on visit
+		dialog "You forgot to disable the target dummy ship in <system>! You'll need to head back there and do that before you can return here for payment."
+	on abort
+		outfit "Prototype Lodestone Engine MDX" -1
+		clear "Engineering Room: Prototype Test 3: offered"
+	on fail
+		outfit "Prototype Lodestone Engine MDX" -1
+		clear "Engineering Room: Prototype Test 3: offered"
+		dialog "The robotic target ship has been destroyed. You are hailed by an angry researcher who fines you <payment>."
+		payment -200000
+	on complete
+		payment 225000
+		outfit "Prototype Lodestone Engine MDX" -1
+		clear "Engineering Room: Prototype Test 3: offered"
+		dialog "The Lodestone Engine is uninstalled from your ship. You collect your payment of <payment> while your engineer gives the researchers the harsh truth about their prototype."
 
+outfit "Prototype Lodestone Engine MDX"
+	category "Systems"
+	thumbnail "outfit/unknown"
+	"mass" 1000
+	"drag" 100
 
-mission "Engineering Room: Prototype Shield Modulator SD-DSD"
+mission "Engineering Room: Prototype Test 3"
 	name "Prototype Test"
 	job
 	description "The prototype will be installed on your ship. Disable the robotic target dummy ship in <system> then land on <planet>. Warning: the target ship is programmed to engage in self-defense behaviors to ensure a realistic simulation. Payment is <payment>."
@@ -317,8 +241,9 @@ mission "Engineering Room: Prototype Shield Modulator SD-DSD"
 		attributes "research"
 		not attributes "outfitter"
 	to offer
+		has "Engineering Room: Prototype Test 2: done"
 		random < 15
-		"combat rating" > 300
+		"combat rating" > 1000
 	on offer
 		require "Engineering Room"
 	on accept
@@ -335,20 +260,127 @@ mission "Engineering Room: Prototype Shield Modulator SD-DSD"
 		dialog "You forgot to disable the target dummy ship in <system>! You'll need to head back there and do that before you can return here for payment."
 	on abort
 		outfit "Prototype Shield Modulator SD-DSD" -1
+		clear "Engineering Room: Prototype Test 4: offered"
 	on fail
 		outfit "Prototype Shield Modulator SD-DSD" -1
+		clear "Engineering Room: Prototype Test 4: offered"
 		dialog "The robotic target ship has been destroyed. You are hailed by an angry researcher who fines you <payment>."
 		payment -200000
 	on complete
-		payment 100000
+		payment 250000
 		outfit "Prototype Shield Modulator SD-DSD" -1
+		clear "Engineering Room: Prototype Test 4: offered"
 		dialog "The Shield Modulator SD-DSD is uninstalled from your ship. You collect your payment of <payment> while your engineer gives the researchers the harsh truth about their prototype."
 
 outfit "Prototype Shield Modulator SD-DSD"
 	category "Systems"
 	thumbnail "outfit/unknown"
-	"shield delay" 450
-	"depleted shield delay" 450
+	"shield delay" 800
+	"depleted shield delay" 800
+
+mission "Engineering Room: Prototype Test 4"
+	name "Prototype Test"
+	job
+	description "A prototype will be installed on your ship. Disable the robotic target dummy ship in <system> then land on <planet>. Warning: the target ship is programmed to engage in self-defense behaviors to ensure a realistic simulation. Payment is <payment>."
+	source
+		attributes "research"
+		not attributes "outfitter"
+	to offer
+		has "Engineering Room: Prototype Test 3: done"
+		random < 15
+		"combat rating" > 1000
+	on offer
+		require "Engineering Room"
+	on accept
+		outfit "Prototype Cooling HGX" 1
+		dialog `The researchers install the Cooling HGX onto your ship. There are still wires jutting out from where it's installed...`
+	npc save disable
+		government "Test Dummy"
+		personality disables staying heroic target
+			confusion 120
+		system destination
+		ship "Firebird Test Dummy" "Test Vessel"
+		dialog "Somehow, you survived. This prototype needs some serious rework. The sooner you get it off your ship, the better!"
+	on visit
+		dialog "You forgot to disable the target dummy ship in <system>! You'll need to head back there and do that before you can return here for payment."
+	on abort
+		outfit "Prototype Cooling HGX" -1
+		clear "Engineering Room: Prototype Test 5: offered"
+	on fail
+		outfit "Prototype Cooling HGX" -1
+		clear "Engineering Room: Prototype Test 5: offered"
+		dialog "The robotic target ship has been destroyed. You are hailed by an angry researcher who fines you <payment>."
+		payment -200000
+	on complete
+		payment 275000
+		outfit "Prototype Cooling HGX" -1
+		clear "Engineering Room: Prototype Test 5: offered"
+		dialog "The Cooling HGX is uninstalled from your ship. You collect your payment of <payment> while your engineer gives the researchers the harsh truth about their prototype."
+
+outfit "Prototype Cooling HGX"
+	category "Systems"
+	thumbnail "outfit/unknown"
+	"heat generation" 80
+	"shield heat" 80
+	"hull heat" 80
+	"thrusting heat" 80
+	"turning heat" 80
+	"reverse thrusting heat" 80
+	"afterburner heat" 80
+	"cloaking heat" 80
+	"heat protection" -.99
+
+mission "Engineering Room: Prototype Test 5"
+	name "Prototype Test"
+	job
+	description "A prototype will be installed on your ship. Disable the robotic target dummy ship in <system> then land on <planet>. Warning: the target ship is programmed to engage in self-defense behaviors to ensure a realistic simulation. Payment is <payment>."
+	source
+		attributes "research"
+		not attributes "outfitter"
+	to offer
+		has "Engineering Room: Prototype Test 4: done"
+		random < 15
+		"combat rating" > 1000
+	on offer
+		require "Engineering Room"
+	on accept
+		outfit "Prototype Power Converter ECX" 1
+		dialog `The researchers install the Power Converter ECX onto your ship. There are still wires jutting out from where it's installed...`
+	npc save disable
+		government "Test Dummy"
+		personality disables staying heroic target
+			confusion 120
+		system destination
+		ship "Firebird Test Dummy" "Test Vessel"
+		dialog "Somehow, you survived. This prototype needs some serious rework. The sooner you get it off your ship, the better!"
+	on visit
+		dialog "You forgot to disable the target dummy ship in <system>! You'll need to head back there and do that before you can return here for payment."
+	on abort
+		outfit "Prototype Power Converter ECX" -1
+		clear "Engineering Room: Prototype Test 1: offered"
+	on fail
+		outfit "Prototype Power Converter ECX" -1
+		clear "Engineering Room: Prototype Test 1: offered"
+		dialog "The robotic target ship has been destroyed. You are hailed by an angry researcher who fines you <payment>."
+		payment -200000
+	on complete
+		payment 300000
+		outfit "Prototype Power Converter ECX" -1
+		clear "Engineering Room: Prototype Test 1: offered"
+		dialog "The Power Converter ECX is uninstalled from your ship. You collect your payment of <payment> while your engineer gives the researchers the harsh truth about their prototype."
+
+outfit "Prototype Power Converter ECX"
+	category "Systems"
+	thumbnail "outfit/unknown"
+	"energy consumption" 1
+	"shield energy" 10
+	"hull energy" 10
+	"thrusting energy" 10
+	"turning energy" 10
+	"reverse thrusting energy" 10
+	"afterburner energy" 10
+	"cloaking energy" 10
+	"energy protection" -.99
 
 
 
