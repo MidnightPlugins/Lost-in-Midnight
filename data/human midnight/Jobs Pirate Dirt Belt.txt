@@ -875,7 +875,7 @@ mission "Lares Exploring"
 			
 			label "weapons"
 			scene "scene/scene-weapons cache"
-			`	You find an old weapons cache. These look ancient, but probably still work.
+			`	You find an old weapons cache. These look ancient, but probably still work.`
 				decline
 			
 			label "predator"

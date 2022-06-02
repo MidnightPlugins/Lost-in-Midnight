@@ -689,6 +689,95 @@ ship "Marauder Hauler" "Marauder Hauler (weapons)"
 
 
 
+ship "Marauder Arrow" "Marauder Arrow (Alien Artifact)"
+	sprite "ship/marrowe"
+	thumbnail "thumbnail/marrowe"
+	add attributes
+		"engine capacity" 20
+	outfits
+		"Heavy Laser" 2
+		"Anti-Missile Turret"		
+		"Dwarf Core"
+		"Supercapacitor"
+		"D14-RN Shield Generator"
+		"Laser Rifle" 5
+		"A370 Atomic Thruster"
+		"A375 Atomic Steering"
+		"Hyperdrive"
+		"Alien Artifact"
+	description "With expanded engine mounts, this Arrow seems more like an oversized missile than a ship. The beefed-up engines, a little extra outfit capacity, extra shield emitters, and thicker hull plating make this vessel a very competent interceptor."
+
+ship "Marauder Bounder" "Marauder Bounder (Alien Artifact)"
+	sprite "ship/mboundere"
+	thumbnail "thumbnail/mboundere"
+	add attributes
+		"engine capacity" 15
+	outfits
+		"Heavy Laser"
+		"Quad Blaster Turret" 2
+		"Dwarf Core"
+		"LP072a Battery Pack"
+		"S-270 Regenerator"
+		"Water Coolant System"
+		"Outfits Expansion"
+		"Laser Rifle" 18
+		"A370 Atomic Thruster"
+		"A375 Atomic Steering"
+		"Hyperdrive"
+		"Alien Artifact"
+	engine -12 58 .7
+	engine 0 51
+	engine 12 58 .7
+	description "The previous owner of this Bounder has modified an already fast courier-scout into an even faster heavy escort interceptor with some truly enormous engines, giving it incredible maneuverability for its size."
+
+ship "Marauder Quicksilver" "Marauder Quicksilver (Alien Artifact)"
+	sprite "ship/mquicksilvere"
+	thumbnail "thumbnail/mquicksilvere"
+	add attributes
+		"engine capacity" 40
+	outfits
+		"Pulse Cannon" 2
+		"Anti-Missile Turret"
+		"Fission Reactor"
+		"S-270 Regenerator"
+		"LP036a Battery Pack"
+		"Liquid Nitrogen Cooler"
+		"Security Station" 2
+		"Laser Rifle" 5
+		"A370 Atomic Thruster"
+		"A375 Atomic Steering"
+		"Hyperdrive"
+		"Alien Artifact"
+	engine -16 52
+	engine 0 52
+	engine 16 52
+	description "This Quicksilver has even more space available for engine use - and even another thruster port! It's also got a few extra shield projectors, more hull plating, and another bunk. This aftermarket model also features a turret mount, perhaps in response to Lionheart's Headhunter. Whoever modified this ship wanted to chase their prey down with vicious speed."
+
+ship "Marauder Raven" "Marauder Raven (Alien Artifact)"
+	sprite "ship/mravene"
+	thumbnail "thumbnail/mravene"
+	add attributes
+		"engine capacity" 20
+	outfits
+		"Heavy Laser" 4
+		"Heavy Laser Turret"
+		"Breeder Reactor"
+		"Supercapacitor"
+		"S-270 Regenerator"
+		"Liquid Nitrogen Cooler"
+		"Outfits Expansion"
+		"A370 Atomic Thruster"
+		"A375 Atomic Steering"
+		"Hyperdrive"
+		"Alien Artifact"
+	engine -12 45 .7
+	engine 0 43
+	engine 12 45 .7
+	description "Lionheart's elegant Raven has gained popularity with pirates because of its agility. This one appears to have been modified for even more of the latter at the expense of the former, and the central hull can only be recognized as a Raven because of the wings. A third engine bay, more outfit space, additional shield emitters, and a turret make this already deadly warship appear even more frightening."
+
+
+
+
 ship "Marauder Falcon" "Marauder Falcon (Secret Prototype)"
 	outfits
 		"A370 Atomic Thruster"

@@ -90,12 +90,12 @@ mission "Harvesting: Mysterious Treasure 1"
 				random < 5
 			`	"Hmm... This appears to be a an artifact from Earth's distant past. It has some historical value and should fetch a decent sum."`
 			``
-			`	You wonder if there are more crates of treasure buried in the asteroids where you found this.`
+			`	You wonder if there are more crates of treasure buried where you found this.`
 				decline
 			label "alien treasure"
 			`	"Hmm... Amazing! This appears to be an artifact from an unknown alien civilization that once occupied what is now human space! A rare find, it should fetch a significant sum!"`
 			``
-			`	You wonder if there are more crates of treasure buried in the asteroids where you found this.`
+			`	You wonder if there are more crates of treasure buried where you found this.`
 				accept
 	on decline
 		payment -10000
@@ -129,12 +129,12 @@ mission "Harvesting: Mysterious Treasure 2"
 				random < 10
 			`	"Hmm... This appears to be a an artifact from Earth's distant past. It has some historical value and should fetch a decent sum."`
 			``
-			`	You wonder if there are more crates of treasure buried in the asteroids where you found this.`
+			`	You wonder if there are more crates of treasure buried where you found this.`
 				decline
 			label "alien treasure"
 			`	"Hmm... Amazing! This appears to be an artifact from an unknown alien civilization that once occupied what is now human space! A rare find, it should fetch a significant sum!"`
 			``
-			`	You wonder if there are more crates of treasure buried in the asteroids where you found this.`
+			`	You wonder if there are more crates of treasure buried where you found this.`
 				accept
 	on decline
 		payment -20000
@@ -168,12 +168,12 @@ mission "Harvesting: Mysterious Treasure 3"
 				random < 15
 			`	"Hmm... This appears to be a an artifact from Earth's distant past. It has some historical value and should fetch a decent sum."`
 			``
-			`	You wonder if there are more crates of treasure buried in the asteroids where you found this.`
+			`	You wonder if there are more crates of treasure buried where you found this.`
 				decline
 			label "alien treasure"
 			`	"Hmm... Amazing! This appears to be an artifact from an unknown alien civilization that once occupied what is now human space! A rare find, it should fetch a significant sum!"`
 			``
-			`	You wonder if there are more crates of treasure buried in the asteroids where you found this.`
+			`	You wonder if there are more crates of treasure buried where you found this.`
 				accept
 	on decline
 		payment -30000
@@ -187,6 +187,63 @@ mission "Harvesting: Mysterious Treasure 3"
 
 
 
+mission "Harvesting: Mysterious Treasure Thief"
+	deadline 7
+	name "Artifact Thief"
+	description "The <npc> has stolen one of your Alien Artifacts. Pursue their ship and reclaim the stolen artifact! Then return to <destination>. If you haven't found them by <date>, they probably escaped."
+	repeat
+	source Zug
+	to offer
+		has "Rim Archaeology 6: declined"
+		"Treasure Hunter" >= 10
+		random < 20
+	on offer
+		require "Mysterious Treasure"
+		conversation
+			scene "outfit/treasure"
+			`You happen to know a archaeologist on Zug who might be willing to appraise one of your Mysterious Treasures.`
+			choice
+				`	(Consult Albert Foster.)`
+				`	(Not now.)`
+					defer
+			`	Foster Agrees to take a look at one of your Mysterious Treasures. "Hmm... Amazing! This appears to be an artifact from an unknown alien civilization that once occupied what is now human space! A rare find, it should fetch a significant sum!"`
+			``
+			branch "thief"
+				random < 50
+
+			`	While enjoying dinner with Foster and his team, you wonder if there are more crates of treasure buried where you found this.`
+				decline
+			label "thief"
+
+			`	While enjoying dinner with Foster and his team, you wonder if there are more crates of treasure buried where you found this.`
+			``
+			`	Suddenly, Albert receives a message. He informs you that there's been a break in at his facility and the Mysterious Treasure was stolen! If you hurry, you might be able to catch the thief. A ship named <npc> was spotted fleeing the area.`
+				launch
+	on decline
+		outfit "Mysterious Treasure" -1
+		outfit "Alien Artifact" 1
+	on accept
+		outfit "Mysterious Treasure" -1
+	npc board
+		government "Independent (Killable)"
+		personality target waiting fleeing
+		fleet
+			names "independent"
+			commodities "Luxury Goods"
+			variant
+				"Marauder Arrow (Alien Artifact)"
+			variant
+				"Marauder Bounder (Alien Artifact)"
+			variant
+				"Marauder Raven (Alien Artifact)"
+			variant
+				"Marauder Quicksilver (Alien Artifact)"
+		dialog "Your Alien Artifact is probably being kept in the ship's cargo hold."
+	on complete
+		dialog `Foster apologizes, "Thieves sometimes break in to steal an artifact. It's been a problem since the news broadcast our discovery of the Sheragi ruins."`
+
+
+
 mission "Harvesting: Earth Exhibits [0]"
 	job
 	repeat
@@ -194,6 +251,7 @@ mission "Harvesting: Earth Exhibits [0]"
 	name "Earth Exhibits"
 	description "The Museum of History on <destination> wants to enhance their collection of exhibits in preparation for the upcoming Earth Day celebration. Deliver an Earth Artifact to the museum by <date>. Payment is <payment>."
 	source
+		not planet "Earth"
 		attributes "near earth"
 	destination Earth
 	to offer
@@ -221,6 +279,7 @@ mission "Harvesting: Earth Exhibits [1]"
 	name "Earth Exhibits"
 	description "The Museum of History on <destination> wants to enhance their collection of exhibits in preparation for the upcoming Earth Day celebration. Deliver an Earth Artifact to the museum by <date>. Payment is <payment>."
 	source
+		not planet "Earth"
 		attributes "near earth"
 	destination Earth
 	to offer
@@ -248,6 +307,7 @@ mission "Harvesting: Earth Exhibits [2]"
 	name "Earth Exhibits"
 	description "The Museum of History on <destination> wants to enhance their collection of exhibits in preparation for the upcoming Earth Day celebration. Deliver an Earth Artifact to the museum by <date>. Payment is <payment>."
 	source
+		not planet "Earth"
 		attributes "near earth"
 	destination Earth
 	to offer
@@ -280,7 +340,7 @@ mission "Harvesting: Alien Exhibits"
 		government "Republic" "Free Worlds" "Syndicate"
 		not attributes "near earth"
 	destination
-		distance 0 2
+		distance 1 2
 		government "Republic" "Free Worlds" "Syndicate"
 		attributes "urban"
 		not attributes "near earth"
@@ -289,6 +349,7 @@ mission "Harvesting: Alien Exhibits"
 			has "Harvesting: Mysterious Treasure 1: failed"
 			has "Harvesting: Mysterious Treasure 2: failed"
 			has "Harvesting: Mysterious Treasure 3: failed"
+			has "Harvesting: Mysterious Treasure Thief: done"
 		random < 5
 	on complete
 		outfit "Alien Artifact" -1
