@@ -102,6 +102,7 @@ government "Grave Diggers"
 	"hostile hail" "hostile pirate"
 	"attitude toward"
 		"Remnant" -.01
+	"fine" 0
 
 
 
