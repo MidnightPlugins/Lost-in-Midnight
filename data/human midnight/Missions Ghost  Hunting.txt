@@ -315,6 +315,12 @@ ship "Model 512" "Model 512 (dire omen)"
 		"Thruster (Lunar Class)"
 		"Steering (Planetary Class)"
 		Hyperdrive
+	engine -145 97
+	engine 145 97
+	"steering engine" -145 97
+		right
+	"steering engine" 145 97
+		left
 	gun -22 -143 "Korath Minelayer"
 	gun 22 -143 "Korath Minelayer"
 	turret -23 -134 "Korath Slicer Turret"

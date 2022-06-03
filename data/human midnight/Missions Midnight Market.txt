@@ -184,6 +184,22 @@ mission "Midnight Market: Hauler VI Prototype 2"
 event "Hauler VI Market timer"
 	shipyard "Southbound Advanced"
 		"Hauler VI"
+	fleet "Small Southern Merchants"
+		add variant 1
+			"Hauler VI"
+	fleet "Large Southern Merchants"
+		add variant 1
+			"Hauler VI"
+			"Hauler III"
+			"Hauler II"
+			"Hauler"
+		add variant 1
+			"Hauler VI"
+			"Hauler" 2
+		add variant 1
+			"Hauler VI"
+			"Berserker" 2
+
 
 ship "Hauler VI" "Hauler VI (prototype)"
 	outfits

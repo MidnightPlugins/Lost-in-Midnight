@@ -159,8 +159,16 @@ ship "Amalgam"
 		"Hyperdrive"
 	
 	engine -16 52
+		zoom .5
 	engine 0 52
 	engine 16 52
+		zoom .5
+	"steering engine" -16 52
+		zoom .5
+		right
+	"steering engine" 16 52
+		zoom .5
+		left
 	gun -7 -39 "Heavy Laser"
 	gun 7 -39 "Heavy Laser"
 	turret 0 15 "Heavy Laser Turret"
@@ -340,10 +348,14 @@ ship "Executive Guard"
 		"X4200 Ion Steering"
 		"Hyperdrive"
 
-	engine -32 185 .6
-	engine 32 185 .6
-	engine -16 201 .8
-	engine 16 201 .8
+	engine -32 185
+		zoom .6
+	engine 32 185
+		zoom .6
+	engine -16 201
+		zoom .8
+	engine 16 201
+		zoom .8
 	gun 0 -205 "Proton Gun-CF8"
 	gun -24 -196 "Proton Gun-CF8"
 	gun 24 -196 "Proton Gun-CF8"
@@ -374,7 +386,7 @@ ship "Executive Guard"
 
 
 
-# Hipparion
+# Hipparion can be purchased during a misc. mission
 
 ship "Hipparion"
 	sprite "ship/hipparion"
@@ -829,9 +841,19 @@ ship "Mastodon"
 		"Scram Drive"
 
 	engine -51.5 208
+		zoom .4
 	engine -15.5 208
+		zoom .6
 	engine 20 208
+		zoom .6
 	engine 56.5 208
+		zoom .4
+	"steering engine" -51.5 208
+		zoom .5
+		right
+	"steering engine" 56.5 208
+		zoom .5
+		left
 	turret 24 -121.5
 	turret -4.5 -104
 	turret -36.5 -75.5
@@ -891,10 +913,7 @@ ship "Parade Float"
 		"X1050 Ion Engines"
 		"Hyperdrive"
 
-	engine 23 -1
-	engine -23 -1
-	engine 19 29
-	engine -19 29
+	engine 0 85
 	leak "leak" 60 50
 	leak "flame" 60 80
 	explode "tiny explosion" 10
@@ -1017,6 +1036,10 @@ ship "Shield Fortress"
 
 	engine -42.5 135
 	engine 42.5 135
+	"steering engine" -42.5 135
+		right
+	"steering engine" 42.5 135
+		left
 	gun 0 -135 "Pug Zapper"
 	gun -21.5 -97.5 "Ion Cannon"
 	gun 21.5 -97.5 "Ion Cannon"
@@ -1107,9 +1130,9 @@ ship "Star Explorer"
 	engine -36 151
 	engine 36 151
 	"steering engine" -36 151
-		right
+		"right"
 	"steering engine" 36 151
-		left
+		"left"
 	"reverse engine" -36 52
 	"reverse engine" 36 52
 	gun 0 -111
@@ -1346,9 +1369,19 @@ ship "Subsidurius"
 		Hyperdrive
 
 	engine -30 30
+		zoom .4
 	engine 30 30
+		zoom .4
 	engine -8 88
+		zoom .6
 	engine 8 88
+		zoom .6
+	"steering engine" -30 30
+		zoom .6
+		right
+	"steering engine" 30 30
+		zoom .6
+		left
 	gun -7 -95 
 	gun 7 -95 
 	turret 0 -69 "Heavy Laser Turret"
@@ -1416,6 +1449,14 @@ ship "War Hauler"
 
 	engine -44.5 140.5
 	engine 45 140.5
+	"steering engine" -44.5 140.5
+		"right"
+	"steering engine" 45 140.5
+		"left"
+	"reverse engine" -44.5 81
+		zoom .5
+	"reverse engine" 45 81
+		zoom .5
 	gun -13 -113.5 "Energy Cannon"
 	gun 2 -113.5 "Meteor Missile Launcher"
 	gun 15.5 -113.5 "Energy Cannon"
