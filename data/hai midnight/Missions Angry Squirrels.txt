@@ -534,7 +534,7 @@ mission "Angry Squirrels: Journey to the Southwest"
 		has "Angry Squirrels: The Monkey King: offered"
 		has "event: Hai Ancestral Lands Discovered"
 		"combat rating" > 2981
-		"ships: Light Warship" + "ships: Medium Warship" + "ships: Heavy Warship" >= 100
+		"ships: Light Warship" + "ships: Medium Warship" + "ships: Heavy Warship" >= 10
 		or
 			not "Randomize Angry Squirrels: Journey to the Southwest"
 			and
