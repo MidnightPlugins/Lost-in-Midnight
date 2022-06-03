@@ -21,7 +21,7 @@ mission "Inferno Dragon: Inferno Rockets Appear"
 	on offer
 		event "inferno rockets appear"
 	npc kill
-		government "Independent"
+		government "Independent (Killable)"
 		system Merak
 		personality waiting staying marked vindictive
 		ship "Cruiser (Inferno Rockets)" "Inferno Dragon"
@@ -33,7 +33,7 @@ mission "Inferno Dragon: Inferno Rockets Appear"
 		ship "Hawk (Inferno Rockets)" "Dragon's Sentry"
 		ship "Berserker (Inferno Rockets)" "Dragon's Sentnel"
 	npc kill
-		government "Independent"
+		government "Independent (Killable)"
 		system Sargas
 		personality waiting staying marked vindictive
 		ship "Frigate (Inferno Rockets)" "Dragon's Claws"
@@ -653,6 +653,7 @@ mission "Inferno Dragon: Dragon's Hoard"
 				`	(Try to run.)`
 			branch live
 				random < 50
+			scene "asteroid/large rock/spin
 			`	You trip on the uneven ground and are buried alive under several tons of rock, dirt, and stone.`
 				die
 			label live
@@ -832,7 +833,11 @@ mission "Inferno Dragon: Dragon's Hoard"
 				`	The Inferno Dragon's thirst can never be quenched.`
 					goto "breath presence"
 	on accept
-		outfit "Mysterious Treasure" 100
+		outfit "Mysterious Treasure" 1
+		outfit "Platinum" 10
+		outfit "Gold" 20
+		outfit "Silver" 30
+		outfit "Copper" 40
 	
 	on enter
 		conversation
