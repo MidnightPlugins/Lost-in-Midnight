@@ -754,9 +754,7 @@ mission "Peace Tour 1"
 	stopover
 		attributes "pirate" "independent"
 		attributes "spaceport"
-	destination
-		attributes "paradise"
-		attributes "spaceport"
+	destination Farseer
 	to offer
 		has "main plot completed"
 		random < 30
@@ -841,6 +839,7 @@ event "add nukes of peace"
 
 mission "Peace Tour 2"
 	invisible
+	source Farseer
 	to offer
 		has "Peace Tour 1: done"
 	on offer
