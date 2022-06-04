@@ -935,7 +935,7 @@ mission "Inferno Dragon: FW Bounty [0]"
 	job
 	repeat
 	name "Wanted Weapons Smuggler"
-	description "Informants claim the <npc> is delivering Inferno Rockets, a pirate weapon, to one of the southern pirate planets. Find the ship and scan its cargo. If it is carrying Inferno Rockets, destroy it. Then return to <destination>.
+	description "Informants claim the <npc> is delivering Inferno Rockets, a pirate weapon, to one of the southern pirate planets. Find the ship and scan its cargo. If it is carrying Inferno Rockets, destroy it. Then return to <destination>."
 	source
 		government "Free Worlds"
 		attributes "frontier"
@@ -968,7 +968,7 @@ mission "Inferno Dragon: FW Bounty [1]"
 	job
 	repeat
 	name "Wanted Weapons Smuggler"
-	description "Informants claim the <npc> is delivering Inferno Rockets, a pirate weapon, to one of the southern pirate planets. Find the ship and scan its cargo. If it is carrying Inferno Rockets, destroy it. Then return to <destination>.
+	description "Informants claim the <npc> is delivering Inferno Rockets, a pirate weapon, to one of the southern pirate planets. Find the ship and scan its cargo. If it is carrying Inferno Rockets, destroy it. Then return to <destination>."
 	source
 		government "Free Worlds"
 		attributes "frontier"
