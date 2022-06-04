@@ -690,7 +690,7 @@ mission "Inferno Dragon: Dragon's Hoard"
 					goto wrong
 
 			label wrong
-				`	Suddenly the ground starts shaking. It's a cave in!`
+			`	Suddenly the ground starts shaking. It's a cave in!`
 			choice
 				`	(Try to run.)`
 			branch live
