@@ -327,6 +327,17 @@ event "inferno rockets appear"
 			"Berserker (Afterburner)"
 			"Berserker (Inferno Rockets)"
 
+mission "Inferno Dragon: Diyu Dragon"
+	landing
+	invisible
+	source "Wang Xiang Tai"
+	to offer
+		has "event: remembrance day"
+	npc kill
+		government "Independent (Killable)"
+		system Diyu
+		personality waiting staying marked vindictive
+		ship "Frigate (Inferno Rockets)" "Dragon's Fangs"
 
 
 mission "Inferno Dragon: New China"
@@ -387,6 +398,30 @@ mission "Inferno Dragon: Intro"
 					decline
 			`	You try researching the poem but fail to get any info.`
 				decline
+
+
+
+mission "Inferno Dragon: Pirate Dragons"
+	landing
+	invisible
+	to offer
+		has "Inferno Dragon: Intro: declined"
+	npc kill
+		government "Independent (Killable)"
+		system Shaula
+		personality waiting staying marked vindictive
+		ship "Frigate (Inferno Rockets)" "Dragon's Tail"
+	npc kill
+		government "Independent (Killable)"
+		system Algenib
+		personality waiting staying marked vindictive
+		ship "Frigate (Inferno Rockets)" "Dragon's Talon"
+	npc kill
+		government "Independent (Killable)"
+		system Arneb
+		personality waiting staying marked vindictive
+		ship "Frigate (Inferno Rockets)" "Dragon's Horn"
+
 				
 mission "Inferno Dragon: Dragon's Wings"
 	invisible
@@ -653,7 +688,7 @@ mission "Inferno Dragon: Dragon's Hoard"
 				`	(Try to run.)`
 			branch live
 				random < 50
-			scene "asteroid/large rock/spin
+			scene "asteroid/large rock/spin"
 			`	You trip on the uneven ground and are buried alive under several tons of rock, dirt, and stone.`
 				die
 			label live

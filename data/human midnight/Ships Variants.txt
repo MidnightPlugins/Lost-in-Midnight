@@ -1784,7 +1784,7 @@ ship "Cruiser" "Cruiser (Inferno Rockets)"
 	outfits
 		"Inferno Rocket Launcher" 2
 		"Inferno Rocket" 40
-		"Particle Cannon" 4
+		"Plasma Cannon" 4
 		"Heavy Laser Turret" 2
 		"Heavy Anti-Missile Turret"
 		"Quad Blaster Turret"
@@ -1804,10 +1804,12 @@ ship "Cruiser" "Cruiser (Inferno Rockets)"
 		"A525 Atomic Steering"
 		"X2200 Ion Steering"
 		"Scram Drive"
-	gun "Particle Cannon"
-	gun "Particle Cannon"
-	gun "Particle Cannon"
-	gun "Particle Cannon"
+		"Engineering Room"
+		"Medical Bay"
+	gun "Plasma Cannon"
+	gun "Plasma Cannon"
+	gun "Plasma Cannon"
+	gun "Plasma Cannon"
 	gun "Inferno Rocket Launcher"
 	gun "Inferno Rocket Launcher"
 	turret "Quad Blaster Turret"
@@ -1839,8 +1841,8 @@ ship "Falcon" "Falcon (Inferno Rockets)"
 		"Hyperdrive"
 	gun "Inferno Rocket Launcher"
 	gun "Inferno Rocket Launcher"
-	gun "Particle Cannon"
-	gun "Particle Cannon"
+	gun "Plasma Cannon"
+	gun "Plasma Cannon"
 
 
 
@@ -1868,7 +1870,7 @@ ship "Firebird" "Firebird (Inferno Rockets)"
 
 ship "Frigate" "Frigate (Inferno Rockets)"
 	outfits
-		"Particle Cannon" 2
+		"Plasma Cannon" 2
 		"Inferno Rocket Launcher" 2
 		"Inferno Rocket" 60
 		"Inferno Rocket Rack" 2
@@ -1888,10 +1890,11 @@ ship "Frigate" "Frigate (Inferno Rockets)"
 		"A250 Atomic Thruster"
 		"A375 Atomic Steering"
 		"Hyperdrive"
+		"Engineering Room"
 	gun "Inferno Rocket Launcher"
 	gun "Inferno Rocket Launcher"
-	gun "Particle Cannon"
-	gun "Particle Cannon"
+	gun "Plasma Cannon"
+	gun "Plasma Cannon"
 	turret "Anti-Missile Turret"
 	turret "Blaster Turret"
 	turret "Blaster Turret"
