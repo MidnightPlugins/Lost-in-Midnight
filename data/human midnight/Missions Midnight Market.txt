@@ -120,7 +120,9 @@ mission "Midnight Market: Hauler VI Prototype 1"
 		has "event: stolen Hauler VI timer"
 		"net worth" > 28000000
 		"credits" > 14000000
-		"Bulk Delivery [0]: done" + "Bulk Delivery [1]: done" + "Bulk Delivery [2]: done" + "Large Bulk Delivery [0]: done" + "Large Bulk Delivery [1]: done" + "Large Bulk Delivery [2]: done" >= 6
+		or
+			"Bulk Delivery [0]: done" + "Bulk Delivery [1]: done" + "Bulk Delivery [2]: done" + "Large Bulk Delivery [0]: done" + "Large Bulk Delivery [1]: done" + "Large Bulk Delivery [2]: done" + "Bulk Cargo Smuggling [0]: done" + "Bulk Cargo Smuggling [1]: done" + "Bulk Cargo Smuggling [2]: done" + "Bulk Drug Running [0]: done" + "Bulk Drug Running [1]: done" + "Bulk Drug Running [2]: done" >= 6
+			"Bulk Cargo Smuggling [0]: done" + "Bulk Cargo Smuggling [1]: done" + "Bulk Cargo Smuggling [2]: done" + "Bulk Drug Running [0]: done" + "Bulk Drug Running [1]: done" + "Bulk Drug Running [2]: done" >= 3
 	to complete
 		"credits" >= 7000000
 	on offer
