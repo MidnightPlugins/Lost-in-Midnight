@@ -187,7 +187,7 @@ system Aya'arak
 
 system Chasm
 	hidden
-	pos -760.745 156.878
+	pos -755.745 146.878
 	government Pirate
 	attributes "midnight"
 	habitable 1538.92
