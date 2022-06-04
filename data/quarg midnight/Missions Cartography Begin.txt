@@ -78,7 +78,7 @@ mission "Cartography: Quarg Hitchhiker 1"
 			choice
 				`	"My name is <first> <last>. I'm not familiar with those locations."`
 
-			`	"Simply take me to Orbona. The path forward will become clear."`
+			`	"Simply take me to Orbona. Once we're past Limen the path forward will become clear."`
 					accept
 
 	on defer
@@ -172,7 +172,6 @@ mission "Cartography: The Map Obtained"
 	destination Poisonwood
 	to offer
 		has "Rim Archaeology 6: declined"
-		has "FW Syndicate Diplomacy 1D: done"
 		has "Coalition: First Contact: done"
 	on offer
 		dialog
@@ -182,8 +181,16 @@ mission "Cartography: The Map Obtained"
 		event "Poisonwood Trailblazer Excavation" 30
 		log `Acquired an obsolete star map during an information exchange regarding a derelict Coalition war ship found on Poisonwood. Someone with more knowledge regarding the movements of the stars might be able to figure out where the systems on this map are currently located.`
 		conversation
-			`The invitation provided instructions to a landing site far from the usual spaceport. As you descend, you see that they have dug out a tunnel into the side of a mountain. A woman meets you at the landing site. She introduces herself,"I'm Millie. You met my aunt, the governor of Poisonwood, some time ago." Millie leads you towards the tunnel as she talks. "To be honest, we were hoping to lure Albert Foster out here by getting you involved. But it seems he is still busy with his work on Zug." Not far into the tunnel, you see what they are digging out of the earth.`
-			
+			branch "poisonwood diplomat"
+				has "FW Syndicate Diplomacy 1D: done"
+			`The invitation provided instructions to a landing site far from the usual spaceport. As you descend, you see that they have dug out a tunnel into the side of a mountain. A woman meets you at the landing site. She introduces herself,"My name is Millie. I'm in charge of this excavation." Millie leads you towards the tunnel as she talks. "To be honest, we were hoping to lure Albert Foster out here by getting you involved. But it seems he is still busy with his work on Zug." Not far into the tunnel, you see what they are digging out of the earth.`
+				goto trailblazer
+
+			label "poisonwood diplomat"
+			`The invitation provided instructions to a landing site far from the usual spaceport. As you descend, you see that they have dug out a tunnel into the side of a mountain. A woman meets you at the landing site. She introduces herself,"My name is Millie. I'm in charge of this excavation. You met my aunt, the governor of Poisonwood, some time ago." Millie leads you towards the tunnel as she talks. "To be honest, we were hoping to lure Albert Foster out here by getting you involved. But it seems he is still busy with his work on Zug." Not far into the tunnel, you see what they are digging out of the earth.`
+				goto trailblazer
+
+			label trailblazer
 			branch trailblazerXP
 				has "trailblazer encountered"
 			
