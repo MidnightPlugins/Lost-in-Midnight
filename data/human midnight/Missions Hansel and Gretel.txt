@@ -192,7 +192,6 @@ mission "Hansel & Gretel: Rescue Hansel"
 	description "Find and rescue the Hansel. Also keep Gretel safe."
 	source
 		government "Republic" "Syndicate" "Free Worlds"
-		not attributes "frontier"
 	destination
 		attributes "pirate"
 		attributes "spaceport"
@@ -207,7 +206,7 @@ mission "Hansel & Gretel: Rescue Hansel"
 		not "Hansel & Gretel: Return Escort: failed"
 		"ships: Heavy Warship" >= 1
 		random < 50
-	on accept
+	on offer
 		conversation
 			scene "thumbnail/protector"
 			`You run into Gretel at the spaceport. She is panicked and distraught. "I need your help, captain <last>! Hansel and I got separated when we were ambushed by pirates! Please help me rescue him!"`
@@ -253,6 +252,9 @@ ship "Vanguard" "Vanguard (no hyperdrive)"
 mission "Hansel & Gretel: Pirate Escape"
 	name "Pirate Escape"
 	description "Protect the Hansel and Gretel while escorting them safely back to <destination>."
+	source
+		attributes "pirate"
+		attributes "spaceport"
 	destination
 		government "Republic" "Syndicate" "Free Worlds"
 		not attributes "frontier"
@@ -404,7 +406,7 @@ mission "Hansel & Gretel: Pug Resistance"
 		ship "Marauder Vanguard" "Hansel"
 		ship "Marauder Protector" "Gretel"
 	on complete
-		dialog `Hansel and Gretel congratulate you on the victory, but will part ways with your fleet here."`
+		dialog `Hansel and Gretel congratulate you on defeating the Pug, but will part ways with your fleet here."`
 		
 					
 
