@@ -443,3 +443,116 @@ mission "Intro Corporate espionage [Mata Hari]"
 	on complete
 		dialog `You transmit your scans and receive a hearty congratulations, as well as <payment>. "This will save us months!" you hear someone say in the background as you close the audio link.`
 		payment 50000
+
+#################
+# Gremlin start exclusive
+#################
+
+mission "Betelgeuse offer [Gremlin 1]"
+	deadline
+	passengers 1
+	name "Henrietta to <planet>"
+	description "Transport Henrietta to <destination> by <date>. Payment is <payment>."
+	source
+		attributes "paradise" "near earth"
+	destination "Prime"
+	to offer
+		has "Gremlin start"
+		has "Intro [3 Freighter]: done"
+	on offer
+		require "Gremlin Circuits"
+		conversation
+			scene "thumbnail/gremlin-thumb"
+			`When you return to your ship you notice a woman in a business suit studying it.`
+			choice
+				`	"What are you doing?"`
+				`	"Like what you see?"`
+			`	"I couldn't help but admire the craftsmanship that went into this ship," she answers. "Did you make this yourself?"`
+			choice
+				`	"Yes, I did."`
+					goto made
+				`	"Nope. Stole it off a pirate."`
+
+			`	"Wow, that sounds dangerous!"`
+			choice
+				`	"I was joking. Yeah, I made it myself."`
+
+			label made
+			`	"That's amazing! I'm looking for a lift to <destination>. Can you take me there by <date>?"`
+			choice
+				`	"Sure, for <payment>."`
+				`	"Sorry, I'm headed in a different direction."`
+					decline
+			`	"Thanks! That's no problem!" You let her onto your ship.`
+				accept
+	on complete
+		event "Gremlin Betelgeuse Reminder" 360
+		payment
+		payment 5000
+		conversation
+			scene "thumbnail/gremlin-thumb"
+			`When you land, Henrietta pays you <payment> and confesses,"I'm actually a designer for Betelgeuse Shipyards. We might be interested in this 'Gremlin' you've put together. If you're interested in selling the rights, bring it back here in a year."`
+			`	A year is a long time to hold onto this ship. Maybe they want to make sure you don't get yourself killed while flying it...`
+
+event "Gremlin Betelgeuse Reminder"
+
+mission "Betelgeuse offer [Gremlin 2]"
+	landing
+	name "Betelgeuse offer"
+	description "Betelgeuse has offered to pay you for the rights to use your design. Make the Gremlin your flagship and take it to <destination>."
+	source
+		government "Republic" "Syndicate" "Free Worlds"
+	destination "Prime"
+	to offer
+		has "event: Gremlin Betelgeuse Reminder"
+	on offer
+		conversation
+			scene "thumbnail/gremlin-thumb"
+			`It's been a year since Henrietta made the offer to buy your design for Betelgeuse. If you still have the Gremlin, you can set it as your flagship and take it to <destination>.`
+			choice
+				`	(I still have the Gremlin.)`
+					accept
+				`	(I got rid of the Gremlin.)`
+					decline
+
+mission "Betelgeuse offer [Gremlin 3]"
+	landing
+	name "Betelgeuse offer"
+	description "Betelgeuse has offered to pay you for the rights to use your design. Make the Gremlin your flagship and take it to <destination>."
+	source "Prime"
+	to offer
+		has "Betelgeuse offer [Gremlin 2]: done"
+	on offer
+		require "Gremlin Circuits"
+		conversation
+			scene "thumbnail/gremlin-thumb"
+			`You find Henrietta after checking with the receptionist at Betelgeuse headquarters. "<first> <last>, your still al- I mean has it been a year already? Time flies. Did you bring it?"`
+			choice
+				`	"Yeah. So how much is Betelgeuse offering?"`
+				`	"I've changed my mind. I'm not interested afterall."`
+					decline
+			`	"Betelgeuse will pay you 72,000 credits per year. Deal?"`
+			choice
+				`	(Accept the offer.)`
+				`	(Reject the offer.)`
+					decline
+			scene "effect/box"
+			`	After filling out some legal paperwork, you lead her and her entourage to the hangar where the Gremlin is parked. Several technicians unpack tools and equipment and begin the process of taking apart the ship to study its construction and make blueprints. Eventually, they begin putting the ship back together.`
+			`	It's midnight by the time they're done. Henrietta tells you that you'll start receiving payments once the Gremlin makes it into shipyards.`
+				accept
+	on accept
+		event "Gremlin Betelgeuse Production" 60
+		fail
+
+mission "Betelgeuse offer [Gremlin 4]"
+	landing
+	invisible
+	to offer
+		has "Betelgeuse offer [Gremlin 3]: failed"
+		has "event: Gremlin Betelgeuse Production"
+	on offer
+		"salary: Betelgeuse" = 200
+		conversation
+			scene "thumbnail/gremlin-thumb"
+			`You receive a message from Henrietta: "The Gremlin is now available at Betelgeuse shipyards!" You should start receiving your payments soon.`
+				decline
