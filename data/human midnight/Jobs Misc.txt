@@ -196,7 +196,10 @@ mission "Engineering Room: Prototype Test 2"
 		attributes "research"
 		not attributes "outfitter"
 	to offer
-		has "Engineering Room: Prototype Test 1: done"
+		or
+			has "Engineering Room: Prototype Test 1: done"
+			has "Engineering Room: Prototype Test 1: failed"
+			has "Engineering Room: Prototype Test 1: aborted"
 		random < 15
 		"combat rating" > 1000
 	on offer
@@ -241,7 +244,10 @@ mission "Engineering Room: Prototype Test 3"
 		attributes "research"
 		not attributes "outfitter"
 	to offer
-		has "Engineering Room: Prototype Test 2: done"
+		or
+			has "Engineering Room: Prototype Test 2: done"
+			has "Engineering Room: Prototype Test 2: failed"
+			has "Engineering Room: Prototype Test 2: aborted"
 		random < 15
 		"combat rating" > 1000
 	on offer
@@ -286,7 +292,10 @@ mission "Engineering Room: Prototype Test 4"
 		attributes "research"
 		not attributes "outfitter"
 	to offer
-		has "Engineering Room: Prototype Test 3: done"
+		or
+			has "Engineering Room: Prototype Test 3: done"
+			has "Engineering Room: Prototype Test 3: failed"
+			has "Engineering Room: Prototype Test 3: aborted"
 		random < 15
 		"combat rating" > 1000
 	on offer
@@ -338,7 +347,10 @@ mission "Engineering Room: Prototype Test 5"
 		attributes "research"
 		not attributes "outfitter"
 	to offer
-		has "Engineering Room: Prototype Test 4: done"
+		or
+			has "Engineering Room: Prototype Test 4: done"
+			has "Engineering Room: Prototype Test 4: failed"
+			has "Engineering Room: Prototype Test 4: aborted"
 		random < 15
 		"combat rating" > 1000
 	on offer

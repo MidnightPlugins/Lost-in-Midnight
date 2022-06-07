@@ -326,7 +326,7 @@ mission "Midnight Market: Project THOR 2"
 		outfit "T.H.O.R." 1
 		set "T.H.O.R"
 	on complete
-		log `Barmy seems to be alright with letting me hold onto T.H.O.R. so long as I send him combat data. Seems like a fair deal.`
+		log `Barmy seems to be alright with letting me hold onto T.H.O.R. so long as I send him combat data.`
 		conversation
 			`Barmy Edward greets you at the spaceport when you land. "Spaceport security detected T.H.O.R.'s systems in your cargo hold. I'm not going to ask how you got it. And it's probably safer in your hands than most others. But if you do use it, just be sure to record combat data and send it to me."`
 
@@ -476,6 +476,7 @@ mission "Midnight Market: Cloaking Device 2"
 				accept
 	on accept
 		log `Traded a jump drive and 4 million credits for a Cloaking Device on the Midnight Market. It works just like the one I sold back to the researchers on Hephaestus. I might swear that it's the same machine... if I could see it.`
+		payment -4000000
 		outfit "Jump Drive" -1
 		outfit "Cloaking Device" 1
 		outfit "Hyperdrive" 1

@@ -944,7 +944,6 @@ mission "Metropolis Epilogue: Hiding in Plain Sight 2 (Balthazar model)"
 	source "Hai-home"
 	to offer
 		has "Metropolis Epilogue: Hiding in Plain Sight 1: done"
-		not "Metropolis Epilogue: Hiding in Plain Sight 2 (Balthazar model): declined"
 	on offer
 		require "Balthazar Model" 1
 		conversation
@@ -986,6 +985,7 @@ mission "Metropolis Epilogue: Hiding in Plain Sight 2 (Balthazar model)"
 			`	"Thanks for the offer. But I have to get going." You stand up and leave before they can recover from the shock.`
 				decline
 	on accept
+		log `Sold the Balthazar Model to Arthur and Kiru for one million credits. Apparently is was a limited production collectible.`
 		outfit "Balthazar Model" -1
 		payment 1000000
 		fail
@@ -1064,7 +1064,8 @@ mission "Metropolis Epilogue: Arachi Cartoonist"
 		outfit "Melchior Post Card" -1
 		outfit "Leviathan Comic" 1
 		"coalition jobs" ++
-		event "Leviathan Comic Collectible" 3650
+		event "Leviathan Comic Collectible" 3600
+		log `Traded the Melchior Post Card to the Arach cartoonist for a Leviathan Comic.`
 
 event "Leviathan Comic Collectible"
 
@@ -1096,6 +1097,7 @@ mission "Metropolis Epilogue: Leviathan Comics"
 		outfit "Leviathan Comic" -1
 		outfit "Leviathan Comic #1" 1
 		payment 42000 200
+		log `Today I learned that my Leviathan Comic is a rare collectible worth a small fortune.`
 		conversation
 			scene "outfit/leviathan comic"
 			`As your Arach passenger pays you the <payment> you agreed upon, he says, "Volume One of Leviathan Comics, I noticed you have." He motions towards a small table nearby. The old comic book must have been left out by a previous passenger. "In good condition, it is. Worth 1,000,000, it may be. Enjoyed reading it again, I did. To inform you of its value, I decided. Until long after, the value of some things remains undiscovered." He disembarks from the ship.`

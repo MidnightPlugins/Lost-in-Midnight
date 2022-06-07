@@ -78,6 +78,54 @@ ship "Hauler VI"
 	description `Some captains refer to this ship as the Hauler IV plus II in reference to the inconvenience of loading or unloading the two upper cargo compartments in non low gravity environments.`
 
 
+# Gremlins become available in shipyards after completing certain missions.
+
+ship "Gremlin"
+	sprite "ship/gremlin"
+	thumbnail "thumbnail/gremlin-thumb"
+	attributes
+		category "Light Freighter"
+		"cost" 1080000
+		"shields" 2000
+		"hull" 1800
+		"required crew" 1
+		"bunks" 3
+		"mass" 180
+		"drag" 3.2
+		"heat dissipation" .8
+		"fuel capacity" 400
+		"cargo space" 80
+		"outfit space" 260
+		"weapon capacity" 0
+		"engine capacity" 80
+		weapon
+			"blast radius" 28
+			"shield damage" 280
+			"hull damage" 140
+			"hit force" 420
+	outfits
+		"nGVF-DD Fuel Cell"
+		"LP072a Battery Pack"
+		"D41-HY Shield Generator"
+		"Fuel Pod" 2
+		"Cargo Expansion"
+		"Small Radar Jammer"
+
+		Afterburner
+		"X2700 Ion Thruster"
+		"X3200 Ion Steering"
+		"Scram Drive"
+	engine -27.5 35
+	engine 27.5 35
+	leak "leak" 60 50
+	leak "flame" 50 80
+	explode "tiny explosion" 15
+	explode "small explosion" 20
+	explode "medium explosion" 10
+	"final explode" "final explosion small"
+	description "Betelgeuse Shipyards Gremlin has seen limited adoption among merchant fleets. It has become especially popular among smugglers, who've created alternative configurations using Interference Plating."
+
+
 # Pirate Drones start showing up in northern pirate shipyards soon after the formation of the Oathkeepers...
 
 ship "Pirate Drone"

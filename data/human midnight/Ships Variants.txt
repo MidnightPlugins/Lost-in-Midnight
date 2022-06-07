@@ -2074,3 +2074,50 @@ ship "Vanguard" "Vanguard (Inferno Rockets)"
 	gun "Particle Cannon"
 	gun "Particle Cannon"
 	gun "Particle Cannon"
+
+
+
+#################
+# Gremlins
+#################
+
+ship "Gremlin" "Gremlin (Luxury)"
+	outfits
+		"nGVF-DD Fuel Cell"
+		"LP072a Battery Pack"
+		"D41-HY Shield Generator"
+		"Outfits Expansion" 3
+		"Fuel Pod" 2
+		"Bunk Room" 2
+		"Luxury Accommodations"
+		Afterburner
+		"X2700 Ion Thruster"
+		"X3200 Ion Steering"
+		"Scram Drive"
+
+ship "Gremlin" "Gremlin (Smuggler)"
+	outfits
+		"nGVF-DD Fuel Cell"
+		"LP072a Battery Pack"
+		"D41-HY Shield Generator"
+		"Fuel Pod" 2
+		"Interference Plating" 5
+		"Small Radar Jammer"
+		Afterburner
+		"X2700 Ion Thruster"
+		"X3200 Ion Steering"
+		"Scram Drive"
+
+ship "Gremlin" "Gremlin (Hai)"
+	outfits
+		"Pebble Core"
+		"Hai Gorge Batteries"
+		"Hai Corundum Regenerator"
+		"Fuel Pod" 2
+		"Cargo Expansion"
+		"Small Radar Jammer"
+		Ramscoop
+		Afterburner
+		`"Benga" Atomic Thruster`
+		`"Biroo" Atomic Steering`
+		"Scram Drive"

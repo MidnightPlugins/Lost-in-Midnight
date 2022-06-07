@@ -83,6 +83,9 @@ mission "Destroy Independence (North)"
 	
 	on fail
 		clear "Destroy Independence (North): offered"
+	on complete
+		log `Was lured to Mirzam with the promise of an easy way to capture the Mastodon city ship "Independence." It turned out to be a trap set up by the Republic.`
+
 
 mission "Destroy Independence (South)"
 	name "Mastodon Hunting"
@@ -152,6 +155,8 @@ mission "Destroy Independence (South)"
 	
 	on fail
 		clear "Destroy Independence (South): offered"
+	on complete
+		log `Was lured to Holeb with the promise of an easy way to capture the Mastodon city ship "Independence." It turned out to be a trap set up by the Republic.`
 
 
 mission "Escort Independence"
@@ -297,7 +302,7 @@ mission "Escort Independence"
 		dialog phrase "generic arrived-without-npc dialog"
 
 	on complete
-		"Escort Independence: offered" --
+		clear "Escort Independence: offered"
 		payment 15000
 		dialog phrase "generic safe escort completion dialog"
 
@@ -867,6 +872,7 @@ mission "Peace Tour 2"
 			`	The government of <origin> is grateful for your assistance and rewards you with 1,000,000 credits. They have issued an additional 1,000,000 credit bounty on the person that left you the rigged nuclear device.`
 				accept
 	on accept
+		log `Disarmed a nuclear warhead! Hoping to collect the 1 million credit bounty on the fugitive that dropped in my lap.`
 		payment 1000000
 	npc kill
 		government "Bounty"

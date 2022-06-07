@@ -928,7 +928,8 @@ mission "Inferno Dragon: Dragon's Hoard"
 				"Osprey (Inferno Rockets)"
 				"Clipper (Inferno Rockets)"
 				"Fury (Inferno Rockets)"
-
+	on complete
+		log `Found the Red Dragon's treasure hoard in a secluded cave on Lares. Had to solve a puzzle based on the Inferno Dragon poem and fight off a Red Dragon pirate fleet.`
 
 
 mission "Inferno Dragon: FW Bounty [0]"

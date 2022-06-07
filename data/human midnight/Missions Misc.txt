@@ -88,7 +88,7 @@ mission "Blue Ridge 2"
 	on decline
 		payment -6000000
 		give ship "Hipparion" "Blue Ridge"
-
+		log `Purchased the "Blue Ridge," the Hipparion once used by Han Sizer to explore the galactic rim. The ship was lacking a Hyperdrive. Supposedly, it was removed for security. But maybe there's more to it than that...`
 
 
 mission "Executive Guard: Syndicate Extremists"
@@ -130,7 +130,53 @@ mission "Executive Guard: Syndicate Extremists"
 			names "syndicate capital"
 			variant
 				"Vanguard" 2
+	on complete
+		log "Defeated an Executive Guard, a heavy warship the Syndicate reserves for use by their corporate VIPs."
 
+
+mission "Gremlin Protoype Escort"
+	name "Escort to <planet>"
+	description "Escort the prototype Gremlin to <destination>. Payment is <payment>."
+	source
+		attributes "south" "core" "rim"
+		not attributes "uninhabited"
+	destination "Prime"
+	to offer
+		has "event: remembrance day"
+		not "Gremlin start"
+		"ships: Light Warship" + "ships: Medium Warship" + "ships: Heavy Warship" >= 1
+		random < 50
+	on offer
+		conversation
+			scene "thumbnail/gremlin-thumb"
+			`You notice an odd ship at the spaceport. It looks like it was cobbled together from spare Behemoth parts. Yet somehow it seems to be the complete opposite of a Behemoth. Notably, it has no weapons.`
+			`	"Like what you see," A woman in a flight suit asks. This must be her ship.`
+			choice
+				`	"This is an interesting design. Did you make it?"`
+			`	"Nope. Stole it from a pirate." You take a moment to contemplate her statement when she adds, "That was a joke. Yes, I made it. Is that your ship over there," she asks while pointing towards the <ship>. You nod an affirmative. "I could use an escort to <destination>. How about it?`
+			choice
+				`	"I'll do it for <payment>."`
+				`	"Sorry, I'm headed in a different direction."`
+					decline
+			`	"Great! My name's Henrietta, and this is the Gremlin," she says while patting the hull of her ship.`
+				accept
+	npc evade
+		government "Pirate"
+		personality entering plunders harvests
+			confusion 20
+		fleet "pirate raid"
+	npc accompany save
+		government "Merchant"
+		personality target launching pacifist
+		ship "Gremlin" "Gremlin"
+	on complete
+		payment
+		payment 100000
+		event "Gremlin Betelgeuse Production" 60
+		log "Escorted a prototype Gremlin to the Betelgeuse Shipyards headquarters. They might add it to their lineup if the meeting went well."
+		conversation
+			scene "thumbnail/gremlin-thumb"
+			`"Thanks for the escort. The Gremlin has an important meeting with some Betelgeuse agents. With any luck, you might see it show up in their shipyards soon!" Henrietta pays you <payment> and heads off to present her Gremlin to Betelgeuse.`
 
 
 mission "Free Worlds Infiltrator 1"
@@ -161,8 +207,10 @@ mission "Free Worlds Infiltrator 1"
 		ship "Infiltrator" "Provocateur"
 		dialog "You've recovered the secret data. It doesn't look like they've had a chance to decrypt it. Time to head to <planet>."
 	on fail
+		log `A Republic spy attempted to steal secret data from the Free Worlds. I was unable to catch them and recover the data.`
 		event "navy plasma gunboats" 60
 	on complete
+		log `A Republic spy attempted to steal secret data from the Free Worlds. I was able to catch them and recover the data.`
 		"reputation: Free Worlds" ++
 		payment 50000
 		dialog `The Free Worlds appreciates the retrieval of the stolen data and gives you <payment> in bonus pay.`
@@ -174,6 +222,7 @@ mission "Free Worlds Infiltrator 1 failure"
 	to offer
 		has "event: navy plasma gunboats"
 	on offer
+		log `The spy that got away stole designs for the Plasma Cannon. Now the Navy has them at their disposal.`
 		dialog "Eyewitness reports of Navy Gunboats armed with Plasma Cannnons indicate that designs for the Plasma Cannon was among the data stolen by that Republic Intelligence spy ship."
 	on accept
 		fail
@@ -205,8 +254,10 @@ mission "Free Worlds Infiltrator 2"
 		ship "Infiltrator" "Clandestine"
 		dialog "You've recovered the secret data. It doesn't look like they've had a chance to decrypt it. Time to head to <planet>."
 	on fail
+		log `A Republic spy attempted to steal secret data from the Free Worlds. I was unable to catch them and recover the data.`
 		event "navy flamethrower gunboats" 60
 	on complete
+		log `A Republic spy attempted to steal secret data from the Free Worlds. I was able to catch them and recover the data.`
 		"reputation: Free Worlds" ++
 		payment 50000
 		dialog `The Free Worlds appreciates the retrieval of the stolen data and gives you <payment> in bonus pay.`
@@ -218,6 +269,7 @@ mission "Free Worlds Infiltrator 2 failure"
 	to offer
 		has "event: navy flamethrower gunboats"
 	on offer
+		log `The spy that got away stole designs for the Flamethrower. Now the Navy has them at their disposal.`
 		dialog "Eyewitness reports of Navy Gunboats armed with Flamethrowers indicate that designs for the Flamethrower was among the data stolen by that Republic Intelligence spy ship."
 	on accept
 		fail
@@ -243,6 +295,7 @@ mission "Infiltrator: Secret Data"
 	on fail
 		outfit "Secret Data" -1
 	on complete
+		log `Found a derelict Infiltrator with a dying Republic Intelligence Agent inside. He asked me to deliver some secret data to their headquarters on Earth. They weren't particularly grateful for the delivery...`
 		payment 15000
 		outfit "Secret Data" -1
 		conversation
@@ -395,6 +448,7 @@ mission "Star Explorer Fan Tour"
 	on complete
 		payment 300000
 		clear "star explorer pirate raid activated"
+		log `Escorted the "Last Frontier," a Star Explorer. It was a refreshing change from the usual escort missions: a multi-day cruise around the Paradise Worlds featuring mock battles with "aliens" mixed in with some galactic sight-seeing.`
 		conversation
 			scene "ship/star explorer"
 			`	"This is Captain Tim Smirk of the Last Frontier. Our Star Explorer has safely returned to <planet> with the help of Captain <first> <last> and the <ship>. Even though the Grabons are still a threat, we will continue our mission to search for new life and peaceful civilizations as we explore in the Last Frontier. Remember to stop by the gift shop as you exit the ship!" Orchestral music plays while you find <payment> deposited into your account.`
@@ -457,6 +511,8 @@ mission "Star Explorer Korath Raid"
 					decline
 			scene "outfit/jump drive"
 			`	Only the final entry survived. "We landed on Sundive after testing out the strange device. It was only by chance we had the opportunity to acquire it from an alien vessel which pirates had disabled. Our journey from Polaris took but a single day! But this device, amazing as it is, consumes double the fuel of a Hyperdrive. Despite this, I have decided to set course for the systems to the east. We finally have the opportunity to explore a region of space that is truly unknown. Perhaps we may even reach the center of the galaxy! As we boldly set forth to where no human has gone before, we carry the hopes and dreams of those who precede us: to search for new life and peaceful civilizations as we explore the last frontier."`
+	on complete
+		log `Salvaged the "Icarus," a Star Explorer that had wandered into Korath territory and was being ransacked by one of their Raiders. Sadly, the original crew was lost.`
 
 ship "Star Explorer" "Star Explorer (Korath)"
 	outfits
@@ -584,6 +640,7 @@ mission "Quash: Humanika Infiltration 2"
 		"getaway driver" ++
 		payment 100000
 		outfit "Sniper Rifle" 1
+		log `Took a mercenary transport job that involved a stopover at Humanika. Something happened while we were there and only one of the original passengers made it back to the ship. He kept muttering about how he shouldn't have trusted a certain Quarg. It seems this Quarg had hired them to do something on Humanika and things didn't go as expected.`
 		conversation
 			scene "outfit/sniper rifle"
 			`When you land, Commander hands over <payment>. "Sorry it's not what we agreed on, but the others were each responsible for paying a portion of it. Now that they're..." He hesitates a moment, then hands over the Sniper Rifle. "I guess you could also try selling this. That's the best I can offer." He departs, never explaining anything about what happened on Humanika or the mysterious Quarg he was cursing.`

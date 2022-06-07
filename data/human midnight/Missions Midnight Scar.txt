@@ -185,7 +185,7 @@ mission "Midnight Scar: Bounty Hai"
 		payment 1000000
 		dialog `The authorities on <planet> reward you with <payment> for eliminating the <npc> and its pirate fleet.`
 
-mission "Midnight Scar: Bounty Human"
+mission "Midnight Scar: Bounty North"
 	job
 	repeat
 	name "Wanted Pirate"
@@ -193,6 +193,29 @@ mission "Midnight Scar: Bounty Human"
 	source
 		government "Republic"
 		attributes "north"
+	to offer
+		has "event: midnight scar's hideout (Hai)" 
+		random < 15
+	npc kill
+		government "Scar's Legion"
+		system
+			near Rajak 0 2
+		personality target plunders harvests marked
+			confusion 20
+		fleet "Large Scar's Legion"
+		fleet "Small Scar's Legion" 2
+	on complete
+		payment 1000000
+		dialog `The authorities on <planet> reward you with <payment> for eliminating the <npc> and its pirate fleet.`
+
+mission "Midnight Scar: Bounty Core"
+	job
+	repeat
+	name "Wanted Pirate"
+	description "The <npc> and it's fleet of pirate ships is raiding merchants near Rajak. Destroy the fleet, then return to <destination> for payment of <payment>."
+	source
+		government "Republic" "Syndicate"
+		near "Cardax" 3
 	to offer
 		has "event: midnight scar's hideout (Hai)" 
 		random < 15
@@ -244,3 +267,241 @@ mission "Midnight Scar: Scar's Legion Raid"
 		payment 1000000
 		dialog phrase "generic pirate attack payment dialog"
  
+mission "Midnight Scar: Hai Merchant Escort [Hai-North]"
+	repeat
+	job
+	deadline 15
+	name "Escort to <planet>"
+	description "The captain of the <npc> will pay you <payment> for an escort to reach <destination> in human space by <date>."
+	source
+		government "Hai"
+		near "Heia Due" 2
+	destination
+		government "Republic"
+		attributes "north"
+	to offer
+		has "event: midnight scar's hideout (Hai)" 
+		random < 15
+	npc
+		government "Scar's Legion"
+		system Rajak
+		personality nemesis waiting harvests plunders
+			confusion 20
+		fleet "Small Scar's Legion" 3
+	npc
+		government "Scar's Legion"
+		system Danoa
+		personality nemesis waiting harvests plunders
+			confusion 20
+		fleet "Large Scar's Legion"
+	npc
+		government "Scar's Legion"
+		system "Rigel"
+		personality nemesis waiting harvests plunders
+			confusion 20
+		fleet "Large Scar's Legion"
+	npc
+		government "Scar's Legion"
+		system "Cardax"
+		personality nemesis waiting harvests plunders
+			confusion 20
+		fleet "Large Scar's Legion"
+	npc
+		government "Pirate"
+		personality nemesis staying harvests plunders
+			confusion 20
+		system destination
+		fleet "Large Northern Pirates"
+		fleet "Small Northern Pirates"
+	npc accompany save
+		government "Merchant"
+		personality escort timid
+			confusion 30
+		fleet
+			names "civilian"
+			variant
+				"Behemoth (Hai)"
+	on complete
+		payment 350000
+		dialog phrase "generic safe escort completion dialog"
+	on visit
+		dialog phrase "generic arrived-without-npc dialog"
+		
+mission "Midnight Scar: Hai Merchant Escort [Hai-Core]"
+	repeat
+	job
+	deadline 15
+	name "Escort to <planet>"
+	description "The captain of the <npc> will pay you <payment> for an escort to reach <destination> in human space by <date>."
+	source
+		government "Hai"
+		near "Heia Due" 2
+	destination
+		government "Republic" "Syndicate"
+		near "Cardax" 3
+	to offer
+		has "event: midnight scar's hideout (Hai)" 
+		random < 15
+	npc
+		government "Scar's Legion"
+		system Rajak
+		personality nemesis waiting harvests plunders
+			confusion 20
+		fleet "Small Scar's Legion" 3
+	npc
+		government "Scar's Legion"
+		system Danoa
+		personality nemesis waiting harvests plunders
+			confusion 20
+		fleet "Large Scar's Legion"
+	npc
+		government "Scar's Legion"
+		system "Rigel"
+		personality nemesis waiting harvests plunders
+			confusion 20
+		fleet "Large Scar's Legion"
+	npc
+		government "Scar's Legion"
+		system "Cardax"
+		personality nemesis waiting harvests plunders
+			confusion 20
+		fleet "Large Scar's Legion"
+	npc
+		government "Pirate"
+		personality nemesis staying harvests plunders
+			confusion 20
+		system destination
+		fleet "Large Core Pirates"
+		fleet "Small Core Pirates"
+	npc accompany save
+		government "Merchant"
+		personality escort timid
+			confusion 30
+		fleet
+			names "civilian"
+			variant
+				"Container Transport (Hai)"
+	on complete
+		payment 350000
+		dialog phrase "generic safe escort completion dialog"
+	on visit
+		dialog phrase "generic arrived-without-npc dialog"
+
+mission "Midnight Scar: Hai Merchant Escort [North-Hai]"
+	repeat
+	job
+	deadline 15
+	name "Escort to <planet>"
+	description "The captain of the <npc> will pay you <payment> for an escort to reach <destination> in Hai space by <date>."
+	source
+		government "Republic"
+		attributes "north"
+	destination
+		government "Hai"
+		near "Heia Due" 2
+	to offer
+		has "event: midnight scar's hideout (Hai)" 
+		random < 15
+	npc
+		government "Scar's Legion"
+		system "Rigel"
+		personality nemesis waiting harvests plunders
+			confusion 20
+		fleet "Small Scar's Legion" 3
+	npc
+		government "Scar's Legion"
+		system Danoa
+		personality nemesis waiting harvests plunders
+			confusion 20
+		fleet "Large Scar's Legion"
+	npc
+		government "Scar's Legion"
+		system Rajak
+		personality nemesis waiting harvests plunders
+			confusion 20
+		fleet "Large Scar's Legion"
+	npc
+		government "Scar's Legion"
+		system "Cardax"
+		personality nemesis waiting harvests plunders
+			confusion 20
+		fleet "Large Scar's Legion"
+	npc
+		government "Pirate"
+		personality entering staying harvests plunders
+			confusion 20
+		fleet "Large Northern Pirates"
+		fleet "Small Northern Pirates"
+	npc accompany save
+		government "Merchant"
+		personality escort timid
+			confusion 30
+		fleet
+			names "civilian"
+			variant
+				"Behemoth (Hai)"
+	on complete
+		payment 350000
+		dialog phrase "generic safe escort completion dialog"
+	on visit
+		dialog phrase "generic arrived-without-npc dialog"
+		
+mission "Midnight Scar: Hai Merchant Escort [Core-Hai]"
+	repeat
+	job
+	deadline 15
+	name "Escort to <planet>"
+	description "The captain of the <npc> will pay you <payment> for an escort to reach <destination> in Hai space by <date>."
+	source
+		government "Republic" "Syndicate"
+		near "Cardax" 3
+	destination
+		government "Hai"
+		near "Heia Due" 2
+	to offer
+		has "event: midnight scar's hideout (Hai)" 
+		random < 15
+	npc
+		government "Scar's Legion"
+		system "Cardax"
+		personality nemesis waiting harvests plunders
+			confusion 20
+		fleet "Small Scar's Legion" 3
+	npc
+		government "Scar's Legion"
+		system Danoa
+		personality nemesis waiting harvests plunders
+			confusion 20
+		fleet "Large Scar's Legion"
+	npc
+		government "Scar's Legion"
+		system "Rigel"
+		personality nemesis waiting harvests plunders
+			confusion 20
+		fleet "Large Scar's Legion"
+	npc
+		government "Scar's Legion"
+		system Rajak
+		personality nemesis waiting harvests plunders
+			confusion 20
+		fleet "Large Scar's Legion"
+	npc
+		government "Pirate"
+		personality entering staying harvests plunders
+			confusion 20
+		fleet "Large Core Pirates"
+		fleet "Small Core Pirates"
+	npc accompany save
+		government "Merchant"
+		personality escort timid
+			confusion 30
+		fleet
+			names "civilian"
+			variant
+				"Container Transport (Hai)"
+	on complete
+		payment 350000
+		dialog phrase "generic safe escort completion dialog"
+	on visit
+		dialog phrase "generic arrived-without-npc dialog"
+		

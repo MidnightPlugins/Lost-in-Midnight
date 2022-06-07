@@ -264,6 +264,7 @@ mission "Alternative Astroid Ammo"
 	on complete
 		outfit "Aluminum" 30
 		payment -20000
+		log `Tried to use scrap metal as an alternative to actual asteroids for ammo in the Asteroid Catapult. Ended up with 30 tons of non-magnetic Aluminum.`
 		conversation
 			scene "outfit/harvested aluminum"
 			`The recycler charges you <payment> for processing the junk metal. When they're done, you have 30 compacted clumps of metal. Once you get the load back to your ship, you test them. Unfortunately, they aren't magnetic so you can't use them! In the end, you manage to scrape together 30 tons of aluminum from the metal clumps.`
