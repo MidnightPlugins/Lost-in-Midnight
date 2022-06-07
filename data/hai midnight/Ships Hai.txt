@@ -26,8 +26,8 @@ ship "Millipede"
 		"drag" 4.5
 		"heat dissipation" .85
 		"fuel capacity" 800
-		"cargo space" 100
-		"outfit space" 750
+		"cargo space" 130
+		"outfit space" 710
 		"weapon capacity" 220
 		"engine capacity" 180
 		weapon
@@ -41,10 +41,12 @@ ship "Millipede"
 		"Chameleon Anti-Missile" 2
 		"Pulse Turret" 4
 		"Boulder Reactor"
+		"Geode Reactor"
 		"Hai Diamond Regenerator"
 		"Hai Corundum Regenerator"
 		"Hai Ravine Batteries"
 		"Hai Williwaw Cooling" 3
+		"Bunk Room" 3
 		"Quantum Keystone"
 		"Pulse Rifle" 125
 		"Dual Pulse Pistols"
