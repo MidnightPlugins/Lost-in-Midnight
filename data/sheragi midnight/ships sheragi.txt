@@ -12,6 +12,7 @@
 
 ship "Sapphire Shield"
 	sprite "ship/sapphire shield"
+	swizzle 5
 	attributes
 		category "Medium Warship"
 		"cost" 80000000
@@ -78,6 +79,7 @@ ship "Sapphire Shield"
 
 ship "Ruby Dagger"
 	sprite "ship/ruby dagger"
+	swizzle 6
 	attributes
 		category "Light Warship"
 		"cost" 80000000
