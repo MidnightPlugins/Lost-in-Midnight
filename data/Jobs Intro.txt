@@ -177,11 +177,11 @@ mission "Intro Cargo Filler [3 Freighter]"
 
 
 
-mission "Intro Cargo Filler [1 Interceptor]"
-	name "Delivery to <planet>"
+mission "Intro Mining Filler [1 Interceptor]"
 	job
-	description "Deliver <cargo> to <destination>. Payment is <payment>."
-	cargo random 15
+	deadline 7
+	name "Mining: Copper to <system>"
+	description "Jewelers on <destination> have a shortage of Copper. Bring 1 ton of Copper to them by <date>. Payment is <payment>, 50% above the usual market rate for Copper."
 	source "New Greenland"
 	destination "Gemstone"
 	to offer
@@ -189,27 +189,33 @@ mission "Intro Cargo Filler [1 Interceptor]"
 		has "ships: Interceptor"
 		not "Intro [1 Transport]: offered"
 		not "Intro [1 Freighter]: offered"
-	on visit
-		dialog phrase "generic cargo on visit"
+	on accept
+		conversation
+			scene "asteroid/gold/spin"
+			`Valuable ore can be mined from certain asteroids if you shoot at them enough. These asteroids look slightly different from the common metal and rock asteroids. If you are having trouble telling them apart, an Asteroid Scanner will highlight these asteroids for you.`
 	on complete
-		payment
-		dialog phrase "generic cargo delivery payment"
+		outfit "Copper" -1
+		payment 4500
+		dialog `The jewelers on <planet> accept your delivery of Copper and pay you <payment>.`
 
-mission "Intro Cargo Filler [3 Interceptor]"
-	name "Delivery to <planet>"
+mission "Intro Mining Filler [3 Interceptor]"
 	job
-	description "Deliver <cargo> to <destination>. Payment is <payment>."
-	cargo random 15
+	deadline 7
+	name "Mining: Uranium to <system>"
+	description "The outfitter on <destination> has a shortage of Uranium. Bring 1 ton of Uranium to them by <date>. Payment is <payment>, 50% above the usual market rate for Uranium."
 	source "Ingot"
 	destination "Hestia"
 	to offer
 		has "Intro [2 Interceptor]: done"
 		not "Intro [3 Interceptor]: done"
-	on visit
-		dialog phrase "generic cargo on visit"
+	on accept
+		conversation
+			scene "asteroid/lead/spin"
+			`Valuable ore can be mined from certain asteroids if you shoot at them enough. These asteroids look slightly different from the common metal and rock asteroids. If you are having trouble telling them apart, an Asteroid Scanner will highlight these asteroids for you.`
 	on complete
-		payment
-		dialog phrase "generic cargo delivery payment"
+		outfit "Uranium" -1
+		payment 7500
+		dialog `The outfitter on <planet> accepts your delivery of Uranium and pay you <payment>.`
 
 mission "Intro Escort Add-on [3 Interceptor]"
 	name "Escort to <planet>"
@@ -223,7 +229,7 @@ mission "Intro Escort Add-on [3 Interceptor]"
 	destination "Hestia"
 	npc
 		government "Pirate"
-		personality nemesis harvests plunders
+		personality nemesis entering harvests plunders
 			confusion 40
 		fleet
 			names "pirate"
@@ -259,22 +265,26 @@ mission "Intro Escort Add-on [3 Interceptor]"
 
 mission "Intro Bounty Hunting 1"
 	job
+	repeat
 	name "Wanted rogue near <system>"
-	description "A low-end pirate warship named the <npc> has been attacking merchants near the <system> system. Destroy it and return to <planet> for payment (<payment>)."
-	job
+	description "A low-end pirate interceptor named the <npc> has been attacking merchants near the <system> system. Destroy it and return to <planet> for payment (<payment>)."
 	to offer
 		"combat rating" < 300
 		not "ships: Medium Warship"
 		not "ships: Heavy Warship"
 		not "ships: Heavy Freighter"
 		"ships: Light Warship" + "ships: Light Freighter" + "ships: Transport" + "ships: Interceptor" == 1
+		random < 50 - "combat rating"
 	source
 		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
 		attributes "rim" "south" "north" "dirt belt" "core" "frontier"
 	npc kill
 		government "Bounty"
-		personality heroic staying nemesis target
-		ship "Sparrow" "Jack Sparrow"
+		personality heroic entering staying nemesis target
+		fleet
+			names "pirate"
+			variant
+				"Sparrow"
 		dialog phrase "generic hunted bounty eliminated dialog"
 	on visit
 		dialog phrase "generic bounty hunting on visit"
@@ -284,9 +294,9 @@ mission "Intro Bounty Hunting 1"
 
 mission "Intro Bounty Hunting 2"
 	job
+	repeat
 	name "Wanted rogue near <system>"
-	description "A low-end pirate warship named the <npc> has been attacking merchants near the <system> system. Destroy it and return to <planet> for payment (<payment>)."
-	job
+	description "A low-end pirate interceptor named the <npc> has been attacking merchants near the <system> system. Destroy it and return to <planet> for payment (<payment>)."
 	to offer
 		has "Intro Bounty Hunting 1: done"
 		"combat rating" < 300
@@ -294,13 +304,18 @@ mission "Intro Bounty Hunting 2"
 		not "ships: Heavy Warship"
 		not "ships: Heavy Freighter"
 		"ships: Light Warship" + "ships: Light Freighter" + "ships: Transport" + "ships: Interceptor" == 1
+		random < 25 - ( "Intro Bounty Hunting 1: done" + "Intro Bounty Hunting 2: done" )
 	source
 		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
 		attributes "rim" "south" "north" "dirt belt" "core" "frontier"
 	npc kill
 		government "Bounty"
+		system 0 1
 		personality heroic staying nemesis target
-		ship "Wasp" "Yellow Jacket"
+		fleet
+			names "pirate"
+			variant
+				"Wasp"
 		dialog phrase "generic hunted bounty eliminated dialog"
 	on visit
 		dialog phrase "generic bounty hunting on visit"
@@ -310,9 +325,9 @@ mission "Intro Bounty Hunting 2"
 
 mission "Intro Bounty Hunting 3"
 	job
+	repeat
 	name "Wanted rogue near <system>"
-	description "A low-end pirate warship named the <npc> has been attacking merchants near the <system> system. Destroy it and return to <planet> for payment (<payment>)."
-	job
+	description "A low-end pirate interceptor named the <npc> has been attacking merchants near the <system> system. Destroy it and return to <planet> for payment (<payment>)."
 	to offer
 		has "Intro Bounty Hunting 2: done"
 		"combat rating" < 300
@@ -320,13 +335,18 @@ mission "Intro Bounty Hunting 3"
 		not "ships: Heavy Warship"
 		not "ships: Heavy Freighter"
 		"ships: Light Warship" + "ships: Light Freighter" + "ships: Transport" + "ships: Interceptor" == 1
+		random < 25 - ( "Intro Bounty Hunting 3: done" + "Intro Bounty Hunting 2: done" )
 	source
 		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
 		attributes "rim" "south" "north" "dirt belt" "core" "frontier"
 	npc kill
 		government "Bounty"
+		system 1
 		personality heroic staying nemesis target
-		ship "Fury" "Fatal"
+		fleet
+			names "pirate"
+			variant
+				"Fury"
 		dialog phrase "generic hunted bounty eliminated dialog"
 	on visit
 		dialog phrase "generic bounty hunting on visit"
@@ -336,9 +356,9 @@ mission "Intro Bounty Hunting 3"
 
 mission "Intro Bounty Hunting 4"
 	job
+	repeat
 	name "Wanted rogue near <system>"
-	description "A low-end pirate warship named the <npc> has been attacking merchants near the <system> system. Destroy it and return to <planet> for payment (<payment>)."
-	job
+	description "A low-end pirate interceptor named the <npc> has been attacking merchants near the <system> system. Destroy it and return to <planet> for payment (<payment>)."
 	to offer
 		has "Intro Bounty Hunting 3: done"
 		"combat rating" < 300
@@ -346,13 +366,18 @@ mission "Intro Bounty Hunting 4"
 		not "ships: Heavy Warship"
 		not "ships: Heavy Freighter"
 		"ships: Light Warship" + "ships: Light Freighter" + "ships: Transport" + "ships: Interceptor" == 1
+		random < 25 - ( "Intro Bounty Hunting 3: done" + "Intro Bounty Hunting 4: done" )
 	source
 		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
 		attributes "rim" "south" "north" "dirt belt" "core" "frontier"
 	npc kill
 		government "Bounty"
+		system 1 2
 		personality heroic staying nemesis target
-		ship "Berserker" "Sharp Claws"
+		fleet
+			names "pirate"
+			variant
+				"Berserker"
 		dialog phrase "generic hunted bounty eliminated dialog"
 	on visit
 		dialog phrase "generic bounty hunting on visit"
@@ -362,9 +387,9 @@ mission "Intro Bounty Hunting 4"
 
 mission "Intro Bounty Hunting 5"
 	job
+	repeat
 	name "Wanted rogue near <system>"
-	description "A low-end pirate warship named the <npc> has been attacking merchants near the <system> system. Destroy it and return to <planet> for payment (<payment>)."
-	job
+	description "A low-end pirate interceptor named the <npc> has been attacking merchants near the <system> system. Destroy it and return to <planet> for payment (<payment>)."
 	to offer
 		has "Intro Bounty Hunting 4: done"
 		"combat rating" < 300
@@ -372,13 +397,18 @@ mission "Intro Bounty Hunting 5"
 		not "ships: Heavy Warship"
 		not "ships: Heavy Freighter"
 		"ships: Light Warship" + "ships: Light Freighter" + "ships: Transport" + "ships: Interceptor" == 1
+		random < 25 - ( "Intro Bounty Hunting 5: done" + "Intro Bounty Hunting 4: done" )
 	source
 		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
 		attributes "rim" "south" "north" "dirt belt" "core" "frontier"
 	npc kill
 		government "Bounty"
+		system 1 2
 		personality heroic staying nemesis target
-		ship "Hawk" "Hawkeye"
+		fleet
+			names "pirate"
+			variant
+				"Hawk"
 		dialog phrase "generic hunted bounty eliminated dialog"
 	on visit
 		dialog phrase "generic bounty hunting on visit"
@@ -411,6 +441,60 @@ mission "Intro Mining [Blood Rage]"
 		payment 90000
 		dialog `The shipyards on <planet> accept your delivery of Copper and pay you <payment>.`
 
+mission "Mining: Iron Challenge [Blood Rage]"
+	deadline 7
+	minor
+	repeat
+	name "Iron Challenge"
+	description "The captain of the <npc> has challenged you to a mining duel! Harvest 20 tons of Iron and return to <destination> by <date>. Whoever loses the duel gives their harvest to the winner."
+	source
+		planet Hestia Helheim Icefall Canyon Memory Calda Vail Vinci Hermes Earth Luna Mars Foundry Burthen Hephaestus Maker Oblivion "New Portland" Glaze Sundrinker Humanika "New India" Poisonwood Lichen
+	to offer
+		has "Blood Rage start"
+		has "Intro [3 Interceptor]: done"
+		not "ships: Transport"
+		not "ships: Light Warship"
+		not "ships: Medium Warship"
+		not "ships: Heavy Warship"
+		not "ships: Light Freighter"
+		not "ships: Heavy Freighter"
+		"ships: Interceptor" == 1
+		random < 10
+	on offer
+		conversation
+			`Another pilot approaches you. "Nice ship. Are you a miner?`
+			choice
+				`	"I've harvested a few asteroids."`
+				`	"I don't mine."`
+					decline
+			scene "asteroid/iron/spin"
+			`	"How about a challenge then? It'll be my ship, the <npc>, versus yours. Whoever mines the most Iron by <date> wins. The loser gives their harvest to the winner. How about it?" The <npc> looks like a capable mining ship. But unless it's been significantly modified, it's pilot seems to have forgotten an important detail..."
+			choice
+				`	(Accept the challenge.)`
+				`	(Reject the challenge.)`
+					decline
+			`	"That's the spirit! We meet back here by <date>!"`
+				accept
+	on enter
+		conversation
+			scene "asteroid/iron/spin"
+			`There's Iron in this system. The pilot of the <npc> probably makes this type of challenge regularly. Time to find out who's the better miner!`
+	npc accompany save
+		government "Merchant"
+		personality target mining harvests marked
+		fleet
+			names "civilian"
+			cargo 0
+			variant 1
+				"Sparrow"
+			variant 1
+				"Fury (Miner)"
+	on complete
+		outfit "Iron" -20
+		payment 42000
+		conversation
+			scene "asteroid/iron/spin"
+			`As expected, after tallying up who mined more Iron, it's obvious you've won. It seems the other pilot didn't realize your ship had more cargo space than the <npc>. He begrudgingly hands over his harvest, but your cargo hold is already full. You end up selling both harvests for <payment>.
 
 #################
 # Mata Hari start exclusive
@@ -443,6 +527,88 @@ mission "Intro Corporate espionage [Mata Hari]"
 	on complete
 		dialog `You transmit your scans and receive a hearty congratulations, as well as <payment>. "This will save us months!" you hear someone say in the background as you close the audio link.`
 		payment 50000
+
+mission "Drug Running [Mata Hari]"
+	name "Drug Running"
+	description "Bring a shipment of illegal drugs to <destination>. If you are caught with this cargo, you may be fined."
+	minor
+	repeat
+	source
+		attributes "near earth" "dirt belt" "north"
+	destination
+		attributes "paradise" "rich" "urban"
+		distance 1 100
+	cargo "illegal drugs" 4 2 .1
+	illegal 35000 `In addition to the fine, the illegal drugs are confiscated from your cargo hold.`
+	stealth
+	to offer
+		has "Mata Hari start"
+		or
+			and
+				"drug smuggler" < 10
+				random < 15 +  "drug smuggler"
+			and
+				"drug smuggler" >= 10
+				random < 25
+	
+	on offer
+		require "Infiltrator Tech"
+		dialog `As you are walking through the spaceport, a woman beckons you to her and asks if you would like to help transport some "recreational pharmaceuticals" to <planet>. (This sounds like an illegal mission, so you'll need to avoid getting scanned or landing on planets with high security.)`
+	
+	on accept
+		"said no to drugs" --
+	on decline
+		"drug smuggler" --
+	
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment
+		payment 60000
+		"drug smuggler" ++
+		dialog `Some disreputable-looking locals unload the illegal drugs from your cargo bay, and hand you your payment of <payment>.`
+
+mission "Shady passenger transport [Mata Hari]"
+	name "Shady passenger transport"
+	description "Discreetly transport a passenger to <destination>. If you are caught with him, you may be fined."
+	minor
+	repeat
+	source
+		attributes "near earth" "core" "urban"
+	destination
+		attributes "frontier" "dirt belt" "rim" "north" "south" "pirate"
+		distance 2 3
+	passengers 1
+	illegal 75000 `Your passenger turns out to be a wanted criminal. As he is hauled off in chains, you vehemently protest that you knew nothing of his shady history. You wind up quite a bit poorer through a combination of fines and bribes (the breakdown remains somewhat unclear).`
+	stealth
+
+	to offer
+		has "Mata Hari start"
+		or
+			and
+				"getaway driver" < 10
+				random < 15 +  "getaway driver"
+			and
+				"getaway driver" >= 10
+				random < 25
+
+	on offer
+		require "Infiltrator Tech"
+		dialog `As you are walking through the spaceport, a man in nondescript clothing appears out of nowhere and offers <payment> for discreet, no-questions-asked passage to <destination>. Though he says very little, you get the distinct sense that his presence on this planet and motivation to be elsewhere may not be entirely legal.`
+
+	on accept
+		"rejected illegal jobs" --
+
+	on decline
+		"getaway driver" --
+
+	on visit
+		dialog phrase "generic passenger on visit"
+	on complete
+		"getaway driver" ++
+		payment 50000
+		dialog `Your mysterious passenger has spoken hardly a word during the entire trip. As soon as you land, he hands you your payment of <payment> and disappears into a crowd.`
+
 
 #################
 # Gremlin start exclusive
@@ -536,7 +702,6 @@ mission "Betelgeuse offer [Gremlin 3]"
 				`	(Accept the offer.)`
 				`	(Reject the offer.)`
 					decline
-			scene "effect/box"
 			`	After filling out some legal paperwork, you lead her and her entourage to the hangar where the Gremlin is parked. Several technicians unpack tools and equipment and begin the process of taking apart the ship to study its construction and make blueprints. Eventually, they begin putting the ship back together.`
 			`	It's midnight by the time they're done. Henrietta tells you that you'll start receiving payments once the Gremlin makes it into shipyards.`
 				accept

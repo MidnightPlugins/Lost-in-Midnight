@@ -214,13 +214,13 @@ start "Mata Hari"
 			"heat dissipation" .7
 			"fuel capacity" 600
 			"cargo space" 35
-			"outfit space" 155
+			"outfit space" 185
 			"weapon capacity" 35
 			"engine capacity" 60
-			"scan interference" 4
-			"radar jamming" 20
+			"inscrutable" 1
 			"tactical scan power" 32
 			"atmosphere scan" 100
+			"integrated systems" -1
 			weapon
 				"blast radius" 16
 				"shield damage" 160
@@ -236,6 +236,7 @@ start "Mata Hari"
 			"Brig"
 			"Cargo Scanner"
 			"Outfit Scanner"
+			"Infiltrator Tech"
 
 			"A120 Atomic Thruster"
 			"A125 Atomic Steering"
@@ -437,7 +438,7 @@ start "Gremlin"
 
 outfit "Gremlin Circuits"
 	category "Systems"
-	thumbnail "effect/box"
+	thumbnail "outfit/damaged capacitor"
 	"fused circuits" 1
 	"reinstall" -1
 	description "Some fused circuits from when you salvaged parts to make the Gremlin. You never got around to fixing it, but they're not connected to anything important so it should be fine..."
@@ -531,6 +532,7 @@ mission "Gremlin: Burst Fuel Pod (spaceport)"
 		random < 5
 	on offer
 		require "Gremlin Circuits"
+		not "Betelgeuse offer [Gremlin 3]: failed"
 		require "Fuel Pod"
 		conversation
 			scene "scene/scene-explosion"
@@ -539,24 +541,6 @@ mission "Gremlin: Burst Fuel Pod (spaceport)"
 	on decline
 		outfit "Fuel Pod" -1
 		
-mission "Gremlin: Burst Fuel Pod (no outfitter)"
-	landing
-	repeat
-	source
-		not attributes "outfitter"
-	to offer
-		has "Gremlin start"
-		random < 1
-	on offer
-		require "Gremlin Circuits"
-		require "Fuel Pod"
-		conversation
-			scene "scene/scene-explosion"
-			`As you are landing your ship, one of the Gremlin's Fuel Pods burst into flames! The flames burn out quickly. Fortunately, no one was injured or worse. But the Fuel Pod is a complete loss and will have to be replaced...`
-				decline
-	on decline
-		outfit "Fuel Pod" -1
-
 mission "Gremlin: Burst Fuel Pod (assisting)"
 	assisting
 	minor
@@ -564,6 +548,7 @@ mission "Gremlin: Burst Fuel Pod (assisting)"
 	destination Earth
 	to offer
 		has "Gremlin start"
+		not "Betelgeuse offer [Gremlin 3]: failed"
 		random < 5
 	on offer
 		require "Gremlin Circuits"
@@ -582,6 +567,7 @@ mission "Gremlin: Burst Fuel Pod (boarding)"
 	destination Earth
 	to offer
 		has "Gremlin start"
+		not "Betelgeuse offer [Gremlin 3]: failed"
 		random < 5
 	on offer
 		require "Gremlin Circuits"
