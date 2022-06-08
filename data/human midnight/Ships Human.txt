@@ -106,6 +106,7 @@ ship "Gremlin"
 	outfits
 		"nGVF-DD Fuel Cell"
 		"LP072a Battery Pack"
+		"Supercapacitor"
 		"D41-HY Shield Generator"
 		"Fuel Pod" 2
 		"Cargo Expansion"
@@ -525,14 +526,13 @@ ship "Infiltrator"
 		"heat dissipation" .7
 		"fuel capacity" 600
 		"cargo space" 35
-		"outfit space" 155
+		"outfit space" 185
 		"weapon capacity" 35
 		"engine capacity" 60
 		"inscrutable" 1
-		"scan interference" 4
-		"radar jamming" 20
 		"tactical scan power" 32
 		"atmosphere scan" 100
+		"integrated systems" -1
 		weapon
 			"blast radius" 16
 			"shield damage" 160
@@ -548,6 +548,7 @@ ship "Infiltrator"
 		"Brig"
 		"Cargo Scanner"
 		"Outfit Scanner"
+		"Infiltrator Tech"
 
 		"A120 Atomic Thruster"
 		"A125 Atomic Steering"

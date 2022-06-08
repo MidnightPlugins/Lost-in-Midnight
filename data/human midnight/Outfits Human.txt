@@ -512,6 +512,20 @@ outfit "H6 Refrigeration Module"
 
 
 
+# Infiltrator Tech is installed on Infiltrators
+
+outfit "Infiltrator Tech"
+	category "Systems"
+	thumbnail "outfit/infiltrator tech"
+	description "The Infiltrator has this specialized scan interference and radar jamming technology integrated into the hull. Data on its inner workings is classified information not available to the general public."
+	"scan interference" 5.5
+	"radar jamming" 10
+	"mass" 30
+	"outfit space" -30
+	"integrated systems" 1
+	"reinstall" -1
+	
+
 # Leviathan Comics is received in a Metropolis mission.
 
 outfit "Leviathan Comic"

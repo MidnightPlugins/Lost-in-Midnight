@@ -870,3 +870,85 @@ mission "Medical Bay: Injured Crewmember (Wanderer)"
 
 
 
+mission "Mining: Claim Jumpers"
+	minor
+	invisible
+	deadline 4
+	repeat
+	source
+		government "Republic" "Syndicate" "Free Worlds"
+	to offer
+		random < 5
+	on offer
+		require "Asteroid Scanner"
+	npc
+		government "Merchant"
+		personality launching mining harvests timid
+		fleet
+			cargo 0
+			variant
+				"Sparrow" 3
+			variant
+				"Fury (Miner)"
+				"Sparrow" 2
+			variant
+				"Modified Berserker"
+				"Sparrow" 2
+			variant
+				"Hawk (Miner)"
+				"Sparrow" 2
+			variant
+				"Headhunter (Miner)"
+				"Sparrow" 2
+
+mission "Mining: Iron Challenge"
+	deadline 7
+	minor
+	repeat
+	name "Iron Challenge"
+	description "The captain of the <npc> has challenged you to a mining duel! Harvest 15 tons of Iron and return to <destination> by <date>. Whoever loses the duel gives their harvest to the winner."
+	source
+		planet Hestia Helheim Icefall Canyon Memory Calda Vail Vinci Hermes Earth Luna Mars Foundry Burthen Hephaestus Maker Oblivion "New Portland" Glaze Sundrinker Humanika "New India" Poisonwood Lichen
+	to offer
+		not "ships: Transport"
+		not "ships: Light Warship"
+		not "ships: Medium Warship"
+		not "ships: Heavy Warship"
+		not "ships: Light Freighter"
+		not "ships: Heavy Freighter"
+		"ships: Interceptor" == 1
+		random < 10
+	on offer
+		conversation
+			`Another pilot approaches you. "Nice ship. Are you a miner?`
+			choice
+				`	"I've harvested a few asteroids."`
+				`	"I don't mine."`
+					decline
+			scene "asteroid/iron/spin"
+			`	"How about a challenge then? It'll be my ship, the <npc>, versus yours. Whoever mines the most Iron by <date> wins. The loser gives their harvest to the winner. How about it?" The <npc> looks like a capable mining ship. But unless it's been significantly modified, it's pilot seems to have forgotten an important detail..."
+			choice
+				`	(Accept the challenge.)`
+				`	(Reject the challenge.)`
+					decline
+			`	"That's the spirit! We meet back here by <date>!"`
+				accept
+	on enter
+		conversation
+			scene "asteroid/iron/spin"
+			`There's Iron in this system. The pilot of the <npc> probably makes this type of challenge regularly. Time to find out who's the better miner!`
+	npc accompany save
+		government "Merchant"
+		personality target mining harvests marked
+		fleet
+			names "civilian"
+			cargo 0
+			variant 1
+				"Berserker (Energy Cannons)"
+	on complete
+		outfit "Iron" -15
+		payment 30000
+		conversation
+			scene "asteroid/iron/spin"
+			`As expected, after tallying up who mined more Iron, it's obvious you've won. It seems the other pilot didn't realize your ship had more cargo space than the <npc>. He begrudgingly hands over his harvest, but your cargo hold is already full. You end up selling both harvests for <payment>.
+
