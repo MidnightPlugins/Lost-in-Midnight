@@ -443,7 +443,6 @@ mission "Intro Mining [Blood Rage]"
 
 mission "Mining: Iron Challenge [Blood Rage]"
 	deadline 7
-	minor
 	repeat
 	name "Iron Challenge"
 	description "The captain of the <npc> has challenged you to a mining duel! Harvest 20 tons of Iron and return to <destination> by <date>. Whoever loses the duel gives their harvest to the winner."
@@ -531,7 +530,6 @@ mission "Intro Corporate espionage [Mata Hari]"
 mission "Drug Running [Mata Hari]"
 	name "Drug Running"
 	description "Bring a shipment of illegal drugs to <destination>. If you are caught with this cargo, you may be fined."
-	minor
 	repeat
 	source
 		attributes "near earth" "dirt belt" "north"
@@ -539,7 +537,7 @@ mission "Drug Running [Mata Hari]"
 		attributes "paradise" "rich" "urban"
 		distance 1 100
 	cargo "illegal drugs" 4 2 .1
-	illegal 35000 `In addition to the fine, the illegal drugs are confiscated from your cargo hold.`
+		illegal 35000 `In addition to the fine, the illegal drugs are confiscated from your cargo hold.`
 	stealth
 	to offer
 		has "Mata Hari start"
@@ -571,7 +569,6 @@ mission "Drug Running [Mata Hari]"
 mission "Shady passenger transport [Mata Hari]"
 	name "Shady passenger transport"
 	description "Discreetly transport a passenger to <destination>. If you are caught with him, you may be fined."
-	minor
 	repeat
 	source
 		attributes "near earth" "core" "urban"
