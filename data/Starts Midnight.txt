@@ -13,7 +13,7 @@
 start "Blood Rage"
 	name "Blood Rage"
 	description `You grew up on New Boston, an uninteresting world in the Dirt Belt. You've dreamed of owning a starship ever since your first visit to the spaceport at the age of fifteen. After many long years of working at a textile mill, you've finally saved enough credits to apply for a pilot's license from the Republic.`
-	description `	Recently your uncle passed away and left you a ship... Along with a massive pile of debt tied to it.`
+	description `	(This starter ship is outfitted for mining.)`
 	thumbnail "thumbnail/berserker"
 	date 16 11 3013
 	system "Rutilicus"
@@ -180,7 +180,7 @@ mission "Intro [Blood Rage]"
 start "Mata Hari"
 	name "Mata Hari"
 	description `You grew up on New Boston, an uninteresting world in the Dirt Belt. You've dreamed of owning a starship ever since your first visit to the spaceport at the age of fifteen. After many long years of working at a textile mill, you've finally saved enough credits to apply for a pilot's license from the Republic.`
-	description `	Unfortunately, you fell victim to a credit scam which left you deep in debt. While going through the family storehouse looking for something to sell, you make a shocking discovery.`
+	description `	(This starter ship is outfitted for espionage and smuggling.)`
 	thumbnail "thumbnail/infiltrator-thumb"
 	date 16 11 3013
 	system "Rutilicus"
@@ -365,7 +365,7 @@ mission "Intro [Mata Hari]"
 start "Gremlin"
 	name "Gremlin"
 	description `You grew up on New Boston, an uninteresting world in the Dirt Belt. You've dreamed of owning a starship ever since your first visit to the spaceport at the age of fifteen. After many long years of working at a textile mill, you've finally saved enough credits to apply for a pilot's license from the Republic.`
-	description `	One night the sky is brightened by a sudden flash of light...`
+	description `	(This starter ship is more challenging than normal.)`
 	thumbnail "thumbnail/gremlin-thumb"
 	date 16 11 3013
 	system "Rutilicus"
@@ -451,7 +451,7 @@ conversation "gremlin intro"
 	`	The hangar security system asks for a password. You wanted to keep this simple, so you made sure it would be a password you wouldn't forget: your name:`
 	name
 	scene "thumbnail/gremlin-thumb"
-	`	You salvaged everything you could that night twelve months ago. Bought parts others salvaged. Took loans when you ran out of money and needed to rent this hangar. But it's finally complete. The Gremlin. There aren't any weapons, but it should be a fast ship, able to outrun just about anything. You'll need that speed. Hauling cargo can be dangerous work, with pirates on the prowl. And you'll need to start finding work: Your first loan payment is due tomorrow.`
+	`	You salvaged everything you could that night twelve months ago. Bought parts others salvaged. Took loans when you ran out of money and needed to rent this hangar. But the result of that effort is parked before you: The Gremlin. There aren't any weapons, but it should be a fast ship, able to outrun just about anything. You'll need that speed. Hauling cargo can be dangerous work, with pirates on the prowl. And you'll need to start finding work: Your first loan payment is due tomorrow.`
 
 
 
@@ -529,14 +529,14 @@ mission "Gremlin: Burst Fuel Pod (spaceport)"
 		attributes "spaceport"
 	to offer
 		has "Gremlin start"
+		not "Betelgeuse offer [Gremlin 3]: failed"
 		random < 5
 	on offer
 		require "Gremlin Circuits"
-		not "Betelgeuse offer [Gremlin 3]: failed"
 		require "Fuel Pod"
 		conversation
 			scene "scene/scene-explosion"
-			`As you are landing your ship, one of the Gremlin's Fuel Pods burst into flames! Spaceport crews immediately go to work putting out the flames. Fortunately, no one was injured or worse. But the Fuel Pod is a complete loss and will have to be replaced...`
+			`As you are landing your ship, one of the Gremlin's Fuel Pods burst into flames! Spaceport crews immediately go to work putting out the fire. Fortunately, no one was injured or worse. But the Fuel Pod is a complete loss and will have to be replaced...`
 				decline
 	on decline
 		outfit "Fuel Pod" -1
@@ -555,7 +555,7 @@ mission "Gremlin: Burst Fuel Pod (assisting)"
 		require "Fuel Pod"
 		conversation
 			scene "scene/scene-explosion"
-			`As you are working to repair the other ship, one of the Gremlin's Fuel Pods burst into flames! The flames burn out quickly. Fortunately, no one was injured or worse. But the Fuel Pod is a complete loss and will have to be replaced...`
+			`As you are working to repair the other ship, one of the Gremlin's Fuel Pods burst into flames! The fire burns out quickly. Fortunately, no one was injured or worse. But the Fuel Pod is a complete loss and will have to be replaced...`
 				decline
 	on decline
 		outfit "Fuel Pod" -1
@@ -574,7 +574,7 @@ mission "Gremlin: Burst Fuel Pod (boarding)"
 		require "Fuel Pod"
 		conversation
 			scene "scene/scene-explosion"
-			`As you are preparing to plunder the other ship, one of the Gremlin's Fuel Pods burst into flames! The flames burn out quickly. Fortunately, no one was injured or worse. But the Fuel Pod is a complete loss and will have to be replaced...`
+			`As you are preparing to plunder the other ship, one of the Gremlin's Fuel Pods burst into flames! The fire burns out quickly. Fortunately, no one was injured or worse. But the Fuel Pod is a complete loss and will have to be replaced...`
 				decline
 	on decline
 		outfit "Fuel Pod" -1
