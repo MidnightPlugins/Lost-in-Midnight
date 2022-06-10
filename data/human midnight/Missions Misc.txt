@@ -135,6 +135,7 @@ mission "Executive Guard: Syndicate Extremists"
 
 
 mission "Gremlin Protoype Escort"
+	deadline
 	name "Escort to <planet>"
 	description "Escort the prototype Gremlin to <destination>. Payment is <payment>."
 	source
@@ -142,15 +143,14 @@ mission "Gremlin Protoype Escort"
 		not attributes "uninhabited"
 	destination "Prime"
 	to offer
-		has "event: remembrance day"
 		not "Gremlin start"
-		"ships: Light Warship" + "ships: Medium Warship" + "ships: Heavy Warship" >= 1
+		"ships: Interceptor" + "ships: Light Warship" + "ships: Medium Warship" + "ships: Heavy Warship" >= 1
 		random < 50
 	on offer
 		conversation
 			scene "thumbnail/gremlin-thumb"
 			`You notice an odd ship at the spaceport. It looks like it was cobbled together from spare Behemoth parts. Yet somehow it seems to be the complete opposite of a Behemoth. Notably, it has no weapons.`
-			`	"Like what you see," A woman in a flight suit asks. This must be her ship.`
+			`	"Like what you see," asks a woman in a flight suit. This must be her ship.`
 			choice
 				`	"This is an interesting design. Did you make it?"`
 			`	"Nope. Stole it from a pirate." You take a moment to contemplate her statement when she adds, "That was a joke. Yes, I made it. Is that your ship over there," she asks while pointing towards the <ship>. You nod an affirmative. "I could use an escort to <destination>. How about it?`
@@ -160,9 +160,21 @@ mission "Gremlin Protoype Escort"
 					decline
 			`	"Great! My name's Henrietta, and this is the Gremlin," she says while patting the hull of her ship.`
 				accept
-	npc evade
+	npc
 		government "Pirate"
 		personality entering plunders harvests
+			confusion 20
+		fleet "pirate raid"
+	npc
+		government "Pirate"
+		system destination
+		personality plunders harvests
+			confusion 20
+		fleet "pirate raid"
+	npc
+		government "Pirate"
+		system destination
+		personality staying plunders harvests
 			confusion 20
 		fleet "pirate raid"
 	npc accompany save
