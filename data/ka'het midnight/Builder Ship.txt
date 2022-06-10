@@ -129,7 +129,7 @@ ship "Kai'xeris"
 	gun 0 -66
 	engine 0 62
 	explode "tiny explosion" 16
-	description "."
+	description "Other than their smaller vessels, such as this freighter, most Builder ships were destroyed by the Ka'het."
 
 ship "Kai'teris"
 	sprite "ship/kai'teris"
@@ -165,7 +165,7 @@ ship "Kai'teris"
 	engine 7 51
 	gun 0 -51
 	explode "tiny explosion" 19
-	description "."
+	description "Other than their smaller vessels, such as this transport, most Builder ships were destroyed by the Ka'het."
 
 
 
