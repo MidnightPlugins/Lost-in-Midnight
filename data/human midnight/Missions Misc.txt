@@ -942,7 +942,7 @@ mission "Mining: Iron Challenge"
 				`	"I don't mine."`
 					decline
 			scene "asteroid/iron/spin"
-			`	"How about a challenge then? It'll be my ship, the <npc>, versus yours. Whoever mines the most Iron by <date> wins. The loser gives their harvest to the winner. How about it?" The <npc> looks like a capable mining ship. But unless it's been significantly modified, it's pilot seems to have forgotten an important detail..."
+			`	"How about a challenge then? It'll be my ship, the <npc>, versus yours. Whoever mines the most Iron by <date> wins. The loser gives their harvest to the winner. How about it?" The <npc> looks like a capable mining ship. But unless it's been significantly modified, it's pilot seems to have forgotten an important detail..."`
 			choice
 				`	(Accept the challenge.)`
 				`	(Reject the challenge.)`
@@ -966,5 +966,5 @@ mission "Mining: Iron Challenge"
 		payment 30000
 		conversation
 			scene "asteroid/iron/spin"
-			`As expected, after tallying up who mined more Iron, it's obvious you've won. It seems the other pilot didn't realize your ship had more cargo space than the <npc>. He begrudgingly hands over his harvest, but your cargo hold is already full. You end up selling both harvests for <payment>.
+			`As expected, after tallying up who mined more Iron, it's obvious you've won. It seems the other pilot didn't realize your ship had more cargo space than the <npc>. He begrudgingly hands over his harvest, but your cargo hold is already full. You end up selling both harvests for <payment>.`
 
