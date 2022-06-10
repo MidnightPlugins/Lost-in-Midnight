@@ -266,7 +266,7 @@ mission "Midnight Scar: Scar's Legion Raid"
 	on complete
 		payment 1000000
 		dialog phrase "generic pirate attack payment dialog"
- 
+
 mission "Midnight Scar: Hai Merchant Escort [Hai-North]"
 	repeat
 	job
