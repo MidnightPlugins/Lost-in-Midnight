@@ -137,7 +137,7 @@ mission "Executive Guard: Syndicate Extremists"
 mission "Gremlin Protoype Escort"
 	deadline
 	name "Escort to <planet>"
-	description "Escort the prototype Gremlin to <destination>. Payment is <payment>."
+	description "Escort the prototype Gremlin to <destination> by <date>. Payment is <payment>."
 	source
 		attributes "south" "core" "rim"
 		not attributes "uninhabited"
@@ -153,7 +153,7 @@ mission "Gremlin Protoype Escort"
 			`	"Like what you see," asks a woman in a flight suit. This must be her ship.`
 			choice
 				`	"This is an interesting design. Did you make it?"`
-			`	"Nope. Stole it from a pirate." You take a moment to contemplate her statement when she adds, "That was a joke. Yes, I made it. Is that your ship over there," she asks while pointing towards the <ship>. You nod an affirmative. "I could use an escort to <destination>. How about it?`
+			`	"Nope. Stole it from a pirate." You take a moment to contemplate her statement when she adds, "That was a joke. Yes, I made it. Is that your ship over there," she asks while pointing towards the <ship>. You nod an affirmative. "I could use an escort to <destination> by <date>. How about it?`
 			choice
 				`	"I'll do it for <payment>."`
 				`	"Sorry, I'm headed in a different direction."`
@@ -161,6 +161,8 @@ mission "Gremlin Protoype Escort"
 			`	"Great! My name's Henrietta, and this is the Gremlin," she says while patting the hull of her ship.`
 				accept
 	npc
+		to spawn
+			"combat rating" > 100
 		government "Pirate"
 		personality entering plunders harvests
 			confusion 20
@@ -172,6 +174,8 @@ mission "Gremlin Protoype Escort"
 			confusion 20
 		fleet "pirate raid"
 	npc
+		to spawn
+			"combat rating" > 200
 		government "Pirate"
 		system destination
 		personality staying plunders harvests
@@ -179,7 +183,7 @@ mission "Gremlin Protoype Escort"
 		fleet "pirate raid"
 	npc accompany save
 		government "Merchant"
-		personality target launching pacifist
+		personality target escort launching pacifist
 		ship "Gremlin" "Gremlin"
 	on complete
 		payment
