@@ -421,7 +421,7 @@ mission "QKBlade: House Unuk History"
 	npc kill
 		government "Ancient Hai"
 		personality waiting staying nemesis heroic
-		fleet "Ancient Hai Hallucination" 12
+		fleet "Ancient Hai Hallucination" 5
 		dialog `You intercept a Hai communication: "They have cut the Hyperspace connections! Our only hope is a crash landing on Unuk al Hai!"`
 	npc
 		government "Escort"
