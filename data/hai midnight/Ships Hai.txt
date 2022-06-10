@@ -51,7 +51,7 @@ ship "Millipede"
 		"Pulse Rifle" 125
 		"Dual Pulse Pistols"
 		`"Bondir" Atomic Thruster`
-		`"Bufaer" Atomic Steering`
+		`"Bondir" Atomic Steering`
 		Hyperdrive
 		
 	engine -35.5 211 .6
