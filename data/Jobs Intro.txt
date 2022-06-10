@@ -310,7 +310,8 @@ mission "Intro Bounty Hunting 2"
 		attributes "rim" "south" "north" "dirt belt" "core" "frontier"
 	npc kill
 		government "Bounty"
-		system 0 1
+		system
+			distance 0 1
 		personality heroic staying nemesis target
 		fleet
 			names "pirate"
@@ -341,7 +342,8 @@ mission "Intro Bounty Hunting 3"
 		attributes "rim" "south" "north" "dirt belt" "core" "frontier"
 	npc kill
 		government "Bounty"
-		system 1
+		system
+			distance 0 1
 		personality heroic staying nemesis target
 		fleet
 			names "pirate"
@@ -372,7 +374,8 @@ mission "Intro Bounty Hunting 4"
 		attributes "rim" "south" "north" "dirt belt" "core" "frontier"
 	npc kill
 		government "Bounty"
-		system 1 2
+		system
+			distance 1 2
 		personality heroic staying nemesis target
 		fleet
 			names "pirate"
@@ -403,7 +406,8 @@ mission "Intro Bounty Hunting 5"
 		attributes "rim" "south" "north" "dirt belt" "core" "frontier"
 	npc kill
 		government "Bounty"
-		system 1 2
+		system
+			distance 1 2
 		personality heroic staying nemesis target
 		fleet
 			names "pirate"
