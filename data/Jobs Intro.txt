@@ -680,8 +680,7 @@ mission "Betelgeuse offer [Gremlin 2]"
 
 mission "Betelgeuse offer [Gremlin 3]"
 	landing
-	name "Betelgeuse offer"
-	description "Betelgeuse has offered to pay you for the rights to use your design. Make the Gremlin your flagship and take it to <destination>."
+	invisible
 	source "Prime"
 	to offer
 		has "Betelgeuse offer [Gremlin 2]: done"
@@ -689,12 +688,12 @@ mission "Betelgeuse offer [Gremlin 3]"
 		require "Gremlin Circuits"
 		conversation
 			scene "thumbnail/gremlin-thumb"
-			`You find Henrietta after checking with the receptionist at Betelgeuse headquarters. "<first> <last>, your still al- I mean has it been a year already? Time flies. Did you bring it?"`
+			`You find Henrietta after checking with the receptionist at Betelgeuse headquarters. "<first> <last>, your still al- I mean, has it been a year already? Time flies. Did you bring it?"`
 			choice
 				`	"Yeah. So how much is Betelgeuse offering?"`
 				`	"I've changed my mind. I'm not interested afterall."`
 					decline
-			`	"Betelgeuse will pay you 72,000 credits per year. Deal?"`
+			`	"Betelgeuse will pay you 72,000 credits per year. Deal?" That comes out to 200 credits per day. It's not much, but it's better than nothing.`
 			choice
 				`	(Accept the offer.)`
 				`	(Reject the offer.)`
