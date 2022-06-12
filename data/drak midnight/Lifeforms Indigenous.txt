@@ -154,8 +154,7 @@ mission "Subsidurial Herding Job Easy"
 	name "Subsidurial Herding"
 	description "Escort a herd of Subsidurials to <destination>. Payment is <payment>."
 	source
-		attributes "south"
-		attributes "frontier"
+		attributes "dirt belt" "rim"
 		not planet "Greenrock"
 		not attributes "uninhabited"
 	destination Greenrock
@@ -254,7 +253,7 @@ mission "Subsidurial Herding Mission Easy"
 	repeat
 	deadline
 	source
-		government "Free Worlds"
+		attributes "south"
 		not planet "Greenrock"
 		not attributes "uninhabited"
 	destination Greenrock
@@ -301,7 +300,7 @@ mission "Subsidurial Herding Mission Hard"
 	repeat
 	deadline
 	source
-		government "Republic" "Syndicate"
+		attributes "dirt belt"
 		not attributes "uninhabited"
 	destination Greenrock
 	to offer
@@ -406,6 +405,7 @@ mission "Day of Subsidurius"
 			has "Subsidurial Herding Mission Easy: done"
 			has "Subsidurial Herding Mission Hard: done"
 		random < 40 + "day of subsidurius"
+		"combat rating" > 300
 	on offer
 		conversation
 			`You're checking out the local cuisine when an announcement goes out over the spaceport. "Attention! The planet is under attack from... Is this correct?" You hear a muffled voice answering before the announcer continues,"From a herd of weaponized Subsidurials! We are looking for volunteers to assist with the planetary defense." Will you join the defense fleet? <planet>'s government will probably pay a good reward for helping.`
@@ -543,7 +543,6 @@ mission "Subsidurial Porter"
 		government "Pirate"
 		personality entering harvests plunders
 			confusion 20
-		fleet "Large Core Pirates"
 		fleet "Small Core Pirates"
 	npc evade
 		to spawn
@@ -553,14 +552,13 @@ mission "Subsidurial Porter"
 			distance 1 2
 		personality harvests plunders
 			confusion 10
-		fleet "Marauder fleet VI"
+		fleet "Large Core Pirates"
 	npc evade
 		government "Pirate"
 		system
 			distance 2 3
 		personality harvests plunders
 			confusion 20
-		fleet "Large Core Pirates"
 		fleet "Small Core Pirates"
 	npc evade
 		government "Pirate"
@@ -569,7 +567,6 @@ mission "Subsidurial Porter"
 		personality harvests plunders
 			confusion 20
 		fleet "Large Core Pirates"
-		fleet "pirate raid"
 	npc evade
 		to spawn
 			"combat rating" > 800
@@ -578,15 +575,13 @@ mission "Subsidurial Porter"
 			distance 4 5
 		personality harvests plunders
 			confusion 10
-		fleet "Marauder fleet VIII"
+		fleet "pirate raid"
 	npc evade
 		government "Pirate"
 		system destination
 		personality staying harvests plunders
 			confusion 20
-		fleet "Large Core Pirates"
-		fleet "Small Core Pirates"
-		fleet "pirate raid"
+		fleet "pirate raid" 3
 	npc evade
 		to spawn
 			"combat rating" > 1000
@@ -594,7 +589,7 @@ mission "Subsidurial Porter"
 		system destination
 		personality staying harvests plunders
 			confusion 10
-		fleet "Marauder fleet X"
+		fleet "pirate raid" 2
 	npc accompany save
 		government "Merchant"
 		personality target escort mute
@@ -822,7 +817,6 @@ mission "Ayab's Revenge"
 	description "Captain Ayab is hunting an ancient subsidurial known as the Gray Eye. You're still not sure how you got roped into this..."
 	source
 		attributes "near earth"
-	destination "Earth"
 	to offer
 		has "First Contact: Subsidurials: active"
 		"combat rating" > 10
@@ -850,7 +844,7 @@ mission "Ayab's Revenge"
 			distance 1 2
 		personality target uninterested mining harvests mute unconstrained
 		fleet "Gray Eye"
-		dialog `Captain Ayab cheers. "Finally, the Gray Eye is no more! Let's get back to Earth! Drink's on me!"`
+		dialog `Captain Ayab cheers. "Finally, the Gray Eye is no more! Let's get back to <destination>! Drink's on me!"`
 	npc save
 		government "Creature Hunter"
 		personality escort heroic vindictive
@@ -904,13 +898,14 @@ ship "Luminazoa"
 		"ion protection" 1
 		"ion resistance" 1
 		"energy capacity" 150
+		"energy generation" 2
 		"fuel capacity" 150
 		"inscrutable" 1
 		"gaslining" 1
 		"hyperdrive" 1
 		"scram drive" .2
 		"atmosphere scan" 100
-
+		
 	outfits
 		Mouthparts? 3
 		"Lightning Tendril?" 1
@@ -952,6 +947,7 @@ outfit "Lightning Tendril?"
 		"velocity" 320
 		"lifetime" 1
 		"reload" 1
+		"firing energy" 3.7
 		"shield damage" 7.4
 		"hull damage" 5.8
 		"ion damage" 5
@@ -1007,6 +1003,8 @@ ship "Ionic Leech"
 		"cargo space" 16
 		"thrust" 24
 		"turn" 600
+		"afterburner thrust" 12
+		"afterburner energy" 6
 		"shield generation" 2
 		"hull repair rate" 1
 		"energy protection" 1
@@ -1050,6 +1048,7 @@ outfit "Ionic Mouthparts?"
 		"burst reload" 35
 		"burst count" 3
 		"cluster"
+		"firing energy" -3
 		"shield damage" 400
 		"hull damage" 200
 		"ion damage" 10
