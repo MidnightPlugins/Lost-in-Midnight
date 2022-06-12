@@ -44,287 +44,287 @@ mission "Inferno Dragon: Inferno Rockets Appear"
 
 event "inferno rockets appear"
 	fleet "Small Southern Pirates"
-		variant 1
+		add variant 1
 			"Fury (Inferno Rockets)"
-		variant 1
+		add variant 1
 			"Fury"
 			"Fury (Inferno Rockets)"
 			"Fury (Heavy)"
-		variant 1
+		add variant 1
 			"Fury (Inferno Rockets)"
 			"Hawk"
-		variant 1
+		add variant 1
 			"Hawk (Inferno Rockets)"
-		variant 1
+		add variant 1
 			"Hawk (Inferno Rockets)"
 			"Fury"
-		variant 1
+		add variant 1
 			"Fury (Inferno Rockets)"
 			"Hawk"
 			"Sparrow"
-		variant 1
+		add variant 1
 			"Fury"
 			"Hawk (Inferno Rockets)"
 			"Sparrow"
-		variant 1
+		add variant 1
 			"Clipper (Inferno Rockets)"
-		variant 1
+		add variant 1
 			"Modified Argosy (Inferno Rocket)"
 	fleet "Large Southern Pirates"
-		variant 1
+		add variant 1
 			"Modified Argosy (Inferno Rocket)"
-		variant 1
+		add variant 1
 			"Clipper (Inferno Rockets)"
-		variant 1
+		add variant 1
 			"Osprey (Inferno Rockets)"
 			"Fury (Inferno Rockets)"
-		variant 1
+		add variant 1
 			"Osprey (Inferno Rockets)"
 			"Sparrow"
-		variant 1
+		add variant 1
 			"Clipper (Inferno Rockets)"
 			"Hawk"
-		variant 1
+		add variant 1
 			"Clipper"
 			"Hawk (Inferno Rockets)"
-		variant 1
+		add variant 1
 			"Fury"
 			"Fury (Inferno Rockets)"
 			"Fury (Heavy)"
-		variant 1
+		add variant 1
 			"Hawk (Inferno Rockets)"
 			"Sparrow" 3
-		variant 1
+		add variant 1
 			"Modified Argosy (Inferno Rocket)"
 			"Sparrow" 2
-		variant 1
+		add variant 1
 			"Modified Argosy (Inferno Rocket)"
 			"Fury (Heavy)" 2
-		variant 1
+		add variant 1
 			"Modified Argosy (Inferno Rocket)"
 			"Modified Argosy (Missile)"
-		variant 1
+		add variant 1
 			"Bastion (Inferno Rockets)"
-		variant 1
+		add variant 1
 			"Falcon (Inferno Rockets)"
-		variant 1
+		add variant 1
 			"Falcon (Inferno Rockets)"
 			"Sparrow" 3
 	fleet "Small Independent"
-		variant 1
+		add variant 1
 			"Fury (Inferno Rockets)"
-		variant 1
+		add variant 1
 			"Hawk (Inferno Rockets)"
-		variant 1
+		add variant 1
 			"Fury (Inferno Rockets)"
 			"Hawk"
-		variant 1
+		add variant 1
 			"Hawk (Inferno Rockets)"
 			"Fury"
-		variant 1
+		add variant 1
 			"Hawk (Inferno Rockets)"
 			"Sparrow"
-		variant 1
+		add variant 1
 			"Fury"
 			"Fury (Inferno Rockets)"
 			"Fury (Heavy)"
-		variant 1
+		add variant 1
 			"Fury (Inferno Rockets)"
 			"Hawk"
 			"Sparrow"
-		variant 1
+		add variant 1
 			"Fury"
 			"Hawk (Inferno Rockets)"
 			"Sparrow"
-		variant 1
+		add variant 1
 			"Hawk (Inferno Rockets)"
 			"Hawk"
-		variant 1
+		add variant 1
 			"Clipper (Inferno Rockets)"
 	fleet "Large Independent"
-		variant 1
+		add variant 1
 			"Clipper (Inferno Rockets)"
-		variant 1
+		add variant 1
 			"Clipper (Inferno Rockets)"
 			"Hawk"
-		variant 1
+		add variant 1
 			"Clipper"
 			"Hawk (Inferno Rockets)"
-		variant 1
+		add variant 1
 			"Modified Argosy (Inferno Rocket)"
-		variant 1
+		add variant 1
 			"Bastion (Inferno Rockets)"
-		variant 1
+		add variant 1
 			"Falcon (Inferno Rockets)"
 	fleet "Small Core Pirates"
-		variant 1
+		add variant 1
 			"Hawk (Inferno Rockets)"
 	fleet "Large Core Pirates"
-		variant 1
+		add variant 1
 			"Splinter (Inferno Rockets)"
 			"Quicksilver (Proton)"
-		variant 1
+		add variant 1
 			"Splinter (Inferno Rockets)"
 			"Quicksilver"
-		variant 1
+		add variant 1
 			"Hawk (Inferno Rockets)"
 			"Quicksilver"
 			"Quicksilver (Proton)"
-		variant 1
+		add variant 1
 			"Splinter (Inferno Rockets)"
 			"Fury"
-		variant 1
+		add variant 1
 			"Splinter"
 			"Fury (Inferno Rockets)"
-		variant 1
+		add variant 1
 			"Fury (Inferno Rockets)"
 			"Quicksilver"
 			"Quicksilver (Proton)"
-		variant 1
+		add variant 1
 			"Splinter (Inferno Rockets)"
 			"Splinter"
-		variant 1
+		add variant 1
 			"Falcon (Inferno Rockets)"
-		variant 1
+		add variant 1
 			"Firebird (Inferno Rockets)"
-		variant 1
+		add variant 1
 			"Vanguard (Inferno Rockets)"
 	fleet "Small Northern Pirates"
-		variant 1
+		add variant 1
 			"Fury (Inferno Rockets)"
-		variant 1
+		add variant 1
 			"Berserker (Inferno Rockets)"
-		variant 1
+		add variant 1
 			"Hawk (Inferno Rockets)"
-		variant 1
+		add variant 1
 			"Hawk (Inferno Rockets)"
 			"Sparrow"
-		variant 1
+		add variant 1
 			"Raven (Inferno Rockets)"
-		variant 1
+		add variant 1
 			"Corvette (Inferno Rockets)"
 	fleet "Large Northern Pirates"
-		variant 1
+		add variant 1
 			"Firebird (Inferno Rockets)"
-		variant 1
+		add variant 1
 			"Firebird (Inferno Rockets)"
 			"Corvette"
-		variant 1
+		add variant 1
 			"Firebird (Plasma)"
 			"Corvette (Inferno Rockets)"
-		variant 1
+		add variant 1
 			"Firebird (Inferno Rockets)"
 			"Fury"
-		variant 1
+		add variant 1
 			"Firebird (Inferno Rockets)"
 			"Berserker (Inferno Rockets)"
 			"Berserker"
-		variant 1
+		add variant 1
 			"Firebird (Plasma)"
 			"Fury (Inferno Rockets)"
-		variant 1
+		add variant 1
 			"Raven (Inferno Rockets)"
 			"Raven"
-		variant 1
+		add variant 1
 			"Raven (Inferno Rockets)"
 			"Raven (Heavy)"
-		variant 1
+		add variant 1
 			"Raven (Inferno Rockets)"
 			"Raven (Afterburner)"
-		variant 1
+		add variant 1
 			"Aerie"
 			"Dagger" 2
 			"Corvette (Inferno Rockets)"
-		variant 1
+		add variant 1
 			"Aerie" 2
 			"Dagger" 4
 			"Firebird (Inferno Rockets)"
-		variant 1
+		add variant 1
 			"Leviathan (Inferno Rockets)"
 			"Firebird (Plasma)"
-		variant 1
+		add variant 1
 			"Leviathan (Laser)"
 			"Firebird (Inferno Rockets)"
-		variant 1
+		add variant 1
 			"Leviathan (Inferno Rockets)"
 	fleet "pirate raid"
-		variant 1
+		add variant 1
 			"Modified Argosy (Inferno Rocket)"
-		variant 1
+		add variant 1
 			"Clipper (Inferno Rockets)"
-		variant 1
+		add variant 1
 			"Clipper (Inferno Rockets)"
 			"Hawk"
-		variant 1
+		add variant 1
 			"Clipper"
 			"Hawk (Inferno Rockets)"
-		variant 1
+		add variant 1
 			"Hawk (Inferno Rockets)"
 			"Hawk (Speedy)"
 			"Hawk (Bomber)"
-		variant 1
+		add variant 1
 			"Fury (Inferno Rockets)"
 			"Fury (Bomber)"
-		variant 1
+		add variant 1
 			"Modified Argosy (Inferno Rocket)"
 			"Hawk (Speedy)"
 			"Hawk (Bomber)"
-		variant 1
+		add variant 1
 			"Hawk (Inferno Rockets)" 2
 			"Modified Argosy (Heavy)"
-		variant 1
+		add variant 1
 			"Modified Argosy (Inferno Rocket)"
 			"Raven (Afterburner)" 2
-		variant 1
+		add variant 1
 			"Falcon (Inferno Rockets)"
-		variant 1
+		add variant 1
 			"Splinter (Inferno Rockets)"
 			"Quicksilver (Proton)"
-		variant 1
+		add variant 1
 			"Splinter (Inferno Rockets)"
 			"Splinter"
-		variant 1
+		add variant 1
 			"Splinter (Inferno Rockets)"
 			"Splinter (Laser)"
-		variant 1
+		add variant 1
 			"Splinter (Inferno Rockets)"
 			"Splinter (Proton)"
-		variant 1
+		add variant 1
 			"Firebird (Inferno Rockets)"
-		variant 1
+		add variant 1
 			"Firebird (Inferno Rockets)"
 			"Corvette"
-		variant 1
+		add variant 1
 			"Firebird (Plasma)"
 			"Corvette (Inferno Rockets)"
-		variant 1
+		add variant 1
 			"Firebird (Plasma)"
 			"Berserker"
-		variant 1
+		add variant 1
 			"Firebird (Plasma)"
 			"Berserker (Inferno Rockets)" 2
-		variant 1
+		add variant 1
 			"Firebird (Plasma)"
 			"Fury (Inferno Rockets)"
-		variant 1
+		add variant 1
 			"Firebird (Inferno Rockets)"
 			"Fury"
-		variant 1
+		add variant 1
 			"Raven (Inferno Rockets)"
 			"Raven (Afterburner)"
-		variant 1
+		add variant 1
 			"Raven (Inferno Rockets)"
 			"Raven (Heavy)"
-		variant 1
+		add variant 1
 			"Firebird (Plasma)"
 			"Fury (Inferno Rockets)" 2
-		variant 1
+		add variant 1
 			"Leviathan (Inferno Rockets)"
 			"Firebird (Plasma)"
-		variant 1
+		add variant 1
 			"Leviathan (Laser)"
 			"Firebird (Inferno Rockets)"
-		variant 1
+		add variant 1
 			"Berserker"
 			"Berserker (Afterburner)"
 			"Berserker (Inferno Rockets)"
