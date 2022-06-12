@@ -562,7 +562,7 @@ mission "Grave Digger: Graveyard Robbery A"
 		not "Grave Digger: Graveyard Robbery B: active"
 		not "Grave Digger: Graveyard Robbery C: active"
 		has "event: Grave Digger Betrayal"
-		random < 10 + ( 5 * ( "Grave Digger: Nightingale 1: done" + "Grave Digger: Suspicious Ship: done" + "Grave Digger: Graveyard Robbery B: done" + "Grave Digger: Graveyard Robbery C: done" ))
+		random < 10 + ( 5 * ( "Grave Digger: Nightingale 1: done" + "Grave Digger: Suspicious Ship: done" + "Grave Digger: Graveyard Robbery B: done" + "Grave Digger: Graveyard Robbery C: done" ) )
 	on offer
 		conversation
 			scene thumbnail/pelican
@@ -600,7 +600,7 @@ mission "Grave Digger: Graveyard Robbery B"
 		not "Grave Digger: Graveyard Robbery A: active"
 		not "Grave Digger: Graveyard Robbery C: active"
 		has "event: Grave Digger Betrayal"
-		random < 10 + ( 5 * ( "Grave Digger: Nightingale 1: done" + "Grave Digger: Suspicious Ship: done" + "Grave Digger: Graveyard Robbery A: done" + "Grave Digger: Graveyard Robbery C: done" ))
+		random < 10 + ( 5 * ( "Grave Digger: Nightingale 1: done" + "Grave Digger: Suspicious Ship: done" + "Grave Digger: Graveyard Robbery A: done" + "Grave Digger: Graveyard Robbery C: done" ) )
 	on offer
 		conversation
 			scene thumbnail/pelican
@@ -638,7 +638,7 @@ mission "Grave Digger: Graveyard Robbery C"
 		not "Grave Digger: Graveyard Robbery A: active"
 		not "Grave Digger: Graveyard Robbery B: active"
 		has "event: Grave Digger Betrayal"
-		random < 10 + ( 5 * ( "Grave Digger: Nightingale 1: done" + "Grave Digger: Suspicious Ship: done" + "Grave Digger: Graveyard Robbery A: done" + "Grave Digger: Graveyard Robbery B: done" ))
+		random < 10 + ( 5 * ( "Grave Digger: Nightingale 1: done" + "Grave Digger: Suspicious Ship: done" + "Grave Digger: Graveyard Robbery A: done" + "Grave Digger: Graveyard Robbery B: done" ) )
 	on offer
 		conversation
 			scene thumbnail/pelican
@@ -727,7 +727,7 @@ mission "Grave Digger: Graveyard Robbery Job A"
 			and
 				has "Grave Digger: Graveyard Robbery B: done"
 				has "Grave Digger: Graveyard Robbery C: done"
-		random < 10 + ( 5 * ( "Grave Digger: Nightingale 1: done" + "Grave Digger: Suspicious Ship: done" + "Grave Digger: Graveyard Robbery A: done" + "Grave Digger: Graveyard Robbery B: done" + "Grave Digger: Graveyard Robbery C: done" + "Grave Digger: Prefect's Albatross 2: done"))
+		random < 10 + ( 5 * ( "Grave Digger: Nightingale 1: done" + "Grave Digger: Suspicious Ship: done" + "Grave Digger: Graveyard Robbery A: done" + "Grave Digger: Graveyard Robbery B: done" + "Grave Digger: Graveyard Robbery C: done" + "Grave Digger: Prefect's Albatross 2: done" ) )
 
 	npc
 		government "Grave Diggers"
@@ -778,7 +778,7 @@ mission "Grave Digger: Graveyard Robbery Job B"
 			and
 				has "Grave Digger: Graveyard Robbery B: done"
 				has "Grave Digger: Graveyard Robbery C: done"
-		random < 10 + ( 5 * ( "Grave Digger: Nightingale 1: done" + "Grave Digger: Suspicious Ship: done" + "Grave Digger: Graveyard Robbery A: done" + "Grave Digger: Graveyard Robbery B: done" + "Grave Digger: Graveyard Robbery C: done" + "Grave Digger: Prefect's Albatross 2: done"))
+		random < 10 + ( 5 * ( "Grave Digger: Nightingale 1: done" + "Grave Digger: Suspicious Ship: done" + "Grave Digger: Graveyard Robbery A: done" + "Grave Digger: Graveyard Robbery B: done" + "Grave Digger: Graveyard Robbery C: done" + "Grave Digger: Prefect's Albatross 2: done" ) )
 
 	npc
 		government "Grave Diggers"
@@ -829,7 +829,7 @@ mission "Grave Digger: Graveyard Robbery Job C"
 			and
 				has "Grave Digger: Graveyard Robbery B: done"
 				has "Grave Digger: Graveyard Robbery C: done"
-		random < 10 + ( 5 * ( "Grave Digger: Nightingale 1: done" + "Grave Digger: Suspicious Ship: done" + "Grave Digger: Graveyard Robbery A: done" + "Grave Digger: Graveyard Robbery B: done" + "Grave Digger: Graveyard Robbery C: done" + "Grave Digger: Prefect's Albatross 2: done"))
+		random < 10 + ( 5 * ( "Grave Digger: Nightingale 1: done" + "Grave Digger: Suspicious Ship: done" + "Grave Digger: Graveyard Robbery A: done" + "Grave Digger: Graveyard Robbery B: done" + "Grave Digger: Graveyard Robbery C: done" + "Grave Digger: Prefect's Albatross 2: done" ) )
 
 	npc
 		government "Grave Diggers"
