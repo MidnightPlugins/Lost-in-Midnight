@@ -727,7 +727,7 @@ mission "Grave Digger: Graveyard Robbery Job A"
 			and
 				has "Grave Digger: Graveyard Robbery B: done"
 				has "Grave Digger: Graveyard Robbery C: done"
-		random < 10 + ( 5 * ( "Grave Digger: Nightingale 1: done" + "Grave Digger: Suspicious Ship: done" + "Grave Digger: Graveyard Robbery A: done" + "Grave Digger: Graveyard Robbery B: done" + "Grave Digger: Graveyard Robbery C: done" + "Grave Digger: Prefect's Albatross 2: done" ) )
+		random < 0 + ( 5 * ( "Grave Digger: Nightingale 1: done" + "Grave Digger: Suspicious Ship: done" + "Grave Digger: Graveyard Robbery A: done" + "Grave Digger: Graveyard Robbery B: done" + "Grave Digger: Graveyard Robbery C: done" + "Grave Digger: Prefect's Albatross 2: done" ) )
 
 	npc
 		government "Grave Diggers"
@@ -748,13 +748,13 @@ mission "Grave Digger: Graveyard Robbery Job A"
 	on visit
 		dialog `You've returned to <planet>, but the <npc> is still lost somewhere in the Graveyard. Find the missing ship and bring it back to <planet>.`
 	on abort
-		"Grave Digger: Graveyard Robbery Job A: offered" --
+		clear "Grave Digger: Graveyard Robbery Job A: offered"
 	on decline
-		"Grave Digger: Graveyard Robbery Job A: offered" --
+		clear "Grave Digger: Graveyard Robbery Job A: offered"
 	on fail
-		"Grave Digger: Graveyard Robbery Job A: offered" --
+		clear "Grave Digger: Graveyard Robbery Job A: offered"
 	on complete
-		"Grave Digger: Graveyard Robbery Job A: offered" --
+		clear "Grave Digger: Graveyard Robbery Job A: offered"
 		payment 200000
 		dialog `The captain of <npc> thanks you for safely escorting the ship back to <planet> and pays you <payment> in gratitude. "The thieves were not Remnant, but had Remnant ships."`
 
@@ -778,7 +778,7 @@ mission "Grave Digger: Graveyard Robbery Job B"
 			and
 				has "Grave Digger: Graveyard Robbery B: done"
 				has "Grave Digger: Graveyard Robbery C: done"
-		random < 10 + ( 5 * ( "Grave Digger: Nightingale 1: done" + "Grave Digger: Suspicious Ship: done" + "Grave Digger: Graveyard Robbery A: done" + "Grave Digger: Graveyard Robbery B: done" + "Grave Digger: Graveyard Robbery C: done" + "Grave Digger: Prefect's Albatross 2: done" ) )
+		random < 0 + ( 5 * ( "Grave Digger: Nightingale 1: done" + "Grave Digger: Suspicious Ship: done" + "Grave Digger: Graveyard Robbery A: done" + "Grave Digger: Graveyard Robbery B: done" + "Grave Digger: Graveyard Robbery C: done" + "Grave Digger: Prefect's Albatross 2: done" ) )
 
 	npc
 		government "Grave Diggers"
@@ -799,13 +799,13 @@ mission "Grave Digger: Graveyard Robbery Job B"
 	on visit
 		dialog `You've returned to <planet>, but the <npc> is still lost somewhere in the Graveyard. Find the missing ship and bring it back to <planet>.`
 	on abort
-		"Grave Digger: Graveyard Robbery Job B: offered" --
+		clear "Grave Digger: Graveyard Robbery Job B: offered"
 	on decline
-		"Grave Digger: Graveyard Robbery Job B: offered" --
+		clear "Grave Digger: Graveyard Robbery Job B: offered"
 	on fail
-		"Grave Digger: Graveyard Robbery Job B: offered" --
+		clear "Grave Digger: Graveyard Robbery Job B: offered"
 	on complete
-		"Grave Digger: Graveyard Robbery Job B: offered" --
+		clear "Grave Digger: Graveyard Robbery Job B: offered"
 		payment 200000
 		dialog `The captain of <npc> thanks you for safely escorting the ship back to <planet> and pays you <payment> in gratitude. "The thieves were not Remnant, but had Remnant ships."`
 
@@ -829,7 +829,7 @@ mission "Grave Digger: Graveyard Robbery Job C"
 			and
 				has "Grave Digger: Graveyard Robbery B: done"
 				has "Grave Digger: Graveyard Robbery C: done"
-		random < 10 + ( 5 * ( "Grave Digger: Nightingale 1: done" + "Grave Digger: Suspicious Ship: done" + "Grave Digger: Graveyard Robbery A: done" + "Grave Digger: Graveyard Robbery B: done" + "Grave Digger: Graveyard Robbery C: done" + "Grave Digger: Prefect's Albatross 2: done" ) )
+		random < 0 + ( 5 * ( "Grave Digger: Nightingale 1: done" + "Grave Digger: Suspicious Ship: done" + "Grave Digger: Graveyard Robbery A: done" + "Grave Digger: Graveyard Robbery B: done" + "Grave Digger: Graveyard Robbery C: done" + "Grave Digger: Prefect's Albatross 2: done" ) )
 
 	npc
 		government "Grave Diggers"
@@ -850,13 +850,13 @@ mission "Grave Digger: Graveyard Robbery Job C"
 	on visit
 		dialog `You've returned to <planet>, but the <npc> is still lost somewhere in the Graveyard. Find the missing ship and bring it back to <planet>.`
 	on abort
-		"Grave Digger: Graveyard Robbery Job C: offered" --
+		clear "Grave Digger: Graveyard Robbery Job C: offered"
 	on decline
-		"Grave Digger: Graveyard Robbery Job C: offered" --
+		clear "Grave Digger: Graveyard Robbery Job C: offered"
 	on fail
-		"Grave Digger: Graveyard Robbery Job C: offered" --
+		clear "Grave Digger: Graveyard Robbery Job C: offered"
 	on complete
-		"Grave Digger: Graveyard Robbery Job C: offered" --
+		clear "Grave Digger: Graveyard Robbery Job C: offered"
 		payment 200000
 		dialog `The captain of <npc> thanks you for safely escorting the ship back to <planet> and pays you <payment> in gratitude. "The thieves were not Remnant, but had Remnant ships."`
 
@@ -986,9 +986,15 @@ mission "Grave Digger: Prefect's Albatross 1"
 		not "event: Grave Digger Testimony"
 		not "event: Gravedigger defeated"
 		or
-			has "Grave Digger: Graveyard Robbery Job A: done"
-			has "Grave Digger: Graveyard Robbery Job B: done"
-			has "Grave Digger: Graveyard Robbery Job C: done"
+			and
+				has "Grave Digger: Graveyard Robbery A: done"
+				has "Grave Digger: Graveyard Robbery B: done"
+			and
+				has "Grave Digger: Graveyard Robbery A: done"
+				has "Grave Digger: Graveyard Robbery C: done"
+			and
+				has "Grave Digger: Graveyard Robbery B: done"
+				has "Grave Digger: Graveyard Robbery C: done"
 	on enter Cardea
 		dialog `A suspicious looking fleet is near the Ember Waste Threshold.`
 	on enter Ossipago
@@ -1052,13 +1058,12 @@ mission "Grave Digger: Prefect's Albatross 2"
 
 mission "Grave Digger: Suspicious Ship Tracking"
 	job
-	repeat
 	name "Scan Suspicious Ship"
 	description "Locate and scan the cargo and outfits of a human ship that was spotted wandering in the Ember Waste. Then report to <destination>. Payment is <payment>."
 	source
 		government "Remnant"
 	to offer
-		has "Grave Digger: Suspicious Ship Job: done"
+		has "Grave Digger: Suspicious Ship: done"
 		has "Grave Digger: Prefect's Albatross 2: done"
 		not "event: Grave Digger Testimony"
 		not "event: Gravedigger defeated"
@@ -1089,6 +1094,11 @@ mission "Grave Digger: Thrasher Turrets 1"
 		"combat rating" > 1000
 		"net worth" > 16000000
 		"credits" > 8000000
+		or
+			not "Randomize "Grave Digger: Thrasher Turrets 1"
+			and
+				has "Randomize "Grave Digger: Thrasher Turrets 1"
+				random < 25
 	to complete
 		"credits" > 3999999
 	on offer
@@ -1101,6 +1111,8 @@ mission "Grave Digger: Thrasher Turrets 1"
 					accept
 				`	(Reject the invitation.)`
 					defer
+	on defer
+		set "Randomize "Grave Digger: Thrasher Turrets 1"
 	on visit
 		dialog `You've arrived on <planet>, but you do not have enough credits to complete the transaction. Come back with the necessary credits.`
 
@@ -1166,6 +1178,9 @@ mission "Grave Digger: Thrasher Turrets 2"
 			`	"Congratulations on your purchase captain. I'm sure you won't regret it. You'll hear from us again if we happen to acquire any more unique  merchandise that might interest you."`
 				defer
 	on defer
+		set "Randomize "Grave Digger: Thrasher Turrets 1"
+		clear "Grave Digger: Thrasher Turrets 1: done"
+		clear "Grave Digger: Thrasher Turrets 1: offered"
 		"Midnight Market" ++
 		payment -4000000
 		outfit "Thrasher Turret" 4
@@ -1191,6 +1206,11 @@ mission "Grave Digger: Point Defense Turrets 1"
 		"combat rating" > 1000
 		"net worth" > 20000000
 		"credits" > 10000000
+		or
+			not "Randomize "Grave Digger: Point Defense Turrets 1"
+			and
+				has "Randomize "Grave Digger: Point Defense Turrets 1"
+				random < 25
 	to complete
 		"credits" > 4999999
 	on offer
@@ -1203,6 +1223,8 @@ mission "Grave Digger: Point Defense Turrets 1"
 					accept
 				`	(Reject the invitation.)`
 					defer
+	on defer
+		set "Randomize "Grave Digger: Point Defense Turrets 1"
 	on visit
 		dialog `You've arrived on <planet>, but you do not have enough credits to complete the transaction. Come back with the necessary credits.`
 
@@ -1268,6 +1290,9 @@ mission "Grave Digger: Point Defense Turrets 2"
 			`	"Congratulations on your purchase captain. I'm sure you won't regret it. You'll hear from us again if we happen to acquire any more unique  merchandise that might interest you."`
 				defer
 	on defer
+		set "Randomize "Grave Digger: Point Defense Turrets 1"
+		clear "Grave Digger: Point Defense Turrets 1: done"
+		clear "Grave Digger: Point Defense Turrets 1: offered"
 		"Midnight Market" ++
 		payment -5000000
 		outfit "Point Defense Turret" 4
@@ -1295,6 +1320,11 @@ mission "Grave Digger: Inhibitor Cannons 1"
 		"combat rating" > 1000
 		"net worth" > 8000000
 		"credits" > 4000000
+		or
+			not "Randomize "Grave Digger: Inhibitor Cannons 1"
+			and
+				has "Randomize "Grave Digger: Inhibitor Cannons 1"
+				random < 25
 	to complete
 		"credits" > 1999999
 	on offer
@@ -1307,6 +1337,8 @@ mission "Grave Digger: Inhibitor Cannons 1"
 					accept
 				`	(Reject the invitation.)`
 					defer
+	on defer
+		set "Randomize "Grave Digger: Inhibitor Cannons 1"
 	on visit
 		dialog `You've arrived on <planet>, but you do not have enough credits to complete the transaction. Come back with the necessary credits.`
 
@@ -1372,6 +1404,9 @@ mission "Grave Digger: Inhibitor Cannons 2"
 			`	"You made the right choice dood! I'm sure you won't regret it. We'll be messaging you again if we score any more merch that might interest you."`
 				defer
 	on defer
+		set "Randomize "Grave Digger: Inhibitor Cannons 1"
+		clear "Grave Digger: Inhibitor Cannons 1: done"
+		clear "Grave Digger: Inhibitor Cannons 1: offered"
 		"Midnight Market" ++
 		payment -2000000
 		outfit "Inhibitor Cannon" 4
