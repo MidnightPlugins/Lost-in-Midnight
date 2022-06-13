@@ -42,7 +42,8 @@ ship "Kestrel" "Kestrel (Battle Engines)"
 		"Orca Plasma Steering"
 		"Hyperdrive"
 		"Sniper Rifle"
-		"Laser Rifle" 127
+		"Fragmentation Grenades" 27
+		"Laser Rifle" 100
 
 	gun "Torpedo Launcher"
 	gun "Torpedo Launcher"
@@ -74,7 +75,8 @@ ship "Kestrel" "Kestrel (Battle Shields)"
 		"Orca Plasma Steering"
 		"Hyperdrive"
 		"Sniper Rifle"
-		"Laser Rifle" 127
+		"Fragmentation Grenades" 27
+		"Laser Rifle" 100
 
 	gun "Torpedo Launcher"
 	gun "Torpedo Launcher"
@@ -102,7 +104,8 @@ ship "Kestrel" "Kestrel (Battle Weapons)"
 		"Orca Plasma Steering"
 		"Hyperdrive"
 		"Sniper Rifle"
-		"Laser Rifle" 127
+		"Fragmentation Grenades" 27
+		"Laser Rifle" 100
 	gun -31 66 "Particle Cannon"
 	gun 31 66 "Particle Cannon"
 	gun -31 66 "Meteor Missile Launcher"
@@ -242,7 +245,8 @@ ship "Bastion" "Bastion (Flamethrower)"
 		"Water Coolant System"
 		"Tactical Scanner"
 		"Fuel Pod" 4
-		"Laser Rifle" 7
+		"Fragmentation Grenades" 7
+		"Laser Rifle" 17
 		
 		"Impala Plasma Thruster"
 		"Impala Plasma Steering"
@@ -431,6 +435,8 @@ ship "Clipper" "Clipper (Flamethrower)"
 		"A370 Atomic Thruster"
 		"A255 Atomic Steering"
 		"Hyperdrive"
+		"Fragmentation Grenades"
+		"Laser Rifle" 2
 	gun "Heavy Laser"
 	gun "Heavy Laser"
 	gun "Flamethrower"
@@ -608,7 +614,9 @@ ship "Dreadnought" "Dreadnought (Flamethrower)"
 		"Tactical Scanner"
 		"Fuel Pod" 5
 		"Ramscoop"
-		"Laser Rifle" 25		
+		"Fragmentation Grenades" 24
+		"Laser Rifle" 60
+		
 		"Orca Plasma Thruster"
 		"Orca Plasma Steering"
 		"Hyperdrive"
@@ -636,7 +644,8 @@ ship "Falcon" "Falcon (Flamethrower)"
 		"Large Radar Jammer"
 		"Liquid Nitrogen Cooler"
 		"Fuel Pod" 3
-		"Laser Rifle" 15
+		"Fragmentation Grenades" 15
+		"Laser Rifle" 37
 		
 		"Impala Plasma Thruster"
 		"Impala Plasma Steering"
@@ -660,7 +669,7 @@ ship "Falcon" "Falcon (Korath)"
 		"Brig"
 		"Medical Bay"
 		"Korath Repeater Rifle" 15
-		"Laser Rifle" 52
+		"Laser Rifle" 37
 
 		"Thruster (Planetary Class)"
 		"Steering (Planetary Class)"
@@ -733,6 +742,7 @@ ship "Firebird" "Firebird (Energy Cannons)"
 		"LP144a Battery Pack"
 		"D41-HY Shield Generator"
 		"Cargo Expansion"
+		"Fragmentation Grenades"
 		"Laser Rifle" 3
 		
 		"X3700 Ion Thruster"
@@ -793,6 +803,7 @@ ship "Gunboat" "Gunboat (Coalition)"
 		"A250 Atomic Thruster"
 		"A255 Atomic Steering"
 		"Sniper Rifle"
+		"Laser Rifle" 6
 		"Hyperdrive"
 
 
@@ -809,6 +820,8 @@ ship "Gunboat" "Gunboat (Flamethrower)"
 		"Outfits Expansion" 2
 		"Brig"
 		"Fuel Pod" 4
+		"Fragmentation Grenades"
+		"Laser Rifle" 6
 		"A250 Atomic Thruster"
 		"A255 Atomic Steering"
 		"Hyperdrive"
@@ -826,6 +839,8 @@ ship "Gunboat" "Gunboat (Plasma)"
 		"Water Coolant System"
 		"Outfits Expansion" 2
 		"Brig"
+		"Fragmentation Grenades"
+		"Laser Rifle" 6
 		"A250 Atomic Thruster"
 		"A255 Atomic Steering"
 		"Hyperdrive"
@@ -846,6 +861,8 @@ ship "Gunboat" "Gunboat (Pug)"
 		"Pug Akfar Thruster"
 		"Pug Seeker" 2
 		"Sniper Rifle"
+		"Fragmentation Grenades"
+		"Laser Rifle" 5
 		Supercapacitor 3
 
 
@@ -861,6 +878,8 @@ ship "Hauler" "Hauler (Energy Cannons)"
 		"Water Coolant System"
 		"Small Radar Jammer"
 		"Sniper Rifle"
+		"Fragmentation Grenades"
+		"Laser Rifle"
 		"Greyhound Plasma Thruster"
 		"Impala Plasma Steering"
 		"Hyperdrive"
@@ -1022,7 +1041,8 @@ ship "Osprey" "Osprey (Flamethrower)"
 		"D41-HY Shield Generator"
 		"Large Radar Jammer"
 		"Liquid Helium Cooler"
-		"Laser Rifle" 3
+		"Fragmentation Grenades" 3
+		"Laser Rifle" 7
 		"Fuel Pod" 3
 		
 		"Impala Plasma Thruster"
@@ -1130,6 +1150,8 @@ ship "Rainmaker" "Rainmaker (Wanderer)"
 		"Bright Cloud Shielding"
 		"Small Radar Jammer"
 		"Wanderer Ramscoop"
+		"Laser Rifle" 7
+		"Fragmentation Grenades" 5
 		"Sniper Rifle"
 		
 		"Type 2 Radiant Thruster"
@@ -1227,6 +1249,7 @@ ship "Skein" "Skein (Catalytic)"
 		"Small Radar Jammer"
 		"Tactical Scanner"
 		"Catalytic Ramscoop"
+		"Fragmentation Grenades"
 		"Laser Rifle" 4
 		
 		"Greyhound Plasma Thruster"
@@ -1713,7 +1736,7 @@ ship "Bastion" "Bastion (Inferno Rockets)"
 		"Water Coolant System"
 		"Tactical Scanner"
 		"Laser Rifle" 7
-		"Sniper Rifle"
+		"Fragmentation Grenades"
 		
 		"Impala Plasma Thruster"
 		"Impala Plasma Steering"
@@ -1753,6 +1776,8 @@ ship "Clipper" "Clipper (Inferno Rockets)"
 		"Greyhound Plasma Thruster"
 		"Impala Plasma Steering"
 		"Scram Drive"
+		"Laser Rifle" 2
+		"Fragmentation Grenades"
 
 
 ship "Corvette" "Corvette (Inferno Rockets)"
@@ -1769,7 +1794,7 @@ ship "Corvette" "Corvette (Inferno Rockets)"
 		"Cooling Ducts"
 		"Cargo Expansion"
 		"Laser Rifle" 4
-		"Sniper Rifle"
+		"Fragmentation Grenades"
 		"A370 Atomic Thruster"
 		"A375 Atomic Steering"
 		"Hyperdrive"
@@ -1835,7 +1860,7 @@ ship "Falcon" "Falcon (Inferno Rockets)"
 		"Large Radar Jammer"
 		"Liquid Nitrogen Cooler"
 		"Laser Rifle" 15		
-		"Sniper Rifle"
+		"Fragmentation Grenades"
 		"Impala Plasma Thruster"
 		"Impala Plasma Steering"
 		"Hyperdrive"
@@ -1860,7 +1885,7 @@ ship "Firebird" "Firebird (Inferno Rockets)"
 		"Liquid Nitrogen Cooler"
 		"Outfits Expansion"
 		"Laser Rifle" 3
-		"Sniper Rifle"
+		"Fragmentation Grenades"
 		"X3700 Ion Thruster"
 		"A375 Atomic Steering"
 		"Hyperdrive"
@@ -1944,6 +1969,7 @@ ship "Leviathan" "Leviathan (Inferno Rockets)"
 		"D67-TM Shield Generator"
 		"Liquid Helium Cooler"
 		"Laser Rifle" 15
+		"Fragmentation Grenades"
 		"Sniper Rifle"
 		"X3700 Ion Thruster"
 		"X4200 Ion Steering"
@@ -1971,6 +1997,7 @@ ship "Modified Argosy" "Modified Argosy (Inferno Rocket)"
 		"Brig"
 		"Outfits Expansion"
 		"Laser Rifle"
+		"Fragmentation Grenades"
 		"Sniper Rifle"
 		"X3700 Ion Thruster"
 		"Greyhound Plasma Steering"
@@ -1995,6 +2022,7 @@ ship "Osprey" "Osprey (Inferno Rockets)"
 		"Tactical Scanner"
 		"Outfits Expansion"
 		"Laser Rifle" 3
+		"Fragmentation Grenades"
 		"Sniper Rifle"
 		"A520 Atomic Thruster"
 		"A375 Atomic Steering"
@@ -2042,6 +2070,7 @@ ship "Splinter" "Splinter (Inferno Rockets)"
 		"LP036a Battery Pack"
 		"D94-YV Shield Generator"
 		"Laser Rifle" 2
+		"Fragmentation Grenades"
 		"Sniper Rifle"
 		"X3700 Ion Thruster"
 		"Impala Plasma Steering"
