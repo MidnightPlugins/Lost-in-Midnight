@@ -1095,9 +1095,9 @@ mission "Grave Digger: Thrasher Turrets 1"
 		"net worth" > 16000000
 		"credits" > 8000000
 		or
-			not "Randomize "Grave Digger: Thrasher Turrets 1"
+			not "Randomize Grave Digger: Thrasher Turrets 1"
 			and
-				has "Randomize "Grave Digger: Thrasher Turrets 1"
+				has "Randomize Grave Digger: Thrasher Turrets 1"
 				random < 25
 	to complete
 		"credits" > 3999999
@@ -1112,7 +1112,7 @@ mission "Grave Digger: Thrasher Turrets 1"
 				`	(Reject the invitation.)`
 					defer
 	on defer
-		set "Randomize "Grave Digger: Thrasher Turrets 1"
+		set "Randomize Grave Digger: Thrasher Turrets 1"
 	on visit
 		dialog `You've arrived on <planet>, but you do not have enough credits to complete the transaction. Come back with the necessary credits.`
 
@@ -1178,7 +1178,7 @@ mission "Grave Digger: Thrasher Turrets 2"
 			`	"Congratulations on your purchase captain. I'm sure you won't regret it. You'll hear from us again if we happen to acquire any more unique  merchandise that might interest you."`
 				defer
 	on defer
-		set "Randomize "Grave Digger: Thrasher Turrets 1"
+		set "Randomize Grave Digger: Thrasher Turrets 1"
 		clear "Grave Digger: Thrasher Turrets 1: done"
 		clear "Grave Digger: Thrasher Turrets 1: offered"
 		"Midnight Market" ++
@@ -1207,9 +1207,9 @@ mission "Grave Digger: Point Defense Turrets 1"
 		"net worth" > 20000000
 		"credits" > 10000000
 		or
-			not "Randomize "Grave Digger: Point Defense Turrets 1"
+			not "Randomize Grave Digger: Point Defense Turrets 1"
 			and
-				has "Randomize "Grave Digger: Point Defense Turrets 1"
+				has "Randomize Grave Digger: Point Defense Turrets 1"
 				random < 25
 	to complete
 		"credits" > 4999999
@@ -1224,7 +1224,7 @@ mission "Grave Digger: Point Defense Turrets 1"
 				`	(Reject the invitation.)`
 					defer
 	on defer
-		set "Randomize "Grave Digger: Point Defense Turrets 1"
+		set "Randomize Grave Digger: Point Defense Turrets 1"
 	on visit
 		dialog `You've arrived on <planet>, but you do not have enough credits to complete the transaction. Come back with the necessary credits.`
 
@@ -1290,7 +1290,7 @@ mission "Grave Digger: Point Defense Turrets 2"
 			`	"Congratulations on your purchase captain. I'm sure you won't regret it. You'll hear from us again if we happen to acquire any more unique  merchandise that might interest you."`
 				defer
 	on defer
-		set "Randomize "Grave Digger: Point Defense Turrets 1"
+		set "Randomize Grave Digger: Point Defense Turrets 1"
 		clear "Grave Digger: Point Defense Turrets 1: done"
 		clear "Grave Digger: Point Defense Turrets 1: offered"
 		"Midnight Market" ++
@@ -1321,9 +1321,9 @@ mission "Grave Digger: Inhibitor Cannons 1"
 		"net worth" > 8000000
 		"credits" > 4000000
 		or
-			not "Randomize "Grave Digger: Inhibitor Cannons 1"
+			not "Randomize Grave Digger: Inhibitor Cannons 1"
 			and
-				has "Randomize "Grave Digger: Inhibitor Cannons 1"
+				has "Randomize Grave Digger: Inhibitor Cannons 1"
 				random < 25
 	to complete
 		"credits" > 1999999
@@ -1338,7 +1338,7 @@ mission "Grave Digger: Inhibitor Cannons 1"
 				`	(Reject the invitation.)`
 					defer
 	on defer
-		set "Randomize "Grave Digger: Inhibitor Cannons 1"
+		set "Randomize Grave Digger: Inhibitor Cannons 1"
 	on visit
 		dialog `You've arrived on <planet>, but you do not have enough credits to complete the transaction. Come back with the necessary credits.`
 
@@ -1404,7 +1404,7 @@ mission "Grave Digger: Inhibitor Cannons 2"
 			`	"You made the right choice dood! I'm sure you won't regret it. We'll be messaging you again if we score any more merch that might interest you."`
 				defer
 	on defer
-		set "Randomize "Grave Digger: Inhibitor Cannons 1"
+		set "Randomize Grave Digger: Inhibitor Cannons 1"
 		clear "Grave Digger: Inhibitor Cannons 1: done"
 		clear "Grave Digger: Inhibitor Cannons 1: offered"
 		"Midnight Market" ++
