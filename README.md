@@ -35,3 +35,5 @@ Some highlights:
 - Subsidurial Herding
 - an asteroid catapult
 - two more Sheragi ships appear in human space
+- pirates develop a new rocket
+- hunting down the notorious pirate, Beelzebub
