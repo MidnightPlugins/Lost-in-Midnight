@@ -92,7 +92,7 @@ ship "Veliante'ixis"
 	explode "large explosion" 37
 	explode "huge explosion" 9
 	"final explode" "final explosion large"
-	description "Other than a few transports and light freighters, most Builder ships were destroyed by the Ka'het. This is probably the only Builder war ship that survived the invasion. Concealed for millenia under the ocean waves of Retilie, it was found by Lu Bu during the Grave Digger's exploration of the Graveyard. Lu Bu never completed salvage operations, but a few former Grave Diggers knew of the derelict's location."
+	description "Other than a few transports and light freighters, most Builder ships were destroyed by the Ka'het. This is probably the only Builder war ship that survived the invasion. Concealed for millennia under the ocean waves of Retilie, it was found by Lu Bu during the Grave Digger's exploration of the Graveyard. Lu Bu never completed salvage operations, but a few former Grave Diggers knew of the derelict's location."
 
 
 
