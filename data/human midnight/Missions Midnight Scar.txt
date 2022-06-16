@@ -24,7 +24,7 @@ event "midnight scar's hideout (non-Hai)"
 	system Danoa
 		add fleet "Pirate Asteroid Defense" 10000
 	planet "Scar's Hideout"
-		attributes north pirate station
+		attributes north pirate station "north pirate" frontier
 		description "Scar's Hideout is a hollowed-out asteroid used by Scar's Legion as their main base of operations. From here they harass anyone making the journey through the uninhabited systems of the Far North. Recently the gang has reduced their activities due a change of leadership."
 		government "Pirate"
 		outfitter "Ammo North"
@@ -82,7 +82,7 @@ event "midnight scar's hideout (Hai)"
 		add fleet "Large Scar's Legion" 15000
 		add fleet "Scar's Asteroid Defense" 10000
 	planet "Scar's Hideout"
-		attributes north pirate station
+		attributes north pirate station "north pirate" frontier
 		outfitter "Ammo North"
 		outfitter "Ammo South"
 		outfitter "Basic Outfits"

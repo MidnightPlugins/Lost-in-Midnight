@@ -575,7 +575,10 @@ ship "Infiltrator"
 # The two different versions represent the player's mission path choices.
 
 ship "Kestrel Prototype"
-	sprite "ship/kestrel"
+	sprite "ship/gravedigger/gravedigger"
+		"frame rate" 1
+		rewind
+		delay 6
 	thumbnail "thumbnail/kestrel"
 	attributes
 		category "Heavy Warship"

@@ -100,7 +100,7 @@ mission "Blackwing Scan Request"
 		dialog phrase "blackwing scan request"
 	npc "scan outfits"
 		government "Independent"
-		personality target timid uninterested surveillance
+		personality target timid uninterested surveillance mute
 		ship "Modified Blackbird" "Black Wings"
 	on complete
 		payment 25000

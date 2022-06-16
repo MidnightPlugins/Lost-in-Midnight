@@ -13,7 +13,7 @@
 
 
 
-mission "Inferno Dragon: Inferno Rockets Appear"
+mission "Inferno Dragon: Inferno Rocket Fleets"
 	landing
 	invisible
 	to offer
@@ -1003,7 +1003,7 @@ mission "Inferno Dragon: FW Bounty [1]"
 
 
 # fixes a mistake in original version that that overwrote fleets instead of adding to them
-mission "Inferno Rockets Patch"
+mission "Inferno Rockets Appear Patch"
 	landing
 	invisible
 	to offer
@@ -1016,8 +1016,8 @@ mission "Inferno Rockets Patch"
 		has "event: southern carriers 3"
 		has "event: southern carriers 4"
 	on offer
-		event "inferno rocket fleet patch"
-		decline
+		event "inferno rockets appear patch"
+		fail
 
 event "inferno rockets appear patch"
 	fleet "Small Southern Pirates"
@@ -2106,3 +2106,64 @@ event "inferno rockets appear patch"
 			"Berserker"
 			"Berserker (Afterburner)"
 			"Berserker (Inferno Rockets)"
+
+mission "Inferno Dragon: Inferno Rockets Appear Patch"
+	landing
+	invisible
+	to offer
+		has "Inferno Dragon: Inferno Rockets Appear: offered"
+	on offer
+		fail "Inferno Dragon: Inferno Rockets Appear"
+	npc kill
+		government "Independent (Killable)"
+		system Merak
+		personality waiting staying marked vindictive
+			confusion 10
+		ship "Cruiser (Inferno Rockets)" "Inferno Dragon"
+		ship "Combat Drone" "Red Dragon 1"
+		ship "Combat Drone" "Red Dragon 2"
+		ship "Combat Drone" "Red Dragon 3"
+		ship "Combat Drone" "Red Dragon 4"
+		ship "Fury (Inferno Rockets)" "Dragon's Guard"
+		ship "Hawk (Inferno Rockets)" "Dragon's Sentry"
+		ship "Berserker (Inferno Rockets)" "Dragon's Sentnel"
+	npc kill
+		government "Independent (Killable)"
+		system Sargas
+		personality waiting staying marked vindictive
+			confusion 10
+		ship "Frigate (Inferno Rockets)" "Dragon's Claws"
+		ship "Frigate (Inferno Rockets)" "Dragon's Breath"
+		ship "Frigate (Inferno Rockets)" "Dragon's Wings"
+
+mission "Inferno Dragon: Inferno Rockets Appear"
+	invisible
+	to offer
+		never
+	on offer
+		event "inferno rockets appear"
+		fail
+	npc kill
+		government "Independent (Killable)"
+		system Merak
+		personality waiting staying marked vindictive
+			confusion 10
+		ship "Cruiser (Inferno Rockets)" "Inferno Dragon"
+		ship "Combat Drone" "Red Dragon 1"
+		ship "Combat Drone" "Red Dragon 2"
+		ship "Combat Drone" "Red Dragon 3"
+		ship "Combat Drone" "Red Dragon 4"
+		ship "Fury (Inferno Rockets)" "Dragon's Guard"
+		ship "Hawk (Inferno Rockets)" "Dragon's Sentry"
+		ship "Berserker (Inferno Rockets)" "Dragon's Sentnel"
+	npc kill
+		government "Independent (Killable)"
+		system Sargas
+		personality waiting staying marked vindictive
+			confusion 10
+		ship "Frigate (Inferno Rockets)" "Dragon's Claws"
+		ship "Frigate (Inferno Rockets)" "Dragon's Breath"
+		ship "Frigate (Inferno Rockets)" "Dragon's Wings"
+
+
+event "inferno rockets appear"

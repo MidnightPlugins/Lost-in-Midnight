@@ -713,6 +713,32 @@ ship "Falcon" "Falcon (Remnant)"
 	turret "Point Defense Turret"
 	turret "Point Defense Turret"
 
+ship "Falcon" "Falcon (Remnant B)"
+	sprite "ship/remnant falcon"
+	thumbnail "thumbnail/remnant falcon-thumb"
+	outfits
+		"Inhibitor Blaster" 4
+		"Thrasher Turret" 2
+		"Point Defense Turret" 2
+
+		"Epoch Cell" 2
+		"KP-6 Photovoltaic Panel" 2
+		"Crystal Capacitor"
+		"S-970 Regenerator"
+		"Quantum Key Stone"
+		"Emergency Ramscoop"
+		"Thermoelectric Cooler"
+		"Tuning Rifle" 15
+		"Laser Rifle" 39
+
+		"Crucible-Class Thruster"
+		"Crucible-Class Steering"
+		"Hyperdrive"
+
+	turret "Thrasher Turret"
+	turret "Thrasher Turret"
+	turret "Point Defense Turret"
+	turret "Point Defense Turret"
 
 
 ship "Finch" "Finch (Flamethrower)"
@@ -725,6 +751,14 @@ ship "Finch" "Finch (Flamethrower)"
 		"Chipmunk Plasma Thruster"
 		"Chipmunk Plasma Steering"
 
+ship "Finch" "Finch (Inhibitor)"
+	outfits
+		"Inhibitor Cannon"		
+		"nGVF-BB Fuel Cell"
+		"LP036a Battery Pack"
+		"D14-RN Shield Generator"
+		"Chipmunk Plasma Thruster"
+		"Chipmunk Plasma Steering"
 
 
 ship "Firebird" "Firebird (Energy Cannons)"
@@ -920,6 +954,24 @@ ship "Hawk" "Hawk (Remnant)"
 		"Anvil-Class Engine"
 		"Hyperdrive"
 
+ship "Hawk" "Hawk (Remnant B)"
+	sprite "ship/remnant hawk"
+	thumbnail "thumbnail/remnant hawk-thumb"
+	outfits
+		"Inhibitor Blaster" 2
+
+		"KP-6 Photovoltaic Panel" 3
+		"Millennium Cell" 2
+		"Crystal Capacitor"
+		"S-970 Regenerator"
+		"Quantum Key Stone"
+		"Emergency Ramscoop"
+		"Thermoelectric Cooler"
+		"Tuning Rifle" 2
+		"Laser Rifle" 2
+
+		"Anvil-Class Engine"
+		"Hyperdrive"
 
 
 ship "Modified Argosy" "Modified Argosy (Flamethrower)"
@@ -1084,6 +1136,31 @@ ship "Osprey" "Osprey (Remnant)"
 	turret "Thrasher Turret"
 	turret "Point Defense Turret"
 
+ship "Osprey" "Osprey (Remnant B)"
+	sprite "ship/remnant osprey"
+	thumbnail "thumbnail/remnant osprey-thumb"
+	outfits
+		"Inhibitor Blaster" 4
+		"Thrasher Turret"
+		"Point Defense Turret"
+
+		"Aeon Cell"
+		"KP-6 Photovoltaic Panel" 3
+		"Crystal Capacitor"
+		"S-970 Regenerator"
+		"Quantum Key Stone"
+		"Emergency Ramscoop"
+		"Thermoelectric Cooler" 3
+		"Tuning Rifle" 3
+		"Laser Rifle" 7
+
+		"Afterburner"
+		"Crucible-Class Thruster"
+		"Crucible-Class Steering"
+		"Hyperdrive"
+
+	turret "Thrasher Turret"
+	turret "Point Defense Turret"
 
 
 
@@ -1197,6 +1274,25 @@ ship "Raven" "Raven (Remnant)"
 		"Crucible-Class Steering"
 		"Hyperdrive"
 
+ship "Raven" "Raven (Remnant B)"
+	sprite "ship/remnant raven"
+	thumbnail "thumbnail/remnant raven-thumb"
+	outfits
+		"Inhibitor Blaster" 4
+		
+		"Epoch Cell"
+		"KP-6 Photovoltaic Panel"
+		"Crystal Capacitor"
+		"S-970 Regenerator"
+		"Quantum Key Stone"
+		"Emergency Ramscoop"
+		"Thermoelectric Cooler" 2
+		"Tuning Rifle" 2
+		"Laser Rifle" 4
+		
+		"Crucible-Class Thruster"
+		"Crucible-Class Steering"
+		"Hyperdrive"
 
 
 ship "Roost" "Roost (Korath)"
