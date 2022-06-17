@@ -843,7 +843,8 @@ event "add nukes of peace"
 
 
 mission "Peace Tour 2"
-	invisible
+	name "Bounty: <npc>"
+	description "The <npc> is proliferating nuclear weapons amongst the pirates. Stop this dangerous fugituve, then report to <destination>. The reward is <payment>."
 	source Farseer
 	to offer
 		has "Peace Tour 1: done"
