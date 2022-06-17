@@ -1005,7 +1005,7 @@ mission "Gathering Specimens: Remnant"
 		never
 	on offer
 		conversation
-			`A group of Remnant approach you. "Captain <first> <last>?" they sing. "To ensure we are investigating all possibilities in our research, we need  help from someone who has traveled far in the galaxy. Prefect Taely suggested we ask you. Would you be interested in helping?"`
+			`A group of Remnant approach you. "Captain <first> <last>?" they sing. "To ensure we are investigating all possibilities in our research, we need help from someone who has traveled far in the galaxy. Prefect Taely suggested we ask you. Would you be interested in helping?"`
 			choice
 				`	"What sort of help do you need?" you sign.`
 			`	The Remnant look at each other then sign their reply, "Nothing too hard. Just keep an eye out for any interstellar life forms. If you find one, bring us back a tissue sample. If our research is successful, you'll be given an opportunity to test the prototypes."`
@@ -1215,7 +1215,7 @@ mission "Gathering Specimens: Remnant B"
 		never
 	on offer
 		conversation
-			`A group of Remnant approach you. "Captain <first> <last>?" they sing. "To ensure we are investigating all possibilities in our research, we need  help from someone who has traveled far in the galaxy. Prefect Chilia suggested we ask you. Would you be interested in helping?"`
+			`A group of Remnant approach you. "Captain <first> <last>?" they sing. "To ensure we are investigating all possibilities in our research, we need help from someone who has traveled far in the galaxy. Prefect Chilia suggested we ask you. Would you be interested in helping?"`
 			choice
 				`	"What sort of help do you need?" you sign.`
 			`	The Remnant look at each other then sign their reply, "Nothing too hard. Just keep an eye out for any interstellar life forms. If you find one, bring us back a tissue sample. If our research is successful, you'll be given an opportunity to test the prototypes."`
@@ -1430,12 +1430,12 @@ mission "Gathering Specimens: Remnant Conclusion"
 			`You notice a strange ship parked at the spaceport. While there are some bits of Remnant technology installed on it, the ship is very different from their other designs.`
 			`	As you are studying the mysterious ship, Taely approaches you. "I see you found the Raptor," she signs.`
 			choice
-				`	"It's different from the other Remnant ships."`
+				`	"It is different from the other Remnant ships."`
 				`	"Did you design this?"`
 			`	"Its design was based on the research results from studying the genetic samples you brought us."`
 			choice
 				`	"It was made from those jars of goop?"`
-			`	"It's more accurate to say that this ship was grown, not made. I'll admit, I had my doubts. It's not as elegant as our other ships. But it has some features they lack." She pets the hull.`
+			`	"It is more accurate to say that this ship was grown, not made. I will admit, I had my doubts. It is not as elegant as our other ships. But it has some features they lack." She pets the hull.`
 			choice
 				`	"So, can I fly it?"`
 			`	"Not just yet. I have to take it to Caelian for weapons installation. Care to join me?"`
