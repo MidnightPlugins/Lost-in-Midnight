@@ -59,7 +59,7 @@ mission "Midnight Market: Trailblazer Auction"
 					goto finalbid
 				`	(Remain quiet.)`
 				
-			`	"32 million for the third time does stand!" proclaims the auctioneer. The Saryds stamp their hooves and hoot while the Arachi make celebratory clicking sounds with their mandibles and the Kimek buzz their wings. You realize this must be the Coalition equivalent of clapping. The Saryd auctioneer congratulates the Kimek on his purchase while a Heliarch official formalizes the transfer of ownership.`
+			`	"32 million for the third time does stand!" proclaims the auctioneer. The Saryds stamp their hooves and hoot while the Arachi make celebratory clicking sounds with their mandibles and the Kimek buzz their vestigial wings. You realize this must be the Coalition equivalent of clapping. The Saryd auctioneer congratulates the Kimek on his purchase while a Heliarch official formalizes the transfer of ownership.`
 				decline
 			
 			label finalbid
@@ -69,7 +69,7 @@ mission "Midnight Market: Trailblazer Auction"
 			`	"33 million, twice a bid goes unopposed!"`
 			`	"33 million, thrice the bid does stand."`
 			`	"Congratulations to the human! The Trailblazer, to you it does go!" the auctioneer gestures towards you.`
-			`	After a moment of silence, the Saryds stamp their hooves and hoot while the Arachi make audible clicking sounds with their mandibles and the Kimek buzz their wings. You hope this is the Coalition equivalent of clapping. The auctioneer and a Heliarch official make their way towards you and begin the formal ownership transfer process.`
+			`	After a moment of silence, the Saryds stamp their hooves and hoot while the Arachi make audible clicking sounds with their mandibles and the Kimek buzz their vestigial wings. You hope this is the Coalition equivalent of clapping. The auctioneer and a Heliarch official make their way towards you and begin the formal ownership transfer process.`
 			label buyerquestions
 			`	Do you have any questions you would like to ask?`
 			choice
