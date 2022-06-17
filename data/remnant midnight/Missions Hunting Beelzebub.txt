@@ -177,14 +177,17 @@ mission "Hunting Beelzebub: Modified Kestrel 2"
 				has "Hunting Beelzebub: Inhibitor Blaster 2: declined"
 			`Tom's search of the Modified Kestrels yields a set of data drives that he confiscates for Deep Security. "I'll find my own way back to the Deep from here. Thanks for your help," he says. "I don't have access to any funds to reward you, but letting you keep both Modified Kestrels should be reward enough. Safe travels captain."`
 			`	You have your own investigation to conduct. The Inhibitors on these Kestrels seem different from the normal Remnant ones. Taely might be interested in examining one.`
+				accept
 			label "remnant"
 			`Tom's search of the Modified Kestrels yields a set of data drives that he confiscates for Deep Security. "I'll find my own way back to the Deep from here. Thanks for your help," he says. "I don't have access to any funds to reward you, but letting you keep both Modified Kestrels should be reward enough. Safe travels captain."`
+				accept
 
 
 
 mission "Hunting Beelzebub: Modified Bactrian 1"
 	name "Beelzebub: Modified Bactrian"
 	description "Lieutenant Paris believes the Cosmic Horror may be one of Beelzebub's ships. Search for the ship near Ultima Thule. Then transport Paris to <planet>."
+	passengers 1
 	source
 		government "Pirate"
 		attributes "north pirate"
@@ -260,6 +263,8 @@ mission "Hunting Beelzebub: Modified Bactrian 1"
 		system Sumar
 		personality waiting staying timid uninterested surveillance mute
 		ship "Modified Blackbird" "Black Wings"
+	on waypoint
+		dialog `You've searched all the nearby systems but haven't found the Cosmic Horror. Tom suggests landing on <destination>.`
 	on abort
 		clear "ignored paris"
 	on fail
@@ -326,27 +331,29 @@ mission "Hunting Beelzebub: Modified Bactrian 2"
 				has "Hunting Beelzebub: Inhibitor Blaster 2: declined"
 			`Tom's search of the Modified Bactrian yields a set of data drives that he confiscates for Deep Security. "I'll find my own way back to the Deep from here. Thanks for your help," he says. "I don't have access to any funds to reward you, but letting you keep the Modified Bactrian should be reward enough. Safe travels captain."`
 			`	You have your own investigation to conduct. The Inhibitors on this Bactrian seem different from the normal Remnant ones. Taely might be interested in examining one.`
+				accept
 			label "remnant"
 			`Tom's search of the Modified Bactrian yields a set of data drives that he confiscates for Deep Security. "I'll find my own way back to the Deep from here. Thanks for your help," he says. "I don't have access to any funds to reward you, but letting you keep the Modified Bactrian should be reward enough. Safe travels captain."`
+				accept
 
 	
 
 mission "Hunting Beelzebub: Inhibitor Blaster 1"
 	landing
 	name "Inhibitor Blaster"
-	description "Bring an Inhibitor Blaster to Taely for examination."
+	description "Bring an Inhibitor Blaster to Taely for examination. (It must be installed on your flagship or carried in cargo.)"
 	destination "Viminal"
 	to offer
 		or
-			has "Hunting Beelzebub: Modified Kestrel: done"
-			has "Hunting Beelzebub: Marauder Bactrian: done"
+			has "Hunting Beelzebub: Modified Kestrel 2: done"
+			has "Hunting Beelzebub: Marauder Bactrian 2: done"
 
 mission "Hunting Beelzebub: Inhibitor Blaster 2"
 	landing
 	invisible
 	source "Viminal"
 	to offer
-		has "Hunting Beelzebub: Modified Inhibitors 1: done"
+		has "Hunting Beelzebub: Inhibitor Blaster 1: done"
 	on offer
 		require "Inhibitor Blaster"
 		log `Brought an Inhibitor Blaster to the Remnant for analysis. The weapon was found on a pirate ship while trying to track down the notorious pirate, Beelzebub.`
@@ -381,8 +388,10 @@ mission "Hunting Beelzebub: Inhibitor Blaster Reminder"
 
 mission "Hunting Beelzebub: Prefect Perfid"
 	landing
-	invisible
+	name "Hunting Beelzebub"
+	description "Visit <destination> to work with Lieutenant Paris of Deep Security on tracking down Beelzebub."
 	source Viminal
+	destination Valhalla
 	to offer
 		not "Hunting Beelzebub: Modified Kestrel 1: active"
 		not "Hunting Beelzebub: Modified Kestrel 2: active"
@@ -401,46 +410,34 @@ mission "Hunting Beelzebub: Prefect Perfid"
 			`	Not knowing the hand gestures for his name, you clearly state:`
 			choice
 				`	"Beelzebub."`
-			`	"Beelzebub," Chilia attempts to mimick your vocalization. He signs,"Weren't some surveillance teams looking into a pirate by that name?"`
-			`	Torza signs,"Yes, but they haven't been able to locate him. It's as if he knows our tracking methods."`
+			`	"Beelzebub," Chilia attempts to mimick your vocalization. He signs,"Were there not some surveillance teams looking into a pirate by that name?"`
+			`	Torza signs,"Yes, but they have not been able to locate him. It is as if he knows our tracking methods."`
 			`	Taely interjects, signing, "Whoever made this is intimately familiar with our technology."`
 			choice
-				`	"Made? You mean it wasn't stolen?"`
+				`	"Made? You mean it was not stolen?"`
 			scene "outfit/inhibitor cannon"
 			scene "outfit/inhibitor blaster"
-			`	"There can be no doubt," Taely signs. "The serial numbers don't match anything that's passed through our outfitters. Every attribute matches the Inhibitor Cannon other than the firing synchronizer. Our Inhibitor Cannons are designed so a ship can fire a volley and flee while the target is inhibited. With the synchronizer gone, a battery of Inhibitor Blasters fires in a steady stream. This setup is ideal for immobilizing and entrapping, a strategy fit for someone who has no intention of fleeing the target. A pirate. This was made by someone with a precise understanding of not only how the Remnant Inhibitor Cannon works, but how the Remnant use it and why that isn't ideal for how a pirate would use it."`
+			`	"There can be no doubt," Taely signs. "The serial numbers do not match anything that has passed through our outfitters. Every attribute matches the Inhibitor Cannon other than the firing synchronizer. Our Inhibitor Cannons are designed so a ship can fire a volley and flee while the target is inhibited. With the synchronizer gone, a battery of Inhibitor Blasters fires in a steady stream. This setup is ideal for immobilizing and entrapping, a strategy fit for someone who has no intention of fleeing the target: a pirate. This was made by someone with a precise understanding of not only how the Remnant Inhibitor Cannon works, but how the Remnant use it and why that is not ideal for how a pirate would use it."`
 			`	"It must be 'him'," Chilia signs. There is a sense of sadness in his gestures.`
-			`	"You don't mean," Torza signs. There is hint of disbelief in his gestures.`
+			`	"You mean to suggest," Torza signs. There is hint of disbelief in his gestures.`
 			choice
 				`	"Who?"`
 			`	Taely signs her response, "Your 'Beelzebub' is probably Prefect Perfid, the Deserter."`
 			`	Chilia begins to sing a sad song. It tells the tale of a Remant Prefect who lead a surveillance mission in human space. When confronted by pirates, the Prefect decided to fight rather than flee. After capturing the pirate ship, he chose to remain behind instead of returning to Remnant space.`
 			`	Torza punches a wall then signs, "He should never have been allowed to remain there."`
 			`	Chilia responds, signing "Our people are not prisoners. It is rare, but occasionally one of us does end up living amongst the ancestral humans." Chilia turns to you. "Captain <last>. Prefect Perfid, Beelzebub, has abandoned life as a Remnant to live as a Pirate. We leave his fate in your capable hands." That almost sounds like an assassination order.`
-			`	While Chilia was singing earlier, Taely was preparing the Inhibitor Blaster for transportation to your ship. She signs, "I've instructed our outfitters to supply you with more of these if you request them. Perhaps they'll be useful when you confront Beelzebub."`
-				decline
-
-
-mission "Hunting Beelzebub: Paris Hint"
-	landing
-	name "Hunting Beelzebub"
-	description "Visit <destination> to work with Lieutenant Paris of Deep Security on tracking down Beelzebub."
-	source
-		government "Republic"
-		not planet Valhalla
-	destination Valhalla
-	to offer
-		has "Hunting Beelzebub: Prefect Perfid: declined"
-		not "Hunting Beelzebub: Paris Resignation: offered" 
-	on offer
-		dialog `If you're going to hunt down Beelzebub, it might be a good idea to team up with Lieutenant Paris of Deep Security. He should be on <destination>.`
+			`	While Chilia was singing earlier, Taely was preparing the Inhibitor Blaster for transportation to your ship. She signs, "I have instructed our outfitters to supply you with more of these if you request them. Perhaps they will be useful when you confront Beelzebub."`
+			``
+			`If you're going to hunt down Beelzebub, it might be a good idea to team up with Lieutenant Paris of Deep Security. He should be on <destination>.`
+				accept
+				
 
 mission "Hunting Beelzebub: Paris Resignation"
 	landing
 	invisible
 	source Valhalla
 	to offer
-		has "Hunting Beelzebub: Prefect Perfid: declined"
+		has "Hunting Beelzebub: Prefect Perfid: done"
 	on offer
 		conversation
 			`Try to find Lieutenant Paris at the Deep Security offices?`
@@ -450,7 +447,10 @@ mission "Hunting Beelzebub: Paris Resignation"
 					defer
 			scene "outfit/unknown"
 			`	When you ask about Tom at the receptionist, they inform you that he resigned shortly after Laura Paris died in the Star Queen incident caused by Beelzebub. His current location is unknown to Deep Security.`
+			``
+			`	The last time you met Tom he was investigating Beelzebub. It's possible he may still be trying to find Laura's killer on one of the pirate worlds...`
 				decline
+
 
 phrase "core pirate beelzebub rumor"
 	word
@@ -557,6 +557,9 @@ mission "Hunting Beelzebub: Stormhold Message"
 		has "Hunting Beelzebub: Covert Rumors: offered"
 	on offer
 		payment -100
+		fail "Hunting Beelzebub: Deadman's Cove Rumors"
+		fail "Hunting Beelzebub: Buccaneer Bay Rumors"
+		fail "Hunting Beelzebub: Covert Rumors"
 		conversation
 			`While walking through the spaceport a street urchin bumps into you then runs off. Quickly checking your pockets, you note some credits are missing, but a carefully folded note has been left in its place.`
 			choice
@@ -624,9 +627,9 @@ mission "Hunting Beelzebub: Rescue Paris"
 		personality waiting staying timid uninterested surveillance mute
 		ship "Modified Blackbird" "Black Wings"
 	on complete
-		dialog `Tom departs soon after landing. He never mentions leaving Deep Security and you don't mention that you're hunting Beelzebub on your own.`
+		dialog `Tom departs soon after landing. He never mentions leaving Deep Security and you don't mention that you're hunting Beelzebub on your own. With both you attempting to track down Beelzebub, you'll probably cross paths again someday.`
 
-phrase "dirt belt beelzebub rumors"
+phrase "dirt belt rumors of beelzebub"
 	word
 		`A group of `
 		`A gang of `
@@ -648,17 +651,25 @@ phrase "dirt belt beelzebub rumors"
 
 mission "Hunting Beelzebub: Dirt Belt Rumors"
 	invisible
+	repeat
 	source
 		government "Pirate"
 		attributes "dirt belt pirate" "dirt belt"
 		not attributes "uninhabited"
 	to offer
+		has "event: Archipelago reveal"
+		has "event: Diyu reveal"
+		has "event: reveal Chasm"
 		has "Hunting Beelzebub: Rescue Paris: done"
 		not "Hunting Beelzebub: Lares Camping 1: done"
-		random < 20 - "dirt belt beelzebub rumors"
+		or
+			not "dirt belt beelzebub rumors"
+			and
+				has "dirt belt beelzebub rumors"
+				random < 20 - "dirt belt beelzebub rumors"
 	on offer
 		"dirt belt beelzebub rumors" ++
-		dialog phrase "dirt belt beelzebub rumors"
+		dialog phrase "dirt belt rumors of beelzebub"
 	on accept
 		fail
 
@@ -672,11 +683,8 @@ mission "Hunting Beelzebub: Lares Camping 1"
 		not attributes "uninhabited"
 	destination Lares
 	to offer
-		has "Hunting Beelzebub: Rescue Paris: done"
-		has "event: Archipelago reveal"
-		has "event: Diyu reveal"
-		has "event: reveal Chasm"
-		random < 45 - "beelzebub trail goes cold"
+		has "dirt belt beelzebub rumors"
+		random < 60 - "beelzebub trail goes cold"
 	on offer
 		conversation
 			`While relaxing at the spaceport bar you overhear some pirates mention "Beelzebub."`
@@ -684,7 +692,7 @@ mission "Hunting Beelzebub: Lares Camping 1"
 				`	(Listen closely.)`
 				`	(Ignore them.)`
 					defer
-			scene "ship/cockatrice/cockatrice"
+			scene "ship/ember nightmare/ember nightmare"
 			`	"I'm telling you it's real! Beezelbob's ship, the Ember Nightmare, took off from Lares," says a pirate with a scar on his face.`
 			`	"It's Beelzebub, not Beezelbob. And how do we know you're not just making this up," asks a pirate with a data pad strapped to his arm.`
 			`	"I've seen it," says a woman wearing an eyepatch. "It's creepy how those red lights glow like red embers nestled in the ships shadows."`
@@ -708,6 +716,7 @@ mission "Hunting Beelzebub: Rum Cellar"
 	name "Hunting Beelzebub: Rum Cellar"
 	description "Head for <destination>, where some pirates purchased Inhibitor Blasters."
 	source Lares
+	destination "Rum Cellar"
 	to offer
 		"Hunting Beelzebub: Lares Camping 2: declined" + "Hunting Beelzebub: Lares Camping 2: failed" >= 2
 	on offer
@@ -723,7 +732,7 @@ mission "Hunting Beelzebub: Rum Cellar"
 	npc board
 		government "Pirate"
 		system Archipelago
-		personality waiting staying plunders marked
+		personality target waiting staying plunders marked
 		fleet
 			names "pirate"
 			cargo 0
@@ -748,15 +757,14 @@ mission "Hunting Beelzebub: Underworld"
 				has "Randomize Hunting Beelzebub: Underworld"
 				random < 15
 	on offer
-		require "Inhibitor Blaster"
 		conversation
 			scene "outfit/inhibitor blaster"
-			`While performing maintenance on your ship, a man in a garish green suit approaches you. "I see you have some Inhibitor Blasters. Would you be interested in purchasing more?"`
+			`While performing maintenance on your ship, a man in a garish green suit approaches you. "This is the <ship>, isn't it? It's quite famous. Would you happen to be interested in purchasing Inhibitor Blasters? They would be a fine addition to your arsenal."`
 			choice
-				`	(Agree to purchase more.)`
+				`	(Agree to purchase some.)`
 				`	(Not now.)`
 					defer
-			`	"Captain <last>, right? I'll set up a meeting for you in the underworld of <destination>." The man walks off without telling you how he knew your name...`
+			`	"Captain <last>, right? I'll set up a meeting for you in the underworld of <destination>." The man walks off without telling you how he knew your ship or your name...`
 				accept
 	on defer
 		set "Randomize Hunting Beelzebub: Underworld"
@@ -772,6 +780,7 @@ mission "Hunting Beelzebub: Underworld"
 		ship "Modified Blackbird" "Black Wings"
 
 mission "Hunting Beelzebub: Ember Nightmare"
+	landing
 	name "Hunting Beelzebub: Ember Nightmare"
 	description "Search the nearby systems for the Ember Nightmare, then return Paris to <destination>."
 	source "Naihe Qiao"
@@ -781,7 +790,7 @@ mission "Hunting Beelzebub: Ember Nightmare"
 	on offer
 		conversation
 			scene "thumbnail/remnant hawk-thumb"
-			`As your ship descends through the atmosphere, you receive a transmission with instructions for the rendezvous. A hidden cave entrance, maze-like caverns, and a large underground chamber. Typical scenery for deals in The Underworld. You've parked your ship, but the other party hasn't arrived. Suddenly, a pair of interceptors fly in and open fire!`
+			`As your ship descends through the atmosphere, you receive a transmission with instructions for the rendezvous. A hidden cave entrance, maze-like caverns, and a large underground chamber are typical scenery for deals in The Underworld. You've parked your ship, but the other party hasn't arrived. Suddenly, a pair of interceptors fly in and open fire!`
 			choice
 				`	(Raise shields!)`
 			scene "thumbnail/sparrow"
@@ -790,7 +799,7 @@ mission "Hunting Beelzebub: Ember Nightmare"
 				launch
 	on enter
 		conversation
-			scene "ship/cockatrice/cockatrice"			
+			scene "ship/ember nightmare/ember nightmare"			
 			`You receive a hail. "Did you think I wouldn't notice you snooping around my business? This is a fitting place for you to pass on to the next life." The transmission came from a ship that looks like a heavily modified Albatross. The red glowing lights nestled within the shadows of the ship match the description of the Ember Nightmare. That's Beelzebub's ship. The ship jumps away as a fleet of dark warships and interceptors swarm around you.`
 			`	Paris growls, "Forget these guys. We need to chase after Beelzebub!" He must have fled to one of the nearby systems...`
 	on enter Terminus
@@ -817,17 +826,6 @@ mission "Hunting Beelzebub: Ember Nightmare"
 				"Raven (Remnant B)" 2
 				"Hawk (Remnant B)" 4
 	npc
-		to spawn
-			"ships: Light Warship" + "ships: Medium Warship" + "ships: Heavy Warship" >= 5
-		government "Phenomenon (dangerous)"
-		system Terminus
-		personality waiting staying plunders heroic unconstrained marked mute
-		fleet
-			names "pirate"
-			variant
-				"Falcon (Remnant B)"				
-				"Osprey (Remnant B)" 2
-	npc
 		government "Phenomenon (dangerous)"
 		system Terminus
 		personality waiting staying plunders heroic unconstrained marked mute
@@ -837,11 +835,60 @@ mission "Hunting Beelzebub: Ember Nightmare"
 				"Falcon (Remnant B)" 2
 				"Osprey (Remnant B)" 4
 				"Finch (Inhibitor)" 2
+	npc
+		to spawn
+			"ships: Light Warship" + "ships: Medium Warship" + "ships: Heavy Warship" >= 7
+		government "Phenomenon (dangerous)"
+		system Terminus
+		personality waiting staying plunders heroic unconstrained marked mute
+		fleet
+			names "pirate"
+			variant
+				"Falcon (Remnant B)"				
+				"Osprey (Remnant B)" 2
+	npc
+		to spawn
+			not "Hunting Beelzebub: Modified Bactrian 1: offered"
+		government "Phenomenon (dangerous)"
+		system Terminus
+		personality waiting staying plunders heroic unconstrained marked mute
+		ship "Modified Bactrian (Remnant)" "Cosmic Horror"
+		fleet
+			names "pirate"
+			variant
+				"Finch (Inhibitor)" 4
+	npc
+		to spawn
+			has "event: kestrel available: more weapons"
+			not "Hunting Beelzebub: Modified Kestrel 1: offered"
+		government "Phenomenon (dangerous)"
+		system Terminus
+		personality waiting staying plunders heroic unconstrained marked mute
+		ship "Modified Kestrel (Remnant Shields)" "Dreams of Darkness"
+		ship "Modified Kestrel (Remnant Engines)" "Dreams of Darkness"
+	npc
+		to spawn
+			has "event: kestrel available: more engines"
+			not "Hunting Beelzebub: Modified Kestrel 1: offered"
+		government "Phenomenon (dangerous)"
+		system Terminus
+		personality waiting staying plunders heroic unconstrained marked mute
+		ship "Modified Kestrel (Remnant Shields)" "Dreams of Darkness"
+		ship "Modified Kestrel (Remnant Weapons)" "Dreams of Darkness"
+	npc
+		to spawn
+			has "event: kestrel available: more shields"
+			not "Hunting Beelzebub: Modified Kestrel 1: offered"
+		government "Phenomenon (dangerous)"
+		system Terminus
+		personality waiting staying plunders heroic unconstrained marked mute
+		ship "Modified Kestrel (Remnant Weapons)" "Dreams of Darkness"
+		ship "Modified Kestrel (Remnant Engines)" "Dreams of Darkness"
 	npc kill
 		government "Nemesis"
 		system Terminus
-		personality waiting staying plunders heroic unconstrained marked mute
-		ship "Cockatrice" "Ember Nightmare"
+		personality waiting staying vindictive heroic unconstrained marked
+		ship "Ember Nightmare" "Ember Nightmare"
 		dialog `You've defeated Beelzebub. Paris asks that you take him to <destination>.`
 	on complete
 		payment 1000000
@@ -849,24 +896,23 @@ mission "Hunting Beelzebub: Ember Nightmare"
 			branch TMBR
 				has "Deep: TMBR 0: offered"
 			`You part ways with Paris. With Beelzebub gone, Tom may return to Deep Security. After checking with the Deep government, it turns out there's a <payment> bounty on Beelzebub and it's all yours.`
+				accept
 
 			label TMBR
 			`You part ways with Paris. With Beelzebub gone, Tom may return to Deep Security. After checking with the Deep government, it turns out there's a <payment> bounty on Beelzebub and it's all yours.`
 			``
 			`You notice a flier advertising a There Might Be Riots concert later that evening. Maybe Garrison, Hannah, and Pierre will be there. If you run into them, you'll let them know that Beelzebub was brought to justice. It won't bring Laura back, but maybe it will give them some closure.`
+				accept
 
 
-
-ship "Cockatrice"
-	sprite "ship/cockatrice/cockatrice"
+ship "Ember Nightmare"
+	sprite "ship/ember nightmare/ember nightmare"
 		"frame rate" 1
 		"delay" 6
 		"rewind"
 	swizzle 0
 	attributes
 		category "Heavy Warship"
-		licenses
-			"Remnant Capital"
 		cost 31877000
 		"shields" 48600
 		"hull" 18800
@@ -949,12 +995,12 @@ ship "Cockatrice"
 	turret -74 62 "Point Defense Turret"
 	turret 74 62 "Point Defense Turret"
 	turret 0 77 "Korath Banisher"
-	leak "remnant leak" 30 10
-	leak "remnant leak sparkle" 30 10
-	explode "small explosion" 30
-	explode "medium explosion" 60
-	explode "large explosion" 40
-	explode "huge explosion" 10
+	leak "remnant leak" 45 15
+	leak "remnant leak sparkle" 45 15
+	explode "small explosion" 45
+	explode "medium explosion" 90
+	explode "large explosion" 80
+	explode "huge explosion" 15
 	"final explode" "final explosion large" 1
 	description "An abomination constructed by adding the remains of destroyed Remnant ships to what was originally an Albatross. Beelzebub has had this ship since abandoning the Remnant in pursuit of his own fortunes amongst the pirates of the ancestral humans."
 

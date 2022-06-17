@@ -62,9 +62,9 @@ mission "Grave Digger: Void Rifle"
 			
 			`	The name doesn't sound familiar at all.`
 			scene "scene/scene-gravediggerkorathbattle"
-			`	"He's a competent captain and has done good work fighting the Korath. His ship, the Grave Digger, is a prototype Kestrel outfitted with exotic devices. But I don't like his attitude. He recently returned from an expedition to visit the Void Sprites with one of their tentacles! Not only did he jeapardize our future research by risking the wrath of the Archons, he didn't even store the severed appendage properly! There are bloodstains on my desk that I haven't been able to clear out!" Plume shudders in disgust.`
+			`	"He is a competent captain and has done good work fighting the Korath. His ship, the Grave Digger, is a prototype Kestrel outfitted with exotic devices. But I do not like his attitude. He recently returned from an expedition to visit the Void Sprites with one of their tentacles! Not only did he jeapardize our future research by risking the wrath of the Archons, he did not even store the severed appendage properly! There are bloodstains on my desk that I have not been able to clear out!" Plume shudders in disgust.`
 			choice
-				`"Do you think he'll attack the Void Sprites again?"`
+				`"Do you think he will attack the Void Sprites again?"`
 				`"What kind of person would harm those magnificent creatures?"`
 
 			scene "scene/scene-voidspritesnasqueron"
@@ -97,14 +97,14 @@ mission "Grave Digger: Penguin"
 			
 			`	The name doesn't sound familiar at all.`
 			scene "scene/scene-gravediggerkorathbattle"
-			`	"He's a competent captain and has done good work fighting the Korath. His ship, the Grave Digger, is a prototype Kestrel outfitted with exotic devices. But I don't like his attitude.`
+			`	"He is a competent captain and has done good work fighting the Korath. His ship, the Grave Digger, is a prototype Kestrel outfitted with exotic devices. But I do not like his attitude.`
 			choice
 
 				`	"What about his attitude bothers you?"`
 
-			`	"Frankly, I'm starting to suspect the blood test was wrong. If not for those test results, I would assume he was descended from an Alpha."`
+			`	"Frankly, I am starting to suspect the blood test was wrong. If not for those test results, I would assume he was descended from an Alpha."`
 			scene "scene/scene-gravediggerpenguin"
-			`	"And now, I wonder if I made a mistake. He recently returned from an expedition to visit the Void Sprites with some fascinating genetic samples. This proved useful in finalizing development of a new ship. Yesterday I let him take the prototype out for a test flight. But something about his demeanor gives me the impression he won't be returning with it anytime soon."`
+			`	"And now, I wonder if I made a mistake. He recently returned from an expedition to visit the Void Sprites with some fascinating genetic samples. This proved useful in finalizing development of a new ship. Yesterday I let him take the prototype out for a test flight. But something about his demeanor gives me the impression he will not be returning with it anytime soon."`
 			`	A dock worker motions to Taely while pointing to a broken jump drive being unloaded at the adjoining landing pad. She gestures back. "Thank you for your time <first>. Beware of Lu Bu. That man will likely betray the trust of our people," she signs before running off to supervise their latest acquisition.`
 				decline
 	on decline
@@ -147,7 +147,7 @@ mission "Grave Digger: Nightingale 1"
 			choice
 				`	"Nightingales?"`
 			scene "ship/nightingale"
-			`	"They're surveillance drones stationed at the various wormhole entrances in the Ember Wastes. It might be good to familiarize yourself with them."`
+			`	"They are surveillance drones stationed at the various wormhole entrances in the Ember Wastes. It might be good to familiarize yourself with them."`
 			choice
 				`	(Join them to check on the Nightingales.)`
 				`	(Not right now.)`
@@ -700,9 +700,9 @@ mission "Grave Digger: Lu Bu's Legend"
 			
 			`	"His name sounded familiar so I searched through the historical archive you brought us and found an entry about a fierce warrior in ancient mythology. I suspect that Lu Bu was born with a different name and is simply borrowing the name of that mythical warrior."`
 			choice
-				`	"Isn't it possible that his parents named him after a character from a myth?"`
+				`	"Is it not possible that his parents named him after a character from a myth?"`
 			
-			`	"Maybe. But it's strange. The character in the myth had a reputation for betraying the people he worked with." Dawn watches your face for any reaction. "Another reason I looked into his name is that there are some bad rumors about him. Be careful if you do meet him."`
+			`	"Maybe. But it is strange. The character in the myth had a reputation for betraying the people he worked with." Dawn watches your face for any reaction. "Another reason I looked into his name is that there are some bad rumors about him. Be careful if you do meet him."`
 				decline
 
 
@@ -1472,7 +1472,7 @@ mission "Nemesis: Grave Digger"
 	on offer
 		conversation
 			scene "scene/scene-gravediggerember"
-			`	When you land, Prefect Torza approaches you and signs "Captain <last>, we have a mission we believe is suitable for your unique qualifications. Another human named Lu Bu, captain of the "Grave Digger", arrived in Remnant space some time ago. Unfortunately, it's become clear that he betrayed our trust. We ask that you hunt him down and eliminate his entire fleet. We trust that you are able and willing to carry out this duty. Return here and file a report once you've completed this mission." The space port is eerily quiet and you're certain that every Remnant there has stopped what they were working on to watch your reaction. Torza steps back and signs, "May the Embers burn bright for you," before striding off as you comprehend what you've just been asked to do.`
+			`	When you land, Prefect Torza approaches you and signs "Captain <last>, we have a mission we believe is suitable for your unique qualifications. Another human named Lu Bu, captain of the 'Grave Digger', arrived in Remnant space some time ago. Unfortunately, it has become clear that he betrayed our trust. We ask that you hunt him down and eliminate his entire fleet. We trust that you are able and willing to carry out this duty. Return here and file a report once you have completed this mission." The space port is eerily quiet and you are certain that every Remnant there has stopped what they were working on to watch your reaction. Torza steps back and signs, "May the Embers burn bright for you," before striding off as you comprehend what you've just been asked to do.`
 				accept
 	on enter Aki'il
 		dialog `You receive a message as soon as you enter the system. "Nothing personal, captain. I just don't feel like letting you catch me today."`
@@ -1540,6 +1540,7 @@ mission "Nemesis: Grave Digger"
 		payment 600000
 		dialog "A Remnant military leader thanks you for eliminating the Grave Digger fleet, and gives you a payment of <payment>. There is no special fanfare or celebration for your work on this mission. As you stand alone at the spaceport, Lu Bu's final message echoes in your memory."
 
+# Clearing fleets present in earlier versions of this mission chain.
 event "Gravedigger defeated"
 	system Aki'il
 		remove fleet "Grave Digger raid"
