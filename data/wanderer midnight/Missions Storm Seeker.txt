@@ -589,7 +589,6 @@ mission "Storm Seeker Counter Attack 2"
 mission "Storm Seeker Counter Attack 3 Clue"
 	landing
 	invisible
-	repeat
 	source "Wang Xiang Tai"
 	to offer
 		has "Storm Seeker Counter Attack 1: done"
