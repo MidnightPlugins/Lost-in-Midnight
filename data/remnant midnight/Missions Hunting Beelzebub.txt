@@ -1179,7 +1179,7 @@ ship "Modified Kestrel" "Modified Kestrel (Remnant Weapons)"
 
 ship "Modified Bactrian"
 	sprite "ship/modified bactrian"
-	thumbnail "thumbnail/bactrian"
+	thumbnail "thumbnail/modified bactrian-thumb"
 	attributes
 		licenses
 			City-Ship
