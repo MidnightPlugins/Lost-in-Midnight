@@ -233,7 +233,7 @@ mission "Hunting Beelzebub: Modified Bactrian 1"
 				accept
 	on enter
 		conversation
-			scene "thumbnail/bactrian"
+			scene "thumbnail/modified bactrian-thumb"
 			`Tom starts talking. "I've been on Beelzebub's trail since our last encounter. Currently, I have a lead indicating that the crew of the Cosmic Horror might be part of his organization. The ship is a Modified Bactrian that's been raiding merchant ships near Ultima Thule. We need to capture that ship.`
 	on enter Rajak
 		dialog `There's a suspicious ship here, but it's not the Cosmic Horror. They're not responding to your hails.`
