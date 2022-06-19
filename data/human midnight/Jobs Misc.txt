@@ -14,7 +14,7 @@
 mission "Bounty Hunting: Tweedledee & Tweedledum"
 	job
 	name "Wanted Bandit near <system>"
-	description "A pair of old Berserkers named the Tweedledee & Tweedledum have been attacking merchants near <system>. Eliminate these ships, then report to <destination>. Payment is <payment>."
+	description "A pair of old Berserkers named the Tweedledee & Tweedledum have been attacking merchants near <system>. Eliminate these ships, then report to <destination> for payment (<payment>)"
 	source
 		government "Republic" "Free Worlds"
 		attributes "dirt belt"
@@ -39,7 +39,7 @@ mission "Bounty Hunting: Tweedledee & Tweedledum"
 mission "Bounty Hunting: Angry Chicken"
 	job
 	name "Wanted Bandit near <system>"
-	description "A Modified Firebird named the <npc> has been attacking merchants near <system>. Eliminate the ship, then report to <destination>. Payment is <payment>."
+	description "A Modified Firebird named the <npc> has been attacking merchants near <system>. Eliminate the ship, then report to <destination> for payment (<payment>)"
 	source
 		government "Republic" "Free Worlds"
 		attributes "south"
@@ -63,7 +63,7 @@ mission "Bounty Hunting: Angry Chicken"
 mission "Bounty Hunting: Mother Goose"
 	job
 	name "Wanted Bandit near <system>"
-	description "An old Aerie named the Mother Goose and its fighters have been attacking merchants near <system>. Eliminate the fleet, then report to <destination>. Payment is <payment>."
+	description "An old Aerie named the Mother Goose and its fighters have been attacking merchants near <system>. Eliminate the fleet, then report to <destination> for payment (<payment>)"
 	source
 		government "Republic"
 		attributes "deep"
@@ -89,7 +89,7 @@ mission "Bounty Hunting: Mother Goose"
 mission "Bounty Hunting: Humpty Dumpty"
 	job
 	name "Wanted Bandit near <system>"
-	description "An old Hauler named the <npc> has been attacking merchants near <system>. Eliminate the ship, then report to <destination>. Payment is <payment>."
+	description "An old Hauler named the <npc> has been attacking merchants near <system>. Eliminate the ship, then report to <destination> for payment (<payment>)"
 	source
 		government "Syndicate"
 		attributes "frontier"
@@ -113,7 +113,7 @@ mission "Bounty Hunting: Humpty Dumpty"
 mission "Bounty Hunting: Jabberwocky"
 	job
 	name "Wanted Bandit near <system>"
-	description "A Modified Aerie named the <npc> has been attacking merchants near <system>. Eliminate the ship, then report to <destination>. Payment is <payment>."
+	description "A Modified Aerie named the <npc> has been attacking merchants near <system>. Eliminate the ship, then report to <destination> for payment (<payment>)"
 	source
 		government "Republic"
 		attributes "frontier"
@@ -585,6 +585,35 @@ mission "Executive Guard: Syndicated Shipyards"
 
 
 
+mission "Navy: Captured Ship"
+	job
+	repeat
+	name "Captured Navy"
+	description "Search for the <npc> near the northern pirate systems. The ship has been taken over by a pirate crew. Destroy it, then report to <destination> for payment (<payment>)"
+	source Farpoint
+	to offer
+		"combat rating" > 300
+		random < 5
+	npc kill
+		government "Pirate"
+		system
+			neighbor near "Hatysa" 0 1
+		personality waiting staying plunders heroic
+		fleet
+			names "republic capital"
+			cargo 0
+			variant
+				"Frigate"
+			variant
+				"Rainmaker"
+			variant
+				"Gunboat"
+	on complete
+		payment 200000
+		dialog `The Navy administrators reward you with <payment> for stopping the <npc>.`
+
+
+
 mission "Testing: Proton Gun-CF8"
 	name "Syndicate weapons test"
 	job
@@ -650,7 +679,7 @@ ship "Vanguard" "Vanguard Test-PGCF8"
 
 mission "Bounty Hunting (Secret Prototype)"
 	name "Stolen prototype near <system>"
-	description "A heavy warship known as the <npc> has stolen a secret prototype near the <system> system. Recover the cargo and return it to <planet> for <payment>."
+	description "A heavy warship known as the <npc> has stolen a secret prototype near the <system> system. Recover the cargo and return it to <planet> for payment (<payment>)"
 	repeat
 	job
 	to offer
@@ -675,6 +704,8 @@ mission "Bounty Hunting (Secret Prototype)"
 			variant
 				"Marauder Vanguard (Secret Prototype)"
 		dialog `Retrieve the Secret Prototype and return it to <destination>.`
+	on fail
+		dialog `You failed to recover the Secret Prototype before destroying the <npc>.`
 	on visit
 		dialog phrase "generic bounty hunting on visit"
 	on complete

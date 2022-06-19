@@ -560,6 +560,111 @@ ship "Star Explorer" "Star Explorer (Korath)"
 
 
 
+mission "Navy: Captured "Auxiliary""
+	assisting
+	name "Captured Auxiliary"
+	description "Search for the <npc> near the northern pirate systems. The ship has been taken over by a pirate crew. Destroy it, then report to <destination> for payment (<payment>)"
+	source
+		government "Navy (Oathkeeper)" "Republic"
+	destination Farpoint
+	to offer
+		"combat rating" > 750
+		random < 5
+	on offer
+		conversation
+			scene "thumbnail/"auxiliary""
+			`As you assist with repairs, the pilot warns you that a Navy Auxiliary, the <npc>, has recently been captured by pirates. All Navy ships have orders to destroy it on sight. The Republic may reward you for eliminating this threat. But going after it could be dangerous.`
+			choice
+				`	(Search for the captured ship.)`
+					accept
+				`	(Don't search for the captured ship.)`
+					defer
+	npc kill
+		government "Pirate"
+		system
+			neighbor near "Hatysa" 0 1
+		personality waiting staying plunders heroic
+		fleet
+			names "republic capital"
+			cargo 0
+			variant
+				"Auxiliary"
+			variant
+				"Auxiliary (Cargo)"
+			variant
+				"Auxiliary (Transport)"
+	on complete
+		payment 800000
+		dialog `The Navy administrators reward you with <payment> for stopping the <npc>.`
+
+mission "Navy: Captured Carrier"
+	assisting
+	name "Captured Carrier"
+	description "Search for the <npc> near the northern pirate systems. The ship has been taken over by a pirate crew. Destroy it, then report to <destination> for payment (<payment>)"
+	source
+		government "Navy (Oathkeeper)" "Republic"
+	destination Farpoint
+	to offer
+		"combat rating" > 1000
+		random < 5
+	on offer
+		conversation
+			scene "thumbnail/carrier"
+			`As you assist with repairs, the pilot warns you that a Navy Carrier, the <npc>, has recently been captured by pirates. All Navy ships have orders to destroy it on sight. The Republic may reward you for eliminating this threat. But going after it could be dangerous.`
+			choice
+				`	(Search for the captured ship.)`
+					accept
+				`	(Don't search for the captured ship.)`
+					defer
+	npc kill
+		government "Pirate"
+		system
+			neighbor near "Hatysa" 0 1
+		personality waiting staying plunders heroic
+		fleet
+			names "republic capital"
+			cargo 0
+			variant
+				"Carrier"
+	on complete
+		payment 1000000
+		dialog `The Navy administrators reward you with <payment> for stopping the <npc>.`
+
+mission "Navy: Captured Cruiser"
+	assisting
+	name "Captured Cruiser"
+	description "Search for the <npc> near the northern pirate systems. The ship has been taken over by a pirate crew. Destroy it, then report to <destination> for payment (<payment>)"
+	source
+		government "Navy (Oathkeeper)" "Republic"
+	destination Farpoint
+	to offer
+		"combat rating" > 600
+		random < 5
+	on offer
+		conversation
+			scene "thumbnail/cruiser"
+			`As you assist with repairs, the pilot warns you that a Navy Cruiser, the <npc>, has recently been captured by pirates. All Navy ships have orders to destroy it on sight. The Republic may reward you for eliminating this threat. But going after it could be dangerous.`
+			choice
+				`	(Search for the captured ship.)`
+					accept
+				`	(Don't search for the captured ship.)`
+					defer
+	npc kill
+		government "Pirate"
+		system
+			neighbor near "Hatysa" 0 1
+		personality waiting staying plunders heroic
+		fleet
+			names "republic capital"
+			cargo 0
+			variant
+				"Cruiser"
+	on complete
+		payment 600000
+		dialog `The Navy administrators reward you with <payment> for stopping the <npc>.`
+
+
+
 mission "Quash: Humanika Infiltration 1"
 	infiltrating
 	passengers 4
