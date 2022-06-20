@@ -572,7 +572,7 @@ mission "Navy: Captured "Auxiliary""
 		random < 5
 	on offer
 		conversation
-			scene "thumbnail/"auxiliary""
+			scene "thumbnail/auxiliaryh"
 			`As you assist with repairs, the pilot warns you that a Navy Auxiliary, the <npc>, has recently been captured by pirates. All Navy ships have orders to destroy it on sight. The Republic may reward you for eliminating this threat. But going after it could be dangerous.`
 			choice
 				`	(Search for the captured ship.)`
