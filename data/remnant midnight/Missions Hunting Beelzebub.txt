@@ -346,7 +346,7 @@ mission "Hunting Beelzebub: Inhibitor Blaster 1"
 	to offer
 		or
 			has "Hunting Beelzebub: Modified Kestrel 2: done"
-			has "Hunting Beelzebub: Marauder Bactrian 2: done"
+			has "Hunting Beelzebub: Modified Bactrian 2: done"
 
 mission "Hunting Beelzebub: Inhibitor Blaster 2"
 	landing
