@@ -29,12 +29,14 @@ mission "Midnight Lost Orphan: Abandoned Halcyon"
 			`You find an abandoned city ship parked on the surface. It looks familiar, but you can't quite remember why. The ship is in very good condition and is outfitted with a variety of alien weapons.`
 			choice
 				`	(Take the ship.)`
-					accept
 				`	(Leave the ship.)`
 					defer
+			`	The ship is fully automated once the Command Center is uninstalled.`
+				accept
 	on accept
 		set "curse of the carabao"
-		give ship "Carabao (Quash)" "Halcyon"
+		give ship "Carabao (Quash Abandoned)" "Halcyon"
+		outfit "Command Center" 1
 		
 	npc kill
 		government "Drak"
