@@ -344,6 +344,43 @@ ship "Carabao" "Carabao (Quash)"
 	turret "Point Defense Turret"
 	turret "Ka'het Ravager Turret"
 
+ship "Carabao" "Carabao (Quash Abandoned)"
+	outfits
+		"Ion Cannon"
+		"Pulse Cannon"
+		"Bombardment Cannon"
+		"Shard Fabricator"
+
+		"Ka'het Ravager Turret" 2
+		"Ka'het Annihilator Turret" 2
+		"Point Defense Turret"
+		"Quarg Anti-Missile"
+		
+		"Antimatter Core"
+		"Nanotech Battery"
+		"Quantum Shield Generator"
+		"Large Repair Module"
+		"Large Heat Shunt"
+		"Electronic Warfare System"
+		"Quantum Key Stone"
+		"Ramscoop"
+		"Intrusion Countermeasures" 70
+		"Carabao AI"
+
+		"Medium Graviton Thruster"
+		"Medium Graviton Steering"
+		"Jump Drive"
+
+	gun "Ion Cannon"
+	gun "Pulse Cannon"
+	gun "Bombardment Cannon"
+	gun "Shard Fabricator"
+	turret "Ka'het Ravager Turret"
+	turret "Ka'het Annihilator Turret"
+	turret "Quarg Anti-Missile"
+	turret "Ka'het Annihilator Turret"
+	turret "Point Defense Turret"
+	turret "Ka'het Ravager Turret"
 
 
 # Executive Guard appears in some miscellaneous jobs/missions
