@@ -279,7 +279,8 @@ mission "Midnight Lost Orphan: Coalition Atrocity"
 
 mission "Midnight Lost Orphan: Chaos Hammer"
 	landing
-	invisible
+	name "Midnight Lost Orphan"
+	description "The Midnight Lost Orphan has defected to the captain of the Chaos Hammer. They're hiding somewhere in this vast galaxy..."
 	source
 		attributes "core" "core pirate"
 	to offer
@@ -339,8 +340,6 @@ mission "Midnight Lost Orphan: Chaos Hammer"
 		government "Pirate"
 		personality target waiting fleeing uninterested
 		ship "Korath Raider (Chaos Hammer)" "Chaos Hammer"
-		ship "Korath Chaser" "Malice"
-		ship "Korath Chaser" "Cruelty"
 		dialog `You find the ship's brig has been converted into a torure chamber. Most of the prisoners are dead. Those who are still alive are near death, their wounds too severe to treat.`
 
 	on complete
@@ -414,7 +413,8 @@ mission "Midnight Lost Orphan: Chaos Hammer Patch"
 
 mission "Midnight Lost Orphan: Arctic Dragon"
 	landing
-	invisible
+	name "Midnight Lost Orphan"
+	description "The Midnight Lost Orphan has defected to the captain of the Arctic Dragon. They're hiding somewhere in this vast galaxy..."
 	source
 		attributes "north" "hai" "north pirate"
 	to offer
@@ -557,7 +557,8 @@ mission "Midnight Lost Orphan: Arctic Dragon Patch"
 
 mission "Midnight Lost Orphan: Night Sword"
 	landing
-	invisible
+	name "Midnight Lost Orphan"
+	description "The Midnight Lost Orphan has defected to the captain of the Night Sword. They're hiding somewhere in this vast galaxy..."
 	source
 		attributes "dirt belt" "south" "south pirate"
 	to offer
@@ -709,7 +710,8 @@ mission "Midnight Lost Orphan: Night Sword Patch"
 
 mission "Midnight Lost Orphan: Blood Wind"
 	landing
-	invisible
+	name "Midnight Lost Orphan"
+	description "The Midnight Lost Orphan has defected to the captain of the Blood Wind. They're hiding somewhere in this vast galaxy..."
 	source
 		attributes "frontier" "pirate"
 	to offer
