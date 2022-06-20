@@ -69,7 +69,8 @@ mission "Midnight Lost Orphan: Captain of Atrocity"
 		conversation
 			scene "outfit/midnight lost orphan"
 			`You enjoy a perverse pleasure while wielding the supernatural powers granted to you by Midnight's Lost Orphan. You anticipate slaughtering the defenders with unrestrained cruelty and malice.`
-				depart
+				decline
+	
 
 mission "Midnight Lost Orphan: Captain of Atrocity 2"
 	invisible
@@ -281,7 +282,6 @@ mission "Midnight Lost Orphan: Chaos Hammer"
 	invisible
 	source
 		attributes "core" "core pirate"
-		not attributes "uninhabited"
 	to offer
 		has "Discovered Korath Space: offered"
 		not "Midnight Lost Orphan: Arctic Dragon: active"
@@ -297,12 +297,17 @@ mission "Midnight Lost Orphan: Chaos Hammer"
 				has "Midnight Lost Orphan: Remnant Atrocity: failed"
 				has "Midnight Lost Orphan: Wanderer Atrocity: failed"
 				has "Midnight Lost Orphan: Coalition Atrocity: failed"
+			and
+				"captain of atrocity" >= 16
+				or
+					has "Midnight Lost Orphan: Arctic Dragon: done"
+					has "Midnight Lost Orphan: Night Sword: done"
 
 	on offer
 		require "Midnight's Lost Orphan" 1
 		conversation
 			scene "outfit/midnight lost orphan"
-			`You are the Demon Captain of Atrocities, <first> <last>. The power of Midnight's Lost Orphan flows through you, granting you supernatural abilities that bend time and space. Soon after leaving the planet you are overcome with sudden pain! This is a familiar feeling. You experienced something similar when you were first possessed by Midnight's Lost Orphan. The entity... is trying to leave!`
+			`You are the Demon Captain of Atrocities, <first> <last>. The power of Midnight's Lost Orphan flows through you, granting you supernatural abilities that bend time and space. Soon after arriving at this planet you are overcome with sudden pain! This is a familiar feeling. You experienced something similar when you were first possessed by Midnight's Lost Orphan. The entity... is trying to leave!`
 			choice
 				`	(Let it go.)`
 					goto release
@@ -321,7 +326,7 @@ mission "Midnight Lost Orphan: Chaos Hammer"
 			label release
 			scene thumbnail/raider
 			`	The creature separates itself from you then flies through the hull and away from your ship! There is another ship nearby that it enters...`
-				accept
+				launch
 
 	on defer
 		"captain of atrocity" += 2
@@ -412,7 +417,6 @@ mission "Midnight Lost Orphan: Arctic Dragon"
 	invisible
 	source
 		attributes "north" "hai" "north pirate"
-		not attributes "uninhabited"
 	to offer
 		has "First Contact: Hai: Offered"
 		not "Midnight Lost Orphan: Chaos Hammer: active"
@@ -428,12 +432,17 @@ mission "Midnight Lost Orphan: Arctic Dragon"
 				has "Midnight Lost Orphan: Remnant Atrocity: failed"
 				has "Midnight Lost Orphan: Wanderer Atrocity: failed"
 				has "Midnight Lost Orphan: Coalition Atrocity: failed"
+			and
+				"captain of atrocity" >= 16
+				or
+					has "Midnight Lost Orphan: Chaos Hammer: done"
+					has "Midnight Lost Orphan: Night Sword: done"
 
 	on offer
 		require "Midnight's Lost Orphan" 1
 		conversation
 			scene "outfit/midnight lost orphan"
-			`You are the Demon Captain of Atrocities, <first> <last>. The power of Midnight's Lost Orphan flows through you, granting you supernatural abilities that bend time and space. Soon after leaving the planet you are overcome with sudden pain! This is a familiar feeling. You experienced something similar when you were first possessed by Midnight's Lost Orphan. The entity... is trying to leave!`
+			`You are the Demon Captain of Atrocities, <first> <last>. The power of Midnight's Lost Orphan flows through you, granting you supernatural abilities that bend time and space. Soon after arriving at this planet you are overcome with sudden pain! This is a familiar feeling. You experienced something similar when you were first possessed by Midnight's Lost Orphan. The entity... is trying to leave!`
 			choice
 				`	(Let it go.)`
 					goto release
@@ -452,7 +461,7 @@ mission "Midnight Lost Orphan: Arctic Dragon"
 			label release
 			scene "thumbnail/hai shield beetle"
 			`	The creature separates itself from you then flies through the hull and away from your ship! There is another ship nearby that it enters...`
-				accept
+				launch
 
 	on defer
 		"captain of atrocity" += 2
@@ -464,7 +473,7 @@ mission "Midnight Lost Orphan: Arctic Dragon"
 	npc board
 		government "Pirate"
 		personality target waiting fleeing uninterested
-		ship "Shield Beetle (Jump, Pulse)" "Arctic Dragon"
+		ship "Shield Beetle (Arctic Dragon)" "Arctic Dragon"
 		conversation
 			`You are surprised to find a large muscular Unfettered amongst the ship's crew. He draws a large knife and screams a battle cry before charging at you!`
 			choice
@@ -551,7 +560,6 @@ mission "Midnight Lost Orphan: Night Sword"
 	invisible
 	source
 		attributes "dirt belt" "south" "south pirate"
-		not attributes "uninhabited"
 	to offer
 		has "event: Gravedigger defeated"
 		not "Midnight Lost Orphan: Chaos Hammer: active"
@@ -567,12 +575,17 @@ mission "Midnight Lost Orphan: Night Sword"
 				has "Midnight Lost Orphan: Remnant Atrocity: failed"
 				has "Midnight Lost Orphan: Wanderer Atrocity: failed"
 				has "Midnight Lost Orphan: Coalition Atrocity: failed"
+			and
+				"captain of atrocity" >= 16
+				or
+					has "Midnight Lost Orphan: Chaos Hammer: done"
+					has "Midnight Lost Orphan: Arctic Dragon: done"
 
 	on offer
 		require "Midnight's Lost Orphan" 1
 		conversation
 			scene "outfit/midnight lost orphan"
-			`You are the Demon Captain of Atrocities, <first> <last>. The power of Midnight's Lost Orphan flows through you, granting you supernatural abilities that bend time and space. Soon after leaving the planet you are overcome with sudden pain! This is a familiar feeling. You experienced something similar when you were first possessed by Midnight's Lost Orphan. The entity... is trying to leave!`
+			`You are the Demon Captain of Atrocities, <first> <last>. The power of Midnight's Lost Orphan flows through you, granting you supernatural abilities that bend time and space. Soon after arriving at this planet you are overcome with sudden pain! This is a familiar feeling. You experienced something similar when you were first possessed by Midnight's Lost Orphan. The entity... is trying to leave!`
 			choice
 				`	(Let it go.)`
 					goto release
@@ -591,7 +604,7 @@ mission "Midnight Lost Orphan: Night Sword"
 			label release
 			scene thumbnail/albatross
 			`	The creature separates itself from you then flies through the hull and away from your ship! There is another ship nearby that it enters...`
-				accept
+				launch
 
 	on defer
 		"captain of atrocity" += 2
@@ -600,6 +613,12 @@ mission "Midnight Lost Orphan: Night Sword"
 		clear "captain of atrocity"
 		outfit "Midnight's Lost Orphan"	-1
 
+
+	npc
+		government "Grave Diggers"
+		personality entering staying uninterested
+		fleet "Grave Digger Smugglers" 2
+	
 	npc board
 		government "Grave Diggers"
 		personality target waiting fleeing uninterested
@@ -621,31 +640,46 @@ mission "Midnight Lost Orphan: Night Sword"
 		clear "Midnight Lost Orphan: Wanderer Atrocity: offered"
 		clear "Midnight Lost Orphan: Coalition Atrocity: offered"
 
-ship "Albatross" "Albatross (Night Sword)"
+
+ship "Prefect's Albatross" "Albatross (Night Sword)"
 	outfits
-		"Inhibitor Cannon" 6
-		"Thrasher Turret" 2
+		"Thrasher Cannon" 2
+		"Inhibitor Cannon" 4
+		"Inhibitor Turret" 4
 		"Point Defense Turret"
 
 		"Aeon Cell"
-		"Epoch Cell"
 		"Crystal Capacitor"
-		"Thermoelectric Cooler" 3
+		"Epoch Cell"
+		"Outfits Expansion" 3
 		"Quantum Key Stone"
-		"Korath Repeater Rifle" 75
-		"Tuning Rifle" 75
+		"Thermoelectric Cooler" 3
+		"Fragmentation Grenades" 24
+		"Laser Rifle" 24
+		"Tuning Rifle" 48
+		"Medical Bay"
 		"Midnight's Lost Orphan"
 		"Almachian Brain Maggots"
 
-		"Smelter-Class Thruster"
+		"Anvil-Class Engine"
+		"Bellows-Class Afterburner"
 		"Smelter-Class Steering"
+		"Smelter-Class Thruster"
 		"Jump Drive"
 
-	turret "Thrasher Turret"
-	turret "Thrasher Turret"
-	turret
-	turret
+	gun 
+	gun "Thrasher Cannon"
+	gun "Thrasher Cannon"
+	gun "Inhibitor Cannon"
+	gun "Inhibitor Cannon"
+	gun "Inhibitor Cannon"
+	gun "Inhibitor Cannon"
+	turret "Inhibitor Turret"
+	turret "Inhibitor Turret"
+	turret "Inhibitor Turret"
+	turret "Inhibitor Turret"
 	turret "Point Defense Turret"
+
 
 
 mission "Midnight Lost Orphan: Night Sword Patch"
@@ -678,7 +712,6 @@ mission "Midnight Lost Orphan: Blood Wind"
 	invisible
 	source
 		attributes "frontier" "pirate"
-		not attributes "uninhabited"
 	to offer
 		has "Midnight Lost Orphan: Chaos Hammer: done"
 		has "Midnight Lost Orphan: Arctic Dragon: done"
@@ -687,11 +720,22 @@ mission "Midnight Lost Orphan: Blood Wind"
 			has "event: kestrel available: more engines"
 			has "event: kestrel available: more shields"
 			has "event: kestrel available: more weapons"
+		or
+			"captain of atrocity" >= 16
+			and			
+				has "Midnight Lost Orphan: Pirate Atrocity: failed"
+				has "Midnight Lost Orphan: Republic Atrocity: failed"
+				has "Midnight Lost Orphan: Syndicate Atrocity: failed"
+				has "Midnight Lost Orphan: Free Worlds Atrocity: failed"
+				has "Midnight Lost Orphan: Hai Atrocity: failed"
+				has "Midnight Lost Orphan: Remnant Atrocity: failed"
+				has "Midnight Lost Orphan: Wanderer Atrocity: failed"
+				has "Midnight Lost Orphan: Coalition Atrocity: failed"
 	on offer
 		require "Midnight's Lost Orphan" 1
 		conversation
 			scene "outfit/midnight lost orphan"
-			`You are the Demon Captain of Atrocities, <first> <last>. The power of Midnight's Lost Orphan flows through you, granting you supernatural abilities that bend time and space. Soon after leaving the planet you are overcome with sudden pain! This is a familiar feeling. You experienced something similar when you were first possessed by Midnight's Lost Orphan. The entity... is trying to leave!`
+			`You are the Demon Captain of Atrocities, <first> <last>. The power of Midnight's Lost Orphan flows through you, granting you supernatural abilities that bend time and space. Soon after arriving at this planet you are overcome with sudden pain! This is a familiar feeling. You experienced something similar when you were first possessed by Midnight's Lost Orphan. The entity... is trying to leave!`
 			choice
 				`	(Let it go.)`
 					goto release
@@ -710,7 +754,7 @@ mission "Midnight Lost Orphan: Blood Wind"
 			label release
 			scene "scene/scene-bloodwind"
 			`	The creature separates itself from you then flies through the hull and away from your ship! There is another ship nearby that it enters...`
-				accept
+				launch
 
 	on defer
 		"captain of atrocity" += 10
@@ -753,16 +797,12 @@ mission "Midnight Lost Orphan: Blood Wind"
 		to spawn
 			has "Blood Wind Trap"
 		government "Alpha"
-		system
-			distance 1
 		personality entering heroic vindictive
 		fleet "Marauder Parade"
 	npc kill
 		to spawn
 			has "event: Grudge Legacy"
 			has "Blood Wind Trap"
-		system
-			distance 1
 		government "Alpha"
 		personality entering heroic vindictive
 		fleet "Grudge Parade"
