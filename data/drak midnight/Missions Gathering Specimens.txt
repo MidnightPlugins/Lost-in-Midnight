@@ -1204,6 +1204,7 @@ mission "Gathering Specimens: Remnant Star Gazer"
 mission "Gathering Specimens: Remnant Research"
 	landing
 	invisible
+	source Viminal
 	to offer
 		has "Gathering Specimens: Remnant Gray Eye: declined"
 		has "Gathering Specimens: Remnant Luminazoa: declined"
@@ -1421,6 +1422,7 @@ mission "Gathering Specimens: Remnant Star Gazer B"
 mission "Gathering Specimens: Remnant Research B"
 	landing
 	invisible
+	source "Caelian"
 	to offer
 		has "Gathering Specimens: Remnant Gray Eye B: declined"
 		has "Gathering Specimens: Remnant Luminazoa B: declined"
