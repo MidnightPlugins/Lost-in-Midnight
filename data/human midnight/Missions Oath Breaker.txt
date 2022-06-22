@@ -1168,10 +1168,11 @@ mission "Oathbreaker Fugitives Hideout Random"
 		personality waiting staying plunders harvests coward
 		fleet "Small Oathbreaker"
 		fleet "Fugitive Oathbreaker" 4
+		dialog `<planet> may be an Oathbreaker hideout. Check the surface to be certain.`
 	on complete
 		"Oathbreaker escalation" ++
 		"Oathbreaker Fugitives Hideout Random: offered" --
-
+		dialog `No other Oathbreaker ships rise up to challenge you.`
 
 
 
@@ -1202,7 +1203,7 @@ mission "Nemesis: Oath Breaker"
 					launch
 			label coward
 			scene "scene/scene-carriercrash"
-			`	You are the only pilot still on the ground as the battle rages overhead. "Want something to calm the nerves?" asks the bartender. He downs a shot before you have a chance to respond. A loud explosion goes off nearby and you swear to yourself as you look out the window. Your ship has just been hit by a stray missile! You rush outside to check the damage when a shadow falls over you... One of the Oathbreaker carriers is crashing into the spaceport. Flames are leaking from where you'd expect the fission reactor would be located. There's no escaping the impending explosion. As the rapidly descending carrier deteriorates into a ball of flaming death, you idly wonder why you didn't take your own destiny into your hands up in the sky rather than cowering here on the ground.`
+			`	You are the only pilot still on the ground as the battle rages overhead. "Want something to calm the nerves?" asks the bartender. He downs a shot before you have a chance to respond. A loud explosion goes off nearby and you swear to yourself as you look out the window. Your ship has just been hit by a stray missile! You rush outside to check the damage when a shadow falls over you... One of the Oathbreaker carriers is crashing into the spaceport. Flames are leaking from where you'd expect the fusion reactor would be located. There's no escaping the impending explosion. As the rapidly descending carrier deteriorates into a ball of fiery death, you idly wonder why you didn't take your own destiny into your hands up in the sky rather than cowering here on the ground.`
 				die
 
 	npc kill

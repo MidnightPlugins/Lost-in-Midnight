@@ -24,7 +24,13 @@ mission "Midnight Market: Jump Drives 1"
 		government "Free Worlds" "Republic" "Syndicate" "Neutral" "Independent"
 	destination Mars
 	to offer
-		random < 10
+		or
+			and
+				not "rejected midnight market jump drive offer"
+				random < 10
+			and
+				has "rejected midnight market jump drive offer"
+				random < 5
 	on offer
 		require "Jump Drive"
 		conversation
@@ -36,10 +42,13 @@ mission "Midnight Market: Jump Drives 1"
 					accept
 				`	(Reject the invitation.)`
 					defer
+	on defer
+		set "rejected midnight market jump drive offer"
 	on abort
 		clear "Midnight Market Jump Drives 1: offered"
 	on complete
 		log "Factions" "Midnight Market" `A network of fencers, smugglers, and patrons forming an exclusive black market community. Not sure how I got on their list, but the deals look too good to pass up.`
+		clear "rejected midnight market jump drive offer"
 		"Midnight Market" ++
 		outfit "Jump Drive" -1
 		outfit "Hyperdrive" 1
@@ -56,8 +65,14 @@ mission "Midnight Market: Jump Drives 2"
 		government "Pirate"
 		not attributes "hidden"
 	to offer
-		random < 10
 		has "Midnight Market: Jump Drives 1: done"
+		or
+			and
+				not "rejected midnight market jump drive offer"
+				random < 5
+			and
+				has "rejected midnight market jump drive offer"
+				random < 1
 	on offer
 		require "Jump Drive"
 		conversation
@@ -69,10 +84,13 @@ mission "Midnight Market: Jump Drives 2"
 					accept
 				`	(Reject the invitation.)`
 					defer
+	on defer
+		set "rejected midnight market jump drive offer"
 	on abort
 		clear "Midnight Market Jump Drives 2: offered"
 	on complete
 		clear "Midnight Market Jump Drives 2: offered"
+		clear "rejected midnight market jump drive offer"
 		"Midnight Market" ++
 		"reputation: Pirate" ++
 		outfit "Jump Drive" -1
