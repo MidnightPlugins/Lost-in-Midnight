@@ -767,7 +767,7 @@ mission "Hunting Beelzebub: Underworld"
 				`	(Agree to purchase some.)`
 				`	(Not now.)`
 					defer
-			`	"Captain <last>, right? I'll set up a meeting for you in the underworld of <destination>." The man walks off without telling you how he knew your ship or your name...`
+			`	"Captain <last>, right? I'll set up a meeting for you in The Underworld of <destination>." The man walks off without telling you how he knew your ship or your name...`
 				accept
 	on defer
 		set "Randomize Hunting Beelzebub: Underworld"
@@ -1005,7 +1005,7 @@ ship "Ember Nightmare"
 	explode "large explosion" 80
 	explode "huge explosion" 15
 	"final explode" "final explosion large" 1
-	description "An abomination constructed by adding the remains of destroyed Remnant ships to what was originally an Albatross. Beelzebub has had this ship since abandoning the Remnant in pursuit of his own fortunes amongst the pirates of the ancestral humans."
+	description "An abomination constructed by adding the salvaged remains of destroyed Remnant ships to what was originally an Albatross. Beelzebub has had this ship since abandoning the Remnant in pursuit of his own fortunes amongst the pirates of the ancestral humans."
 
 
 
