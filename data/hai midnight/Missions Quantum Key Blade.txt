@@ -16,6 +16,30 @@
 # - One Scorpion can be captured during these missions.
 # Most of the swordfighting works like rock, paper, scissors.
 
+mission "QKBlade: House Unuk Pickup"
+	job
+	repeat
+	name "House Unuk Exports"
+	description "Retrieve <tons> of delicious acorn cookies from <stopovers>, then return to <destination>. Payment is <payment>."
+	cargo "acorn cookies" 10 20
+	to offer
+		random < 40
+		or
+			not "Nemesis: Quantum Key Blade: done"
+			has "event: House Unuk Recovery timer"
+	source
+		attributes "urban"
+		near "Flood" 1 20
+	stopover
+		planet "Flood"
+	on stopover
+		dialog "You pickup <cargo>. Deliver them to <destination> to get your payment."
+	on visit
+		dialog phrase "generic missing stopover or cargo"
+	on complete
+		payment
+		dialog `When you land a freight transport picks up the shipment of cookies. House Unuk wires <payment> to your bank account.`
+
 mission "QKBlade: House Unuk Imports"
 	job
 	repeat
@@ -65,7 +89,7 @@ mission "QKBlade: House Unuk Exports"
 mission "QKBlade: House Unuk Delivery"
 	job
 	repeat
-	name "House Unuk Delivery"
+	name "House Unuk Imports"
 	description "Deliver <tons> of high quality acorns to House Unuk on <destination>. Payment is <payment>."
 	cargo "high quality acorns" 10 20
 	to offer
@@ -92,7 +116,9 @@ mission "QKBlade: House Unuk Door Delivery"
 		neighbor near "Unukalhai" 1 5
 	destination "Flood"
 	to offer
-		has "QKBlade: House Unuk Exports: done"
+		or
+			has "QKBlade: House Unuk Pickup: done"
+			has "QKBlade: House Unuk Exports: done"
 		or
 			has "QKBlade: House Unuk Imports: done"
 			has "QKBlade: House Unuk Delivery: done"
@@ -184,9 +210,10 @@ mission "QKBlade: Quantum Key Blade 2 clue"
 	to offer
 		has "QKBlade: Quantum Key Blade 2: active"
 		not "QKBlade: Quantum Key Blade 3: active"
+		not "QKBlade: Quantum Key Blade 3: done"
 	on offer
 		log `The Wanderers have not witnessed the Kotetsu in Wanderer space. If Gai hasn't passed through either Hai space or Wanderer space, then he must have traveled east...`
-		dialog `You ask the Wanderers if a protoype Unfettered ship matching the Kotetsu's description has passed through the system. They tell you that such a ship has not been seen amongst the Unfettered fleets in their space.`
+		dialog `You ask the Wanderers if a protoype Unfettered ship matching the Kotetsu's description has passed through the system. They tell you that such a ship has not been seen amongst the Unfettered fleets in their space. If Gai hasn't passed through either Hai space or Wanderer space, then he must have traveled east...`
 	on accept
 		fail
 
