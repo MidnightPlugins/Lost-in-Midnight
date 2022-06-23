@@ -15,6 +15,7 @@
 
 ship "Veliante'ixis"
 	sprite "ship/veliante'ixis/veliante'ixis"
+	swizzle 0
 	attributes
 		category "Heavy Warship"
 		cost 676000000
