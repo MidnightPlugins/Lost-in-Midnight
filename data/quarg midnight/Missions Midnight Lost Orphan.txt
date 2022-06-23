@@ -342,7 +342,7 @@ mission "Midnight Lost Orphan: Chaos Hammer"
 		government "Pirate"
 		personality target waiting fleeing uninterested
 		ship "Korath Raider (Chaos Hammer)" "Chaos Hammer"
-		dialog `You find the ship's brig has been converted into a torure chamber. Most of the prisoners are dead. Those who are still alive are near death, their wounds too severe to treat.`
+		dialog `You find the ship's brig has been converted into a torture chamber. Most of the prisoners are dead. Those who are still alive are near death, their wounds too severe to treat.`
 
 	on complete
 		set "captain of atrocity"
