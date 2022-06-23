@@ -611,6 +611,7 @@ mission "QKBlade: Bearer of The Blade 3A"
 		"captain of atrocity" ++
 	on accept
 		"QKBlade: duels won" ++
+		fail
 
 mission "QKBlade: Bearer of The Blade 3B"
 	invisible
@@ -667,6 +668,7 @@ mission "QKBlade: Bearer of The Blade 3B"
 		"captain of atrocity" ++
 	on accept
 		"QKBlade: duels won" ++
+		fail
 
 mission "QKBlade: Bearer of The Blade 3C"
 	invisible
@@ -723,6 +725,7 @@ mission "QKBlade: Bearer of The Blade 3C"
 		"captain of atrocity" ++
 	on accept
 		"QKBlade: duels won" ++
+		fail
 
 mission "QKBlade: Bearer of The Blade 4"
 	landing
@@ -909,40 +912,106 @@ mission "QKBlade: Thief of Blades"
 
 event "thief of blades"
 	planet Snowfeather
-		"required reputation" 150
-	planet Newhome
-		"required reputation" 150
-	planet Frostmark
-		"required reputation" 150
-	planet Greenbloom
-		"required reputation" 150
-	planet Darkwaste
-		"required reputation" 150
-	planet Greenwater
-		"required reputation" 150
-	planet Allhome
-		"required reputation" 150
-	planet Stonebreak
-		"required reputation" 150
-	planet Heartvalley
-		"required reputation" 150
-	planet Darkmetal
-		"required reputation" 150
-	planet Dustmaker
-		"required reputation" 150
-	planet Makerplace
-		"required reputation" 150
-	planet Icelake
-		"required reputation" 150
-	planet Cloudfire
 		"required reputation" 100
+	planet Newhome
+		"required reputation" 100
+	planet Frostmark
+		"required reputation" 100
+	planet Greenbloom
+		"required reputation" 100
+	planet Darkwaste
+		"required reputation" 100
+	planet Greenwater
+		"required reputation" 100
+	planet Allhome
+		"required reputation" 100
+	planet Stonebreak
+		"required reputation" 100
+	planet Heartvalley
+		"required reputation" 100
+	planet Darkmetal
+		"required reputation" 100
+	planet Dustmaker
+		"required reputation" 100
+	planet Makerplace
+		"required reputation" 100
+	planet Icelake
+		"required reputation" 100
+	planet Cloudfire
+		"required reputation" 25
 	planet Farwater
-		"required reputation" 150
+		"required reputation" 100
 	planet Hai-home
-		"required reputation" 300
+		"required reputation" 200
 	planet Mirrorlake
-		"required reputation" 300
+		"required reputation" 200
 	planet Giverstone
-		"required reputation" 150
+		"required reputation" 100
 	planet Skyfarm
-		"required reputation" 150
+		"required reputation" 100
+
+
+
+mission "QKBlade: Honor of the Blade Bearer - Courier (Hai)"
+	deadline
+	repeat
+	name "Message to <planet>"
+	description "The Hai Council of Elders requests you deliver an encrypted message to <destination>. Your service will reinforce your relationship with the Hai."
+	source "Hai-Home"
+	destination
+		distance 5 20
+		government "Hai"
+		attributes "spaceport"
+		not attributes "uninhabited"
+	to offer
+		has "Honor of the Blade Bearer"
+		"reputation: Hai" >= 100
+		random < 3
+	on offer
+		require "Quantum Dragon Blade"
+		conversation
+			`"Captain <last>? Captain <last>!" A Hai dressed in the clothes worn by their diplomats rushes towards you. "Are you by chance headed for <system>? I need something to be delivered to <planet> by <date>."`
+			choice
+				`	(Accept the job.)`
+				`	(Decline the job.)`
+					decline
+			`	"Excellent! The Hai government is grateful for the cooperation of the Bearer of The Blade. Please be discreet about this." The Hai hands a data chip to you. "This is sensitive information. The chip is encrypted, but you should destroy it if it appears that you'll lose posession of it to hostile hands. Safe journey, captain."
+				accept
+	on complete
+		"reputation: Hai" += 5
+		"Honor of the Blade Bearer" ++
+		dialog `The government of <planet> accepts the encrypted chip. Your service to the Hai is noted and appreciated.`
+
+
+
+mission "QKBlade: Honor of the Blade Bearer - Courier (Unfettered)"
+	deadline
+	repeat
+	clearance
+	name "Message to <planet>"
+	description "The Hai Council of Elders requests you deliver an encrypted message to <destination>. Your service will reinforce your relationship with the Hai."
+	source "Hai-Home"
+	destination
+		distance 5 15
+		government "Hai (Unfettered)"
+		attributes "spaceport"
+		not attributes "uninhabited"
+	to offer
+		has "Honor of the Blade Bearer"
+		"reputation: Hai" >= 100
+		random < 2
+	on offer
+		require "Quantum Dragon Blade"
+		conversation
+			`"Captain <last>? Captain <last>!" A Hai dressed in the clothes worn by their diplomats rushes towards you. "Are you by chance headed for <system>? I need something to be delivered to <planet> by <date>." You notice that is a planet under Unfettered control.`
+			choice
+				`	(Accept the job.)`
+				`	(Decline the job.)`
+					decline
+			`	"Excellent! The Hai government is grateful for the cooperation of the Bearer of The Blade. Please be discreet about this." The Hai hands a data chip to you. "This is sensitive information. The chip is encrypted, but you should destroy it if it appears that you'll lose posession of it to hostile hands. Safe journey, captain."
+				accept
+	on complete
+		"reputation: Hai" += 10
+		"reputation: Hai (Unfettered)" += 5
+		"Honor of the Blade Bearer" ++
+		dialog `The Unfettered leaders on <planet> accepts the encrypted chip. Your status as the Bearer of the Blade is noted with awe and perhaps a bit of contempt.`
