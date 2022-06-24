@@ -1013,7 +1013,7 @@ mission "Quash Lives!"
 				`	"T.H.O.R., respond!"`
 			`	Silence. What will you do?`
 			choice
-				`	(I don't like this. Abandon T.H.O.R. and head back to the ship.)`
+				`	(Abandon T.H.O.R. and head back to the ship.)`
 					goto abandon
 				`	(See what happened to T.H.O.R.)`
 			`	You draw your Quantum Key Blade and rush towards T.H.O.R.'s last known location. There, you find the mangled remains of the robot. Whatever did this should have made a lot of noise. Instead, there was nothing but the dead silence which surrounds you even now... Finally, the quiet is broken by the sound of something behind you! As you turn to look, the Quantum Key Blade is wrenched out of your hands. It flies towards the darkness, where a massive gray hand catches it. A familiar Quarg steps out into your field of vision.`
@@ -1025,7 +1025,7 @@ mission "Quash Lives!"
 					
 			label QuashEnd
 			scene "scene/scene-station5blood"
-			`	"To answer your question, yes. As you can see, I am very much alive. Carabaos like the Halcyon have robust autopiloting systems." You feel intense pressure on your limbs as several bones snap. "Humans were wise to be distrustful of that technology." The pain spreads to your torso as several internal organs burst. "With it, I managed to trick those other Quarg into thinking I'd died." You feel intense pain building up in your head. "But that left me without a ship. Thank you Captain <first> <last>, for coming to my rescue." Like a puppet with its strings severed, your lifeless body crumples to the ground.`
+			`	"To answer your question, yes. As you can see, I am very much alive. Carabaos like the Halcyon have robust autopiloting systems." You feel intense pressure on your limbs as several bones snap. "Humans were wise to be distrustful of that technology." The pain spreads to your torso as several internal organs burst. "With it, I managed to trick those other Quarg into thinking I'd died." You feel intense pain building up in your head. "But that left me without a ship. Thank you Captain <first> <last>, for coming to my rescue." Like a puppet with its strings severed, your headless body crumples to the ground.`
 				die
 							
 	on defer
