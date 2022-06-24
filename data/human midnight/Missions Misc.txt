@@ -766,7 +766,127 @@ mission "Quash: Humanika Infiltration 2"
 			scene "outfit/sniper rifle"
 			`When you land, Commander hands over <payment>. "Sorry it's not what we agreed on, but the others were each responsible for paying a portion of it. Now that they're..." He hesitates a moment, then hands over the Sniper Rifle. "I guess you could also try selling this. That's the best I can offer." He departs, never explaining anything about what happened on Humanika or the mysterious Quarg he was cursing.`
 
+phrase "asteroid names"
+	phrase
+		"digit"
+	phrase
+		"digit"
+	word
+		" "
+	phrase
+		"greek alphabet"
+	word
+		" "
+	phrase
+		"greek alphabet"
+		
+ship "Asteroid" "Rogue Asteroid"
+	noun "asteroid"
+	sprite "asteroid/fossil/spin"
+		"frame rate" 10
+	"never disabled"
+	add attributes
+		"hull" 10000
+		"cargo space" 20
+	
 
+mission "Rogue Asteroid (Rich World)"
+	deadline 2
+	repeat
+	name "Rogue Asteroid"
+	description "The rogue asteroid, <npc>, may collide with <destination>. Destroy it, then land on <planet> to clain the reward (<payment>)."
+	source
+		government "Republic" "Syndicate" "Free Worlds" "Independent" "Neutral"
+		attributes "paradise" "urban" "rich" "tourist"
+		not attributes "uninhabited"
+		not attributes "station"
+	to offer
+		or
+			and
+				not "Rogue Asteroid (Rich World): done"
+				not "Rogue Asteroid (Rich World): declined"
+				not "Rogue Asteroid (Rich World): failed"
+				not "Rogue Asteroid (Poor World): done"
+				not "Rogue Asteroid (Poor World): declined"				
+				not "Rogue Asteroid (Poor World): failed"
+				random < 20
+			random < 1
+	on offer
+		conversation
+			`The spaceport is a flurry of activity as pilots rush to prepare their ships for liftoff.`
+			choice
+				`	"Are we under attack from pirates?"`
+				`	"Are we under attack from aliens?"`
+			scene "asteroid/fossil/spin"
+			`	One of the dockworkers answers, "<npc>, a rogue asteroid, looks like it might crash into <planet>. The local government is offering pilots a <payment> reward for destroying it."`
+			choice
+				`	(Try to destroy the asteroid.)`
+					launch
+				`	(Don't try to destroy the asteroid.)`
+					decline
+	npc kill
+		government "Uninhabited"
+		personality uninterested waiting pacifist mute
+		fleet
+			names "asteroid names"
+			cargo 3
+			outfitters "Iron" "Lead" "Silicon"
+			variant
+				"Rogue Asteroid"
+	on complete
+		payment 50000
+		dialog `The government of <planet> rewards you with <payment> for destroying the asteroid threat.`
+	
+mission "Rogue Asteroid (Poor World)"
+	deadline 2
+	repeat
+	name "Rogue Asteroid"
+	description "The rogue asteroid, <npc>, may collide with <destination>. Destroy it, then land on <planet> to clain the reward (<payment>)."
+	source
+		government "Republic" "Syndicate" "Free Worlds" "Independent" "Neutral"
+		not attributes "paradise" "urban" "rich" "tourist"
+		not attributes "uninhabited"
+		not attributes "station"
+	to offer
+		or
+			and
+				not "Rogue Asteroid (Rich World): done"
+				not "Rogue Asteroid (Rich World): declined"
+				not "Rogue Asteroid (Rich World): failed"
+				not "Rogue Asteroid (Poor World): done"
+				not "Rogue Asteroid (Poor World): declined"				
+				not "Rogue Asteroid (Poor World): failed"
+				random < 20
+			random < 1
+	on offer
+		conversation
+			`The spaceport is a flurry of activity as pilots rush to prepare their ships for liftoff.`
+			choice
+				`	"Are we under attack from pirates?"`
+				`	"Are we under attack from aliens?"`
+			scene "asteroid/fossil/spin"
+			`	One of the dockworkers answers, "<npc>, a rogue asteroid, looks like it might crash into <planet>. The local government is offering pilots a <payment> reward for destroying it."`
+			choice
+				`	(Try to destroy the asteroid.)`
+					launch
+				`	(Don't try to destroy the asteroid.)`
+					decline
+	npc kill
+		government "Uninhabited"
+		personality uninterested waiting pacifist mute
+		fleet
+			names "asteroid names"
+			cargo 3
+			outfitters "Copper" "Gold" "Silver"
+			variant
+				"Rogue Asteroid"
+	on complete
+		payment 10000
+		dialog `The government of <planet> rewards you with <payment> for destroying the asteroid threat.`
+	
+
+
+	
 
 #########################
 # missions that repeat
