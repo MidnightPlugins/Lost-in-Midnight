@@ -11,6 +11,35 @@
 
 
 
+phrase "greek alphabet"
+	word
+		Alpha
+		Nu
+		Beta
+		Xi
+		Gamma
+		Omicron
+		Delta
+		Pi
+		Epsilon
+		Rho
+		Zeta
+		Sigma
+		Eta
+		Tau
+		Theta
+		Upsilon
+		Iota
+		Phi
+		Kappa
+		Chi
+		Lambda
+		Psi
+		Mu
+		Omega
+
+
+
 phrase "friendly civilian"
 	word
 		"Watch out for"
