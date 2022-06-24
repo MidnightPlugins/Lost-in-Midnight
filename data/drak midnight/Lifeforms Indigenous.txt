@@ -606,9 +606,6 @@ mission "Subsidurial Porter"
 
 
 
-outfitter "Gold"
-	"Gold"
-
 mission "Golden Subsidurials"
 	deadline 7
 	name "Golden Subsidurials"
