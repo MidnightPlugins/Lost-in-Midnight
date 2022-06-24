@@ -1002,7 +1002,7 @@ mission "QKBlade: Honor of the Blade Bearer - Courier (Hai)"
 				`	(Accept the job.)`
 				`	(Decline the job.)`
 					decline
-			`	"Excellent! The Hai government is grateful for the cooperation of the Bearer of The Blade. Please be discreet about this." The Hai hands a data chip to you. "This is sensitive information. The chip is encrypted, but you should destroy it if it appears that you'll lose posession of it to hostile hands. Safe journey, captain."
+			`	"Excellent! The Hai government is grateful for the cooperation of the Bearer of The Blade. Please be discreet about this." The Hai hands a data chip to you. "This is sensitive information. The chip is encrypted, but you should destroy it if it appears that you'll lose posession of it to hostile hands. Safe journey, captain."`
 				accept
 	on complete
 		"reputation: Hai" += 5
@@ -1035,7 +1035,7 @@ mission "QKBlade: Honor of the Blade Bearer - Courier (Unfettered)"
 				`	(Accept the job.)`
 				`	(Decline the job.)`
 					decline
-			`	"Excellent! The Hai government is grateful for the cooperation of the Bearer of The Blade. Please be discreet about this." The Hai hands a data chip to you. "This is sensitive information. The chip is encrypted, but you should destroy it if it appears that you'll lose posession of it to hostile hands. Safe journey, captain."
+			`	"Excellent! The Hai government is grateful for the cooperation of the Bearer of The Blade. Please be discreet about this." The Hai hands a data chip to you. "This is sensitive information. The chip is encrypted, but you should destroy it if it appears that you'll lose posession of it to hostile hands. Safe journey, captain."`
 				accept
 	on complete
 		"reputation: Hai" += 10
