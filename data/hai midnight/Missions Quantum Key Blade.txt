@@ -152,7 +152,7 @@ mission "QKBlade: House Unuk Door Delivery"
 
 
 
-mission "Ion Pulse Cannons
+mission "Ion Pulse Cannons"
 	landing
 	invisible
 	to offer
@@ -178,11 +178,25 @@ event "ion pulse cannons"
 			"Shield Beetle (Jump, Tracker)" 1
 	fleet "Large Unfettered"
 		add variant 1
-			"Shield Beetle (Ion Pulse)"	
+			"Shield Beetle (Ion Pulse)"	2
+		add variant 1
+			"Shield Beetle (Ion Pulse)"
+			"Lightning Bug"
+		add variant 1
+			"Shield Beetle (Ion Pulse)"
+			"Lightning Bug (Pulse)"
+		add variant 1
+			"Shield Beetle (Ion Pulse)"
 			"Lightning Bug" 2
 		add variant 1
 			"Shield Beetle (Ion Pulse)"
 			"Lightning Bug (Pulse)" 2
+		add variant 1
+			"Shield Beetle (Ion Pulse)"
+			"Shield Beetle"
+		add variant 1
+			"Shield Beetle (Ion Pulse)"
+			"Shield Beetle (Tracker)"
 		add variant 1
 			"Shield Beetle (Ion Pulse)"
 			"Shield Beetle"
@@ -191,6 +205,30 @@ event "ion pulse cannons"
 			"Shield Beetle (Ion Pulse)"
 			"Shield Beetle (Tracker)"
 			"Lightning Bug" 2
+
+
+
+mission "Ion Pulse Support"
+	landing
+	invisible
+	to offer
+		has "Wanderers Defend Sich'ka'ara: done"
+	on offer
+		event "ion pulse support"
+		fail
+		
+event "ion pulse support"
+	fleet "Large Unfettered"
+		add variant 1
+			"Shield Beetle (Ion Pulse)"
+			"Solifuge"
+			"Violin Spider" 3
+			"Violin Spider (Pulse)" 3
+		add variant 1
+			"Shield Beetle (Ion Pulse)"
+			"Solifuge (Tracker)"
+			"Violin Spider" 2
+			"Violin Spider (Pulse)" 4
 
 
 
