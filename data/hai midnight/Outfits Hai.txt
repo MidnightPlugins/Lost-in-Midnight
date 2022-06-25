@@ -33,7 +33,7 @@ outfit "Ion Pulse Cannon"
 		"hit force" 60
 		"shield damage" 84
 		"hull damage" 30
-		"ion damage" 3
+		"ion damage" 2.5
 		"cluster"
 	description "Unfettered Ion Pulse Cannons disrupt the electrical systems on any ship they hit, draining its energy. Individually, they aren't as effective as Ion Cannons, but these weapons are meant to be used in multiples. As a group they synchronize their rate of fire, creating waves of ionizing projectiles."
 
