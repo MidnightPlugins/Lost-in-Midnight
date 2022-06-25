@@ -29,7 +29,7 @@ mission "QKBlade: House Unuk Pickup"
 			has "event: House Unuk Recovery timer"
 	source
 		attributes "urban"
-		near "Flood" 1 20
+		near "Unukalhai" 1 20
 	stopover
 		planet "Flood"
 	on stopover
@@ -150,7 +150,50 @@ mission "QKBlade: House Unuk Door Delivery"
 			`	After a moment the gate opens and a maid walks out to make the exchange.`
 			`	"Thank you. House Unuk has been expecting this for some time. In appreciation for your service please accept this additional gift from the master of the house." She smiles and hands you a package of their acorn cookies with a small delivery fee of <payment>.`
 
+
+
+mission "Ion Pulse Cannons
+	landing
+	invisible
+	to offer
+		has "event: wanderers: unfettered invasion starts"
+	on offer
+		event "ion pulse cannons"
+		fail
 		
+event "ion pulse cannons"
+	outfitter "Unfettered Basics"
+		add "Ion Pulse Cannon"
+	fleet "Unfettered Tribute"
+		add variant 1
+			"Water Bug (Jump, Ion Pulse)"
+	fleet "Unfettered Raid"
+		add variant 1
+			"Shield Beetle (Jump, Ion Pulse)" 3
+		add variant 1
+			"Shield Beetle (Jump, Ion Pulse)" 2
+			"Shield Beetle (Jump)" 1
+		add variant 1
+			"Shield Beetle (Jump, Ion Pulse)" 2
+			"Shield Beetle (Jump, Tracker)" 1
+	fleet "Large Unfettered"
+		add variant 1
+			"Shield Beetle (Ion Pulse)"	
+			"Lightning Bug" 2
+		add variant 1
+			"Shield Beetle (Ion Pulse)"
+			"Lightning Bug (Pulse)" 2
+		add variant 1
+			"Shield Beetle (Ion Pulse)"
+			"Shield Beetle"
+			"Lightning Bug (Pulse)" 2
+		add variant 1
+			"Shield Beetle (Ion Pulse)"
+			"Shield Beetle (Tracker)"
+			"Lightning Bug" 2
+
+
+
 mission "QKBlade: Quantum Key Blade 1"
 	landing
 	name "Visit the Hai Council of Elders"
@@ -269,8 +312,7 @@ mission "QKBlade: Quantum Key Blade 3"
 			names "hai"
 			variant
 				"Shield Beetle (Jump, Pulse)"
-				"Water Bug (Jump)" 3
-				"Water Bug (Jump, Pulse)"
+				"Water Bug (Jump, Ion Pulse)" 4
 
 
 
@@ -319,9 +361,8 @@ mission "Nemesis: Quantum Key Blade"
 			names "hai"
 			variant
 				"Solifuge (Jump, Pulse)"
-				"Shield Beetle (Jump)"
 				"Shield Beetle (Jump, Pulse)" 2
-				"Shield Beetle (Jump, Tracker)"
+				"Shield Beetle (Jump, Ion Pulse)" 3
 				"Violin Spider" 3
 				"Violin Spider (Pulse)" 3
 	npc board
@@ -984,7 +1025,7 @@ mission "QKBlade: Honor of the Blade Bearer - Courier (Hai)"
 	repeat
 	name "Message to <planet>"
 	description "The Hai Council of Elders requests you deliver an encrypted message to <destination>. Your service will reinforce your relationship with the Hai."
-	source "Hai-Home"
+	source "Hai-home"
 	destination
 		distance 5 20
 		government "Hai"
@@ -1017,7 +1058,7 @@ mission "QKBlade: Honor of the Blade Bearer - Courier (Unfettered)"
 	clearance
 	name "Message to <planet>"
 	description "The Hai Council of Elders requests you deliver an encrypted message to <destination>. Your service will reinforce your relationship with the Hai."
-	source "Hai-Home"
+	source "Hai-home"
 	destination
 		distance 5 15
 		government "Hai (Unfettered)"
@@ -1042,3 +1083,6 @@ mission "QKBlade: Honor of the Blade Bearer - Courier (Unfettered)"
 		"reputation: Hai (Unfettered)" += 5
 		"Honor of the Blade Bearer" ++
 		dialog `The Unfettered leaders on <planet> accepts the encrypted chip. Your status as the Bearer of the Blade is noted with awe and perhaps a bit of contempt.`
+
+
+
