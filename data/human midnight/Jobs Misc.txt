@@ -832,6 +832,8 @@ mission "Medical Bay: Patient Transport"
 		payment
 		dialog `You wish the patient good luck with their surgery. An insurance company deposits <payment> into your account.`
 
+
+
 mission "Mining: Silicon"
 	job
 	deadline 14
@@ -869,7 +871,7 @@ mission "Mining: Iron"
 	deadline 14
 	repeat
 	name "Mining: Iron to <system>"
-	description "The shipyard on <destination> has a shortage of Iron. Bring 20 tons of Copper to the shipyard by <date>. Payment is <payment>, 50% above the usual market rate for Iron."
+	description "The shipyard on <destination> has a shortage of Iron. Bring 20 tons of Iron to the shipyard by <date>. Payment is <payment>, 50% above the usual market rate for Iron."
 	source
 		government "Republic" "Syndicate" "Free Worlds" "Independent" "Neutral"
 		attributes shipyard
@@ -901,7 +903,7 @@ mission "Mining: Titanium"
 	deadline 14
 	repeat
 	name "Mining: Titanium to <system>"
-	description "The shipyard on <destination> has a shortage of Titanium. Bring 20 tons of Copper to the shipyard by <date>. Payment is <payment>, 50% above the usual market rate for Titanium."
+	description "The shipyard on <destination> has a shortage of Titanium. Bring 20 tons of Titanium to the shipyard by <date>. Payment is <payment>, 50% above the usual market rate for Titanium."
 	source
 		government "Republic" "Syndicate" "Free Worlds" "Independent" "Neutral"
 		attributes shipyard
