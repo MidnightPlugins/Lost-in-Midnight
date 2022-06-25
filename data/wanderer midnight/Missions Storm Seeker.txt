@@ -141,8 +141,10 @@ mission "Storm Seeker Skulduggery"
 	destination "Earth"
 	to offer
 		has "main plot completed"
-		has "Storm Seeker Shallow Pond: failed"
-		random < 40 + ( 10 * "Storm Seeker Shallow Pond: failed" )
+		or
+			has "Storm Seeker Shallow Pond: done"
+			has "Storm Seeker Shallow Pond: failed"
+		random < 40 + ( 10 * "Storm Seeker Shallow Pond: failed" ) + ( 10 * "Storm Seeker Shallow Pond: done" )
 	deadline 1
 	on offer
 		conversation
