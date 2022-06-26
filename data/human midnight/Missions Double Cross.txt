@@ -775,7 +775,7 @@ mission "Peace Tour 1"
 			`	"Awesome, we'll make the galaxy a better place. See you in orbit!"`
 				accept
 	on stopover
-		dialog `It was a long trip, but the <npc> finally finished spreading it's message of peace. It's time to take it home to <destination>.`
+		dialog `It was a long trip, but the <npc> finally finished spreading its message of peace. It's time to take it home to <destination>.`
 	on abort
 		"reputation: Bounty (Disguised)" >?= 1
 		conversation

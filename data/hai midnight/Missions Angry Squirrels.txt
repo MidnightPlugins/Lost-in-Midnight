@@ -773,7 +773,7 @@ mission "Angry Squirrels: It came from the desert..."
 	on enter Ehmahai
 		conversation
 			scene "scene/scene-megalocoleus1"
-			`There is a Hai ship you haven't seen before patrolling the system. But it doesn't seem new. On the contrary, it's hull looks worn with age."`
+			`There is a Hai ship you haven't seen before patrolling the system. But it doesn't seem new. On the contrary, its hull looks worn with age."`
 	npc kill
 		government "Hai (Unfettered)"
 		system "Ehmahai"

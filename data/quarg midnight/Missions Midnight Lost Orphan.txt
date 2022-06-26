@@ -626,7 +626,7 @@ mission "Midnight Lost Orphan: Night Sword"
 		government "Grave Diggers"
 		personality target waiting fleeing uninterested
 		ship "Albatross (Night Sword)" "Night Sword"
-		dialog `You pass through the ship's sick bay and find a corpse strapped onto the operating table. The clothing on the corpse suggests it was a Syndicate lab worker. Blood is leaking out from one of it's ears. A nearby monitor shows some sort of parasitic worm has settled inside the corpse's skull...`
+		dialog `You pass through the ship's sick bay and find a corpse strapped onto the operating table. The clothing on the corpse suggests it was a Syndicate lab worker. Blood is leaking out from one of its ears. A nearby monitor shows some sort of parasitic worm has settled inside the corpse's skull...`
 		
 	on complete
 		set "captain of atrocity"

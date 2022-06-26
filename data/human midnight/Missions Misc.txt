@@ -1167,7 +1167,7 @@ mission "Mining: Iron Challenge"
 				`	"I don't mine."`
 					decline
 			scene "asteroid/iron/spin"
-			`	"How about a challenge then? It'll be my ship, the <npc>, versus yours. Whoever mines the most Iron by <date> wins. The loser gives their harvest to the winner. How about it?" The <npc> looks like a capable mining ship. But unless it's been significantly modified, it's pilot seems to have forgotten an important detail..."`
+			`	"How about a challenge then? It'll be my ship, the <npc>, versus yours. Whoever mines the most Iron by <date> wins. The loser gives their harvest to the winner. How about it?" The <npc> looks like a capable mining ship. But unless it's been significantly modified, its pilot seems to have forgotten an important detail..."`
 			choice
 				`	(Accept the challenge.)`
 				`	(Reject the challenge.)`

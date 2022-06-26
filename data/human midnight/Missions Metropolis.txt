@@ -588,7 +588,7 @@ mission "Caspar 1"
 			`	You thank the bartender for the story.`
 				accept
 	on accept
-		log `The Exodus was attacked by aliens during it's initial voyage beyond Earth's solar system. The ship used its separation feature to try outmaneuvering the aliens. Instead of working together, the three ships fled the battle.`
+		log `The Exodus was attacked by aliens during its initial voyage beyond Earth's solar system. The ship used its separation feature to try outmaneuvering the aliens. Instead of working together, the three ships fled the battle.`
 	on enter Alphard
 		dialog `The merchant ship Guiding Star is asking for assistance.`
 	npc

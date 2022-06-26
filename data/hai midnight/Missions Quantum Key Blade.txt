@@ -611,7 +611,7 @@ mission "QKBlade: Bearer of The Blade 2"
 	on offer
 		require "Quantum Key Blade"
 		conversation
-			`A large crowd has gathered at the entrance to the space port. Apparently, one of the Quantum Key Blades was loaned to a local culture festival and has been put on display for a daily show demonstrating it's powers. The next showing is supposed to start soon.`
+			`A large crowd has gathered at the entrance to the space port. Apparently, one of the Quantum Key Blades was loaned to a local culture festival and has been put on display for a daily show demonstrating its powers. The next showing is supposed to start soon.`
 			choice
 				`	(Wait for the show to start.)`
 				`	(Leave.)`
