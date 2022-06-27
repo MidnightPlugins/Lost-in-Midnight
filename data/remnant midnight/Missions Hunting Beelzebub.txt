@@ -711,7 +711,7 @@ mission "Hunting Beelzebub: Lares Camping 2"
 		has "Hunting Beelzebub: Lares Camping 1: done"
 		"Hunting Beelzebub: Lares Camping 2: declined" + "Hunting Beelzebub: Lares Camping 2: failed" < 2
 	on offer
-		dialog `You've setup camp on Lares but see no sign of Beelzebub.`
+		dialog `You've set up camp on Lares but see no sign of Beelzebub.`
 	on accept
 		fail
 		

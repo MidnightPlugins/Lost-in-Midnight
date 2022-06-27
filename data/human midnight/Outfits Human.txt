@@ -17,7 +17,7 @@ outfit "Drone Hacking"
 	cost 30
 	thumbnail "outfit/data pad"
 	description `"How to Hack a Science Drone For Fun and Profit."`
-	description `This guidebook instructs the reader on how to abuse the cargo scan fining system by hacking into a drone's scanners. Contrary to the title, it works on any drone setup for scanning cargo or outfits. One important detail buried in the text is that the drone must not be hostile towards you.`
+	description `This guidebook instructs the reader on how to abuse the cargo scan fining system by hacking into a drone's scanners. Contrary to the title, it works on any drone set up for scanning cargo or outfits. One important detail buried in the text is that the drone must not be hostile towards you.`
 	description `You can install this on your ship to keep it from getting mixed in with the regular cargo.`
 
 
