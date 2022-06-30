@@ -257,7 +257,6 @@ mission "Balthazar Delivery"
 		conversation
 			scene "ship/metro district"
 			`	A small crowd of locals and tourists have gathered to watch the launch. A parade of sorts was organized by Barnacle Bobby to follow the ship as it is towed from the hangar to the local spaceport. As the Balthazar is finally parked on the launchpad, Bobby tearfully says his goodbyes to you and the salvage team. After months of hard work, the District city ship Balthazar is ready to fly once again. As you previously agreed, Maria Carpenter and her team will crew the ship. The time has come to deliver it to Joseph Welder on Luna.  `
-				launch
 
 	on abort
 		give ship "District" "Balthazar"
@@ -511,12 +510,10 @@ mission "Melchior Delivery"
 
 			scene "ship/metro prefecture"
 			`	The Prefecture city ship Melchior is ready to fly. Kraz Cybernetics even scrubbed off the scorch marks from previous experiments. As you previously agreed, Cathleen Wigglebottom and her team will crew the ship while her brother Richard pilots it. Thankfully, you'll remain on your own ship, out of earshot from their constant bickering. The time has come to deliver Melchior to Joseph Welder on Luna.`
-				launch
 
 			label barmy
 			scene "ship/metro prefecture"
 			`	The Prefecture city ship Melchior is ready to fly. Barmy Edwards even scrubbed off the scorch marks from previous experiments. As you previously agreed, Cathleen Wigglebottom and her team will crew the ship while her brother Richard pilots it. Thankfully, you'll remain on your own ship, out of earshot from their constant bickering. The time has come to deliver Melchior to Joseph Welder on Luna.`
-				launch
 
 	on abort
 		give ship "Prefecture" "Melchior"
