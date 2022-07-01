@@ -167,6 +167,43 @@ mission "Angry Squirrels: Fragmentation Grenade Deal"
 
 
 
+fleet "unfettered weapon collectors"
+	government "Hai (Unfettered)"
+	names "hai"
+	cargo 1
+	personality
+		disables
+		plunders
+	variant 1
+		"Shield Beetle (Weapon Collector)"
+
+mission "Angry Squirrels: Unfettered Weapon Collectors"
+	landing
+	invisible
+	to offer
+		or
+			"Angry Squirrels: Laser Rifle Deal: done" + "Angry Squirrels: Tuning Rifle Deal: done" + "Angry Squirrels: Korath Rifle Deal: done" + "Angry Squirrels: Confrontation Gear Deal: done" + "Angry Squirrels: Fragmentation Grenade Deal: done" >= 10
+			and
+				has "Angry Squirrels: Laser Rifle Deal: done"
+				has "Angry Squirrels: Tuning Rifle Deal: done"
+				has "Angry Squirrels: Korath Rifle Deal: done"
+				has "Angry Squirrels: Confrontation Gear Deal: done"
+				has "Angry Squirrels: Fragmentation Grenade Deal: done"
+	on offer
+		event "unfettered weapon collectors"
+		fail
+		
+event "unfettered weapon collectors"
+	system "Ehma Ti"
+		add fleet "unfettered weapon collectors" 20000
+	system "Wah Yoot"
+		add fleet "unfettered weapon collectors" 20000
+	system "Hi Yahr"
+		add fleet "unfettered weapon collectors" 20000
+
+
+
+
 mission "Angry Squirrels: Nerve Gas Smuggling"
 	name "Unfettered Nerve Gas Smuggling"
 	description "Deliver 100 sets of illegal Nerve Gas to your client on <planet>. Payment is <payment>." 

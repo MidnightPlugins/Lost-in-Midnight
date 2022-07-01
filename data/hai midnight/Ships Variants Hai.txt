@@ -111,6 +111,45 @@ ship "Shield Beetle" "Shield Beetle (Jump, Pulse)"
 
 
 
+ship "Shield Beetle" "Shield Beetle (Weapon Collector)"
+	outfits
+		"Ion Cannon" 4
+		"Hai Tracker Pod" 4
+		"Hai Tracker" 280
+		"Tracker Storage Pod" 2
+		"Chameleon Anti-Missile" 2
+		"Boulder Reactor"
+		"Geode Reactor"
+		"Hai Gorge Batteries"
+		"Hai Ravine Batteries"
+		"Hai Diamond Regenerator"
+		"Hai Williwaw Cooling" 2
+		"Quantum Keystone"
+		`"Bondir" Atomic Thruster`
+		`"Bufaer" Atomic Steering`
+		"Hyperdrive"
+		"Pulse Rifle" 27
+		"Dual Pulse Pistols"
+		"Laser Rifle"
+		"Tuning Rifle"
+		"Korath Repeater Rifle"
+		"Enforcer Confrontation Gear"
+		"Fragmentation Grenades"
+	gun "Ion Cannon"
+	gun "Ion Cannon"
+	gun "Hai Tracker Pod"
+	gun "Hai Tracker Pod"
+	gun "Ion Cannon"
+	gun "Ion Cannon"
+	gun "Hai Tracker Pod"
+	gun "Hai Tracker Pod"
+	turret
+	turret
+	turret "Chameleon Anti-Missile"
+	turret "Chameleon Anti-Missile"
+
+
+
 ship "Solifuge" "Solifuge Prototype"
 	sprite "ship/hai solifuge prototype"
 	thumbnail "thumbnail/hai solifuge prototype-thumb"
