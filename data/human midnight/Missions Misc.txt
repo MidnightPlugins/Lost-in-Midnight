@@ -1119,6 +1119,20 @@ mission "Mining: Claim Jumpers"
 	source
 		government "Republic" "Syndicate" "Free Worlds"
 	to offer
+		or
+			has "Mining: Iron Challenge: done"
+			has "Mining: Silicon: done"
+			has "Mining: Lead: done"
+			has "Mining: Iron: done"
+			has "Mining: Aluminum: done"
+			has "Mining: Titanium: done"
+			has "Mining: Copper: done"
+			has "Mining: Neodymium: done"
+			has "Mining: Tungsten: done"
+			has "Mining: Uranium: done"
+			has "Mining: Silver: done"
+			has "Mining: Gold: done"
+			has "Mining: Platinum: done"
 		random < 5
 	on offer
 		require "Asteroid Scanner"
@@ -1126,6 +1140,7 @@ mission "Mining: Claim Jumpers"
 		government "Merchant"
 		personality launching mining harvests timid
 		fleet
+			names "civilian"
 			cargo 0
 			variant
 				"Sparrow" 3
@@ -1186,6 +1201,7 @@ mission "Mining: Iron Challenge"
 			cargo 0
 			variant 1
 				"Berserker (Energy Cannons)"
+			
 	on complete
 		outfit "Iron" -15
 		payment 30000
