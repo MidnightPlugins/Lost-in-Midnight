@@ -3,7 +3,7 @@ A mission focused plugin for Endless Sky.
 
 Many new missions and mission chains.
 Several new systems, ships and variants.
-New outfits.
+New outfits. Some new starts.
 
 Some highlights:
 - a doomsday device left behind by a long dead civilization
