@@ -1338,6 +1338,8 @@ fleet "Mutated Astero Nautilus"
 mission "First Contact: Astero Nautilus"
 	landing
 	invisible
+	to offer
+		has "event: reveal Pebble Beach"
 	on enter "Pebble Beach"
 		dialog `You have the eerie feeling that something is lurking among the asteroids...`
 	npc kill
