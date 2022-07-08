@@ -384,22 +384,6 @@ ship "Hackerz Drone"
 	explode "small explosion" 5
 	description "Warning: the target ship is programmed to engage in self-defense behaviors to ensure a realistic simulation."
 
-ship "Mule" "Mule Test Dummy"
-	add attributes
-		"automaton" 1
-		"self destruct" 1
-ship "Hauler" "Hauler Test Dummy"
-	add attributes
-		"automaton" 1
-		"self destruct" 1
-ship "Freighter" "Freighter Test Dummy"
-	add attributes
-		"automaton" 1
-		"self destruct" 1
-ship "Argosy" "Argosy Test Dummy"
-	add attributes
-		"automaton" 1
-		"self destruct" 1
 
 
 
