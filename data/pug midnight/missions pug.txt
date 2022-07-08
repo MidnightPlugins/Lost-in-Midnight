@@ -78,9 +78,9 @@ mission "Dream Crystal 2"
 		not attributes "uninhabited"
 	destination "Mutiny"
 	to offer
-		has "Dream Crystal 1A: decline"
-		has "Dream Crystal 1B: decline"
-		has "Dream Crystal 1C: decline"
+		has "Dream Crystal 1A: declined"
+		has "Dream Crystal 1B: declined"
+		has "Dream Crystal 1C: declined"
 	on offer
 		require "Pug Peacekeeping Staff"
 		conversation
