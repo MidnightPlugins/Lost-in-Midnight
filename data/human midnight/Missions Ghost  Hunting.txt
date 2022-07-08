@@ -1022,7 +1022,7 @@ phrase "ghost fleet test dummy offer"
 
 mission "Ghost Hunting: Ghost Fleet"
 	name "Ghost Ship?"
-	description "There are rumors of fleet of ghost ships attacking solitary ships near <destination>... The reward for destroying it is <payment>."
+	description "There are rumors of fleet of ghost ships attacking ships near <destination>... The reward for destroying it is <payment>."
 	source
 		attributes "frontier"
 	to offer
@@ -1042,12 +1042,12 @@ mission "Ghost Hunting: Ghost Fleet"
 		fleet
 			names "error test ship"
 			variant
-				"Quicksilver Test Dummy"
+				"Quicksilver Test Dummy2"
 				"Argosy Test Dummy"
-				"Splinter Test Dummy"
-				"Vanguard Test Dummy"
+				"Splinter Test Dummy2"
+				"Vanguard Test Dummy2"
 			variant
-				"Berserker Test Dummy"
+				"Berserker Test Dummy2"
 				"Argosy Test Dummy"
 				"Mule Test Dummy"
 				"Leviathan Test Dummy"
@@ -1064,10 +1064,62 @@ ship "Leviathan" "Leviathan Test Dummy"
 	add attributes
 		"automaton" 1
 		"self destruct" 1
+		"required crew" -43
+		"bunks" -64
 ship "Falcon" "Falcon Test Dummy"
 	add attributes
 		"automaton" 1
 		"self destruct" 1
+		"required crew" -52
+		"bunks" -75
+ship "Berserker" "Berserker Test Dummy2"
+	add attributes
+		"automaton" 1
+		"self destruct" 1
+		"required crew" -1
+		"bunks" -2
+ship "Quicksilver" "Quicksilver Test Dummy2"
+	add attributes
+		"automaton" 1
+		"self destruct" 1
+		"required crew" -3
+		"bunks" -6
+ship "Splinter" "Splinter Test Dummy2"
+	add attributes
+		"automaton" 1
+		"self destruct" 1
+		"required crew" -7
+		"bunks" -21
+ship "Vanguard" "Vanguard Test Dummy2"
+	add attributes
+		"automaton" 1
+		"self destruct" 1
+		"required crew" -23
+		"bunks" -45
+ship "Mule" "Mule Test Dummy"
+	add attributes
+		"automaton" 1
+		"self destruct" 1
+		"required crew" -14
+		"bunks" -43
+ship "Hauler" "Hauler Test Dummy"
+	add attributes
+		"automaton" 1
+		"self destruct" 1
+		"required crew" -3
+		"bunks" -12
+ship "Freighter" "Freighter Test Dummy"
+	add attributes
+		"automaton" 1
+		"self destruct" 1
+		"required crew" -2
+		"bunks" -7
+ship "Argosy" "Argosy Test Dummy"
+	add attributes
+		"automaton" 1
+		"self destruct" 1
+		"required crew" -4
+		"bunks" -14
 
 mission "Ghost Hunting: Ghost Fleet Reset"
 	landing
