@@ -263,6 +263,9 @@ mission "Balthazar Delivery"
 		give ship "District" "Balthazar"
 		dialog `You have abandoned the quest to reassemble Exodus and have chosen to add the District ship Balthazar to your fleet instead.`
 
+	on enter
+		dialog `The launch was a success! Maria and her team did an excellent job fixing the Balthazar. Now you just have to safely escort it to Luna in the Sol system.`
+
 	npc
 		system Kugel
 		government "Pirate"
@@ -495,7 +498,7 @@ mission "Melchior 7"
 	on visit Rust
 		dialog phrase "generic passenger on visit"
 	on complete
-		dialog `The Wigglebottoms constantly argued over minor inconsequential things during the trip. The sooner you head over to the spaceport, the sooner you can be rid of them... and have Melchior fly again. That's important too. Maybe.`
+		dialog `The Wigglebottoms constantly argued over minor inconsequential things during the trip. Head over to the spaceport when you are done with your preparations. The sooner you launch, the sooner you can be rid of them... and have Melchior fly again. That's important too. Maybe.`
 
 mission "Melchior Delivery"
 	name "Delivering Melchior"
@@ -517,6 +520,9 @@ mission "Melchior Delivery"
 			scene "ship/metro prefecture"
 			`	The Prefecture city ship Melchior is ready to fly. Barmy Edwards even scrubbed off the scorch marks from previous experiments. As you previously agreed, Cathleen Wigglebottom and her team will crew the ship while her brother Richard pilots it. Thankfully, you'll remain on your own ship, out of earshot from their constant bickering. The time has come to deliver Melchior to Joseph Welder on Luna.`
 				launch
+
+	on enter
+		dialog `The Melchior launches without any issues. Hopefully the journey to Luna in the Sol system will be a quiet and peaceful one.`
 
 	on abort
 		give ship "Prefecture" "Melchior"
@@ -660,9 +666,10 @@ mission "Caspar Capture"
 	on accept
 		log `Found the Caspar in the Archipelago. The pirate crew mutinied against their captain and offered to join my fleet.`
 		log "People" "Tyler Maverick" `The newly appointed captain of the Caspar, after its crew of children mutinied against their pirate captain. He seems sincere in wanting to keep his crew together.`
+	on complete
+		dialog `Tyler and his crew safely land the Caspar on <planet>. Visit the spaceport when you've completed your preparations and are ready to launch.`
 
 mission "Caspar Delivery"
-	landing
 	name "Delivering Caspar"
 	description `Escort the Municipality city ship Caspar to the shipyards on <planet> in the <system> system.`
 	source Vesta
@@ -673,7 +680,11 @@ mission "Caspar Delivery"
 		conversation
 			scene "ship/metro municipality"
 			`Your ships are refueled. It's time to deliver Caspar to Luna and reassemble the Metropolis ship Exodus!`
-				accept
+				launch
+
+	on enter
+		dialog `The Caspar is flying good as new. Set your heading to Luna in the Sol system before you attract the attention of some pirates.`
+
 	on abort
 		give ship "Municipality" "Caspar"
 		dialog `You have abandoned the quest to reassemble Exodus and have chosen to add the Municipality ship Caspar to your fleet instead.`
