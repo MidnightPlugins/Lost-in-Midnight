@@ -33,7 +33,7 @@ mission "QKBlade: House Unuk Pickup"
 	stopover
 		planet "Flood"
 	on stopover
-		dialog "You pickup <cargo>. Deliver them to <destination> to get your payment."
+		dialog "You pick up <cargo>. Deliver them to <destination> to get your payment."
 	on visit
 		dialog phrase "generic missing stopover or cargo"
 	on complete
@@ -57,7 +57,7 @@ mission "QKBlade: House Unuk Imports"
 		distance 1 20
 		attributes "farming"
 	on stopover
-		dialog "You pickup <cargo>. Deliver them to <destination> to get your payment."
+		dialog "You pick up <cargo>. Deliver them to <destination> to get your payment."
 	on visit
 		dialog phrase "generic missing stopover or cargo"
 	on complete
@@ -143,7 +143,7 @@ mission "QKBlade: House Unuk Door Delivery"
 				`	"Looks like I'll be taking a hike through the mountains."`
 
 			`	You spend several hours hiking through mountain trails before arriving at your destination, the remote mansion of House Unuk located high in the Zuba Fahn mountains. The mansion is concealed beneath a thick forest canopy. But peering between the trees gives you a perfect view of the spaceport in the distance.`
-			`	The building is surrounded by a high stone wall. A communication device is setup at the front gate and you try using it.`
+			`	The building is surrounded by a high stone wall. A communication device is set up at the front gate and you try using it.`
 			`	"Hello? What business do you have at House Unuk?"`
 			`	"Just a simple delivery. I was told I would be paid if I brought this here." You hold up the package for the camera.`
 			`	"Ah, yes! I'll send someone out shortly."`
@@ -611,7 +611,7 @@ mission "QKBlade: Bearer of The Blade 2"
 	on offer
 		require "Quantum Key Blade"
 		conversation
-			`A large crowd has gathered at the entrance to the space port. Apparently, one of the Quantum Key Blades was loaned to a local culture festival and has been put on display for a daily show demonstrating it's powers. The next showing is supposed to start soon.`
+			`A large crowd has gathered at the entrance to the space port. Apparently, one of the Quantum Key Blades was loaned to a local culture festival and has been put on display for a daily show demonstrating its powers. The next showing is supposed to start soon.`
 			choice
 				`	(Wait for the show to start.)`
 				`	(Leave.)`

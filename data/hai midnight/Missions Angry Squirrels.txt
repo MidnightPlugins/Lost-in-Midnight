@@ -810,7 +810,7 @@ mission "Angry Squirrels: It came from the desert..."
 	on enter Ehmahai
 		conversation
 			scene "scene/scene-megalocoleus1"
-			`There is a Hai ship you haven't seen before patrolling the system. But it doesn't seem new. On the contrary, it's hull looks worn with age."`
+			`There is a Hai ship you haven't seen before patrolling the system. But it doesn't seem new. On the contrary, its hull looks worn with age."`
 	npc kill
 		government "Hai (Unfettered)"
 		system "Ehmahai"
@@ -848,7 +848,7 @@ mission "Ancestral Lands: Colonists 1"
 	job
 	repeat
 	name "Colonists from <stopovers>"
-	description "Travel to <stopovers> to pickup new colonists. Then bring them to <destination>. Payment is <payment>."
+	description "Travel to <stopovers> to pick up new colonists. Then bring them to <destination>. Payment is <payment>."
 	passengers 100 200
 	source
 		government "Hai (Unfettered)"
@@ -870,7 +870,7 @@ mission "Ancestral Lands: Colonists 2"
 	job
 	repeat
 	name "Colonists from <stopovers>"
-	description "Travel to <stopovers> to pickup new colonists. Then bring them to <destination>. Payment is <payment>."
+	description "Travel to <stopovers> to pick up new colonists. Then bring them to <destination>. Payment is <payment>."
 	passengers 150 250
 	source
 		government "Hai (Unfettered)"
@@ -890,7 +890,7 @@ mission "Ancestral Lands: Colonists 3"
 	job
 	repeat
 	name "Colonists from <stopovers>"
-	description "Travel to <stopovers> to pickup new colonists. Then bring them to <destination>. Payment is <payment>."
+	description "Travel to <stopovers> to pick up new colonists. Then bring them to <destination>. Payment is <payment>."
 	passengers 200 300
 	source
 		government "Hai (Unfettered)"
