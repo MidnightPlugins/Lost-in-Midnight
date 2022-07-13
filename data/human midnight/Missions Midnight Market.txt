@@ -564,7 +564,7 @@ mission "Midnight Market: Intrusion Countermeasures 2"
 			`	"What, exactly, am I buying?" you ask.`
 			scene "outfit/quarg countermeasures"
 			`	"Behold!" he gestures towards his ship's cargo bay. The doors swing open and a cargo lift drags out a pallet loaded with an alien device. "What we have here is a Quarg Intrusion Countermeasures device. The pinnacle of ship security technology. Scavengers salvaged it from a wrecked Quarg vessel. It eventually found its way into our inventory."`
-			`	You wonder how effective the device is, considering it failed to save it's original owner.`
+			`	You wonder how effective the device is, considering it failed to save its original owner.`
 			choice
 				`	(Purchase the Intrusion Countermeasures.)`
 					goto purchase

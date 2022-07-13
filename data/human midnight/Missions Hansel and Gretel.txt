@@ -231,7 +231,7 @@ mission "Hansel & Gretel: Rescue Hansel"
 		government "Merchant"
 		personality target derelict timid
 		ship "Vanguard (no hyperdrive)" "Hansel"
-		dialog `The Hansel has been plundered! It's Hyperdrive is among the missing outfits. Land on <planet> so they can repair the ship.`
+		dialog `The Hansel has been plundered! Its Hyperdrive is among the missing outfits. Land on <planet> so they can repair the ship.`
 	on visit
 		dialog `You've arrived ahead of the Hansel and Gretel! Return to space and wait for them to arrive.`
 	on complete

@@ -434,7 +434,7 @@ mission "Melchior 5"
 			label purchase
 			`	"Alright." He looks something up on a data pad. "6,000,000 credits. Don't bother haggling. I've already cut down the suggested price."`
 			`	You look at the data pad and see that he has given you a huge discount.`
-			`	"Do you have a crew setup for it?" he asks.`
+			`	"Do you have a crew set up for it?" he asks.`
 			choice
 				`	"I know someone who's able to help with that."`
 
@@ -588,7 +588,7 @@ mission "Caspar 1"
 			`	You thank the bartender for the story.`
 				accept
 	on accept
-		log `The Exodus was attacked by aliens during it's initial voyage beyond Earth's solar system. The ship used its separation feature to try outmaneuvering the aliens. Instead of working together, the three ships fled the battle.`
+		log `The Exodus was attacked by aliens during its initial voyage beyond Earth's solar system. The ship used its separation feature to try outmaneuvering the aliens. Instead of working together, the three ships fled the battle.`
 	on enter Alphard
 		dialog `The merchant ship Guiding Star is asking for assistance.`
 	npc

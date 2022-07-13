@@ -382,7 +382,7 @@ mission "Grudge Fight 5"
 			`	The woman's expression changes to one of slight disappointment. "Oh. My mistake. You look so much like him. Sorry for bothering you." She walks away without another word.`
 				defer
 			label offer
-			`	I saw the <ship> in the port registry and knew that you would be around here. You may not realize it, but you've been developing quite the reputation as a combat pilot. Which brings me to my point. I'm looking for an able pilot to test a new prototype ship we've developed. All you have to do is go to the testing area and fight the ship until it's disabled. Then perform a scan of it's cargo and deliver that data to our offices on Luna. Of course, if you destroy or steal the ship, you won't be paid. Will you participate?`
+			`	I saw the <ship> in the port registry and knew that you would be around here. You may not realize it, but you've been developing quite the reputation as a combat pilot. Which brings me to my point. I'm looking for an able pilot to test a new prototype ship we've developed. All you have to do is go to the testing area and fight the ship until it's disabled. Then perform a scan of its cargo and deliver that data to our offices on Luna. Of course, if you destroy or steal the ship, you won't be paid. Will you participate?`
 			choice
 				`	"Sure, I'm always interested in new ship models."`
 				`	"Sorry, I'm not interested."`
@@ -428,7 +428,7 @@ mission "Grudge Fight 5"
 		"reputation: Independent (Killable)" >?= 10
 		event "Grudge Legacy"
 		payment 250000
-		log `Fought a War Hauler for the first time today. Tough little ship, the Grudge Hammer. It's captain, Papa Grudge, was the leader of the Grudge crime family. I received a sizable bounty for taking him down.`
+		log `Fought a War Hauler for the first time today. Tough little ship, the Grudge Hammer. Its captain, Papa Grudge, was the leader of the Grudge crime family. I received a sizable bounty for taking him down.`
 		conversation
 			`When you land on <planet>, the Luna shipyards inform you that there is no record of any test battle scheduled in Nocte. You look up bounties and wanted pirate documents, searching for any mention of the Grudge Hammer. Eventually, you find a bounty for the destruction of that ship. The information indicates that the pirate you killed went by the name Papa Grudge, leader of the Grudge family outlaws. Papa Grudge organized their criminal activities, assigning each of the Grudge children to roles that best suited them. This region of space should be safer with him gone.`
 			`	You head to the local authorities, and show them your combat logs of your fight against the Grudge Hammer. They pay you <payment> for your effort.`
@@ -835,7 +835,7 @@ mission "Grudge Hammer"
 		"reputation: Independent (Killable)" >?= 10
 		event "Grudge Legacy"
 		payment 250000
-		log `Fought a War Hauler for the first time today. Tough little ship, the Grudge Hammer. It's captain, Papa Grudge, was the leader of the Grudge crime family. I received a sizable bounty for taking him down.`
+		log `Fought a War Hauler for the first time today. Tough little ship, the Grudge Hammer. Its captain, Papa Grudge, was the leader of the Grudge crime family. I received a sizable bounty for taking him down.`
 		conversation
 			`When you land on <planet>, you look up bounties and wanted pirate documents, searching for any mention of the Grudge Hammer. Eventually, you find a bounty for the destruction of that ship. The information indicates that the pirate you killed went by the name Papa Grudge, leader of the Grudge family outlaws. Papa Grudge organized their criminal activities, assigning each of the Grudge children to roles that best suited them. This region of space should be safer with him gone.`
 			`	You head to the local authorities, and show them your combat logs of your fight against the Grudge Hammer. They pay you <payment> for your effort.`

@@ -397,7 +397,7 @@ mission "Star Explorer Fan Tour"
 	on enter
 		conversation
 			scene "ship/star explorer"
-			`	Orchestral music plays as a message from the Star Explorer's captain is transmitted, "This is Captain Tim Smirk of the Last Frontier. The Star Explorer wasn't just a show. It was an ancient space exploration vessel from the early days of Hyperspace travel. Its design was heavily influenced by an old Earth science-fiction show with the same name as a marketing gimmick to entice young people to leave Sol and risk their lives exploring the vast unknown. Of the few that haven't been lost or destroyed, there are some still being used as actual science and exploration vessels. We'll be traveling to <waypoints> in search of new life and peaceful civilizations as we explore in the Last Frontier. But beware! The dreaded Grabons could attack us along the way! Rest assured I will endeavor to keep us safe along with our escort, Captain <first> <last> and the <ship>." Apparently that was an address meant for the passengers. Nice touch, adding your name at the end."`
+			`	Orchestral music plays as a message from the Star Explorer's captain is transmitted, "This is Captain Tim Smirk of the Last Frontier. The Star Explorer wasn't just a show. It was an ancient space exploration vessel from the early days of Hyperspace travel. Its design was heavily influenced by an old Earth science-fiction show with the same name as a marketing gimmick to entice young people to leave Sol and risk their lives exploring the vast unknown. Of the few that haven't been lost or destroyed, there are some still being used as actual science and exploration vessels. We'll be traveling to <waypoints> in search of new life and peaceful civilizations as we explore in the Last Frontier. But beware! The dreaded Grabons could attack us along the way! Rest assured I will endeavor to keep us safe along with our escort, Captain <first> <last> and the <ship>." Apparently that was an address meant for the passengers. Nice touch, adding your name at the end.`
 
 	on enter "Mirzam"
 		dialog `Captain Smirk sends out a message, "Red Alert! Hostile Grabons are attacking!" This must be one of the mock battles. You're only supposed to disable them, but those lasers are real...`
@@ -1182,7 +1182,7 @@ mission "Mining: Iron Challenge"
 				`	"I don't mine."`
 					decline
 			scene "asteroid/iron/spin"
-			`	"How about a challenge then? It'll be my ship, the <npc>, versus yours. Whoever mines the most Iron by <date> wins. The loser gives their harvest to the winner. How about it?" The <npc> looks like a capable mining ship. But unless it's been significantly modified, it's pilot seems to have forgotten an important detail..."`
+			`	"How about a challenge then? It'll be my ship, the <npc>, versus yours. Whoever mines the most Iron by <date> wins. The loser gives their harvest to the winner. How about it?" The <npc> looks like a capable mining ship. But unless its been significantly modified, its pilot seems to have forgotten an important detail..."`
 			choice
 				`	(Accept the challenge.)`
 				`	(Reject the challenge.)`

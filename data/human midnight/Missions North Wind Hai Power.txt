@@ -334,7 +334,7 @@ outfitter "North Wind"
 
 mission "North Wind 6: Turner Inc."
 	name "North Wind Turner"
-	description "Go to <destination> to pickup Yuki Onna of North Wind Cooling."
+	description "Go to <destination> to pick up Yuki Onna of North Wind Cooling."
 	source
 		government "Free Worlds" "Syndicate"
 	destination Valhalla
@@ -451,7 +451,7 @@ mission "North Wind 9: Greenwater stocked"
 
 mission "Turner Inc.: Hai Power 1"
 	name "Hai Power: Gnome Core"
-	description "Escort the <npc> to <destination> and pickup a prototype Gnome Core for Turner Inc."
+	description "Escort the <npc> to <destination> and pick up a prototype Gnome Core for Turner Inc."
 	source Greenwater
 	destination Makerplace
 	to offer

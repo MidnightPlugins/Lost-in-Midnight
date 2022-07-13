@@ -870,7 +870,7 @@ mission "Oathbreaker Poisonwood"
 		fail "Oathbreaker Strategos Deployed"
 		conversation
 			scene thumbnail/strategos-thumb
-			`You receive an urgent message from Alondo on Bourne. "Hello <first>! We've just got confirmation from the Republic that the Strategos class Navy super carrier "R.N.S. Poisonwood" has abandoned its mission in the Dirt Belt and is likely on it's way to the south to join the Oathbreakers. We are recruiting every pilot in the area to hunt down that ship and destroy it before that happens.`
+			`You receive an urgent message from Alondo on Bourne. "Hello <first>! We've just got confirmation from the Republic that the Strategos class Navy super carrier "R.N.S. Poisonwood" has abandoned its mission in the Dirt Belt and is likely on its way to the south to join the Oathbreakers. We are recruiting every pilot in the area to hunt down that ship and destroy it before that happens.`
 			choice
 				`	"I'll do my best to hunt them down."`
 					goto vigilant

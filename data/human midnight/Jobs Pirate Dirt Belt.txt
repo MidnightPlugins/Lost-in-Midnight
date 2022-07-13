@@ -963,7 +963,7 @@ mission "New China Supplies to Diyu"
 	repeat
 	deadline 8
 	name "New China Supply Run"
-	description "Pickup <cargo> from <stopovers> and deliver them to <origin> by <date>. Payment is <payment>. Do not let law enforcement follow you."
+	description "Pick up <cargo> from <stopovers> and deliver them to <origin> by <date>. Payment is <payment>. Do not let law enforcement follow you."
 	source "Wang Xiang Tai"
 	stopover "New China"
 	cargo random 5 2 .1
