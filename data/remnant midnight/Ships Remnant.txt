@@ -217,7 +217,7 @@ ship "Raptor Prototype"
 	explode "large explosion" 10
 	explode "huge explosion" 5
 	"final explode" "final explosion large" 1
-	description `The Raptor Prototype is the result of experiments utilizing biological specimens collected from across the galaxy and beyond. As a result, it's design is a bit different from other Remnant ships.`
+	description `The Raptor Prototype is the result of experiments utilizing biological specimens collected from across the galaxy and beyond. As a result, its design is a bit different from other Remnant ships.`
 
 
 
