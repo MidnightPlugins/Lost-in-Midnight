@@ -44,7 +44,7 @@ mission "Midnight Market: Trailblazer Auction"
 			apply
 				set "trailblazer encountered"
 			`	"30 million!" yells one Saryd.`
-			`	"30 million!" recites another Saryd from behind a podium setup in front of the crowd. "Is a bid there for 31?"`
+			`	"30 million!" recites another Saryd from behind a podium set up in front of the crowd. "Is a bid there for 31?"`
 			`	"31 million!" yells an Arachi.`
 			`	"31 million!" repeats the Saryd at the podium. "Will a bid of 32 anyone make?"`
 			`	From what you are seeing, it looks like the ship is being auctioned off...`
