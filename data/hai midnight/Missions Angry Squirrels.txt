@@ -679,6 +679,7 @@ mission "Angry Squirrels: Journey to the Southwest"
 		dialog `The Muramasa hasn't arrived. Return to space and wait for them.`
 
 	on complete
+		give ship "Solifuge Prototype" "Muramasa"
 		event "Completed Journey to the Southwest"
 		event "Unfettered Expand in Ancestral Lands" 30
 		event "It came from the desert..." 180
