@@ -930,10 +930,10 @@ ship "Ember Nightmare"
 		"outfit space" 885
 		"weapon capacity" 393
 		"engine capacity" 144
-		"shield generation" 5.2
-		"shield energy" 4.6
-		"hull repair rate" 5.2
-		"hull energy" 3.75
+		"shield generation" 7.9
+		"shield energy" 6.4
+		"hull repair rate" 2.5
+		"hull energy" 1.95
 		"outfit scan power" 18
 		"outfit scan speed" 1
 		"tactical scan power" 39
