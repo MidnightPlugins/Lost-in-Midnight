@@ -809,7 +809,7 @@ mission "Coalition Dissension: Rogue Heliarch Arach (Neutralizer)"
 					accept
 				`	(Don't get involved.)`
 					defer
-	npc capture
+	npc kill
 		government "Coalition Bounty (Disguised)"
 		system
 			near "Sol Arach" 1 2
@@ -820,13 +820,14 @@ mission "Coalition Dissension: Rogue Heliarch Arach (Neutralizer)"
 			apply
 				"reputation: Heliarch" -= 5
 				"coalition dissension" ++
-			`You receive a message from the Heliarch demanding to know why you have taken posession of the <npc>. Visit <destination> to explain yourself.`
+			`You receive a message from the Heliarch demanding to know why you have attacked the <npc>. Visit <destination> to explain yourself.`
 	on fail
 		clear "Coalition Dissension: Rogue Heliarch Arach (Neutralizer): offered"
 	on complete
 		clear "Coalition Dissension: Rogue Heliarch Arach (Neutralizer): offered"
+		"reputation: Heliarch" += 2
 		conversation
-			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you captured the <npc> in the process.`
+			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you attacked the <npc> without their authorization.`
 	
 
 mission "Coalition Dissension: Rogue Heliarch Kimek (Neutralizer)"
@@ -857,7 +858,7 @@ mission "Coalition Dissension: Rogue Heliarch Kimek (Neutralizer)"
 					accept
 				`	(Don't get involved.)`
 					defer
-	npc capture
+	npc kill
 		government "Coalition Bounty (Disguised)"
 		system
 			near "Sol Kimek" 1 2
@@ -868,13 +869,14 @@ mission "Coalition Dissension: Rogue Heliarch Kimek (Neutralizer)"
 			apply
 				"reputation: Heliarch" -= 5
 				"coalition dissension" ++
-			`You receive a message from the Heliarch demanding to know why you have taken posession of the <npc>. Visit <destination> to explain yourself.`
+			`You receive a message from the Heliarch demanding to know why you have attacked the <npc>. Visit <destination> to explain yourself.`
 	on fail
 		clear "Coalition Dissension: Rogue Heliarch Kimek (Neutralizer): offered"
 	on complete
 		clear "Coalition Dissension: Rogue Heliarch Kimek (Neutralizer): offered"
+		"reputation: Heliarch" += 2
 		conversation
-			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you captured the <npc> in the process.`
+			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you attacked the <npc> without their authorization.`
 
 mission "Coalition Dissension: Rogue Heliarch Saryd (Neutralizer)"
 	deadline
@@ -904,7 +906,7 @@ mission "Coalition Dissension: Rogue Heliarch Saryd (Neutralizer)"
 					accept
 				`	(Don't get involved.)`
 					defer
-	npc capture
+	npc kill
 		government "Coalition Bounty (Disguised)"
 		system
 			near "Sol Saryd" 1 2
@@ -916,13 +918,14 @@ mission "Coalition Dissension: Rogue Heliarch Saryd (Neutralizer)"
 			apply
 				"reputation: Heliarch" -= 5
 				"coalition dissension" ++
-			`You receive a message from the Heliarch demanding to know why you have taken posession of the <npc>. Visit <destination> to explain yourself.`
+			`You receive a message from the Heliarch demanding to know why you have attacked the <npc>. Visit <destination> to explain yourself.`
 	on fail
 		clear "Coalition Dissension: Rogue Heliarch Saryd (Neutralizer): offered"
 	on complete
 		clear "Coalition Dissension: Rogue Heliarch Saryd (Neutralizer): offered"
+		"reputation: Heliarch" += 2
 		conversation
-			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you captured the <npc> in the process.`
+			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you attacked the <npc> without their authorization.`
 
 
 
@@ -954,7 +957,7 @@ mission "Coalition Dissension: Rogue Heliarch Arach (Breacher)"
 					accept
 				`	(Don't get involved.)`
 					defer
-	npc capture
+	npc kill
 		government "Coalition Bounty (Disguised)"
 		system
 			near "Sol Arach" 1 2
@@ -965,13 +968,14 @@ mission "Coalition Dissension: Rogue Heliarch Arach (Breacher)"
 			apply
 				"reputation: Heliarch" -= 3
 				"coalition dissension" ++
-			`You receive a message from the Heliarch demanding to know why you have taken posession of the <npc>. Visit <destination> to explain yourself.`
+			`You receive a message from the Heliarch demanding to know why you have attacked the <npc>. Visit <destination> to explain yourself.`
 	on fail
 		clear "Coalition Dissension: Rogue Heliarch Arach (Breacher): offered"
 	on complete
 		clear "Coalition Dissension: Rogue Heliarch Arach (Breacher): offered"
+		"reputation: Heliarch" += 1
 		conversation
-			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you captured the <npc> in the process.`
+			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you attacked the <npc> without their authorization.`
 
 mission "Coalition Dissension: Rogue Heliarch Kimek (Breacher)"
 	deadline
@@ -1001,7 +1005,7 @@ mission "Coalition Dissension: Rogue Heliarch Kimek (Breacher)"
 					accept
 				`	(Don't get involved.)`
 					defer
-	npc capture
+	npc kill
 		government "Coalition Bounty (Disguised)"
 		system
 			near "Sol Kimek" 1 2
@@ -1012,13 +1016,14 @@ mission "Coalition Dissension: Rogue Heliarch Kimek (Breacher)"
 			apply
 				"reputation: Heliarch" -= 3
 				"coalition dissension" ++
-			`You receive a message from the Heliarch demanding to know why you have taken posession of the <npc>. Visit <destination> to explain yourself.`
+			`You receive a message from the Heliarch demanding to know why you have attacked the <npc>. Visit <destination> to explain yourself.`
 	on fail
 		clear "Coalition Dissension: Rogue Heliarch Kimek (Breacher): offered"
 	on complete
 		clear "Coalition Dissension: Rogue Heliarch Kimek (Breacher): offered"
+		"reputation: Heliarch" += 1
 		conversation
-			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you captured the <npc> in the process.`
+			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you attacked the <npc> without their authorization.`
 
 
 mission "Coalition Dissension: Rogue Heliarch Saryd (Breacher)"
@@ -1049,7 +1054,7 @@ mission "Coalition Dissension: Rogue Heliarch Saryd (Breacher)"
 					accept
 				`	(Don't get involved.)`
 					defer
-	npc capture
+	npc kill
 		government "Coalition Bounty (Disguised)"
 		system
 			near "Sol Saryd" 1 2
@@ -1060,13 +1065,14 @@ mission "Coalition Dissension: Rogue Heliarch Saryd (Breacher)"
 			apply
 				"reputation: Heliarch" -= 3
 				"coalition dissension" ++
-			`You receive a message from the Heliarch demanding to know why you have taken posession of the <npc>. Visit <destination> to explain yourself.`
+			`You receive a message from the Heliarch demanding to know why you have attacked the <npc>. Visit <destination> to explain yourself.`
 	on fail
 		clear "Coalition Dissension: Rogue Heliarch Saryd (Breacher): offered"
 	on complete
 		clear "Coalition Dissension: Rogue Heliarch Saryd (Breacher): offered"
+		"reputation: Heliarch" += 1
 		conversation
-			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you captured the <npc> in the process.`
+			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you attacked the <npc> without their authorization.`
 
 
 
@@ -1098,7 +1104,7 @@ mission "Coalition Dissension: Rogue Heliarch Arach (Interdictor)"
 					accept
 				`	(Don't get involved.)`
 					defer
-	npc capture
+	npc kill
 		government "Coalition Bounty (Disguised)"
 		system
 			near "Sol Arach" 1 2
@@ -1109,13 +1115,14 @@ mission "Coalition Dissension: Rogue Heliarch Arach (Interdictor)"
 			apply
 				"reputation: Heliarch" -= 14
 				"coalition dissension" ++
-			`You receive a message from the Heliarch demanding to know why you have taken posession of the <npc>. Visit <destination> to explain yourself.`
+			`You receive a message from the Heliarch demanding to know why you have attacked the <npc>. Visit <destination> to explain yourself.`
 	on fail
 		clear "Coalition Dissension: Rogue Heliarch Arach (Interdictor): offered"
 	on complete
 		clear "Coalition Dissension: Rogue Heliarch Arach (Interdictor): offered"
+		"reputation: Heliarch" += 7
 		conversation
-			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you captured the <npc> in the process.`
+			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you attacked the <npc> without their authorization.`
 
 mission "Coalition Dissension: Rogue Heliarch Kimek (Interdictor)"
 	deadline
@@ -1145,7 +1152,7 @@ mission "Coalition Dissension: Rogue Heliarch Kimek (Interdictor)"
 					accept
 				`	(Don't get involved.)`
 					defer
-	npc capture
+	npc kill
 		government "Coalition Bounty (Disguised)"
 		system
 			near "Sol Kimek" 1 2
@@ -1156,13 +1163,14 @@ mission "Coalition Dissension: Rogue Heliarch Kimek (Interdictor)"
 			apply
 				"reputation: Heliarch" -= 14
 				"coalition dissension" ++
-			`You receive a message from the Heliarch demanding to know why you have taken posession of the <npc>. Visit <destination> to explain yourself.`
+			`You receive a message from the Heliarch demanding to know why you have attacked the <npc>. Visit <destination> to explain yourself.`
 	on fail
 		clear "Coalition Dissension: Rogue Heliarch Kimek (Interdictor): offered"
 	on complete
 		clear "Coalition Dissension: Rogue Heliarch Kimek (Interdictor): offered"
+		"reputation: Heliarch" += 7
 		conversation
-			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you captured the <npc> in the process.`
+			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you attacked the <npc> without their authorization.`
 
 mission "Coalition Dissension: Rogue Heliarch Saryd (Interdictor)"
 	deadline
@@ -1192,7 +1200,7 @@ mission "Coalition Dissension: Rogue Heliarch Saryd (Interdictor)"
 					accept
 				`	(Don't get involved.)`
 					defer
-	npc capture
+	npc kill
 		government "Coalition Bounty (Disguised)"
 		system
 			near "Sol Saryd" 1 2
@@ -1203,13 +1211,14 @@ mission "Coalition Dissension: Rogue Heliarch Saryd (Interdictor)"
 			apply
 				"reputation: Heliarch" -= 14
 				"coalition dissension" ++
-			`You receive a message from the Heliarch demanding to know why you have taken posession of the <npc>. Visit <destination> to explain yourself.`
+			`You receive a message from the Heliarch demanding to know why you have attacked the <npc>. Visit <destination> to explain yourself.`
 	on fail
 		clear "Coalition Dissension: Rogue Heliarch Saryd (Interdictor): offered"
 	on complete
 		clear "Coalition Dissension: Rogue Heliarch Saryd (Interdictor): offered"
+		"reputation: Heliarch" += 7
 		conversation
-			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you captured the <npc> in the process.`
+			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you attacked the <npc> without their authorization.`
 
 
 
@@ -1241,7 +1250,7 @@ mission "Coalition Dissension: Rogue Heliarch Arach (Hunter)"
 					accept
 				`	(Don't get involved.)`
 					defer
-	npc capture
+	npc kill
 		government "Coalition Bounty (Disguised)"
 		system
 			near "Sol Arach" 1 2
@@ -1252,13 +1261,14 @@ mission "Coalition Dissension: Rogue Heliarch Arach (Hunter)"
 			apply
 				"reputation: Heliarch" -= 8
 				"coalition dissension" ++
-			`You receive a message from the Heliarch demanding to know why you have taken posession of the <npc>. Visit <destination> to explain yourself.`
+			`You receive a message from the Heliarch demanding to know why you have attacked the <npc>. Visit <destination> to explain yourself.`
 	on fail
 		clear "Coalition Dissension: Rogue Heliarch Arach (Hunter): offered"
 	on complete
 		clear "Coalition Dissension: Rogue Heliarch Arach (Hunter): offered"
+		"reputation: Heliarch" += 4
 		conversation
-			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you captured the <npc> in the process.`
+			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you attacked the <npc> without their authorization.`
 
 mission "Coalition Dissension: Rogue Heliarch Kimek (Hunter)"
 	deadline
@@ -1288,7 +1298,7 @@ mission "Coalition Dissension: Rogue Heliarch Kimek (Hunter)"
 					accept
 				`	(Don't get involved.)`
 					defer
-	npc capture
+	npc kill
 		government "Coalition Bounty (Disguised)"
 		system
 			near "Sol Kimek" 1 2
@@ -1299,13 +1309,14 @@ mission "Coalition Dissension: Rogue Heliarch Kimek (Hunter)"
 			apply
 				"reputation: Heliarch" -= 8
 				"coalition dissension" ++
-			`You receive a message from the Heliarch demanding to know why you have taken posession of the <npc>. Visit <destination> to explain yourself.`
+			`You receive a message from the Heliarch demanding to know why you have attacked the <npc>. Visit <destination> to explain yourself.`
 	on fail
 		clear "Coalition Dissension: Rogue Heliarch Kimek (Hunter): offered"
 	on complete
 		clear "Coalition Dissension: Rogue Heliarch Kimek (Hunter): offered"
+		"reputation: Heliarch" += 4
 		conversation
-			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you captured the <npc> in the process.`
+			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you attacked the <npc> without their authorization.`
 
 mission "Coalition Dissension: Rogue Heliarch Saryd (Hunter)"
 	deadline
@@ -1335,7 +1346,7 @@ mission "Coalition Dissension: Rogue Heliarch Saryd (Hunter)"
 					accept
 				`	(Don't get involved.)`
 					defer
-	npc capture
+	npc kill
 		government "Coalition Bounty (Disguised)"
 		system
 			near "Sol Saryd" 1 2
@@ -1346,13 +1357,14 @@ mission "Coalition Dissension: Rogue Heliarch Saryd (Hunter)"
 			apply
 				"reputation: Heliarch" -= 8
 				"coalition dissension" ++
-			`You receive a message from the Heliarch demanding to know why you have taken posession of the <npc>. Visit <destination> to explain yourself.`
+			`You receive a message from the Heliarch demanding to know why you have attacked the <npc>. Visit <destination> to explain yourself.`
 	on fail
 		clear "Coalition Dissension: Rogue Heliarch Saryd (Hunter): offered"
 	on complete
 		clear "Coalition Dissension: Rogue Heliarch Saryd (Hunter): offered"
+		"reputation: Heliarch" += 4
 		conversation
-			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you captured the <npc> in the process.`
+			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you attacked the <npc> without their authorization.`
 
 
 
@@ -1384,7 +1396,7 @@ mission "Coalition Dissension: Rogue Heliarch Arach (Judicator)"
 					accept
 				`	(Don't get involved.)`
 					defer
-	npc capture
+	npc kill
 		government "Coalition Bounty (Disguised)"
 		system
 			near "Sol Arach" 1 2
@@ -1395,13 +1407,14 @@ mission "Coalition Dissension: Rogue Heliarch Arach (Judicator)"
 			apply
 				"reputation: Heliarch" -= 10
 				"coalition dissension" ++
-			`You receive a message from the Heliarch demanding to know why you have taken posession of the <npc>. Visit <destination> to explain yourself.`
+			`You receive a message from the Heliarch demanding to know why you have attacked the <npc>. Visit <destination> to explain yourself.`
 	on fail
 		clear "Coalition Dissension: Rogue Heliarch Arach (Judicator): offered"
 	on complete
 		clear "Coalition Dissension: Rogue Heliarch Arach (Judicator): offered"
+		"reputation: Heliarch" += 5
 		conversation
-			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you captured the <npc> in the process.`
+			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you attacked the <npc> without their authorization.`
 
 mission "Coalition Dissension: Rogue Heliarch Kimek (Judicator)"
 	deadline
@@ -1431,7 +1444,7 @@ mission "Coalition Dissension: Rogue Heliarch Kimek (Judicator)"
 					accept
 				`	(Don't get involved.)`
 					defer
-	npc capture
+	npc kill
 		government "Coalition Bounty (Disguised)"
 		system
 			near "Sol Kimek" 1 2
@@ -1442,13 +1455,14 @@ mission "Coalition Dissension: Rogue Heliarch Kimek (Judicator)"
 			apply
 				"reputation: Heliarch" -= 10
 				"coalition dissension" ++
-			`You receive a message from the Heliarch demanding to know why you have taken posession of the <npc>. Visit <destination> to explain yourself.`
+			`You receive a message from the Heliarch demanding to know why you have attacked the <npc>. Visit <destination> to explain yourself.`
 	on fail
 		clear "Coalition Dissension: Rogue Heliarch Kimek (Judicator): offered"
 	on complete
 		clear "Coalition Dissension: Rogue Heliarch Kimek (Judicator): offered"
+		"reputation: Heliarch" += 5
 		conversation
-			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you captured the <npc> in the process.`
+			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you attacked the <npc> without their authorization.`
 
 mission "Coalition Dissension: Rogue Heliarch Saryd (Judicator)"
 	deadline
@@ -1478,7 +1492,7 @@ mission "Coalition Dissension: Rogue Heliarch Saryd (Judicator)"
 					accept
 				`	(Don't get involved.)`
 					defer
-	npc capture
+	npc kill
 		government "Coalition Bounty (Disguised)"
 		system
 			near "Sol Saryd" 1 2
@@ -1489,13 +1503,14 @@ mission "Coalition Dissension: Rogue Heliarch Saryd (Judicator)"
 			apply
 				"reputation: Heliarch" -= 10
 				"coalition dissension" ++
-			`You receive a message from the Heliarch demanding to know why you have taken posession of the <npc>. Visit <destination> to explain yourself.`
+			`You receive a message from the Heliarch demanding to know why you have attacked the <npc>. Visit <destination> to explain yourself.`
 	on fail
 		clear "Coalition Dissension: Rogue Heliarch Saryd (Judicator): offered"
 	on complete
 		clear "Coalition Dissension: Rogue Heliarch Saryd (Judicator): offered"
+		"reputation: Heliarch" += 5
 		conversation
-			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you captured the <npc> in the process.`
+			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you attacked the <npc> without their authorization.`
 
 
 
@@ -1527,7 +1542,7 @@ mission "Coalition Dissension: Rogue Heliarch Arach (Punisher)"
 					accept
 				`	(Don't get involved.)`
 					defer
-	npc capture
+	npc kill
 		government "Coalition Bounty (Disguised)"
 		system
 			near "Sol Arach" 1 2
@@ -1538,13 +1553,14 @@ mission "Coalition Dissension: Rogue Heliarch Arach (Punisher)"
 			apply
 				"reputation: Heliarch" -= 24
 				"coalition dissension" ++
-			`You receive a message from the Heliarch demanding to know why you have taken posession of the <npc>. Visit <destination> to explain yourself.`
+			`You receive a message from the Heliarch demanding to know why you have attacked the <npc>. Visit <destination> to explain yourself.`
 	on fail
 		clear "Coalition Dissension: Rogue Heliarch Arach (Punisher): offered"
 	on complete
 		clear "Coalition Dissension: Rogue Heliarch Arach (Punisher): offered"
+		"reputation: Heliarch" += 12
 		conversation
-			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you captured the <npc> in the process.`
+			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you attacked the <npc> without their authorization.`
 
 mission "Coalition Dissension: Rogue Heliarch Kimek (Punisher)"
 	deadline
@@ -1574,7 +1590,7 @@ mission "Coalition Dissension: Rogue Heliarch Kimek (Punisher)"
 					accept
 				`	(Don't get involved.)`
 					defer
-	npc capture
+	npc kill
 		government "Coalition Bounty (Disguised)"
 		system
 			near "Sol Kimek" 1 2
@@ -1585,13 +1601,14 @@ mission "Coalition Dissension: Rogue Heliarch Kimek (Punisher)"
 			apply
 				"reputation: Heliarch" -= 24
 				"coalition dissension" ++
-			`You receive a message from the Heliarch demanding to know why you have taken posession of the <npc>. Visit <destination> to explain yourself.`
+			`You receive a message from the Heliarch demanding to know why you have attacked the <npc>. Visit <destination> to explain yourself.`
 	on fail
 		clear "Coalition Dissension: Rogue Heliarch Kimek (Punisher): offered"
 	on complete
 		clear "Coalition Dissension: Rogue Heliarch Kimek (Punisher): offered"
+		"reputation: Heliarch" += 12
 		conversation
-			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you captured the <npc> in the process.`
+			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you attacked the <npc> without their authorization.`
 
 mission "Coalition Dissension: Rogue Heliarch Saryd (Punisher)"
 	deadline
@@ -1621,7 +1638,7 @@ mission "Coalition Dissension: Rogue Heliarch Saryd (Punisher)"
 					accept
 				`	(Don't get involved.)`
 					defer
-	npc capture
+	npc kill
 		government "Coalition Bounty (Disguised)"
 		system
 			near "Sol Saryd" 1 2
@@ -1632,13 +1649,14 @@ mission "Coalition Dissension: Rogue Heliarch Saryd (Punisher)"
 			apply
 				"reputation: Heliarch" -= 24
 				"coalition dissension" ++
-			`You receive a message from the Heliarch demanding to know why you have taken posession of the <npc>. Visit <destination> to explain yourself.`
+			`You receive a message from the Heliarch demanding to know why you have attacked the <npc>. Visit <destination> to explain yourself.`
 	on fail
 		clear "Coalition Dissension: Rogue Heliarch Saryd (Punisher): offered"
 	on complete
 		clear "Coalition Dissension: Rogue Heliarch Saryd (Punisher): offered"
+		"reputation: Heliarch" += 12
 		conversation
-			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you captured the <npc> in the process.`
+			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you attacked the <npc> without their authorization.`
 
 mission "Coalition Dissension: Rogue Heliarch Patch"
 	landing
