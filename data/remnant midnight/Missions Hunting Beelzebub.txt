@@ -517,9 +517,9 @@ mission "Hunting Beelzebub: Buccaneer Bay Rumors"
 		has "Hunting Beelzebub: Paris Resignation: declined"
 		not "Hunting Beelzebub: Stormhold Message: done"
 		or
-			not "Hunting Beelzebub: Deadman's Cove Rumors: offered"
+			not "Hunting Beelzebub: Buccaneer Bay Rumors: offered"
 			and
-				has "Hunting Beelzebub: Deadman's Cove Rumors: offered"
+				has "Hunting Beelzebub: Buccaneer Bay Rumors: offered"
 				random < 5
 	on offer
 		dialog phrase "core pirate beelzebub rumor"
@@ -537,9 +537,9 @@ mission "Hunting Beelzebub: Covert Rumors"
 		has "Hunting Beelzebub: Paris Resignation: declined"
 		not "Hunting Beelzebub: Stormhold Message: done"
 		or
-			not "Hunting Beelzebub: Deadman's Cove Rumors: offered"
+			not "Hunting Beelzebub: Covert Rumors: offered"
 			and
-				has "Hunting Beelzebub: Deadman's Cove Rumors: offered"
+				has "Hunting Beelzebub: Covert Rumors: offered"
 				random < 5
 	on offer
 		dialog phrase "core pirate beelzebub rumor"
