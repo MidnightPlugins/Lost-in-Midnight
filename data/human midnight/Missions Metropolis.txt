@@ -1088,6 +1088,7 @@ mission "Metropolis Epilogue: Leviathan Comics"
 		near "Mebla" 1 5
 	destination "Mebla's Portion"
 	to offer
+		has "Metropolis 2: done"
 		has "event: Leviathan Comic Collectible"
 		or
 			not "randomize Metropolis Epilogue: Leviathan Comics"
