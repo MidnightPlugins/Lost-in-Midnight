@@ -232,8 +232,8 @@ phrase "subsidurial herd offer"
 		`A man `
 		`A woman `
 	word
-		`approaches you`
-		`addresses you`
+		`approaches you `
+		`addresses you `
 	word
 		`and asks, "`
 	word
