@@ -441,6 +441,7 @@ outfit "Gremlin Circuits"
 	thumbnail "outfit/damaged capacitor"
 	"fused circuits" 1
 	"reinstall" -1
+	"unplunderable" 1
 	description "Some fused circuits from when you salvaged parts to make the Gremlin. You never got around to fixing it, but they're not connected to anything important so it should be fine..."
 
 
