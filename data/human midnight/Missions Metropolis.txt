@@ -1006,10 +1006,7 @@ mission "Metropolis Epilogue: Hiding in Plain Sight 2 (no Balthazar model)"
 	source "Hai-home"
 	to offer
 		has "Metropolis Epilogue: Hiding in Plain Sight 1: done"
-		or
-			not "Metropolis Epilogue: Hiding in Plain Sight 2 (Balthazar model): offered"
-			not "Metropolis Epilogue: Hiding in Plain Sight 2 (Balthazar model): failed"
-			not "Metropolis Epilogue: Hiding in Plain Sight 2 (Balthazar model): declined"
+		not "Metropolis Epilogue: Hiding in Plain Sight 2 (Balthazar model): offered"
 	on offer
 		require "Balthazar Model" 0
 		conversation
