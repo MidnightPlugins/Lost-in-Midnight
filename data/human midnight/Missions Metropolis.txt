@@ -999,6 +999,7 @@ mission "Metropolis Epilogue: Hiding in Plain Sight 2 (Balthazar model)"
 		log `Sold the Balthazar Model to Arthur and Kiru for one million credits. Apparently is was a limited production collectible.`
 		outfit "Balthazar Model" -1
 		payment 1000000
+		set "Metropolis Epilogue: Hiding in Plain Sight 2 (no Balthazar model): offered"
 		fail
 
 mission "Metropolis Epilogue: Hiding in Plain Sight 2 (no Balthazar model)"
