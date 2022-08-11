@@ -704,6 +704,7 @@ mission "Navy: Captured "Auxiliary""
 	description "Search for the <npc> near the northern pirate systems. The ship has been taken over by a pirate crew. Destroy it, then report to <destination> for payment (<payment>)"
 	source
 		government "Navy (Oathkeeper)" "Republic"
+		not attributes "automaton"
 	destination Farpoint
 	to offer
 		"combat rating" > 750
@@ -741,6 +742,7 @@ mission "Navy: Captured Carrier"
 	description "Search for the <npc> near the northern pirate systems. The ship has been taken over by a pirate crew. Destroy it, then report to <destination> for payment (<payment>)"
 	source
 		government "Navy (Oathkeeper)" "Republic"
+		not attributes "automaton"
 	destination Farpoint
 	to offer
 		"combat rating" > 1000
@@ -903,6 +905,8 @@ mission "Quash: Humanika Infiltration 2"
 		conversation
 			scene "outfit/sniper rifle"
 			`When you land, Commander hands over <payment>. "Sorry it's not what we agreed on, but the others were each responsible for paying a portion of it. Now that they're..." He hesitates a moment, then hands over the Sniper Rifle. "I guess you could also try selling this. That's the best I can offer." He departs, never explaining anything about what happened on Humanika or the mysterious Quarg he was cursing.`
+
+
 
 phrase "asteroid names"
 	phrase
