@@ -630,7 +630,7 @@ mission "Hunting Beelzebub: Rescue Paris"
 		personality waiting staying timid uninterested surveillance mute
 		ship "Modified Blackbird" "Black Wings"
 	on complete
-		dialog `Tom departs soon after landing. He never mentions leaving Deep Security and you don't mention that you're hunting Beelzebub on your own. With both you attempting to track down Beelzebub, you'll probably cross paths again someday.`
+		dialog `Tom departs soon after landing. He never mentions leaving Deep Security and you don't mention that you're hunting Beelzebub on your own. With both of you attempting to track down Beelzebub, you'll probably cross paths again someday.`
 
 phrase "dirt belt rumors of beelzebub"
 	word
@@ -704,12 +704,10 @@ mission "Hunting Beelzebub: Lares Camping 1"
 		"beelzebub trail goes cold" += 15
 
 mission "Hunting Beelzebub: Lares Camping 2"
-	repeat
 	invisible
 	source Lares
 	to offer
 		has "Hunting Beelzebub: Lares Camping 1: done"
-		"Hunting Beelzebub: Lares Camping 2: declined" + "Hunting Beelzebub: Lares Camping 2: failed" < 2
 	on offer
 		dialog `You've set up camp on Lares but see no sign of Beelzebub.`
 	on accept
@@ -721,7 +719,7 @@ mission "Hunting Beelzebub: Rum Cellar"
 	source Lares
 	destination "Rum Cellar"
 	to offer
-		"Hunting Beelzebub: Lares Camping 2: declined" + "Hunting Beelzebub: Lares Camping 2: failed" >= 2
+		"Hunting Beelzebub: Lares Camping 2: declined" + "Hunting Beelzebub: Lares Camping 2: failed" >= 1
 	on offer
 		conversation
 			`You're starting to suspect rumors of Beelzebub's presence on Lares were wrong.`
