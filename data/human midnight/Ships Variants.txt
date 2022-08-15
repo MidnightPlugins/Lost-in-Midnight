@@ -1458,7 +1458,19 @@ ship "Vanguard" "Vanguard (Korath)"
 		"X4200 Ion Steering"
 		"Jump Drive"
 
-
+ship "Vanguard" "Vanguard (Plasma Cluster)"
+	outfits
+		"Plasma Cluster Cannon" 7
+		"Anti-Missile Turret"
+		"Fusion Reactor"
+		"LP072a Battery Pack"
+		"D94-YV Shield Generator"
+		"Liquid Nitrogen Cooler"
+		"Engineering Room"
+		"Laser Rifle" 4		
+		"X3700 Ion Thruster"
+		"X4200 Ion Steering"
+		"Hyperdrive"
 
 ship "Vanguard" "Vanguard (Proton Gun-CF8)"
 	outfits
