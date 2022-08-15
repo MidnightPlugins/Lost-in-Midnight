@@ -1015,7 +1015,7 @@ ship "Parade Float"
 
 
 
-# Plexus is based on the original design of the Liberator/Vindicator
+# Plexus is the predecessor to the original design of the Liberator/Vindicator
 
 ship "Plexus"
 	sprite "ship/plexus"
@@ -1085,7 +1085,8 @@ ship "Plexus"
 	explode "large explosion" 55
 	explode "huge explosion" 22
 	"final explode" "final explosion large"
-	description "The Liberator is a new warship that was originally designed by Southbound Shipyards to replace the Skein. Rumor has it that the project scope shifted focus during development when a ship of alien origin was discovered at the edges of the Rim. As a result, the planned fighter bays were scrapped in favor of the concentrated fire mount. This design crams all of the ship's gun ports into a single central location, allowing multiple smaller guns to emulate the effect of having a single larger one. This negatively impacts the ship's cooling efficiency and increases the amount of work maintenance crews have to put in for guns not mounted on the edge of the cluster."
+	description "The Plexus is a new warship that was originally designed by Southbound Shipyards to replace the Skein."
+	description "There were rumors that an alternative design substituting the fighter launch bay with a massive gun mount was being considered. But if that were true, it's no surprise that the carrier version won out. Cynical observers of starship sales trends often mention that selling carriers gives Southbound a steady market for replacement fighters."
 
 ship "Plexus" "Plexus (Korath)"
 	outfits

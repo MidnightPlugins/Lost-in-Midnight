@@ -77,7 +77,7 @@ mission "SB-Labs Vindicator 3"
 		has "SB-Labs Vindicator 2: done"
 	on offer
 		conversation
-			scene "scene/scene-liberator"
+			scene "ship/liberator"
 			`You meet Barmy Edward overseeing repairs at the hangar. The Vindicator towers over you. What looked like a massive cannon from a distance is, in actuality, a cluster of what appear to be several modified plasma cannons crammed together into a single firing module.`
 			`	"It's your fault, you know." Barmy notices you eyeing the cannons. "From what I've been told, the entire forward section was originally supposed to be a fighter bay. But then you discovered that alien ship out past the edges of The Rim. Of course, word got out about the alien ship with the giant super gun mounted on it. After that, the Southbound Shipyard engineers became obsessed with putting together this monstrosity. They couldn't replicate the spinal mount of your Emerald Sword, so they improvised this concentrated firing mount instead."`
 			label questions
@@ -309,7 +309,7 @@ mission "Oathbreaker Liberator 3"
 		has "Oathbreaker Liberator 2: done"
 	on offer
 		conversation
-			scene "scene/scene-liberator"
+			scene "ship/liberator"
 			`You meet Barmy Edward overseeing repairs at the hangar. The Liberator towers over you. What looked like a massive cannon from a distance is, in actuality, a cluster of what appear to be several modified plasma cannons crammed together into a single firing module.`
 			`	"It's your fault, you know." Barmy notices you eyeing the cannons. "From what I've been told, the entire forward section was originally supposed to be a fighter bay. But then you discovered that alien ship out past the edges of The Rim. Of course, word got out about the alien ship with the giant super gun mounted on it. After that, the Southbound Shipyard engineers became obsessed with putting together this monstrosity. They couldn't replicate the spinal mount of your Emerald Sword, so they improvised this concentrated firing mount instead."`
 			label questions
@@ -741,11 +741,13 @@ mission "Plexus Prototype 5"
 				decline
 						
 			label support
+
+			scene "scene/scene-liberator"
 			
 			branch "liberator"
 				has "Oathbreaker Liberator 4: done"
 
-			`	"I'm confident you'll figure something out. Before you leave, what did you think of the Plexus? Do you think its a better ship than the Vindicator? I understand there's some internal dispute at Southbound Shipyards over which model to dedicate resources on. A large order from the Free Worlds could finally tip the scale in one direction or the other. Your experience with both ships makes your opinion invaluable. So how about it <first>? Which ship do you think Southbound Shipyards should produce?"`
+			`	"I'm confident you'll figure something out. Before you leave, tell me what you think of the Plexus. Is it a better ship than the Vindicator? I understand there's some internal dispute at Southbound Shipyards over which model to dedicate resources on. A large order from the Free Worlds could finally tip the scale in one direction or the other. Your experience with both ships makes your opinion invaluable. So how about it <first>? Which ship do you think Southbound Shipyards should produce?"`
 			choice
 				`	"The Plexis is the better ship."`
 					goto chooseplexus
@@ -754,7 +756,7 @@ mission "Plexus Prototype 5"
 			
 			label liberator
 
-			`	"I'm confident you'll figure something out. Before you leave, what did you think of the Plexus? Do you think its a better ship than the Liberator? I understand there's some internal dispute at Southbound Shipyards over which model to dedicate resources on. A large order from the Free Worlds could finally tip the scale in one direction or the other. Your experience with both ships makes your opinion invaluable. So how about it <first>? Which ship do you think Southbound Shipyards should produce?"`
+			`	"I'm confident you'll figure something out. Before you leave, tell me what you think of the Plexus. Is it a better ship than the Liberator? I understand there's some internal dispute at Southbound Shipyards over which model to dedicate resources on. A large order from the Free Worlds could finally tip the scale in one direction or the other. Your experience with both ships makes your opinion invaluable. So how about it <first>? Which ship do you think Southbound Shipyards should produce?"`
 			choice
 				`	"The Plexus is the better ship."`
 					goto chooseplexus
@@ -792,6 +794,68 @@ mission "Plexus Prototype 5"
 			scene "outfit/jump drive"
 			`You are directed to deliver the Jump Drive to a Free Worlds military base and are compensated with <payment>. You can register to make more deliveries on the job board.`
 
+mission "Plasma Cluster Cannons: Rust"
+	landing
+	name "Weapon Delivery"
+	description "Deliver a set of Plasma Cluster Cannons to Southbound Shipyards on <destination>. Payment is <payment>."
+	cargo "Plasma Cluster Cannons" 175
+	source Rust
+	to offer
+		or
+			has "event: Dreadnought Evolution - Vindicator"
+			has "event: Dreadnought Evolution - Liberator"
+	on offer
+		conversation
+			scene "outfit/plasma cluster cannon"
+
+			branch "liberator"
+				has "event: Dreadnought Evolution - Liberator"
+			
+			`You run into Barmy at the spaceport. "Hey <first>, it looks like Southbound Shipyards ended up making the Vindicator after all. The outfitter here began stocking Plasma Cluster Cannons. We also just produced a fresh batch of them that need to get to Glaze. Would like to take on the delivery job? It pays <payment>."`
+				goto end
+			
+			label liberator
+			
+			`You run into Barmy at the spaceport. "Hey <first>, it looks like Southbound Shipyards ended up making the Liberator after all. The outfitter here began stocking Plasma Cluster Cannons. We also just produced a fresh batch of them that need to get to Glaze. Would like to take on the delivery job? It pays <payment>."`
+			
+			label end
+			
+			choice
+				`	"Sure, I'll make the delivery."`
+				`	"Sorry, I'm headed in a different direction."`
+					goto refuse
+
+			`	"Thanks <first>, I know they're in good hands! Remember to stop by the outfitter if you want to outfit your own ships with Plasma Cluster Cannons." Barmy wishes you farewell.`
+				accept
+			
+			label refuse
+			`	"No worries. Remember to stop by the outfitter if you want to outfit your own ships with Plasma Cluster Cannons." Barmy wishes you farewell.`
+				decline
+
+	npc evade
+		government "Alpha"
+		system destination
+		personality heroic vindictive harvests
+		ship "Dreadnought (Plasma Cluster)" "Gratuitous Violence"
+
+	on complete
+		payment 175000
+		conversation
+			scene "scene/scene-liberator"
+			
+			branch "liberator"
+				has "event: Dreadnought Evolution - Liberator"
+			
+			`You deliver the Plasma Cluster Cannons to Southbound Shipyards and are given your delivery fee of <payment>. The mechanics begin unloading and installing them on a Vindicator.`
+				goto end
+			
+			label liberator
+
+			`You deliver the Plasma Cluster Cannons to Southbound Shipyards and are given your delivery fee of <payment>. The mechanics begin unloading and installing them on a Liberator.`
+			
+			label end
+			
+			`	"Seeing it without the guns loaded, it could be mistaken for the Plexus." Ricardo greets you. "I heard you stopped pirates from using the prototype Plexus to set up a base near Zug. Thanks for that." You both watch as the ship's appearance shifts with the installation of the cannons.`
 
 
 mission "Plexus Jump Drives"
@@ -887,27 +951,45 @@ event "Dreadnought Evolution - Plexus"
 		add variant 1
 			"Plexus"
 			"Finch" 4
+		add variant 1
+			"Plexus"
+			"Finch (Flamethrower)"
 	fleet "Large Militia"
 		add variant 1
 			"Plexus"
 			"Finch" 4
+		add variant 1
+			"Plexus"
+			"Finch (Flamethrower)"
 
 event "Dreadnought Evolution - Vindicator"
+	planet Rust
+		add outfitter "Plasma Cluster Cannon"
 	shipyard "Southbound Advanced"
 		add "Vindicator"
 	fleet "Large Free Worlds"
 		add variant 1
 			"Vindicator"
+		add variant 1
+			"Dreadnought (Plasma Cluster)"
 	fleet "Large Militia"
 		add variant 1
 			"Vindicator"
+		add variant 1
+			"Dreadnought (Plasma Cluster)"
 
 event "Dreadnought Evolution - Liberator"
+	planet Rust
+		add outfitter "Plasma Cluster Cannon"
 	shipyard "Southbound Advanced"
 		add "Liberator"
 	fleet "Large Free Worlds"
 		add variant 1
 			"Liberator"
+		add variant 1
+			"Dreadnought (Plasma Cluster)"
 	fleet "Large Militia"
 		add variant 1
 			"Liberator"
+		add variant 1
+			"Dreadnought (Plasma Cluster)"
