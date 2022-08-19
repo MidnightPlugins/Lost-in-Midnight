@@ -536,11 +536,11 @@ mission "Diamondback Sale"
 			branch rich
 				"credits" >= 1000000
 			``
-			`	"I'll see what I can do. Come back when you have a million credits and if you're lucky it might still be here!"
+			`	"I'll see what I can do. Come back when you have a million credits and if you're lucky it might still be here!"`
 				accept
 			label rich
 			``
-			`	"Come back tomorrow with a million credits and it'll be ready for you!"
+			`	"Come back tomorrow with a million credits and it'll be ready for you!"`
 				accept
 	to complete
 		"credits" > 1000000
@@ -563,13 +563,13 @@ mission "Diamondback Stock"
 				accept
 	on accept
 		payment 1000000
-		give ship "Diamondback" "Honahlee"
+		give ship "Diamondback" "Autumn Mist"
 	on enter
 		dialog `You are being hailed: "I'd heard another Diamondback turned up here. I've been destroying them. The only pilot remaining with a Diamondback will be me!"`
 	npc kill
 		government "Bounty Hunter"
 		personality target heroic vindictive
-		ship "Diamondback (Bounty)" "Snake Charmer"
+		ship "Diamondback (Bounty)" "Diamond Jack"
 
 mission "Diamondback Lasers"
 	landing
@@ -589,13 +589,13 @@ mission "Diamondback Lasers"
 				accept
 	on accept
 		payment 1000000
-		give ship "Diamondback (Lasers)" "Honahlee"
+		give ship "Diamondback (Lasers)" "Autumn Mist"
 	on enter
 		dialog `You are being hailed: "I'd heard another Diamondback turned up here. I've been destroying them. The only pilot remaining with a Diamondback will be me!"`
 	npc kill
 		government "Bounty Hunter"
 		personality target heroic vindictive
-		ship "Diamondback (Bounty)" "Snake Charmer"
+		ship "Diamondback (Bounty)" "Diamond Jack"
 
 mission "Diamondback Mining"
 	landing
@@ -615,13 +615,13 @@ mission "Diamondback Mining"
 				accept
 	on accept
 		payment 1000000
-		give ship "Diamondback (Mining)" "Honahlee"
+		give ship "Diamondback (Mining)" "Autumn Mist"
 	on enter
 		dialog `You are being hailed: "I'd heard another Diamondback turned up here. I've been destroying them. The only pilot remaining with a Diamondback will be me!"`
 	npc kill
 		government "Bounty Hunter"
 		personality target heroic vindictive
-		ship "Diamondback (Bounty)" "Snake Charmer"
+		ship "Diamondback (Bounty)" "Diamond Jack"
 
 mission "Diamondback Transport"
 	landing
@@ -641,13 +641,13 @@ mission "Diamondback Transport"
 				accept
 	on accept
 		payment 1000000
-		give ship "Diamondback (Transport)" "Honahlee"
+		give ship "Diamondback (Transport)" "Autumn Mist"
 	on enter
 		dialog `You are being hailed: "I'd heard another Diamondback turned up here. I've been destroying them. The only pilot remaining with a Diamondback will be me!"`
 	npc kill
 		government "Bounty Hunter"
 		personality target heroic vindictive
-		ship "Diamondback (Bounty)" "Snake Charmer"
+		ship "Diamondback (Bounty)" "Diamond Jack"
 
 mission "Diamondback Freighter"
 	landing
@@ -667,13 +667,13 @@ mission "Diamondback Freighter"
 				accept
 	on accept
 		payment 1000000
-		give ship "Diamondback (Freighter)" "Honahlee"
+		give ship "Diamondback (Freighter)" "Autumn Mist"
 	on enter
 		dialog `You are being hailed: "I'd heard another Diamondback turned up here. I've been destroying them. The only pilot remaining with a Diamondback will be me!"`
 	npc kill
 		government "Bounty Hunter"
 		personality target heroic vindictive
-		ship "Diamondback (Bounty)" "Snake Charmer"
+		ship "Diamondback (Bounty)" "Diamond Jack"
 
 mission "Diamondback Pirate"
 	landing
@@ -687,11 +687,12 @@ mission "Diamondback Pirate"
 			has "Diamondback Mining: declined"
 			has "Diamondback Transport: declined"
 			has "Diamondback Freighter: declined"
+		random < 5
 	npc kill
 		government "Pirate"
 		system Shaula
 		personality waiting staying plunders harvests timid
-		ship "Diamondback (Pirate)" "Black Venom"
+		ship "Diamondback (Pirate)" "Autumn Mist"
 
 
 
