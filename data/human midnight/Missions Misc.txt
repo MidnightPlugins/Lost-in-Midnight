@@ -92,49 +92,6 @@ mission "Blue Ridge 2"
 
 
 
-mission "Diamondback Introduction"
-	name "Diamondback"
-	description "Buy an old interceptor called a Diamondback for 1,000,000 credits at <destination>."
-	source
-		attributes "rim"
-		attributes "shipyard"
-		government "Republic" "Free Worlds"
-	to offer
-		random < 50
-	on offer
-		conversation
-			scene "ship/diamondback"
-			`You notice a mechanic trying to pull a tarp over an old interceptor at the shipyard.`
-			choice
-				`	"What kind of ship is this?"`
-				`	(I'm not interested in this.)`
-					decline
-			`	"Just an old Diamondback." The mechanic looks at you. "You've never heard of them? Diamondbacks have been in use since explorers first settled the galactic rim. They've fought in various wars throughtout the centuries and few survive to this day. Those that have are so extensively customized that no two are alike." He hesitates a moment before adding, "Some southern legends claim the Diamondbacks were wrecked spacecraft created by extinct aliens and salvaged by early explorers such as Han Sizer. Of course, there's no evidence to support those claims."
-			choice
-				`	"Is it for sale?"`
-			`	"We actually just bought it from another customer. Once we're done refurbishing the ship, it'll be available."
-			choice
-				`	"I want it."
-				`	"Good luck selling it."
-					decline
-			branch rich
-				"credits" >= 1000000
-			`	"Come back when you have a million credits and if you're lucky it might still be here!"
-				accept
-			label rich
-			`	"Come back tomorrow with a million credits and it'll be ready for you!"
-				accept
-	to complete
-		"credits" > 1000000
-	on complete
-		payment 1000000
-		give ship "Diamondback" "Honahlee"
-		conversation
-			scene "ship/diamondback"
-			`The shipyard still has the Diamondback. After paying them 1,000,000 credits, the ship is yours!`
-
-
-
 mission "Executive Guard: Syndicate Extremists"
 	landing
 	invisible
