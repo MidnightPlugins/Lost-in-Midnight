@@ -596,7 +596,9 @@ outfit "Liquid Metal Hull"
 	cost 1000000
 	"mass" 6
 	"outfit space" -6
-	"hull repair rate" 100
+	"hull repair rate" 90
+	"hull energy" 1.8
+	"hull heat" 2.2
 	"integrated systems" 1
 	"reinstall" -1
 	"unplunderable" 1
