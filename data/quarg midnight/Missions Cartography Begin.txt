@@ -651,7 +651,7 @@ mission "Cartography: Humanika Side Trip"
 	on offer
 		log "People" "Quash" `Quash claims it had some alterations to its physiology done in the distant past, allowing it to visit worlds other Quarg claim are environmentally inhospitable to their species.`
 		conversation
-			scene "thumbnail/carabao"
+			scene "thumbnail/carabao-thumb"
 			`Quash steps out of the Halcyon and takes a deep breath. "It's nice to visit Humanka again, but I'd like to get to the Ring of Friendship. Please wrap up your business here quickly."`
 			choice
 				`	"Doesn't the environment here bother you?"`
