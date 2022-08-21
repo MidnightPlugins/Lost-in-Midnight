@@ -126,6 +126,7 @@ mission "Parii'het shipyard: Kai'teris"
 				`	(Input the data.)`
 				`	(Not now.)`
 					defer
+			scene "outfit/schematics"
 			`	The terminal makes a series of beeps while symbols you can't read flash on the screen. It seems the data was accepted. Hopefully, you'll be able to buy the Kai'teris from the shipyard soon.`
 				accept
 	on defer
@@ -163,6 +164,7 @@ mission "Parii'het shipyard: Kai'xeris"
 				`	(Input the data.)`
 				`	(Not now.)`
 					defer
+			scene "outfit/schematics"
 			`	The terminal makes a series of beeps while symbols you can't read flash on the screen. It seems the data was accepted. Hopefully, you'll be able to buy the Kai'xeris from the shipyard soon.`
 				accept
 	on defer
@@ -198,6 +200,7 @@ mission "Parii'het shipyard: Rao'xeris"
 				`	(Input the data.)`
 				`	(Not now.)`
 					defer
+			scene "outfit/schematics"
 			`	The terminal makes a series of beeps while symbols you can't read flash on the screen. It seems the data was accepted. Hopefully, you'll be able to buy the Rao'xeris from the shipyard soon.`
 				accept
 	on defer
@@ -232,6 +235,7 @@ mission "Parii'het shipyard: Veliante'ixis"
 				`	(Input the data.)`
 				`	(Not now.)`
 					defer
+			scene "scene/scene-schematics red"
 			`	The terminal makes a series of angry beeps while symbols you can't read flash on the screen. It seems the data was rejected. Perhaps construction of the Veliante'ixis is beyond the capabilities of this shipyard.`
 				decline
 	on defer
