@@ -17,7 +17,7 @@ mission "Hope's Salvage: Cold Storage 1"
 			choice
 				`	"Yes, I have salvaged a ship or two."`
 					goto salvage
-				`	"Where did you learn about that?"
+				`	"Where did you learn about that?"`
 			`	"You are the famous <first> <last> of the <ship>, are you not? Word has been getting around."`
 			choice
 				`	"Yes, I have salvaged a ship or two."`
@@ -28,9 +28,9 @@ mission "Hope's Salvage: Cold Storage 1"
 			choice
 				`	"What are you searching for on <planet>?"`
 			scene "ship/starling"
-			`	"You are aware of the original Remnant expedition into the Graveyard, are you not? After reviewing the data from other scientific expeditions there, particularly in <system>, I believe the escape pods from one of the destroyed Starlings crashed onto <planet>."
+			`	"You are aware of the original Remnant expedition into the Graveyard, are you not? After reviewing the data from other scientific expeditions there, particularly in <system>, I believe the escape pods from one of the destroyed Starlings crashed onto <planet>."`
 			choice
-				`	"But didn't that happen hundreds of years ago?"
+				`	"But didn't that happen hundreds of years ago?"`
 			`	"While it is true that any survivors would have died by now, I am a descendant of one of them. I would like to learn what happened to those people in their final days."`
 			choice
 				`	"I'll help you."`
@@ -64,16 +64,17 @@ mission "Hope's Salvage: Cold Storage 2"
 				`	(Wait out the storm.)`
 					goto wait
 				`	(Search for the Dreaming Solstice.)`
-			scene "scene-explosion"
+			scene "scene/scene-explosion"
 			`	You immediately take the <ship> back into the icy winds and begin a search for the Dreaming Solstice. Ionic lightning strikes the <ship> several times, disrupting its power systems, yet you press on. From above, the Vareti'het makes an unexpected reappearance and opens fire! Other Ka'het emerge from the swirling mists and join the attack. The <ship> tumbles out of control towards the frozen rocks below. In your last moments before dying, you see the Vareti'het disappear into the clouds above like an angel of death that has collected its toll...`
 				die
 			
 			label wait
-			`	Hours pass as freezing winds whip against the hull of the <ship>. After a long night, the storm abates and you realize the <ship> is half buried in the snow. You are warming the engines in preparation for dislodging the <ship> from its icy tomb when a hail comes in. "<ship>, are you there?" It's Rysandel. "<first>, I am glad you and your crew survived. We were not so fortunate. Can you pick us up? The Dreaming Solstice didn't make it through the storm. Half the crew perished in the crash."
+			`	Hours pass as freezing winds whip against the hull of the <ship>. After a long night, the storm abates and you realize the <ship> is half buried in the snow. You are warming the engines in preparation for dislodging the <ship> from its icy tomb when a hail comes in. "<ship>, are you there?" It's Rysandel. "<first>, I am glad you and your crew survived. We were not so fortunate. Can you pick us up? The Dreaming Solstice didn't make it through the storm. Half the crew perished in the crash."`
 			choice
 				`	"Sorry for your loss."`
 			`	"Thank you," Rysandel signs, a hint of sorrow in his motions. "<origin> is a harsh planet. I'm transmitting our location to you. We await your arrival."`
 			choice
+				`	(Search for the survivors.)`
 			scene "ship/rao'xeris"
 			`	As the <ship> takes flight, you scan the frozen wastes below. Another ship lies half buried in the snow some distance from Rysandel's location. It isn't the Dreaming Solstice...`
 			``
