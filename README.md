@@ -34,5 +34,8 @@ Some highlights:
 - Coalition smuggling, intrigues, and dissention
 - Subsidurial Herding
 - an asteroid catapult
-- two more Sheragi ships appear in human space
+- more Sheragi ships appear in human space
 - pirates develop a new rocket
+- new unfettered weapons
+- treasure maps
+- comets
