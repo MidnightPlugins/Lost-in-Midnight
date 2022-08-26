@@ -492,6 +492,7 @@ mission "Oathbreaker Fugitives Hideout Job 1"
 		government "Free Worlds"
 	destination
 		government "Pirate"
+		neighbor near "Sol" 200
 	to offer
 		has "event: Oathbreaker Random"
 		not "Oathbreaker Thermopylae: done"
@@ -1159,6 +1160,7 @@ mission "Oathbreaker Fugitives Hideout Random"
 		government "Free Worlds"
 	destination
 		government "Pirate"
+		neighbor near "Sol" 200
 	to offer
 		has "event: Oathbreaker diminish"
 		not "event: Oathbreaker diminish 3"
@@ -1169,6 +1171,10 @@ mission "Oathbreaker Fugitives Hideout Random"
 		fleet "Small Oathbreaker"
 		fleet "Fugitive Oathbreaker" 4
 		dialog `<planet> may be an Oathbreaker hideout. Check the surface to be certain.`
+	on abort
+		"Oathbreaker Fugitives Hideout Random: offered" --	
+	on fail
+		"Oathbreaker Fugitives Hideout Random: offered" --
 	on complete
 		"Oathbreaker escalation" ++
 		"Oathbreaker Fugitives Hideout Random: offered" --
