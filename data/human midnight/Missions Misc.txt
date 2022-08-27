@@ -1440,7 +1440,7 @@ mission "Rogue Asteroid (Pirate)"
 			has "Rogue Asteroid (Poor World): declined"				
 			has "Rogue Asteroid (Poor World): failed"
 			has "Rogue Asteroid (Poor World): aborted"
-		random < 20
+		random < 1
 	on offer
 		conversation
 			`The spaceport is a flurry of activity as pilots rush to prepare their ships for liftoff.`
@@ -1482,11 +1482,11 @@ mission "Rogue Asteroid (Rich World)"
 	to offer
 		"combat rating" > 100
 		or
-			has "Rogue Asteroid (Pirate): done"
-			has "Rogue Asteroid (Pirate): declined"				
-			has "Rogue Asteroid (Pirate): failed"
-			has "Rogue Asteroid (Pirate): aborted"
-		random < 5
+			has "Rogue Asteroid (Poor World): done"
+			has "Rogue Asteroid (Poor World): declined"				
+			has "Rogue Asteroid (Poor World): failed"
+			has "Rogue Asteroid (Poor World): aborted"
+		random < 1
 	on offer
 		conversation
 			`The spaceport is a flurry of activity as pilots rush to prepare their ships for liftoff.`
@@ -1522,10 +1522,10 @@ mission "Rogue Asteroid (Ambush)"
 		attributes "pirate"
 	to offer
 		or
-			has "Rogue Asteroid (Pirate): done"
-			has "Rogue Asteroid (Pirate): declined"
-			has "Rogue Asteroid (Pirate): failed"
-			has "Rogue Asteroid (Pirate): aborted"
+			has "Rogue Asteroid (Poor World): done"
+			has "Rogue Asteroid (Poor World): declined"				
+			has "Rogue Asteroid (Poor World): failed"
+			has "Rogue Asteroid (Poor World): aborted"
 		random < 5
 	npc kill
 		government "Phenomenon (dangerous)"
