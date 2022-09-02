@@ -722,13 +722,13 @@ mission "Plexus Prototype 3"
 		ship "Plexus (Korath)" "Cat's Cradle"
 		dialog `You've destroyed the <npc>. Report to <destination> to inform the Free Worlds about the Alphas on <origin>.`
 
-mission "Plexus Prototype 5"
+mission "Plexus Prototype 4"
 	landing
 	name "Jump Drives"
 	description "Bring a Jump Drive to the Free Worlds to help boost defense against threats from beyond human space."
 	source "Bourne"
 	to offer
-		has "Plexus Prototype 4: done"
+		has "Plexus Prototype 3: done"
 	on offer
 		conversation
 			scene "outfit/jump drive"
