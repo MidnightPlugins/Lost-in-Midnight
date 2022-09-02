@@ -451,7 +451,7 @@ mission "Weaponized Subsidurial Bounty"
 	job
 	repeat
 	name "Weaponized Subsidurials near <system>"
-	description "The <npc> and its herd of weaponized Subsidurials are attacking merchants near <system>. Destroy the <npc> and report to <destination>. Payment is payment." 
+	description "The <npc> and its herd of weaponized Subsidurials are attacking merchants near <system>. Destroy the <npc> and report to <destination>. Payment is <payment>." 
 	source
 		government "Free Worlds"
 	to offer
