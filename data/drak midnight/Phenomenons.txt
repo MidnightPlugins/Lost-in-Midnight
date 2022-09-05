@@ -1162,7 +1162,7 @@ mission "Unknown Element: Sundive 1"
 	npc "scan outfits" "scan cargo"
 		government "Uninhabited"
 		system "Deneb"
-		personality target entering staying mining surveillance mute
+		personality target waiting staying mining surveillance mute
 		ship "Mysterious Comet"
 		dialog `You've completed your scans of the comet. Head for <destination> to deliver the data.`
 	on fail
@@ -1196,7 +1196,7 @@ mission "Unknown Element: Sundive 2"
 	npc kill
 		government "Uninhabited"
 		system "Deneb"
-		personality target entering staying mining surveillance mute
+		personality target waiting staying mining surveillance mute
 		fleet "Mysterious Comet"
 		dialog `You've destroyed the mysterious comet. Collect any pieces that surived and head for <destination> to deliver the Unknown Element.`
 	on complete
