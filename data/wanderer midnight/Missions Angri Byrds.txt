@@ -22,9 +22,15 @@ mission "Angri Byrds"
 	landing
 	invisible
 	to offer
-		has "Wanderers Ap'arak 3: Pug: done"
+		or
+			has "Wanderers Ap'arak 3: Pug: done"
+			and
+				has "Wanderers Ap'arak 3: Pug 1: failed"
+				has "Wanderers Ap'arak 3: Pug 2: failed"
+				"reputation: Wanderer" < 0
 	on offer
 		event "angri byrds"
+		fail
 
 event "angri byrds"
 	planet "Varu Tev'kei"
@@ -85,7 +91,9 @@ mission "Angri Byrds 2"
 	invisible
 	to offer
 		has "Wanderers Ap'arak 3: done"
-		has "Wanderers Ap'arak 3: Pug: done"
+		or
+			has "event: angri byrds"
+			has "Wanderers Ap'arak 3: Pug: done"
 	on offer
 		event "Wanderers tribute Spera Anatrusk"
 event "Wanderers tribute Spera Anatrusk"
@@ -101,7 +109,9 @@ mission "Angri Byrds 3"
 	invisible
 	to offer
 		has "Wanderers: Mentors 3: done"
-		has "Wanderers Ap'arak 3: Pug: done"
+		or
+			has "event: angri byrds"
+			has "Wanderers Ap'arak 3: Pug: done"
 	on offer
 		event "Wanderer tribute Desi Seledrak" 24
 
@@ -119,7 +129,9 @@ event "Wanderer tribute Desi Seledrak"
 #	invisible
 #	to offer
 #		has "event: wanderers: sabira eseskrai colony"
-#		has "Wanderers Ap'arak 3: Pug: done"
+#		or
+#			has "event: angri byrds"
+#			has "Wanderers Ap'arak 3: Pug: done"
 #	on offer
 #		event "Wanderer tribute Sabira Eseskrai"
 #
