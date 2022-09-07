@@ -1165,6 +1165,8 @@ mission "Unknown Element: Sundive 1"
 		personality target waiting staying mining surveillance mute
 		ship "Mysterious Comet"
 		dialog `You've completed your scans of the comet. Head for <destination> to deliver the data.`
+	on abort
+		dialog `You abandon the search for the Mysterious Comet.`
 	on fail
 		dialog `[MISSION FAILED] You were supposed to scan the comet, not destroy it! It's too bad this isn't a game. Otherwise you could load a save file and try again.`
 	on complete
@@ -1199,6 +1201,8 @@ mission "Unknown Element: Sundive 2"
 		personality target waiting staying mining surveillance mute
 		fleet "Mysterious Comet"
 		dialog `You've destroyed the mysterious comet. Collect any pieces that surived and head for <destination> to deliver the Unknown Element.`
+	on abort
+		dialog `You abandon the search for the Mysterious Comet.`
 	on complete
 		payment 100000
 		outfit "Unknown Element" -1

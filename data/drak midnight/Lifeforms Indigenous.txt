@@ -846,6 +846,8 @@ mission "Ayab's Revenge"
 		government "Creature Hunter"
 		personality escort heroic vindictive
 		ship "Modified Argosy (Missile)" "Ayab's Revenge"
+	on abort
+		dialog `You quietly ditch captain Ayab and his hunt for the Gray Eye...`
 	on fail
 		dialog `Captain Ayab passed away while spending his life on a fruitless quest for revenge. Sometimes it's best to let things go.`
 	on complete
@@ -857,7 +859,9 @@ mission "Ayab's Revenge Epilogue1"
 	landing
 	invisible
 	to offer
-		has "Ayab's Revenge: done"
+		or
+			has "Ayab's Revenge: done"
+			has "Ayab's Revenge: aborted"
 	npc
 		government "Indigenous Lifeform"
 		personality waiting uninterested mining harvests mute unconstrained
