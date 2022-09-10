@@ -1025,8 +1025,6 @@ ship "Ionic Leech"
 			"hit force" 3000
 	outfits
 		"Ionic Mouthparts?" 1
-	cargo
-		"Ion Leech Sample" 1
 	gun 0 -37 "Ionic Mouthparts?"
 	leak "blood" 15 25
 	explode "blood" 25
