@@ -581,7 +581,7 @@ mission "Grave Digger: Graveyard Robbery A"
 	npc assist accompany save
 		system Esix
 		government Remnant
-		personality escort derelict
+		personality target derelict timid
 		fleet
 			names "remnant"
 			variant
@@ -619,7 +619,7 @@ mission "Grave Digger: Graveyard Robbery B"
 	npc assist accompany save
 		system Ritilas
 		government Remnant
-		personality escort derelict
+		personality target derelict timid
 		fleet
 			names "remnant"
 			variant
@@ -657,7 +657,7 @@ mission "Grave Digger: Graveyard Robbery C"
 	npc assist accompany save
 		system Polerius
 		government Remnant
-		personality escort derelict
+		personality target derelict timid
 		fleet
 			names "remnant"
 			variant
@@ -740,7 +740,7 @@ mission "Grave Digger: Graveyard Robbery Job A"
 	npc assist accompany save
 		system Relifer
 		government Remnant
-		personality escort derelict
+		personality target derelict timid
 		fleet
 			names "remnant"
 			variant
@@ -791,7 +791,7 @@ mission "Grave Digger: Graveyard Robbery Job B"
 	npc assist accompany save
 		system Fearis
 		government Remnant
-		personality escort derelict
+		personality target derelict timid
 		fleet
 			names "remnant"
 			variant
@@ -842,7 +842,7 @@ mission "Grave Digger: Graveyard Robbery Job C"
 	npc assist accompany save
 		system Delia
 		government Remnant
-		personality escort derelict
+		personality target derelict timid
 		fleet
 			names "remnant"
 			variant
