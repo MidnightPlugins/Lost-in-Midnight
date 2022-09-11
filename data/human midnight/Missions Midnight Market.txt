@@ -256,7 +256,7 @@ mission "Midnight Market: Project THOR 0"
 
 	npc assist accompany save
 		government "Militia"
-		personality escort derelict timid waiting
+		personality target derelict timid waiting
 		system Ildaria
 		ship "Dreadnought (Flamethrower)" "Vigilant Guard"
 		dialog `The crew is grateful for you assistance. They were attacked and plundered by marauders. The captain asks that you escort their ship to  <destination>.`
