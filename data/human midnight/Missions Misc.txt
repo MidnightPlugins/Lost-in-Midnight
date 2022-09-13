@@ -533,12 +533,12 @@ mission "Pandora's Problems 2"
 				`	(Listen in.)`
 				`	(Ignore them.)`
 					defer
-			`	"Isn't that the alien ship that the Syndicate was rumored to be doing experients on?"`
+			`	"Isn't that the alien ship that the Syndicate was rumored to be doing experiments on?"`
 			`	"I'll bet they're just using the name for the notoriety."`
 			`	"Any leads?"`
 			`	"Only that they ambush merchants in uninhabited systems near the core."`
-			`	"Shangri-La is offering <payment> for this one."`
-			`	"Sounds like trouble."`
+			`	"I heard Shangri-La is offering <payment> for this one."`
+			`	"Maybe it really is the ship from Pandora's Box."`
 			``
 			`	It seems like a lucrative, but dangerous, bounty job. What will you do?`
 			choice
