@@ -28,8 +28,10 @@ mission "QKBlade: House Unuk Pickup"
 			not "Nemesis: Quantum Key Blade: done"
 			has "event: House Unuk Recovery timer"
 	source
+		government "Republic" "Syndicate" "Free Worlds" "Independent" "Neutral"
 		attributes "urban"
 		near "Unukalhai" 1 20
+		not attributes "uninhabited"
 	stopover
 		planet "Flood"
 	on stopover
@@ -54,8 +56,10 @@ mission "QKBlade: House Unuk Imports"
 	source
 		planet "Flood"
 	stopover
+		government "Republic" "Syndicate" "Free Worlds" "Independent" "Neutral"
 		distance 1 20
 		attributes "farming"
+		not attributes "uninhabited"
 	on stopover
 		dialog "You pick up <cargo>. Deliver them to <destination> to get your payment."
 	on visit
@@ -78,8 +82,10 @@ mission "QKBlade: House Unuk Exports"
 	source
 		planet "Flood"
 	destination
+		government "Republic" "Syndicate" "Free Worlds" "Independent" "Neutral"
 		distance 1 20
 		attributes "urban"
+		not attributes "uninhabited"
 	on visit
 		dialog phrase "generic missing stopover or cargo"
 	on complete
@@ -98,8 +104,10 @@ mission "QKBlade: House Unuk Delivery"
 			not "Nemesis: Quantum Key Blade: done"
 			has "event: House Unuk Recovery timer"
 	source
+		government "Republic" "Syndicate" "Free Worlds" "Independent" "Neutral"
 		near "Unukalhai" 1 20
 		attributes "farming"
+		not attributes "uninhabited"
 	destination
 		planet "Flood"
 	on visit
@@ -113,7 +121,9 @@ mission "QKBlade: House Unuk Door Delivery"
 	name "House Unuk Package"
 	description "Deliver a small package to House Unuk on <destination>."
 	source
-		neighbor near "Unukalhai" 1 5
+		government "Republic" "Syndicate" "Free Worlds" "Independent" "Neutral"
+		near "Unukalhai" 1 5
+		not attributes "uninhabited"
 	destination "Flood"
 	to offer
 		or
