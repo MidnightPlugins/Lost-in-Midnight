@@ -1132,6 +1132,7 @@ fleet "Mysterious Comet"
 
 
 mission "Unknown Element: Sundive 1"
+	minor
 	name "Mysterious Comet"
 	description "Find a mysterious comet that appeared in Deneb and gather data using both outfit and cargo scans. Then bring that information to <destination> for payment of <payment>."
 	source
@@ -1314,7 +1315,7 @@ mission "Unknown Element: Cargo Bay 3"
 				accept
 	on enter
 		conversation
-			`The cargo bay alarms start going off! You upgraded the security systems there. Time to see if it was worth it.`
+			`The cargo bay alarms start going off! You've upgraded the security systems there. Time to see if it was worth it.`
 			choice
 				`	(Check the security camera.)`
 			scene "scene/scene-baxter"
