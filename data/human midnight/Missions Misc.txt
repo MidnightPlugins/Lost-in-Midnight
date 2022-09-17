@@ -12,6 +12,7 @@
 
 
 mission "Blue Ridge 1"
+	minor
 	name "Auction: Blue Ridge"
 	description "The Blue Ridge is up for auction on <destination>. They are only accepting bids from pilots with a valid Militia License. You'll need several million credits to even consider placing a bid."
 	source
@@ -20,6 +21,7 @@ mission "Blue Ridge 1"
 	destination Longjump
 	to offer
 		month == 8
+		random < 80
 	on offer
 		conversation
 			scene "ship/hipparion"
@@ -137,6 +139,7 @@ mission "Executive Guard: Syndicate Extremists"
 
 mission "Gremlin Protoype Escort"
 	deadline
+	minor
 	name "Escort to <planet>"
 	description "Escort the prototype Gremlin to <destination> by <date>. Payment is <payment>."
 	source
@@ -514,6 +517,7 @@ mission "Pandora's Problems 1"
 				decline
 				
 mission "Pandora's Problems 2"
+	minor
 	name "Pandora"
 	description "Pirates are using an alien pirate ship named the <npc> to ambush merchants in uninhabited systems near the core. Find the ship and eliminate it. Then report to <destination> for payment (<payment>)."
 	source
@@ -522,9 +526,11 @@ mission "Pandora's Problems 2"
 	to offer
 		has "Pandora's Problems 1: declined"
 		or
-			not "Pandora's Problems 2: deferred"
 			and
-				has "Pandora's Problems 2: deferred"
+				not "Randomize Pandora's Problems 2"
+				random < 70
+			and
+				has "Randomize Pandora's Problems 2"
 				random < 5
 	on offer
 		conversation
@@ -546,6 +552,8 @@ mission "Pandora's Problems 2"
 					accept
 				`	(Let the bounty hunters handle it.)`
 					decline
+	on defer
+		set "Randomize Pandora's Problems 2"
 	on enter "Gamma Cassiopeiae"
 		conversation
 			scene "ship/raider ancient"
@@ -605,6 +613,7 @@ mission "Pandora's Problems 3"
 
 
 mission "Star Explorer Fan Tour"
+	minor
 	name "Star Explorer Fan Tour"
 	description "Escort the <npc> through the systems marked on your map. Be prepared to engage in mock battles with 'aliens'. Once all of the systems have been visited, return them safely to <destination> for <payment>."
 	source
@@ -615,10 +624,12 @@ mission "Star Explorer Fan Tour"
 	to offer
 		"combat rating" > 200
 		or
-			not "Randomize Star Explorer Fan Tour"
+			and
+				not "Randomize Star Explorer Fan Tour"
+				random < 70
 			and
 				has "Randomize Star Explorer Fan Tour"
-				random < 5			
+				random < 5
 	on offer
 		conversation
 			scene "ship/star explorer"
@@ -922,6 +933,7 @@ mission "Navy: Captured Cruiser"
 
 
 mission "Quash: Humanika Infiltration 1"
+	minor
 	infiltrating
 	passengers 4
 	name "Humanika Infiltration"
@@ -975,6 +987,7 @@ mission "Quash: Humanika Infiltration 1"
 			`As you approach <planet>, your passengers start unpacking and equipping some gear. They're all armed now. One of the men even has a sniper rifle. It's obvious they're up to no good. But it's too late to back out. Their leader, the one they refer to as "Commander," tells you to land at a specific site. You notice that this location is nowhere near the spaceport...`
 
 mission "Quash: Humanika Infiltration 2"
+	landing
 	passengers 1
 	name "Humanika Infiltration"
 	description "Take your passenger to <destination>. Payment is 400,000 credits."
@@ -1027,6 +1040,7 @@ mission "Quash: Humanika Infiltration 2"
 
 
 mission "Sunracer Afterburner 1"
+	minor
 	name "Tag. You're it!"
 	description "Race the <npc> to <destination>."
 	source
@@ -1036,6 +1050,7 @@ mission "Sunracer Afterburner 1"
 		has "main plot completed"
 		month == 3
 		"credits" > 700000
+		random < 70
 	on offer
 		conversation
 			scene "outfit/license"
@@ -1503,6 +1518,7 @@ ship "Asteroid" "Rogue Asteroid"
 mission "Rogue Asteroid (Poor World)"
 	deadline 2
 	repeat
+	minor
 	name "Rogue Asteroid"
 	description "A rogue asteroid may collide with <destination>. Destroy it, then land on <planet> to claim the reward (<payment>)."
 	source
@@ -1542,6 +1558,7 @@ mission "Rogue Asteroid (Poor World)"
 
 mission "Rogue Asteroid (Pirate)"
 	deadline 2
+	minor
 	name "Rogue Asteroid"
 	description "A rogue asteroid may collide with <destination>. Destroy it, then land on <planet> to claim the reward (<payment>)."
 	source
@@ -1555,7 +1572,7 @@ mission "Rogue Asteroid (Pirate)"
 			has "Rogue Asteroid (Poor World): declined"				
 			has "Rogue Asteroid (Poor World): failed"
 			has "Rogue Asteroid (Poor World): aborted"
-		random < 1
+		random < 3
 	on offer
 		conversation
 			`The spaceport is a flurry of activity as pilots rush to prepare their ships for liftoff.`
@@ -1588,6 +1605,7 @@ mission "Rogue Asteroid (Pirate)"
 
 mission "Rogue Asteroid (Rich World)"
 	deadline 2
+	minor
 	name "Rogue Asteroid"
 	description "A rogue asteroid may collide with <destination>. Destroy it, then land on <planet> to claim the reward (<payment>)."
 	source
@@ -1601,7 +1619,7 @@ mission "Rogue Asteroid (Rich World)"
 			has "Rogue Asteroid (Poor World): declined"				
 			has "Rogue Asteroid (Poor World): failed"
 			has "Rogue Asteroid (Poor World): aborted"
-		random < 1
+		random < 3
 	on offer
 		conversation
 			`The spaceport is a flurry of activity as pilots rush to prepare their ships for liftoff.`
