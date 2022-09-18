@@ -193,8 +193,8 @@ outfit "Fake Sheragi Cyclotron"
 		"velocity" 28
 		"lifetime" 1
 		"reload" 1
-		"firing energy" 3
-		"firing heat" 12.3
+		"firing energy" 3.1
+		"firing heat" 12.4
 		"firing force" 9
 	description "This is a convincing recreation of the Heavy Ion Cyclotron from the Black Diamond."
 
