@@ -1088,7 +1088,6 @@ ship "Marauder Quicksilver" "Marauder Quicksilver (Shamrock)"
 		"engine capacity" 40
 	outfits
 		"Anti-Missile Turret"
-		
 		"Fission Reactor"
 		"S-270 Regenerator"
 		"LP036a Battery Pack"
@@ -1096,12 +1095,10 @@ ship "Marauder Quicksilver" "Marauder Quicksilver (Shamrock)"
 		"Fuel Pod"
 		"Ramscoop"
 		"Laser Rifle" 5
-		
 		"Hybrid Afterburner"
 		`"Biroo" Atomic Thruster`
 		`"Biroo" Atomic Steering`
 		"Hyperdrive"
-	
 	engine -16 52
 	engine 0 52
 	engine 16 52
@@ -1151,6 +1148,8 @@ mission "Sunracer Afterburner 3"
 			`	You notice a new afterburner in the outfitter. It looks like Patrick suceeded in making a better version of the prototype Hybrid Afterburner.`
 				decline
 
+
+
 #########################
 # missions that repeat
 #########################
@@ -1166,7 +1165,13 @@ mission "Engineering Room: Salvaged Supercapacitor"
 		attributes "automaton"
 	destination Earth
 	to offer
-		random < 10 + "engineer salvaged supercapacitor"
+		or
+			and
+				"engineer salvaged supercapacitor" < 40
+				random < 10 + "engineer salvaged supercapacitor"
+			and
+				"engineer salvaged supercapacitor" >= 40
+				random < 50
 	on offer
 		require "Engineering Room"
 		conversation
@@ -1209,6 +1214,7 @@ mission "Medical Bay: Injured Crewmember (Coalition)"
 		conversation
 			scene "outfit/medical bay"
 			`You've helped repair the ship, but one of their crewmembers was critically injured and needs to be transported in your medical bay to a nearby hospital by <date> for adequate treatment.`
+				accept
 	on fail
 		dialog `You failed to deliver the injured crewmember to a hospital in time...`
 	on complete
@@ -1241,6 +1247,7 @@ mission "Medical Bay: Injured Crewmember (Hai)"
 		conversation
 			scene "outfit/medical bay"
 			`You've helped repair the ship, but one of their crewmembers was critically injured and needs to be transported in your medical bay to a nearby hospital by <date> for adequate treatment.`
+				accept
 	on fail
 		dialog `You failed to deliver the injured crewmember to a hospital in time...`
 	on complete
@@ -1271,6 +1278,7 @@ mission "Medical Bay: Injured Crewmember (Human)"
 		conversation
 			scene "outfit/medical bay"
 			`You've helped repair the ship, but one of their crewmembers was critically injured and needs to be transported in your medical bay to a nearby hospital by <date> for adequate treatment.`
+				accept
 	on fail
 		dialog `You failed to deliver the injured crewmember to a hospital in time...`
 	on complete
@@ -1305,6 +1313,7 @@ mission "Medical Bay: Injured Crewmember (Kor Efret)"
 		conversation
 			scene "outfit/medical bay"
 			`You've helped repair the ship, but one of their crewmembers was critically injured and needs to be transported in your medical bay to a nearby hospital by <date> for adequate treatment.`
+				accept
 	on fail
 		dialog `You failed to deliver the injured crewmember to a hospital in time...`
 	on complete
@@ -1335,6 +1344,7 @@ mission "Medical Bay: Injured Crewmember (Remnant)"
 		conversation
 			scene "outfit/medical bay"
 			`You've helped repair the ship, but one of their crewmembers was critically injured and needs to be transported in your medical bay to a nearby hospital by <date> for adequate treatment.`
+				accept
 	on fail
 		dialog `You failed to deliver the injured crewmember to a hospital in time...`
 	on complete
@@ -1366,6 +1376,7 @@ mission "Medical Bay: Injured Crewmember (Wanderer)"
 		conversation
 			scene "outfit/medical bay"
 			`You've helped repair the ship, but one of their crewmembers was critically injured and needs to be transported in your medical bay to a nearby hospital by <date> for adequate treatment.`
+				accept
 	on fail
 		dialog `You failed to deliver the injured crewmember to a hospital in time...`
 	on complete
@@ -1569,7 +1580,7 @@ mission "Rogue Asteroid (Pirate)"
 		"combat rating" > 100
 		or
 			has "Rogue Asteroid (Poor World): done"
-			has "Rogue Asteroid (Poor World): declined"				
+			has "Rogue Asteroid (Poor World): declined"
 			has "Rogue Asteroid (Poor World): failed"
 			has "Rogue Asteroid (Poor World): aborted"
 		random < 3
@@ -1616,7 +1627,7 @@ mission "Rogue Asteroid (Rich World)"
 		"combat rating" > 100
 		or
 			has "Rogue Asteroid (Poor World): done"
-			has "Rogue Asteroid (Poor World): declined"				
+			has "Rogue Asteroid (Poor World): declined"
 			has "Rogue Asteroid (Poor World): failed"
 			has "Rogue Asteroid (Poor World): aborted"
 		random < 3
@@ -1656,7 +1667,7 @@ mission "Rogue Asteroid (Ambush)"
 	to offer
 		or
 			has "Rogue Asteroid (Poor World): done"
-			has "Rogue Asteroid (Poor World): declined"				
+			has "Rogue Asteroid (Poor World): declined"
 			has "Rogue Asteroid (Poor World): failed"
 			has "Rogue Asteroid (Poor World): aborted"
 		random < 5
