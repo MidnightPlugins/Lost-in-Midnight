@@ -325,6 +325,130 @@ ship "Modified Roost"
 
 
 
+ship "Marauder Behemoth"
+	sprite "ship/marauder behemoth"
+	thumbnail "thumbnail/marauder behemoth-thumb"
+	attributes
+		category "Heavy Warship"
+		"cost" 11880000
+		"shields" 8400
+		"hull" 7000
+		"required crew" 14
+		"bunks" 32
+		"mass" 720
+		"drag" 11.7
+		"heat dissipation" .4
+		"fuel capacity" 600
+		"cargo space" 245
+		"outfit space" 560
+		"weapon capacity" 300
+		"engine capacity" 105
+		"self destruct" .15
+		weapon
+			"blast radius" 150
+			"shield damage" 1500
+			"hull damage" 800
+			"hit force" 2300
+	outfits
+		"Heavy Laser Turret" 2
+		"Electron Turret" 2
+		"Heavy Anti-Missile Turret" 2
+		"Torpedo Launcher" 2
+		Torpedo 60
+		"Breeder Reactor"
+		"LP144a Battery Pack"
+		"S-270 Regenerator"
+		"S-970 Regenerator"
+		"Outfits Expansion" 6
+		"Liquid Helium Cooler"
+		"Large Radar Jammer"
+		Ramscoop
+		"Laser Rifle" 18
+		"A125 Atomic Steering"
+		"A375 Atomic Steering"
+		"A250 Atomic Thruster"
+		"Scram Drive"
+		
+	engine -34 143 0.8
+	engine 34 143 0.8
+	engine -56 148.5 0.6
+	engine 56 148.5 0.6
+	gun -47.5 -57.5 "Torpedo Launcher"
+	gun 47.5 -57.5 "Torpedo Launcher"
+	turret -31 -50 "Heavy Laser Turret"
+	turret 31 -50 "Heavy Laser Turret"
+	turret -47.5 33.5 "Electron Turret"
+	turret 47.5 33.5 "Electron Turret"
+	turret -22 66.5 "Heavy Anti-Missile Turret"
+	turret 22 66.5 "Heavy Anti-Missile Turret"
+	bay "Fighter" -90 65
+	bay "Fighter" 90 65
+	leak "leak" 30 50
+	leak "flame" 30 80
+	leak "big leak" 50 30
+	explode "small explosion" 15
+	explode "medium explosion" 25
+	explode "large explosion" 35
+	explode "huge explosion" 20
+	"final explode" "final explosion large"
+	description "This Betelgeuse Shipyards Behemoth has had extensive modifications applied to its hull and cargo hold. Notable are the two fighter bays that leave no doubt that this former freighter is now a warship."
+
+ship "Marauder Behemoth" "Marauder Behemoth (Hai)"
+	outfits
+		"Ion Cannon" 2
+		"Pulse Turret" 4
+		"Chameleon Anti-Missile" 2
+		"Boulder Reactor"
+		"Hai Ravine Batteries"
+		"Hai Corundum Regenerator"
+		"Hai Diamond Regenerator"
+		"Outfits Expansion" 6
+		"Liquid Nitrogen Cooler"
+		"Large Radar Jammer"
+		Ramscoop
+		"Security Station" 3
+		"Pulse Rifle" 18
+		`"Benga" Atomic Steering`
+		`"Benga" Atomic Thruster`
+		`"Biroo" Atomic Steering`
+		"Scram Drive"
+	turret "Pulse Turret"
+	turret "Pulse Turret"
+	turret "Pulse Turret"
+	turret "Pulse Turret"
+	turret "Chameleon Anti-Missile"
+	turret "Chameleon Anti-Missile"
+
+ship "Marauder Behemoth" "Marauder Behemoth (Secret Prototype)"
+	outfits
+		"Heavy Laser Turret" 2
+		"Electron Turret" 2
+		"Heavy Anti-Missile Turret" 2
+		"Torpedo Launcher" 2
+		Torpedo 60
+		"Breeder Reactor"
+		"LP144a Battery Pack"
+		"S-270 Regenerator"
+		"S-970 Regenerator"
+		"Outfits Expansion" 6
+		"Liquid Helium Cooler"
+		"Large Radar Jammer"
+		Ramscoop
+		"Laser Rifle" 18
+		"A125 Atomic Steering"
+		"A375 Atomic Steering"
+		"A250 Atomic Thruster"
+		"Scram Drive"
+		"Secret Prototype"
+	turret "Heavy Laser Turret"
+	turret "Heavy Laser Turret"
+	turret "Electron Turret"
+	turret "Electron Turret"
+	turret "Heavy Anti-Missile Turret"
+	turret "Heavy Anti-Missile Turret"
+
+
+
 ship "Marauder Protector"
 	sprite "ship/marauder protector"
 	thumbnail "thumbnail/marauder protector"
@@ -343,6 +467,7 @@ ship "Marauder Protector"
 		"outfit space" 590
 		"weapon capacity" 240
 		"engine capacity" 100
+		"self destruct" .15
 		weapon
 			"blast radius" 160
 			"shield damage" 1600
@@ -383,7 +508,7 @@ ship "Marauder Protector"
 	explode "medium explosion" 24
 	explode "large explosion" 8
 	"final explode" "final explosion large"
-	description `The previous owner of this Protector completely removed the forward firing guns in favor of adding more turrets. Combined with additional hull plating and shielding, result is a floating fortress than can handle threats from any direction.`
+	description `The previous owner of this Protector completely removed the forward firing guns in favor of adding more turrets. Combined with additional hull plating and shielding, the result is a floating fortress than can handle threats from any direction.`
 
 
 
@@ -391,7 +516,6 @@ ship "Marauder Protector" "Marauder Protector (Secret Prototype)"
 	outfits
 		"Proton Turret" 6
 		"Anti-Missile Turret" 2
-		
 		"Fusion Reactor"
 		"LP072a Battery Pack"
 		"S-970 Regenerator"
@@ -401,7 +525,6 @@ ship "Marauder Protector" "Marauder Protector (Secret Prototype)"
 		"Catalytic Ramscoop"
 		"Laser Rifle" 30
 		"Security Station" 8
-		
 		"A370 Atomic Thruster"
 		"A375 Atomic Steering"
 		"Hyperdrive"
@@ -482,7 +605,6 @@ ship "Marauder Vanguard" "Marauder Vanguard (Secret Prototype)"
 		"Heavy Anti-Missile Turret"
 		"Typhoon Launcher"
 		"Typhoon Torpedo" 30
-
 		"LP072a Battery Pack"
 		"Fusion Reactor"
 		"S-270 Regenerator" 2
@@ -491,7 +613,6 @@ ship "Marauder Vanguard" "Marauder Vanguard (Secret Prototype)"
 		"Catalytic Ramscoop"
 		"Outfits Expansion"
 		"Laser Rifle" 25
-
 		"Ionic Afterburner"
 		"A370 Atomic Thruster"
 		"A375 Atomic Steering"
