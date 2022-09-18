@@ -249,6 +249,7 @@ mission "QKBlade: Quantum Key Blade 1"
 	source
 		government "Hai"
 		not planet "Darkwaste"
+		not planet "Hai-home"
 	destination
 		planet "Hai-home"
 	to offer
