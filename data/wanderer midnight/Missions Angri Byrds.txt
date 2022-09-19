@@ -30,7 +30,12 @@ mission "Angri Byrds"
 				"reputation: Wanderer" < 0
 	on offer
 		event "angri byrds"
+		clear "license: Wanderer"
+		clear "license: Wanderer Outfits"
+		clear "license: Wanderer Military"
 		fail
+
+
 
 event "angri byrds"
 	planet "Varu Tev'kei"
@@ -141,11 +146,11 @@ event "Wanderer tribute Desi Seledrak"
 #			threshold 3000
 #			fleet "Wanderer Drones" 5
 #			fleet "Wanderer Defense" 10
-		
-		
-		
+
+
+
 #------Temporarily negates hostility with Kor Mereti. He did say they were "fond" of you...--------
-	
+
 mission "Angri Byrds: Mereti Fondness"
 	landing
 	invisible
@@ -156,10 +161,99 @@ mission "Angri Byrds: Mereti Fondness"
 		not "Wanderers: Peace Through Strength 2: done"
 	on offer
 		"reputation: Kor Mereti" >?= 1
-	
 
 
-	
+
+mission "Angri Byrds License Revoked"
+	landing
+	invisible
+	deadline 3
+	source
+		government "Wanderer"
+	to offer
+		has "event: angri byrds"
+		not "Angri Byrds: Peace Through Strength 1: offered"
+	on offer
+		log `My reputation with the Wanderers is strained. They became upset after my battle with the Pug in their territory. Restoring peaceful relations may be an impossible task.`
+		conversation
+			`You are viewed with suspicion and anger by several Wanderers here. You did dare to battle their gods afterall. Unsurprisingly, your Wanderer licenses are no longer being honored.`
+				accept
+	on enter
+		dialog `"It gives us no [joy, pleasure] to [end, terminate] you, but we must [avenge, champion] our [Caretakers, Keepers]."`
+	npc evade
+		government "Wanderer"
+		personality target heroic vindictive coward
+			confusion 20
+		fleet
+			names "wanderer"
+			cargo 0
+			variant
+				"Derecho"
+				"Tempest"
+				"Strong Wind" 2
+				"Autumn Leaf" 4
+				"Summer Leaf" 4
+
+mission "Angri Byrds Vigilantes"
+	landing
+	invisible
+	repeat
+	deadline 3
+	source
+		government "Wanderer"
+		not attributes "uninhabited"
+	to offer
+		has "Angri Byrds License Revoked: offered"
+		random < 10
+	on offer
+		conversation
+			branch 1
+				random < 75
+			`Several Wanderer shopkeepers close down their establishments as you approach. It's clear you're not welcome here.`
+				accept
+			label 1
+			branch 2
+				random < 66
+			`No one services your ship at the spaceport. You'll have to handle repairs and refueling yourself.`
+				accept
+			label 2
+			branch 3
+				random < 50
+			`A passing Wanderer screams at you in their native language before flying away. You don't know what it said, but you suspect it wasn't a friendly greeting.`
+				accept
+			label 3
+			`From the way the local Wanderers are looking at you, it may not be a good idea to hire crew here.`
+				accept
+	on enter
+		dialog phrase "hostile wanderer"
+	npc evade
+		government "Wanderer"
+		personality target heroic vindictive coward
+			confusion 20
+		fleet
+			names "wanderer"
+			cargo 0
+			variant
+				"Derecho"
+				"Tempest (Heavy)"
+				"Strong Wind" 2
+				"Autumn Leaf" 4
+				"Summer Leaf" 4
+			variant
+				"Derecho (Turret)"
+				"Tempest (Missile)"
+				"Strong Wind" 2
+				"Autumn Leaf" 4
+				"Summer Leaf" 4
+			variant
+				"Derecho (Tough)"
+				"Tempest"
+				"Strong Wind" 2
+				"Autumn Leaf" 4
+				"Summer Leaf" 4
+
+
+
 #------Reconciliation missions to restore peace after full domination of Wanderer territory.------
 
 mission "Angri Byrds: Peace Through Strength 1"
@@ -171,6 +265,7 @@ mission "Angri Byrds: Peace Through Strength 1"
 	destination "Desi Seledrak"
 	to offer
 		has "Wanderers Ap'arak 3: Pug: done"
+		has "Wanderers: Sestor: Final: done"
 		"tribute: Varu Tev'kei" > 0
 		"tribute: Kort Kehai" > 0
 		"tribute: Vara Rakak" > 0
@@ -200,7 +295,7 @@ mission "Angri Byrds: Peace Through Strength 2"
 			`	"Too many have died in needless battle with you," adds Tema'a Iriket. "Our [first? primary?] focus should be on developing these new worlds, not [participating? engaging?] in pointless warfare over a [robbery? pillaging?] between this human and the Pug." Several who are sitting near her nod in agreement.`
 			`	"There are some who [argue? preach?] the Pug have abandoned us to our fate here because of the actions of Captain <last>," states Sobari Tele'ek. There are murmurs amongst those present and from the agitation in their voices, you're certain there are some here who would shoot you now if they thought they could get away with it.`
 			`	Meto Pa'aret has been silent, quietly tinkering with a Kor Mereti Reasoning Node while the others were talking. When he realizes it's his turn to speak, he states, "The Mereti were willing to fight <last> on our behalf at first, but after the [failure? tragedy?] with the Exiles, their collective opinion is in disarray."`
-			`	Rek speaks again. "Ultimately, fighting with you now is not in the best interest of our people. We are prepared to cease hostilities if you will release all tribute demands you have placed upon our worlds."`
+			`	Rek speaks again. "Ultimately, fighting with you now is not in the best interest of our people. We are prepared to cease hostilities and restore your licenses if you will release all tribute demands you have placed upon our worlds."`
 			choice
 				`	(Reject their offer.)`
 				`	(Negotiate a better offer.)`
@@ -218,6 +313,9 @@ mission "Angri Byrds: Peace Through Strength 2"
 		event "Angri Byrds Peace Through Strength"
 		"reputation: Wanderer" >?= 1
 		"reputation: Kor Mereti" >?= 1
+		set "license: Wanderer"
+		set "license: Wanderer Military"
+		set "license: Wanderer Outfits"
 		"tribute: Varu Tev'kei" <?= 200
 		"tribute: Kort Kehai" <?= 200
 		"tribute: Vara Rakak" <?= 200
@@ -230,6 +328,7 @@ mission "Angri Byrds: Peace Through Strength 2"
 		"tribute: Varu Tek'kai" <?= 200
 		"tribute: Spera Anatrusk" <?= 100
 		"tribute: Desi Seledrak" <?= 100
+		fail
 
 event "Angri Byrds Peace Through Strength"
 
