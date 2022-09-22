@@ -456,7 +456,7 @@ ship "Marauder Protector"
 		category "Heavy Warship"
 		"cost" 5500000
 		"shields" 11000
-		"hull" 8580
+		"hull" 8600
 		"required crew" 30
 		"bunks" 69
 		"mass" 500
@@ -464,7 +464,7 @@ ship "Marauder Protector"
 		"heat dissipation" .6
 		"fuel capacity" 400
 		"cargo space" 50
-		"outfit space" 590
+		"outfit space" 610
 		"weapon capacity" 240
 		"engine capacity" 100
 		"self destruct" .15
@@ -548,7 +548,7 @@ ship "Marauder Vanguard"
 		"fuel capacity" 400
 		"cargo space" 40
 		"outfit space" 580
-		"weapon capacity" 220
+		"weapon capacity" 230
 		"engine capacity" 120
 		"self destruct" .15
 		weapon

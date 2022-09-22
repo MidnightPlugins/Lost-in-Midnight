@@ -932,6 +932,280 @@ mission "Navy: Captured Cruiser"
 
 
 
+mission "Pirate FW invite 1"
+	minor
+	name "Raid: Navy Frigate"
+	description "Lead a pirate raid on the <npc>. It usually runs ammunition through the <waypoints> system. After you're done, return to <destination> for your reward, <payment>."
+	source
+		government "Pirate"
+		attributes "south" "south pirate"
+	waypoint "Wei"
+	to offer
+		"combat rating" > 300
+		"reputation: Pirate" > 0
+		has "event: war begins"
+		not "chosen sides"
+		random < 20
+	to fail
+		has "chosen sides"
+	on offer
+		conversation
+			`A man in non-descript clothing approaches you. "I'm recruiting combat pilots for a raid on the Navy. I hear you have some skill."`
+			choice
+				`	"Go on."`
+					goto salespitch
+				`	"The Navy? Not interested."`
+			`	"Why not?"`
+			choice
+				`	"Too risky."`
+				`	"Because I don't take orders from agents of the Free Worlds!"`
+					goto fight
+			`	"Fair enough. I guess the rumors of your battle prowess was over stated." The man leaves.`
+				decline
+			label fight
+			``
+			branch lucky
+				random < 50
+			`	You draw your sidearm, but he's quicker. Before you realize what happened, you're lying on the ground with a bloody hole in your chest. "Sorry <last>, but I can't let you blow my cover. We're at war with the Republic and too many lives are at stake."`
+				die
+			label lucky
+			`	He tenses up as you draw your sidearm. He tries to draw his weapon a split second after you. Big mistake. As he lies on the ground dying, he mutters "F... For freedom..."`
+				decline
+			label salespitch
+			`	"I'll pay <payment> and you can keep what you plunder. Good deal, right?" He smiles.`
+			choice
+				`	"What's in it for you?"`
+			`	"I just hate the Navy."`
+			choice
+				`	"Alright, I'm in!"`
+					goto end
+				`	"It's almost like you're an agent of the Free Worlds..."`
+			`	He stares at you in shocked silence.`
+				goto fight
+			label end
+			scene "thumbnail/frigate"
+			`	"Glad to hear it! Our target is a Frigate named the <npc>. It tends to haul ammunition through the Wei system."`
+				accept
+	on decline
+		"reputation: Free Worlds" --
+	on enter
+		dialog `It looks like the other pilots the mystery man hired are piloting interceptors.`
+	npc
+		government "Pirate"
+		personality plunders harvests coward
+			confusion 20
+		fleet
+			names "pirate"
+			cargo 0
+			variant
+				"Berserker"
+				"Fury"
+				"Sparrow" 2
+	npc kill
+		government "Republic"
+		system "Wei"
+		personality target heroic opportunistic
+		fleet
+			names "republic capital"
+			cargo 3
+			outfitters "Ammo North"
+			variant
+				"Frigate"
+		dialog `You've eliminated the <npc>. Return to <destination> and collect your reward.`
+	on complete
+		log `A mysterious man hired me to lead a pirate raid on the Navy. I got some bonus pay in addition to whatever I plundered.`
+		payment 150000
+		"assisted free worlds" ++
+		"reputation: Free Worlds" += 5
+		"reputation: Militia" += 5
+		dialog `The mystery man congratulates you on completing the raid and rewards you with <payment>.`
+
+mission "Pirate FW invite 2"
+	minor
+	name "Raid: Navy Auxiliary"
+	description "Conduct a pirate raid on the <npc>. It usually runs ammunition through the <waypoints> system. After you're done, return to <destination> for your reward, <payment>."
+	source
+		government "Pirate"
+		attributes "south" "south pirate"
+	waypoint "Alpha Arae"
+	to offer
+		has "Pirate FW invite 1: done"
+		"reputation: Pirate" > 0
+		not "chosen sides"
+		random < 25
+	to fail
+		has "chosen sides"
+	on offer
+		conversation
+			`The mysterious man who previously hired you to attack a Navy Frigate approaches you again. "Ready for another job? It's a bigger target with a better haul."`
+			choice
+				`	"What is it this time?"`
+					goto target
+				`	"Not interested."`
+			label uninterested
+			`	"Why not? Last time you were spectacular."`
+			choice
+				`	"Too risky."`
+				`	"Because I don't take orders from agents of the Free Worlds!"`
+					goto fight
+			`	"Fair enough. I guess you're just not up to the job." The man leaves.`
+				decline
+			label fight
+			``
+			branch lucky
+				random < 50
+			`	You draw your sidearm, but he's quicker. Before you realize what happened, you're lying on the ground with a bloody hole in your chest. "Sorry <last>, but I can't let you blow my cover. We're at war with the Republic and too many lives are at stake."`
+				die
+			label lucky
+			`	He tenses up as you draw your sidearm. He tries to draw his weapon a split second after you. Big mistake. As he lies on the ground dying, he mutters "F... For freedom..."`
+				decline
+			label target
+			scene "thumbnail/auxiliaryc"
+			`	"A Navy Auxiliary, the <npc>, runs ammunition though <waypoints>. I'd like you to attack it. You can keep whatever you plunder and I'll reward you with an additional <payment>."`
+			choice
+				`	"Sounds good, I'm in!"`
+					goto acceptance
+				`	"Wait, am I doing this job alone?"`
+			`	"You did much better than the others on that last job. I don't want to entrust this task to lesser pilots."`
+			choice
+				`	"Alright, I'm in!"`
+				`	"Forget it, I'm not interested."`
+					goto uninterested
+			label acceptance
+			`	"Good luck <last>."`
+				accept
+	on decline
+		"reputation: Free Worlds" -= 5
+	npc
+		government "Republic"
+		system "Alpha Arae"
+		personality target heroic opportunistic
+		fleet
+			names "republic capital"
+			fighters "republic fighter"
+			cargo 0
+			variant
+				"Dropship" 4
+	npc kill
+		government "Republic"
+		system "Alpha Arae"
+		personality target heroic opportunistic
+		fleet
+			names "republic capital"
+			cargo 5
+			outfitters "Ammo North" "Ammo South"
+			variant
+				"Auxiliary (Cargo)"
+		dialog `You've eliminated the <npc>. Return to <destination> and collect your reward.`
+	on complete
+		log `The mysterious man who hired me to attack the Navy before had me conduct another raid on my own.`
+		payment 300000
+		"reputation: Free Worlds" += 10
+		"reputation: Militia" += 10
+		"assisted free worlds" ++
+		dialog `The mystery man congratulates you on completing the raid and rewards you with <payment>.`
+
+mission "Pirate FW invite 3"
+	minor
+	name "Raid: Navy Cruiser"
+	description "Conduct a pirate raid on the <npc>. It has been hunting pirates in the <waypoints> system. After you're done, return to <destination> for your reward, <payment>."
+	source
+		government "Pirate"
+		attributes "south" "south pirate"
+	waypoint "Lesath"
+	to offer
+		has "Pirate FW invite 2: done"
+		"reputation: Pirate" > 0
+		not "chosen sides"
+		random < 30
+	to fail
+		has "chosen sides"
+	on offer
+		conversation
+			`You're walking alone at the spaceport when the mysterious man who's been hiring you to attack the Navy appears next to you. "I have something for you."`
+			choice
+				`	"What do have?"`
+					goto offer
+				`	"Get lost."`
+			`	"What's with the cold attitude? We seemed to get along before."`
+			choice
+				`	"I don't even know your name."`
+				`	"Because I don't take orders from agents of the Free Worlds!"`
+					goto fight
+			`	"Fair enough." Before leaving he says, "I won't contact you again."`
+				decline
+			label fight
+			``
+			branch lucky
+				random < 50
+			`	You draw your sidearm, but he's quicker. Before you realize what happened, you're lying on the ground with a bloody hole in your chest. "Sorry <last>, but I can't let you blow my cover. We're at war with the Republic and too many lives are at stake."`
+				die
+			label lucky
+			`	He tenses up as you draw your sidearm. He tries to draw his weapon a split second after you. Big mistake. As he lies on the ground dying, he mutters "F... For freedom..."`
+				decline
+			label offer
+			scene "thumbnail/cruiser"
+			`	"The <npc>, a Navy Cruiser, has been hunting pirates in the <waypoints> system. I want you to eliminate it."`
+			choice
+				`	"Okay, I'm in!"`
+					goto acceptance
+				`	"Are you crazy?"`
+			`	"What's wrong?"`
+			`	You respond, "This isn't an old Frigate or one of the Navy's glorified cargo freighters. A Cruiser is a real warship. There's no money in this. It's almost like you're working for the Free Worlds!"`
+			`	He stares at you in shocked silence.`
+				goto fight
+			label acceptance
+			`	"I'm glad to hear it! As usual, you can keep whatever you plunder and there'll be an additional reward of <payment> when you report back."`
+				accept
+	on decline
+		"reputation: Free Worlds" -= 10
+	npc
+		government "Free Worlds"
+		system "Lesath"
+		personality derelict coward marked
+		fleet
+			names "free worlds small"
+			cargo 1
+			variant
+				"Hawk"
+				"Sparrow" 2
+	npc
+		government "Republic"
+		system "Lesath"
+		personality target heroic opportunistic
+		fleet
+			names "republic capital"
+			cargo 0
+			fighters "republic fighter"
+			variant
+				"Combat Drone" 4
+	npc kill
+		government "Republic"
+		system "Lesath"
+		personality target heroic opportunistic
+		fleet
+			names "republic capital"
+			cargo 3
+			outfitters "Ammo North"
+			variant
+				"Cruiser"
+		dialog `You've eliminated the <npc>. Return to <destination> and collect your reward.`
+	on complete
+		log `It turns out the mystery man who has been hiring me to raid the Navy was a Militia agent working for the Free Worlds. His cover was blown and pirates killed him. Before he died, he suggested I continue raiding the Navy and that if I searched spaceports in the Free Worlds someone would find me.`
+		payment 450000
+		"reputation: Free Worlds" += 20
+		"reputation: Militia" += 20
+		"assisted free worlds" ++
+		conversation
+			`The mystery man congratulates you on completing the raid and rewards you with <payment>. "You're really good at this. Have you considered going legit and working for the Free Worlds?"`
+			choice
+				`	"Why, are you one of their agents?"`
+			scene "outfit/sniper rifle"
+			`	Before he can answer, a sniper attacks! You aren't hurt and manage to take cover, but the mystery man has a lethal chest wound. You can hear shouts of "got the militia man" and "the militia man is going to die" from the direction of the attack. Then someone shouts "Wasn't there someone else with him?"`
+			`	As the man lays dying, he mutters to you, "Keep hunting the Navy. Go to spaceports in the Free Worlds. Someone... should... find..." But then he's gone. With nothing else for you here, you flee before the attackers close the distance.`
+
+
+
 mission "Quash: Humanika Infiltration 1"
 	minor
 	infiltrating
