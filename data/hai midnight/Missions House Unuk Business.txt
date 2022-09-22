@@ -663,7 +663,7 @@ mission "House Unuk Cookie Crook 1"
 			`	The kids look at you expectantly...`
 			choice
 				`	"Sure, I'll bring you some acorn cookies from human space."`
-				`	"Sorry, I'm too busy to get you acorn cookies."
+				`	"Sorry, I'm too busy to get you acorn cookies."`
 					goto busy
 			`	"Yay!" The kids are cheering and dancing. Hopefully you won't have to go too far out of your way to get them those cookies.`
 				accept
