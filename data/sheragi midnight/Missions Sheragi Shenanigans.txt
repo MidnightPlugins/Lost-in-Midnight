@@ -1356,7 +1356,7 @@ ship "Marauder Splinter" "Marauder Splinter (Sheragi Counterfeit)"
 
 
 ship "Marauder Vanguard" "Marauder Vanguard (Sheragi Counterfeit)"
-	sprite "ship/marauder vanguardw
+	sprite "ship/marauder vanguardw"
 	add attributes
 		"weapon capacity" 35
 	outfits
