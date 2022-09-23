@@ -182,7 +182,7 @@ mission "Angri Byrds License Revoked"
 		dialog `"It gives us no [joy, pleasure] to [end, terminate] you, but we must [avenge, champion] our [Caretakers, Keepers]."`
 	npc evade
 		government "Wanderer"
-		personality target heroic vindictive coward
+		personality waiting heroic vindictive coward
 			confusion 20
 		fleet
 			names "wanderer"
@@ -204,6 +204,7 @@ mission "Angri Byrds Vigilantes"
 		not attributes "uninhabited"
 	to offer
 		has "Angri Byrds License Revoked: offered"
+		not "event: Wanderers Peace Through Strength"
 		random < 10
 	on offer
 		conversation
@@ -226,31 +227,50 @@ mission "Angri Byrds Vigilantes"
 				accept
 	on enter
 		dialog phrase "hostile wanderer"
+	npc
+		government "Wanderer"
+		personality waiting heroic vindictive coward
+			confusion 20
+		fleet
+			names "wanderer"
+			cargo 0
+			variant
+				"Strong Wind (Shields)"
+				"Strong Wind"
+				"Autumn Leaf (Missile)" 2
+				"Autumn Leaf" 2
+				"Summer Leaf (Missile)" 2
+				"Summer Leaf" 2
 	npc evade
 		government "Wanderer"
-		personality target heroic vindictive coward
-			confusion 20
+		personality waiting heroic vindictive
 		fleet
 			names "wanderer"
 			cargo 0
 			variant
 				"Derecho"
 				"Tempest (Heavy)"
-				"Strong Wind" 2
-				"Autumn Leaf" 4
-				"Summer Leaf" 4
 			variant
 				"Derecho (Turret)"
 				"Tempest (Missile)"
-				"Strong Wind" 2
-				"Autumn Leaf" 4
-				"Summer Leaf" 4
 			variant
 				"Derecho (Tough)"
 				"Tempest"
-				"Strong Wind" 2
-				"Autumn Leaf" 4
-				"Summer Leaf" 4
+	npc evade
+		to spawn
+			has "event: wanderers: hurricane mass production"
+			random < 50
+		government "Wanderer"
+		personality waiting heroic vindictive
+		fleet
+			names "wanderer"
+			cargo 0
+			variant
+				"Hurricane"
+			variant
+				"Hurricane (Turret)"
+			variant
+				"Hurricane (Tough)"
 
 
 
@@ -342,6 +362,280 @@ mission "Angri Byrds: Peace Through Strength Patch"
 		"tribute: Sabira Eseskrai" > 0
 	on offer
 		"tribute: Sabira Eseskrai" <?= 100
+
+
+
+mission "Angri Byrds Still Angry 1"
+	minor
+	invisible
+	source
+		government "Wanderer"
+		not attributes "uninhabited"
+	to offer
+		has "event: Wanderers Peace Through Strength"
+		random < 5
+	on offer
+		conversation
+			`A Wanderer bumps into you. It looks at you with a fierce gaze and grumbles something in its native language before walking off.`
+				accept
+	on enter
+		dialog phrase "hostile wanderer"
+	npc
+		government "Wanderer (Hostile)"
+		personality target waiting heroic coward
+			confusion 20
+		fleet
+			names "wanderer"
+			cargo 0
+			variant
+				"Strong Wind (Shields)" 2
+				"Autumn Leaf (Missile)" 4
+				"Summer Leaf (Missile)" 4
+	npc kill
+		government "Wanderer (Hostile)"
+		personality target waiting heroic vindictive
+		fleet
+			names "wanderer"
+			cargo 0
+			variant
+				"Hurricane (Tough)"
+				"Derecho (Tough)"
+				"Tempest (Heavy)"
+		dialog `Despite the peace agreement, it seems not every Wanderer is willing to forgive and forget your past hostilities.`
+
+mission "Angri Byrds Still Angry 2"
+	landing
+	invisible
+	repeat
+	deadline 3
+	source
+		government "Wanderer"
+		not attributes "uninhabited"
+	to offer
+		has "event: Wanderers Peace Through Strength"
+		random < 1
+	on offer
+		conversation
+			branch 1
+				random < 75
+			`A Wanderer bumps into you. It looks at you with a fierce gaze and grumbles something in its native language before flying off.`
+				accept
+			label 1
+			branch 2
+				random < 66
+			`You sense someone is following you. When you turn to look, a nearby Wanderer flies off.`
+				accept
+			label 2
+			branch 3
+				random < 50
+			`A passing Wanderer looks at you strangely before flying away.`
+				accept
+			label 3
+			`A Wanderer is speaking in its native language to a small crowd. When they notice you, the crowd disperses.`
+				accept
+	on enter
+		dialog phrase "hostile wanderer"
+	npc
+		government "Wanderer (Hostile)"
+		personality target waiting heroic coward
+			confusion 20
+		fleet
+			names "wanderer"
+			cargo 0
+			variant
+				"Strong Wind (Shields)"
+				"Strong Wind"
+				"Autumn Leaf (Missile)" 2
+				"Autumn Leaf" 2
+				"Summer Leaf (Missile)" 2
+				"Summer Leaf" 2
+	npc evade
+		government "Wanderer (Hostile)"
+		personality target waiting heroic vindictive
+		fleet
+			names "wanderer"
+			cargo 0
+			variant
+				"Hurricane (Tough)"
+				"Derecho"
+				"Tempest (Heavy)"
+			variant
+				"Hurricane"
+				"Derecho (Turret)"
+				"Tempest (Missile)"
+			variant
+				"Hurricane (Turret)"
+				"Derecho (Tough)"
+				"Tempest"
+
+
+
+#####################################
+# Add Wanderer Militia variants
+#####################################
+
+
+
+mission "Angri Byrds: Add Wanderer Militia 1"
+	landing
+	invisible
+	to offer
+		has "event: wanderers: unfettered invasion starts"
+	on offer
+		event "add wanderer militia 1"
+		fail
+
+event "add wanderer militia 1"
+	fleet "Wanderer Freight"
+		add variant 1
+			"Deep River 0"
+			"Summer Leaf (Missile)" 2
+		add variant 1
+			"Deep River 1"
+			"Summer Leaf (Missile)" 1
+		add variant 1
+			"Deep River 2"
+			"Summer Leaf (Missile)" 2
+		add variant 1
+			"Deep River 3"
+			"Summer Leaf (Missile)" 1
+		add variant 1
+			"Deep River 4"
+			"Summer Leaf (Missile)" 2
+		add variant 1
+			"Deep River"
+			"Summer Leaf (Missile)" 3
+	fleet "Wanderer Defense"
+		add variant 1
+			"Strong Wind (Shields)"
+			"Summer Leaf (Missile)" 2
+		add variant 1
+			"Summer Leaf (Missile)" 5
+		add variant 1
+			"Strong Wind (Shields)" 2
+		add variant 1
+			"Strong Wind (Shields)"
+			"Summer Leaf (Missile)"
+		add variant 1
+			"Strong Wind (Shields)"
+			"Summer Leaf (Missile)" 3
+		add variant 1
+			"Strong Wind (Shields)" 3
+		add variant 1
+			"Autumn Leaf (Missile)" 2
+		add variant 1
+			"Strong Wind (Shields)"
+			"Autumn Leaf (Missile)" 2
+		add variant 1
+			"Strong Wind (Shields)"
+			"Autumn Leaf (Missile)"
+			"Summer Leaf (Missile)"
+		add variant 1
+			"Autumn Leaf (Missile)"
+			"Summer Leaf (Missile)" 2
+		add variant 1
+			"Autumn Leaf (Missile)"
+			"Summer Leaf (Missile)"
+	fleet "Wanderer Kor Efret Traders"
+		add variant 1
+			"Summer Leaf (Missile)" 2
+			"Strong Wind (Shields)"
+		add variant 1
+			"Strong Wind (Shields)"
+		add variant 1
+			"Autumn Leaf (Missile)"
+		add variant 1
+			"Summer Leaf (Missile)"
+
+mission "Angri Byrds: Add Wanderer Militia 2"
+	landing
+	invisible
+	to offer
+		has "event: wanderers: tempest mass production"
+		has "Angri Byrds: Add Wanderer Militia 1: offered"
+	on offer
+		event "add wanderer militia 2"
+		fail
+
+event "add wanderer militia 2"
+	fleet "Wanderer Freight"
+		add variant
+			"Riptide"
+			"Strong Wind (Shields)"
+			"Autumn Leaf (Missile)"
+		add variant
+			"Riptide"
+			"Summer Leaf (Missile)" 2
+	fleet "Wanderer Defense"
+		add variant 1
+			"Tempest"
+			"Summer Leaf (Missile)"
+			"Autumn Leaf (Missile)"
+		add variant 1
+			"Tempest (Heavy)"
+			"Strong Wind (Shields)"
+		add variant 1
+			"Strong Wind (Shields)"
+			"Autumn Leaf (Missile)"
+		add variant 1
+			"Autumn Leaf (Missile)" 3
+		remove variant
+			"Summer Leaf (Missile)" 5
+		remove variant
+			"Strong Wind (Shields)"
+			"Summer Leaf (Missile)"
+		remove variant
+			"Strong Wind (Shields)"
+			"Summer Leaf (Missile)" 3
+		remove variant
+			"Autumn Leaf (Missile)" 2
+		remove variant
+			"Strong Wind (Shields)"
+			"Autumn Leaf (Missile)" 2
+		remove variant
+			"Autumn Leaf (Missile)"
+			"Summer Leaf (Missile)"
+
+mission "Angri Byrds: Add Wanderer Militia 3"
+	landing
+	invisible
+	to offer
+		has "event: wanderers: riptide mass production"
+		has "Angri Byrds: Add Wanderer Militia 2: offered"
+	on offer
+		event "add wanderer militia 3"
+		fail
+
+event "add wanderer militia 3"
+	fleet "Wanderer Freight"
+		add variant
+			"Riptide"
+			"Strong Wind (Shields)"
+			"Autumn Leaf (Missile)"
+		add variant
+			"Riptide"
+			"Summer Leaf (Missile)" 2
+
+mission "Angri Byrds: Add Wanderer Militia 4"
+	landing
+	invisible
+	to offer
+		has "event: wanderers: derecho mass production"
+		has "Angri Byrds: Add Wanderer Militia 3: offered"
+	on offer
+		event "add wanderer militia 4"
+		fail
+
+event "add wanderer militia 4"
+	fleet "Wanderer Defense"
+		add variant 1
+			"Derecho"
+			"Strong Wind (Shields)" 2
+		add variant 1
+			"Derecho (Tough)"
+			"Autumn Leaf (Missile)"
+			"Summer Leaf (Missile)" 2
+
 
 
 #####################################
