@@ -957,3 +957,149 @@ mission "Angri Byrds: Hai Millipede 2"
 		conversation
 			scene "thumbnail/hai millipede-thumb"
 			`The Wanderers thank you for the critical role you played in stopping the Millipede from stealing more of their ships. You are rewarded with <payment>.`
+
+
+
+#####################################
+# Deep River Carrier
+#####################################
+
+
+
+mission "Angri Byrds: Deep River Carrier 1"
+	minor
+	name "Transporting Flycatchers"
+	description "Escort the Deep River Carrier and its valuable cargo of Flycatchers to <destination>."
+	source
+		government "Wanderer"
+		attributes "factory"
+	destination
+		government "Wanderer"
+		not attributes "factory"
+		distance 1 2
+	to offer
+		has "event: wanderers: first tech increase"
+		"reputation: Wanderer" > 0
+		or
+			and
+				not "deferred Angri Byrds: Deep River Carrier"
+				random < 50
+			and
+				has "deferred Angri Byrds: Deep River Carrier"
+				random < 5
+	on offer
+		conversation
+			scene "thumbnail/flycatcher"
+			`You see several Flycatchers lined up on a loading dock and wonder how the Wanderers deploy them to their non-manufacturing worlds.`
+			choice
+				`	(Ask one.)`
+				`	(Not now.)`
+					defer
+				`	(Forget it.)`
+					decline
+			`	You ask one of the Wanderers overseeing an inspection of the Flycatchers. "We [carry?, ferry?] these Flycatchers on one of our [ships?, vessels?] to systems in need of them. Would you like to [escort?, accompany?] this shipment? It is [destined?, bound?] for <destination>."`
+			`	This seems like it could be a valuable learning experience. But it doesn't look like there'll be any financial reward for escorting this ship.`
+			choice
+				`	"I'd like to escort the ship and learn how Flycatchers are deployed."`
+				`	"Thanks, but I'm not interested in escorting the ship."`
+					decline
+			`	"The [ship?, vessel?] that will [carry?, ferry?] these Flycatchers should arrive soon. I will [notify?, inform?] the captain to expect you." The Wanderer returns to inspecting the drones.`
+				accept
+	on defer
+		set "deferred Angri Byrds: Deep River Carrier"
+	on enter
+		dialog `The Wanderers have converted a Deep River into a drone carrier. It is accompanied by a pair of Summer Leaves.`
+	npc
+		government "Wanderer"
+		personality target escort heroic
+		ship "Summer Leaf (Missile)" "Iyik'rai"
+		ship "Summer Leaf (Missile)" "Vori'esei"
+	npc accompany save
+		government "Wanderer"
+		personality target escort launching timid
+			confusion 20
+		fleet
+			names "wanderer"
+			cargo 0
+			variant
+				"Deep River Carrier (Full)"
+				"Flycatcher" 12
+	on fail
+		"reputation: Wanderer" -= 12
+		dialog `[MISSION FAILED]: You have failed to escort the <npc> and its cargo of Flycatchers to their destination. If life were a game, you could load a save file and try again.`
+	on visit
+		dialog `The <npc> and its cargo of Flycatchers hasn't caught up with you!`
+	on complete
+		event "add Deep River Carriers"
+
+mission "Angri Byrds: Deep River Carrier 2"
+	landing
+	name "More Flycatchers"
+	description "Escort the Deep River Carrier and its valuable cargo of Flycatchers to <destination>."
+	destination
+		government "Wanderer"
+		not attributes "factory"
+		distance 1 2
+	to offer
+		has "Angri Byrds: Deep River Carrier 1: done"
+	on offer
+		conversation
+			scene "thumbnail/flycatcher"
+			`The Flycatchers have been safely delivered to <planet>. You didn't realize some of the Deep Rivers flying around Wanderer space have modified mounting connectors that allow them to carry drones. While watching the Flycatchers being unloaded, you notice that some of the drones are being loaded onto a different ship instead of remaining on the planet.`
+			`	The captain of the second ship contacts you. "I was told you [escorted?, accompanied?] these Flycatchers to <origin>. Do you wish to join us on our [journey?, travels?] to <destination>? I can [compensate?, recompense?] you with <payment>." At least you'll be paid if you go.`
+			choice
+				`	"Sure, I'll join you."`
+				`	"Sorry, I'm going in a different direction."`
+					decline
+			`	"Thank you! Your [presence?, company?] is appreciated!"`
+				accept
+	on enter
+		dialog `You notice there are no Summer Leaves escorting the <npc>.`
+	npc accompany save
+		government "Wanderer"
+		personality target escort launching timid
+			confusion 20
+		fleet
+			names "wanderer"
+			cargo 3
+			variant
+				"Deep River Carrier (Half)"
+				"Flycatcher" 8
+	on fail
+		"reputation: Wanderer" -= 8
+		dialog `[MISSION FAILED]: You have failed to escort the <npc> and its cargo of Flycatchers to their destination. If life were a game, you could load a save file and try again.`
+	on visit
+		dialog `The <npc> and its cargo of Flycatchers hasn't caught up with you!`
+	on complete
+		payment
+		payment 30000
+		dialog `The captain of the <npc> thanks you for escorting his ship and rewards you with <payment>.`
+
+event "add Deep River Carriers"
+	fleet "Wanderer Freight"
+		add variant 1
+			"Deep River Carrier (Full)"
+			"Flycatcher" 12
+		add variant 1
+			"Deep River Carrier (Full)"
+		add variant 1
+			"Deep River Carrier (Full)"
+			"Flycatcher" 12
+			"Summer Leaf (Missile)" 2
+		add variant 1
+			"Deep River Carrier (Full)"
+			"Summer Leaf (Missile)" 2
+		add variant 1
+			"Deep River Carrier (Half)"
+			"Flycatcher" 8
+		add variant 1
+			"Deep River Carrier (Half)"
+			"Flycatcher" 8
+			"Summer Leaf (Missile)" 2
+		add variant 1
+			"Deep River Carrier"
+			"Flycatcher" 4
+		add variant 1
+			"Deep River Carrier"
+			"Flycatcher" 4
+			"Summer Leaf (Missile)" 2
