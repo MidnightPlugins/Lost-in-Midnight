@@ -1948,7 +1948,7 @@ mission "Rogue Asteroid (Ambush)"
 		government "Pirate"
 		personality uninterested forbearing waiting staying mute
 		fleet
-			names "Pirate"
+			names "pirate"
 			cargo 3
 			outfitters "Iron" "Lead" "Silicon"
 			variant 1
