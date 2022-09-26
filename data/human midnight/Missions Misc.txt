@@ -1803,7 +1803,6 @@ ship "Asteroid" "Rogue Asteroid"
 mission "Rogue Asteroid (Poor World)"
 	deadline 2
 	repeat
-	minor
 	name "Rogue Asteroid"
 	description "A rogue asteroid may collide with <destination>. Destroy it, then land on <planet> to claim the reward (<payment>)."
 	source
@@ -1857,7 +1856,7 @@ mission "Rogue Asteroid (Pirate)"
 			has "Rogue Asteroid (Poor World): declined"
 			has "Rogue Asteroid (Poor World): failed"
 			has "Rogue Asteroid (Poor World): aborted"
-		random < 3
+		random < 5
 	on offer
 		conversation
 			`The spaceport is a flurry of activity as pilots rush to prepare their ships for liftoff.`
@@ -1904,7 +1903,7 @@ mission "Rogue Asteroid (Rich World)"
 			has "Rogue Asteroid (Poor World): declined"
 			has "Rogue Asteroid (Poor World): failed"
 			has "Rogue Asteroid (Poor World): aborted"
-		random < 3
+		random < 5
 	on offer
 		conversation
 			`The spaceport is a flurry of activity as pilots rush to prepare their ships for liftoff.`
@@ -1932,7 +1931,7 @@ mission "Rogue Asteroid (Rich World)"
 	on complete
 		payment 20000
 		dialog `The government of <planet> rewards you with <payment> for destroying the asteroid threat.`
-	
+
 mission "Rogue Asteroid (Ambush)"
 	landing
 	invisible
@@ -1940,15 +1939,16 @@ mission "Rogue Asteroid (Ambush)"
 		attributes "pirate"
 	to offer
 		or
-			has "Rogue Asteroid (Poor World): done"
-			has "Rogue Asteroid (Poor World): declined"
-			has "Rogue Asteroid (Poor World): failed"
-			has "Rogue Asteroid (Poor World): aborted"
-		random < 5
+			has "Rogue Asteroid (Pirate): done"
+			has "Rogue Asteroid (Pirate): declined"
+			has "Rogue Asteroid (Pirate): failed"
+			has "Rogue Asteroid (Pirate): aborted"
+		random < 1
 	npc kill
-		government "Phenomenon (dangerous)"
+		government "Pirate"
 		personality uninterested forbearing waiting staying mute
 		fleet
+			names "Pirate"
 			cargo 3
 			outfitters "Iron" "Lead" "Silicon"
 			variant 1
@@ -1957,17 +1957,6 @@ mission "Rogue Asteroid (Ambush)"
 			variant 1
 				"Mysterious Asteroid"
 				"Dagger" 4
-			variant 1
-				"Mysterious Asteroid"
-				"Dagger" 3
-			variant 1
-				"Mysterious Asteroid"
-				"Dagger" 2
-			variant 1
-				"Mysterious Asteroid"
-				"Dagger" 1
-			variant 5
-				"Rogue Asteroid"
 	on complete
 		clear "Rogue Asteroid (Ambush): offered"
 
