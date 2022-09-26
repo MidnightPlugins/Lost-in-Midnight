@@ -1802,7 +1802,7 @@ ship "Asteroid" "Rogue Asteroid"
 
 mission "Rogue Asteroid (Poor World)"
 	deadline 2
-	repeat
+	minor
 	name "Rogue Asteroid"
 	description "A rogue asteroid may collide with <destination>. Destroy it, then land on <planet> to claim the reward (<payment>)."
 	source
