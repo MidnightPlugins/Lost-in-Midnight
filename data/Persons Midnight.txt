@@ -490,11 +490,16 @@ person "Midnight Predator"
 			"Korath Grapplers"
 			"Korath Incinerators"
 			"Korath Scanners"
+			"Korath Scattermines"
 			"Node 8 Jammers"
 			"Node 8 Processors"
 			"Obsolete Transceivers"
 			"Slicer Torches"
 			"Korath Eliminators"
+			"Deuterium"
+			"Unknown Elements"
+			"Hybrid Afterburners"
+			"Sunracer Afterburners"
 		word
 			"! You can never have enough of those."
 	ship "Korath Predator" "Midnight Predator"
@@ -506,6 +511,7 @@ person "Midnight Predator"
 	ship "Far Osk 27 (Flamethrower)" "Char 6"
 
 ship "Korath Devourer" "Korath Predator"
+	"crew" 525
 	outfits
 		"Korath Incinerator"
 		"Korath Grab-Strike" 3
@@ -519,12 +525,13 @@ ship "Korath Devourer" "Korath Predator"
 		"Fuel Processor"
 		Quantumium
 		"Subsidurial Plushie"
+		"Deuterium"
 		"Dual Pulse Pistols"
 		"Enforcer Confrontation Gear"
 		"Enforcer Riot Staff"
 		"Fragmentation Grenades"
 		"Intrusion Countermeasures"
-		"Korath Repeater Rifle" 273
+		"Korath Repeater Rifle" 513
 		"Laser Rifle"
 		"Nerve Gas"
 		"Pug Biodefenses"
