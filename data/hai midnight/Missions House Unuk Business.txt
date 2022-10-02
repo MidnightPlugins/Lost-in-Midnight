@@ -59,8 +59,7 @@ mission "House Unuk Business"
 
 mission "House Unuk Business Kor Efret 1"
 	landing
-	name "House Unuk Kor Efret"
-	description "The Wanderers had some criticisms for House Unuk's acorn cookies. Visit <destination> and share this knowledge with House Unuk."
+	invisible
 	source "Setar Fort"
 	destination "Flood"
 	to offer
