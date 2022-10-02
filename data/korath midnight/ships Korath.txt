@@ -81,6 +81,26 @@ ship "Ancient Raider"
 
 
 
+ship "Korath Raider" "Korath Raider (Tough)"
+	outfits
+		"Korath Banisher"
+		"Korath Grab-Strike" 4
+		"Korath Warder"
+		"Double Plasma Core"
+		"Generator (Inferno Class)"
+		"Systems Core (Large)"
+		"Large Heat Shunt"
+		"Small Heat Shunt" 3
+		"Outfits Expansion"
+		"Fuel Processor"
+		"Korath Repeater Rifle" 196
+		"Steering (Planetary Class)"
+		"Thruster (Planetary Class)"
+		"Jump Drive"
+
+
+
+
 ship "Korath Raider" "Korath Raider (Fireswarm)"
 	add attributes
 		"outfit space" 56

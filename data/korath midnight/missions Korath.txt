@@ -20,10 +20,25 @@ mission "Add Fireswarm Raiders"
 
 event "add fireswarm raiders"
 	fleet "Korath Raid"
-		add variant
+		remove variant
+			"Korath Raider"
+			"Korath Chaser" 2
+		add variant 2
+			"Korath Raider"
+			"Korath Chaser" 2
+		add variant 1
+			"Korath Raider (Tough)"
+			"Korath Chaser" 2
+		add variant 1
 			"Korath Raider (Fireswarm)"
 			"Korath Chaser" 2
 	fleet "Korath Ember Waste Raid"
-		add variant
+		remove variant
+			"Korath Raider (Ember)"
+			"Korath Chaser" 2
+		add variant 2
+			"Korath Raider (Ember)"
+			"Korath Chaser" 2
+		add variant 1
 			"Korath Raider (Fireswarm Ember)"
 			"Korath Chaser" 2
