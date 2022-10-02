@@ -644,6 +644,36 @@ event "add wanderer militia 4"
 
 
 
+mission "Angri Byrds: Unfettered Strikers"
+	job
+	repeat
+	name "Unfettered Strikers"
+	description "An Unfettered fleet lead by a warship named the <npc> was spotted near <system>. Eliminate the fleet, then return to <planet> to claim your payment [<payment>]."
+	source
+		government "Wanderer"
+	to offer
+		"combat rating" > 8000
+		has "event: wanderers: unfettered invasion starts"
+		random < 20
+	npc kill
+		government "Bounty"
+		system
+			distance 1 2
+		personality target waiting staying heroic vindictive
+		fleet
+			names "hai"
+			cargo 3
+			commodities "Food" "Medical"
+			variant
+				"Armor Beetle"
+				"Shield Beetle (Ion Pulse)" 2
+				"Lightning Bug" 6
+	on complete
+		payment 1000000
+		dialog `The Wanderers thank you for stopping the <npc> and its fleet. You are rewarded with <payment> for your efforts.`
+
+
+
 mission "Angri Byrds: Plundered Ship [Autumn Leaf]"
 	job
 	repeat

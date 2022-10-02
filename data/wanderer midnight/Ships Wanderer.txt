@@ -172,6 +172,21 @@ ship "Storm Seeker"
 
 
 
+ship "Storm Seeker"  "Storm Seeker (Troops)"
+	"crew" 40
+	outfits
+		"Sunbeam" 6
+		"Wanderer Anti-Missile"
+		"White Sun Reactor"
+		"Dark Storm Shielding"
+		"Wanderer Ramscoop"
+		"Laser Rifle" 40
+		"Type 1 Radiant Thruster"
+		"Type 2 Radiant Thruster"
+		"Type 3 Radiant Steering"
+		"Jump Drive"
+
+
 # Shallow Ponds often escort the Storm Seeeker in the Storm Seeker missions.
 # A limited number of them can be salvaged from Season's End.
 
@@ -491,6 +506,7 @@ ship "Deep River Rapids"
 		"Dark Storm Shielding"
 		"Wanderer Heat Sink"
 		"Wanderer Ramscoop"
+		"Laser Rifle" 14
 
 		"Type 2 Radiant Thruster"
 		"Type 4 Radiant Steering"
@@ -518,6 +534,7 @@ ship "Deep River Rapids"
 
 ship "Deep River Rapids" "Deep River Pirate 4"
 	sprite "ship/deep river 4"
+	"crew" 22
 	add attributes
 		"mass" -80
 		"drag" -.4
@@ -531,6 +548,7 @@ ship "Deep River Rapids" "Deep River Pirate 4"
 		"Dark Storm Shielding"
 		"Wanderer Heat Sink"
 		"Wanderer Ramscoop"
+		"Laser Rifle" 22
 		"Type 2 Radiant Thruster"
 		"Type 4 Radiant Steering"
 		"Hyperdrive"
