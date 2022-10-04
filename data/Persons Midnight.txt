@@ -244,7 +244,7 @@ ship "Modified Blackbird"
 
 
 person "El Niño"
-	government "Author"
+	government "Wanderer"
 	frequency "100"
 	system
 		government "Wanderer"
@@ -260,7 +260,7 @@ person "El Niño"
 ship "Thunder Maker" "God of Thunder"
 	sprite "ship/god of thunder"
 	add attributes
-		"self destruct" .4
+		"self destruct" 1
 	outfits
 		"Thunderhead Launcher" 16
 		"Thunderhead Missile" 640
@@ -384,6 +384,79 @@ ship "Hackerz Drone"
 	explode "small explosion" 5
 	description "Warning: the target ship is programmed to engage in self-defense behaviors to ensure a realistic simulation."
 
+
+
+person "Zephyr"
+	government "Independent"
+	frequency "1000"
+	system
+		system "Merak" "Diyu" "Fala" "Phecda"
+	personality timid uninterested
+	phrase
+		word
+			"This is the Zephyr. "
+			"Are you familiar with my ship? "
+		word
+			"It may not look like much, "
+		word
+			" but it's the first ship to make the New China Supply Run in eight days."
+			" but it can finish the New China Supply Run in eight days."
+			" but it's mine."
+	phrase
+		word
+			"You need to "
+		word
+			"be fast "
+			"be cunning "
+			"be focused on your mission "
+			"know the hyperlane map "
+			"know the quickest path to reach your destination "
+			"avoid unnecessary fights "
+			"avoid distractions "
+			"have some piloting skill "
+			"have determination "
+		word
+			"if you want to "
+			"if you're trying to "
+			"if you're attempting to "
+			"in order to "
+		word
+			"make "
+			"complete "
+			"finish "
+			"accomplish "
+		word
+			"the New China Supply Run."
+	ship "Modified Clipper (Zephyr)" "Zephyr"
+
+ship "Modified Clipper" "Modified Clipper (Zephyr)"
+	outfits
+		"Heavy Laser" 2
+		"Javelin Pod" 2
+		Javelin 400
+		"S3 Thermionic"
+		"LP072a Battery Pack"
+		"D94-YV Shield Generator"
+		"Outfits Expansion"
+		"Interference Plating" 4
+		"Large Radar Jammer"
+		"Cargo Scanner"
+		"Outfit Scanner"
+		"Tactical Scanner"
+		"Fuel Pod" 3
+		"Laser Rifle" 4
+		"Fragmentation Grenades" 3
+		"Nerve Gas"
+		"Sniper Rifle"
+		Afterburner
+		"Greyhound Plasma Steering"
+		"Greyhound Plasma Thruster"
+		"Jump Drive"
+
+	gun -21.5 -18 "Heavy Laser"
+	gun 21.5 -18 "Heavy Laser"
+	gun -11 -8.5 "Javelin Pod"
+	gun 11 -8.5 "Javelin Pod"
 
 
 
@@ -589,7 +662,7 @@ person "Midnight Predator"
 			"Rao'xeris"
 			"Marauder Behemoth"
 			"Marauder Hauler"
-			"Armor Beetle
+			"Armor Beetle"
 			"Deep River Rapids"
 			"Solifuge Prototype"
 			"Hauler VI"
