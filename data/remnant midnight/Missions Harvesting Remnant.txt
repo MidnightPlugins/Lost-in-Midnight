@@ -64,6 +64,7 @@ mission "Harvesting Quantumium Research"
 
 mission "Collect Void Sprites"
 	job
+	deadline 20
 	name "Collect void sprites"
 	description "Escort the <npc> to <waypoints> and rescue more Void Sprites. Then escort the <npc> back to <planet> for payment [<payment>]."
 	source
@@ -75,7 +76,7 @@ mission "Collect Void Sprites"
 		has "event: remnant: pantica void sprites"
 		random < 40
 	on enter "Nenia"
-		dialog `A Korath ship was waiting for you and moves to attack. As the ship and its fighters converge on you, the Pelican immediately set to work collecting void sprites. After filling its hold, the confirmation codes flash across your tactical screen. "Good to go."`
+		dialog `A Korath ship was waiting for you and moves to attack. As the ship and its fighters converge on you, the Pelican immediately works on collecting void sprites. After filling its hold, the confirmation codes flash across your tactical screen. "Good to go."`
 	npc
 		government "Korath"
 		personality heroic disables plunders harvests entering staying
@@ -98,7 +99,7 @@ mission "Collect Void Sprites"
 	on enter "Pantica"
 		dialog `You watch as the Pelican dips low into Esquiline's atmosphere and opens its bay doors. The void sprites emerge tentatively, then confidently launch themselves into the clouds. Return to <planet> for your payment.`
 	on complete
-		payment 200000
+		payment 1000000
 		dialog `The captain of the <npc> thanks you for assisting with rescuing the Void Sprites and rewards you with <payment>.`
 
 
