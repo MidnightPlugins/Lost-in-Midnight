@@ -799,6 +799,44 @@ outfit "Secret Prototype"
 
 
 
+mission "Bounty Hunting (Smuggler)"
+	name "Smuggler near <system>"
+	description "The captain of the <npc>, which is about to enter this system, is a wanted smuggler. Disable and board the vessel then bring the smuggler to <destination> to stand trial on <date>. Reward for capture: <payment>."
+	passengers 1
+	deadline 14
+	repeat
+	job
+	to offer
+		"combat rating" > 200
+		random < 15
+	on offer
+		require "Brig"
+	source
+		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
+		attributes "rim" "south" "north" "dirt belt" "core" "frontier"
+	destination
+		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
+		attributes "rim" "south" "north" "dirt belt" "core" "frontier"
+		distance 2 6
+	npc board
+		government "Bounty"
+		personality timid fleeing uninterested entering target
+		fleet
+			names "civilian"
+			variant
+				"Modified Clipper (Smuggler)"
+			variant
+				"Modified Argosy (Smuggler)"
+			variant
+				"Modified Firebird (Smuggler)"
+		dialog "You blast your way onto the ship and confine the captain to your ship's brig. Time to deliver them to <planet>."
+	on complete
+		payment 350000
+		dialog "The government of <planet> gratefully pays you <payment> for helping to stop the flow of illegal smuggling through their region of space."
+
+
+
+
 mission "Corporate espionage [1]"
 	name "Corporate espionage"
 	description "The <npc> is about to enter this system. Locate it and make detailed scans of its cargo, which are of considerable interest to a team of Syndicate researchers on <destination>; proceed there for <payment> after retrieving the data."
@@ -1416,14 +1454,14 @@ mission "Star Explorer: Escort"
 	job
 	repeat
 	to offer
-		random < 5
+		random < 15
 		"combat rating" > 50
 	source
-		government "Republic" "Free Worlds" "Syndicate"
+		government "Republic" "Free Worlds" "Syndicate" "Independent" "Neutral"
 		attributes "research"
 	waypoint
 		attributes "wolf-rayet" "ringworld" "wormhole" "pleiades" "nova"
-		neighbor distance 12 100
+		distance 6 100
 	npc
 		government "Pirate"
 		personality nemesis waiting plunders
@@ -1452,6 +1490,36 @@ mission "Star Explorer: Escort"
 		dialog "You bid goodbye to the captain of the <npc> and accept your payment of <payment>."
 		payment
 		payment 120000
+
+
+
+mission "Stealing From Rival Smugglers"
+	name "Rival Smuggler near <system>"
+	description "A rival gang is using the <npc> to smuggle cargo through our territory in <system>. When they do, disable and board the vessel then bring a certain item from their cargo back to <destination>. Your reward is: <payment>."
+	deadline 14
+	repeat
+	job
+	to offer
+		random < 20
+		"combat rating" > 200
+	source
+		government "Pirate"
+	cargo "Smuggled Cargo" 1
+	npc board
+		government "Bounty"
+		personality timid fleeing uninterested entering target
+		fleet
+			names "civilian"
+			variant
+				"Modified Clipper (Smuggler)"
+			variant
+				"Modified Argosy (Smuggler)"
+			variant
+				"Modified Firebird (Smuggler)"
+		dialog "You blast your way onto the ship and steal the smuggled cargo. Deliver it to <planet>."
+	on complete
+		payment 350000
+		dialog "The pirates of <planet> take the smuggled cargo from your cargo hold and pay you <payment>."
 
 
 
