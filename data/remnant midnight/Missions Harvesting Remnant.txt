@@ -76,8 +76,10 @@ mission "Collect Void Sprites"
 		has "event: remnant: pantica void sprites"
 		random < 40
 	on enter "Nenia"
-		dialog `A Korath ship was waiting for you and moves to attack. As the ship and its fighters converge on you, the Pelican immediately works on collecting void sprites. After filling its hold, the confirmation codes flash across your tactical screen. "Good to go."`
+		dialog `Korath huntere were waiting for you and move to attack. As the Korath converge on you, the Pelican immediately works on collecting void sprites. After filling its hold, the confirmation codes flash across your tactical screen. "Good to go."`
 	npc
+		to spawn
+			not "event: Korath Scouter deployments"
 		government "Korath"
 		personality heroic disables plunders harvests entering staying
 		system "Nenia"
@@ -89,6 +91,24 @@ mission "Collect Void Sprites"
 			variant 4
 				"Korath Raider (Fireswarm Ember)"
 				"Korath Chaser" 2
+	npc
+		to spawn
+			has "event: Korath Scouter deployments"
+		government "Korath"
+		personality heroic disables plunders harvests entering staying
+		system "Nenia"
+		fleet
+			names "korath"
+			variant 1
+				"Korath Dredger"
+				"Korath Chaser" 4
+			variant 2
+				"Korath Scouter (Fire-Lance)" 3
+				"Korath Chaser" 3
+			variant 3
+				"Korath Raider (Fireswarm Ember)"
+				"Korath Chaser" 2
+
 	npc save accompany
 		government "Remnant"
 		personality pacifist coward launching escort
