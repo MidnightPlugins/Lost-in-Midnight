@@ -585,6 +585,77 @@ mission "Executive Guard: Syndicated Shipyards"
 
 
 
+mission "Hijacked Escort"
+	name "Escort to <planet>"
+	description "The captain of the <npc> will pay you 150,000 credits to escort them safely out of this dangerous region of space to reach <destination> by <date>."
+	job
+	repeat
+	deadline 10
+	to offer
+		random < 5
+		"combat rating" > 200
+	source
+		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
+		attributes "frontier" "north"
+	destination
+		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
+		attributes "deep" "paradise" "near earth" "core"
+		distance 4 4
+	on accept
+		"reputation: Bounty (Disguised)" >?= 1
+	on enter
+#jumps 0
+	on enter
+#jumps 1
+	on enter
+#jumps 2
+	on enter
+#jumps 3
+		"reputation: Bounty (Disguised)" <?= -1
+		dialog `The <npc> hails you: "Emergency! Pirate stowaways have taken over the ship! Get over here and save us!" Retaking the ship to rescue the passengers may not be easy.`
+	npc
+		government "Pirate"
+		personality nemesis harvests plunders
+		fleet "Small Northern Pirates"
+		fleet "Large Northern Pirates"
+	npc
+		government "Pirate"
+		personality nemesis harvests plunders
+		system
+			distance 1 2
+		fleet "Small Northern Pirates"
+	npc
+		government "Pirate"
+		personality nemesis harvests plunders
+		system
+			distance 1 1
+		fleet "Large Northern Pirates"
+	
+	npc capture
+		government "Bounty (Disguised)"
+		personality target escort marked timid
+		fleet
+			names "civilian"
+			variant 1
+				"Bactrian (Hijacked)"
+			variant 2
+				"Star Queen (Hijacked)"
+		dialog `You've taken control of the <npc> from the hijackers. Bring the rescued passengers to <destination>.`
+	on abort
+		"reputation: Bounty (Disguised)" >?= 1
+		"reputation: Merchant" -= 10
+		dialog "The <npc> never made it to its destination. There are nasty rumors that you hijacked the ship yourself..."
+	on fail
+		"reputation: Bounty (Disguised)" >?= 1
+		"reputation: Merchant" -= 10
+		dialog "The <npc> never made it to its destination. There are nasty rumors that you hijacked the ship yourself..."
+	on complete
+		"reputation: Bounty (Disguised)" >?= 1
+		payment 300000
+		dialog `While it is unfortunate that the crew of the <npc> died, the passengers are grateful for your efforts to rescue and transport them to <planet>. With the bonus pay they offer, your reward for this job comes to <payment>.`
+
+
+
 phrase "Cupid's Arrow"
 	word
 		"Cupid's Arrow"
