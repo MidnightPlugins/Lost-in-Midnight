@@ -131,7 +131,7 @@ ship "Modified Berserker"
 
 ship "Modified Clipper"
 	sprite "ship/modified clipper"
-	thumbnail "thumbnail/clipper"
+	thumbnail "thumbnail/modified clipper-thumb"
 	attributes
 		category "Light Warship"
 		"cost" 900000
@@ -463,7 +463,7 @@ ship "Modified Roost"
 
 ship "Marauder Bastion"
 	sprite "ship/marauder bastion"
-	thumbnail "thumbnail/bastion"
+	thumbnail "thumbnail/marauder bastion"
 	attributes
 		category "Medium Warship"
 		"cost" 4246000
