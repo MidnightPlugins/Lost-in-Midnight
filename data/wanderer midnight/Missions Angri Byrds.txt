@@ -650,9 +650,11 @@ mission "Angri Byrds: Unfettered Strikers"
 	job
 	repeat
 	name "Unfettered Strikers"
-	description "An Unfettered fleet lead by a warship named the <npc> was spotted near <system>. Eliminate the fleet, then return to <planet> to claim your payment [<payment>]."
+	description "An Unfettered fleet lead by a warship named the <npc> was spotted near <origin>. Eliminate the fleet, then report to <destination> to claim your payment [<payment>]."
 	source
 		government "Wanderer"
+		neighbor near "Ka'ch'chrai" 0 4
+	destination "Vara K'chrai"
 	to offer
 		"combat rating" > 8000
 		has "event: wanderers: unfettered invasion starts"
@@ -668,8 +670,11 @@ mission "Angri Byrds: Unfettered Strikers"
 			commodities "Food" "Medical"
 			variant
 				"Armor Beetle"
+				"Solifuge (Ion Flash)"
+				"Violin Spider" 3
+				"Violin Spider (Pulse)" 3
 				"Shield Beetle (Ion Pulse)" 2
-				"Lightning Bug" 6
+				"Lightning Bug" 4
 	on complete
 		payment 1000000
 		dialog `The Wanderers thank you for stopping the <npc> and its fleet. You are rewarded with <payment> for your efforts.`
@@ -683,7 +688,8 @@ mission "Angri Byrds: Plundered Ship [Autumn Leaf]"
 	description "The <npc> was captured by the Unfettered. Eliminate the ship at <waypoints>, then report to <destination> for payment of <payment>."
 	source
 		government "Wanderer"
-		not attributes "korath"
+		neighbor near "Ka'ch'chrai" 0 4
+	destination "Vara K'chrai"
 	waypoint "Prakacha'a"
 	to offer
 		has "event: eastern evacuation"
@@ -711,7 +717,8 @@ mission "Angri Byrds: Plundered Ship [Strong Wind]"
 	description "The <npc> was captured by the Unfettered. Eliminate the ship at <waypoints>, then report to <destination> for payment of <payment>."
 	source
 		government "Wanderer"
-		not attributes "korath"
+		neighbor near "Ka'ch'chrai" 0 4
+	destination "Vara K'chrai"
 	waypoint "Prakacha'a"
 	to offer
 		has "event: eastern evacuation"
@@ -739,7 +746,8 @@ mission "Angri Byrds: Plundered Ship [Tempest]"
 	description "The <npc> was captured by the Unfettered. Eliminate the ship at <waypoints>, then report to <destination> for payment of <payment>."
 	source
 		government "Wanderer"
-		not attributes "korath"
+		neighbor near "Ka'ch'chrai" 0 4
+	destination "Vara K'chrai"
 	waypoint "Prakacha'a"
 	to offer
 		has "event: wanderers: derecho mass production"
@@ -767,7 +775,8 @@ mission "Angri Byrds: Plundered Ship [Derecho]"
 	description "The <npc> was captured by the Unfettered. Eliminate the ship at <waypoints>, then report to <destination> for payment of <payment>."
 	source
 		government "Wanderer"
-		not attributes "korath"
+		neighbor near "Ka'ch'chrai" 0 4
+	destination "Vara K'chrai"
 	waypoint "Prakacha'a"
 	to offer
 		has "event: wanderers: hurricane mass production"
@@ -795,7 +804,8 @@ mission "Angri Byrds: Plundered Ship [Hurricane]"
 	description "The <npc> was captured by the Unfettered. Eliminate the ship at <waypoints>, then report to <destination> for payment of <payment>."
 	source
 		government "Wanderer"
-		not attributes "korath"
+		neighbor near "Ka'ch'chrai" 0 4
+	destination "Vara K'chrai"
 	waypoint "Prakacha'a"
 	to offer
 		has "event: wanderers: desi seledrak"
@@ -823,7 +833,8 @@ mission "Angri Byrds: Hai Millipede 1"
 	description "The <npc> and its fleet is a growing threat. Eliminate the ship at <waypoints>, then report to <destination> for payment of <payment>."
 	source
 		government "Wanderer"
-		not attributes "korath"
+		neighbor near "Ka'ch'chrai" 0 4
+	destination "Vara K'chrai"
 	waypoint "Chirr'ay'akai"
 	to offer
 		has "event: wanderers: sestor eliminated"
@@ -908,7 +919,8 @@ mission "Angri Byrds: Hai Millipede 2"
 	description "The <npc> and its fleet is a growing threat. Eliminate the ship at <waypoints>, then report to <destination> for payment of <payment>."
 	source
 		government "Wanderer"
-		not attributes "korath"
+		neighbor near "Ka'ch'chrai" 0 4
+	destination "Vara K'chrai"
 	waypoint "Sich'ka'ara"
 	to offer
 		has "Angri Byrds: Hai Millipede 1: done"
