@@ -46,6 +46,7 @@ ship "Armor Beetle"
 		"Hai Diamond Regenerator" 2
 		"Hai Williwaw Cooling" 3
 		"Pulse Rifle" 46
+		"Ion Flash Bang" 23
 		"Dual Pulse Pistols"
 
 		`"Bondir" Atomic Thruster`
@@ -89,6 +90,7 @@ ship "Armor Beetle" "Armor Beetle (Jump)"
 		"Hai Diamond Regenerator" 2
 		"Hai Williwaw Cooling" 3
 		"Pulse Rifle" 46
+		"Ion Flash Bang" 23
 		"Dual Pulse Pistols"
 		`"Bondir" Atomic Thruster`
 		`"Bufaer" Atomic Steering`
@@ -105,6 +107,38 @@ ship "Armor Beetle" "Armor Beetle (Jump)"
 	turret "Pulse Turret"
 	turret "Chameleon Anti-Missile"
 	turret "Chameleon Anti-Missile"
+
+ship "Armor Beetle" "Armor Beetle (Cargo Scan)"
+	outfits
+		"Ion Cannon" 4
+		"Pulse Cannon" 4
+		"Pulse Turret" 2
+		"Chameleon Anti-Missile" 2
+		"Boulder Reactor"
+		"Geode Reactor"
+		"Hai Ravine Batteries"
+		"Hai Diamond Regenerator" 2
+		"Hai Williwaw Cooling" 3
+		"Cargo Scanner"
+		"Pulse Rifle" 46
+		"Ion Flash Bang" 23
+		"Dual Pulse Pistols"
+		`"Bondir" Atomic Thruster`
+		`"Bufaer" Atomic Steering`
+		"Hyperdrive"
+	gun "Ion Cannon"
+	gun "Ion Cannon"
+	gun "Pulse Cannon"
+	gun "Pulse Cannon"
+	gun "Ion Cannon"
+	gun "Ion Cannon"
+	gun "Pulse Cannon"
+	gun "Pulse Cannon"
+	turret "Pulse Turret"
+	turret "Pulse Turret"
+	turret "Chameleon Anti-Missile"
+	turret "Chameleon Anti-Missile"
+
 
 
 
@@ -148,6 +182,7 @@ ship "Millipede"
 		"Bunk Room" 3
 		"Quantum Keystone"
 		"Pulse Rifle" 390
+		"Ion Flash Bang" 195
 		"Dual Pulse Pistols"
 		`"Bondir" Atomic Thruster`
 		`"Bondir" Atomic Steering`
@@ -214,6 +249,7 @@ ship "Megalocoleus"
 		"Hai Williwaw Cooling" 5
 		"Quantum Keystone"
 		"Pulse Rifle" 320
+		"Ion Flash Bang" 160
 		"Dual Pulse Pistols"
 		`"Biroo" Atomic Thruster`
 		`"Bondir" Atomic Steering`
@@ -316,6 +352,7 @@ ship "Sword Scorpion"
 		"Wanderer Ramscoop"
 		"Quantum Keystone"
 		"Pulse Rifle" 56
+		"Ion Flash Bang" 28
 		"Laser Rifle" 47
 		"Dual Pulse Pistols"
 
