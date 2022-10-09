@@ -59,8 +59,8 @@ ship "Shield Beetle"  "Shield Beetle (Ion Flash)"
 		"Hai Diamond Regenerator"
 		"Hai Williwaw Cooling" 2
 		"Quantum Keystone"
-		"Pulse Rifle" 46
-		"Ion Flash Bang" 23
+		"Pulse Rifle" 55
+		"Ion Flash Bang" 27
 		`"Bondir" Atomic Thruster`
 		`"Bufaer" Atomic Steering`
 		"Hyperdrive"
@@ -101,8 +101,8 @@ ship "Shield Beetle" "Shield Beetle (Jump, Ion Pulse)"
 		"Hai Diamond Regenerator" 2
 		"Hai Williwaw Cooling" 3
 		"Dual Pulse Pistols"
-		"Pulse Rifle" 46
-		"Ion Flash Bang" 23
+		"Pulse Rifle" 55
+		"Ion Flash Bang" 27
 		"Quantum Keystone"
 		`"Bondir" Atomic Thruster`
 		`"Bufaer" Atomic Steering`
@@ -120,8 +120,8 @@ ship "Shield Beetle" "Shield Beetle (Ion Pulse)"
 		"Hai Diamond Regenerator"
 		"Hai Williwaw Cooling" 3
 		"Quantum Keystone"
-		"Pulse Rifle" 46
-		"Ion Flash Bang" 23
+		"Pulse Rifle" 55
+		"Ion Flash Bang" 27
 		"Dual Pulse Pistols"
 		`"Bondir" Atomic Thruster`
 		`"Bufaer" Atomic Steering`
@@ -142,8 +142,8 @@ ship "Shield Beetle" "Shield Beetle (Jump, Pulse)"
 		"Hai Diamond Regenerator" 2
 		"Hai Williwaw Cooling" 3
 		"Dual Pulse Pistols"
-		"Pulse Rifle" 46
-		"Ion Flash Bang" 23
+		"Pulse Rifle" 55
+		"Ion Flash Bang" 27
 		`"Bondir" Atomic Thruster`
 		`"Bufaer" Atomic Steering`
 		"Jump Drive"
