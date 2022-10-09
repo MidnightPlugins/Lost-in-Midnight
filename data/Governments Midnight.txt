@@ -343,9 +343,7 @@ government "Storm Seekers"
 	swizzle 0
 	"player reputation" 1
 	"attitude toward"
-		"Republic" .05
-		"Syndicate" .05
-		"Free Worlds" .05
+		"Independent" .01
 	"bribe" 0
 	"fine" 0
 	"friendly hail" "storm seeker"
