@@ -153,7 +153,7 @@ mission "Salvage Raider"
 	on fail
 		dialog `You have failed to disable the Korath ship so that the Remnant can salvage it for technology...`
 	on complete
-		payment 700000
+		payment 750000
 		"reputation: Remnant" ++
 		dialog `You are met by a prefect who thanks you for disabling the Korath ship and hands you a credit chip for <payment>. "Don't forget to drop off any salvaged outfits in the outfitters so the researchers can look at them."`
 
@@ -187,3 +187,24 @@ mission "Salvage Dredger"
 		payment 1000000
 		"reputation: Remnant" += 2
 		dialog `You are met by a prefect who thanks you for disabling the Korath ship and hands you a credit chip for <payment>. "Don't forget to drop off any salvaged outfits in the outfitters so the researchers can look at them."`
+
+
+mission "Remnant Atmospheric Samples"
+	job
+	repeat
+	name "Harvest atmosphere from <system>"
+	description "Use a ship that can land on gas giants to visit <stopovers> and use the provided equipment to pick up a sample of its atmosphere. Then deliver it to <destination>."
+	cargo equipment 1
+	source
+		government "Remnant"
+		not attributes "uninhabited"
+	to offer
+		has "Remnant: Cognizance 12: done"
+	stopover
+		attributes "requires: gaslining"
+	on stopover
+		dialog `You cruise through the atmosphere at a relaxed pace, waiting while the collection equipment does its work. After a moment, the storage tank indicates that it has reached capacity. Take the gas sample to <destination>.`
+	on complete
+		payment
+		payment 150000
+		dialog `You arrive back on <planet> and offload the atmospheric gas sample. A logistics adjustment of <payment> has been applied to your account.`
