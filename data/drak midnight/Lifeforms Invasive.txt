@@ -29,6 +29,16 @@ effect "pug flamethrower die"
 	"random velocity" .4
 	"velocity scale" .4
 
+effect "glow blood"
+	sprite "effect/glow blood"
+		"no repeat"
+		"frame rate" 10
+		"random start frame"
+	"lifetime" 61
+	"random angle" 20
+	"random velocity" 1
+	"random spin" 5
+
 
 
 ship "Nova Firefly"
@@ -64,18 +74,20 @@ ship "Nova Firefly"
 		"ramscoop" 2
 		"solar collection" 2
 		weapon
-			"blast radius" 200
-			"shield damage" 2000
-			"hull damage" 2000
-			"hit force" 3000
+			"blast radius" 350
+			"shield damage" 3500
+			"hull damage" 1800
+			"burn damage" 18
+			"hit force" 900
 	outfits
 		Mouthparts? 1
 		"Flare Belcher?" 1
 
 	gun 0 -40 "Flare Belcher?"
 	gun 0 -40 Mouthparts?
-	leak "blood" 15 25
-	explode "blood" 25
+	leak "glow blood" 15 25
+	explode "glow blood" 35
+	explode "small explosion" 45
 	"final explode" "final explosion large"
 	description "An invasive species from beyond our galaxy. These creatures thrive in the super heated gasses of dissipating supernovas. Through an unknown process, they are able to produce a fiery burst of their own flames."
 
@@ -124,17 +136,18 @@ ship "Egg Pouch"
 		"solar collection" 1
 		"youngfirefly" 1
 		weapon
-			"blast radius" 200
-			"shield damage" 2000
-			"hull damage" 2000
-			"hit force" 3000
+			"blast radius" 700
+			"shield damage" 7000
+			"hull damage" 3600
+			"burn damage" 36
+			"hit force" 1800
 	bay "Drone" 0 -31.5 
 	bay "Drone" 0 -31.5 
 	bay "Drone" 0 -31.5 
-	leak "blood" 25 35
-	explode "small explosion" 25
-	explode "medium explosion" 35
-	explode "large explosion" 45
+	leak "glow blood" 25 35
+	explode "glow blood" 25
+	explode "glow blood" 35
+	explode "small explosion" 45
 	"final explode" "final explosion large"
 	description "A fleshy pouch containing Nova Firefly eggs. The pouch protects and nourishes the eggs while they float through the void between galaxies."
 	
@@ -162,15 +175,15 @@ ship "Firefly Young"
 	outfits
 		Mouthparts? 1
 	gun 0 22 Mouthparts?
-	leak "blood" 5 15
-	explode "blood" 15
-	"final explode" "blood"
+	leak "glow blood" 5 15
+	explode "glow blood" 15
+	"final explode" "glow blood"
 	description "A freshly hatched Nova Firely. They have not yet developed their parent's territorial hostility or their ability to vomit bursts of flame."
 	
 fleet "Nova Firefly"
 	government "Invasive Lifeform"
 	cargo 0
-	personality vindictive mining mute
+	personality vindictive mining harvests mute
 	variant 1
 		"Nova Firefly"
 	variant 2
@@ -181,10 +194,31 @@ fleet "Nova Firefly"
 fleet "Nova Firefly Hatchery"
 	government "Invasive Lifeform (Passive)"
 	cargo 0
-	personality waiting mining harvests mute
+	personality mining harvests mute
 	variant 1
 		"Egg Pouch" 1
 		"Firefly Young" 4
+
+fleet "Nova Firefly Scout"
+	government "Invasive Lifeform (Passive)"
+	cargo 0
+	personality vindictive mining harvests mute
+	variant 1
+		"Nova Firefly"
+
+mission "Nova Firefly Scouts"
+	landing
+	invisible
+	on offer
+		event "nova firefly scouts"
+		fail
+
+event "nova firefly scouts"
+	system Limen
+		add fleet "Nova Firefly Scout" 20000
+	system Orbona
+		add fleet "Nova Firefly Scout" 30000
+
 
 
 # For the event trigger, see Missions Cartography Compass
@@ -303,7 +337,7 @@ fleet "Star Gazer Passive"
 fleet "Star Gazer Aggressive"
 	government "Invasive Lifeform"
 	cargo 0
-	personality heroic vindictive opportunistic unconstrained mute
+	personality vindictive opportunistic unconstrained mute
 	variant 5
 		"Star Gazer" 3
 	variant 3
