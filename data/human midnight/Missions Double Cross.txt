@@ -1158,11 +1158,12 @@ mission "Promotion Tour: Subsi"
 mission "Pot-o'-honey"
 	minor
 	name "Special Escort to <planet>"
-	description "The captain of the Pot-o'-honey will pay you <payment> to escort them safely into a dangerous region of space to reach <destination>."
+	description "The captain of the Pot-o'-honey will pay you <payment> to escort them safely through <waypoints> to reach <destination>."
 	source
 		government "Hai"
 		not planet "Darkwaste" "Cloudfire"
 	destination "Farpoint"
+	waypoint "Waypoint"
 	to offer
 		or
 			and
@@ -1355,7 +1356,6 @@ mission "Escort Trap Freighter (Human)"
 	deadline
 	name "Escort to <planet>"
 	description "The captain of the <npc> will pay you <payment> to escort them safely out of this dangerous region of space to reach <destination> by <date>."
-	source
 	source
 		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
 		attributes "frontier"
