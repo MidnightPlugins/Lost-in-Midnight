@@ -20,7 +20,7 @@ outfit "Fake Sheragi Battery"
 	"shield generation" 0.7
 	"shield energy" 0.7
 	"shield heat" 0.7
-	"energy capacity" 16000
+	"energy capacity" 35000
 	description "This is a convincing recreation of the Large EM Battery on the Emerald Sword."
 
 outfit "Fake Sheragi Cooling"
