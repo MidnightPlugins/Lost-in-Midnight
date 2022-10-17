@@ -11,34 +11,93 @@
 
 
 
+fleet "Korath Explorers"
+	government "Korath (Civilian)"
+	personality mining harvests surveillance timid coward
+	names "korath"
+	cargo 0
+	variant 8
+		"Kor Explorer"
+		"'olofez" 3
+
+mission "Midnight: Kor Explorers"
+	landing
+	invisible
+	source Fossil
+	to offer
+		random < 70
+	on offer
+		event "midnight kor explorers"
+		conversation
+			scene "thumbnail/korsmanath a-awoj"
+			`You've only barely disembarked from your ship when a shadow passes overhead. It isn't one of those strange crystalline structures floating in this system. It's too large. From the shape of the shadow, you can guess what sort of ship it is.`
+	npc
+		government "Korath (Civilian)"
+		personality waiting staying mining harvests surveillance
+		fleet
+			names "korath"
+			fighters "korath"
+			cargo 3
+			variant 9
+				"'olofez" 17
+				"'olofez (Expeller)" 7
+			variant 6
+				"'olofez (Expeller)" 13
+				"'olofez (Digger)" 6
+				"'olofez" 5
+			variant
+				"'olofez (Expeller)" 15
+				"'olofez" 9
+	npc kill
+		government "Korath (Civilian)"
+		personality waiting staying mining harvests surveillance
+		fleet
+			names "korath"
+			fighters "korath"
+			cargo 3
+			variant 9
+				"Korsmanath A'awoj (Strike)"
+			variant 6
+				"Korsmanath A'awoj (Special)"
+			variant
+				"Korsmanath A'awoj (Blaze)"
+		conversation
+			action
+				event "korath defense at tekochtli"
+			scene "thumbnail/korsmanath a-awoj"
+			`You've destroyed the <npc>. This will provoke a response from the Korath. Expect their military ships to start patrolling this region of space.`
+
+event "midnight kor explorers"
+	system "Kor Ak'Mari"
+		add fleet "Korath Explorers" 40000
+	system "Sagittarius A*"
+		add fleet "Korath Explorers" 50000
+	system Tekochtli
+		add fleet "Korath Explorers" 30000
+	system Kalsolli
+		add fleet "Korath Explorers" 30000
+	system Temeh
+		add fleet "Korath Explorers" 40000
+
+event "korath defense at tekochtli"
+	system Tekochtli
+		add fleet "Korath Defense" 20000
+	system Kalsolli
+		add fleet "Korath Defense" 40000
+	system Temeh
+		add fleet "Korath Defense" 50000
+
+
+
+############
+# deprecated
+############
 mission "Add Fireswarm Raiders"
 	landing
 	invisible
+	to offer
+		never
 	on offer
 		event "add fireswarm raiders"
 		fail
-
 event "add fireswarm raiders"
-	fleet "Korath Raid"
-		remove variant
-			"Korath Raider"
-			"Korath Chaser" 2
-		add variant 2
-			"Korath Raider"
-			"Korath Chaser" 2
-		add variant 1
-			"Korath Raider (Tough)"
-			"Korath Chaser" 2
-		add variant 1
-			"Korath Raider (Fireswarm)"
-			"Korath Chaser" 2
-	fleet "Korath Ember Waste Raid"
-		remove variant
-			"Korath Raider (Ember)"
-			"Korath Chaser" 2
-		add variant 2
-			"Korath Raider (Ember)"
-			"Korath Chaser" 2
-		add variant 1
-			"Korath Raider (Fireswarm Ember)"
-			"Korath Chaser" 2

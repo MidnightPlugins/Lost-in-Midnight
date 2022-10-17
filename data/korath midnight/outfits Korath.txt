@@ -11,6 +11,29 @@
 
 
 
+outfit "Korath Scanner"
+	category "Systems"
+	cost 194500
+	thumbnail "outfit/korath scanner"
+	"mass" 14
+	"outfit space" -14
+	"outfit scan power" 16
+	"outfit scan speed" 2
+	"cargo scan power" 4
+	"cargo scan speed" 2
+	"atmosphere scan" 100
+	"tactical scan power" 9
+	"radar jamming" 5
+	description "Korath ships rarely rely on scanning technologies, preferring to shoot first and plunder later. The rare ship that does need it likely has one of these bulky systems installed."
+
+
+##################
+# deprecated
+##################
+
+# Fireswarms were moved to Midnight Scrapyard
+# keeping this here for old pilots who don't have the other plugin installed
+
 outfit "Korath Fireswarm Nest"
 	category "Ammunition"
 	cost 27400
@@ -19,7 +42,6 @@ outfit "Korath Fireswarm Nest"
 	"outfit space" -6
 	"fireswarm capacity" 10
 	ammo "Korath Fireswarm"
-	description "These storage shells hold additional Korath Fireswarms for the Korath Firewarm Launcher."
 
 outfit "Korath Fireswarm"
 	category "Ammunition"
@@ -28,7 +50,6 @@ outfit "Korath Fireswarm"
 	"mass" 0.3
 	"fireswarm capacity" -1
 	"energy capacity" 35
-	description `Each Korath Fireswarm carries ten smaller missiles. When not being fired as weapons, the energy stored within can be used to power your ship.`
 
 outfit "Korath Fireswarm Launcher"
 	category "Secondary Weapons"
@@ -64,12 +85,10 @@ outfit "Korath Fireswarm Launcher"
 		"homing" 4
 		"turn" 4.6
 		"hit force" 100
-		"blast radius" 60
+		"split range" 60
 		"missile strength" 60
 		submunition "Fireswarm Submunition" 10
 		"cluster"
-	description "This Korath cluster munition carries a swarm of smaller missiles that can overwhelm inadequate defenses."
-	description "	If multiple Korath Fireswarms are installed, they will all fire simultaneously to swarm the target."
 
 outfit "Fireswarm Submunition"
 	weapon
@@ -91,6 +110,9 @@ outfit "Fireswarm Submunition"
 		"optical tracking" .7
 		"shield damage" 95
 		"hull damage" 95
-		"heat damage" 280
+		"heat damage" 180
+		"burn damage" 1
+		"corrosion damage" 0.2
 		"hit force" 40
-		"missile strength" 30
+		"missile strength" 6
+
