@@ -100,7 +100,7 @@ mission "Angry Squirrels: Korath Rifle Deal"
 	to offer
 		random < 20
 	on offer
-		require "Korath Repeater Rifle"
+		require "Thermal Repeater Rifle"
 		conversation
 			`One of the Unfettered approaches you. "That is an interesting looking rifle you have there. What kind is it?"`
 			`	"A Korath Repeater Rifle," you reply.`
@@ -118,7 +118,7 @@ mission "Angry Squirrels: Korath Rifle Deal"
 			`Korath Repeater Rifles aren't normally in stock at your local outfitter. You'll probably have to steal them from captured ships.`
 	on complete
 		"Angry Squirrels: Korath Rifle Deal: offered" --
-		outfit "Korath Repeater Rifle" -100
+		outfit "Thermal Repeater Rifle" -100
 		payment 2600000
 		"Unfettered Arms Dealer" ++
 		"reputation: Hai" --

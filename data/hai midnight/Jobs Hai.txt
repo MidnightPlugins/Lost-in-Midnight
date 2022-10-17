@@ -305,7 +305,7 @@ event "ion flash bang"
 			"Shield Beetle (Ion Flash)"
 			"Lightning Bug (Pulse)" 2
 		add variant 1
-			"Shield Beetle(Ion Flash)"
+			"Shield Beetle (Ion Flash)"
 			"Lightning Bug (Pulse)"
 			"Aphid (Armed)" 4
 		add variant 1
