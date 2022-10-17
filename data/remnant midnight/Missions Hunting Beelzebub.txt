@@ -46,7 +46,13 @@ mission "Hunting Beelzebub: Modified Kestrel 1"
 			has "event: kestrel available: more weapons"
 			has "event: kestrel available: more engines"
 			has "event: kestrel available: more shields"
-		random < 30 - "ignored paris"
+		or
+			and
+				not "ignored paris"
+				random < 70
+			and
+				has "ignored paris"
+				random < 30 - "ignored paris"
 	on offer
 		conversation
 			`While walking through the spaceport, you spot someone who looks like Liutenant Paris of Deep Security. But he's not wearing a Deep Security uniform. The man hasn't noticed you and dips into a bar.`
@@ -211,7 +217,13 @@ mission "Hunting Beelzebub: Modified Bactrian 1"
 		or
 			has "defeated scar's legion"
 			has "Pirate Troubles [4]: done"
-		random < 30 - "ignored paris"
+		or
+			and
+				not "ignored paris"
+				random < 70
+			and
+				has "ignored paris"
+				random < 30 - "ignored paris"
 	on offer
 		conversation
 			`While walking through the spaceport, you spot someone who looks like Liutenant Paris of Deep Security. But he's not wearing a Deep Security uniform. The man hasn't noticed you and dips into a bar.`
@@ -234,6 +246,10 @@ mission "Hunting Beelzebub: Modified Bactrian 1"
 			label end
 			`	"Not here." Tom steps out of the bar and you follow. "We'll talk on your ship. Lead the way."`
 				accept
+
+	on defer
+		"ignored paris" += 5
+		
 	on enter
 		conversation
 			scene "thumbnail/modified bactrian-thumb"
