@@ -13,7 +13,7 @@
 # Obsolete Star Map is obtained in a Cartography mission.
 
 outfit "Obsolete Star Map"
-	category "Special"
+	category "Unique"
 	cost 10
 	thumbnail "outfit/obsolete star map"
 	description "This star map is obsolete. Someone with the right knowledge may be able to use this data to extrapolate the current positions of these star systems."
@@ -23,7 +23,7 @@ outfit "Obsolete Star Map"
 # The Celestial Compass can be acquired in a Cartography mission.
 
 outfit "Celestial Compass"
-	category "Special"
+	category "Unique"
 	thumbnail "outfit/celestial compass"
 	description "With the right mapping data, this ancient Quarg device can project the movement of celestial objects across the galaxy."
 
@@ -32,7 +32,7 @@ outfit "Celestial Compass"
 # Midnight's Lost Orphan is an atrocity obtainable via a Cartography mission.
 
 outfit "Midnight's Lost Orphan"
-	category "Special"
+	category "Unique"
 	thumbnail "outfit/midnight lost orphan"
 	description "A parasitic incorporeal entity from another dimension. Midnight's Lost Orphan grants its host strange unnatural powers that can bend or warp time and space."
 	description "However, the entity feeds on negative emotions and will manipulate the mental state of anyone nearby towards taking actions that cause strife, pain, and suffering among friend and foe alike. Crew productivity and teamwork takes a severe downturn whenever the entity is allowed to exert itself. A simple task that would normally take one crew member to perform can require two or three as tense arguments and disagreements hamper efficiency."

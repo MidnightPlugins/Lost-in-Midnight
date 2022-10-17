@@ -541,8 +541,8 @@ mission "Cartography: Quarg Hitchhiker 4"
 		government "Pirate"
 		personality entering plunders harvests coward
 		ship "Korath Raider (Torpedo)" "Red Queen"
-		ship "Korath Chaser" "Jack of Hearts"
-		ship "Korath Chaser" "Jack of Diamonds"
+		ship "'olofez" "Jack of Hearts"
+		ship "'olofez" "Jack of Diamonds"
 
 	on complete
 		log `Ran into Quash again on Wang Xiang Tai, a pirate station in the Diyu system. I took him to a pirate meeting in the underground caverns of Naihe Qiao, where he acquired a device he refers to as a Celestial Compass.`
