@@ -30,7 +30,7 @@ mission "Grave Digger: Stolen Kestrel"
 			`After the guards are done with him, he notices you and waves as he approaches. "Captain <last>, welcome back! Too bad it isn't under better circumstances."`
 			choice
 				`	"What's with the tight security?"`
-			scene thumbnail/kestrel
+			scene "thumbnail/kestreloriginal"
 			`"Someone stole the prototype Kestrel from its storage hangar last night. The same one you previously fought against, with some minor upgrades. The hangar security systems were damaged and the entire squad of guards who had been assigned to protect the ship were killed by the thieves. Whoever did this must be highly skilled professionals."`
 			choice
 				`	"Why were the guards questioning you?"`
@@ -505,13 +505,13 @@ mission "Grave Digger: Suspicious Ship"
 			cargo 3
 			commodities "Illegal Substances" "Illegal Cargo" "Illegal Cargo" "Highly Illegal Cargo"
 			variant
-				"Falcon (Remnant)"
+				"Shadow Falcon"
 			variant
-				"Osprey (Remnant)"
+				"Shadow Osprey"
 			variant
-				"Raven (Remnant)"
+				"Shadow Raven"
 			variant
-				"Hawk (Remnant)"
+				"Shadow Hawk"
 	on abort
 		clear "Grave Digger: Suspicious Ship: offered"
 	on fail
@@ -544,13 +544,13 @@ mission "Grave Digger: Suspicious Ship Job"
 			cargo 3
 			commodities "Illegal Substances" "Illegal Cargo" "Illegal Cargo" "Highly Illegal Cargo"
 			variant
-				"Falcon (Remnant)"
+				"Shadow Falcon"
 			variant
-				"Osprey (Remnant)"
+				"Shadow Osprey"
 			variant
-				"Raven (Remnant)"
+				"Shadow Raven"
 			variant
-				"Hawk (Remnant)"
+				"Shadow Hawk"
 	on complete
 		"reputation: Remnant" ++
 		payment 100000
@@ -1037,10 +1037,10 @@ mission "Grave Digger: Prefect's Albatross 1"
 			cargo 3
 			commodities "Illegal Substances" "Illegal Cargo" "Illegal Cargo" "Highly Illegal Cargo"
 			variant
-				"Falcon (Remnant)"
-				"Osprey (Remnant)"
-				"Raven (Remnant)"
-				"Hawk (Remnant)" 2
+				"Shadow Falcon"
+				"Shadow Osprey"
+				"Shadow Raven"
+				"Shadow Hawk" 2
 	npc accompany save
 		government "Remnant"
 		personality target escort

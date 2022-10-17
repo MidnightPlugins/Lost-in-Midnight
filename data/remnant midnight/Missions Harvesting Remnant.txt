@@ -53,8 +53,8 @@ mission "Harvesting Quantumium Research"
 			names "korath"
 			commodities "Food" "Medical"
 			variant
-				"Korath Raider (Fireswarm)"
-				"Korath Chaser" 2
+				"Palavret (Hyperdrive)"
+				"'olofez" 2
 	on complete
 		outfit "Quantumium" -10
 		payment 10000000
@@ -86,11 +86,11 @@ mission "Collect Void Sprites"
 		fleet
 			names "korath"
 			variant 1
-				"Korath Dredger"
-				"Korath Chaser" 4
+				"Rano'erek"
+				"'olofez" 4
 			variant 4
-				"Korath Raider (Fireswarm Ember)"
-				"Korath Chaser" 2
+				"Palavret (Ember Blaze)"
+				"'olofez" 2
 	npc
 		to spawn
 			has "event: Korath Scouter deployments"
@@ -100,14 +100,14 @@ mission "Collect Void Sprites"
 		fleet
 			names "korath"
 			variant 1
-				"Korath Dredger"
-				"Korath Chaser" 4
+				"Rano'erek"
+				"'olofez" 4
 			variant 2
 				"Korath Scouter (Fire-Lance)" 3
-				"Korath Chaser" 3
+				"'olofez" 3
 			variant 3
-				"Korath Raider (Fireswarm Ember)"
-				"Korath Chaser" 2
+				"Palavret (Ember Blaze)"
+				"'olofez" 2
 
 	npc save accompany
 		government "Remnant"
@@ -146,9 +146,9 @@ mission "Salvage Raider"
 			cargo 3
 			commodities "Food" "Medical"
 			variant
-				"Korath Raider (Fireswarm Ember)"
+				"Palavret (Ember Blaze)"
 			variant
-				"Korath Raider (Ember)"
+				"Palavret (Ember Shunt)"
 		dialog "You have disabled the Korath ship that the Remnant want to plunder. You can now return to <planet> and collect your payment."
 	on fail
 		dialog `You have failed to disable the Korath ship so that the Remnant can salvage it for technology...`
@@ -179,7 +179,7 @@ mission "Salvage Dredger"
 			cargo 3
 			commodities "Food" "Medical"
 			variant
-				"Korath Dredger"
+				"Rano'erek"
 		dialog "You have disabled the Korath ship that the Remnant want to plunder. You can now return to <planet> and collect your payment."
 	on fail
 		dialog `You have failed to disable the Korath ship so that the Remnant can salvage it for technology...`
