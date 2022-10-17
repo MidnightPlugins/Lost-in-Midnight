@@ -711,12 +711,12 @@ event "Genesis Colony"
 				period 47.3937
 				offset 196.692
 	planet "The Garden"
-		spaceport `The Childen of The Garden have constructed a simple spaceport, with runways, landing/launching pads, and hangars. Though they haven't developed a Hyperdrive, they still use hyperspace fuel in their engines and are able to refuel your ship.`
 		add description `They have set up an outfitter. Many of the outfits are similar to equivalents you can find in human space.`
+		spaceport `The Childen of The Garden have constructed a simple spaceport, with runways, landing/launching pads, and hangars. Though they haven't developed a Hyperdrive, they still use hyperspace fuel in their engines and are able to refuel your ship.`
 		outfitter "Genesis"
 	planet "The Gate"
 		attributes midnight genesis
-		landscape land/earthrise
+		landscape land/earthrisever8
 		description `While this space colony has only the bare essentials to support life on this barren rock, that the Children of The Garden built it in such a short time is a testament to their drive to explore the stars.`
 		"required reputation" 1
 
@@ -778,15 +778,13 @@ event "Genesis Cryoships Deployed"
 				period 35.9468
 				offset 196.692
 	planet "The Garden"
-		landscape land/nasa4
 		spaceport `The Childen of The Garden have constructed a new spaceport, with larger landing/launching pads and facilities to handle their new Cryoships. Though they haven't developed a Hyperdrive, they still use hyperspace fuel in their engines and are able to refuel your ship.`
 	planet "The Gate"
-		landscape land/nasa2
 		description `The Childen of The Garden have developed this spacecolony into a thriving city.`
 		spaceport `The landing pads are a bit smaller than you're accustomed to, but this is otherwise a fully serviceable spaceport.`
 	planet "Revelations"
 		attributes midnight genesis
-		landscape land/sivael0
+		landscape land/station1ver8
 		description `The Childen of The Garden have deployed this space station on the edge of their solar system to study conditions in deep space.`
 		"required reputation" 1
 	outfitter "Genesis"
