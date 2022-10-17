@@ -11,55 +11,6 @@
 
 
 
-mission "Bounty Hunting: Tweedledee & Tweedledum"
-	job
-	name "Wanted Bandit near <system>"
-	description "A pair of old Berserkers named the Tweedledee & Tweedledum have been attacking merchants near <system>. Eliminate these ships, then report to <destination> for payment (<payment>)."
-	source
-		government "Republic" "Free Worlds"
-		attributes "dirt belt"
-	to offer
-		"combat rating" >= 100
-		random < 10
-	npc kill
-		government "Bounty"
-		system
-			distance 1 2
-		personality target waiting staying plunders harvests
-			confusion 20
-		ship "Berserker (Energy Cannons)" "Tweedledee"
-		ship "Berserker (Energy Cannons)" "Tweedledum"
-		dialog `Tweedledee & Tweedledum have been eliminated. You can claim the bounty payment by returning to <destination>.`
-	on visit
-		dialog `You've landed on <planet>, but Tweedledee & Tweedledum have not been eliminated yet. Hunt them down and destroy them before returning.`
-	on complete
-		payment 100000
-		dialog `The government of <planet> gratefully pays you <payment> for eliminating Tweedledee & Tweedledum.`
-
-mission "Bounty Hunting: Angry Chicken"
-	job
-	name "Wanted Bandit near <system>"
-	description "A Modified Firebird named the <npc> has been attacking merchants near <system>. Eliminate the ship, then report to <destination> for payment (<payment>)."
-	source
-		government "Republic" "Free Worlds"
-		attributes "south"
-	to offer
-		"combat rating" >= 100
-		random < 10
-	npc kill
-		government "Bounty"
-		system
-			distance 1 2
-		personality target waiting staying plunders harvests
-			confusion 20
-		ship "Modified Firebird" "Angry Chicken"
-		dialog phrase "generic hunted bounty eliminated dialog"
-	on visit
-		dialog phrase "generic bounty hunting on visit"
-	on complete
-		payment 125000
-		dialog phrase "generic bounty hunting payment dialog"
-
 mission "Bounty Hunting: Mother Goose"
 	job
 	name "Wanted Bandit near <system>"
@@ -68,7 +19,7 @@ mission "Bounty Hunting: Mother Goose"
 		government "Republic"
 		attributes "deep"
 	to offer
-		"combat rating" >= 100
+		"combat rating" >= 250
 		random < 10
 	npc kill
 		government "Bounty"
@@ -94,7 +45,7 @@ mission "Bounty Hunting: Humpty Dumpty"
 		government "Syndicate"
 		attributes "frontier"
 	to offer
-		"combat rating" >= 100
+		"combat rating" >= 350
 		random < 10
 	npc kill
 		government "Bounty"
@@ -118,7 +69,7 @@ mission "Bounty Hunting: Jabberwocky"
 		government "Republic"
 		attributes "frontier"
 	to offer
-		"combat rating" >= 100
+		"combat rating" >= 400
 		random < 10
 	npc kill
 		government "Bounty"
@@ -1372,8 +1323,8 @@ mission "Raider Bounty"
 		fleet
 			names "pirate"
 			variant
-				"Korath Raider (Fireswarm)"
-				"Korath Chaser" 2
+				"Palavret"
+				"'olofez" 2
 	on complete
 		payment 300000
 		dialog `The government of <planet> pays you <payment> for eliminating the alien raider threat.`

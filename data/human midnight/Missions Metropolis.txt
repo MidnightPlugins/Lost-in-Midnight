@@ -833,7 +833,7 @@ mission "Metropolis 2"
 		fleet
 			fighters "pirate"
 			variant
-				"Korath Chaser" 4
+				"'olofez" 4
 				"Far Lek 14" 6
 
 	npc evade

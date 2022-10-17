@@ -313,16 +313,16 @@ fleet "S. Advanced Independent"
 	variant 1
 		"Pelican"
 	variant 4
-		"Falcon (Remnant)"
+		"Shadow Falcon"
 	variant 4
-		"Osprey (Remnant)"
+		"Shadow Osprey"
 	variant 4
-		"Raven (Remnant)"
+		"Shadow Raven"
 	variant 4
-		"Hawk (Remnant)"
+		"Shadow Hawk"
 	variant 1
-		"Korath Raider"
-		"Korath Chaser" 2
+		"Palavret"
+		"'olofez" 2
 	variant 4
 		"Falcon (Korath)"
 	variant 4
@@ -335,13 +335,13 @@ fleet "S. Advanced Independent"
 		"Bulk Freighter (Korath)"
 	variant 4
 		"Roost (Korath)"
-		"Korath Chaser" 4
+		"'olofez" 4
 	variant 4
 		"Aerie (Korath)"
-		"Korath Chaser" 2
+		"'olofez" 2
 	variant 4
 		"Nest (Korath)"
-		"Korath Chaser" 2
+		"'olofez" 2
 	variant 4
 		"Splinter (Korath)"
 	variant 4
@@ -415,21 +415,21 @@ fleet "L. Advanced Independent"
 		confusion 20
 	variant 1
 		"Pelican"
-		"Falcon (Remnant)"
-		"Osprey (Remnant)"
-		"Raven (Remnant)"
-		"Hawk (Remnant)"
+		"Shadow Falcon"
+		"Shadow Osprey"
+		"Shadow Raven"
+		"Shadow Hawk"
 	variant 1
-		"Korath Raider"
-		"Korath Chaser" 2
+		"Palavret"
+		"'olofez" 2
 		"Falcon (Korath)"
 		"Protector (Korath)"
 		"Vanguard (Korath)"
 		"Bastion (Korath)"
 		"Bulk Freighter (Korath)"
 	variant 1
-		"Korath Raider"
-		"Korath Chaser" 10
+		"Palavret"
+		"'olofez" 10
 		"Roost (Korath)"
 		"Aerie (Korath)"
 		"Nest (Korath)"
@@ -525,61 +525,61 @@ fleet "L. Advanced Independent"
 		"Nest (Korath)"
 		"Splinter (Korath)"
 		"Quicksilver (Korath)"
-		"Korath Chaser" 2
+		"'olofez" 2
 	variant 25
 		"Falcon (Korath)"
 		"Nest (Korath)"
 		"Modified Argosy (Korath)"
 		"Quicksilver (Korath)"
-		"Korath Chaser" 2
+		"'olofez" 2
 	variant 25
 		"Protector (Korath)"
 		"Nest (Korath)"
 		"Splinter (Korath)"
 		"Quicksilver (Korath)" 2
-		"Korath Chaser" 2
+		"'olofez" 2
 	variant 25
 		"Protector (Korath)"
 		"Nest (Korath)"
 		"Modified Argosy (Korath)"
 		"Quicksilver (Korath)" 2
-		"Korath Chaser" 2
+		"'olofez" 2
 	variant 25
 		"Vanguard (Korath)"
 		"Aerie (Korath)"
 		"Splinter (Korath)"
 		"Quicksilver (Korath)" 3
-		"Korath Chaser" 2
+		"'olofez" 2
 	variant 25
 		"Vanguard (Korath)"
 		"Aerie (Korath)"
 		"Modified Argosy (Korath)"
 		"Quicksilver (Korath)" 3
-		"Korath Chaser" 2
+		"'olofez" 2
 	variant 25
 		"Bastion (Korath)"
 		"Roost (Korath)"
 		"Splinter (Korath)"
 		"Quicksilver (Korath)" 4
-		"Korath Chaser" 4
+		"'olofez" 4
 	variant 25
 		"Bastion (Korath)"
 		"Roost (Korath)"
 		"Modified Argosy (Korath)"
 		"Quicksilver (Korath)" 4
-		"Korath Chaser" 4
+		"'olofez" 4
 	variant 25
 		"Bulk Freighter (Korath)"
 		"Aerie (Korath)"
 		"Roost (Korath)"
 		"Quicksilver (Korath)" 4
-		"Korath Chaser" 6
+		"'olofez" 6
 	variant 25
 		"Bulk Freighter (Korath)"
 		"Nest (Korath)"
 		"Roost (Korath)"
 		"Quicksilver (Korath)" 4
-		"Korath Chaser" 6
+		"'olofez" 6
 
 
 
@@ -656,16 +656,16 @@ fleet "S. Advanced Independent (Killable)"
 	variant 1
 		"Pelican"
 	variant 4
-		"Falcon (Remnant)"
+		"Shadow Falcon"
 	variant 4
-		"Osprey (Remnant)"
+		"Shadow Osprey"
 	variant 4
-		"Raven (Remnant)"
+		"Shadow Raven"
 	variant 4
-		"Hawk (Remnant)"
+		"Shadow Hawk"
 	variant 1
-		"Korath Raider"
-		"Korath Chaser" 2
+		"Palavret"
+		"'olofez" 2
 	variant 4
 		"Falcon (Korath)"
 	variant 4
@@ -678,13 +678,13 @@ fleet "S. Advanced Independent (Killable)"
 		"Bulk Freighter (Korath)"
 	variant 4
 		"Roost (Korath)"
-		"Korath Chaser" 4
+		"'olofez" 4
 	variant 4
 		"Aerie (Korath)"
-		"Korath Chaser" 2
+		"'olofez" 2
 	variant 4
 		"Nest (Korath)"
-		"Korath Chaser" 2
+		"'olofez" 2
 	variant 4
 		"Splinter (Korath)"
 	variant 4
@@ -758,21 +758,21 @@ fleet "L. Advanced Independent (Killable)"
 		confusion 20
 	variant 1
 		"Pelican"
-		"Falcon (Remnant)"
-		"Osprey (Remnant)"
-		"Raven (Remnant)"
-		"Hawk (Remnant)"
+		"Shadow Falcon"
+		"Shadow Osprey"
+		"Shadow Raven"
+		"Shadow Hawk"
 	variant 1
-		"Korath Raider"
-		"Korath Chaser" 2
+		"Palavret"
+		"'olofez" 2
 		"Falcon (Korath)"
 		"Protector (Korath)"
 		"Vanguard (Korath)"
 		"Bastion (Korath)"
 		"Bulk Freighter (Korath)"
 	variant 1
-		"Korath Raider"
-		"Korath Chaser" 10
+		"Palavret"
+		"'olofez" 10
 		"Roost (Korath)"
 		"Aerie (Korath)"
 		"Nest (Korath)"
@@ -868,61 +868,61 @@ fleet "L. Advanced Independent (Killable)"
 		"Nest (Korath)"
 		"Splinter (Korath)"
 		"Quicksilver (Korath)"
-		"Korath Chaser" 2
+		"'olofez" 2
 	variant 25
 		"Falcon (Korath)"
 		"Nest (Korath)"
 		"Modified Argosy (Korath)"
 		"Quicksilver (Korath)"
-		"Korath Chaser" 2
+		"'olofez" 2
 	variant 25
 		"Protector (Korath)"
 		"Nest (Korath)"
 		"Splinter (Korath)"
 		"Quicksilver (Korath)" 2
-		"Korath Chaser" 2
+		"'olofez" 2
 	variant 25
 		"Protector (Korath)"
 		"Nest (Korath)"
 		"Modified Argosy (Korath)"
 		"Quicksilver (Korath)" 2
-		"Korath Chaser" 2
+		"'olofez" 2
 	variant 25
 		"Vanguard (Korath)"
 		"Aerie (Korath)"
 		"Splinter (Korath)"
 		"Quicksilver (Korath)" 3
-		"Korath Chaser" 2
+		"'olofez" 2
 	variant 25
 		"Vanguard (Korath)"
 		"Aerie (Korath)"
 		"Modified Argosy (Korath)"
 		"Quicksilver (Korath)" 3
-		"Korath Chaser" 2
+		"'olofez" 2
 	variant 25
 		"Bastion (Korath)"
 		"Roost (Korath)"
 		"Splinter (Korath)"
 		"Quicksilver (Korath)" 4
-		"Korath Chaser" 4
+		"'olofez" 4
 	variant 25
 		"Bastion (Korath)"
 		"Roost (Korath)"
 		"Modified Argosy (Korath)"
 		"Quicksilver (Korath)" 4
-		"Korath Chaser" 4
+		"'olofez" 4
 	variant 25
 		"Bulk Freighter (Korath)"
 		"Aerie (Korath)"
 		"Roost (Korath)"
 		"Quicksilver (Korath)" 4
-		"Korath Chaser" 6
+		"'olofez" 6
 	variant 25
 		"Bulk Freighter (Korath)"
 		"Nest (Korath)"
 		"Roost (Korath)"
 		"Quicksilver (Korath)" 4
-		"Korath Chaser" 6
+		"'olofez" 6
 
 
 
@@ -1558,10 +1558,10 @@ fleet "Grave Digger Smugglers"
 		confusion 20
 	outfitters "Remnant Weapons"
 	variant 1
-		"Falcon (Remnant)"
-		"Osprey (Remnant)"
-		"Raven (Remnant)"
-		"Hawk (Remnant)" 2
+		"Shadow Falcon"
+		"Shadow Osprey"
+		"Shadow Raven"
+		"Shadow Hawk" 2
 
 
 

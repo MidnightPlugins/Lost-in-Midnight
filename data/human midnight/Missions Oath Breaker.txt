@@ -665,6 +665,8 @@ mission "Escort Memoria Alpha"
 
 	on fail
 		set "Memoria Alpha Repeat: offered"
+		"reputation: Merchant" -= 2
+		dialog `The Memoria Alpha, a rare relic from the Alpha war, was destroyed. Your employer blames you for failing to protect it.`
 
 	on complete
 		clear "Memoria Alpha Repeat: offered"
@@ -735,6 +737,8 @@ mission "Oathbreaker Memoria Alpha"
 
 	on fail
 		set "Memoria Alpha Repeat: offered"
+		"reputation: Merchant" -= 2
+		dialog `The Memoria Alpha, a rare relic from the Alpha war, was destroyed. Your employer blames you for failing to protect it.`
 
 	on complete
 		clear "Memoria Alpha Repeat: offered"
@@ -802,6 +806,7 @@ mission "Oathbreaker Alpine Larch"
 
 	on fail
 		log `After a brief chase, I allowed the F.S. Alpine Larch, a Skein that had been stolen by the Oathbreakers, to escape. The Oathbreakers have added a powerful warship to their fleets today...`
+		dialog `The F.S. Alpine Larch escaped. You'll probably see it again: the Oathbreakers have added a powerful warship to their fleets today...`
 
 	on visit
 		dialog `You have yet to track down the <npc>. Report back here once you've captured or destroyed the stolen Skein.`
@@ -858,6 +863,7 @@ mission "Oathbreaker Escalation"
 
 	on fail
 		log `After a brief chase, I allowed the Escalation, a Bactrian that had been stolen by the Oathbreakers, to escape. The Oathbreakers have added a powerful warship to their fleets today...`
+		dialog `The Escalation escaped. You'll probably see it again: the Oathbreakers have added a powerful warship to their fleets today...`
 
 	on visit
 		dialog `You have yet to track down the <npc>. Report back here once you've captured or destroyed the stolen Bactrian.`
@@ -913,6 +919,7 @@ mission "Oathbreaker Black Oak"
 
 	on fail
 		log `After a brief chase, I allowed the F.S. Black Oak, a Dreadnought that had been stolen by the Oathbreakers, to escape. The Oathbreakers have added a powerful warship to their fleets today...`
+		dialog `The F.S. Black Oak escaped. You'll probably see it again: the Oathbreakers have added a powerful warship to their fleets today...`
 
 	on visit
 		dialog `You have yet to track down the <npc>. Report back here once you've captured or destroyed the stolen Dreadnought.`
@@ -1262,10 +1269,13 @@ mission "Oathbreaker Thermopylae"
 		government "Oathbreaker"
 		personality target waiting staying timid opportunistic
 		ship "Thermopylae Station" "Thermopylae"
-		dialog `The space battle station Thermopylae has been destroyed. Search planet Hope for any additional fortifications. Then report back to <origin>.`
+		dialog `The space battle station Thermopylae is about to explode. Retreat to a safe distance before it does. Also, if you haven't already searched planet Hope for any additional fortifications, make sure to do so before reporting back to <origin>.`
 
 	on stopover
 		dialog `Hope seems as desolate and uninhabited as usual. That space battle station is probably the target you're looking for.`
+
+	on visit
+		dialog `Stop the Oathbreakers from setting up a base in the Wei system, a critical choke point between the Free Worlds and the rest of the galaxy.`
 
 	on complete
 		payment 250000
@@ -1428,7 +1438,7 @@ mission "Nemesis: Oath Breaker"
 
 	npc
 		to spawn
-			has "Stolen Trailblazer 2: declined"			
+			has "Stolen Trailblazer 2: declined"
 		government "Oathbreaker"
 		personality target waiting heroic vindictive
 		system destination

@@ -20,6 +20,8 @@
 
 
 ship "Kestrel" "Kestrel (Battle Engines)"
+	sprite "ship/kestrele"
+	thumbnail "thumbnail/kestrele"
 	add attributes
 		"drag" -1.0
 		"fuel capacity" 100
@@ -53,6 +55,8 @@ ship "Kestrel" "Kestrel (Battle Engines)"
 	gun "Particle Cannon"
 
 ship "Kestrel" "Kestrel (Battle Shields)"
+	sprite "ship/kestrels"
+	thumbnail "thumbnail/kestrels"
 	add attributes
 		"shields" 3000
 		"hull" 1500
@@ -86,6 +90,8 @@ ship "Kestrel" "Kestrel (Battle Shields)"
 	gun "Particle Cannon"
 
 ship "Kestrel" "Kestrel (Battle Weapons)"
+	sprite "ship/kestrelw"
+	thumbnail "thumbnail/kestrelw"
 	add attributes
 		"weapon capacity" 40
 	outfits
@@ -94,7 +100,7 @@ ship "Kestrel" "Kestrel (Battle Weapons)"
 		"Meteor Missile" 180
 		"Torpedo Launcher" 2
 		"Torpedo" 60
-		"Heavy Laser Turret" 4		
+		"Heavy Laser Turret" 4
 		"Fusion Reactor"
 		"LP144a Battery Pack"
 		"D94-YV Shield Generator"
@@ -137,7 +143,7 @@ ship "Aerie" "Aerie (Energy Cannons)"
 		"Cargo Expansion" 3
 		"Large Radar Jammer"
 		"Ramscoop"
-		"Sniper Rifle"
+		"Antique Rifle"
 		"Laser Rifle" 3
 		
 		"X3700 Ion Thruster"
@@ -177,8 +183,8 @@ ship "Aerie" "Aerie (Korath)"
 	outfits
 		"Sidewinder Missile Launcher" 2
 		"Sidewinder Missile" 90
-		"Korath Banisher" 2
-		"Korath Warder"
+		"Banisher Grav-Turret" 2
+		"Warder Anti-Missile"
 		
 		"NT-200 Nucleovoltaic"
 		"KP-6 Photovoltaic Array"
@@ -186,16 +192,16 @@ ship "Aerie" "Aerie (Korath)"
 		"Small Heat Shunt"
 		"Small Radar Jammer"
 		"Brig"
-		"Korath Repeater Rifle" 3
+		"Thermal Repeater Rifle" 3
 		"Laser Rifle" 10
 		
 		"X3700 Ion Thruster"
 		"X3200 Ion Steering"
 		"Jump Drive"
 
-	turret "Korath Warder"
-	turret "Korath Banisher"
-	turret "Korath Banisher"
+	turret "Warder Anti-Missile"
+	turret "Banisher Grav-Turret"
+	turret "Banisher Grav-Turret"
 
 
 
@@ -342,14 +348,14 @@ ship "Bastion" "Bastion (Korath)"
 	outfits
 		"Plasma Cannon" 2
 		"Quad Blaster Turret" 2
-		"Korath Warder"
+		"Warder Anti-Missile"
 		
 		"NT-200 Nucleovoltaic"
 		"Systems Core (Medium)" 2
 		"Large Heat Shunt"
 		"Small Radar Jammer"
 		"Brig"
-		"Korath Repeater Rifle" 7
+		"Thermal Repeater Rifle" 7
 		"Laser Rifle" 17
 		
 		"Impala Plasma Thruster"
@@ -362,7 +368,7 @@ ship "Bastion" "Bastion (Korath)"
 	gun "Plasma Cannon"
 	turret "Quad Blaster Turret"
 	turret "Quad Blaster Turret"
-	turret "Korath Warder"
+	turret "Warder Anti-Missile"
 
 
 
@@ -376,7 +382,7 @@ ship "Berserker" "Berserker (Energy Cannons)"
 		"X2700 Ion Thruster"
 		"X3200 Ion Steering"
 		"Hyperdrive"
-		"Sniper Rifle"
+		"Antique Rifle"
 	gun "Energy Cannon"
 	gun "Energy Cannon"
 	gun "Energy Blaster"
@@ -483,16 +489,16 @@ ship "Bulk Freighter" "Bulk Freighter (Korath)"
 	outfits
 		"Sidewinder Missile Launcher" 2
 		"Sidewinder Missile" 90
-		"Korath Banisher"
+		"Banisher Grav-Turret"
 		"Laser Turret" 2
-		"Korath Warder" 2
+		"Warder Anti-Missile" 2
 		
 		"NT-200 Nucleovoltaic"
 		"Systems Core (Medium)"
 		"Small Heat Shunt"
 		"Small Radar Jammer"
 		"Interference Plating" 2
-		"Korath Repeater Rifle"
+		"Thermal Repeater Rifle"
 		"Laser Rifle" 6
 		
 		"X3700 Ion Thruster"
@@ -500,9 +506,9 @@ ship "Bulk Freighter" "Bulk Freighter (Korath)"
 		"Jump Drive"
 
 	turret "Laser Turret"
-	turret "Korath Warder"
-	turret "Korath Banisher"
-	turret "Korath Warder"
+	turret "Warder Anti-Missile"
+	turret "Banisher Grav-Turret"
+	turret "Warder Anti-Missile"
 	turret "Laser Turret"
 
 
@@ -872,15 +878,15 @@ ship "Falcon" "Falcon (Korath)"
 		"Plasma Cannon" 2
 		"Torpedo Launcher" 2
 		"Torpedo" 60
-		"Korath Banisher" 2
-		"Korath Warder" 2
+		"Banisher Grav-Turret" 2
+		"Warder Anti-Missile" 2
 
 		"Breeder Reactor"
 		"Systems Core (Medium)"
 		"Small Heat Shunt" 2
 		"Brig"
 		"Medical Bay"
-		"Korath Repeater Rifle" 15
+		"Thermal Repeater Rifle" 15
 		"Laser Rifle" 37
 
 		"Thruster (Planetary Class)"
@@ -891,66 +897,15 @@ ship "Falcon" "Falcon (Korath)"
 	gun "Plasma Cannon"
 	gun "Torpedo Launcher"
 	gun "Torpedo Launcher"
-	turret "Korath Banisher"
-	turret "Korath Warder"
-	turret "Korath Warder"
-	turret "Korath Banisher"
+	turret "Banisher Grav-Turret"
+	turret "Warder Anti-Missile"
+	turret "Warder Anti-Missile"
+	turret "Banisher Grav-Turret"
 
 
 
-ship "Falcon" "Falcon (Remnant)"
-	sprite "ship/remnant falcon"
-	thumbnail "thumbnail/remnant falcon-thumb"
-	outfits
-		"Inhibitor Cannon" 4
-		"Thrasher Turret" 2
-		"Point Defense Turret" 2
 
-		"Epoch Cell" 2
-		"KP-6 Photovoltaic Panel" 2
-		"Crystal Capacitor"
-		"S-970 Regenerator"
-		"Quantum Key Stone"
-		"Emergency Ramscoop"
-		"Thermoelectric Cooler"
-		"Tuning Rifle" 15
-		"Laser Rifle" 39
 
-		"Crucible-Class Thruster"
-		"Crucible-Class Steering"
-		"Hyperdrive"
-
-	turret "Thrasher Turret"
-	turret "Thrasher Turret"
-	turret "Point Defense Turret"
-	turret "Point Defense Turret"
-
-ship "Falcon" "Falcon (Remnant B)"
-	sprite "ship/remnant falcon"
-	thumbnail "thumbnail/remnant falcon-thumb"
-	outfits
-		"Inhibitor Blaster" 4
-		"Thrasher Turret" 2
-		"Point Defense Turret" 2
-
-		"Epoch Cell" 2
-		"KP-6 Photovoltaic Panel" 2
-		"Crystal Capacitor"
-		"S-970 Regenerator"
-		"Quantum Key Stone"
-		"Emergency Ramscoop"
-		"Thermoelectric Cooler"
-		"Tuning Rifle" 15
-		"Laser Rifle" 39
-
-		"Crucible-Class Thruster"
-		"Crucible-Class Steering"
-		"Hyperdrive"
-
-	turret "Thrasher Turret"
-	turret "Thrasher Turret"
-	turret "Point Defense Turret"
-	turret "Point Defense Turret"
 
 
 ship "Finch" "Finch (Flamethrower)"
@@ -989,7 +944,8 @@ ship "Firebird" "Firebird (Energy Cannons)"
 		"D41-HY Shield Generator"
 		"Cargo Expansion"
 		"Fragmentation Grenades"
-		"Laser Rifle" 3
+		"Antique Rifle"
+		"Laser Rifle" 2
 		
 		"X3700 Ion Thruster"
 		"X3200 Ion Steering"
@@ -1123,7 +1079,7 @@ ship "Hauler" "Hauler (Energy Cannons)"
 		"D41-HY Shield Generator"
 		"Water Coolant System"
 		"Small Radar Jammer"
-		"Sniper Rifle"
+		"Antique Rifle"
 		"Fragmentation Grenades"
 		"Laser Rifle"
 		"Greyhound Plasma Thruster"
@@ -1146,44 +1102,6 @@ ship "Hawk" "Hawk (Hai)"
 		"Small Radar Jammer"
 		"Dual Pulse Pistols"
 
-
-ship "Hawk" "Hawk (Remnant)"
-	sprite "ship/remnant hawk"
-	thumbnail "thumbnail/remnant hawk-thumb"
-	outfits
-		"Inhibitor Cannon" 2
-
-		"KP-6 Photovoltaic Panel" 3
-		"Millennium Cell" 2
-		"Crystal Capacitor"
-		"S-970 Regenerator"
-		"Quantum Key Stone"
-		"Emergency Ramscoop"
-		"Thermoelectric Cooler"
-		"Tuning Rifle" 2
-		"Laser Rifle" 2
-
-		"Anvil-Class Engine"
-		"Hyperdrive"
-
-ship "Hawk" "Hawk (Remnant B)"
-	sprite "ship/remnant hawk"
-	thumbnail "thumbnail/remnant hawk-thumb"
-	outfits
-		"Inhibitor Blaster" 2
-
-		"KP-6 Photovoltaic Panel" 3
-		"Millennium Cell" 2
-		"Crystal Capacitor"
-		"S-970 Regenerator"
-		"Quantum Key Stone"
-		"Emergency Ramscoop"
-		"Thermoelectric Cooler"
-		"Tuning Rifle" 2
-		"Laser Rifle" 2
-
-		"Anvil-Class Engine"
-		"Hyperdrive"
 
 
 ship "Modified Argosy" "Modified Argosy (Flamethrower)"
@@ -1219,14 +1137,14 @@ ship "Modified Argosy" "Modified Argosy (Korath)"
 		"Meteor Missile Launcher" 2
 		"Meteor Missile" 60
 		"Heavy Laser Turret"
-		"Korath Warder"
+		"Warder Anti-Missile"
 		
 		"NT-200 Nucleovoltaic"
 		"Systems Core (Medium)"
 		"Small Heat Shunt"
 		"Interference Plating"
 		"Brig"
-		"Korath Repeater Rifle" 2
+		"Thermal Repeater Rifle" 2
 		"Laser Rifle" 5
 		
 		"Greyhound Plasma Thruster"
@@ -1237,7 +1155,7 @@ ship "Modified Argosy" "Modified Argosy (Korath)"
 	gun "Heavy Laser"
 	gun "Meteor Missile Launcher"
 	gun "Meteor Missile Launcher"
-	turret "Korath Warder"
+	turret "Warder Anti-Missile"
 	turret "Heavy Laser Turret"
 
 
@@ -1272,24 +1190,24 @@ ship "Modified Argosy" "Modified Argosy (Nuclear)"
 
 ship "Nest" "Nest (Korath)"
 	outfits
-		"Korath Banisher" 2
-		"Korath Warder" 2
+		"Banisher Grav-Turret" 2
+		"Warder Anti-Missile" 2
 		
 		"Generator (Furnace Class)" 2
 		"Systems Core (Medium)"
 		"Large Heat Shunt"
 		"Brig"
-		"Korath Repeater Rifle" 2
+		"Thermal Repeater Rifle" 2
 		"Laser Rifle" 5
 		
 		"Greyhound Plasma Thruster"
 		"Impala Plasma Steering"
 		"Jump Drive"
 
-	turret "Korath Banisher"
-	turret "Korath Warder"
-	turret "Korath Warder"
-	turret "Korath Banisher"
+	turret "Banisher Grav-Turret"
+	turret "Warder Anti-Missile"
+	turret "Warder Anti-Missile"
+	turret "Banisher Grav-Turret"
 
 
 
@@ -1321,74 +1239,19 @@ ship "Osprey" "Osprey (Flamethrower)"
 
 
 
-
-ship "Osprey" "Osprey (Remnant)"
-	sprite "ship/remnant osprey"
-	thumbnail "thumbnail/remnant osprey-thumb"
-	outfits
-		"Inhibitor Cannon" 4
-		"Thrasher Turret"
-		"Point Defense Turret"
-
-		"Aeon Cell"
-		"KP-6 Photovoltaic Panel" 3
-		"Crystal Capacitor"
-		"S-970 Regenerator"
-		"Quantum Key Stone"
-		"Emergency Ramscoop"
-		"Thermoelectric Cooler" 3
-		"Tuning Rifle" 3
-		"Laser Rifle" 7
-
-		"Afterburner"
-		"Crucible-Class Thruster"
-		"Crucible-Class Steering"
-		"Hyperdrive"
-
-	turret "Thrasher Turret"
-	turret "Point Defense Turret"
-
-ship "Osprey" "Osprey (Remnant B)"
-	sprite "ship/remnant osprey"
-	thumbnail "thumbnail/remnant osprey-thumb"
-	outfits
-		"Inhibitor Blaster" 4
-		"Thrasher Turret"
-		"Point Defense Turret"
-
-		"Aeon Cell"
-		"KP-6 Photovoltaic Panel" 3
-		"Crystal Capacitor"
-		"S-970 Regenerator"
-		"Quantum Key Stone"
-		"Emergency Ramscoop"
-		"Thermoelectric Cooler" 3
-		"Tuning Rifle" 3
-		"Laser Rifle" 7
-
-		"Afterburner"
-		"Crucible-Class Thruster"
-		"Crucible-Class Steering"
-		"Hyperdrive"
-
-	turret "Thrasher Turret"
-	turret "Point Defense Turret"
-
-
-
 ship "Protector" "Protector (Korath)"
 	outfits
 		"Laser Turret" 2
-		"Korath Grab-Strike" 2
-		"Korath Banisher"
-		"Korath Warder"
+		"Grab-Strike Turret" 2
+		"Banisher Grav-Turret"
+		"Warder Anti-Missile"
 
 		"Fusion Reactor"
 		"Generator (Furnace Class)"
 		"LP072a Battery Pack"
 		"Systems Core (Medium)"
 		"Large Heat Shunt" 
-		"Korath Repeater Rifle" 6		
+		"Thermal Repeater Rifle" 6		
 		"Laser Rifle" 30
 
 		"X3700 Ion Thruster"
@@ -1397,10 +1260,10 @@ ship "Protector" "Protector (Korath)"
 
 	turret "Laser Turret"
 	turret "Laser Turret"
-	turret "Korath Grab-Strike"
-	turret "Korath Grab-Strike"
-	turret "Korath Banisher"
-	turret "Korath Warder"
+	turret "Grab-Strike Turret"
+	turret "Grab-Strike Turret"
+	turret "Banisher Grav-Turret"
+	turret "Warder Anti-Missile"
 
 
 
@@ -1466,69 +1329,47 @@ ship "Raven" "Raven (Hai)"
 
 
 
-ship "Raven" "Raven (Remnant)"
-	sprite "ship/remnant raven"
-	thumbnail "thumbnail/remnant raven-thumb"
-	outfits
-		"Inhibitor Cannon" 4
-		
-		"Epoch Cell"
-		"KP-6 Photovoltaic Panel"
-		"Crystal Capacitor"
-		"S-970 Regenerator"
-		"Quantum Key Stone"
-		"Emergency Ramscoop"
-		"Thermoelectric Cooler" 2
-		"Tuning Rifle" 2
-		"Laser Rifle" 4
-		
-		"Crucible-Class Thruster"
-		"Crucible-Class Steering"
-		"Hyperdrive"
-
-ship "Raven" "Raven (Remnant B)"
-	sprite "ship/remnant raven"
-	thumbnail "thumbnail/remnant raven-thumb"
-	outfits
-		"Inhibitor Blaster" 4
-		
-		"Epoch Cell"
-		"KP-6 Photovoltaic Panel"
-		"Crystal Capacitor"
-		"S-970 Regenerator"
-		"Quantum Key Stone"
-		"Emergency Ramscoop"
-		"Thermoelectric Cooler" 2
-		"Tuning Rifle" 2
-		"Laser Rifle" 4
-		
-		"Crucible-Class Thruster"
-		"Crucible-Class Steering"
-		"Hyperdrive"
-
-
 ship "Roost" "Roost (Korath)"
 	outfits
-		"Korath Banisher" 2
-		"Korath Warder" 2
+		"Banisher Grav-Turret" 2
+		"Warder Anti-Missile" 2
 		
 		"NT-200 Nucleovoltaic"
 		"Systems Core (Medium)"
 		"Large Heat Shunt"
 		"Interference Plating" 2
 		"Brig"
-		"Korath Repeater Rifle" 2
+		"Thermal Repeater Rifle" 2
 		"Laser Rifle" 7
 		
 		"Greyhound Plasma Thruster"
 		"Impala Plasma Steering"
 		"Jump Drive"
 
-	turret "Korath Banisher"
-	turret "Korath Warder"
-	turret "Korath Warder"
-	turret "Korath Banisher"
+	turret "Banisher Grav-Turret"
+	turret "Warder Anti-Missile"
+	turret "Warder Anti-Missile"
+	turret "Banisher Grav-Turret"
 
+
+
+ship "Scout" "Scout (Bounty Hunter)"
+	outfits
+		"A255 Atomic Steering"
+		"A370 Atomic Thruster"
+		"Anti-Missile Turret"
+		"Beam Laser" 2
+		Brig
+		"D23-QP Shield Generator"
+		Hyperdrive
+		"Laser Rifle"
+		"NT-200 Nucleovoltaic"
+		"Outfits Expansion" 2
+		Ramscoop
+		"Small Radar Jammer"
+		Supercapacitor
+		"Tactical Scanner"
+		"Water Coolant System"
 
 
 ship "Scout" "Scout (Hai)"
@@ -1571,7 +1412,7 @@ ship "Splinter" "Splinter (Korath)"
 	outfits
 		"Plasma Cannon" 2
 		"Blaster Turret" 2
-		"Korath Warder" 1
+		"Warder Anti-Missile" 1
 		
 		"KP-6 Photovoltaic Array"
 		"NT-200 Nucleovoltaic"
@@ -1580,7 +1421,7 @@ ship "Splinter" "Splinter (Korath)"
 		"Large Radar Jammer"
 		"Interference Plating" 4
 		"Brig"
-		"Korath Repeater Rifle"
+		"Thermal Repeater Rifle"
 		"Laser Rifle" 7
 		
 		"X3700 Ion Thruster"
@@ -1588,7 +1429,7 @@ ship "Splinter" "Splinter (Korath)"
 		"Jump Drive"
 
 	turret "Blaster Turret"
-	turret "Korath Warder"
+	turret "Warder Anti-Missile"
 	turret "Blaster Turret"
 
 
@@ -1635,14 +1476,14 @@ ship "Star Queen" "Star Queen (Hijacked)"
 
 ship "Quicksilver" "Quicksilver (Korath)"
 	outfits
-		"Korath Fire-Lance" 2
+		"Fire-Lance" 2
 		
 		"Generator (Furnace Class)"
 		"LP036a Battery Pack"
 		"Supercapacitor"
 		"Systems Core (Medium)"
 		"Large Heat Shunt"
-		"Korath Repeater Rifle"
+		"Thermal Repeater Rifle"
 		"Laser Rifle" 3
 		
 		"Thruster (Asteroid Class)" 2
@@ -1653,8 +1494,8 @@ ship "Quicksilver" "Quicksilver (Korath)"
 
 ship "Vanguard" "Vanguard (Korath)"
 	outfits
-		"Korath Fire-Lance" 7
-		"Korath Warder"
+		"Fire-Lance" 7
+		"Warder Anti-Missile"
 		"Fusion Reactor"
 		"LP144a Battery Pack"
 		"Systems Core (Medium)" 1
@@ -1662,7 +1503,7 @@ ship "Vanguard" "Vanguard (Korath)"
 		"Small Heat Shunt"
 		"Interference Plating" 3
 		"Brig"
-		"Korath Repeater Rifle" 4
+		"Thermal Repeater Rifle" 4
 		"Laser Rifle" 23		
 		"X3700 Ion Thruster"
 		"X4200 Ion Steering"

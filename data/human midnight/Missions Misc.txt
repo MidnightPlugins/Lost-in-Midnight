@@ -94,6 +94,67 @@ mission "Blue Ridge 2"
 
 
 
+mission "Bounty Hunting: Angry Chicken"
+	minor
+	name "Wanted Bandit near <system>"
+	description "Help the Sunriser eleminate a Modified Firebird named the <npc> which has been attacking merchants near <system>. Then report to <destination> for payment (<payment>)."
+	source
+		government "Republic" "Free Worlds" "Syndicate"
+	to offer
+		"combat rating" >= 300
+		random < 70
+	on offer
+		conversation
+			`You notice a young pilot staring intently at the job board.`
+			choice
+				`	"Find anything interesting?"`
+				`	(Ignore him.)`
+					decline
+			`	He looks at you and shrugs. "It's a bounty hunting job. The pay is good, but I've never done this kind of work before."`
+			choice
+				`	"Look kid, I'm willing to help out. Just don't die out there."`
+					goto share
+				`	"You should stick to safer jobs like hauling garbage."`
+			label scowl
+				`	The man scowls at you. "I didn't ask for your advice." He walks away.`
+				decline
+			`	"What do you know about bounty hunting?"`
+			choice
+				`	"It's dangerous work."`
+			scene "ship/rancor"
+			`	"That's okay. I have a tough ship, a Rancor."`
+			`	You've heard stories about them. The Rancor was originally a pirate vessel, and many were used in the early turf wars. The Alpha War was the beginning of the Rancor's decline as faster interceptors quickly outpaced and outmaneuvered this relatively slower ship. Today it is seen as a relic of the past, most noteworthy for influencing the design of the Fury.`
+			choice
+				`	"Look kid, I'm willing to help out. Just don't die out there."`
+				`	"On second thought, I don't want to be involved in this."`
+					goto scowl
+			label share
+			`	"Alright, I'll let you tag along. Just don't get in my way old timer."`
+			choice
+				`	"The name's <first>. My ship is the <ship>."`
+			`	"I'm Rocky. My Rancor is named Sunriser."`
+	on enter
+		dialog `Rocky hails you: "Where should we look first?"`
+	npc accompany save
+		government "Bounty Hunter (licensed)"
+		personality escort timid vindictive
+		ship "Rancor" "Sunriser"
+	npc kill
+		government "Bounty"
+		system
+			distance 1 2
+		personality target waiting staying disables harvests
+			confusion 20
+		ship "Modified Firebird" "Angry Chicken"
+		dialog `Rocky hails you: "That wasn't so tough. Let's head back to <destination> and claim our reward."`
+	on fail
+		dialog `[MISSION FAILED]: The Sunriser was destroyed. If life were a game, you could load a save file and try again.`
+	on complete
+		payment 60000
+		dialog `The government of <planet> gratefully pays you 120,000 credits for eliminating the Angry Chicken. Rocky claims half for himself and wishes you farewell.`
+
+
+
 mission "Drunk Pilot"
 	minor
 	name "Drunk Pilot"
@@ -616,7 +677,7 @@ mission "Pandora's Problems 2"
 		set "Randomize Pandora's Problems 2"
 	on enter "Gamma Cassiopeiae"
 		conversation
-			scene "ship/raider ancient"
+			scene "thumbnail/raider ancient-thumb"
 			`The Pandora is here! The alien ship is targeting your ship with its weapon systems!`
 	npc
 		government "Bounty"
@@ -676,7 +737,7 @@ mission "Raider Attack (Pirates)"
 	minor
 	repeat
 	name "Defend <planet>"
-	description "Defeat a pirate raid on <destination>. The pirate fleet is lead an alien flagship."
+	description "Defeat a pirate raid on <destination>. The pirate fleet is lead by an alien flagship."
 	source
 		planet "Sundive"
 		planet "Shangri-La"
@@ -693,7 +754,7 @@ mission "Raider Attack (Pirates)"
 			names "pirate"
 			variant
 				"Korath Raider (Torpedo)"
-				"Korath Chaser" 2
+				"'olofez" 2
 	npc
 		government "Syndicate"
 		personality heroic staying vindictive
@@ -874,13 +935,13 @@ mission "Star Explorer Korath Raid"
 		government "Korath"
 		system "Kor Ak'Mari"
 		personality waiting staying disables plunders opportunistic harvests
-		ship "Korath Raider (Fireswarm)" "Bar Ertakoshtar"
+		ship "Palavret (Blaze)" "Bar Ertakoshtar"
 	npc
 		government "Korath"
 		system "Kor Ak'Mari"
 		personality derelict waiting staying disables plunders opportunistic harvests
-		ship "Korath Chaser" "Grakprukat"
-		ship "Korath Chaser" "Artefaristek"
+		ship "'olofez" "Grakprukat"
+		ship "'olofez" "Artefaristek"
 	npc capture
 		government "Korath"
 		system "Kor Ak'Mari"
@@ -919,7 +980,7 @@ ship "Star Explorer" "Star Explorer (Korath)"
 		"Tactical Scanner"
 		"Medical Bay"
 		"Laser Rifle" 60
-		"Korath Repeater Rifle" 60
+		"Thermal Repeater Rifle" 60
 		Afterburner
 		"AR120 Reverse Thruster"
 		"A250 Atomic Thruster"

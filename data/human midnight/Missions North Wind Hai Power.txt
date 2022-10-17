@@ -771,9 +771,9 @@ mission "Turner Inc.: Hai Power 6"
 		fleet
 			names "korath"
 			variant
-				"Korath Dredger"
-				"Korath Raider"
-				"Korath Chaser" 6
+				"Rano'erek"
+				"Palavret"
+				"'olofez" 6
 	npc
 		government "Pirate"
 		system destination

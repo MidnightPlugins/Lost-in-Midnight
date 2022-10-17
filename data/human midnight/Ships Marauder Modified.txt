@@ -52,7 +52,8 @@ ship "Modified Aerie"
 		"D41-HY Shield Generator"
 		"Water Coolant System"
 		"Large Radar Jammer"
-		"Laser Rifle" 3
+		"Laser Rifle" 2
+		"Antique Rifle"
 		
 		"X3700 Ion Thruster"
 		"X3200 Ion Steering"
@@ -111,6 +112,8 @@ ship "Modified Berserker"
 		"nGVF-DD Fuel Cell"
 		"LP036a Battery Pack"
 		"D14-RN Shield Generator"
+		"Antique Rifle"
+		
 		"X2700 Ion Thruster"
 		"X3200 Ion Steering"
 		"Hyperdrive"
@@ -281,6 +284,7 @@ ship "Modified Firebird"
 		"D67-TM Shield Generator"
 		"Cargo Expansion"
 		"Small Radar Jammer"
+		"Antique Rifle"
 		
 		"X3700 Ion Thruster"
 		"X3200 Ion Steering"
@@ -313,6 +317,8 @@ ship "Modified Firebird" "Modified Firebird (Smuggler)"
 		"Outfits Expansion"
 		"Interference Plating" 4
 		"Small Radar Jammer"
+		"Antique Rifle"
+		
 		Afterburner
 		"X3700 Ion Thruster"
 		"X3200 Ion Steering"
@@ -893,6 +899,7 @@ ship "Marauder Vanguard" "Marauder Vanguard (Plasma Cluster)"
 		"A370 Atomic Thruster"
 		"A375 Atomic Steering"
 		"Hyperdrive"
+
 
 
 ship "Marauder Hauler"

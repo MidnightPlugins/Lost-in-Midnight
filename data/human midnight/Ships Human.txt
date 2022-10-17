@@ -523,7 +523,7 @@ ship "Hipparion"
 		"Ramscoop"
 		"Engineering Room"
 		"Medical Bay"
-		"Laser Rifle"
+		"Antique Rifle"
 		
 		"X3700 Ion Thruster"
 		"X3200 Ion Steering"
@@ -561,7 +561,7 @@ ship "Infiltrator"
 	attributes
 		category "Transport"
 		"cost" 1700000
-		"shields" 1200
+		"shields" 2000
 		"hull" 400
 		"required crew" 1
 		"bunks" 6
@@ -623,7 +623,7 @@ ship "Kestrel Prototype"
 		"frame rate" 1
 		rewind
 		delay 6
-	thumbnail "thumbnail/kestrel"
+	thumbnail "thumbnail/modified kestrel-thumb"
 	"crew" 128
 	attributes
 		category "Heavy Warship"
@@ -660,7 +660,7 @@ ship "Kestrel Prototype"
 		"Fuel Processor" 3
 		"Quantum Key Stone"
 		"Salvage Scanner"
-		"Korath Repeater Rifle" 64
+		"Thermal Repeater Rifle" 64
 		"Tuning Rifle" 32
 		"Pulse Rifle" 16
 		"Laser Rifle" 8
@@ -710,7 +710,7 @@ ship "Kestrel Prototype" "Kestrel Prototype (Void Rifle)"
 		"Fuel Processor" 3
 		"Quantum Key Stone"
 		"Salvage Scanner"
-		"Korath Repeater Rifle" 64
+		"Thermal Repeater Rifle" 64
 		"Tuning Rifle" 32
 		"Pulse Rifle" 16
 		"Laser Rifle" 8
@@ -938,6 +938,7 @@ ship "Mastodon"
 		"Medical Bay"
 		"Security Station"
 		"Laser Rifle" 140
+		"Antique Rifle"
 		
 		"Tyrant Plasma Thruster"
 		"Orca Plasma Steering"
@@ -1116,7 +1117,7 @@ ship "Plexus" "Plexus (Korath)"
 		"Outfit Scanner"
 		"Outfits Expansion" 2
 		"Tactical Scanner"		
-		"Korath Repeater Rifle" 25
+		"Thermal Repeater Rifle" 25
 		"Fragmentation Grenades" 50
 		"Laser Rifle" 75
 		"Security Station"
@@ -1124,6 +1125,51 @@ ship "Plexus" "Plexus (Korath)"
 		"Orca Plasma Steering"
 		"Jump Drive"
 
+
+
+# Rancors are usually involved in bounty missions
+ship "Rancor"
+	sprite "ship/rancor"
+	attributes
+		category "Interceptor"
+		"cost" 510000
+		"shields" 2400
+		"hull" 1000
+		"required crew" 1
+		"bunks" 3
+		"mass" 80
+		"drag" 1.8
+		"heat dissipation" .9
+		"fuel capacity" 400
+		"cargo space" 15
+		"outfit space" 160
+		"weapon capacity" 50
+		"engine capacity" 40
+		weapon
+			"blast radius" 24
+			"shield damage" 240
+			"hull damage" 120
+			"hit force" 360
+	outfits
+		"Energy Cannon" 2
+		"Energy Blaster" 2
+		"LP036a Battery Pack"
+		"nGVF-CC Fuel Cell"
+		"D23-QP Shield Generator"
+		"X1200 Ion Steering"
+		"X1700 Ion Thruster"
+		"Hyperdrive"
+
+	engine -20 36
+	engine 20 36
+	gun -10 -32 "Energy Cannon"
+	gun 10 -32 "Energy Cannon"
+	gun -16 -22 "Energy Blaster"
+	gun 16 -22 "Energy Blaster"
+	leak "flame" 50 80
+	explode "tiny explosion" 10
+	explode "small explosion" 20
+	description "The Rancor was originally a pirate vessel, and many were used in the early turf wars. The Alpha War was the beginning of the Rancor's decline as faster interceptors quickly outpaced and outmaneuvered this relatively slower ship. Today it is seen as a relic of the past, most noteworthy for influencing the design of the Fury."
 
 
 
@@ -1652,7 +1698,7 @@ ship "War Hauler"
 		"Impala Plasma Steering"
 		"Hyperdrive"
 		"Fragmentation Grenades"
-		"Laser Rifle" 3
+		"Antique Rifle" 3
 
 	engine -44.5 140.5
 	engine 45 140.5
@@ -1965,6 +2011,9 @@ ship "Municipality"
 
 ship "Thermopylae Station"
 	sprite "ship/thermopylae station"
+		"scale" 4
+		"rewind"
+		"delay" 2
 	"never disabled"
 	attributes
 		category "Heavy Warship"
@@ -1977,18 +2026,18 @@ ship "Thermopylae Station"
 		"drag" 100
 		"heat dissipation" .4
 		"cargo space" 1300
-		"outfit space" 1400
-		"weapon capacity" 562
+		"outfit space" 1460
+		"weapon capacity" 782
 		"engine capacity" 38
 		"inscrutable" 1
 		weapon
-			"blast radius" 1000
-			"shield damage" 10000
-			"hull damage" 1000
-			"hit force" 15000
+			"blast radius" 5000
+			"shield damage" 50000
+			"hull damage" 25000
+			"hit force" 75000
 	outfits
-		"Quad Blaster Turret" 8
-		"Heavy Anti-Missile Turret" 8
+		"Quad Blaster Turret" 12
+		"Heavy Anti-Missile Turret" 12
 		"Asteroid Catapult"
 		"Metallic Asteroid" 95
 		"Asteroid Storage" 5
@@ -2014,23 +2063,43 @@ ship "Thermopylae Station"
 		"A125 Atomic Steering"
 		"AR120 Reverse Thruster"
 		
-	gun 9.5 -176 "Asteroid Catapult"
-	turret -48.5 -96 "Quad Blaster Turret"
-	turret 64 -99.5 "Quad Blaster Turret"
-	turret -93 -88.5 "Heavy Anti-Missile Turret"
-	turret 104.5 -89 "Heavy Anti-Missile Turret"
-	turret -127 -77.5 "Quad Blaster Turret"
-	turret 125.5 -77.5 "Quad Blaster Turret"
-	turret -150.5 -57 "Heavy Anti-Missile Turret"
-	turret 152 -59.5 "Heavy Anti-Missile Turret"
-	turret -160.5 -36.5 "Quad Blaster Turret"
-	turret 159 -39.5 "Quad Blaster Turret"
-	turret -155 -18.5 "Heavy Anti-Missile Turret"
-	turret 152.5 -18.5 "Heavy Anti-Missile Turret"
-	turret -117 12 "Quad Blaster Turret"
-	turret 135.5 3 "Quad Blaster Turret"
-	turret -43 29 "Heavy Anti-Missile Turret"
-	turret 57.5 26.5 "Heavy Anti-Missile Turret"
+	gun 0 -342 "Asteroid Catapult"
+	turret -18.5 -52.5 "Quad Blaster Turret"
+		under
+	turret 19 -54 "Quad Blaster Turret"
+		under
+	turret -60.5 -60.5 "Heavy Anti-Missile Turret"
+		under
+	turret 64 -55.5 "Heavy Anti-Missile Turret"
+		under
+	turret -120.5 -30 "Quad Blaster Turret"
+		under
+	turret 122.5 -39 "Quad Blaster Turret"
+		under
+	turret -154.5 -21 "Heavy Anti-Missile Turret"
+		under
+	turret 170.5 -20 "Heavy Anti-Missile Turret"
+		under
+	turret -200 2.5 "Quad Blaster Turret"
+		under
+	turret 204 -11 "Quad Blaster Turret"
+		under
+	turret -259.5 56.5 "Heavy Anti-Missile Turret"
+		under
+	turret 265 28 "Heavy Anti-Missile Turret"
+		under
+	turret -258.5 104.5 "Quad Blaster Turret"
+	turret 265.5 104.5 "Quad Blaster Turret"
+	turret -225.5 130.5 "Heavy Anti-Missile Turret"
+	turret 249 117 "Heavy Anti-Missile Turret"
+	turret -198 149.5 "Quad Blaster Turret"
+	turret 214.5 138 "Quad Blaster Turret"
+	turret -156 163 "Heavy Anti-Missile Turret"
+	turret 178.5 152.5 "Heavy Anti-Missile Turret"
+	turret -126 176 "Quad Blaster Turret"
+	turret 133.5 165 "Quad Blaster Turret"
+	turret -56 181 "Heavy Anti-Missile Turret"
+	turret 33 180 "Heavy Anti-Missile Turret"
 	bay "Fighter" 0 0 under front
 	bay "Fighter" 0 0 under front
 	bay "Fighter" 0 0 under front
@@ -2063,4 +2132,4 @@ ship "Thermopylae Station"
 	explode "large explosion" 135
 	explode "huge explosion" 90
 	"final explode" "final explosion large"
-	description "A prototype built during the war that was never actually deployed into active service. It was supposed to be disassembled, with the component parts securely locked away in a Navy testing facility."
+	description "A prototype built during the war that was never actually deployed into active service. The Asteroid Catapult was supposed to be securely locked away in a Navy testing facility."
