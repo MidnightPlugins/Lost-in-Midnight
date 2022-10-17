@@ -53,7 +53,7 @@ outfit "Ka'het Scanner"
 
 
 outfit "Graveyard Map"
-	category "Special"
+	category "Unique"
 	cost 0
 	thumbnail "outfit/graveyard map"
 	description "A map of the graveyard found aboard the Omnipotence. Several systems are marked."
@@ -168,11 +168,11 @@ outfit "Builder Grand Generator"
 
 outfit "Builder Grand Accumulator"
 	category "Power"
-	cost 27000
+	cost 270000
 	thumbnail "outfit/builder grand accumulator"
 	"mass" 20
 	"outfit space" -30
-	"energy capacity" 6600
+	"energy capacity" 26400
 	description "A bank of power accumulators condensed to store vast amounts of energy for use on larger Builder ships."
 
 
