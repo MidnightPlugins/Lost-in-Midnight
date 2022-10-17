@@ -18,9 +18,7 @@ government "Bounty Hunter (licensed)"
 	color .78 0 0
 	"player reputation" 1000
 	"attitude toward"
-		"Alpha" -.01
 		"Oathbreaker" -.01
-		"Pirate" -.01
 		"Bounty" -1
 	"bribe" .2
 	"fine" 0
@@ -103,6 +101,11 @@ government "Grave Diggers"
 	"hostile hail" "hostile pirate"
 	"attitude toward"
 		"Remnant" -.01
+		"Ka'het" -.01
+		"Ka'het (Infighting)" -.01
+		"Ka'sei" -.01
+		"Korath" -.01
+		"Korath (Civilian)" -.01
 	"fine" 0
 
 
@@ -128,7 +131,7 @@ government "Indigenous Lifeform (Hostile)"
 	"display name" "Indigenous Lifeform"
 	"player reputation" -1000
 	"attitude toward"
-		"Indigenous Lifeform" .04
+		"Indigenous Lifeform" .01
 	"bribe" 0
 	"fine" 0
 	"penalty for"
@@ -143,30 +146,60 @@ government "Indigenous Lifeform (Hostile)"
 government "Indigenous Predator"
 	"player reputation" -1000
 	"attitude toward"
-		"Indigenous Lifeform" -.01
-		"Merchant" -.01
-		"Free Worlds" -.01
-		"Republic" -.01
-		"Syndicate" -.01
-		"Pirate" -.01
-		"Deep Security" -.01
-		"Militia" -.01
-		"Navy (Oathkeeper)" -.01
-		"Navy Intelligence" -.01
-		"Drak" -.01
-		"Quarg" -.01
-		"Ember Waste" -.01
-		"Hai" -.01
-		"Hai (Wormhole Access)" -.01
-		"Hai (Unfettered)" -.01
+		"Author" -.01
+		"Builder" -.01
+		"Bounty (Disguised)" -.01
+		"Bounty Hunter" -.01
 		"Coalition" -.01
+		"Deep Security" -.01
+		"Free Worlds" -.01
+		"Grave Diggers" -.01
+		"Hai" -.01
+		"Hai Merchant" -.01
+		"Hai Merchant (Human)" -.01
+		"Hai Merchant (Sympathizers)" -.01
+		"Hai (Unfettered)" -.01
+		"Hai (Wormhole Access)" -.01
 		"Heliarch" -.01
-		"Remnant" -.01
-		"Wanderer" -.01
+		"Independent" -.01
+		"Independent (Killable)" -.01
+		"Indigenous Lifeform" -.01
+		"Invasive Lifeform" -.01
+		"Ka'het" -.01
+		"Ka'het (Infighting)" -.01
+		"Ka'sei" -.01
 		"Korath" -.01
+		"Korath (Civilian)" -.01
+		"Korath Nanobots" -.01
 		"Kor Efret" -.01
 		"Kor Mereti" -.01
+		"Kor Mereti (Hostile)" -.01
 		"Kor Sestor" -.01
+		"Kor Scrappers" -.01
+		"Kor Scrappers (Hostile)" -.01
+		"Merchant" -.01
+		"Militia" -.01
+		"Navy Intelligence" -.01
+		"Navy (Oathkeeper)" -.01
+		"Neutral" -.01
+		"Pirate" -.01
+		"Pirate (Rival)" -.01
+		"Pug" -.01
+		"Pug (Wanderer)" -.01
+		"Quarg" -.01
+		"Remnant" -.01
+		"Remnant (Research)" -.01
+		"Republic" -.01
+		"Republic (Friendly)" -.01
+		"Scar's Legion" -.01
+		"Scar's Legion (Killable)" -.01
+		"Swarming Lifeform" -.01
+		"Syndicate" -.01
+		"Syndicate (Corrupt)" -.01
+		"Syndicate (Extremist)" -.01
+		"Test Dummy" -.01
+		"Ember Waste" -.01
+		"Wanderer" -.01
 	"bribe" 0
 	"fine" 0
 	"penalty for"
@@ -182,31 +215,63 @@ government "Indigenous Predator"
 government "Invasive Lifeform"
 	"player reputation" -1000
 	"attitude toward"
-		"Invasive Lifeform (Passive)" .04
-		"Indigenous Lifeform" -.01
-		"Merchant" -.01
-		"Free Worlds" -.01
-		"Republic" -.01
-		"Syndicate" -.01
-		"Pirate" -.01
-		"Deep Security" -.01
-		"Militia" -.01
-		"Navy (Oathkeeper)" -.01
-		"Navy Intelligence" -.01
-		"Drak" -.01
-		"Quarg" -.01
-		"Ember Waste" -.01
-		"Hai" -.01
-		"Hai (Wormhole Access)" -.01
-		"Hai (Unfettered)" -.01
+		"Author" -.01
+		"Builder" -.01
+		"Bounty (Disguised)" -.01
+		"Bounty Hunter" -.01
 		"Coalition" -.01
+		"Deep Security" -.01
+		"Drak" -.01
+		"Drak (Hostile)" -.01
+		"Free Worlds" -.01
+		"Grave Diggers" -.01
+		"Hai" -.01
+		"Hai Merchant" -.01
+		"Hai Merchant (Human)" -.01
+		"Hai Merchant (Sympathizers)" -.01
+		"Hai (Unfettered)" -.01
+		"Hai (Wormhole Access)" -.01
 		"Heliarch" -.01
-		"Remnant" -.01
-		"Wanderer" -.01
+		"Independent" -.01
+		"Independent (Killable)" -.01
+		"Indigenous Lifeform" -.01
+		"Indigenous Predator" -.01
+		"Ka'het" -.01
+		"Ka'het (Infighting)" -.01
+		"Ka'sei" -.01
 		"Korath" -.01
+		"Korath (Civilian)" -.01
+		"Korath Nanobots" -.01
 		"Kor Efret" -.01
 		"Kor Mereti" -.01
+		"Kor Mereti (Hostile)" -.01
 		"Kor Sestor" -.01
+		"Kor Scrappers" -.01
+		"Kor Scrappers (Hostile)" -.01
+		"Merchant" -.01
+		"Militia" -.01
+		"Navy Intelligence" -.01
+		"Navy (Oathkeeper)" -.01
+		"Neutral" -.01
+		"Parrot" -.01
+		"Pirate" -.01
+		"Pirate (Rival)" -.01
+		"Pug" -.01
+		"Pug (Wanderer)" -.01
+		"Quarg" -.01
+		"Remnant" -.01
+		"Remnant (Research)" -.01
+		"Republic" -.01
+		"Republic (Friendly)" -.01
+		"Scar's Legion" -.01
+		"Scar's Legion (Killable)" -.01
+		"Swarming Lifeform" -.01
+		"Syndicate" -.01
+		"Syndicate (Corrupt)" -.01
+		"Syndicate (Extremist)" -.01
+		"Test Dummy" -.01
+		"Ember Waste" -.01
+		"Wanderer" -.01
 	"bribe" 0
 	"fine" 0
 	"penalty for"
@@ -223,7 +288,7 @@ government "Invasive Lifeform (Passive)"
 	"display name" "Invasive Lifeform"
 	"player reputation" 1
 	"attitude toward"
-		"Invasive Lifeform" .04
+		"Invasive Lifeform" .01
 	"bribe" 0
 	"fine" 0
 	"penalty for"
@@ -252,37 +317,62 @@ government "Phenomenon (dangerous)"
 	"player reputation" -1000
 	"attitude toward"
 		"Author" -.01
-		"Invasive Lifeform" -.01
-		"Invasive Lifeform (Passive)" -.01
+		"Builder" -.01
+		"Bounty (Disguised)" -.01
+		"Bounty Hunter" -.01
+		"Coalition" -.01
+		"Deep Security" -.01
+		"Drak" -.01
+		"Drak (Hostile)" -.01
+		"Free Worlds" -.01
+		"Hai" -.01
+		"Hai Merchant" -.01
+		"Hai Merchant (Human)" -.01
+		"Hai Merchant (Sympathizers)" -.01
+		"Hai (Unfettered)" -.01
+		"Hai (Wormhole Access)" -.01
+		"Heliarch" -.01
+		"Independent" -.01
+		"Independent (Killable)" -.01
 		"Indigenous Lifeform" -.01
 		"Indigenous Predator" -.01
-		"Swarming Lifeform" -.01
-		"Merchant" -.01
-		"Free Worlds" -.01
-		"Republic" -.01
-		"Syndicate" -.01
-		"Pirate" -.01
-		"Deep Security" -.01
-		"Militia" -.01
-		"Navy (Oathkeeper)" -.01
-		"Navy Intelligence" -.01
-		"Drak" -.01
-		"Quarg" -.01
-		"Ember Waste" -.01
-		"Hai" -.01
-		"Hai (Wormhole Access)" -.01
-		"Hai (Unfettered)" -.01
-		"Coalition" -.01
-		"Heliarch" -.01
-		"Remnant" -.01
-		"Wanderer" -.01
+		"Invasive Lifeform" -.01
+		"Ka'het" -.01
+		"Ka'het (Infighting)" -.01
+		"Ka'sei" -.01
 		"Korath" -.01
+		"Korath (Civilian)" -.01
+		"Korath Nanobots" -.01
 		"Kor Efret" -.01
 		"Kor Mereti" -.01
 		"Kor Mereti (Hostile)" -.01
 		"Kor Sestor" -.01
 		"Kor Scrappers" -.01
 		"Kor Scrappers (Hostile)" -.01
+		"Merchant" -.01
+		"Militia" -.01
+		"Navy Intelligence" -.01
+		"Navy (Oathkeeper)" -.01
+		"Neutral" -.01
+		"Parrot" -.01
+		"Pirate" -.01
+		"Pirate (Rival)" -.01
+		"Pug" -.01
+		"Pug (Wanderer)" -.01
+		"Quarg" -.01
+		"Remnant" -.01
+		"Remnant (Research)" -.01
+		"Republic" -.01
+		"Republic (Friendly)" -.01
+		"Scar's Legion" -.01
+		"Scar's Legion (Killable)" -.01
+		"Swarming Lifeform" -.01
+		"Syndicate" -.01
+		"Syndicate (Corrupt)" -.01
+		"Syndicate (Extremist)" -.01
+		"Test Dummy" -.01
+		"Ember Waste" -.01
+		"Wanderer" -.01
 	"bribe" 0
 	"fine" 0
 	"penalty for"
@@ -310,6 +400,8 @@ government "Phenomenon (harmless)"
 government "Oathbreaker"
 	swizzle 0
 	color .91 .42 .09
+	"crew attack" 1.2
+	"crew defense" 2.2
 	"player reputation" -1000
 	"attitude toward"
 		"Free Worlds" -.04
@@ -329,8 +421,6 @@ government "Oathbreaker Expeditionary"
 	"attitude toward"
 		"Heliarch" .05
 		"Coalition" .05
-		"Free Worlds" -.01
-		"Militia" -.01
 	"bribe" 0
 	"fine" 0
 	"friendly hail" "friendly oathbreaker"
@@ -344,7 +434,7 @@ government "Storm Seekers"
 	"player reputation" 1
 	"attitude toward"
 		"Independent" .01
-	"bribe" 0
+	"bribe" .2
 	"fine" 0
 	"friendly hail" "storm seeker"
 	"hostile hail" "hostile civilian"
@@ -357,26 +447,62 @@ government "Swarming Lifeform"
 	# not sentient and do not remember you as an individual.
 	"player reputation" 1000
 	"attitude toward"
-		"Merchant" .03
-		"Free Worlds" .03
-		"Republic" .03
-		"Syndicate" .03
-		"Pirate" .03
-		"Deep Security" .03
-		"Militia" .03
-		"Navy (Oathkeeper)" .03
-		"Navy Intelligence" .03
-		"Hai" .03
-		"Hai (Wormhole Access)" .03
-		"Hai (Unfettered)" .03
+		"Author" .03
+		"Builder" .03
+		"Bounty (Disguised)" .03
+		"Bounty Hunter" .03
+		"Bounty Hunter (licensed)" .03
 		"Coalition" .03
+		"Deep Security" .03
+		"Drak" .03
+		"Drak (Hostile)" .03
+		"Free Worlds" .03
+		"Grave Diggers" .03
+		"Hai" .03
+		"Hai Merchant" .03
+		"Hai Merchant (Human)" .03
+		"Hai Merchant (Sympathizers)" .03
+		"Hai (Unfettered)" .03
+		"Hai (Wormhole Access)" .03
 		"Heliarch" .03
-		"Remnant" .03
-		"Wanderer" .03
+		"Independent" .03
+		"Independent (Killable)" .03
+		"Indigenous Lifeform" .03
+		"Ka'het" .03
+		"Ka'het (Infighting)" .03
+		"Ka'sei" .03
 		"Korath" .03
+		"Korath (Civilian)" .03
+		"Korath Nanobots" .03
 		"Kor Efret" .03
 		"Kor Mereti" .03
+		"Kor Mereti (Hostile)" .03
 		"Kor Sestor" .03
+		"Kor Scrappers" .03
+		"Kor Scrappers (Hostile)" .03
+		"Merchant" .03
+		"Militia" .03
+		"Navy Intelligence" .03
+		"Navy (Oathkeeper)" .03
+		"Neutral" .03
+		"Parrot" .03
+		"Pirate" .03
+		"Pirate (Rival)" .03
+		"Pug" .03
+		"Pug (Wanderer)" .03
+		"Quarg" .03
+		"Remnant" .03
+		"Remnant (Research)" .03
+		"Republic" .03
+		"Republic (Friendly)" .03
+		"Scar's Legion" .03
+		"Scar's Legion (Killable)" .03
+		"Syndicate" .03
+		"Syndicate (Corrupt)" .03
+		"Syndicate (Extremist)" .03
+		"Test Dummy" .03
+		"Ember Waste" .03
+		"Wanderer" .03
 	"bribe" 0
 	"fine" 0
 	"penalty for"
@@ -393,7 +519,7 @@ government "Syndicate (Corrupt)"
 	"display name" "Syndicate"
 	swizzle 4
 	color 0 .41 .71
-	
+
 	"player reputation" -1000
 
 	"bribe" .08

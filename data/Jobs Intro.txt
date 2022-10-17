@@ -262,166 +262,97 @@ mission "Intro Escort Add-on [3 Interceptor]"
 
 
 
+#############################
+#
+# "Intro Bounty Hunting"
+#
+#############################
 
-mission "Intro Bounty Hunting 1"
-	job
-	repeat
-	name "Wanted rogue near <system>"
-	description "A low-end pirate interceptor named the <npc> has been attacking merchants near the <system> system. Destroy it and return to <planet> for payment (<payment>)."
-	to offer
-		"combat rating" < 300
-		has "Intro [0]: done"
-		not "ships: Medium Warship"
-		not "ships: Heavy Warship"
-		not "ships: Heavy Freighter"
-		"ships: Light Warship" + "ships: Light Freighter" + "ships: Transport" + "ships: Interceptor" == 1
-		random < 50 - "combat rating"
-	source
-		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
-		attributes "rim" "south" "north" "dirt belt" "core" "frontier"
-	npc kill
-		government "Bounty"
-		personality heroic entering staying nemesis target
-		fleet
-			names "pirate"
-			variant
-				"Sparrow"
-		dialog phrase "generic hunted bounty eliminated dialog"
-	on visit
-		dialog phrase "generic bounty hunting on visit"
-	on complete
-		payment 25000
-		dialog phrase "generic bounty hunting payment dialog"
 
-mission "Intro Bounty Hunting 2"
-	job
-	repeat
-	name "Wanted rogue near <system>"
-	description "A low-end pirate interceptor named the <npc> has been attacking merchants near the <system> system. Destroy it and return to <planet> for payment (<payment>)."
-	to offer
-		has "Intro Bounty Hunting 1: done"
-		"combat rating" < 300
-		not "ships: Medium Warship"
-		not "ships: Heavy Warship"
-		not "ships: Heavy Freighter"
-		"ships: Light Warship" + "ships: Light Freighter" + "ships: Transport" + "ships: Interceptor" == 1
-		random < 25 - ( "Intro Bounty Hunting 1: done" + "Intro Bounty Hunting 2: done" )
-	source
-		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
-		attributes "rim" "south" "north" "dirt belt" "core" "frontier"
-	npc kill
-		government "Bounty"
-		system
-			distance 0 1
-		personality heroic staying nemesis target
-		fleet
-			names "pirate"
-			variant
-				"Wasp"
-		dialog phrase "generic hunted bounty eliminated dialog"
-	on visit
-		dialog phrase "generic bounty hunting on visit"
-	on complete
-		payment 50000
-		dialog phrase "generic bounty hunting payment dialog"
 
-mission "Intro Bounty Hunting 3"
-	job
-	repeat
-	name "Wanted rogue near <system>"
-	description "A low-end pirate interceptor named the <npc> has been attacking merchants near the <system> system. Destroy it and return to <planet> for payment (<payment>)."
-	to offer
-		has "Intro Bounty Hunting 2: done"
-		"combat rating" < 300
-		not "ships: Medium Warship"
-		not "ships: Heavy Warship"
-		not "ships: Heavy Freighter"
-		"ships: Light Warship" + "ships: Light Freighter" + "ships: Transport" + "ships: Interceptor" == 1
-		random < 25 - ( "Intro Bounty Hunting 3: done" + "Intro Bounty Hunting 2: done" )
+mission "Intro Bounty Hunting: Tweedledee & Tweedledum"
+	minor
+	name "Wanted Bandits near <system>"
+	description "Help the Blood Hound eliminate a pair of old Berserkers, named the Tweedledee & Tweedledum, which have been attacking merchants near <system>. Then report to <destination> for payment (<payment>)."
 	source
-		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
-		attributes "rim" "south" "north" "dirt belt" "core" "frontier"
-	npc kill
-		government "Bounty"
-		system
-			distance 0 1
-		personality heroic staying nemesis target
-		fleet
-			names "pirate"
-			variant
-				"Fury"
-		dialog phrase "generic hunted bounty eliminated dialog"
-	on visit
-		dialog phrase "generic bounty hunting on visit"
-	on complete
-		payment 75000
-		dialog phrase "generic bounty hunting payment dialog"
+		government "Republic" "Free Worlds" "Syndicate"
+	to offer
+		not "Bounty Hunting (Tiny): done"
+		not "Bounty Hunting (Very Small): done"
+		not "Bounty Hunting (Small): done"
+		not "Bounty Hunting (Medium): done"
+		not "Bounty Hunting (Big): done"
+		not "Bounty Hunting (Small, Hidden): done"
+		not "Bounty Hunting (Medium, Hidden): done"
+		not "Bounty Hunting (Big, Hidden): done"
+		not "Bounty Hunting (Small, Boarding, Entering): done"
+		not "Bounty Hunting (Medium, Boarding, Entering): done"
+		not "Bounty Hunting (Solo Marauder I): done"
+		not "Bounty Hunting (Solo Marauder II): done"
+		not "Bounty Hunting (Solo Marauder III): done"
+		not "Bounty Hunting (Solo Marauder IV): done"
+		not "Bounty Hunting (Marauder I): done"
+		not "Bounty Hunting (Marauder II): done"
+		not "Bounty Hunting (Marauder III): done"
+		not "Bounty Hunting (Marauder IV): done"
+		not "Bounty Hunting (Marauder V): done"
+		not "Bounty Hunting (Marauder VI): done"
+		not "Bounty Hunting (Marauder VII): done"
+		not "Bounty Hunting (Marauder VIII): done"
+		not "Bounty Hunting (Marauder IX): done"
+		not "Bounty Hunting (Marauder X): done"
+		or
+			has "ships: Interceptor"
+			has "ships: Light Warship"
+		"combat rating" < 300
+		random < 70
+	on offer
+		conversation
+			`You notice a bounty hunting request on the job board. A woman walks up and asks "Find an interesting one?" While she examines the job you were looking at you note she's dressed in a flight suit and carries a sidearm. "This says there's more than one ship to hunt down. How about teaming up with me on this? I've hunted bounties before."`
+			choice
+				`	"Sounds good. I'll be glad to have an experienced bounty hunter along."`
+					goto team
+				`	"I'm not actually interested in this. Go ahead and take it if you want."`
+			`	"Are you sure about that? This seems like a good job for a beginner."`
+			choice
+				`	"Beginner?"`
+				`	"Yeah, I'm really not interested in this."`
+					decline
+			`	She grins. "You've never taken a bounty job before, have you? I could tell right away!"`
+			choice
+				`	"Okay, I'll show you I can do this!"`
+				`	"Well, now I definitely don't want to do this."`
+					decline
+			label team
+			`	"Alright! I'm Carol, pilot of the Blood Hound. What's your name?"`
+			choice
+				`	"<first> <last>, pilot of the <ship>."`
+			`	"Nice to meet you <first>! Let's catch those bounties!"`
+				accept
 
-mission "Intro Bounty Hunting 4"
-	job
-	repeat
-	name "Wanted rogue near <system>"
-	description "A low-end pirate interceptor named the <npc> has been attacking merchants near the <system> system. Destroy it and return to <planet> for payment (<payment>)."
-	to offer
-		has "Intro Bounty Hunting 3: done"
-		"combat rating" < 300
-		not "ships: Medium Warship"
-		not "ships: Heavy Warship"
-		not "ships: Heavy Freighter"
-		"ships: Light Warship" + "ships: Light Freighter" + "ships: Transport" + "ships: Interceptor" == 1
-		random < 25 - ( "Intro Bounty Hunting 3: done" + "Intro Bounty Hunting 4: done" )
-	source
-		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
-		attributes "rim" "south" "north" "dirt belt" "core" "frontier"
+	on enter
+		dialog `Carol hails you: "Bounties tend to be within one or two systems from where the job was offered. Particularly troublesome targets can be a little farther away."`
+	on enter
+		dialog `Carol hails you: "Don't be discouraged if they aren't here. Just keep searching the systems near <system> and you'll find them eventually!"`
+	npc accompany save
+		government "Bounty Hunter (licensed)"
+		personality escort timid vindictive
+		ship "Scout (Bounty Hunter)" "Blood Hound"
 	npc kill
 		government "Bounty"
 		system
 			distance 1 2
-		personality heroic staying nemesis target
-		fleet
-			names "pirate"
-			variant
-				"Berserker"
-		dialog phrase "generic hunted bounty eliminated dialog"
-	on visit
-		dialog phrase "generic bounty hunting on visit"
+		personality target waiting staying disables harvests
+			confusion 20
+		ship "Berserker (Energy Cannons)" "Tweedledee"
+		ship "Berserker (Energy Cannons)" "Tweedledum"
+		dialog `Carol hails you: "Some bounty jobs require you to board and capture the fugitives. But for most it's enough to eliminate the targets. Let's get back to <destination> and claim our reward."`
+	on fail
+		dialog `[MISSION FAILED]: The Blood Hound was destroyed. If life were a game, you could load a previous save file and try again.`
 	on complete
-		payment 100000
-		dialog phrase "generic bounty hunting payment dialog"
-
-mission "Intro Bounty Hunting 5"
-	job
-	repeat
-	name "Wanted rogue near <system>"
-	description "A low-end pirate interceptor named the <npc> has been attacking merchants near the <system> system. Destroy it and return to <planet> for payment (<payment>)."
-	to offer
-		has "Intro Bounty Hunting 4: done"
-		"combat rating" < 300
-		not "ships: Medium Warship"
-		not "ships: Heavy Warship"
-		not "ships: Heavy Freighter"
-		"ships: Light Warship" + "ships: Light Freighter" + "ships: Transport" + "ships: Interceptor" == 1
-		random < 25 - ( "Intro Bounty Hunting 5: done" + "Intro Bounty Hunting 4: done" )
-	source
-		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
-		attributes "rim" "south" "north" "dirt belt" "core" "frontier"
-	npc kill
-		government "Bounty"
-		system
-			distance 1 2
-		personality heroic staying nemesis target
-		fleet
-			names "pirate"
-			variant
-				"Hawk"
-		dialog phrase "generic hunted bounty eliminated dialog"
-	on visit
-		dialog phrase "generic bounty hunting on visit"
-	on complete
-		payment 125000
-		dialog phrase "generic bounty hunting payment dialog"
-
-
+		log `A bounty hunter named Carol joined me on my first bounty hunting job. She says bounties tend to be within one or two systems from where the job was offered. Particularly troublesome targets can be a little farther away.`
+		payment 40000
+		dialog `The government of <planet> gratefully pays you 80,000 credits for eliminating Tweedledee & Tweedledum. Carol claims half for herself and wishes you farewell.`
 
 
 #################
@@ -722,3 +653,48 @@ mission "Betelgeuse offer [Gremlin 4]"
 			scene "thumbnail/gremlin-thumb"
 			`You receive a message from Henrietta: "The Gremlin is now available at Betelgeuse shipyards!" You should start receiving your payments soon.`
 				decline
+
+
+
+#########################
+# deprecated
+#########################
+
+mission "Bounty Hunting: Tweedledee & Tweedledum"
+	minor
+	invisible
+	to offer
+		never
+
+mission "Intro Bounty Hunting 1"
+	minor
+	invisible
+	to offer
+		never
+
+mission "Intro Bounty Hunting 2"
+	minor
+	invisible
+	to offer
+		never
+
+mission "Intro Bounty Hunting 3"
+	minor
+	invisible
+	to offer
+		never
+
+mission "Intro Bounty Hunting 4"
+	minor
+	invisible
+	to offer
+		never
+
+mission "Intro Bounty Hunting 5"
+	minor
+	invisible
+	to offer
+		never
+
+
+

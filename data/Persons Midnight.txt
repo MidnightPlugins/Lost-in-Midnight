@@ -467,28 +467,53 @@ ship "Modified Clipper" "Modified Clipper (Zephyr)"
 person "Midnight Predator"
 	government "Author"
 	frequency 200
-	personality mining plunders harvests uninterested unconstrained
+	personality vindictive mining harvests uninterested
 	phrase
 		word
-			"Go far enough into space and you'll encounter horrors in the darkness that will have your soul trembling in terror."
-			"Gaze into the darkness long enough, and you'll find the darkness gazing back."
-			"There are things out here more terrifying than space pirates."
-			"The secret to enjoying Rock Scavenger meat? Guacamole."
-			"Gray Eyes intinctively head towards the Core to die."
-			"Luminazoa live in a system east of the core."
-			"Don't let Ionic Leeches attach themselves to your hull."
-			"If an asteroid sprouts tentacles and attacks you, it's probably an Astero Nautilus"
-			"Plasma Parasites can be dangerous when exposed to weapons fire."
-			"I once found a nest of Nova Fireflies in the burnt out remains of a supernova."
-			"While passing through a wormhole, some strange eye creatures silently observed me until I was through the other side."
+			"Do you know the Inferno Dragon?"
 			"Lots of things happen at the spaceport. Remember to visit it if the planet has one. You'll never know what you missed out on otherwise!"
 			"There have been some interesting jobs posted to the boards lately. You might find something there you didn't expect."
 			"You can buy some interesting ships at pirate spaceports."
-			"Do you know the Inferno Dragon?"
 			"The rewards from dominating worlds seem small at first, but it adds up over time."
+			"Some systems are hidden and require more than just wandering about blindly to uncover their secrets."
+			"The purpose of some outfits isn't always immediately obvious."
 	phrase
 		word
-			"I once bought some "
+			"Have you traveled far? "
+			"Do you get out beyond the edges of human space? "
+			"How long have you been traveling the hyperspace lanes? "
+		word
+			"The systems near Earth are safe and comfortable. It's different once you get to the frontier and beyond. "
+		word
+			"Go far enough into space and you'll encounter horrors in the darkness that will have your soul trembling in terror."
+			"Gaze into the darkness long enough, and you'll find the darkness gazing back."
+			"There are things out there more terrifying than space pirates."
+	phrase
+		word
+			"I've seen several space creatures on my travels and have learned a few things about them. "
+			"There are many types of interstellar life forms and each is interesting in their own way. "
+		word
+			"For example, "
+			"Just recently, I learned that "
+			"You'd never guess this, but "
+		word
+			"the secret to enjoying Rock Scavenger meat? Guacamole."
+			"Gray Eyes intinctively head towards the Core to die."
+			"Luminazoa live in a system east of the core."
+			"never let Ionic Leeches attach themselves to your hull."
+			"if an asteroid sprouts tentacles and attacks you, it's probably an Astero Nautilus"
+			"Plasma Parasites and open flames don't mix."
+			"Nova Fireflies make their nests in the burnt out remains of supernovas."
+			"Star Gazers like to hide inside wormholes."
+	phrase
+		word
+			"There are some "
+		word
+			"questionable "
+			"shady "
+			"ethically debatable "
+		word
+			"outfits out there. For example, I once bought some "
 		word
 			"Camouflaged Blasters"
 			"Camouflaged Blaster Turrets"
@@ -505,6 +530,8 @@ person "Midnight Predator"
 			"Fake Sheragi Fabricators"
 			"Fake Sheragi Cyclotrons"
 			"Fake Sheragi Cannons"
+			"Model Cannons"
+			"Model Turrets"
 			"Blight Shadow Eggs"
 			"Unknown Elements"
 			"Catapult Schematics"
@@ -543,39 +570,37 @@ person "Midnight Predator"
 			"Kwatch."
 	phrase
 		word
-			"I hope the next wreck has "
-			"Today I'm hoping to salvage some "
-			"While exploring a derelict I always look out for "
+			"When capturing enemy ships "
+			"When protecting my ship from boarders "
+			"When its time to meet my enemies face to face "
+			"When taking a hands on approach to space combat "
 		word
-			"Liquid Metal Specimens"
-			"Space Junk"
-			"Scrap Metal"
-			"Fossils"
-			"Dysprosium"
-			"Metallic Asteroids"
+			"I make sure to arm myself with "
+			"I always take "
+			"I prefer to wield "
+			"I'd never forget to bring "
+		word
+			"a set of Ion Flash Bangs."
+			"a pair of Dual Pulse Pistols."
+			"a Quantum Key Blade."
+			"a Sniper Rifle."
+			"an Antique Rifle."
+			"a Tactical Heavy Offensive Robot."
+			"a Blight Rifle."
+			"a Slicer Torch."
+		word
+			" It hasn't let me down yet!"
+	phrase
+		word
+			"Have you tried installing "
+		word
 			"Asteroid Catapults"
-			"Quantumium"
-			"Model Cannons"
-			"Model Turrets"
-			"Rock Scavenger Meat"
-			"Dual Pulse Pistols"
-			"Quantum Key Blades"
-			"Balthazar Models"
 			"H6 Refrigeration Modules"
-			"Leviathan Comics"
 			"Liquid Metal Hulls"
-			"Melchior Post Cards"
-			"Sniper Rifles"
-			"T.H.O.R.s"
-			"Obsolete Star Maps"
-			"Celestial Compasses"
 			"Flare Belchers"
 			"Lightning Tendrils"
 			"Quill Launchers"
 			"Anti-Ionic Plating"
-			"Subsidurial Plushies"
-			"Drone Hacking Guides"
-			"Builder IFF Transmitters"
 			"Builder Anti-Missiles"
 			"Builder Grand Generators"
 			"Builder Grand Cooling"
@@ -585,30 +610,78 @@ person "Midnight Predator"
 			"Energy Cannons"
 			"Plasma Cluster Cannons"
 			"Proton Gun-CF8s"
-			"Mysterious Treasures"
-			"Earth Artifacts"
-			"Alien Artifacts"
 			"Silencer Beams"
 			"Engineering Rooms"
 			"Medical Bays"
 			"Inferno Rockets"
 			"Infiltrator Tech"
-			"Blight Rifles"
 			"Korath Afterburners"
 			"Korath Grapplers"
 			"Korath Incinerators"
 			"Korath Scanners"
 			"Korath Scattermines"
 			"Korath Fireswarms"
-			"Node 8 Processors"
-			"Obsolete Transceivers"
-			"Slicer Torches"
 			"Korath Eliminators"
-			"Deuterium"
 			"Hybrid Afterburners"
 			"Sunracer Afterburners"
 		word
+			" on your ship? "
+		word
+			"Were they useful?"
+	phrase
+		word
+			"I hope the next wreck has "
+			"Today I'm hoping to salvage some "
+			"While exploring a derelict I always look out for "
+		word
+			"Space Junk"
+			"Scrap Metal"
+			"Dysprosium"
+			"Obsolete Transceivers"
+			"Deuterium"
+		word
 			"! You can never have enough of those."
+			"! I made some decent money selling those."
+	phrase
+		word
+			"I'm sure there's a use for the "
+			"I wonder if there's a use for the "
+			"I'm not sure what to do with the "
+		word
+			"Liquid Metal Specimen "
+			"Fossil "
+			"Quantumium"
+			"Balthazar Model "
+			"Leviathan Comic "
+			"Melchior Post Card "
+			"Obsolete Star Map "
+			"Celestial Compass "
+			"Subsidurial Plushie "
+			"Drone Hacking Guide "
+			"Builder IFF Transmitter "
+			"Rock Scavenger Meat "
+			"Mysterious Treasure "
+			"Earth Artifact "
+			"Alien Artifact "
+			"Node 8 Processor "
+		word
+			"I acquired "
+			"I found "
+			"That was given to me "
+			"That was sold to me "
+		word
+			"during my journey. "
+			"during my travels. "
+			"on a distant planet. "
+		word
+			"I'm certain if I travel far enough I can "
+			"If I keep looking I'm positive that I'll "
+			"If I stop searching I'll never "
+			"I probably just need to be in the right place at the right time to "
+		word
+			"figure it out."
+			"determine its purpose."
+			"unlock its secrets."
 	phrase
 		word
 			"The "
@@ -686,57 +759,100 @@ person "Midnight Predator"
 			" is a ship I recently added to my collection!"
 			" is a ship I'm looking to acquire more of."
 			" has been a useful addition to my fleet."
+			" turned out to be an interesting ship."
 		word
 			" When I'm not piloting it, I keep it safely parked in a secure hangar on Tarazed."
 
 	ship "Korath Predator" "Midnight Predator"
-	ship "Far Osk 27 (Flamethrower)" "Char 1"
-	ship "Far Osk 27 (Flamethrower)" "Char 2"
-	ship "Far Osk 27 (Flamethrower)" "Char 3"
-	ship "Far Osk 27 (Flamethrower)" "Char 4"
-	ship "Far Osk 27 (Flamethrower)" "Char 5"
-	ship "Far Osk 27 (Flamethrower)" "Char 6"
+	ship "Mechanized Mine" "Automine Deployer"
+	ship "Mechanized Mine" "Automine Deployer"
+	ship "Mechanized Mine" "Automine Deployer"
+	ship "Mechanized Mine" "Automine Deployer"
+	ship "Mechanized Mine" "Automine Deployer"
+	ship "Mechanized Mine" "Automine Deployer"
 
 ship "Korath Devourer" "Korath Predator"
 	"crew" 525
+	add attributes
+		"spinal mount" 1
 	outfits
 		"Korath Incinerator"
-		"Korath Grab-Strike" 3
-		"Korath Disruptor"
-		"Korath Slicer Turret"
-		"Korath Warder" 3
+		"Husk-Slice Turret"
+		"Shield Disruptor Turret"
+		"Grab-Strike Turret" 2
+		"Digger Mining Turret" 3
+		"Warder Anti-Missile" 3
+
 		"Triple Plasma Core"
 		"Systems Core (Large)" 3
-		"Korath Scanner"
-		"Large Heat Shunt" 3
+		"Liquid Sodium Cooler"
 		"Fuel Processor"
-		Quantumium
-		"Subsidurial Plushie"
-		"Deuterium"
+		"Engineering Room"
+		"Korath Scanner"
+		"Large Heat Shunt"
+		"Quantumium"
+		"Drone Hacking"
+
+		"Korath Sentinel"
 		"Dual Pulse Pistols"
 		"Enforcer Confrontation Gear"
 		"Enforcer Riot Staff"
 		"Fragmentation Grenades"
 		"Intrusion Countermeasures"
-		"Korath Repeater Rifle" 513
+		"Ion Flash Bang"
 		"Laser Rifle"
+		"Medical Bay"
+		"Microbot Defense Station"
 		"Nerve Gas"
 		"Pug Biodefenses"
 		"Pug Peacekeeping Staff"
 		"Pulse Rifle"
 		"Sniper Rifle"
+		"Thermal Repeater Rifle" 505
 		"Tuning Rifle"
+		"Security Station"
+		"Antique Rifle"
+		"Execution Chamber"
+
 		"Korath Afterburner"
 		"Steering (Planetary Class)"
 		"Thruster (Planetary Class)"
 		"Jump Drive"
-	turret "Korath Grab-Strike"
-	turret "Korath Disruptor"
-	turret "Korath Slicer Turret"
-	turret "Korath Grab-Strike"
-	turret "Korath Grab-Strike"
-	turret
-	turret "Korath Warder"
-	turret "Korath Warder"
-	turret
-	turret "Korath Warder"
+
+		"Subsidurial Plushie"
+		"Deuterium"
+		"Dysprosium"
+		"Fossil"
+		"Mysterious Treasure"
+		"Hackerz Plugin Omega"
+		"Hackerz Plugin Alpha"
+
+	turret "Digger Mining Turret"
+	turret "Shield Disruptor Turret"
+	turret "Husk-Slice Turret"
+	turret "Grab-Strike Turret"
+	turret "Grab-Strike Turret"
+	turret "Digger Mining Turret"
+	turret "Warder Anti-Missile"
+	turret "Warder Anti-Missile"
+	turret "Digger Mining Turret"
+	turret "Warder Anti-Missile"
+
+outfit "Hackerz Plugin Omega"
+	category "Unique"
+	thumbnail "outfit/schematics red"
+	"illegal" 1000000
+	"unplunderable" 1
+	"reinstall" 1
+	description "Installing this onto a ship should allow you to install one outfit that normally could not be installed due to reinstall."
+	description "	This cannot be uninstalled while the other outfit is installed, so use this with caution."
+
+outfit "Hackerz Plugin Alpha"
+	category "Unique"
+	thumbnail "outfit/schematics green"
+	"illegal" 1000000
+	"unplunderable" 1
+	"integrated systems" 1
+	"fused circuits" 1
+	description "Installing this onto a ship should allow you to uninstall one outfit that normally could not be uninstalled due to integrated systems or fused circuits."
+	description "	This cannot be uninstalled unless the other outfit is installed, so use this with caution."
