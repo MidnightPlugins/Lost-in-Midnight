@@ -1089,16 +1089,19 @@ planet "Oldhome"
 planet "Nearwater"
 	attributes uninhabited midnight "ancestral lands"
 	landscape land/sky2ver8
+	music ambient/rainstorm
 	description `Much of this world is covered by a raging ocean. The near constant storms have eroded any Hai structures down to their foundations.`
 
 planet "Drywaste"
 	attributes uninhabited midnight "ancestral lands"
 	landscape land/badlands2ver9
+	music ambient/strongwind
 	description `The wreckage of Hai spacecraft are scattered across the land of this desert world. But they are covered by hills of sand. Occasionally, the desert winds will shift these dunes, revealing the derelicts that lie underneath.`
 
 planet "Takerstone"
 	attributes uninhabited midnight "ancestral lands"
 	landscape land/rock1ver8
+	music ambient/strongwind
 	description `This planet has a breathable atmosphere, but food and water are scarce. The surface of the planet is dotted with the rotting wreckage of ancient Hai spacecraft. Perhaps this system was once a battlefield, much like Wah Ki is today.`
 
 planet "Wildland"
