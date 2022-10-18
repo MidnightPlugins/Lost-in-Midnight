@@ -48,7 +48,7 @@ system Archipelago
 	fleet "Small Southern Pirates" 2400
 	fleet "Marauder Independent" 3600
 	fleet "Small Northern Pirates" 4800
-	fleet "pirate raid" 6000
+	fleet fleet "pirate raid (rivals)" 6000
 	fleet "Small Core Pirates" 7200
 	fleet "Large Southern Pirates" 15000
 	fleet "Large Northern Pirates" 20000
@@ -234,7 +234,7 @@ system Chasm
 	trade Metal 390
 	trade Plastic 390
 	fleet "Small Southern Pirates" 600
-	fleet "pirate raid" 1200
+	fleet "pirate raid (rivals)" 1200
 	fleet "Small Northern Pirates" 1800
 	fleet "Small Core Pirates" 2400
 	object
