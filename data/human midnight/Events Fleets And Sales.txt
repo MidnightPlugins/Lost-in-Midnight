@@ -106,47 +106,47 @@ event "add energy cannons"
 			"Firebird (Energy Cannons)"
 			"Fury (Missile)"
 	fleet "pirate raid"
-		add variant 1	
+		add variant 1
 			"Modified Aerie"
 			"Berserker"
 			"Berserker (Energy Cannons)"
-		add variant 1	
+		add variant 1
 			"Firebird (Energy Cannons)"
-		add variant 1	
+		add variant 1
 			"Firebird (Energy Cannons)"
 			"Berserker" 2
 		add variant 1
 			"Firebird"
 			"Berserker"
 			"Berserker (Energy Cannons)"
-		add variant 1	
+		add variant 1
 			"Firebird (Energy Cannons)"
 			"Fury (Heavy)" 2
-		add variant 1	
+		add variant 1
 			"Firebird (Energy Cannons)"
 			"Leviathan (Heavy)"
 	fleet "Small Northern Pirates"
-		add variant 1	
+		add variant 1
 			"Modified Aerie"
 		add variant 1
 			"Berserker (Energy Cannons)"
 	fleet "Large Northern Pirates"
-		add variant 1	
+		add variant 1
 			"Firebird (Energy Cannons)"
-		add variant 1	
+		add variant 1
 			"Firebird (Energy Cannons)"
 			"Berserker" 2
 		add variant 1
 			"Firebird"
 			"Berserker"
 			"Berserker (Energy Cannons)"
-		add variant 1	
+		add variant 1
 			"Firebird (Energy Cannons)"
 			"Fury (Heavy)" 2
-		add variant 1	
+		add variant 1
 			"Firebird (Energy Cannons)"
 			"Leviathan (Heavy)"
-		add variant 1	
+		add variant 1
 			"Modified Aerie"
 			"Berserker"
 			"Berserker (Energy Cannons)"
