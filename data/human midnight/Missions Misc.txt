@@ -112,13 +112,14 @@ mission "Bounty Hunting: Angry Chicken"
 					decline
 			`	He looks at you and shrugs. "It's a bounty hunting job. The pay is good, but I've never done this kind of work before."`
 			choice
-				`	"Look kid, I'm willing to help out. Just don't die out there."`
+				`	"I could lend a hand for a share of the reward."`
 					goto share
 				`	"You should stick to safer jobs like hauling garbage."`
 			label scowl
 				`	The man scowls at you. "I didn't ask for your advice." He walks away.`
 				decline
-			`	"What do you know about bounty hunting?"`
+			label share
+			`	He gives you a skeptical look. "What do you know about bounty hunting?"`
 			choice
 				`	"It's dangerous work."`
 			scene "ship/rancor"
@@ -128,13 +129,15 @@ mission "Bounty Hunting: Angry Chicken"
 				`	"Look kid, I'm willing to help out. Just don't die out there."`
 				`	"On second thought, I don't want to be involved in this."`
 					goto scowl
-			label share
 			`	"Alright, I'll let you tag along. Just don't get in my way old timer."`
 			choice
 				`	"The name's <first>. My ship is the <ship>."`
 			`	"I'm Rocky. My Rancor is named Sunriser."`
+				accept
 	on enter
-		dialog `Rocky hails you: "Where should we look first?"`
+		dialog `Rocky hails you: "Where should we look first? Is one jump away far enough? Should we try two?"`
+	on enter
+		dialog `Rocky hails you: "If it's not here, do we just keep searching?"
 	npc accompany save
 		government "Bounty Hunter (licensed)"
 		personality escort timid vindictive
