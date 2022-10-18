@@ -18,6 +18,7 @@ system Archipelago
 	attributes "midnight"
 	habitable 1504
 	belt 2200
+	belt 1500
 	haze _menu/haze-yellow
 	asteroids "small rock" 1 2.3296
 	asteroids "medium rock" 2 2.4752
@@ -26,7 +27,9 @@ system Archipelago
 	asteroids "medium metal" 1 2.8496
 	asteroids "large metal" 6 1.1024
 	minables silicon 36 1.013
+	minables lead 30 1.123
 	minables iron 24 1.132	
+	minables aluminum 18 1.321
 	minables titanium 12 1.023
 	minables uranium 6 1.223
 	trade Clothing 290
@@ -366,7 +369,7 @@ system Diyu
 
 system Ehmahai
 	hidden
-	pos -806.407 -97.2328
+	pos -864.407 -48.2328
 	government Uninhabited
 	attributes "midnight"
 	habitable 625
@@ -533,7 +536,7 @@ system Hazehai
 
 system Heiahai
 	hidden
-	pos -864.407 -48.2328
+	pos -806.407 -97.2328
 	attributes midnight
 	government Uninhabited
 	habitable 1250
@@ -901,7 +904,7 @@ system Temeh
 	government Uninhabited
 	attributes "midnight"
 	habitable 700
-	belt 500
+	belt 900
 	haze _menu/haze-blackbody
 	asteroids "small rock" 14 5.32
 	asteroids "medium rock" 17 4.83
@@ -910,9 +913,19 @@ system Temeh
 	asteroids "medium metal" 12 4.778
 	asteroids "large metal" 11 3.346
 	asteroids "dead crystal" 8 6
-	minables quantumium 5 3.1863
-	minables titanium 12 5.08669
-	minables uranium 8 5.48669
+	minables quantumium 12 3.1863
+	minables silicon 11 0.998877
+	minables lead 10 1.55306
+	minables iron 9 1.79405
+	minables aluminum 8 1.98765
+	minables titanium 7 2.08669
+	minables copper 6 3.93541
+	minables neodymium 5 4.79514
+	minables tungsten 4 5.41395
+	minables uranium 4 6.48669
+	minables silver 3 7.68495
+	minables gold 2 8.1359 
+	minables platinum 1 9.4869
 	object
 		sprite star/carbon
 		period 100
@@ -1086,7 +1099,7 @@ planet "Drywaste"
 planet "Takerstone"
 	attributes uninhabited midnight "ancestral lands"
 	landscape land/rock1ver8
-	description `This planet has a breathable atmosphere, but food and water are scarce. The surface of the planet is dotted with the rotting wreckage of ancient Hai spacecraft. Perhaps this system was a battlefield, much like Wah Ki is today.`
+	description `This planet has a breathable atmosphere, but food and water are scarce. The surface of the planet is dotted with the rotting wreckage of ancient Hai spacecraft. Perhaps this system was once a battlefield, much like Wah Ki is today.`
 
 planet "Wildland"
 	attributes uninhabited midnight "ancestral lands"
@@ -1097,14 +1110,16 @@ planet "Wildland"
 planet Corpse
 	attributes uninhabited midnight
 	landscape land/midnight-asteroid0a
-	description `Several asteroids have formed a cluster at this location. Perhaps they are all that remain of a destroyed planet that once occupied this orbital path. With no atmosphere and the danger of asteroid collisions, a heavy environmental suit is necessary to explore the area.`
+	music ambient/meteoriteshower
+	description `Several asteroids have formed a cluster at this location. Perhaps they are all that remain of a destroyed planet that once occupied this orbital path. With no atmosphere and the sound of meteorites hitting your hull a reminder of the danger of asteroid collisions, a heavy environmental suit is necessary to explore the area.`
 	government Uninhabited
 	security 0
 
 planet Detritus
 	attributes uninhabited midnight station south
 	landscape land/station4ver8
-	description `This alien artifact is capable of connecting and disconnecting the hyperspace links to the system it is in. How it does this is a mystery. This particular facility has taken heavy damage from asteroid collisions. A hole large enough to squeeze your ship through has granted you access to its inner workings.`
+	music ambient/servo
+	description `This alien artifact is capable of connecting and disconnecting the hyperspace links to the system it is in. How it does this is a mystery. This particular facility has taken heavy damage from asteroid collisions. A hole large enough to squeeze your ship through has granted you access to its inner workings. The sound of distant mechanisms reverberate through the deserted structure, confirmation that the internal machinery is still functional despite the damage to the exterior.`
 	government Uninhabited
 	security 0
 
@@ -1121,13 +1136,15 @@ planet "Firefly Hatchery"
 planet Fossil
 	attributes uninhabited midnight
 	landscape "land/crystalline ruins"
-	description `Other than some isolated patches of grass and shrubs, you find no signs of life on this desolate world. But signs of an ancient civilization remain. A set of crystalline ruins stands alone as a monument to whatever species once called this planet home. The mysterious megaliths tower over you and are engraved with patterns which suggest that whoever built them had some understanding of astronomy.`
+	music ambient/windchimes
+	description `Other than some isolated patches of grass and shrubs, you find no signs of life on this desolate world. But signs of an ancient civilization remain. Scattered crystalline ruins stand as a monument to whatever species once called this planet home. The mysterious megaliths tower over you and are engraved with patterns which suggest that whoever built them had some understanding of astronomy.`
 	government Uninhabited
 	security 0
 
 planet "Hell's Maw"
 	attributes uninhabited midnight
 	landscape land/mountain8ver8
+	music ambient/lava
 	description `This dying world has been cracked open. The cooled mantle still glows with rivers of lava and the core sheds an eerie light upon the rocky outcroppings. Strange interstellar creatures dart across the planet's innards, feasting on its exposed mineral deposits. While there are thin traces of various gasses forming a thin atmosphere, it is not enough to support a human. When the exposed core faces the sun, the heat below the edge of the broken crust exceeds recommended safety limits. With the additional dangers from the hazardous environment and wildlife, a heavy environmental suit is necessary to explore the area.`
 	government Uninhabited
 	security 0
@@ -1153,6 +1170,13 @@ planet Janus
 	security 0
 	tribute 5000
 		threshold 10000
+		fleet "Small Southern Pirates" 1
+		fleet "Small Core Pirates" 1
+		fleet "Small Northern Pirates" 1
+		fleet "Large Southern Pirates" 1
+		fleet "Large Core Pirates" 1
+		fleet "Large Northern Pirates" 1
+		fleet "pirate raid" 1
 		fleet "Marauder fleet I" 5
 		fleet "Marauder fleet II" 5
 		fleet "Marauder fleet III" 4
@@ -1163,11 +1187,11 @@ planet Janus
 		fleet "Marauder fleet VIII" 3
 		fleet "Marauder fleet IX" 2
 		fleet "Marauder fleet X" 1
-		fleet "L. Advanced Independent (Killable)" 3
-		
+
 planet Lares
 	attributes midnight uninhabited archipelago
 	landscape land/forest3ver8
+	music ambient/wildlife
 	description "Featuring thick forests nestled between mountains riddled with caves, Lares is an ideal world to hide out in when you don't want to be disturbed. You would think the planet was uninhabited if not for the spaceport and a few nearby log cabins."
 	spaceport `The spaceport is a concrete slab forming a large forest clearing surrounded by some log cabins. You see no other parked ships and the area looks deserted.`
 	government Uninhabited
@@ -1176,20 +1200,23 @@ planet Lares
 planet "Naihe Qiao"
 	attributes midnight uninhabited
 	landscape land/canyon7ver8
-	description `"The Bridge to the Underworld" is a barren rock. The surface is riddled wtih canyons and chasms. Supposedly there are secret tunnels hidden within these crevices which lead to vast underground caverns that various pirate gangs use as hideouts.`
+	description `"The Bridge to the Underworld" is a barren rock. The surface is riddled with canyons and chasms. Supposedly there are secret tunnels hidden within these crevices which lead to vast underground caverns that various pirate gangs use as hideouts.`
 	government Uninhabited
 	security 0
 
 planet "Parasite's Nest"
 	attributes uninhabited ringworld midnight
 	landscape land/station2dark
+	music ambient/windtunnel
 	description `While this ring world is visible to Coalition astronomers, it sits outside their reach. The ring is completely intact. However, it has been overrun by plasma parasites. The infestation has reached the point where one misplaced blaster shot could set the whole ring on fire...`
+	spaceport `	The Quarg left nothing obvious to salvage in the empty rooms and corridors of this ring world. It was as if the evactuation was an orderly planned operation. Many sections of the ring are without power. Whether this is because the energy reserves are depleted or because the Quarg shut down the generators to preserve them for their eventual return is unclear.`
 	government Uninhabited
 	security 0
 
 planet Orphan
 	attributes uninhabited midnight
 	landscape land/hills1ver8
+	music ambient/creepy
 	description `This frozen planet has been separated from its home system and floats free in the empty void. Although the world is uninhabited, there are Quarg ruins here. Most of the buildings have been demolished by some unknown force. As is typical for a Quarg world, the air is too thin for human comfort.`
 	spaceport `Since there is no sun to power your ramscoops, it is fortunate that you are able to find an abandoned spaceport with some stockpiled fuel to salvage here.`
 	government Uninhabited
@@ -1198,6 +1225,7 @@ planet Orphan
 planet Quiet
 	attributes uninhabited ringworld midnight
 	landscape land/midnight-station19
+	music ambient/derelict
 	description `This ruined shard orbits the orphan planet as if in mockery of how other Quarg ringworlds orbit stars. Not enough energy is being generated by the power systems for life support to provide an atmosphere. Wearing a heavy environmental suit is necessary for exploring this derelict ruin.`
 	spaceport `The abandoned spaceport barely has any fuel or spare parts to salvage.`
 	government Uninhabited
@@ -1206,13 +1234,15 @@ planet Quiet
 planet "Rock Cluster"
 	attributes uninhabited midnight
 	landscape land/midnight-asteroid0b
-	description `Several asteroids have formed a cluster at this location. Perhaps they are all that remain of a destroyed planet that once occupied this orbital path. With no atmosphere and the danger of asteroid collisions, a heavy environmental suit is necessary to explore the area.`
+	music ambient/meteoriteshower
+	description `Several asteroids have formed a cluster at this location. Perhaps they are all that remain of a destroyed planet that once occupied this orbital path. With no atmosphere and the sound of meteorites hitting your hull a reminder of the danger of asteroid collisions, a heavy environmental suit is necessary to explore the area.`
 	government Uninhabited
 	security 0
 
 planet "Rum Cellar"
 	attributes station midnight pirate "dirt belt pirate" "dirt belt"
 	landscape land/midnight-sivael5
+	music ambient/saloon
 	description `During the early days of humanity's expansion into space, the success of a pirate base was determined more by its ability to remain hidden than on the strength of a defensive fleet. Rum Cellar is one of those early success stories, thanks to the alien device orbiting Chasm's sun. The pirates who first found the abandoned artifact quickly learned how to use it to shut down the hyperspace link to the system. This allowed Chasm to remain a secret out of reach from authoritarian governments.`
 	spaceport `Many of the pirate ships parked here are damaged. It's a wonder some of them were able to escape the Navy in the condition that they are in.`
 	shipyard "Core Pirates"
@@ -1227,17 +1257,17 @@ planet "Rum Cellar"
 	security 0
 	tribute 1000
 		threshold 2000
-		fleet "Small Independent (Killable)" 5
-		fleet "Large Independent (Killable)" 1
 		fleet "Small Southern Pirates" 1
 		fleet "Small Core Pirates" 1
 		fleet "Small Northern Pirates" 1
-		fleet "pirate raid" 3
-		fleet "Marauder Independent (Killable)" 5
+		fleet "Large Southern Pirates" 4
+		fleet "pirate raid" 9
+		fleet "Marauder X" 1
 
 planet "Season's End"
 	attributes uninhabited station midnight
 	landscape land/space2spring
+	music ambient/derelict
 	description `The technology and architecture of this abandoned station reminds you of the Wanderers. Could they have built it? It would mean they occupied this part of the galaxy some time in the distant past.`
 	description `There might be something here worth salvaging if you look hard enough. You just have to sift through a lot rusted decaying junk first. Whoever lived here in the past seemed to leave in a panicked rush. Judging from the condition of the station, the evacuation was chaotic and disorganized.`
 	spaceport `Although most of the spaceport is empty, there are a surprising amount of ships still docked here. However, a more thorough examination reveals that most are likely not in working condition.`
@@ -1247,7 +1277,8 @@ planet "Season's End"
 planet Vesta
 	attributes midnight archipelago mining
 	landscape land/desert0ver8
-	description "Mining outposts dot the surface of this dry desert world. The planet looks deserted while everyone takes shelter from the sun during the heat of the day. But after sunset the mines are crawling with activity."
+	description `Mining outposts dot the surface of this dry desert world. The planet looks deserted while everyone takes shelter from the sun during the heat of the day. But after sunset the mines are crawling with activity.`
+	description `	The Vesta miners aren't slaves, but they are expected to pay tribute for "protection" by the pirates. This arrangement was made long ago, giving the original settlers exclusive access to the rich ore desposits underneath these desert sands. While some resent being born into this way of life, most here accept it.`
 	spaceport `The landing strip ends with a gigantic tunnel that allows ships to be parked underground. Much of the rest of the spaceport consists of a series of tunnels and artificially constructed caverns.`
 	shipyard "Syndicate Basics"
 	shipyard "Southbound Basics"
@@ -1257,15 +1288,15 @@ planet Vesta
 	outfitter "Ammo North"
 	outfitter "Ammo South"
 	outfitter "Pirate Outfits"
-	government Neutral
+	government Independent
 	bribe 0.05
 	security 0
 	tribute 1800
 		threshold 3500
-		fleet "S. Advanced Independent (Killable)" 3
-		fleet "L. Advanced Independent (Killable)" 1
-		fleet "Small Independent (Killable)" 6
-		fleet "Large Independent (Killable)" 3
+		fleet "S. Advanced Independent" 3
+		fleet "L. Advanced Independent" 1
+		fleet "Small Independent" 6
+		fleet "Large Independent" 3
 		fleet "Small Southern Pirates" 1
 		fleet "Small Core Pirates" 1
 		fleet "Small Northern Pirates" 1
@@ -1273,13 +1304,15 @@ planet Vesta
 		fleet "Large Core Pirates" 1
 		fleet "Large Northern Pirates" 1
 		fleet "pirate raid" 1
-		fleet "Marauder Independent (Killable)" 10
+		fleet "Marauder Independent" 10
 		
 planet "Wang Xiang Tai"
 	attributes midnight pirate station "dirt belt pirate" "dirt belt"
 	landscape land/midnight-sivael4
+	music ambient/guzheng
 	description `The pirates who discovered this isolated system, and the secrets to using the alien device orbiting its sun to activate and deactivate the hyperspace links leading to the system, created this space station as a rest stop for those seeking refuge from Earth's authority. It also serves as a meeting place for those seeking to do business with the underworld or rival pirate factions in need of neutral ground.`
 	spaceport `The spaceport is a ring of docking bays that circle around the station. Not everyone here is a pirate. There are also those who conduct business with pirates arriving and departing.`
+	description `	Control of the station has switched hands several times over the centuries. Most of the previous transfers of power were violent. However, the current administration, an organization known as the Red Dragons, bought its way in. They are an independent consortium involved in instellar smuggling operations throughout the galaxy.`
 	shipyard "Northern Pirates"
 	shipyard "Southern Pirates"
 	outfitter "Common Outfits"
