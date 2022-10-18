@@ -148,13 +148,18 @@ License: public-domain
 
 
 
+Files:
+ sounds/ambient/*
+ sounds/asteroid catapult.wav
+Copyright: various
+License: public-domain
+ Based on public domain sounds taken from freesound.org.
 
-
-Files: sounds/*
+Files:
+ sounds/jump_drive-ver8.wav
 Copyright: Écrivain, Iwan Gabovitch, Bart Kelsey, others.
 License: public-domain
  From opengameart.org. The contributors have placed these sounds in the public domain.
- (Note that this only covers the few sounds not otherwise mentioned below...)
 
 Files:
  sounds/hyperspace-ver8.wav
@@ -179,8 +184,3 @@ Files:
 Copyright: Michel Baradari (apollo-music.de)
 License: CC-BY-3.0
  (creativecommons.org/licenses/by/3.0)
-
-Files: sounds/asteroid catapult.wav
-Copyright: Various
-License: public-domain
- Based on public domain sounds taken from freesound.org.
