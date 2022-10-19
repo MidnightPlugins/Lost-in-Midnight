@@ -1011,8 +1011,7 @@ mission "Quash Lives!"
 			label "Quantum Key Blade"
 			
 			branch "Quantum T.H.O.R."
-				or
-					has "T.H.O.R."
+				has "T.H.O.R."
 
 			` You have your Quantum Key Blade in hand, just in case. After your previous experience here, you aren't taking any chances. As you delve ever deeper into the ruin, the deafening silence smothers you. Finally, the quiet is broken by the sound of something behind you! As you turn to look, the Quantum Key Blade is wrenched out of your hands. It flies towards the darkness, where a massive gray hand catches it. A familiar Quarg steps out into your field of vision.`
 
