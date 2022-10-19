@@ -137,7 +137,7 @@ mission "Bounty Hunting: Angry Chicken"
 	on enter
 		dialog `Rocky hails you: "Where should we look first? Is one jump away far enough? Should we try two?"`
 	on enter
-		dialog `Rocky hails you: "If it's not here, do we just keep searching?"
+		dialog `Rocky hails you: "If it's not here, do we just keep searching?"`
 	npc accompany save
 		government "Bounty Hunter (licensed)"
 		personality escort timid vindictive
