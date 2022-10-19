@@ -152,6 +152,9 @@ fleet "pirate raid (rivals)"
 		"Firebird (Energy Cannons)"
 	variant 2
 		"Firebird (Energy Cannons)"
+		"Corvette"
+	variant 2
+		"Firebird (Energy Cannons)"
 		"Berserker" 2
 	variant 2
 		"Firebird"
@@ -171,8 +174,6 @@ fleet "pirate raid (rivals)"
 	variant 2
 		"Modified Clipper"
 		"Hawk (Speedy)"
-	variant 1
-		"Modified Aerie"
 
 
 
@@ -217,6 +218,8 @@ fleet "Poachers"
 		"Mule"
 	variant 1
 		"Mule (Heavy)"
+	variant 1
+		"Modified Clipper"
 
 
 fleet "Large Scar's Legion"

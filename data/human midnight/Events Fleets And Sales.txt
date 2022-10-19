@@ -135,6 +135,9 @@ event "add energy cannons"
 			"Firebird (Energy Cannons)"
 		add variant 1
 			"Firebird (Energy Cannons)"
+			"Corvette"
+		add variant 1
+			"Firebird (Energy Cannons)"
 			"Berserker" 2
 		add variant 1
 			"Firebird"
