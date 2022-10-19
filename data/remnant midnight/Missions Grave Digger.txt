@@ -963,9 +963,11 @@ mission "Escort: Prefect's Albatross 2"
 		attributes "ember waste"
 		not attributes "inaccessible"
 	to offer
-		"reputation: Remnant" >= 10
 		has "license: Remnant"
-		has "Escort: Prefect's Albatross 1: done"
+		"reputation: Remnant" >= 10
+		or
+			has "Escort: Prefect's Albatross 1: done"
+			has "Escort: Prefect's Albatross 1: aborted"
 		random < 10
 	on waypoint
 		dialog `You've completed the tour. Escort the <npc> back to <destination>.`
@@ -1002,7 +1004,9 @@ mission "Grave Digger: Prefect's Albatross 1"
 	destination "Ceilia'sei"
 	to offer
 		"reputation: Remnant" >= 10
-		has "Escort: Prefect's Albatross 1: done"
+		or
+			has "Escort: Prefect's Albatross 1: done"
+			has "Escort: Prefect's Albatross 2: done"
 		not "event: Grave Digger Testimony"
 		not "event: Gravedigger defeated"
 		or
@@ -1058,7 +1062,7 @@ mission "Grave Digger: Prefect's Albatross 2"
 		has "Grave Digger: Prefect's Albatross 1: done"
 	on offer
 		conversation
-			`	A search of the station doesn't reveal much. You find discarded food and beverage containers littered about but not much else. While it's obvious that someone was here, they left no evidence of what they did other than eat lunch.`
+			`	A search of the station doesn't reveal much. You find discarded food and beverage packaging littered about but not much else. While it's obvious that someone was here, they left no evidence of what they did other than eat lunch.`
 				accept
 	on abort
 		"reputation: Remnant" --
@@ -1099,6 +1103,36 @@ mission "Grave Digger: Suspicious Ship Tracking"
 		"reputation: Remnant" ++
 		payment 100000
 		dialog `You share your scanner data with the Remnant authorities and receive <payment> for your efforts.`
+
+
+
+mission "Grave Digger: Midnight Market Clue"
+	landing
+	name "Remnant Fencing"
+	description "The Graveyard robbers might be trying to sell their plunder in human space. It may be worthwhile to search for clues there."
+	source
+		government Remnant
+	to offer
+		not "event: Grave Digger Testimony"
+		or
+			has "Grave Digger: Prefect's Albatross 2: done"
+			and
+				has "Grave Digger: Graveyard Robbery A: done"
+				has "Grave Digger: Graveyard Robbery B: done"
+				random < 0 + ( 5 * ( "Grave Digger: Nightingale 1: done" + "Grave Digger: Suspicious Ship: done" + "Grave Digger: Graveyard Robbery A: done" + "Grave Digger: Graveyard Robbery B: done" + "Grave Digger: Graveyard Robbery C: done" + "Grave Digger: Graveyard Robbery Job A: done" + "Grave Digger: Graveyard Robbery Job B: done" + "Grave Digger: Graveyard Robbery Job C: done") )
+			and
+				has "Grave Digger: Graveyard Robbery A: done"
+				has "Grave Digger: Graveyard Robbery C: done"
+				random < 0 + ( 5 * ( "Grave Digger: Nightingale 1: done" + "Grave Digger: Suspicious Ship: done" + "Grave Digger: Graveyard Robbery A: done" + "Grave Digger: Graveyard Robbery B: done" + "Grave Digger: Graveyard Robbery C: done" + "Grave Digger: Graveyard Robbery Job A: done" + "Grave Digger: Graveyard Robbery Job B: done" + "Grave Digger: Graveyard Robbery Job C: done") )
+			and
+				has "Grave Digger: Graveyard Robbery B: done"
+				has "Grave Digger: Graveyard Robbery C: done"
+				random < 0 + ( 5 * ( "Grave Digger: Nightingale 1: done" + "Grave Digger: Suspicious Ship: done" + "Grave Digger: Graveyard Robbery A: done" + "Grave Digger: Graveyard Robbery B: done" + "Grave Digger: Graveyard Robbery C: done" + "Grave Digger: Graveyard Robbery Job A: done" + "Grave Digger: Graveyard Robbery Job B: done" + "Grave Digger: Graveyard Robbery Job C: done") )
+	on offer
+		payment 1
+		dialog `After landing, you find a loose credit chip in the cushions of your pilot seat. If the perpetrators of the Graveyard robberies are humans motivated by profit, they would be trying to sell their plunder back in human space...`
+	to fail
+		has "event: Grave Digger Testimony"
 
 
 
@@ -1496,9 +1530,8 @@ mission "Nemesis: Grave Digger"
 		or
 			has "event: Grave Digger Testimony"
 			and
-				has "Grave Digger: Graveyard Robbery Job A: done"
-				has "Grave Digger: Graveyard Robbery Job B: done"
-				has "Grave Digger: Graveyard Robbery Job C: done"
+				has "Grave Digger: Midnight Market Clue: declined"
+				random < 0 + ( 2 * ( "Grave Digger: Nightingale 1: done" + "Grave Digger: Suspicious Ship: done" + "Grave Digger: Graveyard Robbery A: done" + "Grave Digger: Graveyard Robbery B: done" + "Grave Digger: Graveyard Robbery C: done" + "Grave Digger: Prefect's Albatross 2: done" + "Grave Digger: Graveyard Robbery Job A: done" + "Grave Digger: Graveyard Robbery Job B: done" + "Grave Digger: Graveyard Robbery Job C: done" + "Grave Digger: Suspicious Ship Tracking: done") )
 	on offer
 		conversation
 			scene "scene/scene-gravediggerember"
