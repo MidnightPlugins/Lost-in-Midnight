@@ -48,7 +48,7 @@ system Archipelago
 	fleet "Small Southern Pirates" 2400
 	fleet "Marauder Independent" 3600
 	fleet "Small Northern Pirates" 4800
-	fleet fleet "pirate raid (rivals)" 6000
+	fleet "pirate raid (rivals)" 6000
 	fleet "Small Core Pirates" 7200
 	fleet "Large Southern Pirates" 15000
 	fleet "Large Northern Pirates" 20000
@@ -1181,11 +1181,11 @@ planet Janus
 		fleet "Large Northern Pirates" 1
 		fleet "pirate raid" 1
 		fleet "Marauder fleet I" 5
-		fleet "Marauder fleet II" 5
+		fleet "Marauder fleet II" 4
 		fleet "Marauder fleet III" 4
 		fleet "Marauder fleet IV" 4
 		fleet "Marauder fleet V" 4
-		fleet "Marauder fleet VI" 4
+		fleet "Marauder fleet VI" 3
 		fleet "Marauder fleet VII" 3
 		fleet "Marauder fleet VIII" 3
 		fleet "Marauder fleet IX" 2
@@ -1247,7 +1247,7 @@ planet "Rum Cellar"
 	landscape land/midnight-sivael5
 	music ambient/saloon
 	description `During the early days of humanity's expansion into space, the success of a pirate base was determined more by its ability to remain hidden than on the strength of a defensive fleet. Rum Cellar is one of those early success stories, thanks to the alien device orbiting Chasm's sun. The pirates who first found the abandoned artifact quickly learned how to use it to shut down the hyperspace link to the system. This allowed Chasm to remain a secret out of reach from authoritarian governments.`
-	spaceport `Many of the pirate ships parked here are damaged. It's a wonder some of them were able to escape the Navy in the condition that they are in.`
+	spaceport `The spaceport is a ring of docking bays that circle around the station. Not everyone here is a pirate. There are also those who conduct business with pirates arriving and departing.`
 	shipyard "Core Pirates"
 	shipyard "Northern Pirates"
 	shipyard "Southern Pirates"
@@ -1265,7 +1265,7 @@ planet "Rum Cellar"
 		fleet "Small Northern Pirates" 1
 		fleet "Large Southern Pirates" 4
 		fleet "pirate raid" 9
-		fleet "Marauder X" 1
+		fleet "Marauder fleet X" 1
 
 planet "Season's End"
 	attributes uninhabited station midnight
@@ -1314,8 +1314,8 @@ planet "Wang Xiang Tai"
 	landscape land/midnight-sivael4
 	music ambient/guzheng
 	description `The pirates who discovered this isolated system, and the secrets to using the alien device orbiting its sun to activate and deactivate the hyperspace links leading to the system, created this space station as a rest stop for those seeking refuge from Earth's authority. It also serves as a meeting place for those seeking to do business with the underworld or rival pirate factions in need of neutral ground.`
-	spaceport `The spaceport is a ring of docking bays that circle around the station. Not everyone here is a pirate. There are also those who conduct business with pirates arriving and departing.`
 	description `	Control of the station has switched hands several times over the centuries. Most of the previous transfers of power were violent. However, the current administration, an organization known as the Red Dragons, bought its way in. They are an independent consortium involved in instellar smuggling operations throughout the galaxy.`
+	spaceport `Many of the pirate ships parked here are being repaired. It's a wonder some of them were able to escape the Navy in the condition that they are in.`
 	shipyard "Northern Pirates"
 	shipyard "Southern Pirates"
 	outfitter "Common Outfits"
