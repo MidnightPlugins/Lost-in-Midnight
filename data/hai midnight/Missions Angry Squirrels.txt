@@ -446,6 +446,15 @@ mission "Angry Squirrels: Countermeasures 3"
 	on enter "Almaaz"
 		dialog `That Bactrian looks like the perfect target to try this new boarding weapon on. Disable it without destroying it then move in for the capture!`
 
+	npc
+		system "Almaaz"
+		government "Pirate"
+		personality waiting staying plunders harvests
+		fleet
+			names "pirate"
+			variant
+				"Aerie (Energy Cannons)"
+				"Dagger" 5
 	npc board
 		system "Almaaz"
 		government "Pirate"
