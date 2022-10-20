@@ -582,7 +582,7 @@ mission "Diamondback Stock"
 			`After paying them 1,000,000 credits, the Diamondback is yours!`
 				accept
 	on accept
-		payment 1000000
+		payment -1000000
 		give ship "Diamondback" "Autumn Mist"
 	on enter
 		dialog `You are being hailed: "I'd heard another Diamondback turned up here. I've been destroying them. The only pilot remaining with a Diamondback will be me!"`
@@ -608,7 +608,7 @@ mission "Diamondback Lasers"
 			`After paying them 1,000,000 credits, the Diamondback is yours!`
 				accept
 	on accept
-		payment 1000000
+		payment -1000000
 		give ship "Diamondback (Lasers)" "Autumn Mist"
 	on enter
 		dialog `You are being hailed: "I'd heard another Diamondback turned up here. I've been destroying them. The only pilot remaining with a Diamondback will be me!"`
@@ -634,7 +634,7 @@ mission "Diamondback Mining"
 			`After paying them 1,000,000 credits, the Diamondback is yours!`
 				accept
 	on accept
-		payment 1000000
+		payment -1000000
 		give ship "Diamondback (Mining)" "Autumn Mist"
 	on enter
 		dialog `You are being hailed: "I'd heard another Diamondback turned up here. I've been destroying them. The only pilot remaining with a Diamondback will be me!"`
@@ -660,7 +660,7 @@ mission "Diamondback Transport"
 			`After paying them 1,000,000 credits, the Diamondback is yours!`
 				accept
 	on accept
-		payment 1000000
+		payment -1000000
 		give ship "Diamondback (Transport)" "Autumn Mist"
 	on enter
 		dialog `You are being hailed: "I'd heard another Diamondback turned up here. I've been destroying them. The only pilot remaining with a Diamondback will be me!"`
@@ -686,7 +686,7 @@ mission "Diamondback Freighter"
 			`After paying them 1,000,000 credits, the Diamondback is yours!`
 				accept
 	on accept
-		payment 1000000
+		payment -1000000
 		give ship "Diamondback (Freighter)" "Autumn Mist"
 	on enter
 		dialog `You are being hailed: "I'd heard another Diamondback turned up here. I've been destroying them. The only pilot remaining with a Diamondback will be me!"`
@@ -714,6 +714,98 @@ mission "Diamondback Pirate"
 		personality waiting staying plunders harvests timid
 		ship "Diamondback (Pirate)" "Autumn Mist"
 
+
+
+mission "Diamondback Jamboree"
+	minor
+	name "Diamondback Jamboree"
+	description "Escort a group of Diamondback enthusiasts to the Diamondback Jamboree hosted on <destination>."
+	source
+		attributes "dirt belt" "near earth"
+	destination "Zug"
+	to offer
+		or
+			has "Diamondback Sale: done"
+		or
+			and
+				not "Randomize Diamondback Jamboree"
+				random < 70
+			and
+				has "Randomize Diamondback Jamboree"
+				random < 5
+	on offer
+		conversation
+			scene "ship/diamondback"
+			`There's a rare sight: several Diamondbacks are parked at the spaceport. The pilots all seem to be in a good mood.`
+			choice
+				`	(Introduce yourself.)`
+				`	(Ignore them.)`
+					defer
+			`	"You own a Diamondback too?" Several of the pilots gather around you.`
+			choice
+				`	"Of course, it's a great ship."`
+				`	"I used to own one. It was a great ship."`
+				`	"I had a chance to own one. I regret not getting it."`
+			`	Another pilot asks, "Are you familiar with the Diamondback Jamboree? It's an annual festival where Diamondback owners gather to show off their ships."`
+			`	"You're welcome to join us," a third pilot offers. "The more the merrier. And there's safety in numbers."`
+			`	The first pilot elaborates, "This year, the organizers are holding the festival in <destination>. The Rim can be a dangerous place from what I've heard."`
+			`	This is a rare opportunity to see several Diamondbacks. On the other hand, it's a long journey to <system>..."`
+			choice
+				`	"I'll be glad to join you."`
+				`	"Sorry, I have other things to do."
+					decline
+			`	"Great! I'm Peter. The others are Paul, Mary, and Leonard." The other pilots welcome you into their group. Leonard is playing an old recording of a song about a magical dragon. It's a catchy tune."
+	on defer
+		set "Randomize Diamondback Jamboree"
+	on enter "Zubeneschamali"
+		dialog `You receive a hail: "Har, har! More Diamondbacks have arrived to add to my fleet! It's a good thing I happened to find out about this Jamboree!"`
+	npc evade
+		government "Pirate"
+		system destination
+		personality waiting staying nemesis plunders harvests
+		ship "Marauder Bastion" "Dragon Slayer"
+	npc
+		government "Pirate"
+		system destination
+		personality waiting staying nemesis plunders harvests
+		ship "Diamondback (Bounty)" "Crimson Sunset"
+		ship "Diamondback (Berserker)" "Relentless One"
+		ship "Diamondback (Pirate)" "Lost Innocence"
+	npc
+		government "Pirate"
+		system
+			distance 1 2
+		personality heroic nemesis plunders harvests
+		fleet
+			names "pirate"
+			cargo 0
+			variant
+				"Sparrow"
+				"Hawk"
+				"Fury"
+				"Berserker"
+				"Rancor"
+	npc
+		government "Pirate"
+		system destination
+		personality heroic nemesis plunders harvests
+		fleet
+			names "pirate"
+			cargo 0
+			variant
+				"Modified Argosy"
+	npc accompany save
+		government "Merchant"
+		personality target escort timid
+		ship "Diamondback (Freighter)" "Hannah Lee"
+		ship "Diamondback (Mining)" "Sea Shore"
+		ship "Diamondback (Transport)" "Summer Mist"
+		ship "Diamondback (Lasers)" "Puff Magic"
+	on visit
+		dialog `The pirates are still chasing you. You should get back in orbit and make sure the Diamondbacks are safe.`
+	on complete
+		payment 300000
+		dialog `You've cleared the pirate blockade. The festival organizers reward you with <payment> for your assistance. The rest of the Diamondback Jamboree is an enjoyable experience.`
 
 
 mission "Sheragi Shenanigans: Counterfeits"

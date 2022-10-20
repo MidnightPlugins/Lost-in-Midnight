@@ -320,3 +320,17 @@ ship "Diamondback" "Diamondback (Pirate)"
 	gun "Gatling Gun"
 	gun "Modified Blaster"
 	gun "Modified Blaster"
+
+ship "Diamondback" "Diamondback (Berserker)"
+	"never disabled"
+	outfits
+		"Modified Blaster" 3
+		"nGVF-AA Fuel Cell"
+		"LP072a Battery Pack"
+		"D14-RN Shield Generator"
+		"A125 Atomic Steering"
+		"A120 Atomic Thruster"
+		Hyperdrive
+	gun 0 -39.5
+	gun 22 -7.5 "Energy Blaster"
+	gun -22 -7.5 "Energy Blaster"
