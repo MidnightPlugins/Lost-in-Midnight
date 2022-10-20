@@ -331,6 +331,6 @@ ship "Diamondback" "Diamondback (Berserker)"
 		"A125 Atomic Steering"
 		"A120 Atomic Thruster"
 		Hyperdrive
-	gun 0 -39.5
-	gun 22 -7.5 "Energy Blaster"
-	gun -22 -7.5 "Energy Blaster"
+	gun "Modified Blaster"
+	gun "Modified Blaster"
+	gun "Modified Blaster"
