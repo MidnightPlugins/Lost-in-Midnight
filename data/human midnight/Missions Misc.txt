@@ -1185,7 +1185,9 @@ mission "Pirate FW invite 1"
 			variant
 				"Berserker"
 				"Fury"
-				"Sparrow" 2
+				"Sparrow"
+				"Hawk"
+				"Rancor"
 	npc kill
 		government "Republic"
 		system "Wei"
@@ -1882,19 +1884,25 @@ mission "Mining: Claim Jumpers"
 		fleet
 			names "civilian"
 			cargo 0
-			variant
+			variant 6
 				"Sparrow" 3
-			variant
+			variant 6
 				"Fury (Miner)"
 				"Sparrow" 2
-			variant
+			variant 6
 				"Modified Berserker"
 				"Sparrow" 2
-			variant
+			variant 6
 				"Hawk (Miner)"
 				"Sparrow" 2
-			variant
+			variant 6
 				"Headhunter (Miner)"
+				"Sparrow" 2
+			variant 1
+				"Rancor"
+				"Sparrow" 2
+			variant 1
+				"Diamondback (Mining)"
 				"Sparrow" 2
 
 mission "Mining: Iron Challenge"

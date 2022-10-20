@@ -168,7 +168,7 @@ mission "Escort Core Pirate Home"
 		fleet "Large Syndicate"
 
 	npc accompany save
-		government Pirate
+		government "Pirate"
 		personality escort
 		fleet
 			names "pirate"
@@ -724,7 +724,9 @@ mission "Jail Break Fake"
 			names "pirate"
 			variant
 				"Falcon"
-				"Sparrow" 3
+				"Sparrow"
+				"Rancor"
+				"Diamondback (Berserker)"
 				"Hawk (Rocket)"
 				"Fury (Missile)"
 				"Clipper (Heavy)"

@@ -669,7 +669,7 @@ mission "Holiday: Saint Nick"
 		government "Pirate"
 		system destination
 		personality plunders harvests
-		ship "Fury (Bomber)" "Evil Elf"
+		ship "Fury (Bomber)" "Rockin' Elfis"
 		ship "Fury (Bomber)" "Bah Humbug"
 	npc
 		to spawn

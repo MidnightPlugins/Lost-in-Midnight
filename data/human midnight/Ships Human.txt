@@ -1127,7 +1127,7 @@ ship "Plexus" "Plexus (Korath)"
 
 
 
-# Rancors are usually involved in bounty missions
+# Rancors rarely appear as npcs
 ship "Rancor"
 	sprite "ship/rancor"
 	attributes
