@@ -437,12 +437,21 @@ government "Pirate (Rivals)"
 	"player reputation" -10
 	"attitude toward"
 		"Author" -.01
+		"Deep Security" -.1
+		"Free Worlds" -.1
 		"Hai" -.01
 		"Hai (Wormhole Access)" -.01
 		"Korath" -.01
 		"Merchant" -.1
+		"Militia" -.1
+		"Navy Intelligence" -.1
+		"Navy (Oathkeeper)" -.1
+		"Neutral" -.01
 		"Pirate" -.01
-		"Syndicate" -.01
+		"Quarg" -.01
+		"Republic" -.1
+		"Republic (Friendly)" -.1
+		"Syndicate" -.1
 	"bribe" .05
 	"fine" 0
 	"friendly hail" "friendly pirate"
