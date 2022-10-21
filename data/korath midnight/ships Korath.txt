@@ -172,6 +172,64 @@ ship "Palavret" "Korath Raider (Torpedo)"
 
 
 
+ship "Korsmanath A'awoj" "Korsmanath A'awoj (Jump)"
+	outfits
+		"Banisher Grav-Turret" 7
+		"Langrage Hyper-Heaver" 3
+		"Korath Inferno" 4
+		"Warder Anti-Missile" 7
+		"Firelight Missile Bank" 4
+		"Firelight Storage Rack" 4
+		"Firelight Missile" 108
+		"Firestorm Torpedo" 13
+		"Firestorm Battery" 1
+
+		"Triple Plasma Core" 3
+		"Systems Core (Large)" 2
+		"Liquid Sodium Cooler" 2
+		"Fuel Processor" 7
+		"Thermal Repeater Rifle" 1954
+		"Microbot Defense Station" 214
+		
+		"Afterburner (Stellar Class)"
+		"Reverser (Stellar Class)"
+		"Thruster (Stellar Class)"
+		"Thruster (Planetary Class)"
+		"Steering (Stellar Class)"
+		"Steering (Planetary Class)"
+		"Jump Drive"
+	turret "Banisher Grav-Turret"
+	turret "Warder Anti-Missile"
+	turret "Warder Anti-Missile"
+	turret "Banisher Grav-Turret"
+	turret "Banisher Grav-Turret"
+	turret "Warder Anti-Missile"
+	turret "Langrage Hyper-Heaver"
+	turret "Korath Inferno"
+	turret "Korath Inferno"
+	turret "Warder Anti-Missile"
+	turret "Warder Anti-Missile"
+	turret "Banisher Grav-Turret"
+	turret "Langrage Hyper-Heaver"
+	turret "Firestorm Battery"
+	turret "Banisher Grav-Turret"
+	turret "Warder Anti-Missile"
+	turret "Warder Anti-Missile"
+	turret "Banisher Grav-Turret"
+	turret "Langrage Hyper-Heaver"
+	turret "Korath Inferno"
+	turret "Korath Inferno"
+	turret "Banisher Grav-Turret"
+	gun "Firelight Missile Bank"
+	gun "Firelight Missile Bank"
+	gun "Firelight Missile Bank"
+	gun "Firelight Missile Bank"
+
+
+
+
+
+
 #############
 # deprecated
 #############

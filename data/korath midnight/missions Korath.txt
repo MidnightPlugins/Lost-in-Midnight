@@ -38,16 +38,10 @@ mission "Midnight: Kor Explorers"
 			names "korath"
 			fighters "korath"
 			cargo 3
-			variant 9
-				"'olofez" 17
-				"'olofez (Expeller)" 7
 			variant 6
 				"'olofez (Expeller)" 13
 				"'olofez (Digger)" 6
 				"'olofez" 5
-			variant
-				"'olofez (Expeller)" 15
-				"'olofez" 9
 	npc kill
 		government "Korath (Civilian)"
 		personality waiting staying mining harvests surveillance
@@ -55,12 +49,8 @@ mission "Midnight: Kor Explorers"
 			names "korath"
 			fighters "korath"
 			cargo 3
-			variant 9
-				"Korsmanath A'awoj (Strike)"
-			variant 6
-				"Korsmanath A'awoj (Special)"
-			variant
-				"Korsmanath A'awoj (Blaze)"
+			variant 21
+				"Korsmanath A'awoj (Jump)"
 		conversation
 			action
 				event "korath defense at tekochtli"
