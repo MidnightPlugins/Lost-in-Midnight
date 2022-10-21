@@ -481,3 +481,40 @@ phrase "hostile disabled nemesis"
 		"If you board this ship, I'll make sure you won't leave it alive." 
 		"My crew and I will be ready for you."
 		"You won't take my ship without a fight!"
+
+
+
+phrase "Rum Cellar Fight"
+		word
+			"A "
+		word
+			"Dock Worker"
+			"Starship Captain"
+			"Food Vendor"
+			"Bartender"
+		word
+			" exclaims, "
+		word
+			`"`
+		word
+			"Wow! "
+			"Uh oh! "
+			"I just heard "
+			"Word around the docking ring is "
+			"Unbelievable! "
+			"This can't be good. "
+		word
+			"Two crews from different pirate factions crossed paths. "
+			"Two crews from different pirate factions got into a dispute. "
+		word
+			"With their violent history, "
+			"Considering their past hostilities, "
+			"There's bad blood between them, so "
+		word
+			"a fight is likely. "
+			"I'd expect a fight to start up. "
+			"there's probably going to be a fight. "
+		word
+			"I hope this doesn't escalate. The last time it did, entire fleets were fighting."
+		word
+			`"`

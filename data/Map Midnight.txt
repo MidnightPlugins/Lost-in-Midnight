@@ -850,6 +850,7 @@ system Quarantine
 		period 1260
 	object Quiet
 		sprite "planet/ringworld shard"
+			scale 0.5
 		distance 812
 		period 360
 		offset 70
