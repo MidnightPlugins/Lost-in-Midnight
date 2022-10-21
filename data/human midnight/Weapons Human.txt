@@ -41,7 +41,7 @@ outfit "Asteroid Catapult"
 	category "Secondary Weapons"
 	cost 1531000
 	thumbnail "outfit/asteroid catapult"
-	description `This is basically a large rail gun that uses exotic ammunition. Unfortunately, development of asteroid based weapons systems was banned in the Republic, Syndicate, and Free Worlds due to an unexpected development in the field of terraforming.`	
+	description `This is basically a large rail gun that uses exotic ammunition. Unfortunately, development of asteroid based weapons systems was banned in the Republic, Syndicate, and Free Worlds due to an unexpected development in the field of terraforming.`
 	"mass" 100
 	"outfit space" -100
 	"weapon capacity" -100

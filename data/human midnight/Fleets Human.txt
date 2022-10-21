@@ -174,7 +174,11 @@ fleet "pirate raid (rivals)"
 	variant 2
 		"Modified Clipper"
 		"Hawk (Speedy)"
-
+	variant 1
+		"Sparrow" 5
+		"Hawk" 3
+		"Fury" 2
+		"Rancor"
 
 
 fleet "Treasure Hunters"
