@@ -172,6 +172,7 @@ ship "Palavret" "Korath Raider (Torpedo)"
 
 
 
+# appears in a korath mission
 ship "Korsmanath A'awoj" "Korsmanath A'awoj (Jump)"
 	outfits
 		"Banisher Grav-Turret" 7
