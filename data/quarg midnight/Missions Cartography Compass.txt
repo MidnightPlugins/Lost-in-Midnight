@@ -123,16 +123,16 @@ mission "Cartography: Pebble Beach Link"
 				`	(Do nothing.)`
 					defer
 			
-			`	You touch the icon representing Gamma Corvi. There is a low humming sound and the floor panels start to vibrate as distant machinery moves into place... A hyperspace link is forming! The Gamma Corvi system is now connected to this one.`
+			`	You touch the icon representing Gamma Corvi. There is a low humming sound and the floor panels start to vibrate as ancient machinery long dormant moves once again... A hyperspace link is forming! The Gamma Corvi system is now connected to this one.`
 			scene "scene/scene-engine2flip"
-			`Suddenly, sparks erupt from the device as it bursts into flames! Considering the condition this facility is in, it was amazing that any of the devices were working at all.`
+			`Suddenly, sparks erupt from the device as it bursts into flames! You won't be able to activate the link to Spica with this...`
 				decline
 			
 			label Spica
 			
-			`	You touch the icon representing Spica. There is a low humming sound and the floor panels start to vibrate as distant machinery moves into place... A hyperspace link is forming! The Spica system is now connected to this one.`
+			`	You touch the icon representing Spica. There is a low humming sound and the floor panels start to vibrate as ancient machinery long dormant moves once again... A hyperspace link is forming! The Spica system is now connected to this one.`
 			scene "scene/scene-engine2flip"
-			`Suddenly, sparks erupt from the device as it bursts into flames! Considering the condition this facility is in, it was amazing that any of the devices were working at all.`
+			`Suddenly, sparks erupt from the device as it bursts into flames! You won't be able to activate the link to Gamma Corvi with this...`
 				accept
 				
 	on decline
