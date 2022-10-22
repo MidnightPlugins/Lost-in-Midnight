@@ -192,7 +192,7 @@ mission "Salvage Dredger"
 mission "Remnant Atmospheric Samples"
 	job
 	repeat
-	name "Harvest atmosphere from <system>"
+	name "Harvest atmosphere from <stopovers>"
 	description "Use a ship that can land on gas giants to visit <stopovers> and use the provided equipment to pick up a sample of its atmosphere. Then deliver it to <destination>."
 	cargo equipment 1
 	source
