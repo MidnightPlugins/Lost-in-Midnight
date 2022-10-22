@@ -512,6 +512,7 @@ mission "Grave Digger: Suspicious Ship"
 				"Shadow Raven"
 			variant
 				"Shadow Hawk"
+		dialog `You've scanned the <npc>. Bring the data back to <destination>.`
 	on abort
 		clear "Grave Digger: Suspicious Ship: offered"
 	on fail

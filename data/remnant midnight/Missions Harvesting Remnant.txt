@@ -85,6 +85,7 @@ mission "Collect Void Sprites"
 		system "Nenia"
 		fleet
 			names "korath"
+			outfitters "Void Sprite Parts"
 			variant 1
 				"Rano'erek"
 				"'olofez" 4
@@ -99,6 +100,7 @@ mission "Collect Void Sprites"
 		system "Nenia"
 		fleet
 			names "korath"
+			outfitters "Void Sprite Parts"
 			variant 1
 				"Rano'erek"
 				"'olofez" 4
@@ -114,6 +116,7 @@ mission "Collect Void Sprites"
 		personality pacifist coward launching escort
 		fleet
 			names "remnant"
+			cargo 0
 			variant
 				"Pelican (Heavy Lift)"
 	on enter "Pantica"
