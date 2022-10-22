@@ -673,21 +673,21 @@ mission "Holiday: Saint Nick"
 		ship "Fury (Bomber)" "Bah Humbug"
 	npc
 		to spawn
-			"ships: Medium Warship" + "ships: Heavy Warship" > 1
+			"ships: Medium Warship" + "ships: Heavy Warship" + "ships: Utility" > 1
 		government "Pirate"
 		system destination
 		personality waiting staying plunders harvests
 		ship "Marauder Falcon (Weapons)" "Krampus"
 	npc
 		to spawn
-			"ships: Medium Warship" + "ships: Heavy Warship" > 2
+			"ships: Medium Warship" + "ships: Heavy Warship" + "ships: Utility" > 2
 		government "Pirate"
 		system destination
 		personality waiting staying plunders harvests
 		ship "Marauder Leviathan (Weapons)" "Scrooge"
 	npc
 		to spawn
-			"ships: Medium Warship" + "ships: Heavy Warship" > 3
+			"ships: Medium Warship" + "ships: Heavy Warship" + "ships: Utility" > 3
 		government "Pirate"
 		system destination
 		personality waiting staying plunders harvests
@@ -1343,7 +1343,7 @@ mission "Protection: Heavy"
 	to offer
 		random < 20
 		"ships: Medium Warship" < 5
-		"ships: Heavy Warship" <= 1
+		"ships: Heavy Warship" + "ships: Utility" <= 1
 	on accept
 		payment -125000
 		dialog `You pay the <npc> 125,000 credits to escort your fleet until <date>.`
@@ -1366,6 +1366,7 @@ mission "Protection: Medium"
 		random < 25
 		"ships: Medium Warship" <= 1
 		not "ships: Heavy Warship"
+		not "ships: Utility"
 	on accept
 		payment -100000
 		dialog `You pay the <npc> 100,000 credits to escort your fleet until <date>.`
@@ -1388,6 +1389,8 @@ mission "Protection: Light"
 		random < 30
 		"ships: Light Warship" < 5
 		not "ships: Medium Warship"
+		not "ships: Heavy Warship"
+		not "ships: Utility"
 	on accept
 		payment -80000
 		dialog `You pay the <npc> 80,000 credits to escort your fleet until <date>.`

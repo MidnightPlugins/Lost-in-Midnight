@@ -777,7 +777,7 @@ mission "Hackerz 6"
 	npc save
 		to spawn
 			has "Trace Hackerz Prison Break"
-			"ships: Heavy Warship" + "ships: Medium Warship" + "ships: Heavy Freighter" >= 7
+			"ships: Heavy Warship" + "ships: Medium Warship" + "ships: Heavy Freighter" + "ships: Utility" >= 7
 		government "Republic"
 		system destination
 		personality target waiting vindictive nemesis
@@ -793,7 +793,7 @@ mission "Hackerz 6"
 	npc save
 		to spawn
 			has "Trace Hackerz Prison Break"
-			"ships: Heavy Warship" + "ships: Medium Warship" + "ships: Heavy Freighter" >= 5
+			"ships: Heavy Warship" + "ships: Medium Warship" + "ships: Heavy Freighter" + "ships: Utility" >= 5
 		government "Republic"
 		system destination
 		personality target waiting vindictive nemesis

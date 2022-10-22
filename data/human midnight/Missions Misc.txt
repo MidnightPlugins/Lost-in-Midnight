@@ -225,7 +225,7 @@ mission "Executive Guard: Syndicate Extremists"
 	clearance
 	to offer
 		has "FW Syndicate Extremists 1A: done"
-		"ships: Heavy Freighter" + "ships: Medium Warship" + "ships: Heavy Warship" > 7
+		"ships: Heavy Freighter" + "ships: Medium Warship" + "ships: Heavy Warship" + "ships: Utility" > 7
 	npc
 		government "Syndicate (Extremist)"
 		system Algenib
@@ -239,7 +239,7 @@ mission "Executive Guard: Syndicate Extremists"
 		ship "Barb (Proton)" "F-006"
 	npc evade
 		to spawn
-			"ships: Heavy Freighter" + "ships: Medium Warship" + "ships: Heavy Warship" > 9
+			"ships: Heavy Freighter" + "ships: Medium Warship" + "ships: Heavy Warship" + "ships: Utility" > 9
 		government "Syndicate (Extremist)"
 		system Algenib
 		personality waiting staying heroic
@@ -249,7 +249,7 @@ mission "Executive Guard: Syndicate Extremists"
 				"Protector (Proton)" 2
 	npc evade
 		to spawn
-			"ships: Heavy Freighter" + "ships: Medium Warship" + "ships: Heavy Warship" > 11
+			"ships: Heavy Freighter" + "ships: Medium Warship" + "ships: Heavy Warship" + "ships: Utility" > 11
 		government "Syndicate (Extremist)"
 		system Algenib
 		personality waiting staying heroic
@@ -272,7 +272,7 @@ mission "Gremlin Protoype Escort"
 	destination "Prime"
 	to offer
 		not "Gremlin start"
-		"ships: Interceptor" + "ships: Light Warship" + "ships: Medium Warship" + "ships: Heavy Warship" >= 1
+		"ships: Interceptor" + "ships: Light Warship" + "ships: Medium Warship" + "ships: Heavy Warship" + "ships: Utility" >= 1
 		random < 50
 	on offer
 		conversation
@@ -1918,6 +1918,8 @@ mission "Mining: Iron Challenge"
 		not "ships: Light Warship"
 		not "ships: Medium Warship"
 		not "ships: Heavy Warship"
+		not "ships: Utility"
+		not "ships: Space Liner"
 		not "ships: Light Freighter"
 		not "ships: Heavy Freighter"
 		"ships: Interceptor" == 1
@@ -2160,4 +2162,299 @@ mission "Rogue Asteroid (Ambush)"
 	on complete
 		clear "Rogue Asteroid (Ambush): offered"
 
+
+
+phrase "blackwing scan request"
+	word
+		`A mangy old `
+		`A young hotshot `
+		`A seasoned `
+	word
+		`pirate `
+		`bucanneer `
+		`rogue `
+		`mercenary `
+		`smuggler `
+		`information broker `
+	word
+		`with a cybernetic arm `
+		`with a prosthetic leg `
+		`with a data pad `
+		`wearing an eye patch `
+		`more brains than brawn `
+		`wearing a scruffy bandanna `
+		`wearing a mask `
+	word
+		`approaches you. "Are you familiar with the Blackwings? One is about to launch and I'll pay you 50,000 credits if you can get me a scan of their outfits."`
+
+mission "Blackwing Scan Request"
+	repeat
+	deadline 1
+	minor
+	name "Blackwing Scan Request"
+	description "Scan the <npc> before it leaves the system, then bring the data to <destination>. Payment is 50,000 credits."
+	source
+		attributes "dirt belt" "frontier"
+	to offer
+		or
+			and
+				"credits" < 500000
+				random < 15
+			and
+				"credits" >= 500000
+				random < 5
+	on offer
+		dialog phrase "blackwing scan request"
+	npc "scan outfits"
+		government "Independent"
+		personality target timid uninterested surveillance mute
+		ship "Modified Blackbird" "Black Wings"
+	on complete
+		payment 25000
+		dialog `They're not happy with the scanner data and only pay half of the reward...`
+
+
+
+mission "Lares Camping (Bums)"
+	minor
+	invisible
+	source "Lares"
+	to offer
+		random < "day"
+	on offer
+		conversation
+			`Despte being abandoned, the nearby cabins are well furnished. It might be a nice change of pace to sleep somewhere other than the cramped bunk on your ship.`
+			choice
+				`	(Camp here for the night.)`
+				`	(Head back to your ship.)`
+					defer
+			`	Archipelago nights can be bright as twilight, depending on the positioning of the nearby star systems. Looking out the window, you see some wild animals moving among the trees.`
+			choice
+				`	(Go hunting.)`
+				`	(Stay indoors.)`
+					goto morning
+			`	You grab your gun and head out into the woods. Not too far is some kind of three legged furry creature. You take aim and fire! The creature collapses while other animals farther away flee. Hauling the carcass back to the cabin isn't difficult and you start skinning the creature. You're just about done when there's a knock on your door.`
+			choice
+				`	(Answer.)`
+				`	(Ignore.)`
+					goto alone
+			`	You open the door and find a pair of hobos who were attracted by the gunfire. They're hoping you'd be willing to spare some of whatever you caught.`
+			choice
+				`	(Share.)`
+				`	(Refuse.)`
+					goto bumfight
+			`	You give each hobo one of the creature's legs. They are overjoyed at the gift and thank you before leaving. You watch them head over to one of the other abandoned cabins.`
+				goto alone
+			
+			label bumfight
+			branch "lucky"
+				random < 33
+			`	It's two against one and it turns out these bums have guns of their own! You manage to shoot one, but the other one shoots you. The bullet lands somewhere inside a vital organ.`
+				die
+			label "lucky"
+			`	It's two against one and it turns out these bums have guns of their own! Fortunately, their shots miss and you manage to take them down. With all the gunfire, you've no doubt that more unwelcome guests will be approaching. Better head back to your ship and get out of here.`
+				depart
+			
+			label alone
+			`	You light up the fireplace and roast the meat from the creature you hunted. The smell of the charred meat is heavenly and you can't resist taking a bite of the delicious barbecue as its juices glisten in the firelight. It's always great to have fresh food instead of the usual canned slop you keep in your ship's pantry.`
+			
+			label morning
+			`	After a restful night, you clean up the cabin and head back to your ship.`
+				decline
+
+mission "Lares Camping (Raiders)"
+	minor
+	invisible
+	source "Lares"
+	to offer
+		random < 50
+	on offer
+		conversation
+			`Despite being abandoned, the nearby cabins are well furnished. It might be a nice change of pace to sleep somewhere other than the cramped bunk on your ship.`
+			choice
+				`	(Camp here for the night.)`
+				`	(Head back to your ship.)`
+					defer
+			`You settle in for a peaceful night's sleep when the silence is broken by the sounds of an afterburner ripping through the night sky! That sound is quickly overttaken by a loud explosion from the direction of the spaceport!`
+			choice
+				`	(Stay here.)`
+				`	(Head back to your ship.)`
+					goto raiders
+			`	You kill the lights and huddle with your gun in the darkness. There are distant sounds of yelling and gunfire. Eventually, the sounds fade and silence reclaims the night.`
+			choice
+				`	(Stay here.)`
+				`	(Head back to your ship.)`
+					goto raiders
+			`	You try to get some sleep, but you keep your gun clutched close in case someone comes looking for trouble. Eventually, morning comes.`
+			label raiders
+			`	When you get back to the spaceport, you find the burnt wreck of a pirate interceptor near your ship. It looks like someone tried and failed to pry open the hatch to your ship. There are no other ships nearby and other than the addition of the wrecked interceptor, the spaceport looks as deserted as usual.`
+				decline
+	on decline
+		event "Lares Midnight Crash"
+
+event "Lares Midnight Crash"
+	planet Lares
+		spaceport `The spaceport is a concrete slab forming a large forest clearing surrounded by some log cabins. The burnt wreckage of a pirate interceptor sits on the edge of the slab. You see no other parked ships and the area looks deserted.`
+
+mission "Lares Camping (Scavenger)"
+	minor
+	invisible
+	source "Lares"
+	to offer
+		random < 30 - "day"
+	on offer
+		conversation
+			`Despte being abandoned, the nearby cabins are well furnished. It might be a nice change of pace to sleep somewhere other than the cramped bunk on your ship.`
+			choice
+				`	(Camp here for the night.)`
+				`	(Head back to your ship.)`
+					defer
+			`	The night is surprisingly dark and a cool breeze blows in the window. As you close the shutters, you hear a scratching sound on your door.`
+			choice
+				`	(Answer.)`
+				`	(Ignore.)`
+					goto morning
+			`	You've barely opened the door a crack when a small furball darts in underfoot! The cabin is riddled with innumerable nooks and crannies between and under the furnishings. There's no telling where the creature went. All night long you hear weird scratching sounds as the creature scampers about unseen. Before you can get any shuteye, the first light of dawn is already filtering in between the window shutters. To your dismay, you discover that the creature managed to get into your food stash, leaving crumbs scattered about. You tidy up the cabin as best as you can, but are unable to find the little creature responsible for your sleepless night of misery. You are still bleary eyed when you return to your ship and idly wonder if you should really be piloting it in your current condition.`
+				decline
+			label morning
+			`	After a restful night, you clean up the cabin and head back to your ship.`
+				decline
+
+mission "Lares Exploring"
+	minor
+	repeat
+	source "Lares"
+	to offer
+		or
+			and
+				not "Lares Exploring: failed"
+				random < 15
+			and
+				has "Lares Exploring: failed"
+				random < 10
+	on offer
+		conversation
+			`It's a beautiful day for a hike...`
+			choice
+				`	(Explore the wilderness.)`
+				`	(Not now...)`
+					defer
+			branch "cave"
+				random < 50
+
+			branch "lake"
+				random < 50
+
+			`During your hike you spot several new types of animals you've never seen before. Eventually, you find a forest clearing.`
+			choice
+				`	(Stop for a picnic.)`
+				`	(Return to your ship.)`
+					defer
+			`	While eating lunch, you notice something weird about the ground nearby.`
+			choice
+				`	(Dig it up.)`
+				`	(Ignore it and return to your ship.)`
+					defer
+			branch "predator"
+				random < 20
+			
+			branch "weapons"
+				random < 50
+			
+			branch "treasure"
+				random < 20
+
+			scene "scene/scene-empty box"
+			`	You find an old empty crate. From the way the wood is rotted, it must have been here for a very long time.`
+				defer
+
+			label "treasure"
+			scene "outfit/treasure"
+			`	You find an old crate. Inside is a Mysterious Treasure! You could probably sell it for a decent sum anywhere, but getting it appraised by someone knowledgeable about archaeology might yield better results.`
+				accept
+			
+			label "weapons"
+			scene "scene/scene-weapons cache"
+			`	You find an old weapons cache. These look ancient, but probably still work.`
+				decline
+			
+			label "predator"
+			scene "outfit/mouthparts"
+			`	Suddenly you are attacked by a vicious predator!`
+			choice
+				`	(Run back to your ship!)`
+					defer
+				`	(Kill the beast!)`
+
+			branch "death"
+				random < 20
+			scene "outfit/laser rifle"
+			`	Fortunately, you happen to be armed and have no trouble putting down the creature. At least tonight's dinner is covered!`
+				defer
+			
+			label "death"
+			scene "scene/scene-devoured"
+			`	Before you can properly aim, the beast has taken your arm! The pain and shock renders you unable to escape as the beast devours you alive...`
+				die
+			
+			label lake
+			`During your hike you spot several new types of animals you've never seen before. Eventually, you find a lake.`
+			choice
+				`	(Go for a swim.)`
+				`	(Return to your ship.)`
+					defer
+			branch "predator"
+				random < 33
+			
+			`	While swimming you notice an unnatural object beneath the water.`
+			choice
+				`	(Bring it back to the surface.)`
+				`	(Ignore it and return to your ship.)`
+					defer
+			branch "predator"
+				random < 50
+
+			branch "weapons"
+				random < 50
+			
+			branch "treasure"
+				random < 20
+
+			scene "scene/scene-empty box"
+			`	You find an old empty crate. From the way the wood is rotted, it must have been here for a very long time.`
+				defer
+			
+			label cave
+			`During your hike you spot several new types of animals you've never seen before. Eventually, you find a cave.`
+			choice
+				`	(Search the cave.)`
+				`	(Ignore it and return to your ship.)`
+					defer
+			branch "predator"
+				random < 25
+
+			branch "empty"
+				random < 50
+			
+			branch "weapons"
+				random < 50
+			
+			branch "treasure"
+				random < 20
+
+			scene "scene/scene-empty box"
+			`	You find an old empty crate. From the way the wood is rotted, it must have been here for a very long time.`
+				defer
+
+			label "empty"
+			`	The cavern is empty. Perhaps you are the first living creature to set eyes on these rock formations.`
+				defer
+	on decline
+		outfit "Sniper Rifle" 1
+		outfit "Fragmentation Grenades" 1
+		outfit "Bullet Boxes" 1
+		outfit "Gatling Gun Ammo" 1500
+	on accept
+		outfit "Mysterious Treasure" 1
+		fail
 

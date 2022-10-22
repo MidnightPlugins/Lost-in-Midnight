@@ -33,6 +33,7 @@ mission "Grudge Fight 1"
 		not "ships: Medium Warship"
 		not "ships: Heavy Warship"
 		not "ships: Heavy Freighter"
+		not "ships: Utility"
 		"ships: Light Warship" + "ships: Light Freighter" + "ships: Transport" + "ships: Interceptor" == 1
 		random < 70
 	on offer

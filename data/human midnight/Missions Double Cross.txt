@@ -183,14 +183,14 @@ mission "Escort Independence"
 
 	npc
 		to spawn
-			"ships: Medium Warship" + "ships: Heavy Warship" + "ships: Heavy Freighter" >= 7
+			"ships: Medium Warship" + "ships: Heavy Warship" + "ships: Heavy Freighter" + "ships: Utility" >= 7
 		government "Republic"
 		personality entering heroic
 		fleet "Small Republic" 2
 
 	npc
 		to spawn
-			"ships: Medium Warship" + "ships: Heavy Warship" + "ships: Heavy Freighter" >= 8
+			"ships: Medium Warship" + "ships: Heavy Warship" + "ships: Heavy Freighter" + "ships: Utility" >= 8
 		government "Republic"
 		personality waiting heroic
 		system
@@ -199,7 +199,7 @@ mission "Escort Independence"
 
 	npc
 		to spawn
-			"ships: Medium Warship" + "ships: Heavy Warship" + "ships: Heavy Freighter" >= 9
+			"ships: Medium Warship" + "ships: Heavy Warship" + "ships: Heavy Freighter" + "ships: Utility" >= 9
 		government "Republic"
 		personality waiting heroic
 		system destination
@@ -207,7 +207,7 @@ mission "Escort Independence"
 
 	npc
 		to spawn
-			"ships: Medium Warship" + "ships: Heavy Warship" + "ships: Heavy Freighter" >= 10
+			"ships: Medium Warship" + "ships: Heavy Warship" + "ships: Heavy Freighter" + "ships: Utility" >= 10
 		government "Republic"
 		personality entering heroic
 		system destination
@@ -215,7 +215,7 @@ mission "Escort Independence"
 
 	npc
 		to spawn
-			"ships: Medium Warship" + "ships: Heavy Warship" + "ships: Heavy Freighter" >= 11
+			"ships: Medium Warship" + "ships: Heavy Warship" + "ships: Heavy Freighter" + "ships: Utility" >= 11
 		government "Republic"
 		personality entering heroic
 		system
@@ -233,7 +233,7 @@ mission "Escort Independence"
 			
 	npc
 		to spawn
-			"ships: Medium Warship" + "ships: Heavy Warship" + "ships: Heavy Freighter" >= 2
+			"ships: Medium Warship" + "ships: Heavy Warship" + "ships: Heavy Freighter" + "ships: Utility" >= 2
 		government "Merchant"
 		personality launching heroic
 		fleet
@@ -246,7 +246,7 @@ mission "Escort Independence"
 
 	npc
 		to spawn
-			"ships: Medium Warship" + "ships: Heavy Warship" + "ships: Heavy Freighter" >= 3
+			"ships: Medium Warship" + "ships: Heavy Warship" + "ships: Heavy Freighter" + "ships: Utility" >= 3
 		government "Merchant"
 		personality launching heroic
 		fleet
@@ -259,7 +259,7 @@ mission "Escort Independence"
 
 	npc
 		to spawn
-			"ships: Medium Warship" + "ships: Heavy Warship" + "ships: Heavy Freighter" >= 4
+			"ships: Medium Warship" + "ships: Heavy Warship" + "ships: Heavy Freighter" + "ships: Utility" >= 4
 		government "Merchant"
 		personality launching heroic
 		fleet
@@ -270,7 +270,7 @@ mission "Escort Independence"
 
 	npc
 		to spawn
-			"ships: Medium Warship" + "ships: Heavy Warship" + "ships: Heavy Freighter" >= 5
+			"ships: Medium Warship" + "ships: Heavy Warship" + "ships: Heavy Freighter" + "ships: Utility" >= 5
 		government "Merchant"
 		personality launching heroic
 		fleet
@@ -281,7 +281,7 @@ mission "Escort Independence"
 
 	npc
 		to spawn
-			"ships: Medium Warship" + "ships: Heavy Warship" + "ships: Heavy Freighter" >= 6
+			"ships: Medium Warship" + "ships: Heavy Warship" + "ships: Heavy Freighter" + "ships: Utility" >= 6
 		government "Merchant"
 		personality launching heroic
 		fleet
@@ -1197,7 +1197,7 @@ mission "Pot-o'-honey"
 		conversation
 			scene "scene/scene-bulk drones"
 			`When you enter the system, a small fleet of pirates is waiting for you. You are getting ready to defend the <npc> when you notice something strange. Its cargo bays are opening and releasing a swarm of drones! You receive a message from Captain Robin of the Pot-o'-honey:`
-			`"Congratulations, you fell for our trap Captain <last>!"`		
+			`"Congratulations, you fell for our trap Captain <last>!"`
 	npc
 		government "Pirate"
 		system "Waypoint"
@@ -1213,7 +1213,7 @@ mission "Pot-o'-honey"
 				"Scout (Hai)"
 	npc
 		to spawn
-			"ships: Heavy Warship" + "ships: Heavy Freighter" < 2
+			"ships: Heavy Warship" + "ships: Heavy Freighter" + "ships: Utility" > 2
 		government "Pirate"
 		system "Waypoint"
 		personality waiting staying harvests plunders nemesis
@@ -1225,7 +1225,7 @@ mission "Pot-o'-honey"
 				"Raven (Hai)"
 	npc
 		to spawn
-			"ships: Heavy Warship" + "ships: Heavy Freighter" < 3
+			"ships: Heavy Warship" + "ships: Heavy Freighter" + "ships: Utility" > 3
 		government "Pirate"
 		system "Waypoint"
 		personality waiting staying harvests plunders nemesis
@@ -1238,7 +1238,7 @@ mission "Pot-o'-honey"
 				"Firebird (Hai Weapons)"
 	npc
 		to spawn
-			"ships: Heavy Warship" + "ships: Heavy Freighter" < 4
+			"ships: Heavy Warship" + "ships: Heavy Freighter" + "ships: Utility" > 4
 		government "Pirate"
 		system "Waypoint"
 		personality waiting staying harvests plunders nemesis
@@ -1249,7 +1249,7 @@ mission "Pot-o'-honey"
 				"Mule (Hai Weapons)"
 	npc
 		to spawn
-			"ships: Heavy Warship" + "ships: Heavy Freighter" < 5
+			"ships: Heavy Warship" + "ships: Heavy Freighter" + "ships: Utility" > 5
 		government "Pirate"
 		system "Waypoint"
 		personality waiting staying harvests plunders nemesis
@@ -1260,7 +1260,7 @@ mission "Pot-o'-honey"
 				"Leviathan (Hai Weapons)"
 	npc
 		to spawn
-			"ships: Heavy Warship" + "ships: Heavy Freighter" < 6
+			"ships: Heavy Warship" + "ships: Heavy Freighter" + "ships: Utility" > 6
 		government "Pirate"
 		system "Waypoint"
 		personality waiting staying harvests plunders nemesis
@@ -1347,8 +1347,6 @@ mission "Escort Trap Freighter (Hai)"
 		"reputation: Bounty (Disguised)" >?= 1
 		payment 180000
 		dialog `You research the <npc> and find an outstanding bounty for <payment>. With a video recording of your battle in hand, you head for the job board office to claim your reward.`
-	on visit
-		dialog phrase "generic arrived-without-npc dialog"
 
 mission "Escort Trap Freighter (Human)"
 	job
@@ -1397,6 +1395,4 @@ mission "Escort Trap Freighter (Human)"
 		"reputation: Bounty (Disguised)" >?= 1
 		payment 150000
 		dialog `You research the <npc> and find an outstanding bounty for <payment>. With a video recording of your battle in hand, you head for the job board office to claim your reward.`
-	on visit
-		dialog phrase "generic arrived-without-npc dialog"
 
