@@ -374,7 +374,6 @@ system Ehmahai
 	attributes "midnight"
 	habitable 625
 	link Heiahai
-	link Zubahai
 	asteroids "small rock" 3 7.8
 	asteroids "medium rock" 5 7.956
 	asteroids "large rock" 30 4.992
@@ -541,6 +540,7 @@ system Heiahai
 	government Uninhabited
 	habitable 1250
 	link Ehmahai
+	link Zubahai
 	asteroids "small metal" 4 1.734
 	asteroids "medium metal" 5 2.3698
 	asteroids "large metal" 8 3.757
@@ -1015,7 +1015,7 @@ system Zubahai
 	government Uninhabited
 	attributes "midnight"
 	habitable 1080
-	link Ehmahai
+	link Heiahai
 	asteroids "small rock" 110 3.672
 	asteroids "medium rock" 3 3.96
 	asteroids "large rock" 90 2.196
