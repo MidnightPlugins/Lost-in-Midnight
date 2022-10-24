@@ -1774,6 +1774,8 @@ mission "Rum Cellar Wager"
 			label pass
 			`	Sounds like trouble is coming. You'd better leave before the <npc> can find you.`
 				flee
+	on accept
+		payment -1000000
 	npc disable
 		government "Bounty Hunter"
 		personality target entering nemesis heroic
