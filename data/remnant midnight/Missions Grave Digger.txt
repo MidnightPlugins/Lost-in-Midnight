@@ -142,7 +142,13 @@ mission "Grave Digger: Nightingale 1"
 	waypoint Aescolanus
 	to offer
 		has "event: Grave Digger Betrayal"
-		random < 40
+		or
+			and
+				not "Randomize Grave Digger: Nightingale 1"
+				random < 70
+			and
+				has "Randomize Grave Digger: Nightingale 1"
+				random < 10
 	on offer
 		conversation
 			scene "thumbnail/starling"
@@ -157,7 +163,10 @@ mission "Grave Digger: Nightingale 1"
 					defer
 			`	While the crew finishes loading their equipment, you also prepare for the journey ahead.`
 				accept
-	
+
+	on defer
+		set "Randomize Grave Digger: Nightingale 1"
+
 	on enter Ossipago
 		dialog `The Nightingale stationed in this system is not responding.`
 
@@ -485,24 +494,35 @@ mission "Grave Digger: Suspicious Ship"
 		government "Remnant"
 	to offer
 		has "event: Grave Digger Betrayal"
-		random < 40
+		or
+			and
+				not "Randomize Grave Digger: Suspicious Ship"
+				random < 70
+			and
+				has "Randomize Grave Digger: Suspicious Ship"
+				random < 10
 	on offer
 		conversation
-			`	A messenger delivers an announcement: "A suspicious human ship has been spotted wandering in the Ember Waste. We are asking all pilots to look out for this ship and scan its outfits and cargo." Ironically, you suspect that you were subjected to similar observation when you first entered the Ember Waste.`
+			`	A messenger delivers an announcement: "A suspicious human ship has been spotted wandering in the Ember Waste. We are asking all pilots to look out for this ship and scan its outfits and cargo." What will you do?`
 			choice
-				`	(Accept.)`
-					accept
-				`	(Ignore.)`
+				`	(Search for the suspicious ship.)`
+				`	(Ignore the message.)`
 					defer
+			`	Ironically, you suspect that you were subjected to similar observation when you first entered the Ember Waste.`
+				accept
+
+	on defer
+		set "Randomize Grave Digger: Suspicious Ship"
+
 	npc "scan outfits" "scan cargo"
 		government "Independent (Killable)"
 		system
 			attributes "ember waste"
 			not attributes "inaccessible"
+			not system Aki'il Patir
 		personality target waiting staying uninterested
 		fleet
 			names "independent"
-			cargo 3
 			commodities "Illegal Substances" "Illegal Cargo" "Illegal Cargo" "Highly Illegal Cargo"
 			variant
 				"Shadow Falcon"
@@ -539,10 +559,10 @@ mission "Grave Digger: Suspicious Ship Job"
 		system
 			attributes "ember waste"
 			not attributes "inaccessible"
+			not system Aki'il Patir
 		personality target waiting staying uninterested
 		fleet
 			names "independent"
-			cargo 3
 			commodities "Illegal Substances" "Illegal Cargo" "Illegal Cargo" "Highly Illegal Cargo"
 			variant
 				"Shadow Falcon"
@@ -899,18 +919,23 @@ mission "Escort: Prefect's Albatross 1"
 	waypoint
 		attributes "ember waste"
 		not attributes "inaccessible"
+		not system Aki'il Patir
 	waypoint
 		attributes "ember waste"
 		not attributes "inaccessible"
+		not system Aki'il Patir
 	waypoint
 		attributes "ember waste"
 		not attributes "inaccessible"
+		not system Aki'il Patir
 	waypoint
 		attributes "ember waste"
 		not attributes "inaccessible"
+		not system Aki'il Patir
 	waypoint
 		attributes "ember waste"
 		not attributes "inaccessible"
+		not system Aki'il Patir
 	to offer
 		"reputation: Remnant" >= 10
 		has "license: Remnant"
@@ -951,18 +976,23 @@ mission "Escort: Prefect's Albatross 2"
 	waypoint
 		attributes "ember waste"
 		not attributes "inaccessible"
+		not system Aki'il Patir
 	waypoint
 		attributes "ember waste"
 		not attributes "inaccessible"
+		not system Aki'il Patir
 	waypoint
 		attributes "ember waste"
 		not attributes "inaccessible"
+		not system Aki'il Patir
 	waypoint
 		attributes "ember waste"
 		not attributes "inaccessible"
+		not system Aki'il Patir
 	waypoint
 		attributes "ember waste"
 		not attributes "inaccessible"
+		not system Aki'il Patir
 	to offer
 		has "license: Remnant"
 		"reputation: Remnant" >= 10
