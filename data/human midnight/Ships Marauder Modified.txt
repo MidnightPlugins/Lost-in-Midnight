@@ -737,6 +737,9 @@ ship "Marauder Protector"
 			"hull damage" 800
 			"hit force" 2400
 	outfits
+		"Meteor Missile Pod" 2
+		"Meteor Missile" 44
+		"Meteor Missile Box" 2
 		"Proton Turret" 6
 		"Anti-Missile Turret" 2
 		
@@ -748,7 +751,6 @@ ship "Marauder Protector"
 		"Outfits Expansion"
 		"Ramscoop"
 		"Laser Rifle" 30
-		"Security Station" 8
 		
 		"A370 Atomic Thruster"
 		"A375 Atomic Steering"
@@ -756,6 +758,8 @@ ship "Marauder Protector"
 		
 	engine -11 120
 	engine 11.5 120
+	gun -6 -118 "Meteor Missile Pod"
+	gun 6.5 -118 "Meteor Missile Pod"
 	turret -52 -52 "Proton Turret"
 	turret 52.5 -52 "Proton Turret"
 	turret 0 -30.5 "Anti-Missile Turret"
@@ -771,12 +775,15 @@ ship "Marauder Protector"
 	explode "medium explosion" 24
 	explode "large explosion" 8
 	"final explode" "final explosion large"
-	description `The previous owner of this Syndicate Shipyards Protector completely removed the forward firing guns in favor of adding more turrets. Combined with additional hull plating and shielding, the result is a floating fortress than can handle threats from any direction.`
+	description `The previous owner of this Syndicate Shipyards Protector made some adjustments to its weapons capacity. Combined with additional hull plating and shielding, the result is a floating fortress than can handle threats from any direction.`
 
 
 
 ship "Marauder Protector" "Marauder Protector (Secret Prototype)"
 	outfits
+		"Meteor Missile Pod" 2
+		"Meteor Missile" 44
+		"Meteor Missile Box" 2
 		"Proton Turret" 6
 		"Anti-Missile Turret" 2
 		"Fusion Reactor"
@@ -787,11 +794,18 @@ ship "Marauder Protector" "Marauder Protector (Secret Prototype)"
 		"Outfits Expansion"
 		"Catalytic Ramscoop"
 		"Laser Rifle" 30
-		"Security Station" 8
 		"A370 Atomic Thruster"
 		"A375 Atomic Steering"
 		"Hyperdrive"
 		"Secret Prototype"
+	turret "Proton Turret"
+	turret "Proton Turret"
+	turret "Anti-Missile Turret"
+	turret "Proton Turret"
+	turret "Proton Turret"
+	turret "Anti-Missile Turret"
+	turret "Proton Turret"
+	turret "Proton Turret"
 
 
 
