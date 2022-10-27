@@ -224,10 +224,13 @@ event "nova firefly scouts"
 # For the event trigger, see Missions Cartography Compass
 event "Nova Firefly Invasion"
 	system Zubahai
+		remove fleet "Nova Firefly Scout"
 		add fleet "Nova Firefly" 6000
 	system Limen
+		remove fleet "Nova Firefly Scout"
 		add fleet "Nova Firefly" 3000
 	system Orbona
+		remove fleet "Nova Firefly Scout"
 		add fleet "Nova Firefly" 6000
 	system Terminus
 		add fleet "Nova Firefly" 12000
