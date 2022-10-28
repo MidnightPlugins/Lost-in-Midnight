@@ -614,6 +614,8 @@ mission "Grave Digger: Graveyard Robbery A"
 		dialog `The captain of <npc> thanks you for your assistance and requests an escort to <destination>. All of their ship's external weapons were stolen while other systems were damaged or destroyed.`
 	on visit
 		dialog `You've returned to <planet>, but the <npc> is still lost somewhere in the Graveyard. Find the missing ship and bring it back to <planet>.`
+	on fail
+		dialog `[MISSION FAILED]: `You failed to rescue the <npc>. If life were a game, you could reload a save file and try again.`
 	on complete
 		payment 200000
 		dialog `The captain of <npc> thanks you for safely escorting the ship back to <planet> and pays you <payment> in gratitude. "Whoever stole our weapons is piloting a ship outfitted with a jump drive."`
@@ -653,6 +655,8 @@ mission "Grave Digger: Graveyard Robbery B"
 		dialog `The captain of <npc> thanks you for your assistance and requests an escort to <destination>. All of their ship's external weapons were stolen while other systems were damaged or destroyed.`
 	on visit
 		dialog `You've returned to <planet>, but the <npc> is still lost somewhere in the Graveyard. Find the missing ship and bring it back to <planet>.`
+	on fail
+		dialog `[MISSION FAILED]: `You failed to rescue the <npc>. If life were a game, you could reload a save file and try again.`
 	on complete
 		payment 200000
 		dialog `The captain of <npc> thanks you for safely escorting the ship back to <planet> and pays you <payment> in gratitude. "Whoever stole our weapons is piloting a ship outfitted with a cloaking device."`
@@ -692,6 +696,8 @@ mission "Grave Digger: Graveyard Robbery C"
 		dialog `The captain of <npc> thanks you for your assistance and requests an escort to <destination>. All of their ship's external weapons were stolen while other systems were damaged or destroyed.`
 	on visit
 		dialog `You've returned to <planet>, but the <npc> is still lost somewhere in the Graveyard. Find the missing ship and bring it back to <planet>.`
+	on fail
+		dialog `[MISSION FAILED]: `You failed to rescue the <npc>. If life were a game, you could reload a save file and try again.`
 	on complete
 		payment 200000
 		dialog `The captain of <npc> thanks you for safely escorting the ship back to <planet> and pays you <payment> in gratitude. "Whoever stole our weapons was not piloting a Korath ship."`
@@ -960,7 +966,7 @@ mission "Escort: Prefect's Albatross 1"
 		"reputation: Remnant" --
 	on fail
 		"reputation: Remnant" <?= -1000
-		dialog `Your failure to protect a Prefect is not without consequences and your reputation with the Remnant has suffered as a result.`
+		dialog `[MISSION FAILED]: Your failure to protect a Prefect is not without consequences and your reputation with the Remnant has suffered as a result.`
 	on complete
 		payment 1000000
 		"reputation: Remnant" ++
@@ -1024,22 +1030,21 @@ mission "Escort: Prefect's Albatross 2"
 	
 
 mission "Grave Digger: Prefect's Albatross 1"
-	job
+	minor
 	name "Escort: Ember Waste Tour"
-	description "A prefect wants to tour the Ember Waste. Visit the marked systems, then escort the Prefect's Albatross back to <origin>. Payment is 1,000,000 credits."
+	description "Prefect Torza wants to tour the Ember Waste. Visit the marked systems, then escort the Prefect's Albatross back to <origin>. Payment is 1,000,000 credits."
 	source
 		government "Remnant"
+		not attributes "uninhabited"
 	waypoint Cardea
 	waypoint Ossipago
 	waypoint Polerius
 	destination "Ceilia'sei"
 	to offer
 		"reputation: Remnant" >= 10
-		or
-			has "Escort: Prefect's Albatross 1: done"
-			has "Escort: Prefect's Albatross 2: done"
 		not "event: Grave Digger Testimony"
 		not "event: Gravedigger defeated"
+		has "Grave Digger: Suspicious Ship: done"
 		or
 			and
 				has "Grave Digger: Graveyard Robbery A: done"
@@ -1050,6 +1055,12 @@ mission "Grave Digger: Prefect's Albatross 1"
 			and
 				has "Grave Digger: Graveyard Robbery B: done"
 				has "Grave Digger: Graveyard Robbery C: done"
+		random < 70
+	on offer
+		conversation
+			scene "ship/prefect's albatross"
+			`	You receive a hail from the <npc>. It's Prefect Torza: "Captain, I've decided to tour the Ember Waste. I would have you escort my ship." He sends data indicating which systems he wants to visit. Refusing doesn't seem to be an option.`
+				accept
 	on enter Cardea
 		dialog `A suspicious looking fleet is near the Ember Waste Threshold.`
 	on enter Ossipago
@@ -1062,15 +1073,14 @@ mission "Grave Digger: Prefect's Albatross 1"
 		"reputation: Remnant" --
 	on fail
 		"reputation: Remnant" <?= -1000
-		dialog `Your failure to protect a Prefect is not without consequences and your reputation with the Remnant has suffered as a result.`
+		dialog `[MISSION FAILED]: Prefect Torza managed to escape. Your failure to protect him is not without consequences and your reputation with the Remnant has suffered as a result.`
 	npc
 		system Cardea
 		government "Independent"
 		personality waiting staying mute
 		fleet
 			names "independent"
-			cargo 3
-			commodities "Illegal Substances" "Illegal Cargo" "Illegal Cargo" "Highly Illegal Cargo"
+			cargo 0
 			variant
 				"Shadow Falcon"
 				"Shadow Osprey"
@@ -1093,15 +1103,13 @@ mission "Grave Digger: Prefect's Albatross 2"
 		has "Grave Digger: Prefect's Albatross 1: done"
 	on offer
 		conversation
-			`	A search of the station doesn't reveal much. You find discarded food and beverage packaging littered about but not much else. While it's obvious that someone was here, they left no evidence of what they did other than eat lunch.`
+			`	A search of the station doesn't reveal much. You find discarded food and beverage packaging littered about but not much else. While it's obvious that someone was here, they left no evidence of what they did other than eat lunch. After seeing this, Torza signals that he  wants to go to <planet> to confer with other prefects about the suspicious fleets.`
 				accept
 	on abort
 		"reputation: Remnant" --
 	on fail
 		"reputation: Remnant" <?= -1000
-		dialog `Your failure to protect a Prefect is not without consequences and your reputation with the Remnant has suffered as a result.`
-	on enter
-		dialog `The prefect wants to go to <planet> to confer with other prefects about the suspicious fleets.`
+		dialog `[MISSION FAILED]: Prefect Torza managed to escape. Your failure to protect him is not without consequences and your reputation with the Remnant has suffered as a result.`
 	npc accompany save
 		government "Remnant"
 		personality target escort
@@ -1172,14 +1180,14 @@ mission "Grave Digger: Thrasher Turrets 1"
 	name "Myserious Sales Pitch"
 	description "An anonymous seller is offering a rare item that would supposedly appeal to you. You must go to a warehouse on <destination> if you want to purchase it for four million credits."
 	source
-		government "Syndicate"
+		government "Syndicate" "Republic" "Free Worlds" "Independent" "Neutral"
+		not attributes "uninhabited"
 	destination "Covert"
 	to offer
 		not "event: Grave Digger Testimony"
 		not "event: Gravedigger defeated"
 		has "Grave Digger: Graveyard Robbery A: done"
 		has "Grave Digger: Graveyard Robbery B: done"
-		"combat rating" > 1000
 		"net worth" > 16000000
 		"credits" > 8000000
 		or
@@ -1287,14 +1295,14 @@ mission "Grave Digger: Point Defense Turrets 1"
 	name "Myserious Sales Pitch"
 	description "An anonymous seller is offering a rare item that would supposedly appeal to you. You must go to a warehouse on <destination> if you want to purchase it for five million credits."
 	source
-		government "Syndicate"
+		government "Syndicate" "Republic" "Free Worlds" "Independent" "Neutral"
+		not attributes "uninhabited"
 	destination "Buccaneer Bay"
 	to offer
 		not "event: Grave Digger Testimony"
 		not "event: Gravedigger defeated"
 		has "Grave Digger: Graveyard Robbery A: done"
 		has "Grave Digger: Graveyard Robbery C: done"
-		"combat rating" > 1000
 		"net worth" > 20000000
 		"credits" > 10000000
 		or
@@ -1402,14 +1410,14 @@ mission "Grave Digger: Inhibitor Cannons 1"
 	name "Myserious Sales Pitch"
 	description "An anonymous seller is offering a rare item that would supposedly appeal to you. You must go to a warehouse on <destination> if you want to purchase it for two million credits."
 	source
-		government "Syndicate"
+		government "Syndicate" "Republic" "Free Worlds" "Independent" "Neutral"
+		not attributes "uninhabited"
 	destination "Deadman's Cove"
 	to offer
 		not "event: Grave Digger Testimony"
 		not "event: Gravedigger defeated"
 		has "Grave Digger: Graveyard Robbery B: done"
 		has "Grave Digger: Graveyard Robbery C: done"
-		"combat rating" > 1000
 		"net worth" > 8000000
 		"credits" > 4000000
 		or
