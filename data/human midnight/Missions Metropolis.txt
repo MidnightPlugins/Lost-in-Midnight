@@ -232,14 +232,14 @@ mission "Balthazar 6"
 	source
 		near "Alpha Hydri" 1 30
 	destination "Nimbus"
-	stopover "Foundry"
+	stopover "Hephaestus"
 	cargo "replacement parts" 50
 	blocked "Salvaging Balthazar: You need <capacity> to carry the replacement parts."
 	to offer
 		has "event: Balthazar salvage timer"
 		"credits" > 1000000
 	on offer
-		dialog `You receive a message from Maria Carpenter. They've salvaged the Balthazar, but need to replace some unsalvagable components with fresh ones from Foundry. A list of the required equipment is attached to her message. It will cost 500,000 credits.`
+		dialog `You receive a message from Maria Carpenter. They've salvaged the Balthazar, but need to replace some unsalvagable components with fresh ones from <stopovers>. A list of the required equipment is attached to her message. It will cost 500,000 credits.`
 	on accept
 		payment -500000
 	on stopover

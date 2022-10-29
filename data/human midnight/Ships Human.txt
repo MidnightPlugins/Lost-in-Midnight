@@ -767,7 +767,7 @@ ship "Liberator"
 		
 		"Stack Core"
 		"LP144a Battery Pack"
-		"D94-YV Shield Generator"
+		"D41-HY Shield Generator" 2
 		"Small Radar Jammer"
 		"Large Radar Jammer"
 		"Liquid Helium Cooler"
@@ -848,7 +848,7 @@ ship "Vindicator"
 		
 		"Stack Core"
 		"LP144a Battery Pack"
-		"D94-YV Shield Generator"
+		"D41-HY Shield Generator" 2
 		"Small Radar Jammer"
 		"Large Radar Jammer"
 		"Liquid Helium Cooler"
@@ -1062,7 +1062,7 @@ ship "Plexus"
 		
 		"Stack Core"
 		"LP144a Battery Pack"
-		"D94-YV Shield Generator"
+		"D41-HY Shield Generator" 2
 		"Small Radar Jammer"
 		"Large Radar Jammer"
 		"Liquid Nitrogen Cooler"
@@ -1690,7 +1690,7 @@ ship "War Hauler"
 		
 		"Fission Reactor"
 		"LP072a Battery Pack"
-		"D94-YV Shield Generator"
+		"D41-HY Shield Generator" 2
 		"Small Radar Jammer"
 		"Liquid Nitrogen Cooler"
 		
@@ -1766,9 +1766,9 @@ ship "Metropolis"
 		"Quad Blaster Turret" 5
 		"Heavy Anti-Missile Turret" 6
 		
-		"Fusion Reactor" 1
+		"Fusion Reactor"
 		"LP144a Battery Pack" 2
-		"D94-YV Shield Generator" 1
+		"D94-YV Shield Generator"
 		"Outfits Expansion"
 		"Large Radar Jammer"
 		"Ramscoop" 1
@@ -1783,7 +1783,9 @@ ship "Metropolis"
 	cargo
 		"Fusion Reactor" 2
 		"LP144a Battery Pack"
-		"D94-YV Shield Generator" 2
+		"D14-RN Shield Generator"
+		"D41-HY Shield Generator" 2
+		"D67-TM Shield Generator"
 		"Large Radar Jammer" 2
 		"Ramscoop" 2
 		"X4700 Ion Thruster" 2
@@ -1854,7 +1856,8 @@ ship "District"
 		
 		"Fusion Reactor"
 		"LP144a Battery Pack"
-		"D94-YV Shield Generator"
+		"D67-TM Shield Generator"
+		"D14-RN Shield Generator"
 		"Outfits Expansion"
 		"Large Radar Jammer"
 		"Ramscoop"
@@ -1915,7 +1918,7 @@ ship "Prefecture"
 		
 		"Fusion Reactor"
 		"LP144a Battery Pack"
-		"D94-YV Shield Generator"
+		"D41-HY Shield Generator" 2
 		"Large Radar Jammer"
 		"Ramscoop"
 		"Medical Bay"
