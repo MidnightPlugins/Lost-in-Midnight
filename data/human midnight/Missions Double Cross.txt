@@ -380,24 +380,24 @@ mission "Escort Requiem Alpha"
 
 mission "Protection: Marauder Double Cross"
 	job
-	repeat 5
+	repeat
 	deadline 15
 	name "Protection Escort"
-	description "Pay the <npc> 100,000 credits to escort your fleet until <date>."
+	description "Pay the <npc> 150,000 credits to escort your fleet until <date>."
 	source
 		attributes "frontier" "rim"
 	to offer
 		random < 30
 	on accept
-		payment -100000
-		dialog `You pay the <npc> 100,000 credits to escort your fleet until <date>.`
+		payment -150000
+		dialog `You pay the <npc> 150,000 credits to escort your fleet until <date>.`
 	on fail
 		"reputation: Bounty (Disguised)" >?= 1	
 		dialog `The protection contract with <npc> has expired.`
 	on abort
 		"reputation: Bounty (Disguised)" >?= 1	
-	on complete
-		"reputation: Bounty (Disguised)" >?= 1	
+	to complete
+		never
 	npc save
 		government "Bounty (Disguised)"
 		personality harvests plunders heroic
@@ -562,6 +562,9 @@ mission "Protection: Marauder Double Cross"
 		dialog `Treachery! The <npc> turns its weapons on you!`
 		"reputation: Bounty (Disguised)" <?= -1000
 	on enter Umbral
+		dialog `Treachery! The <npc> turns its weapons on you!`
+		"reputation: Bounty (Disguised)" <?= -1000
+	on enter Atik
 		dialog `Treachery! The <npc> turns its weapons on you!`
 		"reputation: Bounty (Disguised)" <?= -1000
 

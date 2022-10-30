@@ -728,7 +728,7 @@ ship "Marauder Protector"
 		"fuel capacity" 400
 		"cargo space" 50
 		"outfit space" 610
-		"weapon capacity" 240
+		"weapon capacity" 242
 		"engine capacity" 100
 		"self destruct" .15
 		weapon

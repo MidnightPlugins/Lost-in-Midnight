@@ -1066,6 +1066,362 @@ mission "Medical Bay: Patient Transport"
 
 
 
+mission "Militia: Joint Operations (Sparrow)"
+	job
+	repeat
+	deadline 14
+	name "Militia Joint Operations"
+	description "The <npc> is leading a squadron of interceptors on patrol nearby. You can request that they abandon their patrol to bolster your fleet until <date>, but you risk damaging your reputation by doing so."
+	source
+		government "Free Worlds"
+	to offer
+		has "license: Militia"
+		"reputation: Militia" >= 5
+		random < 40
+	on accept
+		conversation
+			branch assist
+				random < 80
+			`You send a request for reinforcements to the <npc>. The reply is short: "Negative, Captain <last>. We are under strict orders not to abandon our position. <npc>, out."`
+				defer
+			label assist
+			scene "thumbnail/sparrow"
+			`You send a request for reinforcements to the <npc>. The reply: "Affirmative, Captain <last>. We can accompany you until <date>. Be advised we are in pursuit of hostiles headed your way."`
+				accept
+	npc
+		government "Pirate"
+		personality entering plunders harvests
+			confusion 20
+		fleet "Small Southern Pirates"
+	npc kill
+		government "Militia"
+		system
+			distance 2
+		personality escort heroic
+		fleet
+			names "militia"
+			variant
+				"Sparrow" 5
+		conversation
+			action
+				"reputation: Militia" -= 5
+				fail "Militia: Joint Operations (Sparrow)"
+			scene "scene/scene-explosion"
+			`The loss of the <npc> and its squadron of interceptors is blamed on your incompetence. Your reputation with the Militia has diminished as a result.`
+	on fail
+		dialog `The Joint Operation with <npc> has ended.`
+	to complete
+		never
+
+mission "Militia: Joint Operations (Hawk)"
+	job
+	repeat
+	deadline 14
+	name "Militia Joint Operations"
+	description "The <npc> is leading a squadron of interceptors on patrol nearby. You can request that they abandon their patrol to bolster your fleet until <date>, but you risk damaging your reputation by doing so."
+	source
+		government "Free Worlds"
+	to offer
+		has "license: Militia"
+		"reputation: Militia" >= 5
+		random < 40
+	on accept
+		conversation
+			branch assist
+				random < 80
+			`You send a request for reinforcements to the <npc>. The reply is short: "Negative, Captain <last>. We are under strict orders not to abandon our position. <npc>, out."`
+				defer
+			label assist
+			scene "thumbnail/hawk"
+			`You send a request for reinforcements to the <npc>. The reply: "Affirmative, Captain <last>. We can accompany you until <date>. Be advised we are in pursuit of hostiles headed your way."`
+				accept
+	npc
+		government "Pirate"
+		personality entering plunders harvests
+			confusion 20
+		fleet "Small Southern Pirates"
+	npc kill
+		government "Militia"
+		system
+			distance 2
+		personality escort heroic
+		fleet
+			names "militia"
+			variant
+				"Hawk (Speedy)"
+				"Hawk (Rocket)" 2
+				"Hawk" 2
+		conversation
+			action
+				"reputation: Militia" -= 5
+				fail "Militia: Joint Operations (Hawk)"
+			scene "scene/scene-explosion"
+			`The loss of the <npc> and its squadron of interceptors is blamed on your incompetence. Your reputation with the Militia has diminished as a result.`
+	on fail
+		dialog `The Joint Operation with <npc> has ended.`
+	to complete
+		never
+
+mission "Militia: Joint Operations (Fury)"
+	job
+	repeat
+	deadline 14
+	name "Militia Joint Operations"
+	description "The <npc> is leading a squadron of interceptors on patrol nearby. You can request that they abandon their patrol to bolster your fleet until <date>, but you risk damaging your reputation by doing so."
+	source
+		government "Free Worlds"
+	to offer
+		has "license: Militia"
+		"reputation: Militia" >= 5
+		random < 40
+	on accept
+		conversation
+			branch assist
+				random < 80
+			`You send a request for reinforcements to the <npc>. The reply is short: "Negative, Captain <last>. We are under strict orders not to abandon our position. <npc>, out."`
+				defer
+			label assist
+			scene "thumbnail/fury"
+			`You send a request for reinforcements to the <npc>. The reply: "Affirmative, Captain <last>. We can accompany you until <date>. Be advised we are in pursuit of hostiles headed your way."`
+				accept
+	npc
+		government "Pirate"
+		personality entering plunders harvests
+			confusion 20
+		fleet "Small Southern Pirates"
+	npc kill
+		government "Militia"
+		system
+			distance 2
+		personality escort heroic
+		fleet
+			names "militia"
+			variant
+				"Fury"
+				"Fury (Laser)"
+				"Fury (Bomber)" 2
+				"Fury (Missile)"
+		conversation
+			action
+				"reputation: Militia" -= 5
+				fail "Militia: Joint Operations (Fury)"
+			scene "scene/scene-explosion"
+			`The loss of the <npc> and its squadron of interceptors is blamed on your incompetence. Your reputation with the Militia has diminished as a result.`
+	on fail
+		dialog `The Joint Operation with <npc> has ended.`
+	to complete
+		never
+
+mission "Militia: Joint Operations (Argosy)"
+	job
+	repeat
+	deadline 14
+	name "Militia Joint Operations"
+	description "The <npc>, a light warship, is on patrol nearby. You can request that they abandon their patrol to bolster your fleet until <date>, but you risk damaging your reputation by doing so."
+	source
+		government "Free Worlds"
+	to offer
+		has "license: Militia"
+		"reputation: Militia" >= 10
+		random < 30
+	on accept
+		conversation
+			branch assist
+				random < 70
+			`You send a request for reinforcements to the <npc>. The reply is short: "Negative, Captain <last>. We are under strict orders not to abandon our position. <npc>, out."`
+				defer
+			label assist
+			scene "thumbnail/argosy"
+			`You send a request for reinforcements to the <npc>. The reply: "Affirmative, Captain <last>. We can accompany you until <date>. Be advised we are in pursuit of hostiles headed your way."`
+				accept
+	npc
+		government "Pirate"
+		personality entering plunders harvests
+			confusion 20
+		fleet "Small Southern Pirates"
+	npc kill
+		government "Militia"
+		system
+			distance 2
+		personality escort heroic
+		fleet
+			names "militia"
+			variant
+				"Argosy"
+			variant
+				"Argosy (Blaster)"
+			variant
+				"Argosy (Laser)"
+			variant
+				"Argosy (Missile)"
+			variant
+				"Argosy (Turret)"
+		conversation
+			action
+				"reputation: Militia" -= 10
+				fail "Militia: Joint Operations (Argosy)"
+			scene "scene/scene-explosion"
+			`The loss of the <npc> is blamed on your incompetence. Your reputation with the Militia has diminished as a result.`
+	on fail
+		dialog `The Joint Operation with <npc> has ended.`
+	to complete
+		never
+
+mission "Militia: Joint Operations (Osprey)"
+	job
+	repeat
+	deadline 14
+	name "Militia Joint Operations"
+	description "The <npc>, a light warship, is on patrol nearby. You can request that they abandon their patrol to bolster your fleet until <date>, but you risk damaging your reputation by doing so."
+	source
+		government "Free Worlds"
+	to offer
+		has "license: Militia"
+		"reputation: Militia" >= 10
+		random < 30
+	on accept
+		conversation
+			branch assist
+				random < 70
+			`You send a request for reinforcements to the <npc>. The reply is short: "Negative, Captain <last>. We are under strict orders not to abandon our position. <npc>, out."`
+				defer
+			label assist
+			scene "thumbnail/osprey"
+			`You send a request for reinforcements to the <npc>. The reply: "Affirmative, Captain <last>. We can accompany you until <date>. Be advised we are in pursuit of hostiles headed your way."`
+				accept
+	npc
+		government "Pirate"
+		personality entering plunders harvests
+			confusion 20
+		fleet "Small Southern Pirates"
+	npc kill
+		government "Militia"
+		system
+			distance 2
+		personality escort heroic
+		fleet
+			names "militia"
+			variant
+				"Osprey"
+			variant
+				"Osprey (Missile)"
+			variant
+				"Osprey (Laser)"
+		conversation
+			action
+				"reputation: Militia" -= 10
+				fail "Militia: Joint Operations (Osprey)"
+			scene "scene/scene-explosion"
+			`The loss of the <npc> is blamed on your incompetence. Your reputation with the Militia has diminished as a result.`
+	on fail
+		dialog `The Joint Operation with <npc> has ended.`
+	to complete
+		never
+
+mission "Militia: Joint Operations (Bastion)"
+	job
+	repeat
+	deadline 14
+	name "Militia Joint Operations"
+	description "The <npc>, a medium warship, is on patrol nearby. You can request that they abandon their patrol to bolster your fleet until <date>, but you risk damaging your reputation by doing so."
+	source
+		government "Free Worlds"
+	to offer
+		has "license: Militia"
+		"reputation: Militia" >= 15
+		random < 20
+	on accept
+		conversation
+			branch assist
+				random < 60
+			`You send a request for reinforcements to the <npc>. The reply is short: "Negative, Captain <last>. We are under strict orders not to abandon our position. <npc>, out."`
+				defer
+			label assist
+			scene "thumbnail/bastion"
+			`You send a request for reinforcements to the <npc>. The reply: "Affirmative, Captain <last>. We can accompany you until <date>. Be advised we are in pursuit of hostiles headed your way."`
+				accept
+	npc
+		government "Pirate"
+		personality entering plunders harvests
+			confusion 20
+		fleet "Small Southern Pirates"
+	npc kill
+		government "Militia"
+		system
+			distance 2
+		personality escort heroic
+		fleet
+			names "militia"
+			variant
+				"Bastion"
+			variant
+				"Bastion (Heavy)"
+			variant
+				"Bastion (Laser)"
+		conversation
+			action
+				"reputation: Militia" -= 15
+				fail "Militia: Joint Operations (Bastion)"
+			scene "scene/scene-explosion"
+			`The loss of the <npc> is blamed on your incompetence. Your reputation with the Militia has diminished as a result.`
+	on fail
+		dialog `The Joint Operation with <npc> has ended.`
+	to complete
+		never
+
+mission "Militia: Joint Operations (Falcon)"
+	job
+	repeat
+	deadline 14
+	name "Militia Joint Operations"
+	description "The <npc>, a heavy warship, is on patrol nearby. You can request that they abandon their patrol to bolster your fleet until <date>, but you risk damaging your reputation by doing so."
+	source
+		government "Free Worlds"
+	to offer
+		has "license: Militia"
+		"reputation: Militia" >= 20
+		random < 10
+	on accept
+		conversation
+			branch assist
+				random < 50
+			`You send a request for reinforcements to the <npc>. The reply is short: "Negative, Captain <last>. We are under strict orders not to abandon our position. <npc>, out."`
+				defer
+			label assist
+			scene "thumbnail/falcon"
+			`You send a request for reinforcements to the <npc>. The reply: "Affirmative, Captain <last>. We can accompany you until <date>. Be advised we are in pursuit of hostiles headed your way."`
+				accept
+	npc
+		government "Pirate"
+		personality entering plunders harvests
+			confusion 20
+		fleet "Small Southern Pirates"
+	npc kill
+		government "Militia"
+		system
+			distance 2
+		personality escort heroic
+		fleet
+			names "militia"
+			variant
+				"Falcon"
+			variant
+				"Falcon (Heavy)"
+			variant
+				"Falcon (Laser)"
+		conversation
+			action
+				"reputation: Militia" -= 20
+				fail "Militia: Joint Operations (Falcon)"
+			scene "scene/scene-explosion"
+			`The loss of the <npc> is blamed on your incompetence. Your reputation with the Militia has diminished as a result.`
+	on fail
+		dialog `The Joint Operation with <npc> has ended.`
+	to complete
+		never
+
+
+
 mission "Mining: Silicon"
 	job
 	deadline 14
@@ -1334,7 +1690,7 @@ mission "Raider Bounty"
 
 mission "Protection: Heavy"
 	job
-	repeat 5
+	repeat
 	deadline 15
 	name "Protection Escort"
 	description "Pay the <npc> 125,000 credits to escort your fleet until <date>."
@@ -1353,10 +1709,12 @@ mission "Protection: Heavy"
 		government "Merchant"
 		personality heroic
 		fleet "Protection Heavy"
+	to complete
+		never
 
 mission "Protection: Medium"
 	job
-	repeat 10
+	repeat
 	deadline 15
 	name "Protection Escort"
 	description "Pay the <npc> 100,000 credits to escort your fleet until <date>."
@@ -1376,10 +1734,12 @@ mission "Protection: Medium"
 		government "Merchant"
 		personality heroic
 		fleet "Protection Medium"
-				
+	to complete
+		never
+
 mission "Protection: Light"
 	job
-	repeat 15
+	repeat
 	deadline 15
 	name "Protection Escort"
 	description "Pay the <npc> 80,000 credits to escort your fleet until <date>."
@@ -1400,13 +1760,15 @@ mission "Protection: Light"
 		government "Merchant"
 		personality heroic
 		fleet "Protection Light"
-			
+	to complete
+		never
+
 mission "Protection: Marauder"
 	job
-	repeat 5
+	repeat
 	deadline 15
 	name "Protection Escort"
-	description "Pay the <npc> 100,000 credits to escort your fleet until <date>."
+	description "Pay the <npc> 150,000 credits to escort your fleet until <date>."
 	source
 		attributes "frontier" "rim"
 	to offer
@@ -1420,6 +1782,8 @@ mission "Protection: Marauder"
 		government "Merchant"
 		personality plunders heroic
 		fleet "Marauder Independent"
+	to complete
+		never
 
 
 
