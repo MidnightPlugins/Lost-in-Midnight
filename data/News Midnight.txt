@@ -29,7 +29,7 @@ news "Archipelago Pirate Politics"
 			"pompous arrogant "
 			"filthy two-bit "
 			"no good "
-			"downright impudent 
+			"downright impudent"
 			"completely ungrateful "
 			"traitorous conniving "
 		word
@@ -262,7 +262,7 @@ news "Oathbreaker Navy Disposition"
 			"I know what Captain Benedict is doing is wrong, but I understand his grief. I also lost someone close to me in the war."
 			"I was once on patrol duty with Captain Benedict in the North. His pirate interrogations were as brutal as the rumors say. I'm certain he knows more about the  secret machinations of the various northern pirate factions than most pirate raiders do."
 			"Captain Benedict was a good officer. I can't believe that person on the video is the same man."
-			"Captain Benedict? Never met him. I have heard that he was very good at keeping the pirates in the North under control."`
+			"Captain Benedict? Never met him. I have heard that he was very good at keeping the pirates in the North under control."
 		word
 			`"`
 
