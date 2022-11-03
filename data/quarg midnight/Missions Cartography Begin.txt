@@ -55,6 +55,7 @@ mission "Cartography: Quarg Hitchhiker 1"
 				"tribute: Haven" > 0
 				"tribute: Stormhold" > 0
 				"tribute: Zenith" > 0
+				"tribute: New Tortuga" > 0
 
 	on offer
 		conversation

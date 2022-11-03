@@ -756,7 +756,7 @@ mission "Midnight Lost Orphan: Blood Wind"
 			has "event: kestrel available: more weapons"
 		or
 			"captain of atrocity" >= 16
-			and			
+			and
 				has "Midnight Lost Orphan: Pirate Atrocity: failed"
 				has "Midnight Lost Orphan: Republic Atrocity: failed"
 				has "Midnight Lost Orphan: Syndicate Atrocity: failed"
