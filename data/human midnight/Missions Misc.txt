@@ -2138,7 +2138,7 @@ mission "Rogue Asteroid (Ambush)"
 	landing
 	invisible
 	source
-		attributes "pirate"
+		attributes "pirate" "frontier"
 	to offer
 		or
 			has "Rogue Asteroid (Pirate): done"

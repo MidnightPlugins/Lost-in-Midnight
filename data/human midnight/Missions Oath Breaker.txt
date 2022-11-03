@@ -405,27 +405,30 @@ mission "Oathbreakers: Rum Cellar Fight"
 				die
 				
 			label "not alone"
-			branch "intimidation" "fight"
-				"flagship required crew" > 7
-			
-			label fight
-			branch "victory"
-				random < ( "flagship required crew" - 7 )
 
-			`	There's no avoiding this fight. Your own crew tries to back you up, but a stray shot still finds its way into your vital organs.`
-				die
-			
-			label victory
-			`	There's no avoiding this fight. Your crew acts heroically, killing a couple of the Oathbreakers in the shootout while the rest flee. Not knowing if they've got reinforcements to back them up, you quickly board your ship.`
-				launch
-			
-			label intimidation
+			branch "fight"
+				"flagship required crew" < 14
+
 			`	Before things turn violent, their captain orders them to stand down. He must have noticed that you have a crew of your own to back you up. The Oathbreakers glare at you as they stand aside.`
 			choice
 				`	(Shove one of them aside.)`
 					goto fight
 				`	(Board your ship.)`
 					launch
+
+			label fight
+			scene "outfit/laser rifle"
+
+			branch "victory"
+				random < ( "flagship required crew" - 7 )
+
+			`	There's no avoiding this fight. Your own crew tries to back you up, but a stray shot still finds its way into your vital organs.`
+				die
+
+			label victory
+			`	There's no avoiding this fight. Your crew acts heroically, killing a couple of the Oathbreakers in the shootout while the rest flee. Not knowing if they've got reinforcements to back them up, you quickly board your ship.`
+				launch
+
 
 	npc
 		to spawn

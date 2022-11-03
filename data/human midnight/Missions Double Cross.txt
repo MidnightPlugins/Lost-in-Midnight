@@ -743,6 +743,7 @@ fleet "TMBR Billboard"
 
 mission "Peace Tour 1"
 	minor
+	clearance
 	name "Promotion Tour"
 	description "Escort the <npc> to the planets marked on the map. Then return them to <destination>. Payment is 1,000,000 credits."
 	source

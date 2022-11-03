@@ -195,6 +195,7 @@ mission "Hansel & Gretel: Return Escort"
 
 mission "Hansel & Gretel: Rescue Hansel"
 	minor
+	clearance
 	name "Rescue Hansel"
 	description "Find and rescue the Hansel. Also keep Gretel safe."
 	source

@@ -1823,7 +1823,7 @@ mission "Star Explorer: Missing Science Vessel"
 		government "Merchant"
 		personality target derelict timid
 		fleet
-			names "civilian"
+			names "intellectuals"
 			variant
 				"Star Explorer"
 	on fail
@@ -1868,7 +1868,7 @@ mission "Star Explorer: Escort"
 		government "Merchant"
 		personality escort timid
 		fleet
-			names "civilian"
+			names "intellectuals"
 			variant
 				"Star Explorer"
 	on waypoint
