@@ -133,9 +133,10 @@ phrase "dream weaver"
 
 outfitter "Dream Crystal"
 	"Dream Crystal"
-	
+
 mission "Dream Crystal 4"
 	minor
+	clearance
 	name "Escort Mr. Sandman"
 	description "Escort the <npc> to <destination>."
 	source
