@@ -518,3 +518,13 @@ phrase "Rum Cellar Fight"
 			"I hope this doesn't escalate. The last time it did, entire fleets were fighting."
 		word
 			`"`
+
+
+
+phrase "hostile unfettered"
+	word
+		`"`
+	word
+		"MORE SACRIFICES FOR THE ACORN GOD!"
+	word
+		`"`

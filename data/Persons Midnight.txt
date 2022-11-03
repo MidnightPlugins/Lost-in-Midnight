@@ -813,6 +813,7 @@ ship "Korath Devourer" "Korath Predator"
 		"Security Station"
 		"Antique Rifle"
 		"Execution Chamber"
+		"Riot Containment Barrier"
 
 		"Korath Afterburner"
 		"Steering (Planetary Class)"
