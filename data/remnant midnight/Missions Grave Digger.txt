@@ -517,7 +517,9 @@ mission "Grave Digger: Suspicious Ship"
 	npc "scan outfits" "scan cargo"
 		government "Independent (Killable)"
 		system
+			near Arculus 3 7
 			attributes "ember waste"
+			not government "Remnant"
 			not attributes "inaccessible"
 			not system Aki'il Patir
 		personality target waiting staying uninterested
@@ -557,7 +559,9 @@ mission "Grave Digger: Suspicious Ship Job"
 	npc "scan cargo" "scan outfits"
 		government "Independent (Killable)"
 		system
+			near Arculus 3 7
 			attributes "ember waste"
+			not government "Remnant"
 			not attributes "inaccessible"
 			not system Aki'il Patir
 		personality target waiting staying uninterested
@@ -924,22 +928,32 @@ mission "Escort: Prefect's Albatross 1"
 		government "Remnant"
 	waypoint
 		attributes "ember waste"
+		near Arculus 3 7
+		not government "Remnant"
 		not attributes "inaccessible"
 		not system Aki'il Patir
 	waypoint
 		attributes "ember waste"
+		near Arculus 3 7
+		not government "Remnant"
 		not attributes "inaccessible"
 		not system Aki'il Patir
 	waypoint
 		attributes "ember waste"
+		near Arculus 3 7
+		not government "Remnant"
 		not attributes "inaccessible"
 		not system Aki'il Patir
 	waypoint
 		attributes "ember waste"
+		near Arculus 3 7
+		not government "Remnant"
 		not attributes "inaccessible"
 		not system Aki'il Patir
 	waypoint
 		attributes "ember waste"
+		near Arculus 3 7
+		not government "Remnant"
 		not attributes "inaccessible"
 		not system Aki'il Patir
 	to offer
@@ -981,22 +995,32 @@ mission "Escort: Prefect's Albatross 2"
 		government "Remnant"
 	waypoint
 		attributes "ember waste"
+		near Arculus 3 7
+		not government "Remnant"
 		not attributes "inaccessible"
 		not system Aki'il Patir
 	waypoint
 		attributes "ember waste"
+		near Arculus 3 7
+		not government "Remnant"
 		not attributes "inaccessible"
 		not system Aki'il Patir
 	waypoint
 		attributes "ember waste"
+		near Arculus 3 7
+		not government "Remnant"
 		not attributes "inaccessible"
 		not system Aki'il Patir
 	waypoint
 		attributes "ember waste"
+		near Arculus 3 7
+		not government "Remnant"
 		not attributes "inaccessible"
 		not system Aki'il Patir
 	waypoint
 		attributes "ember waste"
+		near Arculus 3 7
+		not government "Remnant"
 		not attributes "inaccessible"
 		not system Aki'il Patir
 	to offer
@@ -1688,3 +1712,12 @@ event "Gravedigger defeated"
 
 
 
+mission "Grave Digger Defeated Patch"
+	landing
+	invisible
+	to offer
+		has "Nemesis: Grave Digger: done"
+		not "event: Gravedigger defeated"
+	on offer
+		event "Gravedigger defeated"
+		fail
