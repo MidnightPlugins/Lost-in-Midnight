@@ -311,9 +311,7 @@ mission "Sheragi Shenanigans: Ruby Dagger 1"
 	description "The Ruby Dagger is attacking merchants near <stopovers>. Destroy the ship then report to <destination>. Payment is 300,000 credits."
 	source
 		government "Syndicate"
-	stopover
-		attributes "pirate"
-		attributes "core"
+	stopover "Deadman's Cove"
 	to offer
 		has "Sheragi Archaeology: Epilogue: done"
 		random < 50
@@ -357,9 +355,7 @@ mission "Sheragi Shenanigans: Ruby Dagger 2"
 	source
 		government "Republic"
 		attributes "north"
-	stopover
-		attributes "pirate"
-		attributes "north"
+	stopover Freedom
 	to offer
 		has "Sheragi Shenanigans: Ruby Dagger 1: active"
 	on offer
