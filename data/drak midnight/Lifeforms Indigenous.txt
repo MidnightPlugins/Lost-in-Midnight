@@ -2399,8 +2399,7 @@ mission "Coalition: Exterminate Plasma Parasites 2"
 		government "Swarming Lifeform"
 		system destination
 		personality waiting staying swarming heroic unconstrained mute
-		fleet "Advanced Plasma Parasites" 3
-		fleet "Volatile Plasma Parasites"
+		fleet "Advanced Plasma Parasites" 4
 		dialog `You've cleared the infestation. Land on <planet> to claim your reward.`
 	on visit
 		dialog `There are still Plasma Parasites infesting the system. Eliminate them.`
@@ -2426,8 +2425,7 @@ mission "Coalition: Exterminate Plasma Parasites 3"
 		government "Swarming Lifeform"
 		system destination
 		personality waiting staying swarming heroic unconstrained mute
-		fleet "Advanced Plasma Parasites" 3
-		fleet "Volatile Plasma Parasites" 2
+		fleet "Advanced Plasma Parasites" 5
 		dialog `You've cleared the infestation. Land on <planet> to claim your reward.`
 	on visit
 		dialog `There are still Plasma Parasites infesting the system. Eliminate them.`
