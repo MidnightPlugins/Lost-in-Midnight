@@ -283,6 +283,8 @@ ship "Arach Courier" "Arach Courier (Blaster)"
 		"Small Thrust Module" 2
 		"Small Steering Module" 2
 		"Hyperdrive"
+		"Laser Rifle"
+		"Fragmentation Grenades"
 
 ship "Arach Courier" "Arach Courier (Model)"
 	outfits
@@ -293,6 +295,7 @@ ship "Arach Courier" "Arach Courier (Model)"
 		"Small Thrust Module" 2
 		"Small Steering Module" 2
 		"Hyperdrive"
+		"Riot Containment Barrier"
 
 
 
@@ -309,6 +312,8 @@ ship "Arach Freighter" "Arach Freighter (Blaster)"
 		"Large Steering Module"
 		"Small Steering Module" 2
 		"Hyperdrive"
+		"Laser Rifle" 7
+		"Fragmentation Grenades" 4
 
 ship "Arach Freighter" "Arach Freighter (Model)"
 	outfits
@@ -323,6 +328,7 @@ ship "Arach Freighter" "Arach Freighter (Model)"
 		"Large Steering Module"
 		"Small Steering Module" 2
 		"Hyperdrive"
+		"Riot Containment Barrier" 7
 
 
 
@@ -340,7 +346,10 @@ ship "Arach Hulk" "Arach Hulk (Blaster)"
 		"Large Steering Module" 2
 		"Small Steering Module" 2
 		"Hyperdrive"
-		
+		"Bunk Room"
+		"Laser Rifle" 16
+		"Fragmentation Grenades" 8
+
 ship "Arach Hulk" "Arach Hulk (Model)"
 	outfits
 		"Model Cannon" 2
@@ -355,7 +364,8 @@ ship "Arach Hulk" "Arach Hulk (Model)"
 		"Large Steering Module" 2
 		"Small Steering Module" 2
 		"Hyperdrive"
-
+		"Bunk Room"
+		"Riot Containment Barrier" 16
 
 
 ship "Arach Spindle" "Arach Spindle (Blaster)"
@@ -373,6 +383,8 @@ ship "Arach Spindle" "Arach Spindle (Blaster)"
 		"Large Steering Module" 2
 		"Small Steering Module" 1
 		"Hyperdrive"
+		"Laser Rifle" 8
+		"Fragmentation Grenades" 4
 
 ship "Arach Spindle" "Arach Spindle (Model)"
 	outfits
@@ -389,6 +401,7 @@ ship "Arach Spindle" "Arach Spindle (Model)"
 		"Large Steering Module" 2
 		"Small Steering Module" 1
 		"Hyperdrive"
+		"Riot Containment Barrier" 8
 
 
 
@@ -404,6 +417,8 @@ ship "Arach Transport" "Arach Transport (Blaster)"
 		"Large Steering Module"
 		"Small Steering Module"
 		"Hyperdrive"
+		"Laser Rifle" 5
+		"Fragmentation Grenades" 3
 
 ship "Arach Transport" "Arach Transport (Model)"
 	outfits
@@ -417,6 +432,7 @@ ship "Arach Transport" "Arach Transport (Model)"
 		"Large Steering Module"
 		"Small Steering Module"
 		"Hyperdrive"
+		"Riot Containment Barrier" 5
 
 
 
@@ -430,7 +446,10 @@ ship "Kimek Briar" "Kimek Briar (Blaster)"
 		"Large Thrust Module"
 		"Large Steering Module"
 		"Hyperdrive"
-		
+		"Laser Rifle" 5
+		"Fragmentation Grenades" 3
+
+
 ship "Kimek Briar" "Kimek Briar (Model)"
 	outfits
 		"Model Cannon" 2
@@ -441,7 +460,8 @@ ship "Kimek Briar" "Kimek Briar (Model)"
 		"Large Thrust Module"
 		"Large Steering Module"
 		"Hyperdrive"
-		
+		"Riot Containment Barrier" 5
+
 
 
 ship "Kimek Spire" "Kimek Spire (Blaster)"
@@ -457,6 +477,8 @@ ship "Kimek Spire" "Kimek Spire (Blaster)"
 		"Large Steering Module" 2
 		"Small Steering Module"
 		"Hyperdrive"
+		"Laser Rifle" 30
+		"Fragmentation Grenades" 15
 
 ship "Kimek Spire" "Kimek Spire (Model)"
 	outfits
@@ -471,6 +493,7 @@ ship "Kimek Spire" "Kimek Spire (Model)"
 		"Large Steering Module" 2
 		"Small Steering Module"
 		"Hyperdrive"
+		"Riot Containment Barrier" 25
 
 
 
@@ -486,6 +509,8 @@ ship "Kimek Thistle" "Kimek Thistle (Blaster)"
 		"Large Steering Module"
 		"Small Steering Module"
 		"Hyperdrive"
+		"Laser Rifle" 15
+		"Fragmentation Grenades" 8
 
 ship "Kimek Thistle" "Kimek Thistle (Model)"
 	outfits
@@ -499,6 +524,7 @@ ship "Kimek Thistle" "Kimek Thistle (Model)"
 		"Large Steering Module"
 		"Small Steering Module"
 		"Hyperdrive"
+		"Riot Containment Barrier" 15
 
 
 
@@ -511,6 +537,8 @@ ship "Kimek Thorn" "Kimek Thorn (Blaster)"
 		"Small Thrust Module" 2
 		"Small Steering Module" 2
 		"Hyperdrive"
+		"Laser Rifle"
+		"Fragmentation Grenades"
 
 ship "Kimek Thorn" "Kimek Thorn (Model)"
 	outfits
@@ -521,6 +549,7 @@ ship "Kimek Thorn" "Kimek Thorn (Model)"
 		"Small Thrust Module" 2
 		"Small Steering Module" 2
 		"Hyperdrive"
+		"Riot Containment Barrier"
 
 
 
@@ -533,6 +562,8 @@ ship "Saryd Runabout" "Saryd Runabout (Blaster)"
 		"Small Thrust Module" 2
 		"Small Steering Module" 3
 		"Hyperdrive"
+		"Laser Rifle" 2
+		"Fragmentation Grenades"
 
 ship "Saryd Runabout" "Saryd Runabout (Model)"
 	outfits
@@ -543,6 +574,7 @@ ship "Saryd Runabout" "Saryd Runabout (Model)"
 		"Small Thrust Module" 2
 		"Small Steering Module" 3
 		"Hyperdrive"
+		"Riot Containment Barrier" 2
 
 
 
@@ -560,7 +592,9 @@ ship "Saryd Sojourner" "Saryd Sojourner (Blaster)"
 		"Large Steering Module" 2
 		"Small Steering Module"
 		"Hyperdrive"
-		
+		"Laser Rifle" 25
+		"Fragmentation Grenades" 13
+
 ship "Saryd Sojourner" "Saryd Sojourner (Model)"
 	outfits
 		"Model Cannon" 2
@@ -575,6 +609,7 @@ ship "Saryd Sojourner" "Saryd Sojourner (Model)"
 		"Large Steering Module" 2
 		"Small Steering Module"
 		"Hyperdrive"
+		"Riot Containment Barrier" 25
 
 
 
@@ -591,7 +626,9 @@ ship "Saryd Traveler" "Saryd Traveler (Blaster)"
 		"Large Steering Module"
 		"Small Steering Module"
 		"Hyperdrive"
-		
+		"Laser Rifle" 15
+		"Fragmentation Grenades" 8
+
 ship "Saryd Traveler" "Saryd Traveler (Model)"
 	outfits
 		"Model Cannon" 4
@@ -605,6 +642,7 @@ ship "Saryd Traveler" "Saryd Traveler (Model)"
 		"Large Steering Module"
 		"Small Steering Module"
 		"Hyperdrive"
+		"Riot Containment Barrier" 15
 
 
 		
@@ -619,6 +657,8 @@ ship "Saryd Visitor" "Saryd Visitor (Blaster)"
 		"Small Thrust Module" 3
 		"Large Steering Module"
 		"Hyperdrive"
+		"Laser Rifle" 7
+		"Fragmentation Grenades" 4
 
 ship "Saryd Visitor" "Saryd Visitor (Model)"
 	outfits
@@ -632,6 +672,7 @@ ship "Saryd Visitor" "Saryd Visitor (Model)"
 		"Small Thrust Module" 3
 		"Large Steering Module"
 		"Hyperdrive"
+		"Riot Containment Barrier" 7
 
 
 
@@ -858,8 +899,6 @@ ship "Heliarch Hunter" "Heliarch Hunter (Rogue Scrappy)"
 
 
 ship "Heliarch Interdictor" "Heliarch Interdictor (Evidence)"
-	add attributes
-		"self destruct" .15
 	outfits
 		"Finisher Pod" 2
 		"Finisher Storage Tube"
@@ -1110,7 +1149,7 @@ ship "Heliarch Neutralizer" "Heliarch Neutralizer (Evidence)"
 		"Cooling Module"
 		"Scanning Module" 2
 		"Enforcer Riot Staff" 9
-		"Enforcer Confrontation Gear" 11		
+		"Enforcer Confrontation Gear" 11
 		"Heliarch Corruption"
 		"Large Thrust Module"
 		"Small Thrust Module" 2

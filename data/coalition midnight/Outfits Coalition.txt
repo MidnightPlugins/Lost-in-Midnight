@@ -88,3 +88,16 @@ outfit "Model Turret"
 	"turret mounts" -1
 	weapon
 		"turret turn" 2.8
+
+
+
+outfit "Riot Containment Barrier"
+	category "Hand to Hand"
+	cost 84000
+	thumbnail "outfit/riot containment"
+	"mass" 4
+	"outfit space" -2
+	"capture defense" 7
+	"unplunderable" 1
+	description "A simple crowd control barrier made from the same durable alloys found in spaceship hulls. Easy to set up and difficult to break through, they can be surprisingly effective at blocking passage through the corridors of a ship."
+	description "	While Riot Containment Barriers are typically deployed by the Heliarchs to keep civil unrest under control, these are technically not weapons. A growing market of citizens concerned about dissidents is starting to have these installed on their ships."
