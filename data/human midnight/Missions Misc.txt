@@ -643,10 +643,10 @@ mission "Pandora's Problems 1"
 mission "Pandora's Problems 2"
 	minor
 	name "Pandora"
-	description "Pirates are using an alien pirate ship named the <npc> to ambush merchants in uninhabited systems near the core. Find the ship and eliminate it. Then report to <destination> for payment (<payment>)."
+	description "Pirates are using an alien pirate ship named the <npc> to ambush merchants in uninhabited systems near Scheat. Find the ship and eliminate it. Then report to <destination> for payment (<payment>)."
 	source
 		government "Syndicate"
-	destination "Shangri-La"
+	destination "Foundry"
 	to offer
 		has "Pandora's Problems 1: declined"
 		or
@@ -666,8 +666,8 @@ mission "Pandora's Problems 2"
 			`	"Isn't that the alien ship that the Syndicate was rumored to be doing experiments on?"`
 			`	"I'll bet they're just using the name for the notoriety."`
 			`	"Any leads?"`
-			`	"Only that they ambush merchants in uninhabited systems near the core."`
-			`	"I heard Shangri-La is offering <payment> for this one."`
+			`	"Only that they ambush merchants in uninhabited systems near Scheat."`
+			`	"I heard <planet> is offering <payment> for this one."`
 			`	"Maybe it really is the ship from Pandora's Box."`
 			``
 			`	It seems like a lucrative, but dangerous, bounty job. What will you do?`
@@ -2013,7 +2013,7 @@ mission "Rogue Asteroid (Poor World)"
 		not attributes "uninhabited"
 	to offer
 		"combat rating" >= 5
-		random < 20
+		random < 5
 	on offer
 		conversation
 			`The spaceport is a flurry of activity as pilots rush to prepare their ships for liftoff.`
@@ -2081,9 +2081,6 @@ mission "Rogue Asteroid (Pirate)"
 			variant
 				"Mysterious Asteroid"
 				"Dagger" 5
-			variant
-				"Mysterious Asteroid"
-				"Dagger" 4
 		dialog `You've destroyed the rogue asteroid and the pirate ships that were hiding on it. Return to <planet> for your reward.`
 	on complete
 		payment 10000
@@ -2105,7 +2102,7 @@ mission "Rogue Asteroid (Rich World)"
 			has "Rogue Asteroid (Poor World): declined"
 			has "Rogue Asteroid (Poor World): failed"
 			has "Rogue Asteroid (Poor World): aborted"
-		random < 5
+		random < 1
 	on offer
 		conversation
 			`The spaceport is a flurry of activity as pilots rush to prepare their ships for liftoff.`
