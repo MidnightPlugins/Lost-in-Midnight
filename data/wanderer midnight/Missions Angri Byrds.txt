@@ -650,11 +650,10 @@ mission "Angri Byrds: Unfettered Strikers"
 	job
 	repeat
 	name "Unfettered Strikers"
-	description "An Unfettered fleet lead by a warship named the <npc> was spotted near <origin>. Eliminate the fleet, then report to <destination> to claim your payment [<payment>]."
+	description "An Unfettered fleet lead by a warship named the <npc> was spotted near <system>. Eliminate the fleet, then return to <destination> to claim your payment [<payment>]."
 	source
 		government "Wanderer"
 		neighbor near "Ka'ch'chrai" 0 4
-	destination "Vara K'chrai"
 	to offer
 		"combat rating" > 8000
 		has "event: wanderers: unfettered invasion starts"
