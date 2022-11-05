@@ -429,7 +429,7 @@ ship "Shadow Osprey"
 		"Tuning Rifle" 3
 		"Laser Rifle" 7
 
-		"Afterburner"
+		"Volcano Afterburner"
 		"Crucible-Class Thruster"
 		"Crucible-Class Steering"
 		"Hyperdrive"
@@ -470,7 +470,7 @@ ship "Shadow Osprey" "Shadow Osprey (B)"
 		"Tuning Rifle" 3
 		"Laser Rifle" 7
 
-		"Afterburner"
+		"Volcano Afterburner"
 		"Crucible-Class Thruster"
 		"Crucible-Class Steering"
 		"Hyperdrive"
@@ -640,7 +640,7 @@ ship "Osprey" "Osprey (Remnant B)"
 		"Thermoelectric Cooler" 3
 		"Tuning Rifle" 3
 		"Laser Rifle" 7
-		"Afterburner"
+		"Volcano Afterburner"
 		"Crucible-Class Thruster"
 		"Crucible-Class Steering"
 		"Hyperdrive"
@@ -659,7 +659,7 @@ ship "Osprey" "Osprey (Remnant)"
 		"Thermoelectric Cooler" 3
 		"Tuning Rifle" 3
 		"Laser Rifle" 7
-		"Afterburner"
+		"Volcano Afterburner"
 		"Crucible-Class Thruster"
 		"Crucible-Class Steering"
 		"Hyperdrive"
