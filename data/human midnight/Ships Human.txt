@@ -1776,7 +1776,7 @@ ship "Metropolis"
 		"Medical Bay"
 		"Laser Rifle" 45
 		
-		"Afterburner"
+		"Volcano Afterburner"
 		"X4700 Ion Thruster"
 		"X5200 Ion Steering"
 		"Hyperdrive"
@@ -1864,7 +1864,7 @@ ship "District"
 		"Laser Rifle" 15
 		"Engineering Room"
 
-		"Afterburner"
+		"Volcano Afterburner"
 		"X4700 Ion Thruster"
 		"X5200 Ion Steering"
 		"Hyperdrive"

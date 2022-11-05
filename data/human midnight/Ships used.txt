@@ -142,7 +142,7 @@ ship "Marauder Hauler" "Marauder Hauler (used engines)"
 		"Small Radar Jammer" 2
 		"Water Coolant System"
 		
-		"Afterburner"
+		"Volcano Afterburner"
 		"A370 Atomic Thruster"
 		"A375 Atomic Steering"
 		"Scram Drive"
@@ -345,7 +345,7 @@ ship "Marauder Bounder" "Marauder Bounder (Used)"
 		
 		"A250 Atomic Thruster"
 		"A255 Atomic Steering"
-		"Afterburner"
+		"Volcano Afterburner"
 		"Hyperdrive"
 		
 	gun "Modified Blaster"
@@ -859,7 +859,7 @@ ship "Marauder Raven" "Marauder Raven (Used)"
 		
 		"A250 Atomic Thruster"
 		"A375 Atomic Steering"
-		"Afterburner"
+		"Volcano Afterburner"
 		"Hyperdrive"
 	
 	gun "Modified Blaster"

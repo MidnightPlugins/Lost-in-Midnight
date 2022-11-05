@@ -39,7 +39,7 @@ ship "Kestrel" "Kestrel (Battle Engines)"
 		"Liquid Helium Cooler"
 		"Tactical Scanner" 2
 		
-		"Afterburner"
+		"Volcano Afterburner"
 		"Orca Plasma Thruster"
 		"Orca Plasma Steering"
 		"Hyperdrive"

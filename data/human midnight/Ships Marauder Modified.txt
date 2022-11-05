@@ -1030,7 +1030,7 @@ ship "Marauder Hauler" "Marauder Hauler (engines)"
 		"Small Radar Jammer" 2
 		"Water Coolant System"
 		
-		"Afterburner"
+		"Volcano Afterburner"
 		"A370 Atomic Thruster"
 		"A375 Atomic Steering"
 		"Scram Drive"
