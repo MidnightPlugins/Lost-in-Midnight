@@ -674,6 +674,7 @@ mission "Angri Byrds: Unfettered Strikers"
 				"Violin Spider (Pulse)" 3
 				"Shield Beetle (Ion Pulse)" 2
 				"Lightning Bug" 4
+		dialog `You've eliminated the <npc> and its fleet. Report to <destination> for payment.`
 	on complete
 		payment 1000000
 		dialog `The Wanderers thank you for stopping the <npc> and its fleet. You are rewarded with <payment> for your efforts.`
