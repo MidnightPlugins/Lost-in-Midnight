@@ -39,12 +39,12 @@ mission "Metropolis 1"
 		has "Caspar Delivery: done"
 	to fail
 		or
-			has "Balthazar Delivery: Aborted"
-			has "Balthazar Delivery: Failed"
-			has "Melchior Delivery: Aborted"
-			has "Melchior Delivery: Failed"
-			has "Caspar Delivery: Aborted"
-			has "Caspar Delivery: Failed"
+			has "Balthazar Delivery: aborted"
+			has "Balthazar Delivery: failed"
+			has "Melchior Delivery: aborted"
+			has "Melchior Delivery: failed"
+			has "Caspar Delivery: aborted"
+			has "Caspar Delivery: failed"
 	on offer
 		log "People" "Joseph Welder" `A mechanic from Luna who has offered to put together a Metropolis city ship if you deliver a set of District, Prefecture, and Municipality ships to him.`
 		conversation
