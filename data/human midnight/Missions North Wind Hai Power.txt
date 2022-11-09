@@ -807,7 +807,7 @@ ship "Star Queen" "Star Queen (Fission S2)"
 mission "Turner Inc.: Hai Power 7"
 	name "Hai Power: Daring Rescue"
 	description "Escort the <npc> to <destination>."
-	source "Deadman's Cove"
+	source "New Tortuga"
 	destination Hephaestus
 	to offer
 		has "Turner Inc.: Hai Power 6: done"
