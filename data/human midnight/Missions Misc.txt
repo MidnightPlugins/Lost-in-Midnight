@@ -465,7 +465,7 @@ mission "Free Worlds Infiltrator 1"
 	landing
 	deadline 7
 	name "Free Worlds Infiltrator"
-	description "A Republic Intelligence spy ship named the <npc> was spotted near <origin>. Catch the fleeing ship before <date> and retrieve whatever data they've acquired. Then deliver it to <destination>."
+	description "A Republic Intelligence spy ship named the <npc> was spotted near <origin>. Capture the fleeing ship before <date> and retrieve whatever data they've acquired. Then deliver it to <destination>."
 	source
 		government "Free Worlds"
 	destination
@@ -513,7 +513,7 @@ mission "Free Worlds Infiltrator 2"
 	landing
 	deadline 7
 	name "Free Worlds Infiltrator"
-	description "A Republic Intelligence spy ship named the <npc> was spotted near <origin>. Catch the fleeing ship before <date> and retrieve whatever data they've acquired. Then deliver it to <destination>."
+	description "A Republic Intelligence spy ship named the <npc> was spotted near <origin>. Capture the fleeing ship before <date> and retrieve whatever data they've acquired. Then deliver it to <destination>."
 	source
 		government "Free Worlds"
 	destination
