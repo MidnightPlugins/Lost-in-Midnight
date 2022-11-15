@@ -963,6 +963,8 @@ mission "Star Explorer Korath Raid"
 		log `Salvaged the "Icarus," a Star Explorer that had wandered into Korath territory and was being ransacked by one of their Raiders. Sadly, the original crew was lost.`
 
 ship "Star Explorer" "Star Explorer (Korath)"
+	add attributes
+		"self destruct" -.15
 	outfits
 		"Laser Turret" 6
 		"Torpedo Launcher"
