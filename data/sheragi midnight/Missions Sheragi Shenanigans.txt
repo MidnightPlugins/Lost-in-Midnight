@@ -751,6 +751,7 @@ mission "Diamondback Jamboree"
 				`	"Sorry, I have other things to do."`
 					decline
 			`	"Great! I'm Peter. The others are Paul, Mary, and Leonard." The other pilots welcome you into their group. Leonard is playing an old recording of a song about a magical dragon. It's a catchy tune."`
+				accept
 	on defer
 		set "Randomize Diamondback Jamboree"
 	on enter "Zubeneschamali"
