@@ -802,8 +802,18 @@ mission "Diamondback Jamboree"
 		dialog `The pirates are still chasing you. You should get back in orbit and make sure the Diamondbacks are safe.`
 	on complete
 		payment 300000
+		clear "Randomize Diamondback Jamboree"
 		dialog `You've cleared the pirate blockade. The festival organizers reward you with <payment> for your assistance. The rest of the Diamondback Jamboree is an enjoyable experience.`
 
+mission "Diamondback Jamboree Patch"
+	landing
+	invisible
+	to offer
+		has "Diamondback Jamboree: declined"
+	on offer
+		clear "Diamondback Jamboree: offered"
+		clear "Diamondback Jamboree: declined"
+		fail
 
 mission "Sheragi Shenanigans: Counterfeits"
 	minor
