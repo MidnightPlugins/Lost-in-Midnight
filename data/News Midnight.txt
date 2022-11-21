@@ -520,3 +520,19 @@ news "Midnight Graffiti"
 			"A spray-painted image of a black cube."
 			"Do you know the Inferno Dragon?"
 			"Lost in Midnight"
+
+news "Midnight Wanderer Veteran"
+	to show
+		has "event: wanderers: the eye opens""
+	location
+		government "Wanderer"
+	name
+		word
+			"Wanderer Veteran"
+	message
+		word
+			`"`
+		word
+			"I used to [serve, work] in the military. But then I [took, suffered] a pulse rifle blast in the knee."
+		word
+			`"`
