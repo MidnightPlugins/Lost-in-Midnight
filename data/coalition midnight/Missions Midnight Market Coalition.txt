@@ -288,7 +288,7 @@ mission "Midnight Market: Coalition Smuggling 1"
 				random < 5
 	on offer
 		conversation
-			`You receive a message indicating a job opportunity on Poisonwood. It involves escorting a ship outside of human space. The address is for a warehouse near the Poisonwood spaceport. Payment is 1,000,000`
+			`You receive a message indicating a job opportunity on Poisonwood. It involves escorting a ship outside of human space. The address is for a warehouse near the Poisonwood spaceport. Payment is 1,000,000 credits.`
 			choice
 				`	(Accept.)`
 					accept
@@ -302,6 +302,7 @@ mission "Midnight Market: Coalition Smuggling 1"
 	on abort
 		"Midnight Market" --
 		set "Randomize Midnight Market: Coalition Smuggling 1"
+		clear "Midnight Market: Coalition Smuggling 1: offered"
 	on complete
 		dialog "Head to the spaceport to learn more about the escort job."
 
@@ -430,6 +431,7 @@ mission "Midnight Market: Coalition Smuggling 2"
 		dialog `You escort the ship to secluded warehouse where they start unloading the cargo. Some of it is very bulky. You get a message congratulating you on a job well done. <payment> has been deposited into your account.`
 
 mission "Midnight Market: Coalition Smuggling 3"
+	minor
 	name "Mystery Job"
 	description "Escort a ship from <destination> to somewhere outside human space..."
 	source
@@ -448,7 +450,7 @@ mission "Midnight Market: Coalition Smuggling 3"
 				random < 10
 	on offer
 		conversation
-			`You receive a message indicating a job opportunity on Poisonwood. It involves escorting a ship outside of human space. The address is for a warehouse near the Poisonwood spaceport. Payment is 1000000`
+			`You receive a message indicating a job opportunity on Poisonwood. It involves escorting a ship outside of human space. The address is for a warehouse near the Poisonwood spaceport. Payment is 1,000,000 credits.`
 			choice
 				`	(Accept.)`
 					accept
@@ -649,7 +651,7 @@ mission "Midnight Market: Source of Coalition Smuggling 1"
 		conversation
 			scene "scene/scene-modelguns"
 			`You wonder where the Coalition Smugglers get their supplies from...`
-			accept
+				accept
 	on fail
 		clear "Midnight Market: Source of Coalition Smuggling 1: offered"
 	on enter "Men"
