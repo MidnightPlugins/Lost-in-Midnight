@@ -258,7 +258,7 @@ mission "Grave Digger: Nightingale 2"
 	waypoint Segesta
 	waypoint Aescolanus
 	to offer
-		has "Grave Digger: Nightingale: done"
+		has "Grave Digger: Nightingale 1: done"
 		random < 10
 
 	on enter Ossipago
