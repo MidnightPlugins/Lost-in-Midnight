@@ -523,7 +523,7 @@ news "Midnight Graffiti"
 
 news "Midnight Wanderer Veteran"
 	to show
-		has "event: wanderers: the eye opens""
+		has "event: wanderers: the eye opens"
 	location
 		government "Wanderer"
 	name
