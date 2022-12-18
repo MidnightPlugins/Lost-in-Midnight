@@ -11,6 +11,38 @@
 
 
 
+mission "Midnight Remnant: Cognizance 29 plus"
+	landing
+	invisible
+	source "Baianus"
+	destination "Caelian"
+	to offer
+		has "Remnant: Cognizance 28: done"
+	npc kill
+		government "Korath"
+		personality heroic plunders harvests waiting
+		system "Parca"
+		fleet
+			names "korath"
+			cargo 1
+			commodities "Food"
+			variant
+				"Lor'nag Ik 590 (Troop Transport)"
+	npc
+		to spawn
+			has "Remnant: Cognizance 29: done"
+		government "Korath"
+		personality heroic plunders harvests waiting
+		system "Parca"
+		fleet
+			names "korath"
+			commodities "Metal" "Plastic" "Heavy Metals"
+			variant
+				"Rano'erek (Ground Assault)" 2
+				"'olofez" 8
+
+
+
 fleet "Korath Explorers"
 	government "Korath (Civilian)"
 	personality mining harvests surveillance timid coward
