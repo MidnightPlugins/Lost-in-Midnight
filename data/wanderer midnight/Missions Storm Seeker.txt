@@ -423,7 +423,7 @@ mission "Storm Seeker Raid: North"
 		fleet "Large Oathkeeper"
 		fleet "Small Oathkeeper"
 
-	npc kill
+	npc
 		government "Pirate"
 		personality waiting plunders harvests coward
 		fleet
