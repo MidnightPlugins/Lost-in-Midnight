@@ -349,6 +349,7 @@ mission "Oathbreakers: Rum Cellar Fight"
 	description "Visit <stopovers> to purchase a dose of stolen medicine for Magdalena's orphanage. Payment is <payment>."
 	source
 		attributes "pirate"
+		not attributes "station"
 	stopover "Rum Cellar"
 	to offer
 		has "event: reveal Chasm"
