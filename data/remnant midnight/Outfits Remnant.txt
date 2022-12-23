@@ -25,12 +25,12 @@ outfit "Flare Belcher"
 	"fuel capacity" 100
 	"gun ports" -1
 	weapon
-		sprite "effect/explosion/small"
+		sprite "effect/explosion/pug/small"
 			"frame rate" 60
 			"no repeat"
 		sound "flamethrower"
 		icon "icon/flamethrower"
-		"submunition" "Flamethrower Projectile"
+		"submunition" "Flare Belcher Projectile"
 		"inaccuracy" 12
 		"velocity" 9
 		"lifetime" 5
@@ -66,9 +66,9 @@ outfit "Lightning Tendril"
 		"reload" 1
 		"firing energy" 5.4
 		"firing heat" 2.8
-		"shield damage" 7.4
-		"hull damage" 5.8
-		"ion damage" 5
+		"shield damage" 3.7
+		"hull damage" 2.9
+		"ion damage" .2
 	description `A weapon inspired by the electrifying Luminazoa. The tentacle is difficult to control. The gunner must often struggle to aim at a target.`
 
 outfit "Quill Launcher"
@@ -92,8 +92,8 @@ outfit "Quill Launcher"
 		"velocity" 10
 		"lifetime" 36
 		"reload" 5
-		"firing energy" 112
-		"firing heat" 7
+		"firing energy" 108
+		"firing heat" 9
 		"shield damage" 38
 		"hull damage" 46
 		"piercing" .2
