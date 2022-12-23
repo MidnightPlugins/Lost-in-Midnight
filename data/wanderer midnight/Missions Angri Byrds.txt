@@ -287,7 +287,9 @@ mission "Angri Byrds: Peace Through Strength 1"
 	destination "Desi Seledrak"
 	to offer
 		has "Wanderers Ap'arak 3: Pug: done"
-		has "Wanderers: Sestor: Final: done"
+		or
+			has "Wanderers: Sestor: Final: done"
+			has "Wanderers: Sestor: Final: Patched"
 		"tribute: Varu Tev'kei" > 0
 		"tribute: Kort Kehai" > 0
 		"tribute: Vara Rakak" > 0
