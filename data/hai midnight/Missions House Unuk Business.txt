@@ -21,10 +21,12 @@ mission "House Unuk Business"
 	source Flood
 	to offer
 		has "QKBlade: House Unuk Secrets: declined"
-		has "Wanderers: Sestor: Final: done"
 		has "Coalition: Contributor: done"
 		has "event: remnant: sign studies complete"
 		has "First Contact: Setar Fort: declined"
+		or
+			has "Wanderers: Sestor: Final: done"
+			has "Wanderers: Sestor: Final: Patched"
 
 		or
 			not "Randomize House Unuk Business"
