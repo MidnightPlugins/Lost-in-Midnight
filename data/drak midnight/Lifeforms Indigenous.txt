@@ -1116,10 +1116,10 @@ outfit "Lightning Tendril?"
 		"velocity" 320
 		"lifetime" 1
 		"reload" 1
-		"firing energy" 3.7
+		"firing energy" 2.7
 		"shield damage" 7.4
 		"hull damage" 5.8
-		"ion damage" 5
+		"ion damage" .4
 
 
 fleet "Luminazoa"

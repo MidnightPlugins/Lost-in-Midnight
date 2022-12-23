@@ -68,7 +68,7 @@ ship "Nova Firefly"
 		"gaslining" 1
 		"jump drive" 1
 		"jump speed" 1
-		"jump effect" "pug flamethrower die"
+		"jump effect" "flare belcher die"
 		"jump in sound" "nuke"
 		"jump out sound" "nuke"
 		"ramscoop" 2
@@ -98,11 +98,11 @@ outfit "Flare Belcher?"
 	"gun ports" -1
 	"unplunderable" 1
 	weapon
-		sprite "effect/explosion/small"
+		sprite "effect/explosion/pug/small"
 			"frame rate" 60
 			"no repeat"
 		sound "flamethrower"
-		"submunition" "Flamethrower Projectile"
+		"submunition" "Flare Belcher Projectile"
 		"inaccuracy" 12
 		"velocity" 9
 		"lifetime" 5
@@ -110,7 +110,43 @@ outfit "Flare Belcher?"
 		"firing energy" .1
 		"firing fuel" .1
 
+outfit "Flare Belcher Projectile"
+	weapon
+		sprite "projectile/flamethrower"
+			"frame rate" 17
+			"random start frame"
+		"hit effect" "flare belcher hit"
+		"die effect" "flare belcher die"
+		"inaccuracy" 20
+		"lifetime" 22
+		"shield damage" .8
+		"hull damage" .7
+		"heat damage" 200
+		"burn damage" .2
 
+effect "flare belcher die"
+	sprite "effect/explosion/pug/small"
+		"no repeat"
+		"frame rate" 15
+		"random start frame"
+	"lifetime" 24
+	"random angle" 360
+	"random frame rate" 5
+	"random spin" 2
+	"random velocity" .4
+	"velocity scale" .4
+
+effect "flare belcher hit"
+	sprite "effect/explosion/pug/medium"
+		"no repeat"
+		"frame rate" 15
+		"random start frame"
+	"lifetime" 28
+	"random angle" 360
+	"random frame rate" 5
+	"random spin" 3
+	"random velocity" .6
+	"velocity scale" .4
 
 ship "Egg Pouch"
 	noun "creature"
