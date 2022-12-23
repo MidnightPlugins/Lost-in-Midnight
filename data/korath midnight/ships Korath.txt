@@ -228,6 +228,38 @@ ship "Korsmanath A'awoj" "Korsmanath A'awoj (Jump)"
 
 
 
+# appears in a korath mission
+ship "Tek Far 71 - Lek" "Tek Far 71 - Lek (Jump)"
+	outfits
+		"Korath Detainer"
+		"Thermal Repeater" 2
+		"Thermal Repeater Turret" 3
+		"Warder Anti-Missile"
+		"Double Plasma Core"
+		"Generator (Furnace Class)"
+		"Systems Core (Medium)"
+		"Large Heat Shunt" 2
+		"Small Heat Shunt"
+		"Outfits Expansion"
+		"Control Transceiver"
+		"Thruster (Lunar Class)"
+		"Steering (Lunar Class)"
+		"Jump Drive"
+
+# appears in a korath mission
+ship "Tek Far 78 - Osk" "Tek Far 78 - Osk (Jump)"
+	outfits
+		"Korath Detainer"
+		"Warder Anti-Missile" 2
+		"Thermal Repeater Turret" 3
+		"Triple Plasma Core"
+		"Systems Core (Medium)"
+		"Large Heat Shunt" 3
+		"Outfits Expansion"
+		"Control Transceiver"
+		"Thruster (Lunar Class)"
+		"Steering (Planetary Class)"
+		"Jump Drive"
 
 
 

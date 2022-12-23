@@ -41,6 +41,126 @@ mission "Midnight Remnant: Cognizance 29 plus"
 				"Rano'erek (Ground Assault)" 2
 				"'olofez" 8
 
+phrase "Seskerat Pratka"
+	word
+		"Seskerat Pratka"
+
+mission "Midnight Wanderers: Sestor: Final Revenge A"
+	landing
+	invisible
+	source "Desi Seledrak"
+	to offer
+		has "event: wanderers: exiles have drones"
+	on enter
+		conversation
+			scene "thumbnail/world-ship a"
+			`Your recent visit to <origin> reminded you of the three Korath ships that brought automaton technology back to the Exiles and you had a strange dream about battling against those same three ships. Your memories of the Lor'kas Ik 577, the Seskerat Pratka, are particularly vivid in your mind. Somehow, you feel certain that these three ships are still somewhere in Korath space.`
+	on enter "Kor Fel'tar"
+		conversation
+			scene "thumbnail/world-ship a"
+			`You recognize that Lor'kas Ik 577... It's the Seskerat Pratka! You remember it from among the three Korath ships that brought automaton technology back to the Exiles. It's too late to lament that misfortune, but perhaps some payback is in order. The Seskerat Pratka targets you with its weapons and deploys its 'olofez fighter escorts...`
+	npc
+		system "Kor Fel'tar"
+		government "Korath"
+		personality heroic staying
+		fleet
+			names "korath"
+			variant
+				"'olofez" 3
+				"Model 16" 2
+				"Model 8" 6
+	npc kill
+		system "Kor Fel'tar"
+		government "Korath"
+		personality timid staying
+		fleet
+			names "Seskerat Pratka"
+			cargo 5
+			outfitters "Korath Basics"
+			variant
+				"Lor'kas Ik 577 (Jump)"
+		dialog `You've defeated the Seskerat Pratka. You vaguely recall something like this happening in a dream you had on <destination>...`
+
+phrase "Eskretakfakta"
+	word
+		"Eskretakfakta"
+
+mission "Midnight Wanderers: Sestor: Final Revenge B"
+	landing
+	invisible
+	source "Desi Seledrak"
+	to offer
+		has "Midnight Wanderers: Sestor: Final Revenge A: done"
+	on enter
+		conversation
+			scene "thumbnail/world-ship b"
+			`During your visit to <origin> you had another strange dream about battling against the three Korath ships that brought automaton technology back to the Exiles. This time your memories of the Ra'gru Ik 618, the Eskretakfakta, are particularly vivid in your mind. You've destroyed one of the three, but Eskretakfakta and another may yet be out in Korath space.`
+	on enter "Kor Ak'Mari"
+		conversation
+			scene "thumbnail/world-ship b"
+			`You recognize that Ra'gru Ik 618... It's the Eskretakfakta! You remember it from among the three Korath ships that brought automaton technology back to the Exiles. It's too late to put that genie back in the bottle, but perhaps some payback is in order. The Eskretakfakta turns its weapons towards you while two automaton escorts release a swarm of fighters and drones...`
+	npc
+		system "Kor Ak'Mari"
+		government "Korath"
+		personality heroic staying
+		fleet
+			names "korath"
+			variant
+				"Tek Far 78 - Osk (Jump)"
+				"Far Osk 27" 9
+				"Tek Far 78 - Osk (Jump)"
+				"Far Lek 14" 10
+	npc kill
+		system "Kor Ak'Mari"
+		government "Korath"
+		personality timid staying
+		fleet
+			names "Eskretakfakta"
+			cargo 5
+			outfitters "Korath Basics"
+			variant
+				"Ra'gru Ik 618"
+		dialog `You've defeated the Eskretakfakta. This is eerily similar to a recurring dream you've been having whenever you visit <destination>...`
+
+phrase "Prekaprat Skata"
+	word
+		"Prekaprat Skata"
+
+mission "Midnight Wanderers: Sestor: Final Revenge C"
+	landing
+	invisible
+	source "Desi Seledrak"
+	to offer
+		has "Midnight Wanderers: Sestor: Final Revenge B: done"
+	on enter
+		conversation
+			scene "thumbnail/world-ship c"
+			`Perhaps being on <origin> has triggered something in you. The strange dream about battling against the three Korath ships that brought automaton technology back to the Exiles haunted your thoughts again. Your memories of the Kas'lor Ik 582, the Prekaprat Skata, are particularly vivid in your mind. It is the last of the three remaining. You feel certain it is somewhere in Korath space.`
+	on enter "Kor Nor'peli"
+		conversation
+			scene "thumbnail/world-ship c"
+			`You recognize that Kas'lor Ik 582... It's the Prekaprat Skata! You remember it from among the three Korath ships that brought automaton technology back to the Exiles. It's too late to undo past mistakes, but perhaps some payback is in order. The Prekaprat Skata turns its weapons towards you and deploys its Far Osk fighter escorts...`
+	npc
+		system "Kor Nor'peli"
+		government "Korath"
+		personality heroic staying
+		fleet
+			names "korath"
+			variant
+				"Far Osk 27" 3
+				"Met Par Tek 53 (Sniper)" 2
+	npc kill
+		system "Kor Nor'peli"
+		government "Korath"
+		personality timid staying
+		fleet
+			names "Prekaprat Skata"
+			cargo 5
+			outfitters "Korath Basics"
+			variant
+				"Kas'lor Ik 582 (Jump)"
+		dialog `You've defeated the Prekaprat Skata. With the last of the trio defeated, perhaps the strange dreams you were having on <destination> about fighting these ships will finally come to an end...`
+
 
 
 fleet "Korath Explorers"
