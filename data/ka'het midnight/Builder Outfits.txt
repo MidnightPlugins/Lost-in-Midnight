@@ -96,7 +96,7 @@ outfit "Builder Negator"
 		"live effect" "ionball spark" 140
 		"live effect" "ionball trail" 140
 		"live effect" "ionball twinkle" 560
-		"inaccuracy" 0.2
+		"inaccuracy" 0.4
 		"velocity" 18
 		"lifetime" 200
 		"reload" 10
