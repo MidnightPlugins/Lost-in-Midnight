@@ -372,3 +372,16 @@ event "ion flash bang support"
 			"Solifuge (Ion Flash)"
 			"Violin Spider" 3
 			"Violin Spider (Pulse)" 3
+
+event "add quantum bloodstones"
+	fleet "Small Hai Merchant (Sympathizers)"
+		add variant 1
+			"Water Bug (Bloodstone)"
+			"Lightning Bug (Bloodstone)" 2
+		add variant 1
+			"Water Bug (Bloodstone)" 2
+			"Lightning Bug (Bloodstone)"
+	fleet "Large Hai Merchant (Sympathizers)"
+		add variant 1
+			"Shield Beetle (Bloodstone)"
+			"Water Bug (Bloodstone)" 3

@@ -161,3 +161,15 @@ outfit "Quantum Turtle Blade"
 	"unplunderable" 1
 
 
+
+# Hai Unfettered cultists carry Quantum Bloodstones.
+
+outfit "Quantum Bloodstone"
+	category "Systems"
+	cost 4800000
+	thumbnail "outfit/bloodstone"
+	"mass" 0.1
+	"outfit space" -1
+	"quantum keystone" 1
+	description "A rare variant of the Quantum Keystone. Hai who prefer these treat them with an awe and reverence that almost seems fanatical."
+	description "	Quantum Bloodstones aren't for sale at regular outfitters. The few Hai who have them keep their source a closely guarded secret."

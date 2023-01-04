@@ -11,6 +11,21 @@
 
 
 
+ship "Lightning Bug" "Lightning Bug (Bloodstone)"
+	outfits
+		"Ion Cannon"
+		"Bullfrog Anti-Missile" 2
+		"Geode Reactor"
+		"Hai Gorge Batteries"
+		"Hai Corundum Regenerator"
+		"Hai Williwaw Cooling"
+		"Quantum Bloodstone"
+		"Pulse Rifle" 2
+		"Ion Flash Bang"
+		`"Benga" Atomic Thruster`
+		`"Biroo" Atomic Steering`
+		"Hyperdrive"
+
 ship "Lightning Bug" "Lightning Bug (Jump)"
 	outfits
 		"Ion Cannon"
@@ -20,13 +35,12 @@ ship "Lightning Bug" "Lightning Bug (Jump)"
 		"Hai Corundum Regenerator"
 		"Hai Williwaw Cooling"
 		"Quantum Keystone"
+		"Dual Pulse Pistols"
 		"Pulse Rifle" 2
 		"Ion Flash Bang"
 		`"Benga" Atomic Thruster`
 		`"Biroo" Atomic Steering`
 		"Jump Drive"
-
-
 
 ship "Lightning Bug" "Lightning Bug (Jump, Pulse)"
 	outfits
@@ -44,6 +58,26 @@ ship "Lightning Bug" "Lightning Bug (Jump, Pulse)"
 		"Jump Drive"
 
 
+
+ship "Shield Beetle" "Shield Beetle (Bloodstone)"
+	outfits
+		"Ion Cannon" 4
+		"Hai Tracker Pod" 4
+		"Hai Tracker" 280
+		"Tracker Storage Pod" 2
+		"Chameleon Anti-Missile" 2
+		"Boulder Reactor"
+		"Geode Reactor"
+		"Hai Gorge Batteries"
+		"Hai Ravine Batteries"
+		"Hai Diamond Regenerator"
+		"Hai Williwaw Cooling" 2
+		"Quantum Bloodstone"
+		"Pulse Rifle" 55
+		"Ion Flash Bang" 27
+		`"Bondir" Atomic Thruster`
+		`"Bufaer" Atomic Steering`
+		"Hyperdrive"
 
 ship "Shield Beetle"  "Shield Beetle (Ion Flash)"
 	outfits
@@ -86,8 +120,6 @@ ship "Shield Beetle" "Shield Beetle (Police, Ion Flash)"
 		`"Bondir" Atomic Thruster`
 		`"Bufaer" Atomic Steering`
 		"Hyperdrive"
-
-
 
 ship "Shield Beetle" "Shield Beetle (Jump, Ion Pulse)"
 	outfits
@@ -241,7 +273,6 @@ ship "Solifuge" "Solifuge Prototype"
 	bay "Fighter" 51.5 0 under
 	bay "Fighter" -51.5 60 under
 	bay "Fighter" 51.5 60 under
-
 	description `This is the prototype. There are slight differences from the final production model, but the essential core elements of the Solifuge haven't changed.`
 
 
@@ -268,6 +299,24 @@ ship "Solifuge" "Solifuge (Ion Flash)"
 
 
 
+ship "Water Bug" "Water Bug (Bloodstone)"
+	outfits
+		"Hai Tracker Pod" 2
+		"Hai Tracker" 168
+		"Tracker Storage Pod" 2
+		"Pulse Turret"
+		"Chameleon Anti-Missile" 2
+		"Geode Reactor"
+		"Hai Gorge Batteries"
+		"Hai Diamond Regenerator"
+		"Hai Williwaw Cooling"
+		"Quantum Bloodstone"
+		"Ion Flash Bang"
+		`"Basrem" Reverse Thruster`
+		`"Benga" Atomic Thruster`
+		`"Benga" Atomic Steering`
+		"Hyperdrive"
+
 ship "Water Bug" "Water Bug (Jump, Ion Pulse)"
 	outfits
 		"Ion Pulse Cannon" 2
@@ -286,8 +335,6 @@ ship "Water Bug" "Water Bug (Jump, Ion Pulse)"
 		`"Benga" Atomic Steering`
 		`"Benga" Atomic Thruster`
 		"Jump Drive"
-
-
 
 ship "Water Bug" "Water Bug (Jump, Pulse)"
 	outfits
