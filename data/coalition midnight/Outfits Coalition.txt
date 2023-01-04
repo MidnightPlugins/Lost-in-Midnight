@@ -64,6 +64,28 @@ outfit "Camouflaged Blaster Turret"
 
 
 
+outfit "Deflector Emitter"
+	category "Turrets"
+	licenses
+		Coalition
+	cost 1274500
+	thumbnail "outfit/deflector emitter"
+	"mass" 28
+	"outfit space" -28
+	"weapon capacity" -28
+	"turret mounts" -1
+	"shields" 500
+	"shield energy multiplier" .1
+	"shield heat multiplier" .1
+	"shield fuel multiplier" .1
+	weapon
+		"hardpoint sprite" "hardpoint/deflector emitter"
+		"turret turn" 4
+	description "The Deflector Emitter was an accidental invention that came about during the development of the Heliarch Repulsor. It supplements shield coverage over the ship, helping to protect it from asteroids or other debris."
+	description "	In addition to occupying a turret mount, each emitter installed will increase stress on the shield generators, raising consumption of resources used to replenish your shields."
+
+
+
 outfit "Model Cannon"
 	category "Guns"
 	cost 4370
@@ -87,12 +109,15 @@ outfit "Model Turret"
 	"weapon capacity" -1
 	"turret mounts" -1
 	weapon
+		"hardpoint sprite" "hardpoint/model turret"
 		"turret turn" 2.8
 
 
 
 outfit "Riot Containment Barrier"
 	category "Hand to Hand"
+	licenses
+		Coalition
 	cost 84000
 	thumbnail "outfit/riot containment"
 	"mass" 4

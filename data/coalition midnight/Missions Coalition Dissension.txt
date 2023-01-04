@@ -11,6 +11,173 @@
 
 
 
+mission "Coalition Dissension: Add Deflectors/Barriers"
+	minor
+	invisible
+	source
+		government "Coalition"
+		attributes "outfitter"
+		not attributes "uninhabited"
+	to offer
+		"coalition dissension" >= 5
+		random < 50
+	on offer
+		event "coalition add deflectors/barriers"
+		conversation
+			scene "outfit/deflector emitter"
+			scene "outfit/riot containment"
+			`You notice more customers at the outfitter than usual. A sales clerk approaches and explains: "New outfits in stock we have, to bolster your ship's defenses! Not weapons these are, so allowed by the Heliarch to purchase you can." Despite this claim, one appears to be some sort of turret while the other looks like a portable barricade. "Reports of dissidents, rising they are. Attack your ship, they could! Our outfitter you should visit and upgrades consider." Customers seem to be buying into the sales pitch as you see several of the new items being purchased. "Apologies," states the sales clerk. "Call the warehouse, to restock I must." The clerk leaves you as more customers line up to make their purchases.`
+				decline
+
+event "coalition add deflectors/barriers"
+	outfitter "Coalition Basics"
+		add "Riot Containment Barrier"
+	outfitter "Coalition Advanced"
+		add "Deflector Emitter"
+		add "Riot Containment Barrier"
+	fleet "Small Arach"
+		add variant 1
+			"Arach Transport (Deflector Barrier)"
+			"Arach Courier (Barrier)"
+		add variant 1
+			"Arach Freighter (Deflector Barrier)"
+			"Arach Courier (Barrier)"
+		add variant 1
+			"Arach Courier (Barrier)" 2
+		add variant 1
+			"Arach Courier (Barrier)"
+		add variant 1
+			"Arach Freighter (Deflector Barrier)" 2
+		add variant 1
+			"Arach Freighter (Deflector Barrier)"
+			"Kimek Thorn (Barrier)" 2
+		add variant 1
+			"Arach Transport (Deflector Barrier)"
+			"Saryd Runabout (Barrier)"
+		add variant 1
+			"Arach Courier (Barrier)"
+			"Saryd Runabout (Barrier)"
+	fleet "Large Arach"
+		add variant 1
+			"Arach Hulk (Deflector Barrier)"
+		add variant 1
+			"Arach Spindle (Deflector Barrier)"
+		add variant 1
+			"Arach Freighter (Deflector Barrier)"
+			"Arach Transport (Deflector Barrier)"
+			"Arach Courier (Barrier)" 2
+		add variant 1
+			"Arach Hulk (Deflector Barrier)"
+			"Arach Spindle (Deflector Barrier)"
+		add variant 1
+			"Arach Spindle (Deflector Barrier)"
+			"Arach Freighter (Deflector Barrier)"
+		add variant 1
+			"Arach Freighter (Deflector Barrier)"
+			"Arach Transport (Deflector Barrier)"
+			"Kimek Thistle (Deflector Barrier)"
+		add variant 1
+			"Arach Spindle (Deflector Barrier)"
+			"Kimek Briar (Deflector Barrier)"
+			"Saryd Visitor (Deflector Barrier)"
+	fleet "Small Kimek"
+		add variant 1
+			"Kimek Thorn (Barrier)"
+		add variant 1
+			"Kimek Thorn (Barrier)" 2
+		add variant 1
+			"Kimek Thorn (Barrier)" 3
+		add variant 1
+			"Kimek Briar (Deflector Barrier)"
+			"Kimek Thorn (Barrier)"
+		add variant 1
+			"Kimek Thistle (Deflector Barrier)"
+		add variant 1
+			"Kimek Thistle (Deflector Barrier)"
+			"Kimek Thorn (Barrier)"
+		add variant 1
+			"Kimek Briar (Deflector Barrier)" 2
+		add variant 1
+			"Kimek Briar (Deflector Barrier)"
+			"Saryd Runabout (Barrier)"
+		add variant 1
+			"Kimek Thistle (Deflector Barrier)"
+			"Arach Courier (Barrier)"
+	fleet "Large Kimek"
+		add variant 1
+			"Kimek Spire (Deflector Barrier)"
+		add variant 1
+			"Kimek Spire (Deflector Barrier)"
+			"Kimek Thorn (Barrier)" 2
+		add variant 1
+			"Kimek Thistle (Deflector Barrier)"
+			"Kimek Briar (Deflector Barrier)"
+			"Kimek Thorn (Barrier)"
+		add variant 1
+			"Kimek Thistle (Deflector Barrier)" 3
+		add variant 1
+			"Kimek Spire (Deflector Barrier)"
+			"Kimek Thistle (Deflector Barrier)"
+			"Kimek Briar (Deflector Barrier)"
+			"Kimek Thorn (Barrier)"
+		add variant 1
+			"Kimek Spire (Deflector Barrier)" 2
+		add variant 1
+			"Kimek Spire (Deflector Barrier)"
+			"Saryd Traveler (Deflector Barrier)"
+		add variant 1
+			"Kimek Thistle (Deflector Barrier)"
+			"Kimek Thorn (Barrier)" 2
+			"Saryd Visitor (Deflector Barrier)"
+	fleet "Small Saryd"
+		add variant 1
+			"Saryd Runabout (Barrier)"
+		add variant 1
+			"Saryd Visitor (Deflector Barrier)"
+		add variant 1
+			"Saryd Runabout (Barrier)" 2
+		add variant 1
+			"Saryd Visitor (Deflector Barrier)"
+			"Saryd Runabout (Barrier)"
+		add variant 1
+			"Saryd Visitor (Deflector Barrier)"
+			"Saryd Runabout (Barrier)" 2
+		add variant 1
+			"Saryd Visitor (Deflector Barrier)"
+			"Kimek Thorn (Barrier)" 2
+		add variant 1
+			"Saryd Visitor (Deflector Barrier)"
+			"Arach Courier (Barrier)"
+	fleet "Large Saryd"
+		add variant 1
+			"Saryd Traveler (Deflector Barrier)"
+		add variant 1
+			"Saryd Sojourner (Deflector Barrier)"
+		add variant 1
+			"Saryd Traveler (Deflector Barrier)"
+			"Saryd Visitor (Deflector Barrier)"
+		add variant 1
+			"Saryd Traveler (Deflector Barrier)"
+			"Saryd Visitor (Deflector Barrier)"
+			"Saryd Runabout (Barrier)"
+		add variant 1
+			"Saryd Visitor (Deflector Barrier)" 3
+		add variant 1
+			"Saryd Sojourner (Deflector Barrier)"
+			"Saryd Traveler (Deflector Barrier)"
+		add variant 1
+			"Saryd Sojourner (Deflector Barrier)"
+			"Saryd Visitor (Deflector Barrier)" 2
+		add variant 1
+			"Saryd Sojourner (Deflector Barrier)"
+			"Kimek Thorn (Barrier)" 4
+		add variant 1
+			"Saryd Traveler (Deflector Barrier)"
+			"Arach Courier (Barrier)" 2
+			"Kimek Briar (Deflector Barrier)"
+
+
+
 mission "Coalition Dissension: Model Guns Delivery (Arach)"
 	deadline
 	minor
@@ -245,7 +412,7 @@ fleet "Saryd Camo Blasters"
 	variant
 		"Saryd Visitor (Blaster)"
 
-		
+
 
 mission "Coalition Dissension: Bounty Arach Model Guns 1"
 	job
@@ -826,7 +993,7 @@ mission "Coalition Dissension: Rogue Heliarch Arach (Neutralizer)"
 		personality target waiting staying vindictive
 		fleet "Rogue Heliarch (Neutralizer)"
 		conversation
-			scene "thumbnail/heliarch neutralizer"		
+			scene "thumbnail/heliarch neutralizer"
 			apply
 				"reputation: Heliarch" -= 5
 				"coalition dissension" ++
@@ -837,6 +1004,7 @@ mission "Coalition Dissension: Rogue Heliarch Arach (Neutralizer)"
 		clear "Coalition Dissension: Rogue Heliarch Arach (Neutralizer): offered"
 		"reputation: Heliarch" += 2
 		conversation
+			scene "thumbnail/heliarch neutralizer"
 			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you attacked the <npc> without their authorization.`
 	
 
@@ -876,7 +1044,7 @@ mission "Coalition Dissension: Rogue Heliarch Kimek (Neutralizer)"
 		personality target waiting staying vindictive
 		fleet "Rogue Heliarch (Neutralizer)"
 		conversation
-			scene "thumbnail/heliarch neutralizer"		
+			scene "thumbnail/heliarch neutralizer"
 			apply
 				"reputation: Heliarch" -= 5
 				"coalition dissension" ++
@@ -887,6 +1055,7 @@ mission "Coalition Dissension: Rogue Heliarch Kimek (Neutralizer)"
 		clear "Coalition Dissension: Rogue Heliarch Kimek (Neutralizer): offered"
 		"reputation: Heliarch" += 2
 		conversation
+			scene "thumbnail/heliarch neutralizer"
 			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you attacked the <npc> without their authorization.`
 
 mission "Coalition Dissension: Rogue Heliarch Saryd (Neutralizer)"
@@ -926,7 +1095,7 @@ mission "Coalition Dissension: Rogue Heliarch Saryd (Neutralizer)"
 		fleet "Rogue Heliarch (Neutralizer)"
 		dialog `You receive a message from the Heliarch demanding to know why you have taken posession of the <npc>. Report to <destination> to explain yourself.`
 		conversation
-			scene "thumbnail/heliarch neutralizer"		
+			scene "thumbnail/heliarch neutralizer"
 			apply
 				"reputation: Heliarch" -= 5
 				"coalition dissension" ++
@@ -937,6 +1106,7 @@ mission "Coalition Dissension: Rogue Heliarch Saryd (Neutralizer)"
 		clear "Coalition Dissension: Rogue Heliarch Saryd (Neutralizer): offered"
 		"reputation: Heliarch" += 2
 		conversation
+			scene "thumbnail/heliarch neutralizer"
 			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you attacked the <npc> without their authorization.`
 
 
@@ -977,7 +1147,7 @@ mission "Coalition Dissension: Rogue Heliarch Arach (Breacher)"
 		personality target waiting staying vindictive
 		fleet "Rogue Heliarch (Breacher)"
 		conversation
-			scene "thumbnail/heliarch breacher"		
+			scene "thumbnail/heliarch breacher"
 			apply
 				"reputation: Heliarch" -= 3
 				"coalition dissension" ++
@@ -988,6 +1158,7 @@ mission "Coalition Dissension: Rogue Heliarch Arach (Breacher)"
 		clear "Coalition Dissension: Rogue Heliarch Arach (Breacher): offered"
 		"reputation: Heliarch" += 1
 		conversation
+			scene "thumbnail/heliarch breacher"
 			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you attacked the <npc> without their authorization.`
 
 mission "Coalition Dissension: Rogue Heliarch Kimek (Breacher)"
@@ -1026,7 +1197,7 @@ mission "Coalition Dissension: Rogue Heliarch Kimek (Breacher)"
 		personality target waiting staying vindictive
 		fleet "Rogue Heliarch (Breacher)"
 		conversation
-			scene "thumbnail/heliarch breacher"		
+			scene "thumbnail/heliarch breacher"
 			apply
 				"reputation: Heliarch" -= 3
 				"coalition dissension" ++
@@ -1037,6 +1208,7 @@ mission "Coalition Dissension: Rogue Heliarch Kimek (Breacher)"
 		clear "Coalition Dissension: Rogue Heliarch Kimek (Breacher): offered"
 		"reputation: Heliarch" += 1
 		conversation
+			scene "thumbnail/heliarch breacher"
 			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you attacked the <npc> without their authorization.`
 
 
@@ -1076,7 +1248,7 @@ mission "Coalition Dissension: Rogue Heliarch Saryd (Breacher)"
 		personality target waiting staying vindictive
 		fleet "Rogue Heliarch (Breacher)"
 		conversation
-			scene "thumbnail/heliarch breacher"		
+			scene "thumbnail/heliarch breacher"
 			apply
 				"reputation: Heliarch" -= 3
 				"coalition dissension" ++
@@ -1087,6 +1259,7 @@ mission "Coalition Dissension: Rogue Heliarch Saryd (Breacher)"
 		clear "Coalition Dissension: Rogue Heliarch Saryd (Breacher): offered"
 		"reputation: Heliarch" += 1
 		conversation
+			scene "thumbnail/heliarch breacher"
 			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you attacked the <npc> without their authorization.`
 
 
@@ -1127,7 +1300,7 @@ mission "Coalition Dissension: Rogue Heliarch Arach (Interdictor)"
 		personality target waiting staying vindictive
 		fleet "Rogue Heliarch (Interdictor)"
 		conversation
-			scene "thumbnail/heliarch interdictor"		
+			scene "thumbnail/heliarch interdictor"
 			apply
 				"reputation: Heliarch" -= 14
 				"coalition dissension" ++
@@ -1138,6 +1311,7 @@ mission "Coalition Dissension: Rogue Heliarch Arach (Interdictor)"
 		clear "Coalition Dissension: Rogue Heliarch Arach (Interdictor): offered"
 		"reputation: Heliarch" += 7
 		conversation
+			scene "thumbnail/heliarch interdictor"
 			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you attacked the <npc> without their authorization.`
 
 mission "Coalition Dissension: Rogue Heliarch Kimek (Interdictor)"
@@ -1176,7 +1350,7 @@ mission "Coalition Dissension: Rogue Heliarch Kimek (Interdictor)"
 		personality target waiting staying vindictive
 		fleet "Rogue Heliarch (Interdictor)"
 		conversation
-			scene "thumbnail/heliarch interdictor"		
+			scene "thumbnail/heliarch interdictor"
 			apply
 				"reputation: Heliarch" -= 14
 				"coalition dissension" ++
@@ -1187,6 +1361,7 @@ mission "Coalition Dissension: Rogue Heliarch Kimek (Interdictor)"
 		clear "Coalition Dissension: Rogue Heliarch Kimek (Interdictor): offered"
 		"reputation: Heliarch" += 7
 		conversation
+			scene "thumbnail/heliarch interdictor"
 			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you attacked the <npc> without their authorization.`
 
 mission "Coalition Dissension: Rogue Heliarch Saryd (Interdictor)"
@@ -1225,7 +1400,7 @@ mission "Coalition Dissension: Rogue Heliarch Saryd (Interdictor)"
 		personality target waiting staying vindictive
 		fleet "Rogue Heliarch (Interdictor)"
 		conversation
-			scene "thumbnail/heliarch interdictor"		
+			scene "thumbnail/heliarch interdictor"
 			apply
 				"reputation: Heliarch" -= 14
 				"coalition dissension" ++
@@ -1236,6 +1411,7 @@ mission "Coalition Dissension: Rogue Heliarch Saryd (Interdictor)"
 		clear "Coalition Dissension: Rogue Heliarch Saryd (Interdictor): offered"
 		"reputation: Heliarch" += 7
 		conversation
+			scene "thumbnail/heliarch interdictor"
 			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you attacked the <npc> without their authorization.`
 
 
@@ -1276,7 +1452,7 @@ mission "Coalition Dissension: Rogue Heliarch Arach (Hunter)"
 		personality target waiting staying vindictive
 		fleet "Rogue Heliarch (Hunter)"
 		conversation
-			scene "thumbnail/heliarch hunter"		
+			scene "thumbnail/heliarch hunter"
 			apply
 				"reputation: Heliarch" -= 8
 				"coalition dissension" ++
@@ -1287,6 +1463,7 @@ mission "Coalition Dissension: Rogue Heliarch Arach (Hunter)"
 		clear "Coalition Dissension: Rogue Heliarch Arach (Hunter): offered"
 		"reputation: Heliarch" += 4
 		conversation
+			scene "thumbnail/heliarch hunter"
 			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you attacked the <npc> without their authorization.`
 
 mission "Coalition Dissension: Rogue Heliarch Kimek (Hunter)"
@@ -1325,7 +1502,7 @@ mission "Coalition Dissension: Rogue Heliarch Kimek (Hunter)"
 		personality target waiting staying vindictive
 		fleet "Rogue Heliarch (Hunter)"
 		conversation
-			scene "thumbnail/heliarch hunter"		
+			scene "thumbnail/heliarch hunter"
 			apply
 				"reputation: Heliarch" -= 8
 				"coalition dissension" ++
@@ -1336,6 +1513,7 @@ mission "Coalition Dissension: Rogue Heliarch Kimek (Hunter)"
 		clear "Coalition Dissension: Rogue Heliarch Kimek (Hunter): offered"
 		"reputation: Heliarch" += 4
 		conversation
+			scene "thumbnail/heliarch hunter"
 			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you attacked the <npc> without their authorization.`
 
 mission "Coalition Dissension: Rogue Heliarch Saryd (Hunter)"
@@ -1374,7 +1552,7 @@ mission "Coalition Dissension: Rogue Heliarch Saryd (Hunter)"
 		personality target waiting staying vindictive
 		fleet "Rogue Heliarch (Hunter)"
 		conversation
-			scene "thumbnail/heliarch hunter"		
+			scene "thumbnail/heliarch hunter"
 			apply
 				"reputation: Heliarch" -= 8
 				"coalition dissension" ++
@@ -1385,6 +1563,7 @@ mission "Coalition Dissension: Rogue Heliarch Saryd (Hunter)"
 		clear "Coalition Dissension: Rogue Heliarch Saryd (Hunter): offered"
 		"reputation: Heliarch" += 4
 		conversation
+			scene "thumbnail/heliarch hunter"
 			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you attacked the <npc> without their authorization.`
 
 
@@ -1425,7 +1604,7 @@ mission "Coalition Dissension: Rogue Heliarch Arach (Judicator)"
 		personality target waiting staying vindictive
 		fleet "Rogue Heliarch (Judicator)"
 		conversation
-			scene "thumbnail/heliarch judicator"		
+			scene "thumbnail/heliarch judicator"
 			apply
 				"reputation: Heliarch" -= 10
 				"coalition dissension" ++
@@ -1436,6 +1615,7 @@ mission "Coalition Dissension: Rogue Heliarch Arach (Judicator)"
 		clear "Coalition Dissension: Rogue Heliarch Arach (Judicator): offered"
 		"reputation: Heliarch" += 5
 		conversation
+			scene "thumbnail/heliarch judicator"
 			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you attacked the <npc> without their authorization.`
 
 mission "Coalition Dissension: Rogue Heliarch Kimek (Judicator)"
@@ -1474,7 +1654,7 @@ mission "Coalition Dissension: Rogue Heliarch Kimek (Judicator)"
 		personality target waiting staying vindictive
 		fleet "Rogue Heliarch (Judicator)"
 		conversation
-			scene "thumbnail/heliarch judicator"		
+			scene "thumbnail/heliarch judicator"
 			apply
 				"reputation: Heliarch" -= 10
 				"coalition dissension" ++
@@ -1485,6 +1665,7 @@ mission "Coalition Dissension: Rogue Heliarch Kimek (Judicator)"
 		clear "Coalition Dissension: Rogue Heliarch Kimek (Judicator): offered"
 		"reputation: Heliarch" += 5
 		conversation
+			scene "thumbnail/heliarch judicator"
 			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you attacked the <npc> without their authorization.`
 
 mission "Coalition Dissension: Rogue Heliarch Saryd (Judicator)"
@@ -1523,7 +1704,7 @@ mission "Coalition Dissension: Rogue Heliarch Saryd (Judicator)"
 		personality target waiting staying vindictive
 		fleet "Rogue Heliarch (Judicator)"
 		conversation
-			scene "thumbnail/heliarch judicator"		
+			scene "thumbnail/heliarch judicator"
 			apply
 				"reputation: Heliarch" -= 10
 				"coalition dissension" ++
@@ -1534,6 +1715,7 @@ mission "Coalition Dissension: Rogue Heliarch Saryd (Judicator)"
 		clear "Coalition Dissension: Rogue Heliarch Saryd (Judicator): offered"
 		"reputation: Heliarch" += 5
 		conversation
+			scene "thumbnail/heliarch judicator"
 			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you attacked the <npc> without their authorization.`
 
 
@@ -1574,7 +1756,7 @@ mission "Coalition Dissension: Rogue Heliarch Arach (Punisher)"
 		personality target waiting staying vindictive
 		fleet "Rogue Heliarch (Punisher)"
 		conversation
-			scene "thumbnail/heliarch punisher"		
+			scene "thumbnail/heliarch punisher"	
 			apply
 				"reputation: Heliarch" -= 24
 				"coalition dissension" ++
@@ -1585,6 +1767,7 @@ mission "Coalition Dissension: Rogue Heliarch Arach (Punisher)"
 		clear "Coalition Dissension: Rogue Heliarch Arach (Punisher): offered"
 		"reputation: Heliarch" += 12
 		conversation
+			scene "thumbnail/heliarch punisher"
 			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you attacked the <npc> without their authorization.`
 
 mission "Coalition Dissension: Rogue Heliarch Kimek (Punisher)"
@@ -1623,7 +1806,7 @@ mission "Coalition Dissension: Rogue Heliarch Kimek (Punisher)"
 		personality target waiting staying vindictive
 		fleet "Rogue Heliarch (Punisher)"
 		conversation
-			scene "thumbnail/heliarch punisher"		
+			scene "thumbnail/heliarch punisher"
 			apply
 				"reputation: Heliarch" -= 24
 				"coalition dissension" ++
@@ -1634,6 +1817,7 @@ mission "Coalition Dissension: Rogue Heliarch Kimek (Punisher)"
 		clear "Coalition Dissension: Rogue Heliarch Kimek (Punisher): offered"
 		"reputation: Heliarch" += 12
 		conversation
+			scene "thumbnail/heliarch punisher"
 			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you attacked the <npc> without their authorization.`
 
 mission "Coalition Dissension: Rogue Heliarch Saryd (Punisher)"
@@ -1672,7 +1856,7 @@ mission "Coalition Dissension: Rogue Heliarch Saryd (Punisher)"
 		personality target waiting staying vindictive
 		fleet "Rogue Heliarch (Punisher)"
 		conversation
-			scene "thumbnail/heliarch punisher"		
+			scene "thumbnail/heliarch punisher"
 			apply
 				"reputation: Heliarch" -= 24
 				"coalition dissension" ++
@@ -1683,6 +1867,7 @@ mission "Coalition Dissension: Rogue Heliarch Saryd (Punisher)"
 		clear "Coalition Dissension: Rogue Heliarch Saryd (Punisher): offered"
 		"reputation: Heliarch" += 12
 		conversation
+			scene "thumbnail/heliarch punisher"
 			`After explaining that you overheard the order to terminate the dissident crew of the <npc>, the Heliarch thank you for eliminating them. However, it is clear they are not happy that you attacked the <npc> without their authorization.`
 
 mission "Coalition Dissension: Rogue Heliarch Patch"
@@ -1856,6 +2041,32 @@ event "kimek bramble sales"
 		variant 5
 			"Kimek Spire"
 			"Kimek Bramble"
+
+mission "Coalition Dissension: Kimek Bramble Update"
+	minor
+	invisible
+	to offer
+		has "event: coalition add deflectors/barriers"
+		has "event: kimek bramble sales"
+	on offer
+		event "kimek bramble deflectors/barriers"
+		fail
+
+event "kimek bramble deflectors/barriers"
+	fleet "Large Kimek"
+		add variant 1
+			"Kimek Bramble (Deflector Barrier)"
+		add variant 1
+			"Kimek Bramble (Deflector Barrier)"
+			"Kimek Thorn (Barrier)" 2
+		add variant 1
+			"Kimek Bramble (Deflector Barrier)"
+			"Kimek Thistle (Deflector Barrier)"
+			"Kimek Briar (Deflector Barrier)"
+			"Kimek Thorn (Barrier)"
+		add variant 1
+			"Kimek Spire (Deflector Barrier)"
+			"Kimek Bramble (Deflector Barrier)"
 
 
 

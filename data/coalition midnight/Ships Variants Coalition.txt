@@ -297,6 +297,16 @@ ship "Arach Courier" "Arach Courier (Model)"
 		"Hyperdrive"
 		"Riot Containment Barrier"
 
+ship "Arach Courier" "Arach Courier (Barrier)"
+	outfits
+		"Small Collector Module"
+		"Small Battery Module"
+		"Small Repair Module"
+		"Small Thrust Module" 2
+		"Small Steering Module" 2
+		"Hyperdrive"
+		"Riot Containment Barrier"
+
 
 
 ship "Arach Freighter" "Arach Freighter (Blaster)"
@@ -319,6 +329,20 @@ ship "Arach Freighter" "Arach Freighter (Model)"
 	outfits
 		"Model Cannon" 2
 		"Model Turret" 2
+		"Small Collector Module" 3
+		"Small Battery Module" 2
+		"Small Shield Module"
+		"Small Repair Module" 2
+		"Large Thrust Module"
+		"Small Thrust Module" 2
+		"Large Steering Module"
+		"Small Steering Module" 2
+		"Hyperdrive"
+		"Riot Containment Barrier" 7
+
+ship "Arach Freighter" "Arach Freighter (Deflector Barrier)"
+	outfits
+		"Deflector Emitter" 2
 		"Small Collector Module" 3
 		"Small Battery Module" 2
 		"Small Shield Module"
@@ -367,6 +391,23 @@ ship "Arach Hulk" "Arach Hulk (Model)"
 		"Bunk Room"
 		"Riot Containment Barrier" 16
 
+ship "Arach Hulk" "Arach Hulk (Deflector Barrier)"
+	outfits
+		"Deflector Emitter" 4
+		"Large Collector Module"
+		"Large Battery Module"
+		"Small Battery Module"
+		"Small Shield Module" 2
+		"Large Repair Module"
+		"Large Thrust Module" 2
+		"Small Thrust Module" 2
+		"Large Steering Module" 2
+		"Small Steering Module" 2
+		"Hyperdrive"
+		"Bunk Room"
+		"Riot Containment Barrier" 16
+
+
 
 ship "Arach Spindle" "Arach Spindle (Blaster)"
 	outfits
@@ -390,6 +431,22 @@ ship "Arach Spindle" "Arach Spindle (Model)"
 	outfits
 		"Model Cannon" 2
 		"Model Turret" 2
+		"Large Collector Module"
+		"Large Battery Module"
+		"Small Battery Module"
+		"Small Shield Module" 2
+		"Small Repair Module" 3
+		"Cooling Module"
+		"Large Thrust Module" 2
+		"Small Thrust Module" 3
+		"Large Steering Module" 2
+		"Small Steering Module" 1
+		"Hyperdrive"
+		"Riot Containment Barrier" 8
+
+ship "Arach Spindle" "Arach Spindle (Deflector Barrier)"
+	outfits
+		"Deflector Emitter" 2
 		"Large Collector Module"
 		"Large Battery Module"
 		"Small Battery Module"
@@ -434,6 +491,19 @@ ship "Arach Transport" "Arach Transport (Model)"
 		"Hyperdrive"
 		"Riot Containment Barrier" 5
 
+ship "Arach Transport" "Arach Transport (Deflector Barrier)"
+	outfits
+		"Deflector Emitter"
+		"Small Collector Module" 2
+		"Small Battery Module"
+		"Small Shield Module"
+		"Small Repair Module"
+		"Large Thrust Module"
+		"Large Steering Module"
+		"Small Steering Module"
+		"Hyperdrive"
+		"Riot Containment Barrier" 5
+
 
 
 ship "Kimek Briar" "Kimek Briar (Blaster)"
@@ -449,11 +519,21 @@ ship "Kimek Briar" "Kimek Briar (Blaster)"
 		"Laser Rifle" 5
 		"Fragmentation Grenades" 3
 
-
 ship "Kimek Briar" "Kimek Briar (Model)"
 	outfits
 		"Model Cannon" 2
 		"Model Turret"
+		"Small Collector Module" 2
+		"Small Battery Module" 2
+		"Small Shield Module" 2
+		"Large Thrust Module"
+		"Large Steering Module"
+		"Hyperdrive"
+		"Riot Containment Barrier" 5
+
+ship "Kimek Briar" "Kimek Briar (Deflector Barrier)"
+	outfits
+		"Deflector Emitter"
 		"Small Collector Module" 2
 		"Small Battery Module" 2
 		"Small Shield Module" 2
@@ -484,6 +564,20 @@ ship "Kimek Spire" "Kimek Spire (Model)"
 	outfits
 		"Model Cannon" 2
 		"Model Turret" 4
+		"Large Collector Module"
+		"Small Collector Module"
+		"Large Battery Module"
+		"Large Shield Module"
+		"Small Shield Module"
+		"Large Thrust Module" 2
+		"Large Steering Module" 2
+		"Small Steering Module"
+		"Hyperdrive"
+		"Riot Containment Barrier" 25
+
+ship "Kimek Spire" "Kimek Spire (Deflector Barrier)"
+	outfits
+		"Deflector Emitter" 4
 		"Large Collector Module"
 		"Small Collector Module"
 		"Large Battery Module"
@@ -526,6 +620,19 @@ ship "Kimek Thistle" "Kimek Thistle (Model)"
 		"Hyperdrive"
 		"Riot Containment Barrier" 15
 
+ship "Kimek Thistle" "Kimek Thistle (Deflector Barrier)"
+	outfits
+		"Deflector Emitter" 2
+		"Large Collector Module"
+		"Small Battery Module"
+		"Small Shield Module" 3
+		"Large Thrust Module"
+		"Small Thrust Module" 2
+		"Large Steering Module"
+		"Small Steering Module"
+		"Hyperdrive"
+		"Riot Containment Barrier" 15
+
 
 
 ship "Kimek Thorn" "Kimek Thorn (Blaster)"
@@ -543,6 +650,16 @@ ship "Kimek Thorn" "Kimek Thorn (Blaster)"
 ship "Kimek Thorn" "Kimek Thorn (Model)"
 	outfits
 		"Model Cannon" 2
+		"Small Collector Module"
+		"Small Battery Module"
+		"Small Shield Module"
+		"Small Thrust Module" 2
+		"Small Steering Module" 2
+		"Hyperdrive"
+		"Riot Containment Barrier"
+
+ship "Kimek Thorn" "Kimek Thorn (Barrier)"
+	outfits
 		"Small Collector Module"
 		"Small Battery Module"
 		"Small Shield Module"
@@ -576,6 +693,16 @@ ship "Saryd Runabout" "Saryd Runabout (Model)"
 		"Hyperdrive"
 		"Riot Containment Barrier" 2
 
+ship "Saryd Runabout" "Saryd Runabout (Barrier)"
+	outfits
+		"Small Collector Module" 2
+		"Small Battery Module"
+		"Small Shield Module"
+		"Small Thrust Module" 2
+		"Small Steering Module" 3
+		"Hyperdrive"
+		"Riot Containment Barrier" 2
+
 
 
 ship "Saryd Sojourner" "Saryd Sojourner (Blaster)"
@@ -599,6 +726,21 @@ ship "Saryd Sojourner" "Saryd Sojourner (Model)"
 	outfits
 		"Model Cannon" 2
 		"Model Turret" 4
+		"Large Collector Module"
+		"Small Collector Module" 3
+		"Large Battery Module"
+		"Large Shield Module"
+		"Small Repair Module" 2		
+		"Large Thrust Module" 2
+		"Small Thrust Module" 3
+		"Large Steering Module" 2
+		"Small Steering Module"
+		"Hyperdrive"
+		"Riot Containment Barrier" 25
+
+ship "Saryd Sojourner" "Saryd Sojourner (Deflector Barrier)"
+	outfits
+		"Deflector Emitter" 4
 		"Large Collector Module"
 		"Small Collector Module" 3
 		"Large Battery Module"
@@ -644,8 +786,22 @@ ship "Saryd Traveler" "Saryd Traveler (Model)"
 		"Hyperdrive"
 		"Riot Containment Barrier" 15
 
+ship "Saryd Traveler" "Saryd Traveler (Deflector Barrier)"
+	outfits
+		"Deflector Emitter" 2
+		"Small Collector Module" 3
+		"Small Battery Module" 2
+		"Small Shield Module" 2
+		"Small Repair Module"
+		"Large Thrust Module"
+		"Small Thrust Module"
+		"Large Steering Module"
+		"Small Steering Module"
+		"Hyperdrive"
+		"Riot Containment Barrier" 15
 
-		
+
+
 ship "Saryd Visitor" "Saryd Visitor (Blaster)"
 	outfits
 		"Camouflaged Blaster" 2
@@ -674,6 +830,18 @@ ship "Saryd Visitor" "Saryd Visitor (Model)"
 		"Hyperdrive"
 		"Riot Containment Barrier" 7
 
+ship "Saryd Visitor" "Saryd Visitor (Deflector Barrier)"
+	outfits
+		"Deflector Emitter" 1
+		"Small Collector Module" 2
+		"Small Battery Module" 2
+		"Small Shield Module"
+		"Small Repair Module"
+		
+		"Small Thrust Module" 3
+		"Large Steering Module"
+		"Hyperdrive"
+		"Riot Containment Barrier" 7
 
 
 
@@ -782,7 +950,7 @@ ship "Heliarch Hunter" "Heliarch Hunter (Evidence)"
 		"Cooling Module" 2
 		"Scanning Module" 2
 		"Enforcer Riot Staff" 25
-		"Enforcer Confrontation Gear" 13		
+		"Enforcer Confrontation Gear" 13
 		"Heliarch Corruption"
 		"Large Thrust Module" 2
 		"Small Thrust Module"
