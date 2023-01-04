@@ -163,6 +163,53 @@ ship "Pirate Drone"
 	description "Locals started making these in their backyard garages to satisfy a limited demand for unofficial combat drones. From a distance, it looks like someone duct taped an energy blaster to the side of a civilian science drone. Upon closer inspection, that assessment isn't too far off. Each drone has minor differences in construction materials and how the wires are routed. Few pirates actually use these, but the ones who do tend to buy them in bulk."
 
 
+
+ship "Shuttle Pod"
+	sprite "ship/shuttle pod"
+	thumbnail "thumbnail/shuttle pod-thumb"
+	attributes
+		category "Fighter"
+		"cost" 120000
+		"shields" 400
+		"hull" 550
+		"required crew" 1
+		"bunks" 2
+		"mass" 50
+		"drag" 1.5
+		"heat dissipation" .8
+		"cargo space" 20
+		"outfit space" 100
+		"weapon capacity" 8
+		"engine capacity" 50
+		weapon
+			"blast radius" 10
+			"shield damage" 100
+			"hull damage" 50
+			"hit force" 150
+	outfits
+		"Beam Laser"
+		
+		"KP-6 Photovoltaic Array"
+		Supercapacitor
+		"D14-RN Shield Generator"
+		"Cargo Expansion"
+		"Asteroid Scanner"
+		"Cargo Scanner"
+		"Outfit Scanner"
+		
+		"X1700 Ion Thruster"
+		"X1200 Ion Steering"
+	engine -6 30
+	engine 6 30
+	gun 0 -31
+	leak "leak" 50 40
+	explode "tiny explosion" 10
+	explode "small explosion" 5
+	description "Shuttle Pods were multipurpose light spacecraft that early exploration ships could carry in their fighter bays. While it is no longer in production, a multitude were made. Many are still in use throughout the galaxy despite their antiquated design."
+	description "This particular Shuttle Pod configuration was the standard for transporting cargo and resource gathering, but other configurations were used as well."
+
+
+
 ################################
 #
 # The below ships are not sold in shipyards, but most can be captured or are received as mission rewards.
@@ -240,7 +287,7 @@ ship "Carabao"
 	sprite "ship/carabao"
 	thumbnail "thumbnail/carabao-thumb"
 	attributes
-		category "Heavy Warship"
+		category "Utility"
 		"cost" 18000000
 		"shields" 18000
 		"hull" 9000
@@ -485,7 +532,7 @@ ship "Hipparion"
 	sprite "ship/hipparion"
 		"delay" 2
 	attributes
-		category "Medium Warship"
+		category "Utility"
 		"cost" 6120000
 		"shields" 8100
 		"hull" 6600
@@ -742,8 +789,8 @@ ship "Liberator"
 		licenses
 			"Militia"
 		"cost" 13090000
-		"shields" 19910
-		"hull" 8030
+		"shields" 19900
+		"hull" 8100
 		"required crew" 93
 		"bunks" 147
 		"mass" 788
@@ -823,8 +870,8 @@ ship "Vindicator"
 		licenses
 			"Militia"
 		"cost" 13090000
-		"shields" 19910
-		"hull" 8030
+		"shields" 19900
+		"hull" 8100
 		"required crew" 93
 		"bunks" 147
 		"mass" 788
@@ -901,7 +948,7 @@ ship "Vindicator"
 ship "Mastodon"
 	sprite "ship/mastodon"
 	attributes
-		category "Heavy Warship"
+		category "Utility"
 		cost 27030000
 		shields 35000
 		hull 17200
@@ -958,14 +1005,14 @@ ship "Mastodon"
 	"steering engine" 56.5 208
 		zoom .5
 		left
-	turret 24 -121.5
-	turret -4.5 -104
-	turret -36.5 -75.5
-	turret 72 -20.5
-	turret -36.5 21.5
-	turret 72 77.5
-	turret -36.5 125
-	turret 72 174
+	turret 24 -121.5 "Blaster Turret"
+	turret -4.5 -104 "Anti-Missile Turret"
+	turret -36.5 -75.5 "Blaster Turret"
+	turret 72 -20.5 "Blaster Turret"
+	turret -36.5 21.5 "Anti-Missile Turret"
+	turret 72 77.5 "Blaster Turret"
+	turret -36.5 125 "Blaster Turret"
+	turret 72 174 "Anti-Missile Turret"
 	bay "Fighter" -53 -57
 	bay "Fighter" 61 -57
 	bay "Fighter" -53 37
@@ -1039,8 +1086,8 @@ ship "Plexus"
 		licenses
 			"Militia"
 		"cost" 13090000
-		"shields" 19910
-		"hull" 8030
+		"shields" 19900
+		"hull" 8100
 		"required crew" 101
 		"bunks" 147
 		"mass" 788
@@ -1241,8 +1288,8 @@ ship "Shield Fortress"
 	attributes
 		category "Heavy Warship"
 		"cost" 21700000
-		"shields" 37350
-		"hull" 10875
+		"shields" 37400
+		"hull" 10900
 		"required crew" 75
 		"bunks" 120
 		"mass" 877
@@ -1368,6 +1415,7 @@ ship "Star Explorer"
 		"Outfit Scanner"
 		"Tactical Scanner"
 		"Medical Bay"
+		"Antique Rifle"
 		"Laser Rifle" 60
 
 		Afterburner
@@ -1402,36 +1450,6 @@ ship "Star Explorer"
 	"final explode" "final explosion large"
 	description "An ancient space exploration vessel from the early days of Hyperspace travel. Many claim the Star Explorer's design was heavily influenced by an old Earth science-fiction show as a marketing gimmick to entice young people to leave Sol and risk their lives exploring the vast unknown. Of the few that haven't been lost or destroyed, there are some still being used as actual science and exploration vessels. The rest are held in private collections by fans of antiquities."
 
-ship "Star Explorer" "Star Explorer (Jump)"
-	outfits
-		"Laser Turret" 6
-		"Torpedo Launcher"
-		Torpedo 30
-		"Fission Reactor"
-		"LP072a Battery Pack"
-		"D67-TM Shield Generator"
-		"D94-YV Shield Generator"
-		"Outfits Expansion"
-		"Brig"
-		"Large Radar Jammer"
-		"Luxury Accommodations"
-		"Engineering Room"
-		Ramscoop
-		"Asteroid Scanner"
-		"Cargo Scanner"
-		"Outfit Scanner"
-		"Tactical Scanner"
-		"Medical Bay"
-		"Laser Rifle" 60
-		Afterburner
-		"AR120 Reverse Thruster"
-		"A250 Atomic Thruster"
-		"A375 Atomic Steering"
-		"Jump Drive"
-
-ship "Star Explorer" "Star Explorer (Transport)"
-	"crew" 165
-
 
 
 # Strategos and Enforcer Drones appear in Oathbreaker missions.
@@ -1446,8 +1464,8 @@ ship "Strategos"
 		licenses
 			"Navy Carrier"
 		"cost" 20216000
-		"shields" 28462
-		"hull" 11039
+		"shields" 28500
+		"hull" 11000
 		"required crew" 148
 		"bunks" 244
 		"mass" 1211
@@ -1663,42 +1681,43 @@ ship "War Hauler"
 		licenses
 			Navy
 		category "Heavy Warship"
-		"cost" 2569840
-		"shields" 4164
-		"hull" 5444
-		"required crew" 3
+		"cost" 3300000
+		"shields" 3200
+		"hull" 5700
+		"required crew" 4
 		"bunks" 12
-		"mass" 248
+		"mass" 360
 		"drag" 11.5
-		"heat dissipation" .6
+		"heat dissipation" .67
 		"fuel capacity" 400
 		"cargo space" 40
-		"outfit space" 464
-		"weapon capacity" 220
+		"outfit space" 490
+		"weapon capacity" 280
 		"engine capacity" 80
 		weapon
-			"blast radius" 60
-			"shield damage" 600
-			"hull damage" 300
-			"hit force" 900
+			"blast radius" 80
+			"shield damage" 800
+			"hull damage" 400
+			"hit force" 1200
 	outfits
 		"Energy Cannon" 2
+		"Energy Cannon Turret" 6
+		"Anti-Missile Turret" 2
 		"Meteor Missile Launcher"
 		"Meteor Missile" 30
-		"Laser Turret" 6
-		"Anti-Missile Turret" 2
-		
+
 		"Fission Reactor"
 		"LP072a Battery Pack"
 		"D41-HY Shield Generator" 2
-		"Small Radar Jammer"
-		"Liquid Nitrogen Cooler"
-		
+		"Outfits Expansion"
+		"Large Radar Jammer"
+		"Antique Rifle" 3
+		"Fragmentation Grenades"
+		"Security Station"
+
 		"Greyhound Plasma Thruster"
 		"Impala Plasma Steering"
-		"Hyperdrive"
-		"Fragmentation Grenades"
-		"Antique Rifle" 3
+		Hyperdrive
 
 	engine -44.5 140.5
 	engine 45 140.5
@@ -1713,21 +1732,21 @@ ship "War Hauler"
 	gun -13 -113.5 "Energy Cannon"
 	gun 2 -113.5 "Meteor Missile Launcher"
 	gun 15.5 -113.5 "Energy Cannon"
-	turret -21 -67 "Laser Turret"
-	turret 23 -67 "Laser Turret"
-	turret -18 -14.5 "Laser Turret"
+	turret -21 -67 "Energy Cannon Turret"
+	turret 23 -67 "Energy Cannon Turret"
+	turret -18 -14.5 "Energy Cannon Turret"
 	turret 19.5 -14.5 "Anti-Missile Turret"
 	turret -17.5 41 "Anti-Missile Turret"
-	turret 19 41 "Laser Turret"
-	turret -17.5 97.5 "Laser Turret"
-	turret 19.5 97.5 "Laser Turret"
-	leak "leak" 60 50
-	leak "flame" 50 80
-	leak "big leak" 90 30
-	explode "tiny explosion" 20
-	explode "small explosion" 35
-	explode "medium explosion" 20
-	explode "large explosion" 5
+	turret 19 41 "Energy Cannon Turret"
+	turret -17.5 97.5 "Energy Cannon Turret"
+	turret 19.5 97.5 "Energy Cannon Turret"
+	leak "leak" 50 50
+	leak "flame" 40 80
+	leak "big leak" 80 30
+	explode "tiny explosion" 10
+	explode "small explosion" 25
+	explode "medium explosion" 30
+	explode "large explosion" 15
 	"final explode" "final explosion medium"
 	description `A leftover from the Alpha Wars, War Hauler production stopped soon after the wars ended. Although the ship predates the Republic and is not manufactured by any modern shipyards, Parliament still passed a law prohibiting retail sales of this ship to ordinary civilians. This has made the few remaining War Haulers on the secondary market a highly sought after item amongst collectors of antique ships.`
 
@@ -1740,10 +1759,10 @@ ship "Metropolis"
 		"delay" 2
 	thumbnail "thumbnail/metropolis-thumb"
 	attributes
-		category "Heavy Warship"
+		category "Utility"
 		"cost" 27060000
-		"shields" 41345
-		"hull" 20318
+		"shields" 41300
+		"hull" 20400
 		"required crew" 168
 		"bunks" 581
 		"mass" 2221
@@ -1829,10 +1848,10 @@ ship "Metropolis"
 ship "District"
 	sprite "ship/metro district"
 	attributes
-		category "Heavy Warship"
+		category "Utility"
 		"cost" 14520000
-		"shields" 14438
-		"hull" 7095
+		"shields" 14400
+		"hull" 7100
 		"required crew" 59
 		"bunks" 203
 		"mass" 775
@@ -1891,10 +1910,10 @@ ship "District"
 ship "Prefecture"
 	sprite "ship/metro prefecture"
 	attributes
-		category "Heavy Warship"
+		category "Utility"
 		"cost" 13860000
-		"shields" 13782
-		"hull" 6773
+		"shields" 13800
+		"hull" 6800
 		"required crew" 56
 		"bunks" 194
 		"mass" 741
@@ -1949,10 +1968,10 @@ ship "Prefecture"
 ship "Municipality"
 	sprite "ship/metro municipality"
 	attributes
-		category "Heavy Warship"
+		category "Utility"
 		"cost" 13200000
-		"shields" 13125
-		"hull" 6450
+		"shields" 13100
+		"hull" 6500
 		"required crew" 55
 		"bunks" 184
 		"mass" 705

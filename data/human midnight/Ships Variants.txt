@@ -406,6 +406,83 @@ ship "Berserker" "Berserker (Hai)"
 
 
 
+ship "Bulk Freighter" "Bulk Freighter (Biohazard)"
+	attributes
+		category "Heavy Warship"
+		"cost" 13400000
+		"shields" 13500
+		"hull" 7600
+		"required crew" 18
+		"bunks" 43
+		"mass" 880
+		"drag" 14
+		"heat dissipation" .4
+		"fuel capacity" 900
+		"cargo space" 20
+		"outfit space" 410
+		"weapon capacity" 150
+		"engine capacity" 85
+		weapon
+			"blast radius" 200
+			"shield damage" 2000
+			"hull damage" 1000
+			"hit force" 3000
+	outfits
+		"Proton Turret"
+		"Quad Blaster Turret" 2
+		"Heavy Anti-Missile Turret"
+		"Anti-Missile Turret"
+		"Meteor Missile Launcher" 2
+		"Meteor Missile" 60
+		
+		"Fusion Reactor"
+		"LP036a Battery Pack"
+		"Supercapacitor"
+		"Water Coolant System"
+		"Cooling Ducts"
+		"S-970 Regenerator"
+		"Purger Rifle" 18
+		"Brig"
+		"Interference Plating"
+		
+		"A250 Atomic Thruster"
+		"A255 Atomic Steering"
+		"Scram Drive"
+		
+	engine -20 195.5
+	engine 20 195.5
+	gun -20 -175 "Meteor Missile Launcher"
+	gun 20 -175 "Meteor Missile Launcher"
+	turret -12 -155 "Quad Blaster Turret"
+	turret 12 -155 "Heavy Anti-Missile Turret"
+	turret 0 5 "Proton Turret"
+	turret 30 175 "Quad Blaster Turret"
+	turret -30 175 "Anti-Missile Turret"
+	bay "Drone" -66 -115 left
+	bay "Drone" -66 -65 left
+	bay "Drone" -66 -15 left
+	bay "Drone" -66 35 left
+	bay "Drone" -66 85 left
+	bay "Drone" -66 135 left
+	bay "Drone" 66 -115 right
+	bay "Drone" 66 -65 right
+	bay "Drone" 66 -15 right
+	bay "Drone" 66 35 right
+	bay "Drone" 66 85 right
+	bay "Drone" 66 135 right
+	leak "leak" 30 50
+	leak "flame" 50 80
+	leak "big leak" 40 30
+	explode "small explosion" 15
+	explode "medium explosion" 25
+	explode "large explosion" 35
+	explode "huge explosion" 20
+	"final explode" "final explosion large"
+	description `This drone carrier has been disguised as an ordinary bulk freighter.`
+	description `	Inside, a layer of interference plating hides its military-grade equipment and a dozen combat drones secreted away in its converted cargo holds, while its faux gearing conceals extra shield emitters.`
+
+
+
 ship "Bulk Freighter" "Bulk Freighter (hai drones)"
 	add attributes
 		"cost" 2000000
@@ -414,7 +491,6 @@ ship "Bulk Freighter" "Bulk Freighter (hai drones)"
 		"cargo space" -510
 		"outfit space" -10
 		"weapon capacity" -40
-		
 	outfits
 		"Pulse Turret" 3
 		"Bullfrog Anti-Missile" 2
@@ -428,7 +504,6 @@ ship "Bulk Freighter" "Bulk Freighter (hai drones)"
 		`"Biroo" Atomic Thruster`
 		`"Biroo" Atomic Steering`
 		"Scram Drive"
-
 	turret "Pulse Turret"
 	turret "Bullfrog Anti-Missile"
 	turret "Pulse Turret"
@@ -1410,7 +1485,6 @@ ship "Skein" "Skein (Catalytic)"
 
 
 
-
 ship "Splinter" "Splinter (Korath)"
 	outfits
 		"Plasma Cannon" 2
@@ -1434,6 +1508,192 @@ ship "Splinter" "Splinter (Korath)"
 	turret "Blaster Turret"
 	turret "Warder Anti-Missile"
 	turret "Blaster Turret"
+
+
+
+ship "Shuttle Pod" "Shuttle Pod (Passenger)"
+	outfits
+		"Beam Laser"
+		"KP-6 Photovoltaic Array"
+		Supercapacitor
+		"D14-RN Shield Generator"
+		"Bunk Room"
+		"Luxury Accommodations"
+		"X1700 Ion Thruster"
+		"X1200 Ion Steering"
+
+ship "Shuttle Pod" "Shuttle Pod (Fire Support)"
+	outfits
+		"Meteor Missile Pod"
+		"Meteor Missile Box"
+		"Meteor Missile" 22
+		"KP-6 Photovoltaic Array"
+		Supercapacitor
+		"D14-RN Shield Generator"
+		"Tactical Scanner"
+		"Small Radar Jammer"
+		"Laser Rifle"
+		"X2200 Ion Steering"
+		"X2700 Ion Thruster"
+
+ship "Shuttle Pod" "Shuttle Pod (Pirate)"
+	outfits
+		"Gatling Gun"
+		"Gatling Gun Ammo" 4500
+		"Bullet Boxes"
+		"KP-6 Photovoltaic Array"
+		Supercapacitor
+		"D14-RN Shield Generator"
+		"Cargo Scanner"
+		"Small Radar Jammer"
+		"Laser Rifle"
+		"X2200 Ion Steering"
+		"X2700 Ion Thruster"
+
+
+
+ship "Star Explorer" "Star Explorer (Biohazard)"
+	outfits
+		"Laser Turret" 6
+		"Torpedo Launcher"
+		Torpedo 30
+		"Fission Reactor"
+		"LP072a Battery Pack"
+		"D67-TM Shield Generator"
+		"D94-YV Shield Generator"
+		"Outfits Expansion"
+		"Brig"
+		"Large Radar Jammer"
+		"Engineering Room"
+		Ramscoop
+		"Asteroid Scanner"
+		"Cargo Scanner"
+		"Outfit Scanner"
+		"Tactical Scanner"
+		"Medical Bay"
+		"Purger Rifle" 75
+		Afterburner
+		"AR120 Reverse Thruster"
+		"A250 Atomic Thruster"
+		"A375 Atomic Steering"
+		"Scram Drive"
+
+ship "Star Explorer" "Star Explorer (Hai)"
+	outfits
+		"Laser Turret" 4
+		"Chameleon Anti-Missile" 2
+		"Hai Tracker Pod"
+		"Hai Tracker" 56
+		"Boulder Reactor"
+		"Hai Gorge Batteries"
+		"Hai Corundum Regenerator"
+		"Hai Diamond Regenerator"
+		"Asteroid Scanner"
+		Brig
+		"Cargo Scanner"
+		"Engineering Room"
+		"Large Radar Jammer"
+		"Luxury Accommodations"
+		"Medical Bay"
+		"Outfit Scanner"
+		"Outfits Expansion"
+		"Quantum Keystone"
+		Ramscoop
+		"Tactical Scanner"
+		"Pulse Rifle" 75
+		Afterburner
+		`"Biroo" Atomic Thruster`
+		"A375 Atomic Steering"
+		"AR120 Reverse Thruster"
+		Hyperdrive
+
+ship "Star Explorer" "Star Explorer (Jump)"
+	outfits
+		"Laser Turret" 6
+		"Torpedo Launcher"
+		Torpedo 30
+		"Fission Reactor"
+		"LP072a Battery Pack"
+		"D67-TM Shield Generator"
+		"D94-YV Shield Generator"
+		"Outfits Expansion"
+		"Brig"
+		"Large Radar Jammer"
+		"Luxury Accommodations"
+		"Engineering Room"
+		Ramscoop
+		"Asteroid Scanner"
+		"Cargo Scanner"
+		"Outfit Scanner"
+		"Tactical Scanner"
+		"Medical Bay"
+		"Laser Rifle" 60
+		Afterburner
+		"AR120 Reverse Thruster"
+		"A250 Atomic Thruster"
+		"A375 Atomic Steering"
+		"Jump Drive"
+
+ship "Star Explorer" "Star Explorer (Korath)"
+	add attributes
+		"self destruct" -.15
+	outfits
+		"Laser Turret" 6
+		"Torpedo Launcher"
+		Torpedo 5
+		"Fission Reactor"
+		"Systems Core (Medium)"
+		"D94-YV Shield Generator"
+		"Outfits Expansion"
+		"Brig"
+		"Large Radar Jammer"
+		"Luxury Accommodations"
+		"Engineering Room"
+		"Fuel Processor"
+		"Small Heat Shunt"
+		"Asteroid Scanner"
+		"Cargo Scanner"
+		"Outfit Scanner"
+		"Tactical Scanner"
+		"Medical Bay"
+		"Laser Rifle" 60
+		"Thermal Repeater Rifle" 60
+		Afterburner
+		"AR120 Reverse Thruster"
+		"A250 Atomic Thruster"
+		"A375 Atomic Steering"
+		"Jump Drive"
+
+ship "Star Explorer" "Star Explorer (Pirate)"
+	outfits
+		"Laser Turret" 6
+		"Torpedo Launcher"
+		Torpedo 30
+		"Fission Reactor"
+		"LP072a Battery Pack"
+		"D67-TM Shield Generator"
+		"D94-YV Shield Generator"
+		"Outfits Expansion"
+		"Brig"
+		"Large Radar Jammer"
+		"Engineering Room"
+		Ramscoop
+		"Asteroid Scanner"
+		"Cargo Scanner"
+		"Outfit Scanner"
+		"Tactical Scanner"
+		"Medical Bay"
+		"Laser Rifle" 60
+		"Fragmentation Grenades" 15
+		Afterburner
+		"AR120 Reverse Thruster"
+		"A250 Atomic Thruster"
+		"A375 Atomic Steering"
+		"Scram Drive"
+
+ship "Star Explorer" "Star Explorer (Transport)"
+	"crew" 165
+
 
 
 

@@ -467,6 +467,156 @@ ship "Modified Roost"
 
 
 
+ship "Marauder Argosy"
+	plural "Marauder Argosies"
+	sprite "ship/marauder argosy"
+	thumbnail "thumbnail/marauder argosy-thumb"
+	attributes
+		category "Medium Warship"
+		"cost" 2100000
+		"shields" 5600
+		"hull" 2100
+		"required crew" 6
+		"bunks" 13
+		"mass" 300
+		"drag" 6.2
+		"heat dissipation" .6
+		"fuel capacity" 400
+		"cargo space" 20
+		"outfit space" 365
+		"weapon capacity" 150
+		"engine capacity" 90
+		weapon
+			"blast radius" 90
+			"shield damage" 900
+			"hull damage" 450
+			"hit force" 1300
+	outfits
+		"Beam Laser" 2
+		"Heavy Laser" 4
+		"Heavy Laser Turret"
+		"Heavy Anti-Missile Turret"
+
+		"NT-200 Nucleovoltaic"
+		"LP072a Battery Pack"
+		"S-270 Regenerator"
+		"S-970 Regenerator"
+		"Fuel Pod"
+		"Outfits Expansion"
+		"Laser Rifle" 7
+
+		"A250 Atomic Thruster"
+		"A375 Atomic Steering"
+		Hyperdrive
+		
+	engine -25 93 0.7
+	engine -14 93 0.9
+	engine 14 93 0.9
+	engine 25 93 0.7
+	gun -22 -37.5 "Beam Laser"
+	gun 22.5 -37.5 "Beam Laser"
+	gun -22 -37 "Heavy Laser"
+	gun 22.5 -37 "Heavy Laser"
+	gun -22 -36.5 "Heavy Laser"
+	gun 22.5 -36.5 "Heavy Laser"
+	turret 0 -12.5 "Heavy Laser Turret"
+	turret 0 9.5 "Heavy Anti-Missile Turret"
+	bay "Drone" 0 -35
+	leak "leak" 70 50
+	leak "flame" 30 80
+	explode "tiny explosion" 10
+	explode "small explosion" 25
+	explode "medium explosion" 30
+	explode "large explosion" 15
+	"final explode" "final explosion medium"
+	description "What was once a simple Argosy is buried beneath thick plates of additional armored hull plating and shield emitters. Two additional gun ports, expanded engine space, and a drone bay leave little room for cargo in this medium warship."
+
+ship "Marauder Argosy" "Marauder Argosy (Sniper)"
+	outfits
+		"Heavy Anti-Missile Turret" 2
+		"Heavy Rocket" 40
+		"Heavy Rocket Launcher" 2
+		"Meteor Missile" 60
+		"Meteor Missile Launcher" 2
+		"Sidewinder Missile" 90
+		"Sidewinder Missile Launcher" 2
+		"LP072a Battery Pack"
+		"NT-200 Nucleovoltaic"
+		"S-270 Regenerator"
+		"S-970 Regenerator"
+		"Outfits Expansion"
+		Supercapacitor
+		"Tactical Scanner"
+		"Laser Rifle" 6
+		"A250 Atomic Thruster"
+		"A375 Atomic Steering"
+		Hyperdrive
+	gun "Heavy Rocket Launcher"
+	gun "Heavy Rocket Launcher"
+	gun "Meteor Missile Launcher"
+	gun "Meteor Missile Launcher"
+	gun "Sidewinder Missile Launcher"
+	gun "Sidewinder Missile Launcher"
+
+ship "Marauder Argosy" "Marauder Argosy (Afterburner)"
+	outfits
+		"Beam Laser" 2
+		"Laser Turret"
+		"Heavy Anti-Missile Turret"
+		"Meteor Missile" 60
+		"Meteor Missile Launcher" 2
+		"Sidewinder Missile" 90
+		"Sidewinder Missile Launcher" 2
+		"NT-200 Nucleovoltaic"
+		"LP072a Battery Pack"
+		"S-270 Regenerator"
+		"S-970 Regenerator"
+		"Tactical Scanner"
+		"Fuel Pod"
+		"Outfits Expansion"
+		Ramscoop
+		"Laser Rifle" 7
+		"Ionic Afterburner"
+		"A250 Atomic Thruster"
+		"A375 Atomic Steering"
+		Hyperdrive
+	gun "Beam Laser"
+	gun "Beam Laser"
+	gun "Meteor Missile Launcher"
+	gun "Meteor Missile Launcher"
+	gun "Sidewinder Missile Launcher"
+	gun "Sidewinder Missile Launcher"
+	turret "Laser Turret"
+	turret "Heavy Anti-Missile Turret"
+
+ship "Marauder Argosy" "Marauder Argosy (Bounty Hunter)"
+	outfits
+		"Beam Laser" 2
+		"Heavy Laser" 4
+		"Heavy Laser Turret"
+		"Heavy Anti-Missile Turret"
+		"NT-200 Nucleovoltaic"
+		"LP072a Battery Pack"
+		"S-270 Regenerator"
+		"S-970 Regenerator"
+		"Brig"
+		"Tactical Scanner"
+		"Outfits Expansion"
+		"Laser Rifle" 7
+		"A250 Atomic Thruster"
+		"A375 Atomic Steering"
+		Hyperdrive
+	gun "Beam Laser"
+	gun "Beam Laser"
+	gun "Heavy Laser"
+	gun "Heavy Laser"
+	gun "Heavy Laser"
+	gun "Heavy Laser"
+	turret "Heavy Laser Turret"
+	turret "Heavy Anti-Missile Turret"
+
+
+
 ship "Marauder Bastion"
 	sprite "ship/marauder bastion"
 	thumbnail "thumbnail/marauder bastion"
@@ -563,11 +713,12 @@ ship "Marauder Behemoth"
 		"LP144a Battery Pack"
 		"S-270 Regenerator"
 		"S-970 Regenerator"
-		"Outfits Expansion" 6
+		"Outfits Expansion" 7
 		"Liquid Helium Cooler"
 		"Large Radar Jammer"
 		Ramscoop
 		"Laser Rifle" 18
+		"Ionic Afterburner"
 		"A125 Atomic Steering"
 		"A375 Atomic Steering"
 		"A250 Atomic Thruster"
@@ -606,12 +757,13 @@ ship "Marauder Behemoth" "Marauder Behemoth (Hai)"
 		"Hai Ravine Batteries"
 		"Hai Corundum Regenerator"
 		"Hai Diamond Regenerator"
-		"Outfits Expansion" 6
+		"Outfits Expansion" 7
 		"Liquid Nitrogen Cooler"
 		"Large Radar Jammer"
 		Ramscoop
-		"Security Station" 3
+		"Security Station" 2
 		"Pulse Rifle" 18
+		"Ionic Afterburner"
 		`"Benga" Atomic Steering`
 		`"Benga" Atomic Thruster`
 		`"Biroo" Atomic Steering`
@@ -634,11 +786,12 @@ ship "Marauder Behemoth" "Marauder Behemoth (Secret Prototype)"
 		"LP144a Battery Pack"
 		"S-270 Regenerator"
 		"S-970 Regenerator"
-		"Outfits Expansion" 6
+		"Outfits Expansion" 7
 		"Liquid Helium Cooler"
 		"Large Radar Jammer"
 		Ramscoop
 		"Laser Rifle" 18
+		"Ionic Afterburner"
 		"A125 Atomic Steering"
 		"A375 Atomic Steering"
 		"A250 Atomic Thruster"

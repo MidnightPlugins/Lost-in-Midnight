@@ -1389,7 +1389,7 @@ mission "Escort Trap Freighter (Human)"
 			names "civilian"
 			fighters "pirate"
 			variant
-				"Bulk Freighter (hai drones)"
+				"Bulk Freighter (syndicate drones)"
 				"Pirate Drone" 10
 	on abort
 		"reputation: Bounty (Disguised)" >?= 1
@@ -1400,3 +1400,85 @@ mission "Escort Trap Freighter (Human)"
 		payment 150000
 		dialog `You research the <npc> and find an outstanding bounty for <payment>. With a video recording of your battle in hand, you head for the job board office to claim your reward.`
 
+
+
+conversation "microbot defense death"
+	scene "outfit/microbot defense station"
+	`You park your ship and the docking bay doors open, inviting you in. On the other side the floor of the room is a grate. Below this, a pool of gelatinous sludge glistens, reflecting the bright ceiling lights above. Behind you the door slams shut and a thick cloud of smoke begins filling the room along with a strange buzzing sound. The smoke stings when it touches you and your flesh begins to melt horrifically into a gelatinous goo that filters through the grate into the pool below. Your mind detaches from the shock and you realize that you've been screaming. Although you no longer have ears to listen nor a brain to process the sound, the screaming doesn't stop until the organs that enable you to do so melt away...`
+		die
+
+mission "Thraal: Moreau"
+	landing
+	invisible
+	clearance
+	destination "Gresku Fodar"
+	to offer
+		has "Star Explorer Korath Raid: done"
+	on enter "Kor Men"
+		conversation
+			scene "thumbnail/shuttle pod-thumb"
+			`Soon after arriving, you receive a distress signal from a Shuttle Pod. A man speaks, "My goodness, it's been forever and a half since I've seen another human! Can you help me? My ship is disabled! Any assist-" The signal dies out. It's unusual to find a lone Shuttle Pod outside of human space. Perhaps you can get his story after assisting him.`
+	npc assist save accompany
+		government "Bounty (Disguised)"
+		system "Kor Men"
+		personality target waiting derelict marked mute
+		ship "Shuttle Pod" "Moreau"
+		conversation
+			action
+				set "met Thraal"
+			scene "ship/star explorer"
+			`After introductions you learn that the man's name is Thraal. "I was aboard a ship, a Star Explorer named Icarus. We acquired a Jump Drive and were exploring this region of space. I had gone out in the Shuttle Pod to do some asteroid mining when aliens, the Korath, attacked the Icarus. Icarus fled, abandoning me in this system.`
+			choice
+				`	"It's amazing that you survived alone out here!"`
+				`	"It's amazing the Korath didn't hunt you down!"`
+			`	The man sighs. "It was hard at first. The Korath are a bit xenophobic. But once you get to know them, they aren't so bad."`
+			choice
+				`	"Are you serious?"`
+				`	"You've got to be kidding!"`
+			scene "planet/station2k"
+			`	Thraal places the cover back on some recently repaired ciruits and says, "Would you like to meet them? I can arrange it." The Korath have been an implacable adversary. This could be a chance to establish peaceful relations with them. Before you respond, Thraal hails Gresku Fodar, the Korath station in this system, and speaks to them in their language. After a short exchange, he smiles at you reassuringly. "They're waiting."`
+	on fail
+		dialog `[MISSION FAILED]: The Shuttle Pod that requested assistance has been destroyed. If life were a game you could load a save file and try again.`
+	on visit
+		conversation "microbot defense death"
+	on complete
+		conversation "microbot defense death"
+
+mission "Thraal: Moreau (Cleanup)"
+	landing
+	invisible
+	source
+		not planet "Gresku Fodar"
+	to offer
+		has "Thraal: Moreau: active"
+		has "met Thraal"
+	on offer
+		fail "Thraal: Moreau"
+		log "People" "Thraal" `A human who supposedly survived the Korath attack on the Icarus. Thraal claims to get along well with the Korath, but the nature of his relationship with them remains unclear.`
+		conversation
+			scene "planet/station2k"
+			`You decided to ignore Thraal's invitation to meet the Korath. They've proven themselves to be nothing but dangerous and you have little reason to put your trust in Thraal. With no change in their disposition towards you, they will continue on as a dangerous foe to be wary of.`
+				decline
+
+mission "Thraal: Moreau (Failed)"
+	landing
+	invisible
+	source "Gresku Fodar"
+	to offer
+		has "Thraal: Moreau: failed"
+		not "Thraal: Moreau (Cleanup): declined"
+	on offer
+		conversation "microbot defense death"
+
+mission "Thraal: Moreau (Killed)"
+	landing
+	invisible
+	source
+		not planet "Gresku Fodar"
+	to offer
+		has "Thraal: Moreau: failed"
+		not "Thraal: Moreau (Cleanup): declined"
+	on offer
+		set "Thraal: Moreau (Failed): offered"
+		set "Thraal: Moreau (Failed): declined"
+		fail

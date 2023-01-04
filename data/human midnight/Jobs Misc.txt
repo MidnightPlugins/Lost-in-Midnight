@@ -930,6 +930,7 @@ mission "Energy Cannon Outfitter"
 		
 outfitter "Energy Cannon"
 	"Energy Cannon"
+	"Energy Cannon Turret"
 
 event "energy cannon outfitter"
 	planet Haven

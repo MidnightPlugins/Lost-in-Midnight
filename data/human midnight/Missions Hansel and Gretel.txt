@@ -385,6 +385,7 @@ mission "Hansel & Gretel: Medical Supply Escort 3"
 
 
 mission "Hansel & Gretel: Pug Resistance"
+	landing
 	name "Hansel & Gretel"
 	description "Hansel & Gretel will fight by your side until they or the Pug have been defeated."
 	source
@@ -396,15 +397,15 @@ mission "Hansel & Gretel: Pug Resistance"
 		not "Hansel & Gretel: Medical Supply Escort 3: failed"
 		not "main plot completed"
 		or
-			has "FW Pug 5B: done"
-			has "FWC Pug 5C: done"
+			has "FW Pug 3C: done"
+			has "FWC Pug 3D: done"
 	on offer
 		conversation
 			scene "scene/scene-hanselandgretel 2"
 			`You find a familiar pair of siblings at the spaceport. But their ships look very different from the last time you saw them. "We've been making small upgrades over time to help ward off pirates," explains Gretel.`
 			`	"The big upgrade came when I decided to plunder the plunderers," adds Hansel. "Turns out they had some experimental prototypes they stole from somewhere."`
 			`	"From then on, we've been doing more to help other merchant ships fight off pirates," continues Gretel.`
-			`	"And when we heard that planets here were under attack from aliens, we decided to join the defenders," concludes Hansel.`
+			`	"And when we heard that planets here were under attack from aliens, we decided to help them," concludes Hansel.`
 			`	Gretel asks, "If you're going to resist the Pug, can we join you?"`
 			choice
 				`	"Of course, I'd be glad to have you along!"`

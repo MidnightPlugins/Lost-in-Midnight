@@ -11,6 +11,75 @@
 
 
 
+mission "Biohazard 1: Star Explorer"
+	minor
+	name "Biohazard-031"
+	description "A ship named Biohazard-031 seems to be kidnapping the crews of merchant ships in the north. Find the ship and rescue any captives that you can. Then return to <planet> for payment (<payment>)."
+	source
+		attributes "north"
+		not attributes "uninhabited"
+	to offer
+		has "event: star explorer fleet update"
+		"combat rating" > 300
+		or
+			and
+				not "Randomize Star Explorer Biohazard"
+				random < 70
+			and
+				has "Randomize Star Explorer Biohazard"
+				random < 10
+	on offer
+		conversation
+			scene "ship/star explorer"
+			`A navy officer approaches you. "Do you have combat experience? We are offering <payment> to any pilots that can fight to help track down the ship known as Biohazard and rescue any people they have kidnapped. The Biohazard has raided several merchant ships in the north over the last few days. The victims could be sold into slavery or suffer some other horrible fate."`
+			`	What will you do?`
+			choice
+				`	(Search for the Biohazard.)`
+				`	(Ignore this.)`
+					defer
+			`	The Biohazard has attacked ships in the north. It may be in one of the many uninhabited systems scattered across this region.`
+					accept
+	on defer
+		set "Randomize Star Explorer Biohazard"
+	on enter "Gorvi"
+		dialog `The Biohazard emerges from the luminescent clouds surrounding the star and hails you: "New test subjects! Excellent! The last batch didn't fare so well..."`
+	npc
+		government "Bounty"
+		system "Gorvi"
+		personality target waiting staying
+			confusion 20
+		ship "Scout (Bounty Hunter)" "Jekyll"
+		ship "Scout (Bounty Hunter)" "Hyde"
+		ship "Shuttle Pod (Pirate)" "Igor"
+		ship "Pirate Drone" "1337"
+	npc board
+		government "Bounty"
+		system "Gorvi"
+		personality target waiting staying
+			confusion 10
+		ship "Star Explorer (Biohazard)" "Biohazard-031"
+		conversation
+			scene "outfit/brig"
+			`When you board the ship, no defenders challenge you. Occasional screams can be heard in the distance. Your search for the kidnapped victims leads you to the ships brig. But the prisoners have escaped! A few dead bodies of the prisoners remain. Each has the alphanumeric sequence "BH-031" tatooed onto the back of their neck. You also notice their skin is mottled with greenish patches...`
+			choice
+				`	(Continue your search.)`
+			scene "outfit/medical bay"
+			`	You find the Biohazard's medical bay. Strapped to the operating table is a man's body. His skin is more greenish than the ones you saw previously. Suddenly, he opens his eyes and moans in pain. "Scientists... turning... us... into... alphas." The man falls unconscious and his breathing slows to a stop. He's dead.`
+			choice
+				`	(Continue your search.)`
+			scene "outfit/purger rifle"
+			`	You find several more dead bodies as you explore the ship. Some appear to be escaped prisoners with the strange green patches on their skin while others are normal humans in lab coats or tactical gear. The ones in uniforms bear a patch with "BH-031" printed on them. The humans are carrying rifles loaded with some sort of injection round. A bayonet style needle protrudes from under the barrel.`
+			`	As you take all this in, a door at the far end of the hall opens and an escaped prisoner emerges from it before running in your direction! Green splotches mar her arms and face. She yells out, "Help! They're killing us!" One of the Biohazard crew members appears from behind her, shooting her in the back of the leg with a single injection round. She falls, seemingly dead before she even hits the floor. More Biohazard crew arrive and they turn these weapons towards you...`
+	on complete
+		payment 200000
+		event "independent star explorers"
+		log `Encountered a ship named "Biohazard". The crew were kidnapping humans and performing experiments to turn them into Alphas. None of the victims could be saved. The crew wore uniforms with the tag "BH-031" and their prisoners had a similar mark on their necks. This ship was "Biohazard-031". There could be other "Biohazard" ships performing similar experiments.`
+		conversation
+			scene "scene/scene-biohazard031"
+			`Although you failed to rescue any of the victims, the government of <planet> pays you <payment>. You managed to stop the Biohazard from kidnapping any more people for their twisted experiments. But some details about this mission linger. The crew of the Biohazard didn't seem like normal pirates. The uniforms were too professional. And the antipersonnel weapons they carried require specialized ammunition. But most concerning of all was the "031" appended to the ship's name. It seems to suggest that there are other Biohazard ships out there...`
+
+
+
 mission "Blue Ridge 1"
 	minor
 	name "Auction: Blue Ridge"
@@ -823,9 +892,9 @@ mission "Star Explorer Fan Tour"
 		set "Randomize Star Explorer Fan Tour"
 	on accept
 		clear "star explorer pirate raid activated"
-		event "star explorer added to merchant fleets"
+		event "star explorer update"
 	on decline
-		event "star explorer added to merchant fleets"
+		event "star explorer update"
 	on enter
 		conversation
 			scene "ship/star explorer"
@@ -929,7 +998,7 @@ mission "Star Explorer Korath Raid"
 		attributes "core"
 	destination Earth
 	to offer
-		has "event: star explorer added to merchant fleets"
+		has "event: star explorer fleet update"
 	on offer
 		require "Jump Drive"
 	on enter "Kor Ak'Mari"
@@ -951,6 +1020,8 @@ mission "Star Explorer Korath Raid"
 		personality target derelict waiting staying disables plunders opportunistic harvests
 		ship "Star Explorer (Korath)" "Icarus"
 		conversation
+			action
+				log `Salvaged the "Icarus," a Star Explorer that had wandered into Korath territory and was being ransacked by one of their Raiders. Sadly, the original crew was lost.`
 			scene "outfit/data pad"
 			`The original crew was killed by the Korath. You find the captain's log. Read it?"`
 			choice
@@ -959,38 +1030,6 @@ mission "Star Explorer Korath Raid"
 					decline
 			scene "outfit/jump drive"
 			`	Only the final entry survived. "We landed on Sundive after testing out the strange device. It was only by chance we had the opportunity to acquire it from an alien vessel which pirates had disabled. Our journey from Polaris took but a single day! But this device, amazing as it is, consumes double the fuel of a Hyperdrive. Despite this, I have decided to set course for the systems to the east. We finally have the opportunity to explore a region of space that is truly unknown. Perhaps we may even reach the center of the galaxy! As we boldly set forth to where no human has gone before, we carry the hopes and dreams of those who precede us: to search for new life and peaceful civilizations as we explore the last frontier."`
-	on complete
-		log `Salvaged the "Icarus," a Star Explorer that had wandered into Korath territory and was being ransacked by one of their Raiders. Sadly, the original crew was lost.`
-
-ship "Star Explorer" "Star Explorer (Korath)"
-	add attributes
-		"self destruct" -.15
-	outfits
-		"Laser Turret" 6
-		"Torpedo Launcher"
-		Torpedo 5
-		"Fission Reactor"
-		"Systems Core (Medium)"
-		"D94-YV Shield Generator"
-		"Outfits Expansion"
-		"Brig"
-		"Large Radar Jammer"
-		"Luxury Accommodations"
-		"Engineering Room"
-		"Fuel Processor"
-		"Small Heat Shunt"
-		"Asteroid Scanner"
-		"Cargo Scanner"
-		"Outfit Scanner"
-		"Tactical Scanner"
-		"Medical Bay"
-		"Laser Rifle" 60
-		"Thermal Repeater Rifle" 60
-		Afterburner
-		"AR120 Reverse Thruster"
-		"A250 Atomic Thruster"
-		"A375 Atomic Steering"
-		"Jump Drive"
 
 
 

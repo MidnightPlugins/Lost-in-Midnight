@@ -445,33 +445,33 @@ mission "Grudge Fight 5"
 ship "War Hauler" "Grudge Hammer"
 	outfits
 		"Energy Cannon" 2
+		"Energy Cannon Turret" 6
+		"Anti-Missile Turret" 2
 		"Meteor Missile Launcher"
 		"Meteor Missile" 30
-		"Quad Blaster Turret" 6
-		"Anti-Missile Turret" 2
 		"Fission Reactor"
 		"LP072a Battery Pack"
-		"S-970 Regenerator"
-		"Small Radar Jammer"
-		"Liquid Nitrogen Cooler"		
-		"Greyhound Plasma Thruster"
-		"Impala Plasma Steering"
-		"Hyperdrive"
-		"Laser Rifle" 3
+		"D41-HY Shield Generator" 2
+		"Outfits Expansion"
+		"Large Radar Jammer"
+		"Antique Rifle" 3
 		"Fragmentation Grenades"
 		"Microwave Cannon"
-		"Security Station" 2
+		"Security Station"
+		"Greyhound Plasma Thruster"
+		"Impala Plasma Steering"
+		Hyperdrive
 	gun "Energy Cannon"
 	gun "Meteor Missile Launcher"
 	gun "Energy Cannon"
-	turret "Quad Blaster Turret"
-	turret "Quad Blaster Turret"
-	turret "Quad Blaster Turret"
+	turret "Energy Cannon Turret"
+	turret "Energy Cannon Turret"
+	turret "Energy Cannon Turret"
 	turret "Anti-Missile Turret"
 	turret "Anti-Missile Turret"
-	turret "Quad Blaster Turret"
-	turret "Quad Blaster Turret"
-	turret "Quad Blaster Turret"
+	turret "Energy Cannon Turret"
+	turret "Energy Cannon Turret"
+	turret "Energy Cannon Turret"
 	
 event "Grudge Legacy"
 	fleet "Marauder Bounty (Disguised)"

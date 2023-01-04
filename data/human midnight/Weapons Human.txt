@@ -87,7 +87,7 @@ outfit "Asteroid Deterioration"
 
 outfit "Energy Cannon"
 	category "Guns"
-	cost 32000
+	cost 64000
 	thumbnail "outfit/energy cannon"
 	"mass" 12
 	"outfit space" -12
@@ -101,13 +101,41 @@ outfit "Energy Cannon"
 		"velocity" 10
 		"lifetime" 36
 		"reload" 13
-		"firing energy" 19.2
-		"firing heat" 60
-		"shield damage" 19.2
-		"hull damage" 12
+		"firing energy" 11.6
+		"firing heat" 36
+		"shield damage" 21.2
+		"hull damage" 13.2
 		"cluster"
 		"submunition" "Energy Blast" 1
 	description "A relic from the Alpha War, Energy Cannons fell into disuse once the war ended. Occasionally they can still be found outfitted on older ships. They have a longer range than Energy Blasters and are more powerful. But the effectiveness of the projectiles diminishes the more distant the target."
+
+outfit "Energy Cannon Turret"
+	category "Turrets"
+	cost 256000
+	thumbnail "outfit/energy cannon turret"
+	"mass" 30
+	"outfit space" -30
+	"weapon capacity" -30
+	"turret mounts" -1
+	"required crew" 1
+	weapon
+		sprite "projectile/energy cannon"
+		"hardpoint sprite" "hardpoint/energy cannon turret"
+		"hardpoint offset" 9.
+		sound "torpedo-ver8"
+		"hit effect" "blaster impact" 2
+		"inaccuracy" 4
+		"turret turn" 1.6
+		"velocity" 10
+		"lifetime" 36
+		"reload" 13
+		"firing energy" 11.6
+		"firing heat" 36
+		"shield damage" 21.2
+		"hull damage" 13.2
+		"cluster"
+		"submunition" "Energy Blast" 1
+	description "The turreted version of the Energy Cannon consists of a single Energy Cannon mounted onto a rotating base. If there is any one factor that lead to the decline of this weapon, it might be the relatively slow turret turn rate which made it difficult to aim at fighters that were growing increasingly nimble as newer designs were developed."
 
 outfit "Energy Blast"
 	weapon
@@ -115,8 +143,8 @@ outfit "Energy Blast"
 		"hit effect" "blaster impact"
 		"inaccuracy" 3
 		"lifetime" 24
-		"shield damage" 12
-		"hull damage" 8
+		"shield damage" 13.2
+		"hull damage" 8.8
 		"submunition" "Residual Energy Blast" 1
 
 outfit "Residual Energy Blast"
@@ -125,8 +153,8 @@ outfit "Residual Energy Blast"
 		"hit effect" "blaster impact"
 		"inaccuracy" 2
 		"lifetime" 12
-		"shield damage" 9.6
-		"hull damage" 6
+		"shield damage" 10.6
+		"hull damage" 6.6
 
 
 
@@ -303,8 +331,8 @@ outfit "Silencer Beam"
 		"velocity" 300
 		"lifetime" 1
 		"reload" 1
-		"firing energy" .5
-		"firing heat" 2.4
+		"firing energy" .67
+		"firing heat" 3.2
 		"shield damage" 1.3
 		"hull damage" 1
 		"disabled damage" 0.7

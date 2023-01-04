@@ -280,6 +280,18 @@ outfit "Execution Chamber"
 
 
 
+outfit "Purger Rifle"
+	category "Hand to Hand"
+	cost 79000
+	thumbnail "outfit/purger rifle"
+	"capture attack" 2.5
+	"capture defense" 1.0
+	"unplunderable" 1
+	"illegal" 500000
+	description "Purger Rifles are sometimes used as part of clandestine biohazard containment protocols. They fire Euthanasia rounds which ensure a quick and painless death for anyone unfortunate enough to be infected with experimental pathogens. Each rifle comes with four additional magazines to ensure an uninterrupted dispersal of mercy. A hollow point injector attachment holds additional inoculations for particularly virulent infestations."
+
+
+
 outfit "Sniper Rifle"
 	category "Hand to Hand"
 	cost 12000

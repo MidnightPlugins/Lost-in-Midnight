@@ -574,6 +574,7 @@ event "navy flamethrower gunboats"
 
 
 # From mission "Star Explorer Fan Tour"
+# Patching this event out; replacing with "star explorer update"
 event "star explorer added to merchant fleets"
 	fleet "Large Southern Merchants"
 		add variant 1
@@ -590,6 +591,88 @@ event "star explorer added to merchant fleets"
 			"Star Explorer"
 			"Dagger"
 			"Hacker Drone"
+
+mission "Star Explorer update"
+	landing
+	invisible
+	to offer
+		has "event: star explorer added to merchant fleets"
+	on offer
+		event "star explorer merchant fleet patch"
+		event "star explorer update"
+		fail
+
+event "star explorer merchant fleet patch"
+	fleet "Large Southern Merchants"
+		remove variant 1
+			"Star Explorer"
+			"Dagger"
+			"Hacker Drone"			
+	fleet "Large Northern Merchants"
+		remove variant 1	
+			"Star Explorer"
+			"Dagger"
+			"Hacker Drone"
+	fleet "Large Core Merchants"
+		remove variant 1	
+			"Star Explorer"
+			"Dagger"
+			"Hacker Drone"
+
+event "star explorer update"
+	shipyard "Basic Ships"
+		add "Shuttle Pod"
+	fleet "Small Core Merchants"
+		add variant 1
+			"Shuttle Pod"
+	fleet "Large Core Merchants"
+		add variant 1
+			"Star Explorer"
+			"Shuttle Pod"
+			"Hacker Drone"
+	fleet "Small Northern Merchants"
+		add variant 1
+			"Shuttle Pod"
+	fleet "Large Northern Merchants"
+		add variant 1
+			"Star Explorer"
+			"Shuttle Pod"
+			"Hacker Drone"
+	fleet "Paradise Merchants"
+		add variant 1
+			"Shuttle Pod (Passenger)"
+		add variant 1
+			"Star Explorer"
+			"Shuttle Pod (Passenger)"
+			"Hacker Drone"
+	fleet "Small Southern Merchants"
+		add variant 1
+			"Shuttle Pod"
+	fleet "Large Southern Merchants"
+		add variant 1
+			"Star Explorer"
+			"Shuttle Pod (Fire Support)"
+			"Hacker Drone"
+	fleet "Small Deep Merchants"
+		add variant 1
+			"Shuttle Pod"
+	fleet "Large Deep Merchants"
+		add variant 1
+			"Star Explorer"
+			"Shuttle Pod"
+			"Hacker Drone"
+	fleet "Large Human Merchants (Hai)"
+		add variant 1
+			"Star Explorer (Hai)"
+			"Shuttle Pod (Passenger)"
+			"Hacker Drone"
+
+event "independent star explorers"
+	fleet "Large Independent"
+		add variant 1
+			"Star Explorer (Pirate)"
+			"Shuttle Pod (Pirate)"
+			"Pirate Drone"
 
 
 
@@ -913,3 +996,58 @@ event "add modified clippers"
 	fleet "Human Miners"
 		add variant 1
 			"Modified Clipper (Miner)"
+
+
+
+mission "Add Marauder Argosy"
+	landing
+	invisible
+	to offer
+		has "main plot completed"
+	on offer
+		event "add marauder argosy"
+		fail
+
+event "add marauder argosy"
+	fleet "Marauder Independent"
+		add variant 6
+			"Marauder Argosy"
+		add variant 6
+			"Marauder Argosy (Sniper)"
+		add variant 6
+			"Marauder Argosy (Afterburner)"
+	fleet "Marauder Bounty (Disguised)"
+		add variant 6
+			"Marauder Argosy"
+		add variant 6
+			"Marauder Argosy (Sniper)"
+		add variant 6
+			"Marauder Argosy (Afterburner)"
+	fleet "Marauder Independent (Killable)"
+		add variant 6
+			"Marauder Argosy"
+		add variant 6
+			"Marauder Argosy (Sniper)"
+		add variant 6
+			"Marauder Argosy (Afterburner)"
+	fleet "Marauder III"
+		add variant 1
+			"Marauder Argosy"
+		add variant 1
+			"Marauder Argosy (Sniper)"
+		add variant 1
+			"Marauder Argosy (Afterburner)"
+	fleet "pirate raid"
+		add variant 1
+			"Marauder Argosy"
+			"Fury (Flamethrower)" 2
+		add variant 1
+			"Marauder Argosy (Sniper)"
+			"Hawk (Inferno Rockets)" 2
+		add variant 1
+			"Marauder Argosy (Afterburner)"
+			"Raven (Afterburner)" 2
+	fleet "Bounty Hunters"
+		add variant 1
+			"Marauder Argosy (Bounty Hunter)"
+			"Fury (Missile)"
