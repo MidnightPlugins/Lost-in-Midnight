@@ -563,6 +563,7 @@ outfitter "Inferno Rockets"
 mission "Inferno Dragon: Inferno Outfitters"
 	invisible
 	minor
+	deadline 2
 	source
 		government "Pirate"
 		attributes "outfitter"
@@ -608,14 +609,15 @@ mission "Inferno Dragon: Inferno Outfitters"
 			
 			label wrong
 			`The outfitter frowns. "It seems you don't know the Inferno Dragon."`
-				accept			
+				accept
 	on defer
 		set "Randomize Inferno Dragon: Inferno Outfitters"
-			
 	on decline
 		event "inferno rockets at pirate outfitters"
 		log "Inferno Dragon Notes: The Inferno Dragon poem is a password that gives access to Inferno Rockets at some outfitters."
-	
+	on enter
+		set "Randomize Inferno Dragon: Inferno Outfitters"
+		clear "Inferno Dragon: Inferno Outfitters: offered"
 	npc kill
 		government "Pirate"
 		personality entering staying plunders heroic unconstrained
@@ -656,13 +658,12 @@ mission "Inferno Dragon: Inferno Outfitters"
 			variant
 				"Splinter (Proton)"
 				"Hawk (Inferno Rockets)" 2
-	on complete
-		set "Randomize Inferno Dragon: Inferno Outfitters"
-		clear "Inferno Dragon: Inferno Outfitters: offered"
+
 
 event "inferno rockets at pirate outfitters"
 	outfitter "Pirate Outfits"
 		add "Inferno Rocket Launcher"
+		add "Inferno Rocket Pod"
 		add "Inferno Rocket"
 		add "Inferno Rocket Rack"
 	planet Zenith
@@ -671,6 +672,19 @@ event "inferno rockets at pirate outfitters"
 		add outfitter "Inferno Rockets"
 	planet New China
 		add outfitter "Inferno Rockets"
+
+mission "Inferno Dragon: Inferno Rocket Pod Patch"
+	landing
+	invisible
+	to offer
+		has "event: inferno rockets at pirate outfitters"
+	on offer
+		event "inferno rocket pod patch"
+		fail
+
+event "inferno rocket pod patch"
+	outfitter "Pirate Outfits"
+		add "Inferno Rocket Pod"
 
 
 
@@ -720,6 +734,7 @@ mission "Inferno Dragon: Dragon's Hoard"
 			`	You trip on the uneven ground and are buried alive under several tons of rock, dirt, and stone.`
 				die
 			label live
+			scene "asteroid/large rock/spin"
 			`	You safely escape the cave in, but whatever was hidden in there is lost for all eternity.`
 				decline
 			

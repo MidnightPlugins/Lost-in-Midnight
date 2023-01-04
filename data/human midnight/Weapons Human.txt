@@ -214,6 +214,48 @@ outfit "Inferno Rocket Launcher"
 		"burn damage" 60
 	description "A weapon secretly developed through cooperation between different pirate factions, Inferno Rockets splatter their targets with a highly flammable substance."
 
+outfit "Inferno Rocket Pod"
+	category "Secondary Weapons"
+	cost 15000
+	thumbnail "outfit/inferno rocket pod"
+	"mass" 3
+	"outfit space" -6
+	"weapon capacity" -6
+	"gun ports" -1
+	"inferno rocket capacity" 2
+	weapon
+		sprite "projectile/inferno rocket"
+			"frame rate" 4
+		sound "rocket"
+		ammo "Inferno Rocket"
+		icon "icon/inferno rocket"
+		"hit effect" "inferno rocket hit"
+		"hit effect" "inferno rocket burn large" 5
+		"hit effect" "inferno rocket burn medium" 10
+		"hit effect" "inferno rocket burn small" 20
+		"die effect" "medium explosion"
+		"inaccuracy" 1
+		"velocity" 8
+		"lifetime" 125
+		"reload" 500
+		"range override" 500
+		"burst count" 2
+		"burst reload" 240
+		"firing energy" 1
+		"firing heat" 250
+		"acceleration" .8
+		"drag" .1
+		"trigger radius" 20
+		"blast radius" 50
+		"shield damage" 192
+		"hull damage" 168
+		"hit force" 60
+		"missile strength" 8
+		"heat damage" 42000
+		"burn damage" 60
+	description "A weapon secretly developed through cooperation between different pirate factions, Inferno Rockets splatter their targets with a highly flammable substance."
+	description "	Pods enable fighters and other light craft to carry small quantities of rockets into battle while retaining enough space for other weapons. Large ships are better off with full-size launchers."
+
 effect "inferno rocket hit"
 	sprite "effect/explosion/huge"
 		"no repeat"
