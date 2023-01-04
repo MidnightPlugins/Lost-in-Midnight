@@ -9,7 +9,7 @@
 # WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
 # PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 
-	
+
 
 person "Lure"
 	government "Indigenous Lifeform"
@@ -240,42 +240,6 @@ ship "Modified Blackbird"
 	explode "small explosion" 20
 	explode "medium explosion" 10
 	"final explode" "final explosion small"
-
-
-
-person "El Niño"
-	government "Wanderer"
-	frequency "100"
-	system
-		government "Wanderer"
-	personality vindictive coward
-	phrase
-		word
-			"Feel the storm? It's coming!"
-			"Fear the thunder!"
-			"I am the storm!"
-			"I am the lightning chaser!"
-	ship "God of Thunder" "El Niño"
-
-ship "Thunder Maker" "God of Thunder"
-	sprite "ship/god of thunder"
-	add attributes
-		"self destruct" 1
-	outfits
-		"Thunderhead Launcher" 16
-		"Thunderhead Missile" 640
-		
-		"Blue Sun Reactor"
-		"White Sun Reactor"
-		"Dark Storm Shielding" 2
-		"Command Center"
-		"Wanderer Heat Sink"
-		"Fuel Pod" 3
-		"Wanderer Ramscoop"
-		
-		"Type 4 Radiant Thruster"
-		"Type 4 Radiant Steering"
-		Hyperdrive
 
 
 
@@ -520,6 +484,8 @@ person "Midnight Predator"
 			"Alien Torture Devices"
 			"Almachian Brain Maggots"
 			"Microwave Cannons"
+			"Purger Rifles"
+			"Dream Crystals"
 			"Node 8 Jammers"
 			"Fake Sheragi Batteries"
 			"Fake Sheragi Cooling"
@@ -557,6 +523,7 @@ person "Midnight Predator"
 			"Haven"
 			"Stormhold"
 			"Zenith"
+			"New Tortuga"
 		word
 			". I think its name was "
 			". What was its name? Maybe it was "
@@ -790,16 +757,20 @@ ship "Korath Devourer" "Korath Predator"
 		"Engineering Room"
 		"Korath Scanner"
 		"Large Heat Shunt"
+		"Quantum Bloodstone"
 		"Quantumium"
 		"Drone Hacking"
 
-		"Korath Sentinel"
+		"Antique Rifle"
+		"Dream Crystal"
 		"Dual Pulse Pistols"
 		"Enforcer Confrontation Gear"
 		"Enforcer Riot Staff"
+		"Execution Chamber"
 		"Fragmentation Grenades"
 		"Intrusion Countermeasures"
 		"Ion Flash Bang"
+		"Korath Sentinel"
 		"Laser Rifle"
 		"Medical Bay"
 		"Microbot Defense Station"
@@ -807,13 +778,12 @@ ship "Korath Devourer" "Korath Predator"
 		"Pug Biodefenses"
 		"Pug Peacekeeping Staff"
 		"Pulse Rifle"
-		"Sniper Rifle"
-		"Thermal Repeater Rifle" 505
-		"Tuning Rifle"
-		"Security Station"
-		"Antique Rifle"
-		"Execution Chamber"
+		"Purger Rifle"
 		"Riot Containment Barrier"
+		"Security Station"
+		"Sniper Rifle"
+		"Thermal Repeater Rifle" 502
+		"Tuning Rifle"
 
 		"Korath Afterburner"
 		"Steering (Planetary Class)"
@@ -827,6 +797,7 @@ ship "Korath Devourer" "Korath Predator"
 		"Mysterious Treasure"
 		"Hackerz Plugin Omega"
 		"Hackerz Plugin Alpha"
+		"Hackerz Plugin Sigma"
 
 	turret "Digger Mining Turret"
 	turret "Shield Disruptor Turret"
@@ -857,3 +828,13 @@ outfit "Hackerz Plugin Alpha"
 	"fused circuits" 1
 	description "Installing this onto a ship should allow you to uninstall one outfit that normally could not be uninstalled due to integrated systems or fused circuits."
 	description "	This cannot be uninstalled unless the other outfit is installed, so use this with caution."
+
+outfit "Hackerz Plugin Sigma"
+	category "Unique"
+	thumbnail "outfit/schematics purple"
+	"illegal" 1000000
+	"unplunderable" 1
+	"spinal mount" -1
+	description "Installing this onto a ship disables its spinal mount. Why anyone would do this is unknown."
+	description "	This cannot be installed onto a ship that doesn't have a spinal mount."
+
