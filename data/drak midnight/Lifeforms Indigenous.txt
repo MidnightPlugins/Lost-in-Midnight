@@ -43,7 +43,7 @@ mission "First Contact: Subsidurials"
 		event "Subsidurial Ember Waste"
 		event "Subsidurial Coalition"
 		event "Subsidurial Korath"
-	npc kill
+	npc
 		government "Indigenous Lifeform"
 		personality waiting staying timid mining harvests mute unconstrained
 		fleet "Subsidurial"
@@ -903,9 +903,152 @@ mission "Midnight Market: Pet Subsidurial"
 
 
 
+ship "Subsidurial" "Subsidurial (Infant)"
+	noun "creature"
+	sprite "ship/subsidurial"
+		"scale" .5
+	thumbnail "thumbnail/subsidurial"
+	"never disabled"
+	attributes
+		category "Light Freighter"
+		"hull" 5800
+		"automaton" 1
+		"mass" 350
+		"cargo space" 35
+		"drag" 4.1
+		"heat dissipation" .4
+		"fuel capacity" 100
+		"thrust" 6
+		"turn" 450
+		"hull repair rate" 1
+		"ion protection" 1
+		"ion resistance" .5
+		"energy capacity" .5
+		"inscrutable" 1
+		"gaslining" 1
+		"hyperdrive" 1
+		"jump speed" .1
+	leak "blood" 15 25
+	explode "blood" 25
+	"final explode" "blood"
+	"final explode" "subsidurial death"
+	description "Due to their tiny mouths, young Subsidurials rely on their parents to break down asteroids during the early developmental years and are likely to die from starvation if orphaned."
+
+mission "A Subsidurial Gives Birth"
+	landing
+	invisible
+	destination "Pugglemug"
+	to offer
+		has "main plot completed"
+		random < 20
+	on enter "Deneb"
+		event "add subsidurial infants"
+		conversation
+			scene "thumbnail/subsidurial"
+			`A rare scene is playing out as a Subsidurial gives birth. Several other ship captains have paused to observe the spectacle. With one last push, the infant is free. If floats about, uncertain of the new universe surrounding it, then flies to join its parents.`
+	npc
+		government "Indigenous Lifeform"
+		system "Deneb"
+		personality
+			timid mining harvests mute unconstrained
+		fleet
+			cargo 0
+			variant
+				"Subsidurial" 2
+				"Subsidurial (Infant)"
+
+
+event "add subsidurial infants"
+	fleet "Subsidurial"
+		add variant 1
+			"Subsidurial" 2
+			"Subsidurial (Infant)"
+	fleet "Subsidurial (Ember Waste)"
+		add variant 1
+			"Subsidurial" 2
+			"Subsidurial (Infant)"
+
+
+ship "Subsidurial Titan"
+	noun "creature"
+	sprite "ship/subsidurial"
+		"scale" 2
+	thumbnail "thumbnail/subsidurial"
+	"never disabled"
+	attributes
+		category "Heavy Freighter"
+		"hull" 23200
+		"automaton" 1
+		"mass" 1400
+		"cargo space" 140
+		"drag" 16.4
+		"heat dissipation" 1.6
+		"fuel capacity" 200
+		"thrust" 20
+		"turn" 1600
+		"hull repair rate" 6
+		"ion protection" 3
+		"ion resistance" 1
+		"energy capacity" 2
+		"inscrutable" 1
+		"gaslining" 1
+		"hyperdrive" 1
+		"jump speed" .2
+	outfits
+		Mouthparts? 6
+	gun 0 -194 Mouthparts?
+	gun 0 -194 Mouthparts?
+	gun -45 -182 Mouthparts?
+	gun -45 -182 Mouthparts?
+	gun 45 -182 Mouthparts?
+	gun 45 -182 Mouthparts?
+	turret -40 -10
+	turret 40 -10
+	leak "blood" 60 100
+	explode "blood" 90
+	"final explode" "subsidurial death"
+	description "Some Subsidurials can grow to titanic sizes if given abundant food and a lack of predators."
+
+mission "Midnight Remnant: Cognizance 35 plus"
+	landing
+	invisible
+	source "Ssil Vida"
+	waypoint "Diespiter"
+	waypoint "Statina"
+	waypoint "Vaticanus"
+	waypoint "Egeria"
+	waypoint "Prosa"
+	to offer
+		has "Remnant: Cognizance 34: done"
+	npc
+		government "Ember Waste"
+		system "Vaticanus"
+		personality timid mining harvests mute unconstrained uninterested
+		ship "Subsidurial Titan"
+
+mission "Midnight Remnant: Cognizance 37 plus"
+	landing
+	invisible
+	repeat
+	destination "Ssil Vida"
+	to offer
+		has "Remnant: Cognizance 35: done"
+		has "remnant: ssil vida active"
+		random < 5
+	npc
+		government "Ember Waste"
+		system Postverta
+		personality timid mining harvests mute unconstrained uninterested
+		ship "Subsidurial Titan"
+	to fail
+		not "remnant: ssil vida active" 
+
+
+
 ship "Gray Eye"
 	noun "creature"
 	sprite "ship/grayeye"
+	thumbnail "thumbnail/gray eye-thumb"
 	"never disabled"
 	attributes
 		category "Light Warship"
@@ -944,8 +1087,7 @@ ship "Gray Eye"
 ship "Gray Eye" "Gray Eyed"
 	sprite "ship/grayeye flip"
 	"never disabled"
-	
-	
+
 outfit Tail?
 	category "Guns"
 	thumbnail "outfit/unknown"
@@ -963,7 +1105,6 @@ outfit Tail?
 		"shield damage" 300
 		"hull damage" 400
 		"hit force" 40
-
 
 fleet "Gray Eye"
 	government "Indigenous Lifeform"
@@ -986,6 +1127,8 @@ mission "Ayab's Revenge"
 		"combat rating" > 10
 		random < 25
 	on offer
+		log "People" "Captain Ayab" `A starship captain seeking revenge against the Gray Eye that destroyed his previous ship. With his new ship, the Ayab's Revenge, he is recruiting other starship captains to join his fleet.`
+		log "Factions" "Subsidurials" `Very old Subsidurials are known as Gray Eyes. They have thicker hides and can be temperamental, having learned how to deliver a powerful slap with their tail.`
 		conversation
 			`You're at a spaceport bar when a grizzeled old starship captain with a crazed expression on his face approaches your table.`
 			`"You that new hotshot, <last>?"`
@@ -997,6 +1140,7 @@ mission "Ayab's Revenge"
 			choice
 				`	"Hunt? What..."`
 				`	"Wait, I'm not..."`
+			scene "thumbnail/gray eye-thumb"
 			`"Gray Eye!" The man screams loudly. "The accursed creature destroyed my first ship! But now I finally have a new ship and am building up my fleet! Soon it will know my revenge!"`
 			choice
 				`	"But I have my own..."`
@@ -1021,8 +1165,6 @@ mission "Ayab's Revenge"
 	on complete
 		dialog `"You did good kid. Someday, you might have a fleet of your own!" True to his word, Captain Ayab treats you and you crew to a drink at the same bar you met him. After a having a few, he passes out. He looks content. As he snores on the bar counter, you quietly leave.`
 
-
-
 mission "Ayab's Revenge Epilogue1"
 	landing
 	invisible
@@ -1043,6 +1185,52 @@ mission "Ayab's Revenge Epilogue2"
 	on offer
 		fail "Ayab's Revenge Epilogue1"
 		fail
+
+mission "Ayab's Space Squid"
+	landing
+	name "Captain Ayab"
+	description "Captain Ayab will fight by your side until the horrible squid monsters have been defeated."
+	source
+		government "Pug"
+		attributes "core" "dirt belt" "near earth"
+	destination Pugglemug
+	to offer
+		has "Ayab's Revenge: done"
+		or
+			has "FW Pug 3C: done"
+			has "FWC Pug 3D: done"
+		not "main plot completed"
+	on offer
+		conversation
+			scene "thumbnail/gray eye-thumb"
+			`A grizzled old starship captain stumbles out of a spaceport bar and calls out to you. "Hey kid! Remember me? Captain Ayab!" This was the man who insisted on recruiting you into his fleet to hunt down a Gray Eye. His mood saddens. "It's terrible <first>! Terrible!"`
+			choice
+				`	"Terrible?"`
+				`	"What's terrible?"`
+			scene "thumbnail/pug zibruka"
+			`	"It's the squid, <first>! The squid!" He's shouting uncontrollably as other people back away in fear. "I got stuck in this space swarming with them! We have to kill them! All of them!"`
+			choice
+				`	"Calm down, they're not..."`
+				`	"These squid are actually..."`
+			scene "thumbnail/pug enfolta"
+			`	"Space squid!" He shouts "Those tentacled monsters are a menace!". By now, the streets around you are abandoned, the locals having been scared off by his tirade. "But I'm glad you're here to join me, <first>."`
+			choice
+				`	"Join you?"`
+				`	"Wait a minute..."`
+			scene "thumbnail/pug maboro"
+			`	"As part of my fleet you'll assist me in exterminating this wretched threat to humanity! It'll be more dangerous than our hunt for the Gray Eye, but I'm sure you're up to the task. See you in orbit!"`
+			choice
+				`	"But I have my own..."`
+				`	"I never agreed..."`
+			scene "thumbnail/marauder argosy-thumb"
+			`	 He's already rushing off to the spaceport before you can respond. You watch him board what appears to be an Argosy so heavily modified that it could be classified a Marauder. Maybe he'll be useful in the fight against the Pug...`
+				accept
+	npc accompany save
+		government "Escort"
+		personality heroic escort
+		ship "Marauder Argosy (Sniper)" "Ayab's Revenge"
+	on complete
+		dialog `Ayab congratulates you on assisting him to defeat the space squid, but will part ways with your fleet here."`
 
 
 
