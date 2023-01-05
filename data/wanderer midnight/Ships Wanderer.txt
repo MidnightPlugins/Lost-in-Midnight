@@ -569,9 +569,10 @@ ship "Thunder Maker"
 		licenses
 			"Wanderer Military"
 		"cost" 89100000
-		"shields" 142400
-		"hull" 86500
+		"shields" 142000
+		"hull" 87000
 		"automaton" 1
+		"crew equivalent" 150
 		"mass" 1470
 		"drag" 14.9
 		"heat dissipation" 0.45
