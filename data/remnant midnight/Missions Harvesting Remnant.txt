@@ -136,8 +136,9 @@ mission "Salvage Raider"
 		government "Remnant"
 		not attributes "uninhabited"
 	to offer
-		has "Remnant: Salvage 4: done"
-		has "Remnant: Salvage 4: failed"
+		or
+			has "Remnant: Salvage 4: done"
+			has "Remnant: Salvage 4: failed"
 		random < 20
 	npc save disable
 		government "Korath"
@@ -169,8 +170,9 @@ mission "Salvage Dredger"
 		government "Remnant"
 		not attributes "uninhabited"
 	to offer
-		has "Remnant: Salvage 4: done"
-		has "Remnant: Salvage 4: failed"
+		or
+			has "Remnant: Salvage 4: done"
+			has "Remnant: Salvage 4: failed"
 		random < 10
 	npc save disable
 		government "Korath"
