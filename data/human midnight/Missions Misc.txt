@@ -2486,6 +2486,74 @@ mission "Lares Exploring"
 
 
 
+mission "Pirate Raid: Shield Suppressor"
+	landing
+	invisible
+	deadline 3
+	repeat
+	to offer
+		"reputation: Pirate" < 0
+		"combat rating" >= 403
+		random < 10
+	on offer
+		require "Shield Suppressor"
+	npc
+		government "Pirate"
+		personality nemesis harvests plunders entering
+		fleet "pirate raid" 2
+	npc evade
+		to spawn
+			"combat rating" > 1097
+		government "Pirate"
+		personality nemesis harvests plunders entering
+		fleet "pirate raid" 2
+		fleet "Marauder fleet I"
+	npc evade
+		to spawn
+			"combat rating" > 2981
+		government "Pirate"
+		personality nemesis harvests plunders entering
+		fleet "pirate raid" 2
+		fleet "Marauder fleet II"
+	npc evade
+		to spawn
+			"combat rating" > 8103
+		government "Pirate"
+		personality nemesis harvests plunders entering
+		fleet "Marauder fleet VII"
+		fleet "Marauder fleet III"
+	npc evade
+		to spawn
+			"combat rating" > 22026
+		government "Pirate"
+		personality nemesis harvests plunders entering
+		fleet "Marauder fleet VIII"
+		fleet "Marauder fleet IV"
+	npc evade
+		to spawn
+			"combat rating" > 59874
+		government "Pirate"
+		personality nemesis harvests plunders entering
+		fleet "Marauder fleet IX"
+		fleet "Marauder fleet V"
+	npc evade
+		to spawn
+			"combat rating" > 162755
+		government "Pirate"
+		personality nemesis harvests plunders entering
+		fleet "Marauder fleet X"
+		fleet "Marauder fleet VI"
+	npc evade
+		to spawn
+			"combat rating" > 442413
+		government "Pirate"
+		personality nemesis harvests plunders entering
+		fleet "Large Southern Pirates"
+		fleet "Large Core Pirates"
+		fleet "Large Northern Pirates"
+
+
+
 conversation "sabotage: shield suppressor"
 	scene "outfit/shield suppressor"
 	`You notice a malfunction with the shield generator of your ship. You should probably have it checked out the next time you're at an outfitter...`
@@ -2502,7 +2570,8 @@ mission "Sabotage: Shield Suppressor (assisting)"
 		not attributes "automaton"
 	destination "Earth"
 	to offer
-		"combat rating" > 300
+		"combat rating" >= 1097
+		has "Sabotage: Shield Suppressor (boarding): offered"
 		random < 1
 	on offer
 		require "Shield Suppressor" 0
@@ -2525,8 +2594,15 @@ mission "Sabotage: Shield Suppressor (boarding)"
 		not attributes "automaton"
 	destination "Earth"
 	to offer
-		"combat rating" > 300
-		random < 1
+		"reputation: Pirate" < 0
+		"combat rating" >= 403
+		or
+			and
+				not "Sabotage: Shield Suppressor (boarding): offered"
+				random < 20
+			and
+				has "Sabotage: Shield Suppressor (boarding): offered"
+				random < 2
 	on offer
 		require "Shield Suppressor" 0
 		outfit "Shield Suppressor" 1
@@ -2536,6 +2612,29 @@ mission "Sabotage: Shield Suppressor (boarding)"
 		personality nemesis harvests plunders entering
 		fleet "pirate raid" 2
 
+mission "Sabotage: Shield Suppressor (boarding rival)"
+	boarding
+	invisible
+	minor
+	repeat
+	deadline 1
+	source
+		government "Pirate" "Independent" "Independent (Killable)" "Bounty (Disguised)"
+		not attributes "automaton"
+	destination "Earth"
+	to offer
+		"reputation: Pirate" >= 0
+		"reputation: Pirate (Rival)" < 0
+		"combat rating" >= 403
+		random < 2
+	on offer
+		require "Shield Suppressor" 0
+		outfit "Shield Suppressor" 1
+		conversation "sabotage: shield suppressor"
+	npc kill
+		government "Pirate (Rival)"
+		personality nemesis harvests plunders entering
+		fleet "pirate raid" 2
 
 
 ##################################
