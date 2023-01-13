@@ -27,6 +27,39 @@ outfit "Korath Scanner"
 	description "Korath ships rarely rely on scanning technologies, preferring to shoot first and plunder later. The rare ship that does need it likely has one of these bulky systems installed."
 
 
+
+outfit "Reasoning Node (Damaged)"
+	category "Systems"
+	cost "11500"
+	thumbnail "outfit/damaged reasoning node"
+	"mass" 1
+	"outfit space" -1
+	"fused circuits" 1
+	"unplunderable" 1
+	description "This miniature computer appears to be damaged. Hopefully it wasn't an important part of the systems for the ship it was installed on."
+
+
+
+outfit "Systems Core (Damaged)"
+	category "Systems"
+	cost 4575000
+	thumbnail "outfit/damaged systems core"
+	"mass" 91
+	"outfit space" -91
+	"energy capacity" 2600
+	"shield generation" 3.1
+	"shield energy" 4.6
+	"hull repair rate" .1
+	"hull energy" .4
+	"hull heat" .6
+	"energy consumption" 0.8
+	"heat generation" 1.2
+	"fused circuits" 1
+	"unplunderable" 1
+	description `Despite massive damage, this hybrid shield generator computer system is still operational to some degree.`
+
+
+
 ##################
 # deprecated
 ##################
