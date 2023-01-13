@@ -218,7 +218,7 @@ ship "Modified Argosy" "Modified Argosy (used slaver)"
 		
 		"NT-200 Nucleovoltaic"
 		"LP072a Battery Pack"
-		"D23-QP Shield Generator"
+		"Modified D23-QP Shielding"
 		"Small Radar Jammer"
 		"Bunk Room" 2
 		"Brig"
@@ -246,7 +246,7 @@ ship "Modified Argosy" "Modified Argosy (used smuggler)"
 		
 		"NT-200 Nucleovoltaic"
 		"LP072a Battery Pack"
-		"D23-QP Shield Generator"
+		"Modified D23-QP Shielding"
 		"Small Radar Jammer"
 		"Interference Plating" 5
 		
@@ -271,7 +271,7 @@ ship "Marauder Arrow" "Marauder Arrow (Used)"
 		
 		"Dwarf Core"
 		"LP072a Battery Pack"
-		"D14-RN Shield Generator"
+		"Modified D14-RN Shielding"
 		"Cooling Ducts"
 		
 		"A250 Atomic Thruster"
@@ -295,7 +295,7 @@ ship "Marauder Arrow" "Marauder Arrow (Used Engines)"
 		
 		"Dwarf Core"
 		"Supercapacitor"
-		"D14-RN Shield Generator"
+		"Modified D14-RN Shielding"
 		
 		"A370 Atomic Thruster"
 		"A375 Atomic Steering"
@@ -315,7 +315,7 @@ ship "Marauder Arrow" "Marauder Arrow (Used Weapons)"
 		
 		"Dwarf Core"
 		"LP036a Battery Pack"
-		"D14-RN Shield Generator"
+		"Modified D14-RN Shielding"
 		"Water Coolant System"
 		
 		"A250 Atomic Thruster"
@@ -416,7 +416,7 @@ ship "Marauder Falcon" "Marauder Falcon (Used)"
 		
 		"Fusion Reactor"
 		"LP288a Battery Pack"
-		"D67-TM Shield Generator"
+		"Modified D67-TM Shielding"
 		"Large Radar Jammer"
 		"Liquid Helium Cooler"
 		"Outfits Expansion" 3
@@ -448,7 +448,7 @@ ship "Marauder Falcon" "Marauder Falcon (Used Engines)"
 		
 		"Fusion Reactor"
 		"LP144a Battery Pack"
-		"D41-HY Shield Generator"
+		"Modified D41-HY Shielding"
 		"Large Radar Jammer"
 		"Liquid Helium Cooler"
 		"Outfits Expansion" 3
@@ -482,7 +482,7 @@ ship "Marauder Falcon" "Marauder Falcon (Used Weapons)"
 		
 		"Fusion Reactor"
 		"LP144a Battery Pack"
-		"D41-HY Shield Generator"
+		"Modified D41-HY Shielding"
 		"Large Radar Jammer"
 		"Liquid Helium Cooler"
 		"Outfits Expansion" 3
@@ -597,7 +597,7 @@ ship "Marauder Leviathan" "Marauder Leviathan (Used)"
 		
 		"Fusion Reactor"
 		"LP144a Battery Pack"
-		"D94-YV Shield Generator"
+		"Modified D94-YV Shielding"
 		"Large Radar Jammer"
 		"Liquid Helium Cooler"
 		"Outfits Expansion" 2
@@ -629,7 +629,7 @@ ship "Marauder Leviathan" "Marauder Leviathan (Used Engines)"
 		
 		"Fusion Reactor"
 		"LP144a Battery Pack"
-		"D94-YV Shield Generator"
+		"Modified D94-YV Shielding"
 		"Large Radar Jammer"
 		"Liquid Helium Cooler"
 		"Liquid Nitrogen Cooler"
@@ -657,7 +657,7 @@ ship "Marauder Leviathan" "Marauder Leviathan (Used Weapons)"
 
 		"Fusion Reactor"
 		"LP144a Battery Pack"
-		"D94-YV Shield Generator"
+		"Modified D94-YV Shielding"
 		"Large Radar Jammer"
 		"Liquid Helium Cooler"
 		"Outfits Expansion" 2
@@ -688,7 +688,7 @@ ship "Marauder Manta" "Marauder Manta (Used)"
 		
 		"Dwarf Core"
 		"LP144a Battery Pack"
-		"D14-RN Shield Generator"
+		"Modified D14-RN Shielding"
 		"Liquid Nitrogen Cooler"
 		"Security Station" 3
 				
@@ -719,7 +719,7 @@ ship "Marauder Manta" "Marauder Manta (Used Engines)"
 		
 		"Dwarf Core"
 		"LP144a Battery Pack"
-		"D14-RN Shield Generator"
+		"Modified D14-RN Shielding"
 		"Liquid Nitrogen Cooler"
 				
 		"A370 Atomic Thruster"
@@ -755,7 +755,7 @@ ship "Marauder Manta" "Marauder Manta (Used Weapons)"
 		"LP072a Battery Pack"
 		"LP036a Battery Pack"
 		"Supercapacitor"
-		"D14-RN Shield Generator"
+		"Modified D14-RN Shielding"
 		"Liquid Nitrogen Cooler"
 				
 		"A250 Atomic Thruster"
@@ -931,7 +931,7 @@ ship "Marauder Splinter" "Marauder Splinter (Used)"
 		
 		"Fusion Reactor"
 		"LP036a Battery Pack"
-		"D67-TM Shield Generator"
+		"Modified D67-TM Shielding"
 		"Liquid Nitrogen Cooler"
 				
 		"A250 Atomic Thruster"
@@ -958,7 +958,7 @@ ship "Marauder Splinter" "Marauder Splinter (Used Engines)"
 		
 		"Fusion Reactor"
 		"LP036a Battery Pack"
-		"D67-TM Shield Generator"
+		"Modified D67-TM Shielding"
 		"Liquid Nitrogen Cooler"
 		"Water Coolant System"
 		"Security Station"
@@ -988,7 +988,7 @@ ship "Marauder Splinter" "Marauder Splinter (Used Weapons)"
 		
 		"Fusion Reactor"
 		"LP036a Battery Pack"
-		"D23-QP Shield Generator"
+		"Modified D23-QP Shielding"
 		"Liquid Nitrogen Cooler"
 		"Security Station" 2
 				

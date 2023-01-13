@@ -391,3 +391,35 @@ effect "silencer beam impact"
 
 
 
+outfit "Thermo Detonator"
+	category "Secondary Weapons"
+	thumbnail "outfit/thermo detonator"
+	cost 0
+	"turret mounts" -1
+	"integrated systems" 1
+	"reinstall" -1
+	"unplunderable" 1
+	weapon
+		icon "icon/thermo detonator"
+		"hit effect" "nuke explosion"
+		"hit effect" "nuke residue fast" 10
+		"hit effect" "nuke residue slow" 10
+		"die effect" "fail sound"
+		"inaccuracy" 0
+		"turret turn" 60
+		"velocity" 0
+		"lifetime" 1
+		"reload" 400
+		"firing energy" 1
+		"trigger radius" 150
+		"blast radius" 150
+		"shield damage" 9000
+		"hull damage" 7000
+		"hit force" 40
+		"missile strength" 200
+	description "WARNING: This device is a one-shot weapon. It will destroy your ship when detonated. A security override prevents activation unless hostiles are nearby."
+	description "	It should be noted that any evidence suggesting this outfit was installed on your ship at the time of its destruction voids any insurance policy that would have paid compensation otherwise."
+	description "	This outfit is integrated into your ship's hull and cannot be safely removed without damaging it."
+
+effect "fail sound"
+	sound "fail"

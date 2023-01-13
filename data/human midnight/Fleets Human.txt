@@ -25,11 +25,11 @@ fleet "pirate raid (rivals)"
 	variant 2
 		"Argosy (Turret)"
 	variant 1
-		"Modified Argosy"
+		"Modified Argosy (Shields)"
 	variant 1
-		"Modified Argosy (Heavy)"
+		"Modified Argosy (Shields Heavy)"
 	variant 1
-		"Modified Argosy (Blaster)"
+		"Modified Argosy (Shields Blaster)"
 	variant 2
 		"Clipper (Speedy)"
 	variant 1
@@ -57,10 +57,10 @@ fleet "pirate raid (rivals)"
 		"Argosy (Missile)"
 		"Hawk (Rocket)"
 	variant 1
-		"Modified Argosy (Heavy)"
+		"Modified Argosy (Shields Heavy)"
 		"Hawk (Speedy)" 2
 	variant 1
-		"Modified Argosy (Blaster)"
+		"Modified Argosy (Shields Blaster)"
 		"Raven (Afterburner)" 2
 	variant 2
 		"Falcon"
@@ -187,7 +187,7 @@ fleet "Treasure Hunters"
 	personality mining harvests
 		confusion 20
 	variant 1
-		"Modified Argosy (Blaster)"
+		"Modified Argosy (Shields Blaster)"
 	variant 1
 		"Modified Aerie"
 	variant 1
@@ -205,15 +205,15 @@ fleet "Poachers"
 		confusion 20
 	cargo 0
 	variant 1
-		"Modified Argosy"
+		"Modified Argosy (Shields)"
 	variant 1
-		"Modified Argosy (Blaster)"
+		"Modified Argosy (Shields Blaster)"
 	variant 1
-		"Modified Argosy (Heavy)"
+		"Modified Argosy (Shields Heavy)"
 	variant 1
-		"Modified Argosy (Missile)"
+		"Modified Argosy (Shields Missile)"
 	variant 1
-		"Modified Argosy (Smuggler)"
+		"Modified Argosy (Shields Smuggler)"
 	variant	1
 		"Clipper"
 	variant	1
@@ -473,7 +473,7 @@ fleet "Protection Light"
 	variant 3
 		"Headhunter"
 	variant 3
-		"Modified Argosy"
+		"Modified Argosy (Shields)"
 
 
 
@@ -763,13 +763,13 @@ fleet "Marauder Independent"
 	personality plunders
 		confusion 20
 	variant 6
-		"Marauder Leviathan"
+		"Marauder Leviathan (Shields)"
 	variant 6
 		"Marauder Leviathan (Weapons)"
 	variant 6
 		"Marauder Leviathan (Engines)"
 	variant 6
-		"Marauder Falcon"
+		"Marauder Falcon (Shields)"
 	variant 6
 		"Marauder Falcon (Weapons)"
 	variant 6
@@ -793,7 +793,7 @@ fleet "Marauder Independent"
 	variant 6
 		"Marauder Quicksilver (Engines)"
 	variant 6
-		"Marauder Arrow"
+		"Marauder Arrow (Shields)"
 	variant 6
 		"Marauder Arrow (Weapons)"
 	variant 6
@@ -805,13 +805,13 @@ fleet "Marauder Independent"
 	variant 6
 		"Marauder Bounder (Engines)"
 	variant 6
-		"Marauder Splinter"
+		"Marauder Splinter (Shields)"
 	variant 6
 		"Marauder Splinter (Weapons)"
 	variant 6
 		"Marauder Splinter (Engines)"
 	variant 6
-		"Marauder Manta"
+		"Marauder Manta (Shields)"
 	variant 6
 		"Marauder Manta (Engines)"
 	variant 6
@@ -1106,13 +1106,13 @@ fleet "Marauder Bounty (Disguised)"
 	personality plunders
 		confusion 20
 	variant 6
-		"Marauder Leviathan"
+		"Marauder Leviathan (Shields)"
 	variant 6
 		"Marauder Leviathan (Weapons)"
 	variant 6
 		"Marauder Leviathan (Engines)"
 	variant 6
-		"Marauder Falcon"
+		"Marauder Falcon (Shields)"
 	variant 6
 		"Marauder Falcon (Weapons)"
 	variant 6
@@ -1136,7 +1136,7 @@ fleet "Marauder Bounty (Disguised)"
 	variant 6
 		"Marauder Quicksilver (Engines)"
 	variant 6
-		"Marauder Arrow"
+		"Marauder Arrow (Shields)"
 	variant 6
 		"Marauder Arrow (Weapons)"
 	variant 6
@@ -1148,13 +1148,13 @@ fleet "Marauder Bounty (Disguised)"
 	variant 6
 		"Marauder Bounder (Engines)"
 	variant 6
-		"Marauder Splinter"
+		"Marauder Splinter (Shields)"
 	variant 6
 		"Marauder Splinter (Weapons)"
 	variant 6
 		"Marauder Splinter (Engines)"
 	variant 6
-		"Marauder Manta"
+		"Marauder Manta (Shields)"
 	variant 6
 		"Marauder Manta (Engines)"
 	variant 6
@@ -1169,13 +1169,13 @@ fleet "Marauder Independent (Killable)"
 	personality plunders
 		confusion 20
 	variant 6
-		"Marauder Leviathan"
+		"Marauder Leviathan (Shields)"
 	variant 6
 		"Marauder Leviathan (Weapons)"
 	variant 6
 		"Marauder Leviathan (Engines)"
 	variant 6
-		"Marauder Falcon"
+		"Marauder Falcon (Shields)"
 	variant 6
 		"Marauder Falcon (Weapons)"
 	variant 6
@@ -1199,7 +1199,7 @@ fleet "Marauder Independent (Killable)"
 	variant 6
 		"Marauder Quicksilver (Engines)"
 	variant 6
-		"Marauder Arrow"
+		"Marauder Arrow (Shields)"
 	variant 6
 		"Marauder Arrow (Weapons)"
 	variant 6
@@ -1211,13 +1211,13 @@ fleet "Marauder Independent (Killable)"
 	variant 6
 		"Marauder Bounder (Engines)"
 	variant 6
-		"Marauder Splinter"
+		"Marauder Splinter (Shields)"
 	variant 6
 		"Marauder Splinter (Weapons)"
 	variant 6
 		"Marauder Splinter (Engines)"
 	variant 6
-		"Marauder Manta"
+		"Marauder Manta (Shields)"
 	variant 6
 		"Marauder Manta (Engines)"
 	variant 6
@@ -1382,10 +1382,10 @@ fleet "Marauder Parade"
 	personality plunders
 		confusion 20
 	variant 1
-		"Marauder Leviathan"
+		"Marauder Leviathan (Shields)"
 		"Marauder Leviathan (Weapons)"
 		"Marauder Leviathan (Engines)"
-		"Marauder Falcon"
+		"Marauder Falcon (Shields)"
 		"Marauder Falcon (Weapons)"
 		"Marauder Falcon (Engines)"
 		"Marauder Firebird"
@@ -1397,16 +1397,16 @@ fleet "Marauder Parade"
 		"Marauder Quicksilver"
 		"Marauder Quicksilver (Weapons)"
 		"Marauder Quicksilver (Engines)"
-		"Marauder Arrow"
+		"Marauder Arrow (Shields)"
 		"Marauder Arrow (Weapons)"
 		"Marauder Arrow (Engines)"
 		"Marauder Bounder"
 		"Marauder Bounder (Weapons)"
 		"Marauder Bounder (Engines)"
-		"Marauder Splinter"
+		"Marauder Splinter (Shields)"
 		"Marauder Splinter (Weapons)"
 		"Marauder Splinter (Engines)"
-		"Marauder Manta"
+		"Marauder Manta (Shields)"
 		"Marauder Manta (Engines)"
 		"Marauder Manta (Weapons)"
 
@@ -1469,18 +1469,21 @@ fleet "Small Oathbreaker"
 		"Frigate"
 		"Gunboat" 2
 		"Rainmaker" 2
+		"Outrider" 2
 	variant
 		"Cruiser"
 		"Frigate"
 		"Gunboat"
 		"Rainmaker"
 		"Combat Drone" 4
+		"Outrider" 8
 	variant
 		"Carrier"
 		"Lance" 4
 		"Combat Drone" 6
 		"Gunboat"
 		"Rainmaker"
+		"Outrider" 2
 		
 fleet "Large Oathbreaker"
 	government "Oathbreaker"
@@ -1498,6 +1501,8 @@ fleet "Large Oathbreaker"
 		"Rainmaker"
 		"Lance" 4
 		"Combat Drone" 10
+		"Outrider" 10
+
 
 fleet "Elite Oathbreaker"
 	government "Oathbreaker"
@@ -1517,6 +1522,7 @@ fleet "Elite Oathbreaker"
 		"Lance" 4
 		"Combat Drone" 10
 		"Dropship (Troops)" 4
+		"Outrider (Mark II)" 14
 
 fleet "Fugitive Oathbreaker"
 	government "Oathbreaker"
@@ -1529,79 +1535,98 @@ fleet "Fugitive Oathbreaker"
 		"Pirate Drone" 4
 		"Gunboat"
 		"Rainmaker"
+		"Outrider (Pirate)" 6
 	variant 1
 		"Cruiser"
 		"Pirate Drone" 4
 		"Gunboat" 2
+		"Outrider (Pirate)" 6
 	variant 1
 		"Cruiser"
 		"Pirate Drone" 4
 		"Rainmaker" 2
+		"Outrider (Pirate)" 6
 	variant 1
 		"Cruiser"
 		"Pirate Drone" 4
 		"Marauder Bastion"
 		"Marauder Osprey"
+		"Outrider (Pirate)" 6
 	variant 1
 		"Cruiser"
 		"Pirate Drone" 4
 		"Marauder Bastion"
 		"Bastion (Laser)"
+		"Outrider (Pirate)" 6
 	variant 1
 		"Cruiser"
 		"Pirate Drone" 4
 		"Marauder Bastion"
 		"Bastion (Heavy)"
+		"Outrider (Pirate)" 6
 	variant 1
 		"Cruiser"
 		"Pirate Drone" 4
 		"Marauder Osprey"
 		"Osprey"
+		"Outrider (Pirate)" 6
 	variant 1
 		"Cruiser"
 		"Pirate Drone" 4
 		"Marauder Osprey"
 		"Osprey (Laser)"
+		"Outrider (Pirate)" 6
 	variant 1
 		"Frigate"
 		"Gunboat"
 		"Rainmaker"
+		"Outrider (Pirate)" 2
 	variant 1
 		"Frigate"
 		"Gunboat" 2
+		"Outrider (Pirate)" 2
 	variant 1
 		"Frigate"
 		"Rainmaker" 2
+		"Outrider (Pirate)" 2
 	variant 1
 		"Frigate"
 		"Marauder Bastion"
 		"Marauder Osprey"
+		"Outrider (Pirate)" 2
 	variant 1
 		"Frigate"
 		"Marauder Bastion"
 		"Bastion (Laser)"
+		"Outrider (Pirate)" 2
 	variant 1
 		"Frigate"
 		"Marauder Bastion"
 		"Bastion (Heavy)"
+		"Outrider (Pirate)" 2
 	variant 1
 		"Frigate"
 		"Marauder Osprey"
 		"Osprey"
+		"Outrider (Pirate)" 2
 	variant 1
 		"Frigate"
 		"Marauder Osprey"
 		"Osprey (Laser)"
+		"Outrider (Pirate)" 2
 	variant 1
 		"Marauder Falcon (Engines)"
 		"Gunboat"
 		"Rainmaker"
+		"Outrider (Pirate)" 2
 	variant 1
 		"Marauder Falcon (Engines)"
 		"Gunboat" 2
+		"Outrider (Pirate)" 2
 	variant 1
 		"Marauder Falcon (Engines)"
 		"Rainmaker" 2
+		"Outrider (Pirate)" 2
 	variant 1
 		"Falcon"
 		"Gunboat"

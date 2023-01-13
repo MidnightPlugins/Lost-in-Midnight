@@ -286,6 +286,10 @@ ship "Marauder Hauler" "Relentless Grudge"
 
 
 
+phrase "ecstasy"
+	word
+		"Ecstasy"
+
 mission "Grudge Fight 4"
 	minor
 	name "Wanted pirate near Ascella"
@@ -346,7 +350,11 @@ mission "Grudge Fight 4"
 		government "Independent (Killable)"
 		personality target waiting staying
 			confusion 30
-		ship "Modified Argosy (Smuggler)" "Ecstasy"
+		fleet
+			names "ecstasy"
+			outfitters "Contraband"
+			variant
+				"Modified Argosy (Shields Smuggler)"
 		dialog `The Ecstasy has been destroyed. You decide to visit <planet> and see if you can get some sort of reward for your effort.`
 	
 	on complete
@@ -543,7 +551,7 @@ event "Grudge Legacy"
 			"Marauder Bounder (Weapons)"
 		add variant 2
 			"Marauder Hauler (engines)"
-			"Marauder Arrow" 2
+			"Marauder Arrow (Shields)" 2
 			"Marauder Bounder" 2
 	fleet "Marauder fleet IV"
 		add variant 10
@@ -1080,7 +1088,7 @@ mission "Grudge Mama"
 			`	You set the ship to auto pilot and settle in for a quick nap in the pilot's seat. If any pirates come along, the alarm should wake you.`
 			choice
 				`	"Zzz..."`
-			scene "scene/scene-remote detonator"
+			scene "outfit/thermo detonator"
 			`	You are startled awake by a loud explosion. You open your eyes to see Mara standing next to you with what appears to be a remote detonator in her hand! You try to move but your hands and feet are bound together in thick coils of duct tape!`
 			`	"My trade name is Mama Grudge. This is payback for killing my family." According to the ship status readouts, half the hull is gone and the rest is rapidly disintegrating. Mara laughs maniacally. "Soon, I'll get to see my family again!" The cockpit collapses and you are engulfed in a scorching fireball.`
 				explode

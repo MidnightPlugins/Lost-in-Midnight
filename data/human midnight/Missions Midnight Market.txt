@@ -672,7 +672,7 @@ mission "Midnight Market: Wanderer Micro-sat"
 				die
 
 			label keep
-			scene "outfit/unknown"
+			scene "scene/scene-black cube"
 			`You've decided to keep this valuable piece of alien technology for yourself. Perhaps you'll even figure out how it works someday. After returning to your ship you hide it in a safe place.`
 				decline
 
@@ -693,7 +693,7 @@ mission "Midnight Market: Wanderer Micro-sat"
 			variant
 				"Marauder Behemoth"
 				"Modified Firebird"
-				"Modified Argosy"
+				"Modified Argosy (Shields)"
 				"Modified Roost"
 				"Modified Nest" 2
 				"Pirate Drone" 16

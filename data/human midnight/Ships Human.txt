@@ -314,7 +314,7 @@ ship "Carabao"
 
 		"LP144a Battery Pack"
 		"Fusion Reactor"
-		"D94-YV Shield Generator"
+		"Modified D94-YV Shielding"
 		"Large Radar Jammer"
 		"Luxury Accommodations"
 		Brig
@@ -562,7 +562,7 @@ ship "Hipparion"
 		"RT-I Radiothermal"
 		"KP-6 Photovoltaic Array" 2
 		"LP072a Battery Pack"
-		"D41-HY Shield Generator"
+		"Modified D41-HY Shielding"
 		"Small Radar Jammer" 3
 		"Asteroid Scanner"
 		"Cargo Scanner"
@@ -974,11 +974,11 @@ ship "Mastodon"
 		
 		"Fission Reactor"
 		"LP288a Battery Pack"
-		"D14-RN Shield Generator"
-		"D23-QP Shield Generator"
-		"D41-HY Shield Generator"
-		"D67-TM Shield Generator"
-		"D94-YV Shield Generator"
+		"Modified D14-RN Shielding"
+		"Modified D23-QP Shielding"
+		"Modified D41-HY Shielding"
+		"Modified D67-TM Shielding"
+		"Modified D94-YV Shielding"
 		"Large Radar Jammer"
 		"Ramscoop"
 		"Luxury Accommodations"
@@ -1026,6 +1026,56 @@ ship "Mastodon"
 	explode "huge explosion" 50
 	"final explode" "final explosion large"
 	description "Everyone who has a city ship license knows what the Mastodon looks like. Its image is the one pictured on the license. Mastodons were the first city ships equipped with a hyperdrive. Prior to that, colonists relied on generational ships or cryo ships. Only one Mastodon is still listed in active service on the Republic's official ship registry."
+
+
+
+ship "Outrider"
+	sprite "ship/outrider"
+	thumbnail "thumbnail/outrider-thumb"
+	attributes
+		category "Interceptor"
+		"cost" 102000
+		"shields" 900
+		"hull" 500
+		"required crew" 1
+		"bunks" 1
+		"mass" 40
+		"drag" .77
+		"heat dissipation" .8
+		"fuel capacity" 300
+		"cargo space" 5
+		"outfit space" 125
+		"weapon capacity" 25
+		"engine capacity" 30
+		weapon
+			"blast radius" 12
+			"shield damage" 120
+			"hull damage" 60
+			"hit force" 180
+	outfits
+		"Energy Blaster" 2
+		"Sidewinder Missile Pod" 2
+		"Sidewinder Missile" 8
+		
+		"nGVF-AA Fuel Cell"
+		"LP036a Battery Pack"
+		"D14-RN Shield Generator"
+		"Small Radar Jammer" 2
+		"Tactical Scanner"
+		
+		"X1700 Ion Thruster"
+		"X1200 Ion Steering"
+		"Hyperdrive"
+
+	engine -15.5 34 0.5
+	engine 15.5 34 0.5
+	gun -15.5 -12 "Energy Blaster"
+	gun 15.5 -12 "Energy Blaster"
+	gun -25.5 16 "Sidewinder Missile Pod"
+	gun 25.5 16 "Sidewinder Missile Pod"
+	explode "tiny explosion" 15
+	explode "small explosion" 5
+	description "The Navy Outrider interceptor was decommissioned with the rise of the Navy Carrier. But after the bombing of Geminus saw the Navy's ability to construct new capital ships hindered, the Republic has renewed production of the Outrider to support their fleets."
 
 
 
@@ -1180,8 +1230,8 @@ ship "Rancor"
 	attributes
 		category "Interceptor"
 		"cost" 510000
-		"shields" 2400
-		"hull" 1000
+		"shields" 1800
+		"hull" 600
 		"required crew" 1
 		"bunks" 3
 		"mass" 80
@@ -1202,7 +1252,7 @@ ship "Rancor"
 		"Energy Blaster" 2
 		"LP036a Battery Pack"
 		"nGVF-CC Fuel Cell"
-		"D23-QP Shield Generator"
+		"Modified D23-QP Shielding"
 		"X1200 Ion Steering"
 		"X1700 Ion Thruster"
 		"Hyperdrive"
@@ -1218,6 +1268,8 @@ ship "Rancor"
 	explode "small explosion" 20
 	description "The Rancor was originally a pirate vessel, and many were used in the early turf wars. The Alpha War was the beginning of the Rancor's decline as faster interceptors quickly outpaced and outmaneuvered this relatively slower ship. Today it is seen as a relic of the past, most noteworthy for influencing the design of the Fury."
 
+ship "Rancor" "Rancor (Berserker)"
+	"never disabled"
 
 
 # Science Drones appear in or trigger Hackerz missions
@@ -1708,7 +1760,8 @@ ship "War Hauler"
 
 		"Fission Reactor"
 		"LP072a Battery Pack"
-		"D41-HY Shield Generator" 2
+		"D41-HY Shield Generator"
+		"Modified D41-HY Shielding"
 		"Outfits Expansion"
 		"Large Radar Jammer"
 		"Antique Rifle" 3
@@ -1787,7 +1840,7 @@ ship "Metropolis"
 		
 		"Fusion Reactor"
 		"LP144a Battery Pack" 2
-		"D94-YV Shield Generator"
+		"Modified D94-YV Shielding"
 		"Outfits Expansion"
 		"Large Radar Jammer"
 		"Ramscoop" 1
@@ -1996,7 +2049,7 @@ ship "Municipality"
 		
 		"Fusion Reactor"
 		"LP144a Battery Pack"
-		"D94-YV Shield Generator"
+		"Modified D94-YV Shielding"
 		"Large Radar Jammer"
 		"Ramscoop"
 		"Laser Rifle" 15

@@ -381,13 +381,13 @@ mission "Escort South Pirate Home"
 			variant 1
 				"Clipper (Heavy)"
 			variant 1
-				"Modified Argosy"
+				"Modified Argosy (Shields)"
 			variant 1
-				"Modified Argosy (Blaster)"
+				"Modified Argosy (Shields Blaster)"
 			variant 1
-				"Modified Argosy (Heavy)"
+				"Modified Argosy (Shields Heavy)"
 			variant 1
-				"Modified Argosy (Missile)"
+				"Modified Argosy (Shields Missile)"
 
 	on complete
 		"reputation: Pirate" ++
@@ -447,13 +447,13 @@ mission "Escort South Pirate to Dirt Belt"
 			variant 1
 				"Clipper (Heavy)"
 			variant 1
-				"Modified Argosy"
+				"Modified Argosy (Shields)"
 			variant 1
-				"Modified Argosy (Blaster)"
+				"Modified Argosy (Shields Blaster)"
 			variant 1
-				"Modified Argosy (Heavy)"
+				"Modified Argosy (Shields Heavy)"
 			variant 1
-				"Modified Argosy (Missile)"
+				"Modified Argosy (Shields Missile)"
 
 	on complete
 		"reputation: Pirate" ++
@@ -538,13 +538,13 @@ mission "Jail Break B"
 		fleet
 			names "pirate"
 			variant
-				"Marauder Falcon"
+				"Marauder Falcon (Shields)"
 			variant
 				"Marauder Falcon (Weapons)"
 			variant
 				"Marauder Falcon (Engines)"
 			variant
-				"Marauder Leviathan"
+				"Marauder Leviathan (Shields)"
 			variant
 				"Marauder Leviathan (Weapons)"
 			variant
@@ -857,10 +857,11 @@ mission "Smuggler Exchange (Dirt Belt, Terminus)"
 		personality target waiting staying timid
 		fleet
 			names "pirate"
+			outfitters "Contraband"
 			variant
 				"Modified Clipper (Smuggler)"
 			variant
-				"Modified Argosy (Smuggler)"
+				"Modified Argosy (Shields Smuggler)"
 			variant
 				"Modified Firebird (Smuggler)"
 	on abort
@@ -917,10 +918,11 @@ mission "Smuggler Exchange (Dirt Belt, Lolami)"
 		personality target waiting staying timid
 		fleet
 			names "pirate"
+			outfitters "Contraband"
 			variant
 				"Modified Clipper (Smuggler)"
 			variant
-				"Modified Argosy (Smuggler)"
+				"Modified Argosy (Shields Smuggler)"
 			variant
 				"Modified Firebird (Smuggler)"
 	on abort
@@ -977,10 +979,11 @@ mission "Smuggler Exchange (Dirt Belt, Regulus)"
 		personality target waiting staying timid
 		fleet
 			names "pirate"
+			outfitters "Contraband"
 			variant
 				"Modified Clipper (Smuggler)"
 			variant
-				"Modified Argosy (Smuggler)"
+				"Modified Argosy (Shields Smuggler)"
 			variant
 				"Modified Firebird (Smuggler)"
 	on abort
@@ -1037,10 +1040,11 @@ mission "Smuggler Exchange (Dirt Belt, Fingol)"
 		personality target waiting staying timid
 		fleet
 			names "pirate"
+			outfitters "Contraband"
 			variant
 				"Modified Clipper (Smuggler)"
 			variant
-				"Modified Argosy (Smuggler)"
+				"Modified Argosy (Shields Smuggler)"
 			variant
 				"Modified Firebird (Smuggler)"
 	on abort
@@ -1097,10 +1101,11 @@ mission "Smuggler Exchange (Dirt Belt, Nocte)"
 		personality target waiting staying timid
 		fleet
 			names "pirate"
+			outfitters "Contraband"
 			variant
 				"Modified Clipper (Smuggler)"
 			variant
-				"Modified Argosy (Smuggler)"
+				"Modified Argosy (Shields Smuggler)"
 			variant
 				"Modified Firebird (Smuggler)"
 	on abort
@@ -1157,10 +1162,11 @@ mission "Smuggler Exchange (Dirt Belt, Ipsing)"
 		personality target waiting staying timid
 		fleet
 			names "pirate"
+			outfitters "Contraband"
 			variant
 				"Modified Clipper (Smuggler)"
 			variant
-				"Modified Argosy (Smuggler)"
+				"Modified Argosy (Shields Smuggler)"
 			variant
 				"Modified Firebird (Smuggler)"
 	on abort
@@ -1217,10 +1223,11 @@ mission "Smuggler Exchange (Dirt Belt, Boral)"
 		personality target waiting staying timid
 		fleet
 			names "pirate"
+			outfitters "Contraband"
 			variant
 				"Modified Clipper (Smuggler)"
 			variant
-				"Modified Argosy (Smuggler)"
+				"Modified Argosy (Shields Smuggler)"
 			variant
 				"Modified Firebird (Smuggler)"
 	on abort
@@ -1277,10 +1284,11 @@ mission "Smuggler Exchange (Dirt Belt, Hintar)"
 		personality target waiting staying timid
 		fleet
 			names "pirate"
+			outfitters "Contraband"
 			variant
 				"Modified Clipper (Smuggler)"
 			variant
-				"Modified Argosy (Smuggler)"
+				"Modified Argosy (Shields Smuggler)"
 			variant
 				"Modified Firebird (Smuggler)"
 	on abort
@@ -1337,10 +1345,11 @@ mission "Smuggler Exchange (Dirt Belt, Orvala)"
 		personality target waiting staying timid
 		fleet
 			names "pirate"
+			outfitters "Contraband"
 			variant
 				"Modified Clipper (Smuggler)"
 			variant
-				"Modified Argosy (Smuggler)"
+				"Modified Argosy (Shields Smuggler)"
 			variant
 				"Modified Firebird (Smuggler)"
 	on abort
@@ -1397,10 +1406,11 @@ mission "Smuggler Exchange (Dirt Belt, Naper)"
 		personality target waiting staying timid
 		fleet
 			names "pirate"
+			outfitters "Contraband"
 			variant
 				"Modified Clipper (Smuggler)"
 			variant
-				"Modified Argosy (Smuggler)"
+				"Modified Argosy (Shields Smuggler)"
 			variant
 				"Modified Firebird (Smuggler)"
 	on abort
@@ -1457,10 +1467,11 @@ mission "Smuggler Exchange (Dirt Belt, Umbral)"
 		personality target waiting staying timid
 		fleet
 			names "pirate"
+			outfitters "Contraband"
 			variant
 				"Modified Clipper (Smuggler)"
 			variant
-				"Modified Argosy (Smuggler)"
+				"Modified Argosy (Shields Smuggler)"
 			variant
 				"Modified Firebird (Smuggler)"
 	on abort
@@ -1517,10 +1528,11 @@ mission "Smuggler Exchange (Dirt Belt, Sadr)"
 		personality target waiting staying timid
 		fleet
 			names "pirate"
+			outfitters "Contraband"
 			variant
 				"Modified Clipper (Smuggler)"
 			variant
-				"Modified Argosy (Smuggler)"
+				"Modified Argosy (Shields Smuggler)"
 			variant
 				"Modified Firebird (Smuggler)"
 	on abort
@@ -1674,7 +1686,7 @@ mission "Pirate Traitors"
 			variant
 				"Marauder Falcon (Engines)"
 			variant
-				"Marauder Leviathan"
+				"Marauder Leviathan (Shields)"
 			variant
 				"Marauder Leviathan (Engines)"
 			variant
@@ -1782,7 +1794,7 @@ mission "Rum Cellar Wager"
 		fleet
 			names "bounty hunter"
 			variant 3
-				"Marauder Falcon"
+				"Marauder Falcon (Shields)"
 				"Headhunter" 2
 				"Headhunter (Strike)" 2
 			variant 2
@@ -1794,7 +1806,7 @@ mission "Rum Cellar Wager"
 				"Headhunter" 2
 				"Headhunter (Strike)" 2
 			variant 3
-				"Marauder Leviathan"
+				"Marauder Leviathan (Shields)"
 				"Headhunter" 2
 				"Headhunter (Strike)" 2
 			variant 2

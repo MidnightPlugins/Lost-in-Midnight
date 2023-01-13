@@ -102,7 +102,7 @@ event "inferno rocket fleets"
 			"Fury (Heavy)" 2
 		add variant 1
 			"Modified Argosy (Inferno Rocket)"
-			"Modified Argosy (Missile)"
+			"Modified Argosy (Shields Missile)"
 		add variant 1
 			"Bastion (Inferno Rockets)"
 		add variant 1
@@ -271,7 +271,7 @@ event "inferno rocket fleets"
 			"Hawk (Bomber)"
 		add variant 1
 			"Hawk (Inferno Rockets)" 2
-			"Modified Argosy (Heavy)"
+			"Modified Argosy (Shields Heavy)"
 		add variant 1
 			"Modified Argosy (Inferno Rocket)"
 			"Raven (Afterburner)" 2
@@ -1098,7 +1098,7 @@ mission "Inferno Dragon: FW Bounty [0]"
 			variant
 				"Bastion"
 			variant
-				"Modified Argosy"
+				"Modified Argosy (Shields)"
 			variant
 				"Clipper"
 	on complete
@@ -1249,7 +1249,7 @@ event "inferno rockets appear patch"
 		variant 1
 			"Clipper (Speedy)"
 		variant 1
-			"Modified Argosy"
+			"Modified Argosy (Shields)"
 		variant 1
 			"Modified Nest"
 			"Pirate Drone" 4
@@ -1318,13 +1318,13 @@ event "inferno rockets appear patch"
 		variant 2
 			"Argosy (Turret)"
 		variant 1
-			"Modified Argosy"
+			"Modified Argosy (Shields)"
 		variant 1
-			"Modified Argosy (Heavy)"
+			"Modified Argosy (Shields Heavy)"
 		variant 1
-			"Modified Argosy (Blaster)"
+			"Modified Argosy (Shields Blaster)"
 		variant 1
-			"Modified Argosy (Missile)"
+			"Modified Argosy (Shields Missile)"
 		variant 4
 			"Clipper"
 		variant 2
@@ -1378,19 +1378,19 @@ event "inferno rockets appear patch"
 			"Argosy (Missile)"
 			"Hawk (Rocket)"
 		variant 1
-			"Modified Argosy"
+			"Modified Argosy (Shields)"
 			"Sparrow" 2
 		variant 1
-			"Modified Argosy (Heavy)"
+			"Modified Argosy (Shields Heavy)"
 			"Sparrow" 2
 		variant 1
-			"Modified Argosy (Blaster)"
+			"Modified Argosy (Shields Blaster)"
 			"Sparrow" 2
 		variant 1
-			"Modified Argosy (Missile)" 2
+			"Modified Argosy (Shields Missile)" 2
 		variant 1
 			"Fury (Heavy)" 2
-			"Modified Argosy (Missile)"
+			"Modified Argosy (Shields Missile)"
 		variant 4
 			"Bastion"
 		variant 2
@@ -1466,7 +1466,7 @@ event "inferno rockets appear patch"
 			"Fury (Heavy)" 2
 		variant 1
 			"Modified Argosy (Inferno Rocket)"
-			"Modified Argosy (Missile)"
+			"Modified Argosy (Shields Missile)"
 		variant 1
 			"Bastion (Inferno Rockets)"
 		variant 1
@@ -2049,11 +2049,11 @@ event "inferno rockets appear patch"
 		variant 2
 			"Argosy (Turret)"
 		variant 1
-			"Modified Argosy"
+			"Modified Argosy (Shields)"
 		variant 1
-			"Modified Argosy (Heavy)"
+			"Modified Argosy (Shields Heavy)"
 		variant 1
-			"Modified Argosy (Blaster)"
+			"Modified Argosy (Shields Blaster)"
 		variant 2
 			"Clipper (Speedy)"
 		variant 1
@@ -2081,10 +2081,10 @@ event "inferno rockets appear patch"
 			"Argosy (Missile)"
 			"Hawk (Rocket)"
 		variant 1
-			"Modified Argosy (Heavy)"
+			"Modified Argosy (Shields Heavy)"
 			"Hawk (Speedy)" 2
 		variant 1
-			"Modified Argosy (Blaster)"
+			"Modified Argosy (Shields Blaster)"
 			"Raven (Afterburner)" 2
 		variant 2
 			"Falcon"
@@ -2210,7 +2210,7 @@ event "inferno rockets appear patch"
 			"Hawk (Bomber)"
 		variant 1
 			"Hawk (Inferno Rockets)" 2
-			"Modified Argosy (Heavy)"
+			"Modified Argosy (Shields Heavy)"
 		variant 1
 			"Modified Argosy (Inferno Rocket)"
 			"Raven (Afterburner)" 2

@@ -138,6 +138,7 @@ outfit "Prototype Ramscoop FCX"
 	"hull fuel" 10
 	"afterburner fuel" 10
 	"cloaking fuel" 10
+	description "This prototype isn't working as intended..."
 
 mission "Engineering Room: Prototype Test 2"
 	name "Prototype Test"
@@ -186,6 +187,7 @@ outfit "Prototype Lodestone Engine MDX"
 	thumbnail "outfit/unknown"
 	"mass" 1000
 	"drag" 100
+	description "This prototype isn't working as intended..."
 
 mission "Engineering Room: Prototype Test 3"
 	name "Prototype Test"
@@ -234,6 +236,7 @@ outfit "Prototype Shield Modulator SD-DSD"
 	thumbnail "outfit/unknown"
 	"shield delay" 800
 	"depleted shield delay" 800
+	description "This prototype isn't working as intended..."
 
 mission "Engineering Room: Prototype Test 4"
 	name "Prototype Test"
@@ -289,6 +292,7 @@ outfit "Prototype Cooling HGX"
 	"afterburner heat" 80
 	"cloaking heat" 80
 	"heat protection" -.99
+	description "This prototype isn't working as intended..."
 
 mission "Engineering Room: Prototype Test 5"
 	name "Prototype Test"
@@ -344,6 +348,7 @@ outfit "Prototype Power Converter ECX"
 	"afterburner energy" 10
 	"cloaking energy" 10
 	"energy protection" -.99
+	description "This prototype isn't working as intended..."
 
 
 
@@ -777,10 +782,11 @@ mission "Bounty Hunting (Smuggler)"
 		personality timid fleeing uninterested entering target
 		fleet
 			names "civilian"
+			outfitters "Contraband"
 			variant
 				"Modified Clipper (Smuggler)"
 			variant
-				"Modified Argosy (Smuggler)"
+				"Modified Argosy (Shields Smuggler)"
 			variant
 				"Modified Firebird (Smuggler)"
 		dialog "You blast your way onto the ship and confine the captain to your ship's brig. Time to deliver them to <planet>."
@@ -796,6 +802,7 @@ mission "Corporate espionage [1]"
 	description "The <npc> is about to enter this system. Locate it and make detailed scans of its cargo, which are of considerable interest to a team of Syndicate researchers on <destination>; proceed there for <payment> after retrieving the data."
 	job
 	repeat
+	deadline 1 3
 	to offer
 		random < 10
 	source
@@ -820,11 +827,12 @@ mission "Corporate espionage [1]"
 
 mission "Corporate espionage [2]"
 	name "Corporate espionage"
+	deadline 1 3
 	description "The <npc> is about to enter this system. Locate it and make detailed scans of its cargo, which are of considerable interest to a team of Syndicate researchers on <destination>; proceed there for <payment> after retrieving the data."
 	job
 	repeat
 	to offer
-		random < 10
+		random < 5
 	source
 		government Republic Syndicate Neutral
 	destination
@@ -946,6 +954,7 @@ mission "Free Worlds espionage"
 	description "The <npc> is about to enter this system. Locate it and make detailed scans of its cargo, which are of considerable interest to a team of Free Worlds researchers on <destination>; proceed there for <payment> after retrieving the data."
 	job
 	repeat
+	deadline 1 3
 	to offer
 		random < 10
 		has "salary: Free Worlds"
@@ -1909,16 +1918,91 @@ mission "Stealing From Rival Smugglers"
 		personality timid fleeing uninterested entering target
 		fleet
 			names "civilian"
+			outfitters "Contraband"
 			variant
 				"Modified Clipper (Smuggler)"
 			variant
-				"Modified Argosy (Smuggler)"
+				"Modified Argosy (Shields Smuggler)"
 			variant
 				"Modified Firebird (Smuggler)"
 		dialog "You blast your way onto the ship and steal the smuggled cargo. Deliver it to <planet>."
 	on complete
 		payment 350000
 		dialog "The pirates of <planet> take the smuggled cargo from your cargo hold and pay you <payment>."
+
+
+
+mission "Pirate Sabotage: Shield Suppressor (Republic)"
+	job
+	repeat
+	name "Pirate Sabotage"
+	description "The <npc> has been harassing pirates near <system>. Sneak a Shield Suppressor onto the ship to sabotage their defenses. Return to <planet> for payment. (<payment>)."
+	cargo "shield suppressor" 1
+	source
+		attributes "north pirate" "dirtbelt pirate"
+		not attributes uninhabited
+	to offer
+		"reputation: Republic" > 0
+		has "event: initial deployment 4"
+	npc assist
+		government "Republic"
+		system
+			distance 1 2
+		personality target derelict waiting staying timid
+		fleet
+			names "republic capital"
+			outfitters "Ammo North"
+			variant 1
+				"Carrier (Shield Suppressor)"
+			variant 2
+				"Cruiser (Shield Suppressor)"
+		conversation
+			scene "outfit/shield suppressor"
+			action
+				"reputation: Republic" -= 40
+			`While assisting in the repairs of the <npc>, you discreetly attach the Shield Suppressor to their systems. Hopefully they won't realize what you've done until after you get to <destination> for your reward.`
+	on abort
+		"reputation: Pirate" -= 10
+		dialog `The pirates weren't happy to learn that you didn't install the Shield Suppressor onto the <npc>.`
+	on complete
+		payment 50000
+		"reputation: Pirate" += 10
+		dialog `As you receive your reward for installing the Shield Suppressor onto the <npc>, your employer remarks on how easily that ship was subsequentially destroyed thanks to your efforts.`
+
+mission "Pirate Sabotage: Shield Suppressor (Free Worlds)"
+	job
+	repeat
+	name "Pirate Sabotage"
+	description "The <npc> has been harassing pirates near <system>. Sneak a Shield Suppressor onto the ship to sabotage their defenses. Return to <planet> for payment. (<payment>)."
+	cargo "shield suppressor" 1
+	source
+		attributes "south pirate"
+		not attributes uninhabited
+	to offer
+		"reputation: Free Worlds" > 0
+		has "event: dreadnought deployment"
+	npc assist
+		government "Free Worlds"
+		system
+			distance 1 2
+		personality target derelict waiting staying timid
+		fleet
+			names "free worlds capital"
+			outfitters "Ammo South"
+			variant
+				"Dreadnought (Shield Suppressor)"
+		conversation
+			scene "outfit/shield suppressor"
+			action
+				"reputation: Republic" -= 40
+			`While assisting in the repairs of the <npc>, you discreetly attach the Shield Suppressor to their systems. Hopefully they won't realize what you've done until after you get to <destination> for your reward.`
+	on abort
+		"reputation: Pirate" -= 10
+		dialog `The pirates weren't happy to learn that you didn't install the Shield Suppressor onto the <npc>.`
+	on complete
+		payment 50000
+		"reputation: Pirate" += 10
+		dialog `As you receive your reward for installing the Shield Suppressor onto the <npc>, your employer remarks on how easily that ship was subsequentially destroyed thanks to your efforts.`
 
 
 
@@ -2085,3 +2169,4 @@ mission "Cryostasis Organ Transplant (hard)"
 	on complete
 		payment 25000 175
 		dialog `The cryostasis pod opens with a hiss and you retrieve the last of the donated organs. A medical team rushes it to the intended recipient. Five lives may have been saved with your help. Compared to that, your payment of <payment> is just a bonus.`
+

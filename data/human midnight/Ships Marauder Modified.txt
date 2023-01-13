@@ -49,7 +49,7 @@ ship "Modified Aerie"
 		"KP-6 Photovoltaic Array" 2
 		"KP-6 Photovoltaic Panel" 4
 		"LP144a Battery Pack"
-		"D41-HY Shield Generator"
+		"Modified D41-HY Shielding"
 		"Water Coolant System"
 		"Large Radar Jammer"
 		"Laser Rifle" 2
@@ -109,11 +109,11 @@ ship "Modified Berserker"
 	outfits
 		"Energy Cannon" 1
 		"Energy Blaster" 2
-		"nGVF-DD Fuel Cell"
-		"LP036a Battery Pack"
-		"D14-RN Shield Generator"
-		"Antique Rifle"
-		
+
+		"nGVF-CC Fuel Cell"
+		"LP072a Battery Pack"
+		"D23-QP Shield Generator"
+
 		"X2700 Ion Thruster"
 		"X3200 Ion Steering"
 		"Hyperdrive"
@@ -162,7 +162,8 @@ ship "Modified Clipper"
 
 		"S3 Thermionic"
 		"LP072a Battery Pack"
-		"D94-YV Shield Generator"
+		"D41-HY Shield Generator"
+		"Modified D41-HY Shielding"
 		"Water Coolant System"
 		"Cargo Scanner"
 		"Large Radar Jammer"
@@ -191,7 +192,8 @@ ship "Modified Clipper" "Modified Clipper (Smuggler)"
 		Afterburner
 		"Beam Laser" 2
 		"Cargo Scanner"
-		"D94-YV Shield Generator"
+		"D41-HY Shield Generator"
+		"Modified D41-HY Shielding"
 		"Greyhound Plasma Steering"
 		"Greyhound Plasma Thruster"
 		"Interference Plating" 4
@@ -201,6 +203,7 @@ ship "Modified Clipper" "Modified Clipper (Smuggler)"
 		"Large Radar Jammer"
 		"Laser Rifle" 4
 		"Outfit Scanner"
+		"Smuggler's Hideaway"
 		"S3 Thermionic"
 		"Scram Drive"
 		"Small Bunk Room"
@@ -215,7 +218,8 @@ ship "Modified Clipper" "Modified Clipper (Bounty Hunter)"
 		Afterburner
 		Brig
 		"Bunk Room"
-		"D94-YV Shield Generator"
+		"D41-HY Shield Generator"
+		"Modified D41-HY Shielding"
 		"Fragmentation Grenades" 4
 		"Greyhound Plasma Steering"
 		"Greyhound Plasma Thruster"
@@ -239,7 +243,7 @@ ship "Modified Clipper" "Modified Clipper (Miner)"
 	outfits
 		"Asteroid Scanner"
 		"Cargo Expansion" 2
-		"D67-TM Shield Generator"
+		"Modified D67-TM Shielding"
 		"Greyhound Plasma Steering"
 		"Greyhound Plasma Thruster"
 		"Heavy Laser" 4
@@ -281,7 +285,7 @@ ship "Modified Firebird"
 		
 		"RT-I Radiothermal"
 		"LP144a Battery Pack"
-		"D67-TM Shield Generator"
+		"Modified D67-TM Shielding"
 		"Cargo Expansion"
 		"Small Radar Jammer"
 		"Antique Rifle"
@@ -312,13 +316,13 @@ ship "Modified Firebird" "Modified Firebird (Smuggler)"
 		"Anti-Missile Turret"
 		"RT-I Radiothermal"
 		"LP144a Battery Pack"
-		"D41-HY Shield Generator"
+		"Modified D41-HY Shielding"
 		"Water Coolant System"
 		"Outfits Expansion"
 		"Interference Plating" 4
 		"Small Radar Jammer"
 		"Antique Rifle"
-		
+		"Smuggler's Hideaway"
 		Afterburner
 		"X3700 Ion Thruster"
 		"X3200 Ion Steering"
@@ -357,7 +361,8 @@ ship "Modified Nest"
 		
 		"S3 Thermionic"
 		"LP072a Battery Pack"
-		"D41-HY Shield Generator" 2
+		"D41-HY Shield Generator"
+		"Modified D41-HY Shielding"
 		"Large Radar Jammer"
 		"Fragmentation Grenades" 2
 		"Laser Rifle" 9
@@ -421,7 +426,8 @@ ship "Modified Roost"
 		
 		"S3 Thermionic"
 		"LP072a Battery Pack"
-		"D41-HY Shield Generator" 4
+		"D41-HY Shield Generator" 3
+		"Modified D41-HY Shielding"
 		"Small Bunk Room"
 		"Small Radar Jammer" 3
 		"Tactical Scanner"
@@ -486,6 +492,7 @@ ship "Marauder Argosy"
 		"outfit space" 365
 		"weapon capacity" 150
 		"engine capacity" 90
+		"self destruct" .25
 		weapon
 			"blast radius" 90
 			"shield damage" 900
@@ -635,6 +642,7 @@ ship "Marauder Bastion"
 		"outfit space" 520
 		"weapon capacity" 210
 		"engine capacity" 130
+		"self destruct" .25
 		weapon
 			"blast radius" 160
 			"shield damage" 1600
@@ -649,7 +657,8 @@ ship "Marauder Bastion"
 		"LP072a Battery Pack"
 		"Fusion Reactor"
 		"KP-6 Photovoltaic Panel" 2
-		"D94-YV Shield Generator" 2
+		"D94-YV Shield Generator"
+		"Modified D94-YV Shielding"
 		"Outfits Expansion" 2
 		"Cooling Ducts"
 		"Water Coolant System"
@@ -824,6 +833,7 @@ ship "Marauder Osprey"
 		"outfit space" 490
 		"weapon capacity" 200
 		"engine capacity" 140
+		"self destruct" .25
 		weapon
 			"blast radius" 80
 			"shield damage" 800
@@ -837,7 +847,8 @@ ship "Marauder Osprey"
 		"LP036a Battery Pack"
 		Supercapacitor 3
 		"Breeder Reactor"
-		"D94-YV Shield Generator" 2
+		"D94-YV Shield Generator"
+		"Modified D94-YV Shielding"
 		"Outfits Expansion"
 		"Water Coolant System"
 		"Laser Rifle" 15
@@ -959,6 +970,129 @@ ship "Marauder Protector" "Marauder Protector (Secret Prototype)"
 	turret "Anti-Missile Turret"
 	turret "Proton Turret"
 	turret "Proton Turret"
+
+
+
+ship "Marauder Sparrow"
+	sprite "ship/marauder sparrow"
+	thumbnail "thumbnail/marauder sparrow-thumb"
+	attributes
+		category "Interceptor"
+		"cost" 450000
+		"shields" 1200
+		"hull" 300
+		"required crew" 1
+		"bunks" 1
+		"mass" 45
+		"drag" .85
+		"heat dissipation" .8
+		"fuel capacity" 200
+		"cargo space" 0
+		"outfit space" 170
+		"weapon capacity" 30
+		"engine capacity" 45
+		"self destruct" .8
+		"integrated systems" -1
+		weapon
+			"blast radius" 75
+			"shield damage" 4500
+			"hull damage" 3500
+			"hit force" 2000
+	outfits
+		"Beam Laser" 2
+		"Thermo Detonator"
+		
+		Supercapacitor
+		"nGVF-BB Fuel Cell"
+		"Modified D23-QP Shielding"
+		"Cargo Expansion"
+		"Fuel Pod"
+		"Small Bunk Room"
+		
+		"A120 Atomic Thruster"
+		"A125 Atomic Steering"
+		Hyperdrive
+		
+	engine -5 35
+	engine 5 35
+	gun -7 -10
+	gun 7 -10
+	turret 0 0
+	"explode" "nuke explosion (small)"
+	"explode" "nuke residue fast" 10
+	"explode" "nuke residue slow" 10
+	description "At first glance this ship doesn't seem to be much different from a normal Sparrow. But the smooth exterior hides an explosive secret within."
+
+effect "nuke explosion (small)"
+	sprite "effect/explosion/nuke"
+		"no repeat"
+		"frame rate" 30
+		"scale" .5
+	sound "explosion nuke"
+	"lifetime" 15
+	"random angle" 360
+	"random spin" 5
+	"random velocity" 1
+	"velocity scale" .4
+
+ship "Marauder Sparrow" "Marauder Sparrow (Blaster)"
+	outfits
+		"Energy Blaster" 2
+		"Thermo Detonator"
+		Supercapacitor 4
+		"nGVF-BB Fuel Cell"
+		"Modified D23-QP Shielding"
+		"Cargo Expansion"
+		"Fuel Pod"
+		"Small Bunk Room"
+		"A120 Atomic Thruster"
+		"A125 Atomic Steering"
+		Hyperdrive
+
+ship "Marauder Sparrow" "Marauder Sparrow (Gatling)"
+	outfits
+		"Gatling Gun" 2
+		"Gatling Gun Ammo" 6000
+		"Thermo Detonator"
+		Supercapacitor
+		"nGVF-BB Fuel Cell"
+		"Modified D23-QP Shielding"
+		"Cargo Expansion"
+		"Fuel Pod"
+		"Small Bunk Room"
+		"A120 Atomic Thruster"
+		"A125 Atomic Steering"
+		Hyperdrive
+
+ship "Marauder Sparrow" "Marauder Sparrow (Mod Blaster)"
+	outfits
+		"Modified Blaster" 2
+		"Thermo Detonator"
+		Supercapacitor 3
+		"nGVF-BB Fuel Cell"
+		"Modified D23-QP Shielding"
+		"Cargo Expansion"
+		"Fuel Pod"
+		"Small Bunk Room"
+		"A120 Atomic Thruster"
+		"A125 Atomic Steering"
+		Hyperdrive
+
+ship "Marauder Sparrow" "Marauder Sparrow (Meteor Missile)"
+	outfits
+		"Meteor Missile Pod"
+		"Meteor Missile Box" 2
+		"Meteor Missile" 44
+		"Thermo Detonator"
+		Supercapacitor 3
+		"nGVF-BB Fuel Cell"
+		"Modified D23-QP Shielding"
+		"Cargo Expansion"
+		"Fuel Pod"
+		"Small Bunk Room"
+		"A120 Atomic Thruster"
+		"A125 Atomic Steering"
+		Hyperdrive
 
 
 
@@ -1252,7 +1386,7 @@ ship "Marauder Hauler" "Marauder Hauler (weapons)"
 	
 	
 ###########################
-# Variant Vanilla Marauders/Modifed
+# Variant Vanilla Marauders
 ###########################
 
 
@@ -1264,10 +1398,10 @@ ship "Marauder Arrow" "Marauder Arrow (Alien Artifact)"
 		"engine capacity" 20
 	outfits
 		"Heavy Laser" 2
-		"Anti-Missile Turret"		
+		"Anti-Missile Turret"
 		"Dwarf Core"
 		"Supercapacitor"
-		"D14-RN Shield Generator"
+		"Modified D14-RN Shielding"
 		"Laser Rifle" 5
 		"A370 Atomic Thruster"
 		"A375 Atomic Steering"
@@ -1345,7 +1479,6 @@ ship "Marauder Raven" "Marauder Raven (Alien Artifact)"
 
 
 
-
 ship "Marauder Falcon" "Marauder Falcon (Secret Prototype)"
 	outfits
 		"A370 Atomic Thruster"
@@ -1394,3 +1527,100 @@ ship "Marauder Leviathan" "Marauder Leviathan (Secret Prototype)"
 	turret "Heavy Anti-Missile Turret"
 	turret "Electron Turret"
 	turret "Electron Turret"
+
+
+
+ship "Marauder Arrow" "Marauder Arrow (Shields)"
+	outfits
+		"Heavy Laser" 2
+		"Quad Blaster Turret"
+		"Dwarf Core"
+		"LP072a Battery Pack"
+		"Modified D14-RN Shielding"
+		"Cooling Ducts"
+		"Laser Rifle" 5
+		"A250 Atomic Thruster"
+		"A255 Atomic Steering"
+		"Hyperdrive"
+
+ship "Marauder Falcon" "Marauder Falcon (Shields)"
+	outfits
+		"Plasma Cannon" 4
+		"Modified Blaster Turret" 4
+		"Fusion Reactor"
+		"LP288a Battery Pack"
+		"Modified D67-TM Shielding"
+		"Large Radar Jammer"
+		"Liquid Helium Cooler"
+		"Outfits Expansion" 3
+		"Laser Rifle" 80
+		"A520 Atomic Thruster"
+		"A525 Atomic Steering"
+		"Hyperdrive"
+
+ship "Marauder Falcon" "Marauder Falcon (Boarding)"
+	"crew" 100
+	outfits
+		"A370 Atomic Thruster"
+		"A525 Atomic Steering"
+		Brig
+		"Bunk Room" 5
+		"Electron Beam" 4
+		"Fusion Reactor"
+		Hyperdrive
+		"Interference Plating" 2
+		"LP144a Battery Pack"
+		"Large Radar Jammer"
+		"Laser Turret" 4
+		"Modified D67-TM Shielding"
+		"Nerve Gas" 100
+		"Outfits Expansion" 3
+		"Water Coolant System"
+
+ship "Marauder Leviathan" "Marauder Leviathan (Shields)"
+	outfits
+		"Particle Cannon" 4
+		"Quad Blaster Turret" 2
+		"Heavy Laser Turret" 2
+		"Fusion Reactor"
+		"LP144a Battery Pack"
+		"Modified D94-YV Shielding"
+		"Large Radar Jammer"
+		"Liquid Helium Cooler"
+		"Outfits Expansion" 2
+		"Laser Rifle" 69
+		"A370 Atomic Thruster"
+		"A525 Atomic Steering"
+		"Ionic Afterburner"
+		"Hyperdrive"
+
+ship "Marauder Manta" "Marauder Manta (Shields)"
+	outfits
+		"Plasma Cannon" 2
+		"Particle Cannon" 2
+		"Meteor Missile Launcher" 2
+		"Meteor Missile" 60
+		"Quad Blaster Turret"
+		"Dwarf Core"
+		"LP144a Battery Pack"
+		"Modified D14-RN Shielding"
+		"Liquid Nitrogen Cooler"
+		"Security Station" 3
+		"Laser Rifle" 8
+		"A250 Atomic Thruster"
+		"A525 Atomic Steering"
+		"Hyperdrive"
+
+ship "Marauder Splinter" "Marauder Splinter (Shields)"
+	outfits
+		"Plasma Cannon" 2
+		"Heavy Laser Turret" 2
+		"Heavy Anti-Missile Turret"
+		"Fusion Reactor"
+		"LP036a Battery Pack"
+		"Modified D67-TM Shielding"
+		"Liquid Nitrogen Cooler"
+		"Laser Rifle" 22
+		"A250 Atomic Thruster"
+		"A525 Atomic Steering"
+		"Hyperdrive"

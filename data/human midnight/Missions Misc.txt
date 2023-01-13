@@ -848,6 +848,34 @@ mission "Raider Attack (Pirates)"
 
 
 
+mission "Smuggler's Den Advanced Shields"
+	landing
+	invisible
+	deadline
+	source "Smuggler's Den"
+	to offer
+		has "event: add advanced modified shields"
+	on offer
+		conversation
+			scene "outfit/mod huge shield"
+			`The outfitters here have modified versions of the more advanced shield generators in stock.`
+				accept
+	npc
+		government "Pirate"
+		personality waiting staying plunders harvests
+		fleet
+			names "pirate"
+			cargo 1
+			commodities "Electronics" "Equipment" "Industrial"
+			variant
+				"Marauder Arrow (Shields)"
+				"Marauder Falcon (Shields)"
+				"Marauder Leviathan (Shields)"
+				"Marauder Manta (Shields)"
+				"Marauder Splinter (Shields)"
+
+
+
 mission "Star Explorer Fan Tour"
 	minor
 	name "Star Explorer Fan Tour"
@@ -2043,46 +2071,6 @@ ship "Asteroid" "Rogue Asteroid"
 	explode "bolide" 40
 	explode "asteroid crunch large"
 
-mission "Rogue Asteroid (Poor World)"
-	deadline 2
-	minor
-	name "Rogue Asteroid"
-	description "A rogue asteroid may collide with <destination>. Destroy it, then land on <planet> to claim the reward (<payment>)."
-	source
-		government "Republic" "Syndicate" "Free Worlds" "Independent" "Neutral"
-		not attributes "paradise" "urban" "rich" "tourist"
-		not attributes "uninhabited"
-	to offer
-		"combat rating" >= 5
-		random < 5
-	on offer
-		conversation
-			`The spaceport is a flurry of activity as pilots rush to prepare their ships for liftoff.`
-			choice
-				`	"Are we under attack from pirates?"`
-				`	"Are we under attack from aliens?"`
-			scene "asteroid/fossil/spin"
-			`	One of the dockworkers answers, "A rogue asteroid has shifted into an erratic orbital path. The local government is offering pilots a <payment> reward for destroying it before it becomes a threat to <planet>."`
-			choice
-				`	(Try to destroy the asteroid.)`
-					launch
-				`	(Don't try to destroy the asteroid.)`
-					decline
-	npc kill
-		government "Bounty"
-		personality target uninterested waiting staying mute
-		fleet
-			names "asteroid names"
-			cargo 3
-			outfitters "Copper" "Gold" "Silver"
-			variant
-				"Rogue Asteroid"
-		dialog `You've destroyed the rogue asteroid. Return to <planet> for your reward.`
-
-	on complete
-		payment 10000
-		dialog `The government of <planet> rewards you with <payment> for destroying the asteroid threat.`
-
 mission "Rogue Asteroid (Pirate)"
 	deadline 2
 	minor
@@ -2143,7 +2131,7 @@ mission "Rogue Asteroid (Rich World)"
 			has "Rogue Asteroid (Poor World): declined"
 			has "Rogue Asteroid (Poor World): failed"
 			has "Rogue Asteroid (Poor World): aborted"
-		random < 1
+		random < 5
 	on offer
 		conversation
 			`The spaceport is a flurry of activity as pilots rush to prepare their ships for liftoff.`
@@ -2496,3 +2484,101 @@ mission "Lares Exploring"
 		outfit "Mysterious Treasure" 1
 		fail
 
+
+
+conversation "sabotage: shield suppressor"
+	scene "outfit/shield suppressor"
+	`You notice a malfunction with the shield generator of your ship. You should probably have it checked out the next time you're at an outfitter...`
+		accept
+
+mission "Sabotage: Shield Suppressor (assisting)"
+	assisting
+	invisible
+	minor
+	repeat
+	deadline 1
+	source
+		government "Merchant" "Pirate" "Independent" "Independent (Killable)" "Bounty (Disguised)"
+		not attributes "automaton"
+	destination "Earth"
+	to offer
+		"combat rating" > 300
+		random < 1
+	on offer
+		require "Shield Suppressor" 0
+		outfit "Shield Suppressor" 1
+		conversation "sabotage: shield suppressor"
+	npc kill
+		government "Bounty Hunter"
+		personality nemesis entering heroic
+		fleet "Bounty Hunters" 2
+
+
+mission "Sabotage: Shield Suppressor (boarding)"
+	boarding
+	invisible
+	minor
+	repeat
+	deadline 1
+	source
+		government "Pirate" "Independent" "Independent (Killable)" "Bounty (Disguised)"
+		not attributes "automaton"
+	destination "Earth"
+	to offer
+		"combat rating" > 300
+		random < 1
+	on offer
+		require "Shield Suppressor" 0
+		outfit "Shield Suppressor" 1
+		conversation "sabotage: shield suppressor"
+	npc kill
+		government "Pirate"
+		personality nemesis harvests plunders entering
+		fleet "pirate raid" 2
+
+
+
+##################################
+#
+# deprecated missions
+#
+##################################
+
+mission "Rogue Asteroid (Poor World)"
+	deadline 2
+	minor
+	name "Rogue Asteroid"
+	description "A rogue asteroid may collide with <destination>. Destroy it, then land on <planet> to claim the reward (<payment>)."
+	source
+		government "Republic" "Syndicate" "Free Worlds" "Independent" "Neutral"
+		not attributes "paradise" "urban" "rich" "tourist"
+		not attributes "uninhabited"
+	to offer
+		never
+	on offer
+		conversation
+			`The spaceport is a flurry of activity as pilots rush to prepare their ships for liftoff.`
+			choice
+				`	"Are we under attack from pirates?"`
+				`	"Are we under attack from aliens?"`
+			scene "asteroid/fossil/spin"
+			`	One of the dockworkers answers, "A rogue asteroid has shifted into an erratic orbital path. The local government is offering pilots a <payment> reward for destroying it before it becomes a threat to <planet>."`
+			choice
+				`	(Try to destroy the asteroid.)`
+					launch
+				`	(Don't try to destroy the asteroid.)`
+					decline
+	npc kill
+		government "Bounty"
+		personality target uninterested waiting staying mute
+		fleet
+			names "asteroid names"
+			cargo 3
+			outfitters "Copper" "Gold" "Silver"
+			variant
+				"Rogue Asteroid"
+		dialog `You've destroyed the rogue asteroid. Return to <planet> for your reward.`
+
+	on complete
+		payment 10000
+		dialog `The government of <planet> rewards you with <payment> for destroying the asteroid threat.`
