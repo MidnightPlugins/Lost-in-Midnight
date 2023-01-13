@@ -790,7 +790,7 @@ mission "Diamondback Jamboree"
 			names "pirate"
 			cargo 0
 			variant
-				"Modified Argosy"
+				"Modified Argosy (Shields)"
 	npc accompany save
 		government "Merchant"
 		personality target escort timid
