@@ -689,7 +689,7 @@ mission "House Unuk Cookie Crook 2"
 		has "House Unuk Cookie Crook 1: active"
 	on offer
 		conversation
-			`You check the spaceport convenience store for acorn cookies but they're out of stock. The manager tells you that none of the markets or supermarkets on <origin> have them available! A pirate ship called the <npc> stole the most recent shipment of acorn cookies near <waypoint>. The prices on the cookies are skyrocketing, so it may be worthwhile to track down that shipment.`
+			`You check the spaceport convenience store for acorn cookies but they're out of stock. The manager tells you that none of the markets or supermarkets on <origin> have them available! A pirate ship called the <npc> stole the most recent shipment of acorn cookies near <waypoints>. The prices on the cookies are skyrocketing, so it may be worthwhile to track down that shipment.`
 				accept
 	on enter Rigel
 		dialog `The ship that stole the acorn cookies fled here...`
