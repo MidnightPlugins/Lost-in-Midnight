@@ -1994,7 +1994,7 @@ mission "Pirate Sabotage: Shield Suppressor (Free Worlds)"
 		conversation
 			scene "outfit/shield suppressor"
 			action
-				"reputation: Republic" -= 40
+				"reputation: Free Worlds" -= 40
 			`While assisting in the repairs of the <npc>, you discreetly attach the Shield Suppressor to their systems. Hopefully they won't realize what you've done until after you get to <destination> for your reward.`
 	on abort
 		"reputation: Pirate" -= 10
