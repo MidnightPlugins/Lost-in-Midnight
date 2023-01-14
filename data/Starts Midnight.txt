@@ -1804,7 +1804,7 @@ mission "Guncraft IV"
 			distance 2 3
 		personality target waiting staying plunders
 		ship "Marauder Osprey" "Desert Eagle"
-		dialog `You've retrieved the solen cargo! Return to <destination>, where you expect to receive an upgraded Guncraft.`
+		dialog `You've retrieved the stolen cargo! Return to <destination>, where you expect to receive an upgraded Guncraft.`
 	on fail
 		dialog `[MISSION FAILED]: If life were a game, you could load a save file and try again...`
 	on complete
