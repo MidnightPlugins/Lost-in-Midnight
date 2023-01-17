@@ -388,6 +388,8 @@ mission "Midnight Market: Coalition Smuggling 2"
 			`You arrive at the warehouse to find the dockworkers loading yet another Coalition ship. A man wearing sunglasses and a hawaiian shirt greets you. "Captain <last>, you did a great job with the last delivery. Once again, just escort this ship to <destination> by <date> and we'll wire <payment> to your account.`
 
 			label cargo
+			scene "scene/scene-wooden crates"
+			``
 			`	Someone runs up to the man and hands him some papers. "It looks like the cargo is loaded! Better get going."`
 				accept
 
@@ -490,6 +492,7 @@ mission "Midnight Market: Coalition Smuggling 4"
 			`	"Regrettable. I doubt you'll be handling any more of these shipments then."`
 				decline
 			label pay
+			scene "scene/scene-wooden crates"
 			`	"Of course! We'll load the cargo right away." Soon the dockworkers are loading your ship with the cargo. Hopefully you have enough Interference Plating to hide this shipment from the Heliarchs...`
 				accept
 	on accept
@@ -499,7 +502,7 @@ mission "Midnight Market: Coalition Smuggling 4"
 	on abort
 		"Midnight Market" -= 4
 	on fail
-		"Midnight Market" -= 3	
+		"Midnight Market" -= 3
 	on complete
 		"Midnight Market" ++
 		payment 2000000
@@ -655,7 +658,9 @@ mission "Midnight Market: Source of Coalition Smuggling 1"
 	on fail
 		clear "Midnight Market: Source of Coalition Smuggling 1: offered"
 	on enter "Men"
-		dialog `That Hauler III looks suspicious. What kind of cargo is it carrying?`
+		conversation
+			scene "thumbnail/hauler iii"
+			`That Hauler III looks suspicious. What kind of cargo is it carrying?`
 	npc "scan outfits"
 		government "Independent"
 		system "Men"
