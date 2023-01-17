@@ -777,11 +777,12 @@ mission "Diamondback Jamboree"
 			names "pirate"
 			cargo 0
 			variant
-				"Sparrow"
+				"Sparrow (Afterburner)"
 				"Hawk"
 				"Fury"
-				"Berserker"
+				"Berserker (Limit Break)"
 				"Rancor"
+				"Outrider (Pirate)"
 	npc
 		government "Pirate"
 		system destination
@@ -1093,8 +1094,8 @@ mission "Sheragi Shenanigans: Counterfeits Infiltration"
 			`	The "manufacturing facility" is little more than a workshop. A Fake Sheragi Cannon dominates one side of the room, while an unfinished cannon occupies the opposite side of the chamber. The complete cannon is probably the prototype.`
 			label computer
 			``
-			`	Looking around the room, you see a There May Be Riots poster, a digital magazine with the Sapphire Shield pictured on the cover, a print out of Albert Foster's interview on the Emerald Sword, and a Subsi Subsidurial Plushie.`
-			`	You find a computer. When you turn it on, it asks for a password...`
+			`	Looking around the room, you see a computer, a There May Be Riots poster, a magazine with the Sapphire Shield pictured on the cover, a print out of Albert Foster's interview on the Emerald Sword, and a Subsi Subsidurial Plushie.`
+			`	When you try using the computer, it asks for a password...`
 			choice
 				`	T H E R E M A Y B E R I O T S`
 				`	S A P P H I R E S H I E L D`
@@ -1103,6 +1104,8 @@ mission "Sheragi Shenanigans: Counterfeits Infiltration"
 				`	S U B S I`
 					goto data
 			``
+			action
+				"sheragi counterfeiter password rejected" ++
 			`	The password you entered didn't work...`
 				goto computer
 			label data
@@ -1124,7 +1127,10 @@ mission "Sheragi Shenanigans: Counterfeits Infiltration"
 				goto enter
 	on enter
 		dialog `A fleet of pirate ships is heading right for you. You might have done something to attract the counterfeiter's attention while you were in their workshop.`
+
 	npc
+		to spawn
+			has "sheragi counterfeiter password rejected"
 		government "Pirate"
 		system Men
 		personality waiting plunders unconstrained nemesis
@@ -1133,11 +1139,51 @@ mission "Sheragi Shenanigans: Counterfeits Infiltration"
 			names "pirate"
 			cargo 0
 			variant
-				"Berserker (Afterburner)"
+				"Berserker (Afterburner Limit Break)"
 				"Hawk (Rocket)"
 				"Fury (Bomber)"
 				"Wasp (Meteor)"
-				"Sparrow" 2
+	npc
+		to spawn
+			"sheragi counterfeiter password rejected" > 1
+		government "Pirate"
+		system Men
+		personality waiting plunders unconstrained nemesis
+			confusion 20
+		fleet
+			names "pirate"
+			cargo 0
+			variant
+				"Marauder Sparrow (Meteor Missile)"
+	npc
+		to spawn
+			"sheragi counterfeiter password rejected" > 2
+		government "Pirate"
+		system Men
+		personality waiting plunders unconstrained nemesis
+			confusion 20
+		fleet
+			names "pirate"
+			cargo 0
+			variant
+				"Marauder Sparrow"
+				"Berserker (Strike Limit Break)"
+	npc
+		to spawn
+			"sheragi counterfeiter password rejected" > 3
+		government "Pirate"
+		system Men
+		personality waiting plunders unconstrained nemesis
+			confusion 20
+		ship "Diamondback (Bounty)" "Tales of Misfortune"
+	npc
+		to spawn
+			not "sheragi counterfeiter password rejected"
+		government "Pirate"
+		system Men
+		personality waiting plunders unconstrained nemesis
+			confusion 20
+		ship "Diamondback (Berserker)" "Lucky Strike"
 	npc kill
 		government "Pirate"
 		system Men
@@ -1161,6 +1207,7 @@ mission "Sheragi Shenanigans: Counterfeits (Mammon Declined)"
 	minor
 	invisible
 	deadline 2
+	repeat
 	source
 		attributes "frontier"
 	to offer
@@ -1186,9 +1233,23 @@ mission "Sheragi Shenanigans: Counterfeits (Mammon Declined)"
 			names "pirate"
 			cargo 0
 			variant
-				"Sparrow" 4
+				"Marauder Sparrow (Meteor Missile)"
+				"Sparrow"
+				"Sparrow (Limit Break)"
 			variant
-				"Sparrow (Gatling)" 3
+				"Marauder Sparrow (Meteor Missile)"
+				"Sparrow (Gatling)"
+				"Sparrow (Gatling Limit Break)"
+			variant
+				"Marauder Sparrow (Meteor Missile)"
+				"Sparrow (Gatling Limit Break)"
+				"Sparrow (Limit Break)"
+			variant
+				"Marauder Sparrow (Meteor Missile)"
+				"Sparrow (Afterburner)" 2
+			variant
+				"Marauder Sparrow (Meteor Missile)"
+				"Sparrow (Meteor Missile)"
 	npc
 		government "Pirate"
 		personality entering plunders harvests
@@ -1212,13 +1273,15 @@ mission "Sheragi Shenanigans: Counterfeits (Mammon Declined)"
 				"Wasp (Proton)" 2
 			variant 2
 				"Marauder Splinter (Sheragi Counterfeit)"
-				"Berserker" 2
+				"Berserker"
+				"Berserker (Limit Break)"
 			variant 1
 				"Marauder Falcon (Sheragi Counterfeit)"
 				"Fury (Bomber)" 2
 			variant 1
 				"Marauder Leviathan (Sheragi Counterfeit)"
-				"Berserker (Afterburner)" 2
+				"Berserker (Afterburner)"
+				"Berserker (Afterburner Limit Break)"
 			variant 1
 				"Marauder Vanguard (Sheragi Counterfeit)"
 				"Hawk (Rocket)" 2
