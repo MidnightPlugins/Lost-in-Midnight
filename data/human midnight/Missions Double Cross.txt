@@ -749,27 +749,27 @@ mission "Peace Tour 1"
 	source
 		attributes "frontier"
 	stopover
-		neighbor near Farseer 100
+		neighbor near Kursa 100
 		attributes "pirate" "independent"
 		attributes "spaceport"
 	stopover
-		neighbor near Farseer 100
+		neighbor near Kursa 100
 		attributes "pirate" "independent"
 		attributes "spaceport"
 	stopover
-		neighbor near Farseer 100
+		neighbor near Kursa 100
 		attributes "pirate" "independent"
 		attributes "spaceport"
 	stopover
-		neighbor near Farseer 100
+		neighbor near Kursa 100
 		attributes "pirate" "independent"
 		attributes "spaceport"
 	stopover
-		neighbor near Farseer 100
+		neighbor near Kursa 100
 		attributes "pirate" "independent"
 		attributes "spaceport"
 	stopover
-		neighbor near Farseer 100
+		neighbor near Kursa 100
 		attributes "pirate" "independent"
 		attributes "spaceport"
 	destination Farseer

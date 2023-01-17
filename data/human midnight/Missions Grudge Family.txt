@@ -220,7 +220,7 @@ mission "Grudge Fight 3"
 				"Sparrow"
 				"Hawk"
 				"Fury"
-				"Berserker"
+				"Berserker (Limit Break)"
 	npc kill
 		system Muphrid
 		government "Independent (Killable)"
@@ -427,8 +427,7 @@ mission "Grudge Fight 5"
 		fleet
 			names "pirate"
 			variant
-				"Marauder Hauler B"
-				"Marauder Hauler C"
+				"Marauder Hauler" 2
 	npc kill
 		system Nocte
 		government "Independent (Killable)"
@@ -442,8 +441,8 @@ mission "Grudge Fight 5"
 		"reputation: Independent (Killable)" >?= 10
 
 	on complete
+		set "defeated grudge family"
 		"reputation: Independent (Killable)" >?= 10
-		event "Grudge Legacy"
 		payment 250000
 		log `Fought a War Hauler for the first time today. Tough little ship, the Grudge Hammer. Its captain, Papa Grudge, was the leader of the Grudge crime family. I received a sizable bounty for taking him down.`
 		conversation
@@ -459,7 +458,8 @@ ship "War Hauler" "Grudge Hammer"
 		"Meteor Missile" 30
 		"Fission Reactor"
 		"LP072a Battery Pack"
-		"D41-HY Shield Generator" 2
+		"D41-HY Shield Generator"
+		"Modified D41-HY Shielding"
 		"Outfits Expansion"
 		"Large Radar Jammer"
 		"Antique Rifle" 3
@@ -480,7 +480,17 @@ ship "War Hauler" "Grudge Hammer"
 	turret "Energy Cannon Turret"
 	turret "Energy Cannon Turret"
 	turret "Energy Cannon Turret"
-	
+
+mission "Grudge Legacy"
+	landing
+	invisible
+	to offer
+		has "defeated grudge family"
+		has "event: southern carriers 2"
+	on offer
+		event "Grudge Legacy"
+		fail
+
 event "Grudge Legacy"
 	fleet "Marauder Bounty (Disguised)"
 		add variant 3
@@ -716,10 +726,11 @@ mission "Grudge Brothers"
 		fleet
 			names "pirate"
 			variant
-				"Sparrow" 2
+				"Sparrow"
+				"Sparrow (Limit Break)"
 				"Hawk" 2
 				"Fury"
-				"Berserker"
+				"Berserker (Limit Break)"
 
 
 	on abort
@@ -863,7 +874,7 @@ mission "Grudge Hammer"
 		"reputation: Independent (Killable)" >?= 10
 	on complete
 		"reputation: Independent (Killable)" >?= 10
-		event "Grudge Legacy"
+		set "defeated grudge family"
 		payment 250000
 		log `Fought a War Hauler for the first time today. Tough little ship, the Grudge Hammer. Its captain, Papa Grudge, was the leader of the Grudge crime family. I received a sizable bounty for taking him down.`
 		conversation

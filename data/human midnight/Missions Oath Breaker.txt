@@ -32,7 +32,7 @@ mission "Oathbreaker Strategos Deployed"
 		attributes "deep" "north" "paradise" "core" "dirtbelt"
 		not attributes "uninhabited"
 	to offer
-		has "main plot completed"
+		has "event: geminus rebuilt"
 		random < 70
 	on offer
 		log "People" "Marcus Junius" `Captain of the Strategos class Navy super carrier "R.N.S. Poisonwood." The first of its kind, the ship will be stationed in the Dirt Belt due to increased pirate activity there.`
@@ -44,11 +44,7 @@ mission "Oathbreaker Strategos Deployed"
 			`	Someone else notes, "Even the name Poisonwood refers to that one southern planet that refused to leave the Republic."`
 			`	As the ceremonial wine bottle is about to break over the hull, the captain, Marcus Junius, is asked to comment. "I look forward to a successful campaign." The red wine splatters across the ship's pristine hull.`
 				accept
-	npc kill
-		government "Republic"
-		system "Delta Velorum"
-		personality waiting staying vindictive
-		ship "Strategos" "R.N.S. Poisonwood"
+
 	npc
 		government "Republic"
 		system "Delta Velorum"
@@ -71,6 +67,15 @@ mission "Oathbreaker Strategos Deployed"
 		ship "Enforcer Drone" "Delta Ten"
 		ship "Enforcer Drone" "Delta Eleven"
 		ship "Enforcer Drone" "Delta Twelve"
+		ship "Outrider (Mark II)" "Alpha One"
+		ship "Outrider (Mark II)" "Alpha Two"
+		ship "Outrider (Mark II)" "Alpha Three"
+		ship "Outrider (Mark II)" "Alpha Four"
+	npc save
+		government "Republic"
+		system "Delta Velorum"
+		personality waiting staying vindictive
+		ship "Strategos" "R.N.S. Poisonwood"
 
 
 
@@ -341,6 +346,62 @@ event "Oathbreaker Random"
 	system Zubenelgenubi
 		add fleet "Fugitive Oathbreaker" 8000
 
+
+
+mission "Oathbreaker Sabotage: Shield Suppressor"
+	minor
+	invisible
+	deadline 7
+	source
+		attributes "pirate"
+		attributes "outfitter"
+	to offer
+		has "event: Oathbreaker Random"
+		not "event: Oathbreaker diminish 2"
+		random < 20 + "Oathbreaker escalation"
+	on offer
+		require "Shield Suppressor" 0
+		outfit "Shield Suppressor" 1
+	on enter
+		conversation
+			scene "outfit/shield suppressor"
+			`As you leave the atmosphere of <origin> an Oathbreaker fleet ambushes you! One of the ships hails to taunt you: "Captain <last>, you won't be so tough with your shields compromised!" A saboteur must have planted a Shield Suppressor somewhere on your ship...`
+	npc evade
+		to spawn
+			"ships: Heavy Warship" + "ships: Utility" >= 4
+		government "Oathbreaker"
+		personality waiting heroic vindictive
+		fleet "Fugitive Oathbreaker" 2
+	npc evade
+		to spawn
+			"ships: Heavy Warship" + "ships: Utility" >= 5
+		government "Oathbreaker"
+		system
+			distance 1
+		personality waiting heroic vindictive
+		fleet "Fugitive Oathbreaker" 2
+	npc evade
+		to spawn
+			"ships: Heavy Warship" + "ships: Utility" >= 6
+		government "Oathbreaker"
+		system
+			distance 2
+		personality waiting heroic vindictive
+		fleet "Small Oathbreaker"
+	npc evade
+		to spawn
+			"ships: Heavy Warship" + "ships: Utility" >= 7
+		government "Oathbreaker"
+		system
+			distance 3
+		personality waiting heroic vindictive
+		fleet "Small Oathbreaker"
+	npc evade
+		government "Oathbreaker"
+		personality waiting heroic vindictive
+		fleet "Large Oathbreaker"
+	on visit
+		dialog "The Oathbreaker fleet is in pursuit! You'll need to evade them if you don't want to be an easy target for bombing or strafing!"
 
 
 mission "Oathbreakers: Rum Cellar Fight"
@@ -1020,6 +1081,8 @@ mission "Oathbreaker Poisonwood"
 				"Rainmaker (Mark II)"
 				"Lance" 6
 				"Enforcer Drone" 12
+				"Outrider (Mark II)"
+
 
 	on enter Tais
 		conversation
@@ -1268,6 +1331,7 @@ mission "Oathbreaker Thermopylae"
 			variant
 				"Dropship (Troops)" 12
 				"Combat Drone" 12
+
 	npc kill
 		system "Wei"
 		government "Oathbreaker"
@@ -1396,7 +1460,8 @@ mission "Nemesis: Oath Breaker"
 			has "oathbreaker nemesis reinforcements"
 		government "Oathbreaker"
 		personality target waiting heroic vindictive
-		system destination
+		system
+			distance 1 2
 		fleet "Fugitive Oathbreaker"
 	npc
 		to spawn
@@ -1415,7 +1480,7 @@ mission "Nemesis: Oath Breaker"
 
 	npc
 		government "Oathbreaker"
-		personality waiting staying
+		personality waiting
 		system destination
 		fleet
 			names "Oathbreaker"
@@ -1424,6 +1489,7 @@ mission "Nemesis: Oath Breaker"
 				"Lance" 6
 				"Combat Drone" 14
 				"Dropship (Troops)" 4
+				"Outrider (Mark II)" 8
 
 	npc
 		government "Oathbreaker"
@@ -1453,6 +1519,7 @@ mission "Nemesis: Oath Breaker"
 			has "Oathbreaker Poisonwood: aborted"
 		government "Oathbreaker"
 		personality target waiting heroic vindictive
+		system destination
 		ship "Strategos" 
 		fleet
 			names "Oathbreaker"
@@ -1460,6 +1527,7 @@ mission "Nemesis: Oath Breaker"
 			variant
 				"Lance" 6
 				"Enforcer Drone" 12
+				"Outrider (Mark II)" 4
 
 	npc
 		to spawn
@@ -1467,6 +1535,7 @@ mission "Nemesis: Oath Breaker"
 				has "Oathbreaker Black Oak: aborted"
 				has "Oathbreaker Black Oak: failed"
 		government "Oathbreaker"
+		system destination
 		personality target waiting heroic vindictive
 		ship "Dreadnought (Flamethrower)" "Black Oak"
 
@@ -1477,6 +1546,7 @@ mission "Nemesis: Oath Breaker"
 				has "Oathbreaker Escalation: failed"
 		government "Oathbreaker"
 		personality target waiting heroic vindictive
+		system destination
 		ship "Bactrian (Hai Weapons)" "Escalation"
 		fleet
 			fighters "Oathbreaker fighter"
@@ -1688,6 +1758,7 @@ mission "Oathbreaker Legacy"
 	minor
 	source
 		government "Pirate"
+		category "Utility" "Medium Warship" "Heavy Warship"
 		not attributes "automaton"
 	destination "Earth"
 	to offer

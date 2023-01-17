@@ -372,17 +372,77 @@ ship "Bastion" "Bastion (Korath)"
 
 
 
+ship "Berserker" "Berserker (Limit Break)"
+	outfits
+		"D23-QP Shield Generator"
+		"Energy Blaster" 2
+		Hyperdrive
+		Javelin 280
+		"Javelin Mini Pod" 2
+		"Javelin Storage Crate" 2
+		"LP072a Battery Pack"
+		"Limit Breaker"
+		"Small Radar Jammer"
+		"X2700 Ion Thruster"
+		"X3200 Ion Steering"
+		"nGVF-CC Fuel Cell"
+	gun "Energy Blaster"
+	gun "Energy Blaster"
+	gun "Javelin Mini Pod"
+	gun "Javelin Mini Pod"
+
+ship "Berserker" "Berserker (Afterburner Limit Break)"
+	outfits
+		"Chipmunk Plasma Thruster"
+		"D23-QP Shield Generator"
+		"Energy Blaster" 2
+		"Fuel Pod"
+		"Greyhound Plasma Steering"
+		Hyperdrive
+		Javelin 280
+		"Javelin Mini Pod" 2
+		"Javelin Storage Crate" 2
+		"LP036a Battery Pack"
+		"Limit Breaker"
+		Ramscoop
+		"Small Radar Jammer"
+		"Volcano Afterburner"
+		"nGVF-CC Fuel Cell"
+	gun "Energy Blaster"
+	gun "Energy Blaster"
+	gun "Javelin Mini Pod"
+	gun "Javelin Mini Pod"
+
+ship "Berserker" "Berserker (Strike Limit Break)"
+	outfits
+		"Chipmunk Plasma Steering"
+		"Chipmunk Plasma Thruster"
+		"D23-QP Shield Generator"
+		"Heavy Rocket" 34
+		"Heavy Rocket Pod" 2
+		"Heavy Rocket Rack" 3
+		Hyperdrive
+		"Limit Breaker"
+		Ramscoop
+		"Sidewinder Missile" 77
+		"Sidewinder Missile Pod" 2
+		"Sidewinder Missile Rack" 3
+		"Small Radar Jammer"
+		Supercapacitor
+		"nGVF-CC Fuel Cell"
+
 ship "Berserker" "Berserker (Energy Cannons)"
 	outfits
-		"Energy Cannon" 2
+		"Antique Rifle"
 		"Energy Blaster" 2
-		"nGVF-CC Fuel Cell"
+		"Energy Cannon" 2
+		Hyperdrive
 		"LP072a Battery Pack"
+		"Limit Breaker"
 		"Modified D23-QP Shielding"
 		"X2700 Ion Thruster"
 		"X3200 Ion Steering"
-		"Hyperdrive"
-		"Antique Rifle"
+		"nGVF-CC Fuel Cell"
 	gun "Energy Cannon"
 	gun "Energy Cannon"
 	gun "Energy Blaster"
@@ -654,6 +714,23 @@ ship "Carrier" "Carrier (Pug)"
 		"Pug Zapper Turret" 2
 		Supercapacitor 3
 		"Engineering Room"
+
+ship "Carrier" "Carrier (Sabotaged)"
+	outfits
+		"Fusion Reactor"
+		"LP288a Battery Pack"
+		"D94-YV Shield Generator"
+		"Large Radar Jammer" 2
+		"Water Coolant System"
+		"Brig"
+		"Laser Rifle" 40
+		"Fragmentation Grenades" 40
+		"Security Station"
+		"Tactical Scanner"
+		"X5700 Ion Thruster"
+		"X4200 Ion Steering"
+		"Hyperdrive"
+		"Shield Suppressor"
 
 ship "Carrier" "Carrier (Shield Suppressor)"
 	outfits
@@ -948,6 +1025,21 @@ ship "Dreadnought" "Dreadnought (Plasma Cluster)"
 	turret "Plasma Turret"
 	turret "Plasma Turret"
 
+ship "Dreadnought" "Dreadnought (Sabotaged)"
+	outfits
+		"Breeder Reactor"
+		"S3 Thermionic"
+		"LP144a Battery Pack"
+		"D41-HY Shield Generator"
+		"Small Radar Jammer"
+		"Liquid Helium Cooler"
+		"Tactical Scanner"
+		"Laser Rifle" 25
+		"Orca Plasma Thruster"
+		"Orca Plasma Steering"
+		"Hyperdrive"
+		"Shield Suppressor"
+
 ship "Dreadnought" "Dreadnought (Shield Suppressor)"
 	outfits
 		"Torpedo Launcher" 4
@@ -1110,8 +1202,21 @@ ship "Frigate" "Frigate (Pug)"
 		"Small Radar Jammer"
 		Supercapacitor
 		"Engineering Room"
-		
 
+ship "Fury" "Fury (Bomber Limit Break)"
+	outfits
+		"Heavy Rocket Pod"
+		"Heavy Rocket" 2
+		"Meteor Missile Pod" 2
+		"Meteor Missile" 14
+		"nGVF-BB Fuel Cell"
+		"Supercapacitor"
+		"D14-RN Shield Generator"
+		"Small Radar Jammer" 2
+		"Limit Breaker"
+		"X2700 Ion Thruster"
+		"Chipmunk Plasma Steering"
+		"Hyperdrive"
 
 ship "Fury" "Fury (Hai)"
 	outfits
@@ -1342,8 +1447,6 @@ ship "Modified Argosy" "Modified Argosy (Nuclear)"
 	gun "Torpedo Launcher"
 	gun "Torpedo Launcher"
 
-
-
 ship "Modified Argosy" "Modified Argosy (Shields)"
 	outfits
 		"Heavy Laser" 2
@@ -1372,6 +1475,7 @@ ship "Modified Argosy" "Modified Argosy (Shields Blaster)"
 		"Modified D67-TM Shielding"
 		"Liquid Nitrogen Cooler"
 		"Brig"
+		"Limit Breaker"
 		"Laser Rifle" 3
 		"Greyhound Plasma Thruster"
 		"X3200 Ion Steering"
@@ -1500,6 +1604,7 @@ ship "Outrider" "Outrider (Pirate)"
 		"LP036a Battery Pack"
 		"D14-RN Shield Generator"
 		"Small Radar Jammer" 2
+		"Limit Breaker"
 		"X1700 Ion Thruster"
 		"X1200 Ion Steering"
 		"Hyperdrive"
@@ -1710,6 +1815,42 @@ ship "Sparrow" "Sparrow (Afterburner)"
 		"X1200 Ion Steering"
 		"X1700 Ion Thruster"
 		"nGVF-BB Fuel Cell"
+
+ship "Sparrow" "Sparrow (Limit Break)"
+	outfits
+		"Beam Laser" 2
+		"nGVF-BB Fuel Cell"
+		"LP036a Battery Pack"
+		"D14-RN Shield Generator"
+		"Limit Breaker"
+		"Chipmunk Plasma Thruster"
+		"Chipmunk Plasma Steering"
+		"Hyperdrive"
+
+ship "Sparrow" "Sparrow (Gatling Limit Break)"
+	outfits
+		"Gatling Gun" 2
+		"Gatling Gun Ammo" 6000
+		"nGVF-AA Fuel Cell"
+		"LP036a Battery Pack"
+		"D14-RN Shield Generator"
+		"Limit Breaker"
+		"Chipmunk Plasma Thruster"
+		"Chipmunk Plasma Steering"
+		"Hyperdrive"
+
+ship "Sparrow" "Sparrow (Meteor Missile)"
+	outfits
+		"Meteor Missile Pod" 2
+		"Meteor Missile Box" 2
+		"Meteor Missile" 44
+		"nGVF-BB Fuel Cell"
+		"LP036a Battery Pack"
+		"D14-RN Shield Generator"
+		"Chipmunk Plasma Thruster"
+		"Chipmunk Plasma Steering"
+		"Hyperdrive"
+
 
 
 
@@ -2422,18 +2563,26 @@ ship "Bastion" "Bastion (Inferno Rockets)"
 
 ship "Berserker" "Berserker (Inferno Rockets)"
 	outfits
-		"Inferno Rocket Launcher"
-		"Inferno Rocket" 20
-		"Sidewinder Missile Launcher"
-		"Sidewinder Missile" 45
-		"nGVF-CC Fuel Cell"
-		"Supercapacitor"
-		"Modified D23-QP Shielding"
-		"Ramscoop"
-		"Sniper Rifle"
-		"Chipmunk Plasma Thruster"
 		"Chipmunk Plasma Steering"
-		"Hyperdrive"
+		"Chipmunk Plasma Thruster"
+		Hyperdrive
+		"Inferno Rocket" 34
+		"Inferno Rocket Pod" 2
+		"Inferno Rocket Rack" 3
+		"Limit Breaker"
+		"Modified D23-QP Shielding"
+		Ramscoop
+		"Sidewinder Missile" 77
+		"Sidewinder Missile Pod" 2
+		"Sidewinder Missile Rack" 3
+		"Small Radar Jammer"
+		"Sniper Rifle"
+		Supercapacitor
+		"nGVF-CC Fuel Cell"
+	gun "Inferno Rocket Pod"
+	gun "Inferno Rocket Pod"
+	gun "Sidewinder Missile Pod"
+	gun "Sidewinder Missile Pod"
 
 
 ship "Clipper" "Clipper (Inferno Rockets)"

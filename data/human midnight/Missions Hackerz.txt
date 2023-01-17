@@ -741,6 +741,8 @@ mission "Hackerz 6"
 			choice
 				`	(Check the command station.)`
 					goto command
+				`	(Check the cargo bay.)`
+					goto cargo
 			label bounty2
 			scene "outfit/sniper rifle"
 			`	You decide to go for the kill. As you draw your weapon, the man levels the muzzle of his rifle to aim for your chest.`
@@ -772,7 +774,8 @@ mission "Hackerz 6"
 					die
 
 			label revisit
-			`	When you return your airlock is overrun by hundreds of rioting prisoners armed with weapons stolen from the station's armory! You are killed as the <ship> is quickly overtaken.`
+			scene "scene/scene-weapons cache"
+			`	When you return, your airlock is overrun by hundreds of rioting prisoners armed with weapons stolen from the station's armory! You are killed as the <ship> is quickly overtaken.`
 				die
 	npc save
 		to spawn

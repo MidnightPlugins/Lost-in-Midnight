@@ -48,15 +48,44 @@ outfitter "Navy Basics"
 	"Sniper Rifle"
 
 event "outfitter navy basics"
-	planet Ada
-		add outfitter "Navy Basics"
 	planet Geminus
+		add outfitter "Navy Basics"
+
+mission "Add Navy Outfitter Patch"
+	landing
+	invisible
+	to offer
+		has "event: outfitter navy basics"
+		not "main plot completed"
+	on offer
+		event "add navy outfitter patch"
+		fail
+
+event "add navy outfitter patch"
+	planet Ada
+		remove outfitter "Navy Basics"
+	planet Luna
+		remove outfitter "Navy Basics"
+	planet Prime
+		remove outfitter "Navy Basics"
+
+mission "Add Navy Basics When Geminus Rebuilt"
+	landing
+	invisible
+	to offer
+		has "event: geminus rebuilt"
+	on offer
+		event "add navy basics when geminus rebuilt"
+
+event "add navy basics when geminus rebuilt"
+	planet Geminus
+		add outfitter "Navy Basics"
+	planet Ada
 		add outfitter "Navy Basics"
 	planet Luna
 		add outfitter "Navy Basics"
 	planet Prime
 		add outfitter "Navy Basics"
-
 
 
 mission "Add Smuggler's Hideaway"
@@ -74,6 +103,18 @@ event "add smuggler's hideaway"
 	outfitter "Pirate Outfits"
 		add "Smuggler's Hideaway"
 
+
+
+mission "Add Limit Breaker"
+	landing
+	invisible
+	on offer
+		event "add limit breaker"
+		fail
+
+event "add limit breaker"
+	outfitter "Pirate Outfits"
+		add "Limit Breaker"
 
 
 mission "Add Energy Cannons"
@@ -147,16 +188,17 @@ event "add energy cannons"
 	fleet "pirate raid"
 		add variant 1
 			"Modified Aerie"
-			"Berserker"
+			"Berserker (Limit Break)"
 			"Berserker (Energy Cannons)"
 		add variant 1
 			"Firebird (Energy Cannons)"
 		add variant 1
 			"Firebird (Energy Cannons)"
-			"Berserker" 2
+			"Berserker"
+			"Berserker (Limit Break)"
 		add variant 1
 			"Firebird"
-			"Berserker"
+			"Berserker (Limit Break)"
 			"Berserker (Energy Cannons)"
 		add variant 1
 			"Firebird (Energy Cannons)"
@@ -177,10 +219,11 @@ event "add energy cannons"
 			"Corvette"
 		add variant 1
 			"Firebird (Energy Cannons)"
-			"Berserker" 2
+			"Berserker"
+			"Berserker (Limit Break)"
 		add variant 1
 			"Firebird"
-			"Berserker"
+			"Berserker (Limit Break)"
 			"Berserker (Energy Cannons)"
 		add variant 1
 			"Firebird (Energy Cannons)"
@@ -190,7 +233,7 @@ event "add energy cannons"
 			"Leviathan (Heavy)"
 		add variant 1
 			"Modified Aerie"
-			"Berserker"
+			"Berserker (Limit Break)"
 			"Berserker (Energy Cannons)"
 
 
@@ -276,7 +319,7 @@ event "southern fleet flamethrowers"
 		add variant 1
 			"Hawk"
 			"Fury (Flamethrower)"
-			"Sparrow"
+			"Sparrow (Limit Break)"
 		add variant 1
 			"Clipper (Flamethrower)"
 		add variant 1
@@ -291,7 +334,7 @@ event "southern fleet flamethrowers"
 			"Fury (Flamethrower)"
 		add variant 1
 			"Osprey (Flamethrower)"
-			"Sparrow"
+			"Sparrow (Limit Break)"
 		add variant 1
 			"Osprey (Flamethrower)"
 			"Hawk"
@@ -304,7 +347,8 @@ event "southern fleet flamethrowers"
 			"Falcon (Flamethrower)"
 		add variant 1
 			"Falcon (Flamethrower)"
-			"Sparrow" 3
+			"Sparrow" 2
+			"Sparrow (Limit Break)"
 		add variant 1
 			"Falcon (Flamethrower)"
 			"Fury (Flamethrower)" 3

@@ -1252,9 +1252,9 @@ mission "Pirate FW invite 1"
 			names "pirate"
 			cargo 0
 			variant
-				"Berserker"
+				"Berserker (Limit Break)"
 				"Fury"
-				"Sparrow"
+				"Sparrow (Limit Break)"
 				"Hawk"
 				"Rancor"
 	npc kill
@@ -1424,7 +1424,8 @@ mission "Pirate FW invite 3"
 			cargo 1
 			variant
 				"Hawk"
-				"Sparrow" 2
+				"Sparrow"
+				"Sparrow (Limit Break)"
 	npc
 		government "Republic"
 		system "Lesath"
@@ -1954,7 +1955,7 @@ mission "Mining: Claim Jumpers"
 			names "civilian"
 			cargo 0
 			variant 6
-				"Sparrow" 3
+				"Sparrow (Afterburner)" 3
 			variant 6
 				"Fury (Miner)"
 				"Sparrow" 2

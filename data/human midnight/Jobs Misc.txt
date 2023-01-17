@@ -1937,7 +1937,6 @@ mission "Pirate Sabotage: Shield Suppressor (Republic)"
 	repeat
 	name "Pirate Sabotage"
 	description "The <npc> has been harassing pirates near <system>. Sneak a Shield Suppressor onto the ship to sabotage their defenses. Return to <planet> for payment. (<payment>)."
-	cargo "shield suppressor" 1
 	source
 		attributes "north pirate" "dirtbelt pirate"
 		not attributes uninhabited
@@ -1953,9 +1952,9 @@ mission "Pirate Sabotage: Shield Suppressor (Republic)"
 			names "republic capital"
 			outfitters "Ammo North"
 			variant 1
-				"Carrier (Shield Suppressor)"
+				"Carrier"
 			variant 2
-				"Cruiser (Shield Suppressor)"
+				"Cruiser"
 		conversation
 			scene "outfit/shield suppressor"
 			action
@@ -1967,14 +1966,13 @@ mission "Pirate Sabotage: Shield Suppressor (Republic)"
 	on complete
 		payment 50000
 		"reputation: Pirate" += 10
-		dialog `As you receive your reward for installing the Shield Suppressor onto the <npc>, your employer remarks on how easily that ship was subsequentially destroyed thanks to your efforts.`
+		dialog `As you receive your reward for installing the Shield Suppressor onto the <npc>, your employer remarks on how easily that ship was subsequently destroyed thanks to your efforts.`
 
 mission "Pirate Sabotage: Shield Suppressor (Free Worlds)"
 	job
 	repeat
 	name "Pirate Sabotage"
 	description "The <npc> has been harassing pirates near <system>. Sneak a Shield Suppressor onto the ship to sabotage their defenses. Return to <planet> for payment. (<payment>)."
-	cargo "shield suppressor" 1
 	source
 		attributes "south pirate"
 		not attributes uninhabited
@@ -1990,7 +1988,7 @@ mission "Pirate Sabotage: Shield Suppressor (Free Worlds)"
 			names "free worlds capital"
 			outfitters "Ammo South"
 			variant
-				"Dreadnought (Shield Suppressor)"
+				"Dreadnought"
 		conversation
 			scene "outfit/shield suppressor"
 			action
@@ -2003,6 +2001,143 @@ mission "Pirate Sabotage: Shield Suppressor (Free Worlds)"
 		payment 50000
 		"reputation: Pirate" += 10
 		dialog `As you receive your reward for installing the Shield Suppressor onto the <npc>, your employer remarks on how easily that ship was subsequentially destroyed thanks to your efforts.`
+
+mission "Rescue: Sabotaged Ship (Free Worlds)"
+	job
+	name "Rescue Mission"
+	description "The <npc> is missing in action. It was last known to be in <waypoints> hunting pirates. Find the ship and escort it back to <destination>. Payment is <payment>."
+	source
+		government "Free Worlds"
+		attributes "shipyard"
+		attributes "outfitter"
+		attributes "south"
+	waypoint "Lesath"
+	to offer
+		"reputation: Militia" > 0
+		"combat rating" > 1000
+		has "event: dreadnought deployment"
+		random < 25
+	on enter "Lesath"
+		dialog `The <npc> hails you. Their shields are not working properly, making them an easy target for pirates. Their weapons have already been plundered...`
+	npc
+		to spawn
+			has "sabotaged ship ambush"
+		government "Pirate"
+		system destination
+		personality entering harvests plunders
+			confusion 20
+		fleet "pirate raid" 2
+	npc
+		to spawn
+			has "sabotaged ship ambush"
+		government "Pirate"
+		system "Sargas"
+		personality entering harvests plunders
+			confusion 20
+		fleet "Small Southern Pirates"
+	npc
+		to spawn
+			has "sabotaged ship ambush"
+		government "Pirate"
+		system "Shaula"
+		personality entering harvests plunders
+			confusion 20
+		fleet "Large Southern Pirates"
+	npc assist accompany save
+		government "Militia"
+		system "Lesath"
+		personality target waiting derelict
+		fleet
+			names "militia"
+			cargo 0
+			variant
+				"Dreadnought (Sabotaged)"
+		conversation
+			action
+				set "sabotaged ship ambush"
+			scene "outfit/shield suppressor"
+			`After inspecting the <npc>, you're certain that a Shield Suppressor was planted somewhere on the ship by saboteurs. Escort them back to <destination> where they will have it removed.`
+	on abort
+		clear "sabotaged ship ambush"
+	on fail
+		clear "sabotaged ship ambush"
+	on complete
+		clear "sabotaged ship ambush"
+		payment 1000000
+		dialog "The government of <planet> rewards you with <payment> for rescuing the <npc>."
+
+mission "Rescue: Sabotaged Ship (Republic)"
+	job
+	name "Rescue Mission"
+	description "The <npc> is missing in action. It was last known to be in <waypoints> hunting pirates. Find the ship and escort it back to <destination>. Payment is <payment>."
+	source
+		government "Republic"
+		attributes "shipyard"
+		attributes "outfitter"
+		attributes "north"
+	waypoint "Hatysa"
+	to offer
+		"reputation: Republic" > 0
+		"combat rating" > 1000
+		random < 25
+	on enter "Hatysa"
+		dialog `The <npc> hails you. Their shields are not working properly, making them an easy target for pirates. Their weapons have already been plundered...`
+	npc
+		to spawn
+			has "sabotaged ship ambush"
+		government "Pirate"
+		system destination
+		personality entering harvests plunders
+			confusion 20
+		fleet "pirate raid" 2
+	npc
+		to spawn
+			has "sabotaged ship ambush"
+		government "Pirate"
+		system "Almaaz"
+		personality entering harvests plunders
+			confusion 20
+		fleet "Small Northern Pirates"
+	npc
+		to spawn
+			has "sabotaged ship ambush"
+		government "Pirate"
+		system "Alnilam"
+		personality entering harvests plunders
+			confusion 20
+		fleet "Small Northern Pirates"
+	npc
+		to spawn
+			has "sabotaged ship ambush"
+		government "Pirate"
+		system "Arneb"
+		personality entering harvests plunders
+			confusion 20
+		fleet "Large Northern Pirates"
+	npc assist accompany save
+		government "Republic"
+		system "Hatysa"
+		personality target waiting derelict
+		fleet
+			names "republic capital"
+			fighters "republic fighter"
+			cargo 0
+			variant
+				"Carrier (Sabotaged)"
+		conversation
+			action
+				set "sabotaged ship ambush"
+			scene "outfit/shield suppressor"
+			`After inspecting the <npc>, you're certain that a Shield Suppressor was planted somewhere on the ship by saboteurs. Escort them back to <destination> where they will have it removed.`
+	on abort
+		clear "sabotaged ship ambush"
+	on fail
+		clear "sabotaged ship ambush"
+	on complete
+		clear "sabotaged ship ambush"
+		payment 1000000
+		dialog "The government of <planet> rewards you with <payment> for rescuing the <npc>."
+
 
 
 

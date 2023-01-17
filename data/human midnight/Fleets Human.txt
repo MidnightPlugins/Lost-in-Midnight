@@ -111,7 +111,8 @@ fleet "pirate raid (rivals)"
 		"Corvette (Speedy)"
 	variant 2
 		"Firebird"
-		"Berserker" 2
+		"Berserker"
+		"Berserker (Limit Break)"
 	variant 1
 		"Firebird (Plasma)"
 		"Fury (Missile)"
@@ -137,11 +138,14 @@ fleet "pirate raid (rivals)"
 		"Leviathan (Heavy)"
 		"Firebird (Plasma)"
 	variant 1
-		"Berserker" 3
+		"Berserker" 2
+		"Berserker (Limit Break)"
 	variant 8
-		"Berserker (Afterburner)" 3
-	variant 2
 		"Berserker (Afterburner)" 2
+		"Berserker (Afterburner Limit Break)"
+	variant 2
+		"Berserker (Afterburner)"
+		"Berserker (Afterburner Limit Break)"
 	variant 3
 		"Scout (Speedy)" 3
 	variant 2
@@ -155,7 +159,8 @@ fleet "pirate raid (rivals)"
 		"Corvette"
 	variant 2
 		"Firebird (Energy Cannons)"
-		"Berserker" 2
+		"Berserker"
+		"Berserker (Limit Break)"
 	variant 2
 		"Firebird"
 		"Berserker"
@@ -175,10 +180,19 @@ fleet "pirate raid (rivals)"
 		"Modified Clipper"
 		"Hawk (Speedy)"
 	variant 1
-		"Sparrow" 5
-		"Hawk" 3
-		"Fury" 2
-		"Rancor"
+		"Sparrow" 2
+		"Sparrow (Gatling)"
+		"Sparrow (Afterburner)"
+		"Sparrow (Limit Break)" 2
+		"Sparrow (Gatling Limit Break)"
+		"Sparrow (Meteor Missile)"
+		"Hawk"
+		"Hawk (Plasma)"
+		"Hawk (Rocket)"
+		"Hawk (Speedy)"
+		"Fury"
+		"Fury (Bomber Limit Break)"
+		"Berserker (Afterburner)"
 
 
 fleet "Treasure Hunters"
@@ -236,7 +250,7 @@ fleet "Large Scar's Legion"
 		"Bactrian (Hai Weapons)"
 		"Lance"
 		"Dagger" 2
-		"Sparrow"
+		"Sparrow (Limit Break)"
 		"Hawk (Hai)"
 		"Fury (Hai)"
 		"Berserker (Hai)"
@@ -266,25 +280,25 @@ fleet "Large Scar's Legion"
 	variant
 		"Leviathan (Hai Weapons)"
 		"Firebird (Hai Weapons)"
-		"Sparrow"
+		"Sparrow (Limit Break)"
 	variant
 		"Leviathan (Hai Weapons)"
 		"Aerie (Hai)"
 		"Lance"
 		"Dagger"
-		"Sparrow"
+		"Sparrow (Limit Break)"
 	variant
 		"Leviathan (Hai Weapons)"
 		"Raven (Hai)"
-		"Sparrow"
+		"Sparrow (Limit Break)"
 	variant
 		"Leviathan (Hai Weapons)"
 		"Headhunter (Hai)"
-		"Sparrow"
+		"Sparrow (Limit Break)"
 	variant
 		"Leviathan (Hai Weapons)"
 		"Corvette (Hai)"
-		"Sparrow"
+		"Sparrow (Limit Break)"
 	variant
 		"Mule (Hai Weapons)"
 		"Lance"
@@ -311,29 +325,29 @@ fleet "Large Scar's Legion"
 		"Mule (Hai Weapons)"
 		"Lance"
 		"Firebird (Hai Weapons)"
-		"Sparrow"
+		"Sparrow (Limit Break)"
 	variant
 		"Mule (Hai Weapons)"
 		"Lance"
 		"Aerie (Hai)"
 		"Lance"
 		"Dagger"
-		"Sparrow"
+		"Sparrow (Limit Break)"
 	variant
 		"Mule (Hai Weapons)"
 		"Lance"
 		"Raven (Hai)"
-		"Sparrow"
+		"Sparrow (Limit Break)"
 	variant
 		"Mule (Hai Weapons)"
 		"Lance"
 		"Headhunter (Hai)"
-		"Sparrow"
+		"Sparrow (Limit Break)"
 	variant
 		"Mule (Hai Weapons)"
 		"Lance"
 		"Corvette (Hai)"
-		"Sparrow"
+		"Sparrow (Limit Break)"
 
 
 
@@ -357,21 +371,21 @@ fleet "Small Scar's Legion"
 		"Corvette (Hai)" 2
 	variant
 		"Firebird (Hai Weapons)"
-		"Sparrow"
+		"Sparrow (Limit Break)"
 	variant
 		"Aerie (Hai)"
 		"Lance"
 		"Dagger"
-		"Sparrow"
+		"Sparrow (Limit Break)"
 	variant
 		"Raven (Hai)"
 		"Sparrow"
 	variant
 		"Headhunter (Hai)"
-		"Sparrow"
+		"Sparrow (Limit Break)"
 	variant
 		"Corvette (Hai)"
-		"Sparrow"
+		"Sparrow (Limit Break)"
 	variant
 		"Firebird (Hai Weapons)"
 	variant
@@ -386,16 +400,16 @@ fleet "Small Scar's Legion"
 		"Corvette (Hai)"
 	variant
 		"Hawk (Hai)"
-		"Sparrow"
+		"Sparrow (Limit Break)"
 	variant
 		"Fury (Hai)"
-		"Sparrow"
+		"Sparrow (Limit Break)"
 	variant
 		"Berserker (Hai)"
-		"Sparrow"
+		"Sparrow (Limit Break)"
 	variant
 		"Scout (Hai)"
-		"Sparrow"
+		"Sparrow (Limit Break)"
 	variant
 		"Hawk (Hai)"
 	variant
@@ -1232,7 +1246,7 @@ fleet "Small Independent (Killable)"
 	personality disables plunders
 		confusion 20
 	variant 8
-		"Sparrow"
+		"Sparrow (Afterburner)"
 	variant 3
 		"Hawk"
 	variant 2
@@ -1246,7 +1260,8 @@ fleet "Small Independent (Killable)"
 	variant 1
 		"Fury (Missile)"
 	variant 2
-		"Sparrow" 2
+		"Sparrow"
+		"Sparrow (Limit Break)"
 	variant 1
 		"Hawk"
 		"Sparrow"
@@ -1263,13 +1278,14 @@ fleet "Small Independent (Killable)"
 	variant 1
 		"Hawk"
 		"Fury"
-		"Sparrow"
+		"Sparrow (Limit Break)"
 	variant 1
 		"Hawk (Rocket)"
 		"Fury (Missile)"
 		"Sparrow"
 	variant 1
-		"Sparrow" 3
+		"Sparrow" 2
+		"Sparrow (Limit Break)"
 	variant 1
 		"Hawk" 2
 	variant 1
@@ -1288,7 +1304,11 @@ fleet "Large Independent (Killable)"
 	personality plunders
 		confusion 20
 	variant 3
-		"Sparrow" 4
+		"Sparrow (Gatling)"
+		"Sparrow (Afterburner)"
+		"Sparrow (Limit Break)"
+		"Sparrow (Gatling Limit Break)"
+		"Sparrow (Meteor Missile)"
 	variant 5
 		"Argosy"
 	variant 3
@@ -1959,7 +1979,7 @@ fleet "Bounty Hunter (licensed)"
 		"Fury (Bomber)"
 		"Sparrow" 2
 	variant 5
-		"Berserker (Strike)"
+		"Berserker (Strike Limit Break)"
 		"Quicksilver"
 	variant 5
 		"Quicksilver" 2

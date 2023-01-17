@@ -61,11 +61,11 @@ event "inferno rocket fleets"
 		add variant 1
 			"Fury (Inferno Rockets)"
 			"Hawk"
-			"Sparrow"
+			"Sparrow (Limit Break)"
 		add variant 1
 			"Fury"
 			"Hawk (Inferno Rockets)"
-			"Sparrow"
+			"Sparrow (Limit Break)"
 		add variant 1
 			"Clipper (Inferno Rockets)"
 		add variant 1
@@ -80,7 +80,7 @@ event "inferno rocket fleets"
 			"Fury (Inferno Rockets)"
 		add variant 1
 			"Osprey (Inferno Rockets)"
-			"Sparrow"
+			"Sparrow (Limit Break)"
 		add variant 1
 			"Clipper (Inferno Rockets)"
 			"Hawk"
@@ -93,10 +93,12 @@ event "inferno rocket fleets"
 			"Fury (Heavy)"
 		add variant 1
 			"Hawk (Inferno Rockets)"
-			"Sparrow" 3
+			"Sparrow" 2
+			"Sparrow (Limit Break)"
 		add variant 1
 			"Modified Argosy (Inferno Rocket)"
-			"Sparrow" 2
+			"Sparrow"
+			"Sparrow (Limit Break)"
 		add variant 1
 			"Modified Argosy (Inferno Rocket)"
 			"Fury (Heavy)" 2
@@ -198,7 +200,7 @@ event "inferno rocket fleets"
 			"Hawk (Inferno Rockets)"
 		add variant 1
 			"Hawk (Inferno Rockets)"
-			"Sparrow"
+			"Sparrow (Limit Break)"
 		add variant 1
 			"Raven (Inferno Rockets)"
 		add variant 1
@@ -299,7 +301,7 @@ event "inferno rocket fleets"
 			"Corvette (Inferno Rockets)"
 		add variant 1
 			"Firebird (Plasma)"
-			"Berserker"
+			"Berserker (Limit Break)"
 		add variant 1
 			"Firebird (Plasma)"
 			"Berserker (Inferno Rockets)" 2
@@ -325,8 +327,8 @@ event "inferno rocket fleets"
 			"Leviathan (Laser)"
 			"Firebird (Inferno Rockets)"
 		add variant 1
-			"Berserker"
-			"Berserker (Afterburner)"
+			"Berserker (Limit Break)"
+			"Berserker (Afterburner Limit Break)"
 			"Berserker (Inferno Rockets)"
 
 mission "Inferno Dragon: Diyu Dragon"

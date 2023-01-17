@@ -547,7 +547,7 @@ mission "Turner Inc.: Hai Power 2"
 				"Bactrian (Hai Weapons)"
 				"Lance"
 				"Dagger" 2
-				"Sparrow"
+				"Sparrow (Limit Break)"
 				"Hawk (Hai)"
 				"Fury (Hai)"
 				"Berserker (Hai)"
@@ -1201,7 +1201,7 @@ event "turner hai power expansion"
 			"Berserker (Afterburner)"
 		variant 1
 			"Freighter (Turner Power)" 3
-			"Sparrow" 1
+			"Sparrow"
 	fleet "Large Human Merchants (Hai)"
 		variant 2
 			"Freighter (Turner Power)" 2

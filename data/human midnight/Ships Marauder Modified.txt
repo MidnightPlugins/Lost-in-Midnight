@@ -991,7 +991,6 @@ ship "Marauder Sparrow"
 		"outfit space" 170
 		"weapon capacity" 30
 		"engine capacity" 45
-		"self destruct" .8
 		"integrated systems" -1
 		weapon
 			"blast radius" 75
@@ -1094,6 +1093,20 @@ ship "Marauder Sparrow" "Marauder Sparrow (Meteor Missile)"
 		"A125 Atomic Steering"
 		Hyperdrive
 
+ship "Marauder Sparrow" "Marauder Sparrow (Afterburner)"
+	outfits
+		"Beam Laser" 2
+		"Thermo Detonator"
+		Supercapacitor
+		"nGVF-BB Fuel Cell"
+		"Modified D14-RN Shielding"
+		"Cargo Expansion"
+		"Fuel Pod" 2
+		"Small Bunk Room"
+		"Volcano Afterburner"
+		"X1200 Ion Steering"
+		"X1700 Ion Thruster"
+		Hyperdrive
 
 
 ship "Marauder Vanguard"

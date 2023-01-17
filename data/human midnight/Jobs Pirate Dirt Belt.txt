@@ -674,7 +674,7 @@ mission "Jail Break Fake"
 			names "pirate"
 			variant
 				"Falcon"
-				"Sparrow"
+				"Sparrow (Limit Break)"
 				"Rancor"
 				"Diamondback (Berserker)"
 				"Hawk (Rocket)"

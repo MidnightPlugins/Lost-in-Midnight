@@ -13,29 +13,19 @@
 # 4.064M
 ship "Marauder Hauler" "Marauder Hauler (used)"
 	outfits
-		"Meteor Missile Launcher" 2
-		"Modified Blaster Turret" 3
-		"Heavy Anti-Missile Turret"
-		"Meteor Missile" 60
-		
-		"KP-6 Photovoltaic Array"
-		"NT-200 Nucleovoltaic"
-		"LP072a Battery Pack"
-		"S-970 Regenerator"
-		"Outfits Expansion"
-		"Small Radar Jammer"
-		"Water Coolant System"
-		
 		"A250 Atomic Thruster"
 		"A375 Atomic Steering"
-		"Hyperdrive"
-
-	gun "Meteor Missile Launcher"
-	gun "Meteor Missile Launcher"
-	turret "Modified Blaster Turret"
-	turret "Modified Blaster Turret"
-	turret "Modified Blaster Turret"
-	turret "Heavy Anti-Missile Turret"
+		Hyperdrive
+		"KP-6 Photovoltaic Array"
+		"LP072a Battery Pack"
+		"Large Radar Jammer"
+		"Limit Breaker"
+		"Meteor Missile" 60
+		"Meteor Missile Launcher" 2
+		"Modified Blaster Turret" 4
+		"Modified D67-TM Shielding"
+		"NT-200 Nucleovoltaic"
+		"Water Coolant System"
 	description "Some Haulers are modified to reduce mass and drag by replacing the standard cargo container with something smaller. The previous owner of this Hauler took the standard Southbound Shipyards cargo container and cut it down to half its size."
 
 # 4.034M
@@ -50,29 +40,19 @@ ship "Marauder Hauler" "Marauder Hauler (used B)"
 		"mass" 5
 		"drag" .5
 	outfits
-		"Meteor Missile Launcher" 2
-		"Modified Blaster Turret" 3
-		"Heavy Anti-Missile Turret"
-		"Meteor Missile" 60
-		
-		"KP-6 Photovoltaic Array"
-		"NT-200 Nucleovoltaic"
-		"LP072a Battery Pack"
-		"S-970 Regenerator"
-		"Outfits Expansion"
-		"Small Radar Jammer"
-		"Water Coolant System"
-		
 		"A250 Atomic Thruster"
 		"A375 Atomic Steering"
-		"Hyperdrive"
-
-	gun "Meteor Missile Launcher"
-	gun "Meteor Missile Launcher"
-	turret "Modified Blaster Turret"
-	turret "Modified Blaster Turret"
-	turret "Modified Blaster Turret"
-	turret "Heavy Anti-Missile Turret"
+		Hyperdrive
+		"KP-6 Photovoltaic Array"
+		"LP072a Battery Pack"
+		"Large Radar Jammer"
+		"Limit Breaker"
+		"Meteor Missile" 60
+		"Meteor Missile Launcher" 2
+		"Modified Blaster Turret" 4
+		"Modified D67-TM Shielding"
+		"NT-200 Nucleovoltaic"
+		"Water Coolant System"
 	description "Some Haulers are modified to reduce mass and drag by replacing the standard cargo container with something smaller. The previous owner of this Hauler used the hull of a Syndicate Star Barge as the base for this modification."
 
 # 4.094M
@@ -87,29 +67,19 @@ ship "Marauder Hauler" "Marauder Hauler (used C)"
 		"mass" -5
 		"drag" -.5
 	outfits
-		"Meteor Missile Launcher" 2
-		"Modified Blaster Turret" 3
-		"Heavy Anti-Missile Turret"
-		"Meteor Missile" 60
-		
-		"KP-6 Photovoltaic Array"
-		"NT-200 Nucleovoltaic"
-		"LP072a Battery Pack"
-		"S-970 Regenerator"
-		"Outfits Expansion"
-		"Small Radar Jammer"
-		"Water Coolant System"
-		
 		"A250 Atomic Thruster"
 		"A375 Atomic Steering"
-		"Hyperdrive"
-
-	gun "Meteor Missile Launcher"
-	gun "Meteor Missile Launcher"
-	turret "Modified Blaster Turret"
-	turret "Modified Blaster Turret"
-	turret "Modified Blaster Turret"
-	turret "Heavy Anti-Missile Turret"
+		Hyperdrive
+		"KP-6 Photovoltaic Array"
+		"LP072a Battery Pack"
+		"Large Radar Jammer"
+		"Limit Breaker"
+		"Meteor Missile" 60
+		"Meteor Missile Launcher" 2
+		"Modified Blaster Turret" 4
+		"Modified D67-TM Shielding"
+		"NT-200 Nucleovoltaic"
+		"Water Coolant System"
 	description "Some Haulers are modified to reduce mass and drag by replacing the standard cargo container with something smaller. The previous owner of this Hauler used the hull of a Boxwing as the base for this modification."
 
 
@@ -129,23 +99,21 @@ ship "Marauder Hauler" "Marauder Hauler (used engines)"
 		"engine capacity" 40
 
 	outfits
-		"Meteor Missile Launcher" 2
-		"Meteor Missile" 60
-		"Modified Blaster Turret" 2
-		"Anti-Missile Turret" 2
-		
-		"NT-200 Nucleovoltaic"
-		"LP072a Battery Pack"
-		"S-970 Regenerator"
-		"Cargo Expansion"
-		"Fuel Pod" 2
-		"Small Radar Jammer" 2
-		"Water Coolant System"
-		
-		"Volcano Afterburner"
 		"A370 Atomic Thruster"
 		"A375 Atomic Steering"
+		"Cargo Expansion"
+		"Fuel Pod" 2
+		"LP072a Battery Pack"
+		"Large Radar Jammer"
+		"Limit Breaker"
+		"Meteor Missile" 60
+		"Meteor Missile Launcher" 2
+		"Modified Blaster Turret" 4
+		"Modified D67-TM Shielding"
+		"NT-200 Nucleovoltaic"
 		"Scram Drive"
+		"Volcano Afterburner"
+		"Water Coolant System"
 
 	engine -45 86.5
 	engine 44 86.5
@@ -153,8 +121,8 @@ ship "Marauder Hauler" "Marauder Hauler (used engines)"
 	gun 16 -60 "Meteor Missile Launcher"
 	turret -20 -12 "Modified Blaster Turret"
 	turret 23 -12 "Modified Blaster Turret"
-	turret -17.5 40 "Anti-Missile Turret"
-	turret 19.5 40 "Anti-Missile Turret"
+	turret -17.5 40 "Modified Blaster Turret"
+	turret 19.5 40 "Modified Blaster Turret"
 	description "The previous owner of this Hauler reconfigured it to focus on speed by completely eliminating the central cargo container and boosting the engines. It seems wrong to classify this as a freighter due to its lack of cargo space."
 
 # 4.337M
@@ -174,26 +142,24 @@ ship "Marauder Hauler" "Marauder Hauler (used weapons)"
 		"outfit space" 40
 		"weapon capacity" 40
 	outfits
-		"Sidewinder Missile Launcher" 2
-		"Sidewinder Missile" 90
-		"Modified Blaster Turret" 4
-		"Anti-Missile Turret" 2
-
-		"NT-200 Nucleovoltaic"
-		"LP072a Battery Pack"
-		"S-970 Regenerator"
-		"Cargo Expansion"
-		"Small Radar Jammer"
-		"Water Coolant System"
-		"Brig"
-		"Cargo Scanner"
-		"Outfit Scanner"
-		
 		"A250 Atomic Thruster"
 		"A375 Atomic Steering"
-		"Hyperdrive"
-
-
+		"Anti-Missile Turret" 2
+		Brig
+		"Cargo Expansion"
+		"Cargo Scanner"
+		Hyperdrive
+		"KP-6 Photovoltaic Array"
+		"LP072a Battery Pack"
+		"Limit Breaker"
+		"Modified Blaster Turret" 4
+		"Modified D67-TM Shielding"
+		"NT-200 Nucleovoltaic"
+		"Sidewinder Missile" 90
+		"Sidewinder Missile Launcher" 2
+		"Small Radar Jammer"
+		"Tactical Scanner"
+		"Water Coolant System"
 	engine -44 113
 	engine 45.5 113
 	gun -10.5 -87.5 "Sidewinder Missile Launcher"
@@ -222,6 +188,7 @@ ship "Modified Argosy" "Modified Argosy (used slaver)"
 		"Small Radar Jammer"
 		"Bunk Room" 2
 		"Brig"
+		"Limit Breaker"
 		
 		"Greyhound Plasma Thruster"
 		"X3200 Ion Steering"
@@ -249,6 +216,7 @@ ship "Modified Argosy" "Modified Argosy (used smuggler)"
 		"Modified D23-QP Shielding"
 		"Small Radar Jammer"
 		"Interference Plating" 5
+		"Limit Breaker"
 		
 		"Greyhound Plasma Thruster"
 		"X3200 Ion Steering"
@@ -273,6 +241,7 @@ ship "Marauder Arrow" "Marauder Arrow (Used)"
 		"LP072a Battery Pack"
 		"Modified D14-RN Shielding"
 		"Cooling Ducts"
+		"Limit Breaker"
 		
 		"A250 Atomic Thruster"
 		"A255 Atomic Steering"
@@ -296,6 +265,7 @@ ship "Marauder Arrow" "Marauder Arrow (Used Engines)"
 		"Dwarf Core"
 		"Supercapacitor"
 		"Modified D14-RN Shielding"
+		"Limit Breaker"
 		
 		"A370 Atomic Thruster"
 		"A375 Atomic Steering"
@@ -317,6 +287,7 @@ ship "Marauder Arrow" "Marauder Arrow (Used Weapons)"
 		"LP036a Battery Pack"
 		"Modified D14-RN Shielding"
 		"Water Coolant System"
+		"Limit Breaker"
 		
 		"A250 Atomic Thruster"
 		"A255 Atomic Steering"
@@ -342,6 +313,7 @@ ship "Marauder Bounder" "Marauder Bounder (Used)"
 		"Outfits Expansion"
 		"Water Coolant System"
 		"Security Station"
+		"Limit Breaker"
 		
 		"A250 Atomic Thruster"
 		"A255 Atomic Steering"
@@ -368,6 +340,7 @@ ship "Marauder Bounder" "Marauder Bounder (Used Engines)"
 		"S-270 Regenerator"
 		"Water Coolant System"
 		"Outfits Expansion"
+		"Limit Breaker"
 		
 		"A370 Atomic Thruster"
 		"A375 Atomic Steering"
@@ -394,6 +367,7 @@ ship "Marauder Bounder" "Marauder Bounder (Used Weapons)"
 		"Water Coolant System"
 		"Outfits Expansion"
 		"Security Station"
+		"Limit Breaker"
 		
 		"A250 Atomic Thruster"
 		"A255 Atomic Steering"
@@ -420,6 +394,7 @@ ship "Marauder Falcon" "Marauder Falcon (Used)"
 		"Large Radar Jammer"
 		"Liquid Helium Cooler"
 		"Outfits Expansion" 3
+		"Limit Breaker"
 		
 		"A520 Atomic Thruster"
 		"A525 Atomic Steering"
@@ -452,6 +427,7 @@ ship "Marauder Falcon" "Marauder Falcon (Used Engines)"
 		"Large Radar Jammer"
 		"Liquid Helium Cooler"
 		"Outfits Expansion" 3
+		"Limit Breaker"
 		
 		"A860 Atomic Thruster"
 		"A865 Atomic Steering"
@@ -486,6 +462,7 @@ ship "Marauder Falcon" "Marauder Falcon (Used Weapons)"
 		"Large Radar Jammer"
 		"Liquid Helium Cooler"
 		"Outfits Expansion" 3
+		"Limit Breaker"
 		
 		"A370 Atomic Thruster"
 		"A525 Atomic Steering"
@@ -518,7 +495,8 @@ ship "Marauder Firebird" "Marauder Firebird (Used)"
 		"S-970 Regenerator"
 		"Liquid Helium Cooler"
 		"Outfits Expansion"
-				
+		"Limit Breaker"
+		
 		"A250 Atomic Thruster"
 		"A525 Atomic Steering"
 		"Hyperdrive"
@@ -549,7 +527,8 @@ ship "Marauder Firebird" "Marauder Firebird (Used Engines)"
 		"Liquid Helium Cooler"
 		"Outfits Expansion"
 		"Security Station"
-				
+		"Limit Breaker"
+		
 		"A370 Atomic Thruster"
 		"A525 Atomic Steering"
 		"Hyperdrive"
@@ -575,7 +554,8 @@ ship "Marauder Firebird" "Marauder Firebird (Used Weapons)"
 		"Liquid Helium Cooler"
 		"Outfits Expansion"
 		"Security Station"
-				
+		"Limit Breaker"
+		
 		"A250 Atomic Thruster"
 		"A525 Atomic Steering"
 		"Hyperdrive"
@@ -601,7 +581,8 @@ ship "Marauder Leviathan" "Marauder Leviathan (Used)"
 		"Large Radar Jammer"
 		"Liquid Helium Cooler"
 		"Outfits Expansion" 2
-				
+		"Limit Breaker"
+		
 		"A370 Atomic Thruster"
 		"A525 Atomic Steering"
 		"Ionic Afterburner"
@@ -634,7 +615,8 @@ ship "Marauder Leviathan" "Marauder Leviathan (Used Engines)"
 		"Liquid Helium Cooler"
 		"Liquid Nitrogen Cooler"
 		"Outfits Expansion" 2
-				
+		"Limit Breaker"
+
 		"A860 Atomic Thruster"
 		"A865 Atomic Steering"
 		"Hyperdrive"
@@ -661,7 +643,8 @@ ship "Marauder Leviathan" "Marauder Leviathan (Used Weapons)"
 		"Large Radar Jammer"
 		"Liquid Helium Cooler"
 		"Outfits Expansion" 2
-		
+		"Limit Breaker"
+
 		"A370 Atomic Thruster"
 		"A525 Atomic Steering"
 		"Ionic Afterburner"
@@ -685,7 +668,8 @@ ship "Marauder Manta" "Marauder Manta (Used)"
 		"Meteor Missile Launcher" 2
 		"Meteor Missile" 70
 		"Modified Blaster Turret"
-		
+		"Limit Breaker"
+
 		"Dwarf Core"
 		"LP144a Battery Pack"
 		"Modified D14-RN Shielding"
@@ -721,7 +705,8 @@ ship "Marauder Manta" "Marauder Manta (Used Engines)"
 		"LP144a Battery Pack"
 		"Modified D14-RN Shielding"
 		"Liquid Nitrogen Cooler"
-				
+		"Limit Breaker"
+
 		"A370 Atomic Thruster"
 		"A525 Atomic Steering"
 		"Hyperdrive"
@@ -757,7 +742,8 @@ ship "Marauder Manta" "Marauder Manta (Used Weapons)"
 		"Supercapacitor"
 		"Modified D14-RN Shielding"
 		"Liquid Nitrogen Cooler"
-				
+		"Limit Breaker"
+
 		"A250 Atomic Thruster"
 		"A375 Atomic Steering"
 		"Hyperdrive"
@@ -785,7 +771,8 @@ ship "Marauder Quicksilver" "Marauder Quicksilver (Used)"
 		"S-270 Regenerator"
 		"Liquid Nitrogen Cooler"
 		"Security Station" 3
-				
+		"Limit Breaker"
+
 		"A250 Atomic Thruster"
 		"A375 Atomic Steering"
 		"Hyperdrive"
@@ -810,7 +797,8 @@ ship "Marauder Quicksilver" "Marauder Quicksilver (Used Engines)"
 		"LP036a Battery Pack"
 		"Liquid Nitrogen Cooler"
 		"Security Station" 2
-				
+		"Limit Breaker"
+
 		"A370 Atomic Thruster"
 		"A375 Atomic Steering"
 		"Hyperdrive"
@@ -835,7 +823,8 @@ ship "Marauder Quicksilver" "Marauder Quicksilver (Used Weapons)"
 		"S-270 Regenerator"
 		"Liquid Nitrogen Cooler"
 		"Security Station" 4
-				
+		"Limit Breaker"
+
 		"A250 Atomic Thruster"
 		"A255 Atomic Steering"
 		"Hyperdrive"
@@ -856,7 +845,8 @@ ship "Marauder Raven" "Marauder Raven (Used)"
 		"S-270 Regenerator"
 		"Liquid Nitrogen Cooler"
 		"Outfits Expansion"
-		
+		"Limit Breaker"
+
 		"A250 Atomic Thruster"
 		"A375 Atomic Steering"
 		"Volcano Afterburner"
@@ -884,7 +874,8 @@ ship "Marauder Raven" "Marauder Raven (Used Engines)"
 		"S-270 Regenerator"
 		"Liquid Nitrogen Cooler"
 		"Outfits Expansion"
-		
+		"Limit Breaker"
+
 		"A370 Atomic Thruster"
 		"A375 Atomic Steering"
 		"Hyperdrive"
@@ -909,7 +900,8 @@ ship "Marauder Raven" "Marauder Raven (Used Weapons)"
 		"S-270 Regenerator"
 		"Liquid Nitrogen Cooler"
 		"Outfits Expansion"
-		
+		"Limit Breaker"
+
 		"A250 Atomic Thruster"
 		"A375 Atomic Steering"
 		"Hyperdrive"
@@ -933,7 +925,8 @@ ship "Marauder Splinter" "Marauder Splinter (Used)"
 		"LP036a Battery Pack"
 		"Modified D67-TM Shielding"
 		"Liquid Nitrogen Cooler"
-				
+		"Limit Breaker"
+
 		"A250 Atomic Thruster"
 		"A525 Atomic Steering"
 		"Hyperdrive"
@@ -962,7 +955,8 @@ ship "Marauder Splinter" "Marauder Splinter (Used Engines)"
 		"Liquid Nitrogen Cooler"
 		"Water Coolant System"
 		"Security Station"
-				
+		"Limit Breaker"
+
 		"A370 Atomic Thruster"
 		"A525 Atomic Steering"
 		"Hyperdrive"
@@ -991,7 +985,8 @@ ship "Marauder Splinter" "Marauder Splinter (Used Weapons)"
 		"Modified D23-QP Shielding"
 		"Liquid Nitrogen Cooler"
 		"Security Station" 2
-				
+		"Limit Breaker"
+
 		"A250 Atomic Thruster"
 		"A525 Atomic Steering"
 		"Hyperdrive"
