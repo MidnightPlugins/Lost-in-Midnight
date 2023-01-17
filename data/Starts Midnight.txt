@@ -90,7 +90,7 @@ mission "Intro [Time Skip]"
 	npc kill
 		government "Pirate"
 		personality target entering plunders harvests nemesis
-		ship "Fury" "Punxsutawney"
+		ship "Fury (Bomber Limit Break)" "Punxsutawney"
 
 mission "Time Skip Map"
 	landing
@@ -165,6 +165,7 @@ start
 			"LP072a Battery Pack"
 			"D23-QP Shield Generator"
 			"Rusty Asteroid Scanner"
+			"Limit Breaker"
 			"Volcano Afterburner"
 			"X1700 Ion Thruster"
 			"X3200 Ion Steering"
@@ -546,7 +547,7 @@ mission "Intro [Mata Hari]"
 	source "New Boston"
 	destination "New Greenland"
 	to offer
-		has "Mata Hari start"	
+		has "Mata Hari start"
 	on offer
 		log "Got into massive debt due to a credit scam. Using my uncle's old ship and my pilot's license to earn money."
 		log "Factions" "Republic" `Hundreds of years ago, the independent territories in different parts of human space agreed to join together into a single democratic government, with Earth as its capital. The rise of the Republic ushered in a long period of peace and prosperity in human history.`
@@ -1793,7 +1794,7 @@ mission "Guncraft IV"
 				`	"Okay, I'll help you."`
 				`	"Sorry, not interested."`
 					defer
-			scene "outfit/scene-wooden crates"
+			scene "scene/scene-wooden crates"
 			`	You assure the shopkeep that you'll retrieve the cargo. He provides you with the shipment manifest...`
 				accept
 	on defer

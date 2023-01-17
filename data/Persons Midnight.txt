@@ -445,7 +445,7 @@ person "Midnight Predator"
 		word
 			"Have you traveled far? "
 			"Do you get out beyond the edges of human space? "
-			"How long have you been traveling the hyperspace lanes? "
+			"How long have you been navigating the hyperspace lanes? "
 		word
 			"The systems near Earth are safe and comfortable. It's different once you get to the frontier and beyond. "
 		word
@@ -456,6 +456,7 @@ person "Midnight Predator"
 		word
 			"I've seen several space creatures on my travels and have learned a few things about them. "
 			"There are many types of interstellar life forms and each is interesting in their own way. "
+			"Have you encountered any interesting alien life on your travels? There are some fascinating creatures out there. "
 		word
 			"For example, "
 			"Just recently, I learned that "
@@ -472,10 +473,12 @@ person "Midnight Predator"
 	phrase
 		word
 			"There are some "
+			"I've seen some "
 		word
 			"questionable "
 			"shady "
 			"ethically debatable "
+			"dubious "
 		word
 			"outfits out there. For example, I once bought some "
 		word
@@ -512,8 +515,11 @@ person "Midnight Predator"
 			"Shield Suppressors"
 			"Smuggler's Hideaways"
 			"Thermo Detonators"
+			"Limit Breakers"
 		word
 			" from an independent Quarg trader on "
+			" from an odd Quarg traveler on "
+			" from a strange Quarg on "
 		word
 			"Albatross"
 			"Bloodsea"
@@ -562,9 +568,12 @@ person "Midnight Predator"
 			"a Guncraft."
 		word
 			" It hasn't let me down yet!"
+			" Always gets the job done!"
 	phrase
 		word
 			"Have you tried installing "
+			"Did you ever use "
+			"Do you have experience using "
 		word
 			"Asteroid Catapults"
 			"H6 Refrigeration Modules"
@@ -613,7 +622,13 @@ person "Midnight Predator"
 		word
 			" on your ship? "
 		word
-			"Were they useful?"
+			"Were they "
+			"Did you find them "
+			"Do you consider them "
+		word
+			"useful?"
+			"helpful?"
+			"beneficial?"
 	phrase
 		word
 			"I hope the next wreck has "
@@ -653,8 +668,8 @@ person "Midnight Predator"
 		word
 			"I acquired "
 			"I found "
-			"That was given to me "
-			"That was sold to me "
+			"that was given to me "
+			"that was sold to me "
 		word
 			"during my journey. "
 			"during my travels. "
