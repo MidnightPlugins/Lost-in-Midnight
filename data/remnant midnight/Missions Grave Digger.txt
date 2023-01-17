@@ -525,7 +525,7 @@ mission "Grave Digger: Suspicious Ship"
 		personality target waiting staying uninterested
 		fleet
 			names "independent"
-			commodities "Illegal Substances" "Illegal Cargo" "Illegal Cargo" "Highly Illegal Cargo"
+			outfitters "Contraband"
 			variant
 				"Shadow Falcon"
 			variant
@@ -567,7 +567,7 @@ mission "Grave Digger: Suspicious Ship Job"
 		personality target waiting staying uninterested
 		fleet
 			names "independent"
-			commodities "Illegal Substances" "Illegal Cargo" "Illegal Cargo" "Highly Illegal Cargo"
+			outfitters "Contraband"
 			variant
 				"Shadow Falcon"
 			variant
