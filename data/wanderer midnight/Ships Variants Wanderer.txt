@@ -121,6 +121,55 @@ ship "Deep River" "Deep River Pirate 3"
 
 
 
+ship "Derecho" "Derecho (Advanced Cooling)"
+	outfits
+		"Sunbeam" 2
+		"Thunderhead Launcher" 2
+		"Thunderhead Missile" 80
+		"Dual Sunbeam Turret" 2
+		"Wanderer Anti-Missile" 2
+		"Blue Sun Reactor"
+		"Red Sun Reactor"
+		"Dark Storm Shielding"
+		"Bright Cloud Shielding"
+		"Wanderer Advanced Cooling"
+		"Wanderer Ramscoop"
+		"Type 4 Radiant Thruster"
+		"Type 1 Radiant Thruster"
+		"Type 4 Radiant Steering"
+		"Type 3 Radiant Steering"
+		"Hyperdrive"
+	gun "Sunbeam"
+	gun "Sunbeam"
+	gun "Thunderhead Launcher"
+	gun "Thunderhead Launcher"
+	turret "Dual Sunbeam Turret"
+	turret "Dual Sunbeam Turret"
+	turret "Wanderer Anti-Missile"
+	turret "Wanderer Anti-Missile"
+
+ship "Hurricane" "Hurricane (Advanced Cooling)"
+	outfits
+		"Sunbeam" 6
+		"Dual Sunbeam Turret" 2
+		"Wanderer Anti-Missile" 2
+		"Blue Sun Reactor"
+		"White Sun Reactor"
+		"Dark Storm Shielding" 2
+		"Wanderer Advanced Cooling"
+		"Wanderer Ramscoop"
+		"Type 4 Radiant Thruster"
+		"Type 4 Radiant Steering"
+		"Type 2 Radiant Steering"
+		"Hyperdrive"
+	turret "Dual Sunbeam Turret"
+	turret "Dual Sunbeam Turret"
+	turret 
+	turret "Wanderer Anti-Missile"
+	turret "Wanderer Anti-Missile"
+
+
+
 ship "Flycatcher" "Flycatcher (Laser)"
 	outfits
 		"Laser Turret"
