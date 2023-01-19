@@ -39,7 +39,7 @@ outfit "Contraband"
 	thumbnail "outfit/attention"
 	"mass" 1
 	"illegal" 500000
-	description "Illegal merchadise found in a smuggler's cargo bay. You might be able to sell it for a profit if the authorities don't catch you with it first."
+	description "Illegal merchadise found in a smuggler's cargo bay. You might be able to sell it for a profit if the authorities haven't caught you with it first."
 
 outfitter "Contraband"
 	"Contraband"
@@ -95,6 +95,18 @@ outfit "Infiltrator Tech"
 	"reinstall" -1
 	"unplunderable" 1
 
+
+
+outfit "Limit Breaker"
+	category "Systems"
+	thumbnail "outfit/limit breaker"
+	cost 25000
+	"mass" 1
+	"outfit space" -1
+	"threshold percentage" 0.01
+	description `This outfit is sometimes referred to as the "Berserker Circuit" after the first ship it was used in. Many consider the development of this device a reckless attempt to push a ship's combat abilities to its maximum limits. But installing a Limit Breaker on your ship does allow it to keep functioning well past the point that it would be disabled due to internal safety mechanisms shutting your systems down.`
+	description `	However, using this isn't without risk. If your ship continues fighting a hopeless battle after it would normally be disabled, you are unlikely to be left adrift in space afterwards waiting for someone to come rescue you... Because you'd be dead.`
+	description `	Installing more than one of these outfits reduces their effectiveness as they interfere with each other as well as your ship's internal safety shutdown systems.`
 
 
 outfit "Liquid Metal Hull"
@@ -491,7 +503,7 @@ outfit "Guncraft II"
 	"capture defense" .8
 	"unplunderable" 1
 	description "An old relic from the early turf wars, the Guncraft is considered by many to be the pinnacle of handgun design. The rumors of gunsmiths who can make parts modifications to improve upon this weapon are true!"
-	description "	This upgraded version of the Guncraft features a larger magazine for more ammo."
+	description "	This upgraded version of the Guncraft features an improved rifled barrel, increasing the weapon's range."
 
 outfit "Guncraft III"
 	category "Unique"
@@ -501,7 +513,7 @@ outfit "Guncraft III"
 	"capture defense" 1.2
 	"unplunderable" 1
 	description "An old relic from the early turf wars, the Guncraft is considered by many to be the pinnacle of handgun design. The rumors of gunsmiths who can make parts modifications to improve upon this weapon are true!"
-	description "	This upgraded version of the Guncraft features a laser guided tactical aim assist system, displaying range data while also marking the target."
+	description "	This upgraded version of the Guncraft features a larger magazine for more ammo."
 
 outfit "Guncraft IV"
 	category "Unique"
@@ -511,7 +523,7 @@ outfit "Guncraft IV"
 	"capture defense" 1.7
 	"unplunderable" 1
 	description "An old relic from the early turf wars, the Guncraft is considered by many to be the pinnacle of handgun design. The rumors of gunsmiths who can make parts modifications to improve upon this weapon are true!"
-	description "	This upgraded version of the Guncraft features a rifled barrel, increasing the weapon's range."
+	description "	This upgraded version of the Guncraft features a laser guided tactical aim assist system, displaying range data while also marking the target."
 
 outfit "Guncraft V"
 	category "Unique"

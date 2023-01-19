@@ -116,6 +116,39 @@ event "add limit breaker"
 	outfitter "Pirate Outfits"
 		add "Limit Breaker"
 
+event "limit breaker syndicate patrols"
+	fleet "Small Syndicate"
+		add variant 1
+			"Wasp (Proton)"
+			"Wasp" 2
+			"Wasp (Limit Break)" 2
+		add variant 1
+			"Manta"
+			"Wasp" 2
+			"Wasp (Limit Break)" 2
+		add variant 1
+			"Manta (Proton)"
+			"Wasp" 2
+			"Wasp (Limit Break)" 2
+		add variant 1
+			"Quicksilver" 3
+			"Wasp" 3
+			"Wasp (Limit Break)" 3
+		add variant 1
+			"Quicksilver (Proton)" 3
+			"Wasp" 3
+			"Wasp (Limit Break)" 3
+		add variant 1
+			"Splinter"
+			"Quicksilver" 2
+			"Wasp" 2
+			"Wasp (Limit Break)" 2
+		add variant 1
+			"Splinter (Proton)"
+			"Quicksilver (Proton)" 2
+			"Wasp" 2
+			"Wasp (Limit Break)" 2
+
 
 mission "Add Energy Cannons"
 	landing

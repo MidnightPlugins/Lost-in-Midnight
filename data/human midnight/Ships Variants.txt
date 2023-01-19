@@ -2173,6 +2173,22 @@ ship "Vanguard" "Vanguard (Proton Gun-CF8)"
 
 
 
+ship "Wasp" "Wasp (Limit Break)"
+	outfits
+		"Energy Blaster" 2
+		"Sidewinder Missile Pod"
+		"Sidewinder Missile" 4
+		"nGVF-BB Fuel Cell"
+		"LP036a Battery Pack"
+		"D14-RN Shield Generator"
+		"Small Radar Jammer"
+		"Limit Breaker"
+		"X2700 Ion Thruster"
+		"X2200 Ion Steering"
+		"Hyperdrive"
+
+
+
 ship "Derelict Albatross"
 	plural "Albatrosses"
 	sprite "ship/albatross"

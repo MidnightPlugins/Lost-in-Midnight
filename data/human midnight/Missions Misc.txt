@@ -685,6 +685,88 @@ mission "Infiltrator: War Begins"
 
 
 
+mission "Limit Breaker Syndicate Patrol"
+	minor
+	name "Syndicate Patrol"
+	description "Accompany the <npc> on its patrol of Core pirate systems. Return to <destination> once the patrol is complete... if the <npc> survives, that is."
+	source
+		government "Syndicate"
+		attributes "frontier"
+	waypoint "Alcyone"
+	waypoint "Almach"
+	waypoint "Gienah"
+	waypoint "Algenib"
+	waypoint "Misam"
+	to offer
+		random < 60 - ( 20 * "ignored limit breaker syndicate patrol" )
+	on offer
+		conversation
+			scene "outfit/red screwdriver"
+			`You notice a pilot wearing a Syndicate flight suit opening a maintenance panel on his Wasp."`
+			choice
+				`	(Observe his work.)`
+				`	(Ignore him.)`
+					defer
+			scene "outfit/limit breaker"
+			`	You see him installing a Limit Breaker onto the Wasp. These are notoriously dangerous, an outfit that bypasses the internal safey mechanisms to keep a ship operational beyond the point it would normally be disabled.`
+			choice
+				`	"Isn't that dangerous?"`
+				`	"I thought only pirates used those."`
+			scene "ship/wasp"
+			`	He look at you, thoughtful. Then he nods, "I suppose so. But I'm not on salary. And the Syndicate doesn't pay me for time spent adrift while disabled. So this should allow me to keep operating and earning money to send home to my family." Seems risky. He must really need the money. Perhaps he owes a debt to the bank to pay for that Wasp...`
+			choice
+				`	"Well, good luck with that..."`
+				`	"Would you mind if I tagged along?"`
+					goto end
+			scene "thumbnail/wasp"
+			`	He smiles ruefully. "I get you. But at least the insurance pays well if I die on the job." He gets back to work, the conversation over. Life must be tough for a company man.`
+				decline
+			label end
+			scene "thumbnail/wasp"
+			`	He looks at you with skepticism. "I won't stop you, but I can't afford to pay an escort. At best, I can share map data for some of the nearby systems if you don't already have it. The name's Syphus. And this..." He extends his hand towards the Wasp, "is the S-13X9. Technically, the Syndicate still retains ownership of it until I exceed 50% of the loan payments.`
+			choice
+				`	"<first> <last>, of the <ship>."`
+					accept
+	on defer
+		"ignored limit breaker syndicate patrol" ++
+	on decline
+		event "limit breaker syndicate patrols"
+	on accept
+		outfit "Local Map" 1
+	on enter "Alcyone"
+		dialog `Syphus sends a warning, "There are runors of debris from wrecked ships floating in from beyond the system edges here. Take care that your own ship doesn't turn out that way."`
+	on enter "Almach"
+		outfit "Local Map" 1
+		dialog `"I've heard other pilots talk about aliens showing up in this system." Syphus pauses as something briefly registers on the radar. "But I've never seen them myself..."`
+	on enter "Gienah"
+		dialog `Syphus sends a hail, "In my experience, Mutiny doesn't cause much trouble. It's the other planet you have to watch out for."`
+	on enter "Algenib"
+		outfit "Local Map" 1
+		dialog `"I usually don't get out past Gienah." Syphus seems nervous. "If you get disabled this deep in pirate territory, the rest of the galaxy probably won't come rescue you."`
+	on enter "Misam"
+		outfit "Local Map" 1
+		dialog `"Woohah!" Syphus exclaims. "I've never actually made it into Misam before. Some patrol pilots think this system is just a myth that doesn't actually exist..."`
+	on waypoint
+		dialog `"That should be good enough. Patrol's over. Let's to head back to <destination>."`
+	npc accompany save
+		government "Syndicate"
+		personality heroic unconstrained
+			confusion 20
+		ship "Wasp (Limit Break)" "S-13X9"
+	on fail
+		event "limit breaker syndicate patrols"
+		dialog `The <npc> was destroyed. Life is hard for Syndicate wage slaves.`
+	on visit
+		event "limit breaker syndicate patrols"
+		dialog `Syphus hails you: "I'll wait in orbit. If the supervisor catches me loitering down there my pay will get docked!"`
+	on complete
+		event "limit breaker syndicate patrols"
+		conversation
+			scene "thumbnail/wasp"
+			`As you part ways with Syphus he says, "Any patrol you return alive from is a good one. Thanks for the escort."`
+
+
+
 mission "Pandora's Problems 1"
 	invisible
 	minor
