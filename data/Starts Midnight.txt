@@ -26,6 +26,7 @@ start
 	description `Ship: default`
 	description `	For experienced pilots who've already flown the Endless Skies. No intro missions here!`
 	description `	There's no starting loan to pay off, but you have less time to prepare before the main events of the game start happening.`
+	description `	As you travel the galaxy, your memories of the local systems may be restored.`
 	thumbnail "planet/wormhole"
 	date 2 2 3014
 	system "Rutilicus"
@@ -101,7 +102,21 @@ mission "Time Skip Map"
 		outfit "Local Map"
 		conversation
 			scene "outfit/map"
-			`There won't be a need to buy a fresh map from the outfitter. Your memory of the rest of the galaxy may be a bit fuzzy, but at least the details regarding the local systems are still clear in your mind.`
+			`There won't be a need to buy a fresh map from the outfitter. Your memory of the rest of the galaxy may be a bit fuzzy, but at least the details regarding the local systems are still clear in your mind. Traveling the galaxy may restore more of your memories.`
+				decline
+
+mission "Time Skip Mapping"
+	landing
+	invisible
+	to offer
+		has "Time Skip start"
+		random < 10
+	on offer
+		require "Local Map" 0
+		outfit "Local Map"
+		conversation
+			scene "outfit/map"
+			`Some of your memories of this galactic region return to you. Continuing your travels of the galaxy may restore more of your memories.`
 				decline
 
 #############################
@@ -1696,7 +1711,7 @@ mission "Guncraft II"
 		log `Was able to get an upgrade to the Guncraft from Trinket in the Sargas system. There may be gunsmiths on other worlds who can perform similar modifications.`
 		conversation
 			scene "outfit/handgun gray"
-			`After you deliver the <cargo>, the shopkeep works through the night. The following day she presents you with the modified Guncraft II! It has a larger magazine for more ammo, which is certainly useful. But not as exciting as the rumors suggested. You thank the shopkeeper and leave, hoping an even better upgrade for your Guncraft can be found elsewhere.`
+			`After you deliver the <cargo>, the shopkeep works through the night. The following day she presents you with the modified Guncraft II!  It features an improved rifled barrel, increasing the weapon's range. You can't argue that increasing the range on a gun isn't a useful upgrade. But not as exciting as the rumors suggested. You thank the shopkeeper and leave, hoping an even better upgrade for your Guncraft can be found elsewhere.`
 
 mission "Guncraft III"
 	name "Guncraft"
@@ -1753,7 +1768,7 @@ mission "Guncraft III"
 		outfit "Guncraft III" 1
 		conversation
 			scene "outfit/handgun red"
-			`After confirming with the shopkeep that you delivered the <cargo>, he works through the night. The following day he presents you with the modified Guncraft III! It features a laser guided tactical aim assist system, displaying range data while also marking the target. A useful modification indeed. But not as exciting as the rumors suggested. You thank the shopkeeper and leave, hoping to find an even better upgrade for your Guncraft in the future.`
+			`After confirming with the shopkeep that you delivered the <cargo>, he works through the night. The following day he presents you with the modified Guncraft III! It has a larger magazine for more ammo, which is certainly useful. But not as exciting as the rumors suggested. You thank the shopkeeper and leave, hoping to find an even better upgrade for your Guncraft in the future.`
 
 mission "Guncraft IV"
 	minor
@@ -1763,7 +1778,6 @@ mission "Guncraft IV"
 		attributes "pirate"
 		attributes "outfitter"
 		not attributes "uninhabited"
-	waypoint "Sargas"
 	to offer
 		"combat rating" >= 2981
 		has "Guncraft III: done"
@@ -1813,16 +1827,17 @@ mission "Guncraft IV"
 		outfit "Guncraft IV" 1
 		conversation
 			scene "outfit/handgun green"
-			`After delivering the <cargo>, the shopkeep accepts the Guncraft III. The following day, he presents you with the modified Guncraft IV! It features a rifled barrel, increasing the weapon's range. You can't argue that increasing the range on a gun isn't a useful upgrade. But not as exciting as the rumors suggested. You thank the shopkeeper and leave, hoping to find an even better upgrade for your Guncraft in the future.`
+			`After delivering the stolen cargo, the shopkeep accepts the Guncraft III. The following day, he presents you with the modified Guncraft IV! It features a laser guided tactical aim assist system, displaying range data while also marking the target. A useful modification indeed. But not as exciting as the rumors suggested. You thank the shopkeeper and leave, hoping to find an even better upgrade for your Guncraft in the future.`
 
 mission "Guncraft V"
 	minor
 	name "Guncraft"
-	description "A gunsmith wants you to rescue his daughter, who is being held ransom aboard the <npc>. After making the rescue, bring her back to <destination> for an upgrade to your Guncraft."
+	description "A gunsmith wants you to rescue his daughter, who is being held ransom aboard the <npc> at <Sargas>. After making the rescue, bring her back to <destination> for an upgrade to your Guncraft."
 	source
 		attributes "pirate"
 		attributes "outfitter"
 		not attributes "uninhabited"
+	waypoint "Sargas"
 	to offer
 		"combat rating" >= 8103
 		has "Guncraft IV: done"
