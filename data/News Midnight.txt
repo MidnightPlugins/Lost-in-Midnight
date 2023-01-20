@@ -536,3 +536,35 @@ news "Midnight Wanderer Veteran"
 			"I used to [serve, work] in the military. But then I [took, suffered] a pulse rifle blast in the knee."
 		word
 			`"`
+
+news "Proton Turret-ATS unemployed"
+	to show
+		has "event: Proton Turret-ATS added to outfitters"
+	location
+		attributes "core"
+	name
+		word
+			"Street Bum"
+			"Homeless Man"
+			"Homeless Woman"
+			"Beggar"
+			"Panhandler"
+	message
+		word
+			`"`
+		word
+			"I used to have "
+		word
+			"steady work. "
+			"a decent job. "
+			"a position working on a starship. "
+		word
+			"But then "
+		word
+			"I took a Proton Turret-ATS blast in the knee."
+			"I was replaced by a Proton Turret-ATS."
+			"My position was replaced by an automated computer."
+			"The Proton Turret-ATS put me out of work."
+			"The Proton Turret-ATS took my job."
+		word
+			`"`

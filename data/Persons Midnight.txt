@@ -441,6 +441,7 @@ person "Midnight Predator"
 			"The rewards from dominating worlds seem small at first, but it adds up over time."
 			"Some systems are hidden and require more than just wandering about blindly to uncover their secrets."
 			"The purpose of some outfits isn't always immediately obvious."
+			"If you buy a used ship, be sure to inspect it in the outfitter. The previous owner might have installed something you'd rather not have on it."
 	phrase
 		word
 			"Have you traveled far? "
