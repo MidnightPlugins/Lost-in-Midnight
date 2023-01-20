@@ -157,6 +157,7 @@ License: public-domain
 
 Files:
  sounds/jump_drive-ver8.wav
+ sounds/siren.wav
 Copyright: Écrivain, Iwan Gabovitch, Bart Kelsey, others.
 License: public-domain
  From opengameart.org. The contributors have placed these sounds in the public domain.
@@ -166,6 +167,11 @@ Files:
 Copyright: Stephen M. Cameron
 License: CC-BY-SA-3.0
  (creativecommons.org/licenses/by-sa/3.0)
+
+Files: sounds/mod_blaster-ver8.wav
+Copyright: Dravenx (www.dravenxgames.com)
+License: CC-BY-3.0
+ (creativecommons.org/licenses/by/3.0)
 
 Files:
  sounds/torpedo-ver8.wav
