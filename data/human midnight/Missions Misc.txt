@@ -1545,6 +1545,199 @@ mission "Pirate FW invite 3"
 
 
 
+mission "Testing: Proton Gun-CF8"
+	minor
+	name "Syndicate product test"
+	description "Disable the robotic target dummy ship in <system>, collect test data for Syndicate engineers by scanning its outfits, and land on <planet>. Warning: the target ship is programmed to engage in self-defense behaviors to ensure a realistic simulation. Payment is <payment>."
+	source
+		government Syndicate
+	destination
+		distance 1 3
+		government Syndicate
+	to offer
+		"reputation: Syndicate" > 10
+		has "main plot completed"
+		"combat rating" > 1000
+		"destroyed Syndicate target ship" < 3
+		or
+			and
+				not "Randomize Testing: Proton Gun-CF8"
+				random < 70
+			and
+				has "Randomize Testing: Proton Gun-CF8"
+				random < 5
+	on offer
+		conversation
+			`	You receive a message from the Syndicate. "<first> <last>, due to your combat experience and reputation after the war, we are extending an invitation for you to participate in an important product test.`
+			choice
+				`	(Sounds interesting. Read the rest.)`
+				`	(Looks like junk mail. Delete it.)`
+					defer
+			scene "thumbnail/vanguard"
+			`	We simply request that you disable the <npc>, a robotic target dummy ship in <system>, collect test data for Syndicate engineers by scanning its outfits, and land on <planet>. The target ship is programmed to engage in self-defense behaviors to ensure a realistic simulation. Payment is <payment>. Return your agreement to the attached non-disclosure form to accept this mission." The data from this test could help them release a new product...`
+			choice
+				`	(Accept this mission.)`
+					accept
+				`	(Decline this mission.)`
+					defer
+	on defer
+		set "Randomize Testing: Proton Gun-CF8"
+	npc save disable "scan outfits"
+		government "Test Dummy"
+		personality disables staying heroic target
+			confusion 120
+		system destination
+		ship "Vanguard Test-PGCF8" "Syndicate Test Vessel"
+		conversation
+			scene "outfit/proton gun-cf8"
+			"You scan the disabled craft and take careful measurements of the battle damage. While doing so, you notice the Proton Guns on this ship must be some new model they wanted to test. Time to deliver the results on <planet>."
+	on visit
+		dialog "You forgot to either disable or scan the target dummy ship in <system>! You'll need to head back there and do that before you can return here for payment."
+	on abort
+		# No penalty
+	on fail
+		dialog "The robotic target ship has been destroyed. You are hailed by an angry Syndicate official who fines you <payment> and warns you that further mistakes of this nature may remove you from eligibility for these jobs."
+		"destroyed Syndicate target ship" += 3
+		"reputation: Syndicate" -= 3
+		payment -2000000
+	on complete
+		payment 125000
+		event "Proton Gun-CF8 added to outfitters" 30
+		conversation
+			`You transmit the scan results to a team of eager engineers and collect your payment of <payment>.`
+			choice
+				`	(Ask about the new gun.)`
+				`	(Don't ask about the new gun.)`
+					accept
+			scene "outfit/proton gun-cf8"
+			`	"We're not allowed to discuss it. But keep checking for new inventory at Syndicated Systems outfitters and you may see it in stock someday!"`
+				accept
+
+event "Proton Gun-CF8 added to outfitters"
+	outfitter "Syndicate Advanced"
+		add "Proton Gun-CF8"
+
+ship "Vanguard" "Vanguard Test-PGCF8"
+	add attributes
+		"automaton" 1
+		"self destruct" 1
+		"bunks" -45
+	outfits
+		"Anti-Missile Turret"
+		"D41-HY Shield Generator"
+		"D67-TM Shield Generator"
+		"Fusion Reactor"
+		Hyperdrive
+		"LP072a Battery Pack"
+		"Liquid Nitrogen Cooler"
+		"Proton Gun-CF8" 7
+		"X3700 Ion Thruster"
+		"X4200 Ion Steering"
+
+
+mission "Testing: Proton Turret-ATS"
+	minor
+	name "Syndicate product test"
+	description "Disable the robotic target dummy ship in <system>, collect test data for Syndicate engineers by scanning its outfits, and land on <planet>. Warning: the target ship is programmed to engage in self-defense behaviors to ensure a realistic simulation. Payment is <payment>."
+	source
+		government Syndicate
+	destination
+		distance 1 3
+		government Syndicate
+	to offer
+		"reputation: Syndicate" > 10
+		has "main plot completed"
+		"combat rating" > 1000
+		"destroyed Syndicate target ship" < 3
+		or
+			and
+				not "Randomize Testing: Proton Turret-ATS"
+				random < 70
+			and
+				has "Randomize Testing: Proton Turret-ATS"
+				random < 5
+	on offer
+		conversation
+			`	You receive a message from the Syndicate. "<first> <last>, due to your combat experience and reputation after the war, we are extending an invitation for you to participate in an important product test.`
+			choice
+				`	(Sounds interesting. Read the rest.)`
+				`	(Looks like junk mail. Delete it.)`
+					defer
+			scene "thumbnail/protector"
+			`	We simply request that you disable the <npc>, a robotic target dummy ship in <system>, collect test data for Syndicate engineers by scanning its outfits, and land on <planet>. The target ship is programmed to engage in self-defense behaviors to ensure a realistic simulation. Payment is <payment>. Return your agreement to the attached non-disclosure form to accept this mission." The data from this test could help them release a new product...`
+			choice
+				`	(Accept this mission.)`
+					accept
+				`	(Decline this mission.)`
+					defer
+	on defer
+		set "Randomize Testing: Proton Turret-ATS"
+	npc save disable "scan outfits"
+		government "Test Dummy"
+		personality disables staying heroic target
+			confusion 120
+		system destination
+		ship "Protector Test-PTATS" "Syndicate Test Vessel"
+		conversation
+			scene "outfit/proton turret-ats"
+			"You scan the disabled craft and take careful measurements of the battle damage. While doing so, you notice the Proton Turrets on this ship must be some new model they wanted to test. Time to deliver the results on <planet>."
+	on visit
+		dialog "You forgot to either disable or scan the target dummy ship in <system>! You'll need to head back there and do that before you can return here for payment."
+	on abort
+		# No penalty
+	on fail
+		dialog "The robotic target ship has been destroyed. You are hailed by an angry Syndicate official who fines you <payment> and warns you that further mistakes of this nature may remove you from eligibility for these jobs."
+		"destroyed Syndicate target ship" += 3
+		"reputation: Syndicate" -= 3
+		payment -2000000
+	on complete
+		payment 125000
+		event "Proton Turret-ATS added to outfitters" 30
+		conversation
+			`You transmit the scan results to a team of eager engineers and collect your payment of <payment>.`
+			choice
+				`	(Ask about the new turret.)`
+				`	(Don't ask about the new turret.)`
+					accept
+			scene "outfit/proton turret-ats"
+			`	"We're not allowed to discuss it. But keep checking for new inventory at Syndicated Systems outfitters and you may see it in stock someday!"`
+				accept
+
+event "Proton Turret-ATS added to outfitters"
+	outfitter "Syndicate Advanced"
+		add "Proton Turret-ATS"
+
+ship "Protector" "Protector Test-PTATS"
+	add attributes
+		"automaton" 1
+		"self destruct" 1
+		"bunks" -69
+	outfits
+		"Anti-Missile Turret" 3
+		"D41-HY Shield Generator"
+		"D67-TM Shield Generator"
+		"Fusion Reactor"
+		Hyperdrive
+		"LP144a Battery Pack"
+		"Liquid Nitrogen Cooler"
+		"Meteor Missile" 44
+		"Meteor Missile Box" 2
+		"Meteor Missile Pod" 2
+		"Proton Turret-ATS" 5
+		"Small Radar Jammer" 3
+		"X3200 Ion Steering"
+		"X3700 Ion Thruster"
+	turret "Proton Turret-ATS"
+	turret "Proton Turret-ATS"
+	turret "Proton Turret-ATS"
+	turret "Anti-Missile Turret"
+	turret "Anti-Missile Turret"
+	turret "Proton Turret-ATS"
+	turret "Proton Turret-ATS"
+	turret "Anti-Missile Turret"
+
+
+
 mission "Quash: Humanika Infiltration 1"
 	minor
 	infiltrating
@@ -1552,7 +1745,7 @@ mission "Quash: Humanika Infiltration 1"
 	name "Humanika Infiltration"
 	description "Take your passengers to <destination>. Then transport them to Trinket in the Sargas system. Payment is 400,000 credits."
 	source
-		attributes "south pirate"
+		attributes "pirate"
 	destination "Humanika"
 	to offer
 		has "First Contact: Quarg: offered"
@@ -1578,9 +1771,10 @@ mission "Quash: Humanika Infiltration 1"
 			not "tribute: Haven"
 			not "tribute: Stormhold"
 			not "tribute: Zenith"
-		random < 5
+		random < 10
 	on offer
 		conversation
+			scene "outfit/map"
 			`As you are walking through the spaceport, three men and a woman all wearing nondescript clothing appear out of nowhere and offer <payment> for discreet passage to <destination>. After they complete some business there, they'll need transportation to Trinket in the Sargas system.`
 			choice
 				`	"Sure, I can do that."`
@@ -1596,7 +1790,7 @@ mission "Quash: Humanika Infiltration 1"
 		"rejected illegal jobs" ++
 	on enter "Sadalmelik"
 		conversation
-			scene "outfit/sniper rifle"
+			scene "planet/ocean7"
 			`As you approach <planet>, your passengers start unpacking and equipping some gear. They're all armed now. One of the men even has a sniper rifle. It's obvious they're up to no good. But it's too late to back out. Their leader, the one they refer to as "Commander," tells you to land at a specific site. You notice that this location is nowhere near the spaceport...`
 
 mission "Quash: Humanika Infiltration 2"
@@ -1610,6 +1804,7 @@ mission "Quash: Humanika Infiltration 2"
 		has "Quash: Humanika Infiltration 1: done"
 	on offer
 		conversation
+			scene "outfit/sniper rifle"
 			`You land at the designated site, a parking lot of what appears to be a ruined building abandoned long ago. Commander tells you to wait for them. He promises that you'll get your 400,000 credits once you've safely delivered them to Trinket in the Sargas system. The four well armed passengers disembark from your ship, off to do whatever it is they came here for.`
 			choice
 				`	(Wait for them.)`
@@ -1634,10 +1829,10 @@ mission "Quash: Humanika Infiltration 2"
 			`	"Nevermind that! There's a Wardragon on our tail! Just focus on getting us to Trinket in one piece."`
 	npc evade
 		government "Quarg"
-		personality waiting staying opportunistic
+		personality entering opportunistic
 		fleet
 			names "quarg"
-			cargo 0
+			cargo 10
 			variant
 				"Quarg Wardragon"
 	on complete
@@ -1779,13 +1974,7 @@ mission "Engineering Room: Salvaged Supercapacitor"
 		attributes "automaton"
 	destination Earth
 	to offer
-		or
-			and
-				"engineer salvaged supercapacitor" < 40
-				random < 10 + "engineer salvaged supercapacitor"
-			and
-				"engineer salvaged supercapacitor" >= 40
-				random < 50
+		random < 5
 	on offer
 		require "Engineering Room"
 		conversation
@@ -1798,10 +1987,10 @@ mission "Engineering Room: Salvaged Supercapacitor"
 					decline
 	on accept
 		outfit "Supercapacitor" 1
-		"engineer salvaged supercapacitor" ++
+#		"engineer salvaged supercapacitor" ++
 		fail
-	on decline
-		"engineer salvaged supercapacitor" --
+#	on decline
+#		"engineer salvaged supercapacitor" --
 
 
 

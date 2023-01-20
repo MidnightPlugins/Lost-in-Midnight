@@ -1163,7 +1163,7 @@ event "turner hai power expansion"
 			"Wasp (Meteor)" 2
 		variant 1
 			"Container Transport (Turner Power)" 2
-			"Vanguard" 1
+			"Vanguard"
 		variant 1
 			"Bulk Freighter (Turner Power)"
 		variant 1
@@ -1175,18 +1175,18 @@ event "turner hai power expansion"
 			"Wasp (Meteor)"
 		variant 1
 			"Bulk Freighter (Turner Power)"
-			"Quicksilver" 1
-			"Splinter (Proton)" 1
+			"Quicksilver"
+			"Splinter (Proton)"
 		variant 1
 			"Bulk Freighter (Turner Power)" 2
-			"Protector (Proton)" 1
+			"Protector (Proton)"
 		variant 1
 			"Bulk Freighter (Turner Power)" 2
 			"Wasp (Proton)" 3
 			"Wasp (Meteor)" 2
 		variant 1
 			"Bulk Freighter (Turner Power)" 2
-			"Vanguard" 1
+			"Vanguard"
 	fleet "Small Human Merchants (Hai)"
 		variant 1
 			"Freighter (Turner Power)"

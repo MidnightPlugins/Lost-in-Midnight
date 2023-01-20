@@ -904,7 +904,7 @@ ship "Marauder Protector"
 		"Meteor Missile Pod" 2
 		"Meteor Missile" 44
 		"Meteor Missile Box" 2
-		"Proton Turret" 6
+		"Proton Turret-ATS" 6
 		"Anti-Missile Turret" 2
 		
 		"Fusion Reactor"
@@ -924,14 +924,14 @@ ship "Marauder Protector"
 	engine 11.5 120
 	gun -6 -118 "Meteor Missile Pod"
 	gun 6.5 -118 "Meteor Missile Pod"
-	turret -52 -52 "Proton Turret"
-	turret 52.5 -52 "Proton Turret"
+	turret -52 -52 "Proton Turret-ATS"
+	turret 52.5 -52 "Proton Turret-ATS"
 	turret 0 -30.5 "Anti-Missile Turret"
-	turret -74 0 "Proton Turret"
-	turret 74.5 0 "Proton Turret"
+	turret -74 0 "Proton Turret-ATS"
+	turret 74.5 0 "Proton Turret-ATS"
 	turret 0 35.5 "Anti-Missile Turret"
-	turret -52 53 "Proton Turret"
-	turret 52.5 53 "Proton Turret"
+	turret -52 53 "Proton Turret-ATS"
+	turret 52.5 53 "Proton Turret-ATS"
 	leak "leak" 60 50
 	leak "flame" 20 80
 	explode "tiny explosion" 18
@@ -948,7 +948,7 @@ ship "Marauder Protector" "Marauder Protector (Secret Prototype)"
 		"Meteor Missile Pod" 2
 		"Meteor Missile" 44
 		"Meteor Missile Box" 2
-		"Proton Turret" 6
+		"Proton Turret-ATS" 6
 		"Anti-Missile Turret" 2
 		"Fusion Reactor"
 		"LP072a Battery Pack"
@@ -962,14 +962,14 @@ ship "Marauder Protector" "Marauder Protector (Secret Prototype)"
 		"A375 Atomic Steering"
 		"Hyperdrive"
 		"Secret Prototype"
-	turret "Proton Turret"
-	turret "Proton Turret"
+	turret "Proton Turret-ATS"
+	turret "Proton Turret-ATS"
 	turret "Anti-Missile Turret"
-	turret "Proton Turret"
-	turret "Proton Turret"
+	turret "Proton Turret-ATS"
+	turret "Proton Turret-ATS"
 	turret "Anti-Missile Turret"
-	turret "Proton Turret"
-	turret "Proton Turret"
+	turret "Proton Turret-ATS"
+	turret "Proton Turret-ATS"
 
 
 

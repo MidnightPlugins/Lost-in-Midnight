@@ -464,7 +464,7 @@ ship "Executive Guard"
 			"hit force" 4800
 	outfits
 		"Proton Gun-CF8" 7
-		"Proton Turret" 4
+		"Proton Turret-ATS" 4
 		"Heavy Anti-Missile Turret" 2
 		
 		"Fusion Reactor"
@@ -504,10 +504,10 @@ ship "Executive Guard"
 	gun -35 -116 "Proton Gun-CF8"
 	gun 35 -116 "Proton Gun-CF8"
 	turret 0 -33 "Heavy Anti-Missile Turret"
-	turret 0 -1 "Proton Turret"
-	turret 0 28 "Proton Turret"
-	turret 0 58 "Proton Turret"
-	turret 0 88 "Proton Turret"
+	turret 0 -1 "Proton Turret-ATS"
+	turret 0 28 "Proton Turret-ATS"
+	turret 0 58 "Proton Turret-ATS"
+	turret 0 88 "Proton Turret-ATS"
 	turret 0 119 "Heavy Anti-Missile Turret"
 	bay "Fighter" -39 -18 under left
 	bay "Fighter" 39 -18 under right
@@ -1269,8 +1269,20 @@ ship "Rancor"
 	description "The Rancor was originally a pirate vessel, and many were used in the early turf wars. The Alpha War was the beginning of the Rancor's decline as faster interceptors quickly outpaced and outmaneuvered this relatively slower ship. Today it is seen as a relic of the past, most noteworthy for influencing the design of the Fury."
 
 ship "Rancor" "Rancor (Berserker)"
-	"never disabled"
-
+	outfits
+		"Energy Cannon" 2
+		"Energy Blaster" 2
+		"LP036a Battery Pack"
+		"nGVF-CC Fuel Cell"
+		"Modified D23-QP Shielding"
+		"Limit Breaker"
+		"X1200 Ion Steering"
+		"X1700 Ion Thruster"
+		"Hyperdrive"
+	gun "Energy Cannon"
+	gun "Energy Cannon"
+	gun "Energy Blaster"
+	gun "Energy Blaster"
 
 # Science Drones appear in or trigger Hackerz missions
 
@@ -2207,4 +2219,4 @@ ship "Thermopylae Station"
 	explode "large explosion" 135
 	explode "huge explosion" 90
 	"final explode" "final explosion large"
-	description "A prototype built during the war that was never actually deployed into active service. The Asteroid Catapult was supposed to be securely locked away in a Navy testing facility."
+	description "A prototype built before the war that was never actually deployed into active service. The Asteroid Catapult installed on it was supposed to be securely locked away in a Navy testing facility."

@@ -333,7 +333,7 @@ outfit "Plasma Cluster Cannon"
 
 outfit "Proton Gun-CF8"
 	category "Guns"
-	cost 175000
+	cost 165000
 	thumbnail "outfit/proton gun-cf8"
 	"mass" 28
 	"outfit space" -28
@@ -353,6 +353,31 @@ outfit "Proton Gun-CF8"
 		"firing heat" 60
 		"cluster"
 	description `Criticized by Stars and Starships Magazine as a blatant marketing gimmick meant to appeal to Vanguard aficionados, the Proton Gun-CF8 has been modified to fire in "cluster" mode. When multiple copies of this weapon are installed, their rate of fire will be synchronized.`
+
+outfit "Proton Turret-ATS"
+	category "Turrets"
+	cost 390000
+	thumbnail "outfit/proton turret-ats"
+	"mass" 34
+	"outfit space" -34
+	"weapon capacity" -34
+	"turret mounts" -1
+	weapon
+		sprite "projectile/proton"
+		"hardpoint sprite" "hardpoint/proton turret"
+		"hardpoint offset" 14.
+		sound "proton"
+		"hit effect" "proton impact" 3
+		"inaccuracy" 8
+		"turret turn" 1.0
+		"submunition" "Proton Fragment" 3
+		"velocity" 24
+		"lifetime" 2
+		"reload" 8
+		"firing energy" 15
+		"firing force" 2
+		"firing heat" 60
+	description `The Syndicate Proton Turret-ATS was designed for the cost conscious captain concerned about keeping crew wages under control. No gunner is required to operate this turret. Instead, aiming is accomplished by utilizing an advanced automated targeting system which has been in development for several years. While this does have lower accuracy and response times than a skilled human gunner, some captains consider the trade off worthwhile.`
 
 
 
@@ -378,7 +403,8 @@ outfit "Silencer Beam"
 		"shield damage" 1.3
 		"hull damage" 1
 		"disabled damage" 0.7
-	description "A specialized weapon used by Republic Intelligence operatives, the Silencer Beam is optimized for disabling ships instead of destroying them. Its name refers to how the weapon produces less sound compared to a regular Beam Laser. This comes at the cost of increased heat accumulation."
+	description "A specialized weapon used by Republic Intelligence operatives, the Silencer Beam is optimized for disabling ships instead of destroying them. This comes at the cost of increased heat accumulation."
+	description "Its name refers to how the weapon produces less sound compared to a regular Beam Laser."
 
 effect "silencer beam impact"
 	sprite "effect/silencer impact"
@@ -398,6 +424,7 @@ outfit "Thermo Detonator"
 	"turret mounts" -1
 	"integrated systems" 1
 	"reinstall" -1
+	"self destruct" .8
 	"unplunderable" 1
 	weapon
 		icon "icon/thermo detonator"

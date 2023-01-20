@@ -1639,6 +1639,32 @@ ship "Protector" "Protector (Korath)"
 
 
 
+ship "Protector" "Protector (Proton Turret-ATS)"
+	outfits
+		"Meteor Missile Launcher" 2
+		"Meteor Missile" 60
+		"Proton Turret-ATS" 4
+		"Heavy Anti-Missile Turret" 2
+		"Fusion Reactor"
+		"LP036a Battery Pack"
+		"Supercapacitor" 1
+		"D94-YV Shield Generator" 2
+		"Water Coolant System"
+		"Laser Rifle" 4
+		"A370 Atomic Thruster"
+		"A375 Atomic Steering"
+		"Hyperdrive"
+	turret
+	turret "Proton Turret-ATS"
+	turret "Proton Turret-ATS"
+	turret "Heavy Anti-Missile Turret"
+	turret "Heavy Anti-Missile Turret"
+	turret "Proton Turret-ATS"
+	turret "Proton Turret-ATS"
+	turret
+
+
+
 ship "Rainmaker" "Rainmaker (Nuclear)"
 	outfits
 		"Nuclear Missile" 2
