@@ -1559,10 +1559,11 @@ mission "Testing: Proton Gun-CF8"
 		has "main plot completed"
 		"combat rating" > 1000
 		"destroyed Syndicate target ship" < 3
+		not "Testing: Proton Turret-ATS: active"
 		or
 			and
 				not "Randomize Testing: Proton Gun-CF8"
-				random < 70
+				random < 50
 			and
 				has "Randomize Testing: Proton Gun-CF8"
 				random < 5
@@ -1649,10 +1650,11 @@ mission "Testing: Proton Turret-ATS"
 		has "main plot completed"
 		"combat rating" > 1000
 		"destroyed Syndicate target ship" < 3
+		not "Testing: Proton Gun-CF8: active"
 		or
 			and
 				not "Randomize Testing: Proton Turret-ATS"
-				random < 70
+				random < 50
 			and
 				has "Randomize Testing: Proton Turret-ATS"
 				random < 5

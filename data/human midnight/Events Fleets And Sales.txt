@@ -660,11 +660,6 @@ event "Pirate Drone Carriers Patch"
 
 
 
-#######################		
-# Fleet modification Missions/Events
-#######################
-
-
 # From mission "Free Worlds Infiltrator 1"
 event "navy plasma gunboats"
 	fleet "Small Republic"
@@ -1645,3 +1640,114 @@ event "add basic marauders to pirate raid fleet"
 			"Marauder Quicksilver"
 		add variant 1
 			"Marauder Bounder"
+
+
+
+mission "Midnight Core Fleet Proton Upgrades"
+	landing
+	invisible
+	to offer
+		has "event: Proton Gun-CF8 added to outfitters"
+		has "event: Proton Turret-ATS added to outfitters"
+	on offer
+		event "add core fleet proton upgrades"
+		fail
+
+event "add core fleet proton upgrades"
+	fleet "Small Core Merchants"
+		add variant 1
+			add "Freighter (Proton Turret-ATS)"
+		add variant 1
+			add "Argosy (Proton Turret-ATS)"
+	fleet "Large Core Merchants"
+		add variant 1
+			"Container Transport (Proton)" 2
+			"Vanguard (Proton Gun-CF8)"
+		add variant 1
+			"Bulk Freighter (Proton)" 2
+			"Vanguard (Proton Gun-CF8)"
+		add variant 1
+			"Freighter (Proton Turret-ATS)" 2
+			"Quicksilver (Proton)" 2
+		add variant 1
+			"Container Transport (Proton Turret-ATS)"
+			"Wasp (Proton)" 2
+		add variant 1
+			"Container Transport (Proton Turret-ATS)"
+			"Wasp (Proton)"
+			"Wasp (Meteor)"
+		add variant 1
+			"Container Transport (Proton Turret-ATS)"
+		add variant 1
+			"Container Transport  (Proton)"
+			"Container Transport (Proton Turret-ATS)"
+			"Quicksilver (Proton)" 1
+			"Splinter (Proton Turret-ATS)" 1
+		add variant 1
+			"Freighter (Proton)" 4
+			"Quicksilver (Proton)" 2
+			"Splinter (Proton Turret-ATS)"
+		add variant 1
+			"Freighter (Proton)" 4
+			"Protector (Proton Turret-ATS)"
+		add variant 1
+			"Container Transport (Proton)" 2
+			"Protector (Proton Turret-ATS)"
+		add variant 1
+			"Bulk Freighter (Proton Turret-ATS)"
+			"Wasp (Proton)" 2
+		add variant 1
+			"Bulk Freighter (Proton Turret-ATS)"
+			"Wasp (Proton)"
+			"Wasp (Meteor)"
+		add variant 1
+			"Bulk Freighter (Proton Turret-ATS)"
+		add variant 1
+			"Bulk Freighter (Proton)"
+			"Bulk Freighter (Proton Turret-ATS)"
+			"Quicksilver (Proton)"
+			"Splinter (Proton Turret-ATS)"
+	fleet "Small Syndicate"
+		add variant 1
+			"Splinter (Proton Turret-ATS)"
+			"Quicksilver (Proton)" 2
+	fleet "Large Syndicate"
+		add variant 1
+			"Vanguard (Proton Gun-CF8)"
+		add variant 1
+			"Vanguard (Proton Gun-CF8)"
+			"Quicksilver (Proton)" 2
+		add variant 1
+			"Splinter (Proton Turret-ATS)"
+			"Quicksilver (Proton)" 3
+		add variant 1
+			"Splinter (Proton)"
+			"Splinter (Proton Turret-ATS)"
+		add variant 1
+			"Splinter (Proton)"
+			"Splinter (Proton Turret-ATS)" 2
+		add variant 1
+			"Protector (Proton Turret-ATS)"
+		add variant 1
+			"Protector (Proton Turret-ATS)"
+			"Quicksilver (Proton)" 2
+	fleet "Large Core Pirates"
+		add variant 1
+			"Vanguard (Proton Gun-CF8)"
+		add variant 1
+			"Splinter (Proton Turret-ATS)"
+			"Quicksilver (Proton)"
+		add variant 1
+			"Splinter (Proton Turret-ATS)" 2
+		add variant 1
+			"Protector (Proton Turret-ATS)"
+	fleet "Syndicate Extremists"
+		add variant 1
+			"Vanguard (Proton Gun-CF8)"
+			"Quicksilver (Proton)" 2
+
+
+
+
+
+

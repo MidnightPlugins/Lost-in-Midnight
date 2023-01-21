@@ -205,6 +205,20 @@ ship "Aerie" "Aerie (Korath)"
 
 
 
+ship "Argosy" "Argosy (Proton Turret-ATS)"
+	outfits
+		"Proton Gun" 2
+		"Proton Turret-ATS"
+		"NT-200 Nucleovoltaic"
+		"Supercapacitor"
+		"D67-TM Shield Generator"
+		"Outfits Expansion" 2
+		"Greyhound Plasma Thruster"
+		"Impala Plasma Steering"
+		"Hyperdrive"
+
+
+
 ship "Auxiliary" "Auxiliary (Battle)"
 	"crew" 250
 	outfits
@@ -541,8 +555,6 @@ ship "Bulk Freighter" "Bulk Freighter (Biohazard)"
 	description `This drone carrier has been disguised as an ordinary bulk freighter.`
 	description `	Inside, a layer of interference plating hides its military-grade equipment and a dozen combat drones secreted away in its converted cargo holds, while its faux gearing conceals extra shield emitters.`
 
-
-
 ship "Bulk Freighter" "Bulk Freighter (hai drones)"
 	add attributes
 		"cost" 2000000
@@ -618,8 +630,6 @@ ship "Bulk Freighter" "Bulk Freighter (syndicate drones)"
 	bay "Drone" 66 35 right
 	bay "Drone" 66 85 right
 
-
-
 ship "Bulk Freighter" "Bulk Freighter (Korath)"
 	outfits
 		"Sidewinder Missile Launcher" 2
@@ -645,6 +655,28 @@ ship "Bulk Freighter" "Bulk Freighter (Korath)"
 	turret "Banisher Grav-Turret"
 	turret "Warder Anti-Missile"
 	turret "Laser Turret"
+
+ship "Bulk Freighter" "Bulk Freighter (Proton Turret-ATS)"
+	outfits
+		"Proton Turret-ATS" 3
+		"Heavy Anti-Missile Turret"
+		"Anti-Missile Turret"
+		"Meteor Missile Launcher" 2
+		"Meteor Missile" 60
+		"Fission Reactor"
+		"LP072a Battery Pack"
+		"Water Coolant System"
+		"D94-YV Shield Generator"
+		"Outfits Expansion"
+		"Laser Rifle" 2
+		"A250 Atomic Thruster"
+		"A375 Atomic Steering"
+		"Scram Drive"
+	turret "Heavy Anti-Missile Turret"
+	turret "Proton Turret-ATS"
+	turret "Proton Turret-ATS"
+	turret "Proton Turret-ATS"
+	turret "Anti-Missile Turret"
 
 
 
@@ -889,6 +921,28 @@ ship "Container Transport" "Container Transport (Billboard Unuk)"
 		`"Basrem" Atomic Steering`
 		"Scram Drive"
 	description "This ship has a billboard for House Unuk attached to it."
+
+ship "Container Transport" "Container Transport (Proton Turret-ATS)"
+	outfits
+		"Proton Turret-ATS" 3
+		"Heavy Anti-Missile Turret"
+		"Anti-Missile Turret"
+		"Sidewinder Missile Launcher" 2
+		"Sidewinder Missile" 90
+		"Fission Reactor"
+		"LP072a Battery Pack"
+		"KP-6 Photovoltaic Panel"
+		"D94-YV Shield Generator"
+		"Outfits Expansion"
+		"Laser Rifle"
+		"A250 Atomic Thruster"
+		"A375 Atomic Steering"
+		"Scram Drive"
+	turret "Heavy Anti-Missile Turret"
+	turret "Proton Turret-ATS"
+	turret "Proton Turret-ATS"
+	turret "Proton Turret-ATS"
+	turret "Anti-Missile Turret"
 
 
 
@@ -1203,6 +1257,28 @@ ship "Frigate" "Frigate (Pug)"
 		Supercapacitor
 		"Engineering Room"
 
+
+
+ship "Freighter" "Freighter (Proton Turret-ATS)"
+	outfits
+		"Proton Turret-ATS"
+		"Heavy Anti-Missile Turret"
+		"NT-200 Nucleovoltaic"
+		"Supercapacitor"
+		"D14-RN Shield Generator"
+		"Ramscoop"
+		"Outfits Expansion"
+		"Greyhound Plasma Thruster"
+		"X3200 Ion Steering"
+		"Scram Drive"
+	turret "Proton Turret-ATS"
+	turret "Heavy Anti-Missile Turret"
+	turret
+
+
+
+
+
 ship "Fury" "Fury (Bomber Limit Break)"
 	outfits
 		"Heavy Rocket Pod"
@@ -1250,8 +1326,6 @@ ship "Gunboat" "Gunboat (Coalition)"
 		"Laser Rifle" 6
 		"Hyperdrive"
 
-
-
 ship "Gunboat" "Gunboat (Flamethrower)"
 	outfits
 		"Flamethrower" 2
@@ -1270,8 +1344,6 @@ ship "Gunboat" "Gunboat (Flamethrower)"
 		"A255 Atomic Steering"
 		"Hyperdrive"
 
-
-
 ship "Gunboat" "Gunboat (Test II)"
 	outfits
 		"Heavy Laser" 2
@@ -1289,8 +1361,6 @@ ship "Gunboat" "Gunboat (Test II)"
 		"A255 Atomic Steering"
 		"Hyperdrive"
 
-
-
 ship "Gunboat" "Gunboat (Plasma)"
 	outfits
 		"Plasma Cannon" 2
@@ -1307,9 +1377,6 @@ ship "Gunboat" "Gunboat (Plasma)"
 		"A250 Atomic Thruster"
 		"A255 Atomic Steering"
 		"Hyperdrive"
-
-
-
 
 ship "Gunboat" "Gunboat (Pug)"
 	outfits
@@ -1944,6 +2011,25 @@ ship "Shuttle Pod" "Shuttle Pod (Pirate)"
 		"Laser Rifle"
 		"X2200 Ion Steering"
 		"X2700 Ion Thruster"
+
+
+
+ship "Splinter" "Splinter (Proton Turret-ATS)"
+	outfits
+		"Proton Gun" 2
+		"Proton Turret-ATS" 2
+		"Anti-Missile Turret"
+		"Water Coolant System"
+		"Fission Reactor"
+		"LP036a Battery Pack"
+		"D94-YV Shield Generator"
+		"Laser Rifle" 2
+		"X3700 Ion Thruster"
+		"Impala Plasma Steering"
+		"Hyperdrive"
+	turret "Proton Turret-ATS"
+	turret "Anti-Missile Turret"
+	turret "Proton Turret-ATS"
 
 
 
