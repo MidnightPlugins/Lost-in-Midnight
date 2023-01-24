@@ -58,6 +58,7 @@ Additional Image Sources:
 
 Files:
  images/land/nasa*
+ images/planet/nasa*
 Copyright: NASA
 License: public-domain
  From NASA, and therefore in the public domain because they were created by
