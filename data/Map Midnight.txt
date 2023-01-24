@@ -13,7 +13,7 @@
 
 system Archipelago
 	hidden
-	pos -699.646 -136.636
+	pos -704 -129
 	government Neutral
 	attributes "midnight"
 	habitable 1504
@@ -45,16 +45,13 @@ system Archipelago
 	hazard "Heliosphere Plasma Storm" 10000
 	fleet "Small Independent" 1200
 	fleet "Large Independent" 1600
-	fleet "Small Southern Pirates" 2400
-	fleet "Marauder Independent" 3600
-	fleet "Small Northern Pirates" 4800
-	fleet "pirate raid (rivals)" 6000
-	fleet "Small Core Pirates" 7200
-	fleet "Large Southern Pirates" 15000
-	fleet "Large Northern Pirates" 20000
-	fleet "Large Core Pirates" 25000
-	fleet "S. Advanced Independent" 30000
-	fleet "L. Advanced Independent" 60000
+	fleet "Small Dirt Belt Pirates" 2400
+	fleet "Large Dirt Belt Pirates" 3600
+	fleet "pirate raid" 4800
+	fleet "Small Northern Pirates" 5400
+	fleet "Small Southern Pirates" 6000
+	fleet "Small Core Pirates" 6600
+	fleet "Marauder Independent" 7200
 	object
 		sprite planet/browndwarf-t
 		period 10
@@ -234,9 +231,13 @@ system Chasm
 	trade Metal 390
 	trade Plastic 390
 	fleet "Small Southern Pirates" 600
-	fleet "pirate raid (rivals)" 1200
-	fleet "Small Northern Pirates" 1800
-	fleet "Small Core Pirates" 2400
+	fleet "Small Dirt Belt Pirates" 1200
+	fleet "Large Dirt Belt Pirates" 3600
+	fleet "pirate raid" 4800
+	fleet "pirate raid (rivals)" 2400
+	fleet "Small Independent" 6000
+	fleet "Large Independent" 7200
+	fleet "Marauder Independent" 8400
 	object
 		sprite star/g0
 		distance 35.3538
@@ -311,15 +312,12 @@ system Diyu
 	trade Medical 680
 	trade Metal 390
 	trade Plastic 390
-	fleet "Small Southern Pirates" 1000
-	fleet "Large Southern Pirates" 1600
-	fleet "pirate raid" 2400
-	fleet "Small Northern Pirates" 4000
-	fleet "Small Core Pirates" 5000
-	fleet "Large Northern Pirates" 7000
-	fleet "Large Core Pirates" 9000
-	fleet "Small Independent (Killable)" 12000
-	fleet "Large Independent (Killable)" 16000
+	fleet "Small Dirt Belt Pirates" 1200
+	fleet "Large Dirt Belt Pirates" 3600
+	fleet "pirate raid" 4800
+	fleet "Small Independent" 6000
+	fleet "Large Independent" 7200
+	fleet "Marauder Independent" 8400
 	object
 		sprite star/g0
 		period 10
@@ -1128,7 +1126,8 @@ planet Detritus
 	attributes uninhabited midnight station south
 	landscape land/station4ver8
 	music ambient/servo
-	description `This alien artifact is capable of connecting and disconnecting the hyperspace links to the system it is in. How it does this is a mystery. This particular facility has taken heavy damage from asteroid collisions. A hole large enough to squeeze your ship through has granted you access to its inner workings. The sound of distant mechanisms reverberate through the deserted structure, confirmation that the internal machinery is still functional despite the damage to the exterior.`
+	description `This alien artifact is capable of connecting and disconnecting the hyperspace links to the system it is in. How it does this is a mystery. This particular facility has taken heavy damage from asteroid collisions. A hole large enough to squeeze your ship through has granted you access to its inner workings.`
+	description `	The sound of distant mechanisms reverberate through the deserted structure, confirmation that the internal machinery is still functional despite the damage to the exterior.`
 	government Uninhabited
 	security 0
 
@@ -1163,17 +1162,18 @@ planet Janus
 	landscape land/city11ver8
 	description "When humans first arrived in Archipelago they learned that the alien device orbiting the oldest star could shut down the Hyperspace link to the system. Over the centuries, the system would turn into the galaxy's best secret hideout for pirates and anarchists. The almost Earth-like environment of Janus makes it a perfect rendezvous point for the rare instance when different pirate factions need a place to host a council."
 	spaceport `The spaceport is relatively modern for a pirate world. Few of the other pirate spaceports you've visited are as well stocked and equipped. There are enough landing pads to handle traffic for multiple large fleets.`
-	shipyard "Basic Ships"
 	shipyard "Northern Pirates"
-	shipyard "Southern Pirates"
-	shipyard "Advanced Southern Pirates"
+	shipyard "Advanced Northern Pirates"
+	shipyard "Dirt Belt Pirates"
+	shipyard "Advanced Dirt Belt Pirates"
 	outfitter "Common Outfits"
 	outfitter "Ammo North"
 	outfitter "Ammo South"
 	outfitter "Deep Sky Basics"
-	outfitter "Kraz Basics"
-	outfitter "Syndicate Basics"
+	outfitter "Lovelace Basics"
 	outfitter "Pirate Outfits"
+	outfitter "Basic Turbo Blasters"
+	outfitter "Advanced Turbo Blasters"
 	government Pirate
 	bribe 0.05
 	security 0
@@ -1182,20 +1182,15 @@ planet Janus
 		fleet "Small Southern Pirates" 1
 		fleet "Small Core Pirates" 1
 		fleet "Small Northern Pirates" 1
+		fleet "Small Dirt Belt Pirates" 10
+		fleet "Large Dirt Belt Pirates" 5
 		fleet "Large Southern Pirates" 1
 		fleet "Large Core Pirates" 1
 		fleet "Large Northern Pirates" 1
-		fleet "pirate raid" 1
-		fleet "Marauder fleet I" 5
-		fleet "Marauder fleet II" 4
-		fleet "Marauder fleet III" 4
-		fleet "Marauder fleet IV" 4
-		fleet "Marauder fleet V" 4
-		fleet "Marauder fleet VI" 3
-		fleet "Marauder fleet VII" 3
-		fleet "Marauder fleet VIII" 3
-		fleet "Marauder fleet IX" 2
-		fleet "Marauder fleet X" 1
+		fleet "Marauder I"
+		fleet "Marauder II"
+		fleet "Marauder III"
+		fleet "Marauder IV"
 
 planet Lares
 	attributes midnight uninhabited archipelago
@@ -1254,23 +1249,27 @@ planet "Rum Cellar"
 	music ambient/saloon
 	description `During the early days of humanity's expansion into space, the success of a pirate base was determined more by its ability to remain hidden than on the strength of a defensive fleet. Rum Cellar is one of those early success stories, thanks to the alien device orbiting Chasm's sun. The pirates who first found the abandoned artifact quickly learned how to use it to shut down the hyperspace link to the system. This allowed Chasm to remain a secret out of reach from authoritarian governments.`
 	spaceport `The spaceport is a ring of docking bays that circle around the station. Not everyone here is a pirate. There are also those who conduct business with pirates arriving and departing.`
-	shipyard "Core Pirates"
-	shipyard "Northern Pirates"
+	shipyard "Basic Ships"
+	shipyard "Dirt Belt Pirates"
 	shipyard "Southern Pirates"
+	shipyard "Advanced Southern Pirates"
 	outfitter "Basic Outfits"
 	outfitter "Common Outfits"
 	outfitter "Ammo North"
 	outfitter "Ammo South"
+	outfitter "Delta V Basics"
+	outfitter "Kraz Basics"
 	outfitter "Pirate Outfits"
+	outfitter "Basic Turbo Blasters"
 	bribe 0.05
 	security 0
 	tribute 1000
 		threshold 2000
-		fleet "Small Southern Pirates" 1
-		fleet "Small Core Pirates" 1
-		fleet "Small Northern Pirates" 1
-		fleet "Large Southern Pirates" 4
-		fleet "pirate raid" 9
+		fleet "Small Southern Pirates" 3
+		fleet "Large Southern Pirates" 2
+		fleet "Small Dirt Belt Pirates" 6
+		fleet "Large Dirt Belt Pirates" 3
+		fleet "pirate raid" 4
 		fleet "Marauder fleet X" 1
 
 planet "Season's End"
@@ -1283,37 +1282,44 @@ planet "Season's End"
 	government Uninhabited
 	security 0
 
+planet "Eureka Station"
+	attributes uninhabited midnight "dirt belt" station
+	landscape "land/nasa asdf-iss"
+	music ambient/derelict
+	description `Eureka Station was originally built as a processing facility and harvesting outpost during the early Deuterium Rush. It wasn't long before the station attracted the attention of pirates. After being captured, it remained under pirate control until shortly after the foundation of the Republic.`
+	description `	When the Navy began its crackdown on pirate activities, Eureka Station was among the first of the outlaw havens to fall. After the Republic established control of the station, attempts were made to restart deuterium processing operations. Those plans came to an end with the Alpha war. The battle of Ipsing brought about the station's final downfall. A barrage of rocket fire sent Eureka out of its established orbit. Since then it has remained an uninhabited derelict, slowly drifting towards the system's edge.`
+	government Uninhabited
+	security 0
+
 planet Vesta
 	attributes midnight archipelago mining
 	landscape land/desert0ver8
 	description `Mining outposts dot the surface of this dry desert world. The planet looks deserted while everyone takes shelter from the sun during the heat of the day. But after sunset the mines are crawling with activity.`
-	description `	The Vesta miners aren't slaves, but they are expected to pay tribute for "protection" by the pirates. This arrangement was made long ago, giving the original settlers exclusive access to the rich ore desposits underneath these desert sands. While some resent being born into this way of life, most here accept it.`
+	description `	Most Vesta miners are descendants of refugees from the Alpha War who were granted sanctuary by the pirate lords of Janus. While they aren't slaves, they are expected to pay tribute for "protection". While some resent being born into this way of life, most here accept it.`
 	spaceport `The landing strip ends with a gigantic tunnel that allows ships to be parked underground. Much of the rest of the spaceport consists of a series of tunnels and artificially constructed caverns.`
-	shipyard "Syndicate Basics"
-	shipyard "Southbound Basics"
-	shipyard "Southern Pirates"
-	shipyard "Advanced Northern Pirates"
+	shipyard "Basic Ships"
+	shipyard "Common Freighters"
 	outfitter "Basic Outfits"
+	outfitter "Basic Weapons"
 	outfitter "Ammo North"
 	outfitter "Ammo South"
-	outfitter "Pirate Outfits"
 	government Independent
 	bribe 0.05
 	security 0
 	tribute 1800
 		threshold 3500
-		fleet "S. Advanced Independent" 3
-		fleet "L. Advanced Independent" 1
-		fleet "Small Independent" 6
-		fleet "Large Independent" 3
+		fleet "Small Independent" 3
+		fleet "Large Independent" 1
 		fleet "Small Southern Pirates" 1
 		fleet "Small Core Pirates" 1
 		fleet "Small Northern Pirates" 1
+		fleet "Small Dirt Belt Pirates" 2
+		fleet "Large Dirt Belt Pirates" 2
 		fleet "Large Southern Pirates" 1
 		fleet "Large Core Pirates" 1
 		fleet "Large Northern Pirates" 1
 		fleet "pirate raid" 1
-		fleet "Marauder Independent" 10
+		fleet "Marauder Independent" 1
 		
 planet "Wang Xiang Tai"
 	attributes midnight pirate station "dirt belt pirate" "dirt belt"
@@ -1322,26 +1328,29 @@ planet "Wang Xiang Tai"
 	description `The pirates who discovered this isolated system, and the secrets to using the alien device orbiting its sun to activate and deactivate the hyperspace links leading to the system, created this space station as a rest stop for those seeking refuge from Earth's authority. It also serves as a meeting place for those seeking to do business with the underworld or rival pirate factions in need of neutral ground.`
 	description `	Control of the station has switched hands several times over the centuries. Most of the previous transfers of power were violent. However, the current administration, an organization known as the Red Dragons, bought its way in. They are an independent consortium involved in instellar smuggling operations throughout the galaxy.`
 	spaceport `Many of the pirate ships parked here are being repaired. It's a wonder some of them were able to escape the Navy in the condition that they are in.`
+	shipyard "Basic Ships"
 	shipyard "Northern Pirates"
-	shipyard "Southern Pirates"
+	shipyard "Dirt Belt Pirates"
 	outfitter "Common Outfits"
 	outfitter "Ammo North"
 	outfitter "Ammo South"
-	outfitter "Delta V Basics"
-	outfitter "Kraz Basics"
+	outfitter "Syndicate Basics"
 	outfitter "Pirate Outfits"
+	outfitter "Basic Turbo Blasters"
 	bribe 0.05
 	security 0
 	tribute 4000
 		threshold 8000
-		fleet "Small Independent (Killable)" 8
-		fleet "Large Independent (Killable)" 4
-		fleet "Small Southern Pirates" 14
-		fleet "Small Core Pirates" 4
-		fleet "Small Northern Pirates" 10
-		fleet "Large Southern Pirates" 8
-		fleet "Large Core Pirates" 2
-		fleet "Large Northern Pirates" 6
+		fleet "Small Independent (Killable)" 4
+		fleet "Large Independent (Killable)" 2
+		fleet "Small Southern Pirates" 1
+		fleet "Small Core Pirates" 1
+		fleet "Small Northern Pirates" 1
+		fleet "Small Dirt Belt Pirates" 3
+		fleet "Large Dirt Belt Pirates" 3
+		fleet "Large Southern Pirates" 1
+		fleet "Large Core Pirates" 1
+		fleet "Large Northern Pirates" 1
 		fleet "pirate raid" 8
 
 "landing message" "You cannot enter a collapsed wormhole."
@@ -1458,3 +1467,21 @@ event "ringworld debris fields"
 		add asteroids "ringworld debris f" 4 1.75
 		add asteroids "ringworld debris g" 4 1.5
 		add asteroids "ringworld debris h" 4 1.25
+
+
+
+# This mission/event adds Eureka Station to the Ipsing system.
+
+mission "Midnight: Add Eureka Station to Ipsing"
+	landing
+	invisible
+	on offer
+		event "midnight: add eureka station to ipsing"
+		fail
+
+event "midnight: add eureka station to ipsing"
+	system Ipsing
+		add object "Eureka Station"
+			sprite "planet/nasa derelict station1"
+			distance 3274.01
+			period 1708.68
