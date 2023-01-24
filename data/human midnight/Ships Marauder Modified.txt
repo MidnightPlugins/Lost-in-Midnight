@@ -156,27 +156,31 @@ ship "Modified Clipper"
 			"hull damage" 185
 			"hit force" 550
 	outfits
-		"Plasma Cannon" 2
+		"Beam Laser" 2
 		"Heavy Rocket Launcher" 2
-		"Heavy Rocket" 40
+		"Heavy Rocket Rack"
+		"Heavy Rocket" 50
 
-		"S3 Thermionic"
 		"LP072a Battery Pack"
+		"RT-I Radiothermal"
+		Supercapacitor
 		"D41-HY Shield Generator"
 		"Modified D41-HY Shielding"
-		"Water Coolant System"
-		"Cargo Scanner"
 		"Large Radar Jammer"
-		"Laser Rifle" 8
+		Ramscoop
+		"Tactical Scanner"
+		"Water Coolant System"
+		"Laser Rifle" 4
 
-		"Greyhound Plasma Steering"
-		"Greyhound Plasma Thruster"
-		Hyperdrive
+		"Volcano Afterburner"
+		"X2700 Ion Thruster"
+		"X3200 Ion Steering"
+		"Scram Drive"
 		
 	engine -22 47
 	engine 22 47
-	gun -21.5 -18 "Plasma Cannon"
-	gun 21.5 -18 "Plasma Cannon"
+	gun -21.5 -18 "Beam Laser"
+	gun 21.5 -18 "Beam Laser"
 	gun -11 -8.5 "Heavy Rocket Launcher"
 	gun 11 -8.5 "Heavy Rocket Launcher"
 	leak "leak" 60 50
@@ -189,70 +193,98 @@ ship "Modified Clipper"
 
 ship "Modified Clipper" "Modified Clipper (Smuggler)"
 	outfits
-		Afterburner
 		"Beam Laser" 2
 		"Cargo Scanner"
 		"D41-HY Shield Generator"
-		"Modified D41-HY Shielding"
-		"Greyhound Plasma Steering"
-		"Greyhound Plasma Thruster"
-		"Interference Plating" 4
+		"Fuel Pod"
+		"Interference Plating" 5
 		Javelin 400
 		"Javelin Pod" 2
 		"LP072a Battery Pack"
 		"Large Radar Jammer"
-		"Laser Rifle" 4
-		"Outfit Scanner"
-		"Smuggler's Hideaway"
-		"S3 Thermionic"
+		"Laser Rifle" 8
+		"Modified D41-HY Shielding"
+		"RT-I Radiothermal"
+		Ramscoop
 		"Scram Drive"
-		"Small Bunk Room"
-		"Tactical Scanner"
-	gun -21.5 -18 "Beam Laser"
-	gun 21.5 -18 "Beam Laser"
-	gun -11 -8.5 "Javelin Pod"
-	gun 11 -8.5 "Javelin Pod"
+		"Smuggler's Hideaway"
+		"Volcano Afterburner"
+		"Water Coolant System"
+		"X2700 Ion Thruster"
+		"X3200 Ion Steering"
+	gun "Beam Laser"
+	gun "Beam Laser"
+	gun "Javelin Pod"
+	gun "Javelin Pod"
 
 ship "Modified Clipper" "Modified Clipper (Bounty Hunter)"
 	outfits
-		Afterburner
 		Brig
-		"Bunk Room"
 		"D41-HY Shield Generator"
-		"Modified D41-HY Shielding"
-		"Fragmentation Grenades" 4
-		"Greyhound Plasma Steering"
-		"Greyhound Plasma Thruster"
+		"Fuel Pod"
 		"Heavy Laser" 2
-		Javelin 400
-		"Javelin Pod" 2
-		"LP072a Battery Pack"
-		"Large Radar Jammer"
-		"Laser Rifle" 4
-		"Outfits Expansion"
-		"S3 Thermionic"
-		"Scram Drive"
-		"Tactical Scanner"
-		"Water Coolant System"
-	gun -21.5 -18 "Heavy Laser"
-	gun 21.5 -18 "Heavy Laser"
-	gun -11 -8.5 "Javelin Pod"
-	gun 11 -8.5 "Javelin Pod"
-
-ship "Modified Clipper" "Modified Clipper (Miner)"
-	outfits
-		"Asteroid Scanner"
-		"Cargo Expansion" 2
-		"Modified D67-TM Shielding"
-		"Greyhound Plasma Steering"
-		"Greyhound Plasma Thruster"
-		"Heavy Laser" 4
 		Hyperdrive
 		"LP072a Battery Pack"
 		"Large Radar Jammer"
 		"Laser Rifle" 4
+		"Modified D41-HY Shielding"
+		"RT-I Radiothermal"
 		Ramscoop
-		"S3 Thermionic"
+		"Sidewinder Missile" 90
+		"Sidewinder Missile Launcher" 2
+		"Tactical Scanner" 2
+		"Volcano Afterburner"
+		"Water Coolant System"
+		"X2700 Ion Thruster"
+		"X3200 Ion Steering"
+	gun "Heavy Laser"
+	gun "Heavy Laser"
+	gun "Sidewinder Missile Launcher"
+	gun "Sidewinder Missile Launcher"
+
+
+ship "Modified Clipper" "Modified Clipper (Miner)"
+	outfits
+		"Asteroid Scanner"
+		"D41-HY Shield Generator"
+		"Heavy Laser" 4
+		"LP072a Battery Pack"
+		"Large Radar Jammer"
+		"Laser Rifle" 8
+		"Modified D41-HY Shielding"
+		"RT-I Radiothermal"
+		Ramscoop
+		"Scram Drive"
+		Supercapacitor
+		"Volcano Afterburner"
+		"Water Coolant System"
+		"X2700 Ion Thruster"
+		"X3200 Ion Steering"
+
+ship "Modified Clipper" "Modified Clipper (Turbo Blaster)"
+	outfits
+		Brig
+		"Cargo Expansion"
+		"Cargo Scanner"
+		"Cooling Ducts"
+		"D41-HY Shield Generator"
+		"LP072a Battery Pack"
+		"Large Radar Jammer"
+		"Laser Rifle" 4
+		"Limit Breaker"
+		"Modified D41-HY Shielding"
+		"RT-I Radiothermal"
+		Ramscoop
+		"Scram Drive"
+		"Small Radar Jammer"
+		Supercapacitor
+		"Tactical Scanner"
+		"Turbo Blaster" 4
+		"Volcano Afterburner"
+		"Water Coolant System"
+		"X2700 Ion Thruster"
+		"X3200 Ion Steering"
+
 
 
 
@@ -327,6 +359,257 @@ ship "Modified Firebird" "Modified Firebird (Smuggler)"
 		"X3700 Ion Thruster"
 		"X3200 Ion Steering"
 		"Scram Drive"
+
+
+
+ship "Modified Hauler"
+	sprite "ship/modified hauler i"
+	thumbnail "thumbnail/modified hauler i-thumb"
+	attributes
+		category "Utility"
+		"cost" 1965000
+		"shields" 2500
+		"hull" 3700
+		"required crew" 5
+		"bunks" 12
+		"mass" 250
+		"drag" 10.5
+		"heat dissipation" .67
+		"fuel capacity" 500
+		"cargo space" 20
+		"outfit space" 375
+		"weapon capacity" 140
+		"engine capacity" 80
+		weapon
+			"blast radius" 60
+			"shield damage" 600
+			"hull damage" 300
+			"hit force" 900
+	outfits
+		"Meteor Missile Pod" 2
+		"Meteor Missile" 14
+		"Quad Blaster Turret" 2
+		"Heavy Anti-Missile Turret" 2
+		
+		"S3 Thermionic"
+		"LP072a Battery Pack"
+		"D23-QP Shield Generator"
+		"Small Radar Jammer"
+		
+		"Greyhound Plasma Thruster"
+		"Impala Plasma Steering"
+		"Hyperdrive"
+	engine -45 122.5
+	engine 45 122.5
+	gun -14.5 -92.5
+	gun 14.5 -92.5
+	turret -21.5 -48 "Quad Blaster Turret"
+	turret 21.5 -48 "Heavy Anti-Missile Turret"
+	turret -18.5 78.5 "Heavy Anti-Missile Turret"
+	turret 18.5 78.5 "Quad Blaster Turret"
+	bay "Fighter" 0 11
+	leak "leak" 60 50
+	leak "flame" 50 80
+	leak "big leak" 90 30
+	explode "tiny explosion" 20
+	explode "small explosion" 35
+	explode "medium explosion" 20
+	explode "large explosion" 5
+	"final explode" "final explosion medium"
+	description "The cargo container on this Modified Hauler has been reconfigured to carry a fighter. Unwary Merchants can be caught off-guard by pirates using a ship like this."
+
+ship "Modified Hauler" "Modified Hauler (Turbo Blaster)"
+	outfits
+		"Cargo Scanner"
+		"D23-QP Shield Generator"
+		"D41-HY Shield Generator"
+		"Heavy Anti-Missile Turret" 2
+		Hyperdrive
+		"LP072a Battery Pack"
+		"Laser Rifle"
+		"Meteor Missile" 44
+		"Meteor Missile Box" 2
+		"Meteor Missile Pod" 2
+		"Quad Turbo Blaster Turret" 2
+		"S3 Thermionic"
+		"Small Radar Jammer"
+		"Water Coolant System"
+		"X2700 Ion Thruster"
+		"X3200 Ion Steering"
+	turret "Quad Turbo Blaster Turret"
+	turret "Heavy Anti-Missile Turret"
+	turret "Heavy Anti-Missile Turret"
+	turret "Quad Turbo Blaster Turret"
+
+
+
+ship "Modified Hauler II"
+	sprite "ship/modified hauler ii"
+	thumbnail "thumbnail/modified hauler ii-thumb"
+	attributes
+		category "Utility"
+		"cost" 2340000
+		"shields" 2900
+		"hull" 5200
+		"required crew" 7
+		"bunks" 16
+		"mass" 360
+		"drag" 11.5
+		"heat dissipation" .67
+		"fuel capacity" 600
+		"cargo space" 4
+		"outfit space" 400
+		"weapon capacity" 140
+		"engine capacity" 80
+		weapon
+			"blast radius" 80
+			"shield damage" 800
+			"hull damage" 400
+			"hit force" 1200
+	outfits
+		"Meteor Missile Pod" 2
+		"Meteor Missile" 59
+		"Meteor Missile Box" 3
+		"Quad Blaster Turret" 2
+		"Heavy Anti-Missile Turret" 2
+		
+		"S3 Thermionic"
+		"LP072a Battery Pack"
+		"D23-QP Shield Generator"
+		"Small Radar Jammer"
+		"Laser Rifle"
+		
+		"Greyhound Plasma Thruster"
+		"Impala Plasma Steering"
+		"Hyperdrive"
+	engine -45 159.5
+	engine 45 159.5
+	gun -14.5 -129.5
+	gun 14.5 -129.5
+	turret -21.5 -84.5 "Quad Blaster Turret"
+	turret 21.5 -84.5 "Heavy Anti-Missile Turret"
+	turret -18.5 115.5 "Heavy Anti-Missile Turret"
+	turret 18.5 115.5 "Quad Blaster Turret"
+	bay "Fighter" 0 -23
+	bay "Fighter" 0 51
+	leak "leak" 60 50
+	leak "flame" 40 80
+	leak "big leak" 80 30
+	explode "tiny explosion" 10
+	explode "small explosion" 25
+	explode "medium explosion" 30
+	explode "large explosion" 15
+	"final explode" "final explosion medium"
+	description "Both cargo containers on this Modified Hauler have been reconfigured to carry fighters. Unwary Merchants can be caught off-guard by pirates using a ship like this."
+
+ship "Modified Hauler II" "Modified Hauler II (Turbo Blaster)"
+	outfits
+		"Cargo Scanner"
+		"D23-QP Shield Generator"
+		"D41-HY Shield Generator" 2
+		"Heavy Anti-Missile Turret" 2
+		Hyperdrive
+		"LP072a Battery Pack"
+		"Laser Rifle" 2
+		"Meteor Missile" 44
+		"Meteor Missile Box" 2
+		"Meteor Missile Pod" 2
+		"Quad Turbo Blaster Turret" 2
+		"S3 Thermionic"
+		"Small Radar Jammer"
+		"Water Coolant System"
+		"X2700 Ion Thruster"
+		"X3200 Ion Steering"
+	turret "Quad Turbo Blaster Turret"
+	turret "Heavy Anti-Missile Turret"
+	turret "Heavy Anti-Missile Turret"
+	turret "Quad Turbo Blaster Turret"
+
+
+
+ship "Modified Hauler III"
+	sprite "ship/modified hauler iii"
+	thumbnail "thumbnail/modified hauler iii-thumb"
+	attributes
+		category "Utility"
+		"cost" 3380000
+		"shields" 3300
+		"hull" 6700
+		"required crew" 7
+		"bunks" 18
+		"mass" 470
+		"drag" 12.5
+		"heat dissipation" .71
+		"fuel capacity" 700
+		"cargo space" 60
+		"outfit space" 425
+		"weapon capacity" 140
+		"engine capacity" 80
+		weapon
+			"blast radius" 100
+			"shield damage" 1000
+			"hull damage" 500
+			"hit force" 1500
+	outfits
+		"Meteor Missile Pod" 2
+		"Meteor Missile" 59
+		"Meteor Missile Box" 3
+		"Quad Blaster Turret" 2
+		"Heavy Anti-Missile Turret" 2
+		
+		"S3 Thermionic"
+		"LP072a Battery Pack"
+		"D23-QP Shield Generator"
+		"Small Radar Jammer"
+		"Laser Rifle"
+		
+		"Greyhound Plasma Thruster"
+		"Impala Plasma Steering"
+		"Hyperdrive"
+
+	engine -45 196.5
+	engine 45 196.5
+	gun -14.5 -166.5
+	gun 14.5 -166.5
+	turret -21.5 -122 "Quad Blaster Turret"
+	turret 21.5 -122 "Heavy Anti-Missile Turret"
+	turret -18.5 152.5 "Heavy Anti-Missile Turret"
+	turret 18.5 152.5 "Quad Blaster Turret"
+	bay "Fighter" 0 -62
+	bay "Fighter" 0 11
+	bay "Fighter" 0 86
+	leak "leak" 50 50
+	leak "flame" 40 80
+	leak "big leak" 80 30
+	explode "small explosion" 15
+	explode "medium explosion" 30
+	explode "large explosion" 20
+	explode "huge explosion" 5
+	"final explode" "final explosion large"
+	description "All the cargo containers on this Modified Hauler III have been reconfigured to carry fighters. Unwary Merchants can be caught off-guard by pirates using a ship like this."
+
+ship "Modified Hauler III" "Modified Hauler III (Turbo Blaster)"
+	outfits
+		"Cargo Scanner"
+		"D23-QP Shield Generator" 2
+		"D41-HY Shield Generator" 2
+		"Heavy Anti-Missile Turret" 2
+		Hyperdrive
+		"LP072a Battery Pack"
+		"Laser Rifle" 3
+		"Meteor Missile" 44
+		"Meteor Missile Box" 2
+		"Meteor Missile Pod" 2
+		"Quad Turbo Blaster Turret" 2
+		"S3 Thermionic"
+		"Small Radar Jammer"
+		"Water Coolant System"
+		"X2700 Ion Thruster"
+		"X3200 Ion Steering"
+	turret "Quad Turbo Blaster Turret"
+	turret "Heavy Anti-Missile Turret"
+	turret "Heavy Anti-Missile Turret"
+	turret "Quad Turbo Blaster Turret"
 
 
 
@@ -1007,6 +1290,7 @@ ship "Marauder Sparrow"
 		"Cargo Expansion"
 		"Fuel Pod"
 		"Small Bunk Room"
+		"Laser Rifle"
 		
 		"A120 Atomic Thruster"
 		"A125 Atomic Steering"
@@ -1044,6 +1328,7 @@ ship "Marauder Sparrow" "Marauder Sparrow (Blaster)"
 		"Cargo Expansion"
 		"Fuel Pod"
 		"Small Bunk Room"
+		"Laser Rifle"
 		"A120 Atomic Thruster"
 		"A125 Atomic Steering"
 		Hyperdrive
@@ -1059,6 +1344,7 @@ ship "Marauder Sparrow" "Marauder Sparrow (Gatling)"
 		"Cargo Expansion"
 		"Fuel Pod"
 		"Small Bunk Room"
+		"Laser Rifle"
 		"A120 Atomic Thruster"
 		"A125 Atomic Steering"
 		Hyperdrive
@@ -1073,6 +1359,7 @@ ship "Marauder Sparrow" "Marauder Sparrow (Mod Blaster)"
 		"Cargo Expansion"
 		"Fuel Pod"
 		"Small Bunk Room"
+		"Laser Rifle"
 		"A120 Atomic Thruster"
 		"A125 Atomic Steering"
 		Hyperdrive
@@ -1089,6 +1376,7 @@ ship "Marauder Sparrow" "Marauder Sparrow (Meteor Missile)"
 		"Cargo Expansion"
 		"Fuel Pod"
 		"Small Bunk Room"
+		"Laser Rifle"
 		"A120 Atomic Thruster"
 		"A125 Atomic Steering"
 		Hyperdrive
@@ -1103,9 +1391,24 @@ ship "Marauder Sparrow" "Marauder Sparrow (Afterburner)"
 		"Cargo Expansion"
 		"Fuel Pod" 2
 		"Small Bunk Room"
+		"Laser Rifle"
 		"Volcano Afterburner"
 		"X1200 Ion Steering"
 		"X1700 Ion Thruster"
+		Hyperdrive
+
+ship "Marauder Sparrow" "Marauder Sparrow (Heavy)"
+	outfits
+		"Heavy Laser" 2
+		"Thermo Detonator"
+		Supercapacitor 4
+		"nGVF-BB Fuel Cell"
+		"Modified D23-QP Shielding"
+		"Fuel Pod"
+		"Small Bunk Room"
+		"Laser Rifle"
+		"A120 Atomic Thruster"
+		"A125 Atomic Steering"
 		Hyperdrive
 
 
@@ -1220,18 +1523,18 @@ ship "Marauder Hauler"
 	sprite "ship/marauder hauler a"
 	thumbnail "thumbnail/marauder hauler A-thumb"
 	attributes
-		category "Light Freighter"
+		category "Light Warship"
 		"cost" 975000
 		"shields" 2300
-		"hull" 2950
+		"hull" 3400
 		"required crew" 3
 		"bunks" 8
-		"mass" 185
+		"mass" 195
 		"drag" 9.5
 		"heat dissipation" .6
 		"fuel capacity" 400
 		"cargo space" 65
-		"outfit space" 374
+		"outfit space" 375
 		"weapon capacity" 140
 		"engine capacity" 80
 		"self destruct" .25
@@ -1309,8 +1612,8 @@ ship "Marauder Hauler" "Marauder Hauler (engines)"
 	thumbnail "thumbnail/marauder hauler E-thumb"
 	add attributes
 		"cost" 415480
-		"hull" -532
-		"mass" -27
+		"hull" -200
+		"mass" -55
 		"drag" -0.5
 		"cargo space" -60
 		"outfit space" 40
@@ -1345,7 +1648,7 @@ ship "Marauder Hauler" "Marauder Hauler (engines)"
 	turret 23 -12 "Quad Blaster Turret"
 	turret -17.5 40 "Anti-Missile Turret"
 	turret 19.5 40 "Anti-Missile Turret"
-	description "The previous owner of this Hauler reconfigured it to focus on speed by completely eliminating the central cargo container and boosting the engines. It seems wrong to classify this as a freighter due to its lack of cargo space."
+	description "The previous owner of this Hauler reconfigured it to focus on speed by completely eliminating the central cargo container and boosting the engines."
 
 
 
@@ -1354,10 +1657,10 @@ ship "Marauder Hauler" "Marauder Hauler (weapons)"
 	thumbnail "thumbnail/marauder hauler W-thumb"
 	add attributes
 		"cost" 569920
-		"shields" 1032
-		"hull" 1622
+		"shields" 1000
+		"hull" 1600
 		"bunks" 2
-		"mass" 4
+		"mass" 80
 		"drag" .5
 		"cargo space" -60
 		"outfit space" 40

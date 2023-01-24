@@ -11,6 +11,147 @@
 
 
 
+fleet "Small Dirt Belt Pirates"
+	government "Pirate"
+	names "pirate"
+	cargo 1
+	personality
+		plunders harvests coward
+		confusion 20
+	variant 5
+		"Sparrow (Turbo Blaster)"
+	variant 2
+		"Berserker (Turbo Blaster)"
+	variant 1
+		"Scout (Turbo Blaster)"
+	variant 3
+		"Rancor (Turbo Blaster)"
+	variant 1
+		"Rancor"
+		"Rancor (Turbo Blaster)"
+	variant 1
+		"Rancor (Berserker)"
+		"Rancor (Turbo Blaster)"
+	variant 1
+		"Outrider (Turbo Blaster)"
+	variant 2
+		"Sparrow (Turbo Blaster)" 2
+	variant 1
+		"Rancor (Turbo Blaster)"
+		"Sparrow (Turbo Blaster)"
+	variant 1
+		"Berserker (Turbo Blaster Afterburner)"
+		"Sparrow (Turbo Blaster)"
+	variant 1
+		"Outrider (Turbo Blaster)"
+		"Rancor (Turbo Blaster)"
+	variant 1
+		"Rancor (Turbo Blaster)"
+		"Outrider (Turbo Blaster)"
+		"Sparrow (Turbo Blaster)"
+	variant 1
+		"Rancor (Berserker)"
+		"Scout (Turbo Blaster)"
+		"Sparrow (Turbo Blaster)"
+	variant 1
+		"Sparrow (Turbo Blaster)" 3
+	variant 1
+		"Berserker (Turbo Blaster Afterburner)" 2
+	variant 2
+		"Argosy (Turbo Blaster)"
+	variant 2
+		"Clipper (Turbo Blaster)"
+	variant 1
+		"Modified Clipper (Turbo Blaster)"
+	variant 1
+		"Modified Hauler (Turbo Blaster)"
+		"Shuttle Pod (Turbo Blaster)"
+	variant 1
+		"Modified Hauler II (Turbo Blaster)"
+		"Shuttle Pod (Turbo Blaster)" 2
+	variant 1
+		"Patrolboat (Turbo Blaster)"
+	variant 1
+		"Missileboat (Turbo Blaster)"
+
+fleet "Large Dirt Belt Pirates"
+	government "Pirate"
+	names "pirate"
+	cargo 1
+	personality
+		plunders harvests coward
+		confusion 20
+	variant 3
+		"Rancor"
+		"Rancor (Berserker)"
+		"Rancor (Turbo Blaster)" 3
+	variant 5
+		"Modified Argosy (Turbo Blaster)"
+	variant 3
+		"Argosy (Turbo Blaster)"
+	variant 2
+		"Modified Hauler (Turbo Blaster)"
+		"Shuttle Pod (Turbo Blaster)"
+	variant 2
+		"Modified Hauler II (Turbo Blaster)"
+		"Shuttle Pod (Turbo Blaster)" 2
+	variant 2
+		"Modified Hauler III (Turbo Blaster)"
+		"Shuttle Pod (Turbo Blaster)" 3
+	variant 4
+		"Clipper (Turbo Blaster)"
+	variant 2
+		"Modified Clipper (Turbo Blaster)"
+	variant 2
+		"Patrolboat (Turbo Blaster)"
+	variant 2
+		"Clipper (Turbo Blaster)"
+		"Rancor (Turbo Blaster)"
+	variant 1
+		"Modified Clipper (Turbo Blaster)"
+		"Rancor (Berserker)"
+	variant 1
+		"Patrolboat"
+		"Berserker (Turbo Blaster)"
+	variant 1
+		"Patrolboat"
+		"Outrider (Turbo Blaster)"
+	variant 1
+		"Patrolboat (Turbo Blaster)"
+		"Scout (Turbo Blaster)"
+	variant 3
+		"Modified Argosy (Turbo Blaster)"
+		"Rancor (Berserker)"
+	variant 1
+		"Argosy (Turbo Blaster)"
+		"Rancor (Berserker)"
+	variant 1
+		"Modified Hauler (Turbo Blaster)"
+		"Shuttle Pod (Beam Laser)"
+	variant 1
+		"Modified Hauler II (Turbo Blaster)"
+		"Shuttle Pod (Beam Laser)" 2
+	variant 1
+		"Modified Hauler III (Turbo Blaster)"
+		"Shuttle Pod (Beam Laser)" 3
+	variant 4
+		"Firebird (Turbo Blaster)"
+	variant 2
+		"Battle Barge (Turbo Blaster)"
+	variant 1
+		"Battle Barge"
+		"Rancor (Turbo Blaster)" 2
+	variant 1
+		"Battle Barge"
+		"Patrolboat (Turbo Blaster)"
+	variant 1
+		"Battle Barge"
+		"Missileboat (Turbo Blaster)"
+	variant 2
+		"Leviathan (Turbo Blaster)"
+
+
+
 fleet "pirate raid (rivals)"
 	government "Pirate (Rivals)"
 	names "pirate"
@@ -180,19 +321,14 @@ fleet "pirate raid (rivals)"
 		"Modified Clipper"
 		"Hawk (Speedy)"
 	variant 1
-		"Sparrow" 2
 		"Sparrow (Gatling)"
 		"Sparrow (Afterburner)"
-		"Sparrow (Limit Break)" 2
+		"Sparrow (Limit Break)"
 		"Sparrow (Gatling Limit Break)"
 		"Sparrow (Meteor Missile)"
-		"Hawk"
-		"Hawk (Plasma)"
-		"Hawk (Rocket)"
-		"Hawk (Speedy)"
-		"Fury"
-		"Fury (Bomber Limit Break)"
-		"Berserker (Afterburner)"
+	variant 1
+		"Scout"
+		"Scout (Speedy)"
 
 
 fleet "Treasure Hunters"
@@ -459,7 +595,7 @@ fleet "Protection Medium"
 	variant
 		"Firebird"
 	variant
-		"Bastion"				
+		"Bastion"
 	variant
 		"Splinter"
 	variant
@@ -830,6 +966,8 @@ fleet "Marauder Independent"
 		"Marauder Manta (Engines)"
 	variant 6
 		"Marauder Manta (Weapons)"
+	variant 6
+		"Marauder Sparrow"
 
 
 
@@ -1173,9 +1311,10 @@ fleet "Marauder Bounty (Disguised)"
 		"Marauder Manta (Engines)"
 	variant 6
 		"Marauder Manta (Weapons)"
+	variant 6
+		"Marauder Sparrow"
 
 
-		
 fleet "Marauder Independent (Killable)"
 	government "Independent (Killable)"
 	names "independent"
@@ -1236,6 +1375,8 @@ fleet "Marauder Independent (Killable)"
 		"Marauder Manta (Engines)"
 	variant 6
 		"Marauder Manta (Weapons)"
+	variant 6
+		"Marauder Sparrow"
 
 
 
@@ -1360,7 +1501,7 @@ fleet "Large Independent (Killable)"
 	variant 1
 		"Falcon (Heavy)"
 	variant 1
-		"Falcon (Laser)"		
+		"Falcon (Laser)"
 
 
 
@@ -1559,12 +1700,14 @@ fleet "Fugitive Oathbreaker"
 	variant 1
 		"Cruiser"
 		"Pirate Drone" 4
-		"Gunboat" 2
+		"Gunboat"
+		"Patrolboat"
 		"Outrider (Pirate)" 6
 	variant 1
 		"Cruiser"
 		"Pirate Drone" 4
-		"Rainmaker" 2
+		"Rainmaker"
+		"Missileboat"
 		"Outrider (Pirate)" 6
 	variant 1
 		"Cruiser"
@@ -1603,11 +1746,13 @@ fleet "Fugitive Oathbreaker"
 		"Outrider (Pirate)" 2
 	variant 1
 		"Frigate"
-		"Gunboat" 2
+		"Gunboat"
+		"Patrolboat"
 		"Outrider (Pirate)" 2
 	variant 1
 		"Frigate"
-		"Rainmaker" 2
+		"Rainmaker"
+		"Missileboat"
 		"Outrider (Pirate)" 2
 	variant 1
 		"Frigate"
@@ -1641,11 +1786,13 @@ fleet "Fugitive Oathbreaker"
 		"Outrider (Pirate)" 2
 	variant 1
 		"Marauder Falcon (Engines)"
-		"Gunboat" 2
+		"Gunboat"
+		"Patrolboat"
 		"Outrider (Pirate)" 2
 	variant 1
 		"Marauder Falcon (Engines)"
-		"Rainmaker" 2
+		"Rainmaker"
+		"Missileboat"
 		"Outrider (Pirate)" 2
 	variant 1
 		"Falcon"
@@ -1653,57 +1800,69 @@ fleet "Fugitive Oathbreaker"
 		"Rainmaker"
 	variant 1
 		"Falcon"
-		"Gunboat" 2
+		"Gunboat"
+		"Patrolboat"
 	variant 1
 		"Falcon"
-		"Rainmaker" 2
+		"Rainmaker"
+		"Missileboat"
 	variant 1
 		"Falcon (Heavy)"
 		"Gunboat"
 		"Rainmaker"
 	variant 1
 		"Falcon (Heavy)"
-		"Gunboat" 2
+		"Gunboat"
+		"Patrolboat"
 	variant 1
 		"Falcon (Heavy)"
-		"Rainmaker" 2
+		"Rainmaker"
+		"Missileboat"
 	variant 1
 		"Gunboat"
-		"Rainmaker" 2
+		"Rainmaker"
+		"Missileboat"
 		"Bastion (Laser)"
 		"Osprey"
 	variant 1
 		"Gunboat"
-		"Rainmaker" 2
+		"Rainmaker"
+		"Missileboat"
 		"Bastion (Heavy)"
 		"Osprey (Laser)"
 	variant 1
 		"Gunboat"
-		"Rainmaker" 2
+		"Rainmaker"
+		"Missileboat"
 		"Bastion (Laser)"
 		"Bastion (Heavy)"
 	variant 1
 		"Gunboat"
-		"Rainmaker" 2
+		"Rainmaker"
+		"Missileboat"
 		"Osprey"
 		"Osprey (Laser)"
 	variant 1
-		"Gunboat" 2
+		"Gunboat"
+		"Patrolboat"
 		"Rainmaker"
 		"Bastion (Laser)"
 		"Osprey"
 	variant 1
-		"Gunboat" 2
+		"Gunboat"
+		"Patrolboat"
 		"Rainmaker"
 		"Bastion (Heavy)"
 		"Osprey (Laser)"
 	variant 1
-		"Gunboat" 2
+		"Gunboat"
+		"Patrolboat"
 		"Rainmaker"
 		"Bastion (Laser)"
 		"Bastion (Heavy)"
 	variant 1
-		"Gunboat" 2
+		"Gunboat"
+		"Patrolboat"
 		"Rainmaker"
 		"Osprey"
 		"Osprey (Laser)"
@@ -2011,3 +2170,17 @@ fleet "Bounty Hunter (licensed)"
 	variant 1
 		"Splinter"
 		"Fury (Heavy)"
+	variant 1
+		"Patrolboat"
+	variant 1
+		"Missileboat"
+	variant 1
+		"Patrolboat"
+		"Berserker (Strike)"
+	variant 1
+		"Missileboat"
+		"Berserker (Strike)"
+	variant 1
+		"Patrolboat"
+		"Missileboat"
+		"Headhunter (Particle)"

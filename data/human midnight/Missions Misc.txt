@@ -1773,6 +1773,7 @@ mission "Quash: Humanika Infiltration 1"
 			not "tribute: Haven"
 			not "tribute: Stormhold"
 			not "tribute: Zenith"
+			not "tribute: New Tortuga"
 		random < 10
 	on offer
 		conversation

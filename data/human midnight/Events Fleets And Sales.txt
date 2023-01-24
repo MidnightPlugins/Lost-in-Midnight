@@ -11,6 +11,229 @@
 
 
 
+shipyard "Dirt Belt Pirates"
+	"Modified Argosy"
+	"Modified Hauler"
+	"Modified Hauler II"
+	"Rancor (Used)"
+	"Shuttle Pod"
+
+shipyard "Advanced Dirt Belt Pirates"
+	"Battle Barge"
+	"Modified Clipper"
+	"Modified Hauler III"
+	"Scout"
+
+shipyard "Common Freighters"
+	"Clipper"
+	"Argosy"
+	"Hauler"
+	"Star Barge"
+	"Freighter"
+
+outfitter "Basic Turbo Blasters"
+	"Turbo Blaster"
+	"Turbo Blaster Turret"
+
+outfitter "Advanced Turbo Blasters"
+	"Quad Turbo Blaster Turret"
+
+
+
+mission "Midnight Add Dirt Belt Pirate Fleets"
+	landing
+	invisible
+	on offer
+		event "midnight add dirt belt pirate fleets"
+		fail
+
+event "midnight add dirt belt pirate fleets"
+	system Orbona
+		add fleet "Small Dirt Belt Pirates" 6000
+		add fleet "Large Dirt Belt Pirates" 12000
+	system Limen
+		add fleet "Small Dirt Belt Pirates" 8000
+		add fleet "Large Dirt Belt Pirates" 16000
+	system Terminus
+		add fleet "Small Dirt Belt Pirates" 10000
+		add fleet "Large Dirt Belt Pirates" 20000
+	system Mora
+		add fleet "Small Dirt Belt Pirates" 6000
+		add fleet "Large Dirt Belt Pirates" 12000
+	system Fala
+		add fleet "Small Dirt Belt Pirates" 8000
+		add fleet "Large Dirt Belt Pirates" 16000
+	system Gacrux
+		add fleet "Small Dirt Belt Pirates" 6000
+		add fleet "Large Dirt Belt Pirates" 12000
+	system Minkar
+		add fleet "Small Dirt Belt Pirates" 24000
+		add fleet "Large Dirt Belt Pirates" 48000
+	system Mizar
+		add fleet "Small Dirt Belt Pirates" 12000
+	system Ipsing
+		add fleet "Small Dirt Belt Pirates" 6000
+
+
+
+mission "Midnight Independent Fleet Expansion"
+	landing
+	invisible
+	to offer
+		has "main plot completed"
+	on offer
+		event "midnight independent fleet expansion"
+		fail
+
+event "midnight independent fleet expansion"
+	system Men
+		add fleet "Small Independent" 400
+		add fleet "Large Independent" 600
+		add fleet "Marauder Independent" 6000
+	system Antares
+		add fleet "Small Independent" 800
+		add fleet "Large Independent" 1500
+		add fleet "Marauder Independent" 6000
+	system Shaula
+		add fleet "Small Independent" 1600
+		add fleet "Large Independent" 3000
+		add fleet "Marauder Independent" 6000
+	system Nunki
+		add fleet "Small Independent" 1600
+		add fleet "Large Independent" 3000
+		add fleet "Marauder Independent" 6000
+	system Gienah
+		add fleet "Small Independent" 1600
+		add fleet "Large Independent" 3000
+		add fleet "Marauder Independent" 6000
+	system Algenib
+		add fleet "Small Independent" 1600
+		add fleet "Large Independent" 3000
+		add fleet "Marauder Independent" 6000
+	system Almach
+		add fleet "Small Independent" 1600
+		add fleet "Large Independent" 3000
+		add fleet "Marauder Independent" 6000
+	system Alcyone
+		add fleet "Small Independent" 1600
+		add fleet "Large Independent" 3000
+		add fleet "Marauder Independent" 6000
+	system Almaaz
+		add fleet "Small Independent" 1600
+		add fleet "Large Independent" 3000
+		add fleet "Marauder Independent" 6000
+	system Alnilam
+		add fleet "Small Independent" 1600
+		add fleet "Large Independent" 3000
+		add fleet "Marauder Independent" 6000
+	system Arneb
+		add fleet "Small Independent" 1600
+		add fleet "Large Independent" 3000
+		add fleet "Marauder Independent" 6000
+	system Misam
+		add fleet "Small Independent" 1600
+		add fleet "Large Independent" 3000
+		add fleet "Marauder Independent" 6000
+	system Archipelago
+		add fleet "S. Advanced Independent" 8400
+	system Chasm
+		add fleet "S. Advanced Independent" 9600
+	system Diyu
+		add fleet "S. Advanced Independent" 9600
+	fleet "Small Independent"
+		add variant 1
+			"Quicksilver"
+		add variant 1
+			"Quicksilver (Proton)"
+		add variant 1
+			"Headhunter"
+		add variant 1
+			"Headhunter (Particle)"
+		add variant 1
+			"Wasp (Gatling)"
+		add variant 1
+			"Wasp (Javelin)"
+		add variant 1
+			"Wasp (Meteor)"
+		add variant 1
+			"Wasp (Plasma)"
+		add variant 1
+			"Wasp (Proton)"
+		add variant 1
+			"Berserker"
+		add variant 1
+			"Berserker (Afterburner)"
+		add variant 1
+			"Berserker (Strike)"
+		add variant 1
+			"Aerie"
+			"Lance" 2
+		add variant 1
+			"Aerie"
+			"Dagger" 2
+		add variant 1
+			"Raven (Afterburner)"
+		add variant 1
+			"Raven (Heavy)"
+		add variant 1
+			"Corvette"
+		add variant 1
+			"Corvette (Missile)"
+		add variant 1
+			"Corvette (Speedy)"
+		add variant 1
+			"Scout"
+		add variant 1
+			"Scout (Speedy)"
+	fleet "Large Independent"
+		add variant 1
+			"Manta (Proton)"
+		add variant 1
+			"Splinter"
+		add variant 1
+			"Splinter (Laser)"
+		add variant 1
+			"Splinter (Proton)"
+		add variant 1
+			"Manta"
+		add variant 1
+			"Firebird"
+		add variant 1
+			"Firebird (Laser)"
+		add variant 1
+			"Firebird (Plasma)"
+		add variant 1
+			"Firebird (Missile)"
+		add variant 1
+			"Vanguard (Particle)"
+		add variant 1
+			"Vanguard (Missile)"
+		add variant 1
+			"Vanguard"
+		add variant 1
+			"Protector (Laser)"
+		add variant 1
+			"Protector (Proton)"
+		add variant 1
+			"Protector"
+		add variant 1
+			"Mule"
+			"Lance"
+		add variant 1
+			"Mule (Heavy)"
+			"Dagger"
+		add variant 1
+			"Leviathan"
+		add variant 1
+			"Leviathan (Laser)"
+		add variant 1
+			"Leviathan (Heavy)"
+		add variant 1
+			"Bactrian"
+			"Dagger" 3
+
+
+
 mission "Midnight Sales Update 1"
 	landing
 	invisible
@@ -812,6 +1035,11 @@ event "add base heavy syndicate marauders"
 			"Marauder Protector"
 		add variant 6
 			"Marauder Vanguard"
+	fleet "Marauder IV"
+		add variant 5
+			"Marauder Protector"
+		add variant 5
+			"Marauder Vanguard"
 	fleet "Marauder fleet VII"
 		add variant 18
 			"Marauder Protector"
@@ -898,6 +1126,10 @@ event "add marauder behemoths"
 		add variant 6
 			"Marauder Behemoth"
 			"Dagger" 2
+	fleet "Marauder IV"
+		variant 5
+			"Marauder Behemoth"
+			"Dagger" 2
 	fleet "Marauder fleet VII"
 		variant 18
 			"Marauder Behemoth"
@@ -963,6 +1195,11 @@ event "add oathbreaker marauders"
 		add variant 6
 			"Marauder Bastion"
 		add variant 6
+			"Marauder Osprey"
+	fleet "Marauder III"
+		add variant 5
+			"Marauder Bastion"
+		add variant 5
 			"Marauder Osprey"
 	fleet "Marauder fleet IV"
 		add variant 8
@@ -1378,23 +1615,6 @@ mission "Add Modified Clippers"
 		fail
 
 event "add modified clippers"
-	shipyard "Advanced Southern Pirates"
-		add "Modified Clipper"
-	fleet "Small Southern Pirates"
-		add variant 1
-			"Modified Clipper"
-	fleet "Large Southern Pirates"
-		add variant 1
-			"Modified Clipper"
-		add variant 1
-			"Modified Clipper"
-			"Hawk"
-		add variant 1
-			"Modified Clipper"
-			"Hawk (Rocket)"
-		add variant 1
-			"Modified Clipper"
-			"Hawk (Speedy)"
 	fleet "Small Independent"
 		add variant 1
 			"Modified Clipper"
@@ -1480,8 +1700,8 @@ event "add marauder argosy"
 			"Marauder Argosy (Sniper)"
 		add variant 6
 			"Marauder Argosy (Afterburner)"
-	fleet "Marauder III"
-		add variant 1
+	fleet "Marauder II"
+		add variant 3
 			"Marauder Argosy"
 		add variant 1
 			"Marauder Argosy (Sniper)"
@@ -1501,6 +1721,24 @@ event "add marauder argosy"
 		add variant 1
 			"Marauder Argosy (Bounty Hunter)"
 			"Fury (Missile)"
+
+
+
+mission "Add Marauder Sparrow"
+	landing
+	invisible
+	on offer
+		event "add marauder sparrow"
+		fail
+
+event "add marauder sparrow"
+	fleet "Marauder I"
+		add variant 3
+			"Marauder Sparrow"
+		add variant 1
+			"Marauder Sparrow (Heavy)"
+		add variant 1
+			"Marauder Sparrow (Afterburner)"
 
 
 
@@ -1748,6 +1986,65 @@ event "add core fleet proton upgrades"
 
 
 
+mission "Add Midnight Navy Surplus Ships"
+	landing
+	invisible
+	on offer
+		event "add midnight navy surplus ships"
+		fail
 
+event "add midnight navy surplus ships"
+	shipyard "Navy Advanced"
+		add "Missileboat"
+		add "Patrolboat"
+		add "Outrider (Surplus)"
+	fleet "pirate raid"
+		add variant 1
+			"Missileboat"
+		add variant 1
+			"Patrolboat"
+		add variant 1
+			"Outrider (Pirate)" 3
+	fleet "Bounty Hunters"
+		add variant 1
+			"Patrolboat"
+		add variant 1
+			"Missileboat"
+		add variant 1
+			"Patrolboat"
+			"Berserker (Strike)"
+		add variant 1
+			"Missileboat"
+			"Berserker (Strike)"
+		add variant 1
+			"Patrolboat"
+			"Missileboat"
+			"Headhunter (Particle)"
+	fleet "Hired Guns"
+		add variant 1
+			"Patrolboat" 3
+			"Missileboat" 3
+	fleet "Paradise Merchants"
+		add variant 1
+			"Container Transport (Short Haul)"
+			"Patrolboat" 2
+		add variant 1
+			"Star Queen"
+			"Patrolboat" 2
+
+mission "Remove Midnight Navy Surplus Ships Sales"
+	landing
+	invisible
+	to offer
+		has "event: war begins"
+	on offer
+		event "Remove midnight navy surplus ships sales"
+		fail
+
+event "Remove midnight navy surplus ships sales"
+	shipyard "Navy Advanced"
+		remove "Missileboat"
+		remove "Patrolboat"
+		remove "Outrider (Surplus)"
 
 
