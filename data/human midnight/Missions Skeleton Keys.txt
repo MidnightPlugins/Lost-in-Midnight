@@ -110,7 +110,7 @@ mission "Skeleton Key North 2"
 		set "skeleton key north"
 		payment 1000000
 		log "People" "Diana Howl" `	After reuniting with Diana on a southern pirate world, I transported her to Haven where she was kidnapped. After being rescued, she decided to remain at the military outpost on Farpoint.`
-		log `A pirate captain uttered this phrase with his dying breath: "Three Skeleton Key: Three men died on that rock." What could it mean?`
+		log `Rescued Diana Howl from pirates. While aboard their ship she found some sort of key... I've heard urban legends about three "Skeleton Keys" which unlock pirate treasure. Could this be one of them? Perhaps someday I'll eventually find the treasure it unlocks...`
 		conversation
 			`	On <planet> you find an outstanding bounty of <payment> for the <npc>. After collecting your pay, you find a note from Diana: "Thank you for rescuing me <first>. I've decided to stay on <planet> for a while and see what opportunities and can find." Other than the military, there isn't much on <planet>. But maybe being here will be a good experience for her. As you are about put away the note, you notice an envelope with a short message written on it: "I found something while I was on the <npc>. I hope you have a use for it."`
 			choice
@@ -254,12 +254,14 @@ mission "Skeleton Key South 2"
 			scene "outfit/skeleton key"
 			`The crew aboard the <npc> are dead. Some escape pods are missing, so there may be survivors. But the captain isn't among them. Clutched in his hand with a death grip is some sort of key... You've heard urban legends about three "Skeleton Keys" which unlock pirate treasure. Could this be one of them? You pocket the key.`
 			``
-			`	Visit John on <destination> and let him know the final fate of the <npc>.`
+			`	Visit Joe on <destination> and let him know the final fate of the <npc>.`
 				launch
 	on complete
+		log "Minor People" "Joe and Maria" `	Joe used to be part of the crew aboard a pirate ship named the "Deadly Wager". While they didn't get along with the captain and his officers, Joe admits to having had some friends among the regular crew. Long after you helped Joe and Maria to freedom, the Deadly Wager started a pirate rebellion on Smuggler's Den. While some escaped, most of the crew died along with their captain.`
+		log `After tracking down Joe's former pirate ship, the Deadly Wager, I found some sort of key... I've heard urban legends about three "Skeleton Keys" which unlock pirate treasure. Could this be one of them? Perhaps someday I'll eventually find the treasure it unlocks...`
 		conversation
 			scene "outfit/skeleton key"
-			`You find John and tell him what you found on the <npc>. "Hopefully, our friends are among the ones who got out alive." He looks at the key. "The captain once mentioned that this was the key to something hidden on an abandoned outpost in the Dirt Belt. But two other keys were also needed to unlock it. You keep it, <first>. You're more likely to find them than I am."`
+			`You find Joe and tell him what you found on the <npc>. "Hopefully, our friends are among the ones who got out alive." He looks at the key. "The captain once mentioned that this was the key to something hidden on an abandoned outpost in the Dirt Belt. But two other keys were also needed to unlock it. You keep it, <first>. You're more likely to find them than I am."`
 
 mission "Skeleton Key Core 1"
 	minor
@@ -367,12 +369,14 @@ mission "Skeleton Key Core 2"
 				accept
 	on complete
 		payment 160000
+		log "Minor People" "Pocahontas (Pookie)" `	Pookie was kidnapped while being looked after by her "aunt". The pirates who took her had sold the dog to a kennel on Stormhold. Found Pookie wandering in the snow and brought her back to her "aunt" on Shroud.`
+		log `Rescued Pookie on the dog Stormhold after she was kidnapped by pirates. When I found her she had retrieved a severed arm that had been buried in the snow. In the arm's clenched fist was some sort of key... I've heard urban legends about three "Skeleton Keys" which unlock pirate treasure. Could this be one of them? Perhaps someday I'll eventually find the treasure it unlocks...`
 		dialog `The journey with Pookie was just as it was the last time you took her aboard your ship. Pookie's aunt pays you <payment> and thanks you for rescuing the dog. "I know she's a pain to handle, but her owner would be really sad if we lost her."`
 
 mission "Skeleton Keys, Three 1"
 	landing
 	name "Three Skeleton Keys"
-	description "Visit John on <destination> and ask about the abandoned outpost his captain referred to."
+	description "Visit Joe on <destination> and ask about the abandoned outpost his captain referred to."
 	source
 		government "Republic" "Syndicate" "Free Worlds" "Pirate" "Independent" "Neutral"
 		not planet "Millrace"
@@ -389,7 +393,7 @@ mission "Skeleton Keys, Three 1"
 		require "Skeleton Key" 3
 		conversation
 			scene "outfit/map"
-			`You have three Skeleton Keys, but are uncertain where to find the treasure they are meant to unseal. It's time you to consulted with a former pirate. John on <destination> may have more information that could help you.`
+			`You have three Skeleton Keys, but are uncertain where to find the treasure they are meant to unseal. It's time you to consulted with a former pirate. Joe on <destination> may have more information that could help you.`
 				accept
 	on enter "Fomalhaut"
 		event "midnight: reveal cadrelock rock in eber"
@@ -417,9 +421,9 @@ mission "Skeleton Keys, Three 2"
 		require "Skeleton Key" 3
 		conversation
 			scene "outfit/skeleton key"
-			`You send a message to John informing him that you'd like his insight on where the abandoned outpost could be located in the Dirt Belt. He agrees to meet at a spaceport cafe. Perhaps he still hasn't told Maria about his request to look into the Deadly Wager.`
+			`You send a message to Joe informing him that you'd like his insight on where the abandoned outpost could be located in the Dirt Belt. He agrees to meet at a spaceport cafe. Perhaps he still hasn't told Maria about his request to look into the Deadly Wager.`
 			scene "planet/ice2"
-			`	After you settle in at a corner booth, John gets down to business. "Hope, in the Wei system is one possibility. But storing things there can be risky due to scavengers. My old captain tried to stash some gold there once. But when he went back later to retrieve some, it had already been pilfered.`
+			`	After you settle in at a corner booth, Joe gets down to business. "Hope, in the Wei system is one possibility. But storing things there can be risky due to scavengers. My old captain tried to stash some gold there once. But when he went back later to retrieve some, it had already been pilfered.`
 			choice
 				`	"What else?"`
 			scene "planet/tethys"
@@ -427,17 +431,20 @@ mission "Skeleton Keys, Three 2"
 			choice
 				`	"Two abandoned stations?"`
 			scene "planet/nasa derelict station1"
-			`	John nods. "Eureka Station in the Ipsing system gets a lot of smugglers too. The Deadly Wager would sometimes go there to provide backup if a client's trade went bad or to pick off an easy mark after they had finished their exchange."`
+			`	Joe nods. "Eureka Station in the Ipsing system gets a lot of smugglers too. The Deadly Wager would sometimes go there to provide backup if a client's trade went bad or to pick off an easy mark after they had finished their exchange."`
 			choice
 				`	"And the other one?"`
 			scene "planet/asteroid base2"
 			`	"That would be Cadrelock Rock, a fuel waystation at Eber. Some pirates who don't have enough fuel tanks use it to get through the Dirt Tunnel." He sees your reaction to the term and clarifies, "That's pirate slang for the string of uninhabited systems stretching east of Wei. There's nothing special about it other than being an out of the way place to refuel. It's basically just a small docking bay with some fuel tanks and a ramscoop bolted to an asteroid. The Deadly Wager used it plenty of times."`
-			`	Before John can say more, he receives a message. "Sorry <first>, I have to go. Maria needs me to pick up some things from the market for tonight's dinner. Good luck with your search." As he gets up he adds, "You've done a lot for us. I hope this information was able to help you."`
+			`	Before Joe can say more, he receives a message. "Sorry <first>, I have to go. Maria needs me to pick up some things from the market for tonight's dinner. Good luck with your search." As he gets up he adds, "You've done a lot for us. I hope this information was able to help you."`
 			choice
-				`	"Thanks for your help John."`
+				`	"Thanks for your help Joe."`
 			scene "outfit/map"
-			`	Hope, Watcher, Eureka Station, and Cadrelock Rock. John has given you four leads. One of them could contain the treasure locked away by the three Skeleton Keys...`
+			`	Hope, Watcher, Eureka Station, and Cadrelock Rock. Joe has given you four leads. One of them could contain the treasure locked away by the three Skeleton Keys...`
 				accept
+	on accept
+		log `Joe suggested I search Hope, Watcher, Eureka Station, and Cadrelock Rock for the treasure that can be unlocked by the three Skeleton Keys.`
+
 	stopover Hope
 	stopover Watcher
 	stopover "Eureka Station"
@@ -548,7 +555,7 @@ mission "Skeleton Keys, Three 3 (Cadrelock Rock)"
 			scene "outfit/skeleton key"
 			branch "revisit"
 				has "Skeleton Keys, Three 4: declined"
-			`Other than the fuel tanks and ramscoop, there's a small docking bay. Searching the area, you find three places to plug in the Skeleton Keys.`
+			`As Joe described, Cadrelock Rock is a small docking bay attached to some fuel tanks and a ramscoop. But he didn't specify how huge these fuel tanks are. Most of it all is buried beneath the surface of the asteroid, making the waystation inconspicuous to anyone looking at it from a distance. Searching the area, you find three places to plug in the Skeleton Keys.`
 			choice
 				`	(Plug in one of the keys.)`
 				`	(Maybe another time...)`
@@ -618,9 +625,22 @@ mission "Skeleton Keys, Three 4"
 		dialog `You no longer have enough crew for the Starcadia! You'll have to try recruiting more.`
 	on complete
 		give ship "Starcadia (Prototype)" "Starcadia"
+		log `Used the three "Skeleton Keys" to recover the Deep Security prototype ship "Starcadia" from a hidden vault on "Cadrelock Rock". The ship was stolen near the end of the Alpha War. Who stole it and hid it there is a mystery.`
 		conversation
 			scene "thumbnail/starcadia-thumb"
 			`The new crew members board the Starcadia and prepare to launch. The camoflaged entrance to the hangar bay slides open and the latest addition to your fleet is ready to depart.`
+
+mission "Skeleton Key Observer"
+	landing
+	invisible
+	deadline 7
+	source "Cadrelock Rock"
+	to offer
+		has "Skeleton Keys, Three 4: done"
+	npc save
+		government "Independent (Killable)"
+		personality entering mute coward
+		ship "Marauder Raven (Engines)" "Bone Scavenger"
 
 mission "Smuggler's Den Independent Again"
 	landing
@@ -740,7 +760,7 @@ mission "Skeleton Keys Starcadia Deep Epilogue"
 				`	"Alright, you can study the <ship>."`
 				`	(Run.)`
 			scene "thumbnail/starcadia-thumb"
-			`	"Thank you for your cooperation Captain <last>." The officers call in a tech team and they spend a few hours scanning and exploring the <ship>. Satisfied with their data, they release you.
+			`	"Thank you for your cooperation Captain <last>." The officers call in a tech team and they spend a few hours scanning and exploring the <ship>. Satisfied with their data, they release you.`
 				decline
 			label run
 			scene "thumbnail/raven"

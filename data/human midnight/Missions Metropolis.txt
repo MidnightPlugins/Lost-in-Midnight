@@ -896,7 +896,8 @@ mission "Metropolis 2"
 				launch
 	on complete
 		give ship "Metropolis" "Exodus"
-		log "People" "Joseph Welder" `Joseph passed away the day after the restored Exodus' test flight. One of his ancestors was on the design team for the Exodus. Seeing that ship fly again was a childhood dream of Joseph's. His dream will live on as the Exodus flies again.`
+		log "People" "Joseph Welder" `Joseph passed away the day after the restored Exodus' test flight. One of his ancestors was on the design team for the Exodus. Seeing that ship fly again was a childhood dream of Joseph's. His dream will live on as the Exodus returns to the Endless Sky.`
+		log `The Exodus had an exciting test flight. Unfortunately, damage to the interlocking mechanisms from an attack by Marauders prevents the Exodus from splitting into its component sub-ships.`
 		conversation
 			`After an exciting test flight, the Exodus has finally arrived to the celebration reception on Earth.`
 			`	"Alright everyone!" exclaims Joseph. "Begin the separation sequence and land!"`
