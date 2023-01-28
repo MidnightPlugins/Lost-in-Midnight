@@ -424,7 +424,7 @@ outfit "Thermo Detonator"
 	"turret mounts" -1
 	"integrated systems" 1
 	"reinstall" -1
-	"self destruct" .8
+	"self destruct" .5
 	"unplunderable" 1
 	weapon
 		icon "icon/thermo detonator"
@@ -443,7 +443,7 @@ outfit "Thermo Detonator"
 		"shield damage" 9000
 		"hull damage" 7000
 		"hit force" 40
-		"missile strength" 200
+		"missile strength" 2000
 	description "WARNING: This device is a one-shot weapon. It will destroy your ship when detonated. A security override prevents activation unless hostiles are nearby."
 	description "	It should be noted that any evidence suggesting this outfit was installed on your ship at the time of its destruction voids any insurance policy that would have paid compensation otherwise."
 	description "	This outfit is integrated into your ship's hull and cannot be safely removed without damaging it."

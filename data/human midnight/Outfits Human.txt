@@ -621,6 +621,13 @@ outfit "Microwave Cannon"
 
 
 
+outfit "Skeleton Key"
+	category "Unique"
+	thumbnail "outfit/skeleton key"
+	description `Urban legends include tales of three "Skeleton Keys" that unlock a pirate treasure. Perhaps this is one of those legendary keys.`
+
+
+
 outfit "T.H.O.R."
 	category "Unique"
 	thumbnail "outfit/thor"

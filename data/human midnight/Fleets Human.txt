@@ -634,99 +634,47 @@ fleet "S. Advanced Independent"
 	personality plunders
 		confusion 20
 	variant 1
-		"Pelican"
-	variant 4
-		"Shadow Falcon"
-	variant 4
 		"Shadow Osprey"
-	variant 4
+	variant 2
 		"Shadow Raven"
 	variant 4
 		"Shadow Hawk"
 	variant 1
-		"Palavret"
-		"'olofez" 2
-	variant 4
-		"Falcon (Korath)"
-	variant 4
-		"Protector (Korath)"
-	variant 4
-		"Vanguard (Korath)"
-	variant 4
-		"Bastion (Korath)"
-	variant 4
-		"Bulk Freighter (Korath)"
-	variant 4
-		"Roost (Korath)"
-		"'olofez" 4
-	variant 4
-		"Aerie (Korath)"
-		"'olofez" 2
-	variant 4
-		"Nest (Korath)"
-		"'olofez" 2
-	variant 4
 		"Splinter (Korath)"
-	variant 4
+	variant 1
 		"Modified Argosy (Korath)"
-	variant 4
+	variant 2
 		"Quicksilver (Korath)"
+	variant 2
+		"Headhunter (Korath)"
+	variant 4
+		"Wasp (Korath)"
+	variant 4
+		"Fury (Korath)"
+	variant 4
+		"Hawk (Korath)"
+	variant 4
+		"Sparrow (Korath)"
 	variant 1
-		"Shield Beetle"
-	variant 1
-		"Geocoris"
-	variant 2
-		"Bactrian (Hai Engines)"
-		"Dagger" 3
-	variant 2
-		"Bactrian (Hai Weapons)"
-		"Dagger" 3
-	variant 2
 		"Firebird (Hai Shields)"
-	variant 2
+	variant 1
 		"Firebird (Hai Weapons)"
+	variant 2
+		"Headhunter (Hai)"
+	variant 1
+		"Hauler II (Hai)"
+	variant 2
+		"Hauler (Hai)"
 	variant 4
 		"Freighter (Hai)"
-	variant 2
-		"Leviathan (Hai Engines)"
-	variant 2
-		"Leviathan (Hai Weapons)"
-	variant 4
-		"Headhunter (Hai)"
-	variant 4
-		"Behemoth (Hai)"
-	variant 4
-		"Container Transport (Hai)"
-	variant 4
-		"Hauler III (Hai)"
-	variant 4
-		"Hauler II (Hai)"
-	variant 4
-		"Hauler (Hai)"
-	variant 2
-		"Mule (Hai Weapons)"
-	variant 2
-		"Mule (Hai Engines)"
-	variant 4
+	variant 1
 		"Corvette (Hai)"
 	variant 4
 		"Bounder (Hai)"
 	variant 4
-		"Star Queen (Hai)"
-	variant 4
-		"Flivver (Hai)"
-	variant 4
 		"Arrow (Hai)"
 	variant 1
 		"Osprey (Alien Weapons)"
-	variant 1
-		"Marauder Firebird (Hai)"
-	variant 1
-		"Marauder Quicksilver (Hai)"
-	variant 1
-		"Marauder Splinter (Hai)"
-	variant 1
-		"Marauder Bounder (Hai)"
 
 
 
@@ -738,171 +686,260 @@ fleet "L. Advanced Independent"
 		confusion 20
 	variant 1
 		"Pelican"
+	variant 1
 		"Shadow Falcon"
 		"Shadow Osprey"
+	variant 1
+		"Shadow Falcon"
+		"Shadow Raven" 2
+	variant 1
+		"Shadow Falcon"
+		"Shadow Hawk" 3
+	variant 1
+		"Shadow Falcon"
+	variant 2
+		"Shadow Osprey"
 		"Shadow Raven"
-		"Shadow Hawk"
+	variant 2
+		"Shadow Osprey"
+		"Shadow Hawk" 2
+	variant 4
+		"Shadow Raven"
+		"Shadow Hawk" 3
 	variant 1
 		"Palavret"
 		"'olofez" 2
-		"Falcon (Korath)"
+	variant 1
 		"Protector (Korath)"
-		"Vanguard (Korath)"
-		"Bastion (Korath)"
 		"Bulk Freighter (Korath)"
 	variant 1
-		"Palavret"
-		"'olofez" 10
-		"Roost (Korath)"
-		"Aerie (Korath)"
-		"Nest (Korath)"
+		"Protector (Korath)"
 		"Splinter (Korath)"
-		"Modified Argosy (Korath)"
-		"Quicksilver (Korath)"
 	variant 1
-		"Shield Beetle"
+		"Protector (Korath)"
+		"Quicksilver (Korath)" 2
+	variant 1
+		"Protector (Korath)"
+		"Wasp (Korath)" 3
+	variant 1
+		"Protector (Korath)"
+	variant 1
+		"Vanguard (Korath)"
+		"Bulk Freighter (Korath)"
+	variant 1
+		"Vanguard (Korath)"
+		"Splinter (Korath)"
+	variant 1
+		"Vanguard (Korath)"
+		"Quicksilver (Korath)" 2
+	variant 1
+		"Vanguard (Korath)"
+		"Wasp (Korath)" 3
+	variant 1
+		"Falcon (Korath)"
+		"Headhunter (Korath)" 2
+	variant 1
+		"Falcon (Korath)"
+		"Fury (Korath)" 3
+	variant 1
+		"Falcon (Korath)"
+		"Hawk (Korath)" 3
+	variant 1
+		"Falcon (Korath)"
+		"Sparrow (Korath)" 3
+	variant 1
+		"Bastion (Korath)"
+		"Hawk (Korath)" 2
+	variant 1
+		"Roost (Korath)"
+		"'olofez" 4
+		"Hawk (Korath)" 2
+	variant 1
+		"Aerie (Korath)"
+		"'olofez" 2
+		"Fury (Korath)" 2
+	variant 1
+		"Nest (Korath)"
+		"'olofez" 2
+		"Hawk (Korath)" 2
+	variant 2
+		"Splinter (Korath)"
+		"Quicksilver (Korath)"
+	variant 2
+		"Splinter (Korath)"
+		"Headhunter (Korath)"
+	variant 2
+		"Splinter (Korath)"
+		"Wasp (Korath)" 2
+	variant 3
+		"Quicksilver (Korath)"
+		"Wasp (Korath)" 3
+	variant 3
+		"Quicksilver (Korath)" 3
+	variant 3
+		"Headhunter (Korath)"
+		"Hawk (Korath)" 3
+	variant 3
+		"Headhunter (Korath)" 3
+	variant 4
+		"Modified Argosy (Korath)"
+		"Sparrow (Korath)" 2
+	variant 4
+		"Modified Argosy (Korath)"
+		"Hawk (Korath)" 2
+	variant 4
+		"Modified Argosy (Korath)"
+		"Fury (Korath)" 2
+	variant 1
 		"Geocoris"
-		"Lightning Bug"
-		"Water Bug"
-		"Centipede"
-		"Aphid (Armed)"
-		"Grasshopper"
-	variant 10
+	variant 1
 		"Bactrian (Hai Weapons)"
+		"Dagger" 3
+	variant 1
+		"Bactrian (Hai Weapons)"
+		"Dagger" 3
 		"Firebird (Hai Shields)"
-		"Freighter (Hai)"
+	variant 1
+		"Bactrian (Hai Weapons)"
 		"Dagger" 3
-	variant 10
-		"Bactrian (Hai Engines)"
 		"Firebird (Hai Weapons)"
-		"Freighter (Hai)"
+	variant 1
+		"Bactrian (Hai Weapons)"
 		"Dagger" 3
-	variant 10
+		"Osprey (Alien Weapons)"
+	variant 1
+		"Bactrian (Hai Weapons)"
+		"Dagger" 3
+		"Corvette (Hai)"
+	variant 1
+		"Bactrian (Hai Weapons)"
+		"Dagger" 3
+		"Headhunter (Hai)" 2
+	variant 1
+		"Bactrian (Hai Weapons)"
+		"Dagger" 3
+		"Bounder (Hai)" 3
+	variant 1
+		"Bactrian (Hai Weapons)"
+		"Dagger" 3
+		"Arrow (Hai)" 3
+	variant 2
+		"Leviathan (Hai Weapons)"
+	variant 1
+		"Leviathan (Hai Weapons)"
+		"Container Transport (Hai)"
+	variant 1
+		"Leviathan (Hai Weapons)"
+		"Hauler III (Hai)"
+	variant 1
+		"Leviathan (Hai Weapons)"
+		"Star Queen (Hai)"
+	variant 1
 		"Leviathan (Hai Weapons)"
 		"Firebird (Hai Shields)"
-		"Freighter (Hai)"
-		"Headhunter (Hai)" 2
-	variant 10
-		"Leviathan (Hai Engines)"
+	variant 1
+		"Leviathan (Hai Weapons)"
 		"Firebird (Hai Weapons)"
-		"Freighter (Hai)"
+	variant 1
+		"Leviathan (Hai Weapons)"
+		"Osprey (Alien Weapons)"
+	variant 1
+		"Leviathan (Hai Weapons)"
+		"Corvette (Hai)"
+	variant 1
+		"Leviathan (Hai Weapons)"
+		"Hauler II (Hai)"
+	variant 1
+		"Leviathan (Hai Weapons)"
 		"Headhunter (Hai)" 2
-	variant 20
+	variant 1
+		"Leviathan (Hai Weapons)"
+		"Hauler (Hai)" 2
+	variant 1
+		"Leviathan (Hai Weapons)"
+		"Freighter (Hai)" 2
+	variant 1
+		"Leviathan (Hai Weapons)"
+		"Bounder (Hai)" 3
+	variant 1
+		"Leviathan (Hai Weapons)"
+		"Arrow (Hai)" 3
+	variant 1
+		"Behemoth (Hai)"
+	variant 1
+		"Behemoth (Hai)"
+		"Firebird (Hai Shields)"
+	variant 1
 		"Behemoth (Hai)"
 		"Firebird (Hai Weapons)"
-		"Headhunter (Hai)" 4
-	variant 20
-		"Bulk Freighter (Hai)"
-		"Firebird (Hai Weapons)"
-		"Headhunter (Hai)" 4
-	variant 20
-		"Container Transport (Hai)"
-		"Firebird (Hai Weapons)"
-		"Headhunter (Hai)" 4
-	variant 20
-		"Hauler III (Hai)"
-		"Hauler II (Hai)"
-		"Hauler (Hai)"
-		"Firebird (Hai Shields)"
-		"Firebird (Hai Weapons)"
-		"Headhunter (Hai)" 2
-	variant 10
-		"Mule (Hai Weapons)"
-		"Firebird (Hai Shields)"
-		"Freighter (Hai)"
-		"Headhunter (Hai)" 2
-		"Dagger"
-	variant 10
-		"Mule (Hai Engines)"
-		"Firebird (Hai Weapons)"
-		"Freighter (Hai)"
-		"Headhunter (Hai)" 2
-		"Dagger"
-	variant 20
+	variant 1
+		"Behemoth (Hai)"
+		"Osprey (Alien Weapons)"
+	variant 1
+		"Behemoth (Hai)"
 		"Corvette (Hai)"
-		"Freighter (Hai)"
-		"Bounder (Hai)"
-		"Flivver (Hai)" 2
-		"Arrow (Hai)" 2
-	variant 10
-		"Star Queen (Hai)"
+	variant 1
+		"Behemoth (Hai)"
+		"Headhunter (Hai)" 2
+	variant 1
+		"Behemoth (Hai)"
+		"Bounder (Hai)" 3
+	variant 1
+		"Behemoth (Hai)"
+		"Arrow (Hai)" 3
+	variant 1
+		"Mule (Hai Weapons)"
+	variant 1
+		"Firebird (Hai Shields)"
+	variant 1
+		"Firebird (Hai Weapons)"
+	variant 1
+		"Osprey (Alien Weapons)"
+	variant 1
+		"Corvette (Hai)"
+	variant 1
+		"Headhunter (Hai)" 2
+	variant 1
+		"Bounder (Hai)" 3
+	variant 1
+		"Arrow (Hai)" 3
+	variant 1
+		"Firebird (Hai Weapons)"
+		"Osprey (Alien Weapons)"
+	variant 1
+		"Firebird (Hai Weapons)"
+		"Corvette (Hai)"
+	variant 1
+		"Firebird (Hai Weapons)"
+		"Headhunter (Hai)"
+	variant 1
 		"Firebird (Hai Weapons)"
 		"Bounder (Hai)" 2
-		"Flivver (Hai)"
-		"Arrow (Hai)"
-	variant 10
-		"Star Queen (Hai)"
-		"Firebird (Hai Shields)"
+	variant 1
+		"Firebird (Hai Weapons)"
+		"Arrow (Hai)" 2
+	variant 1
+		"Osprey (Alien Weapons)"
+		"Corvette (Hai)"
+	variant 1
+		"Osprey (Alien Weapons)"
+		"Headhunter (Hai)"
+	variant 1
+		"Osprey (Alien Weapons)"
 		"Bounder (Hai)" 2
-		"Flivver (Hai)"
-		"Arrow (Hai)"
-	variant 20
-		"Osprey (Alien Weapons)" 3
-	variant 20
-		"Marauder Firebird (Hai)"
-		"Marauder Quicksilver (Hai)"
-		"Marauder Splinter (Hai)"
-		"Marauder Bounder (Hai)"
-	variant 25
-		"Falcon (Korath)"
-		"Nest (Korath)"
-		"Splinter (Korath)"
-		"Quicksilver (Korath)"
-		"'olofez" 2
-	variant 25
-		"Falcon (Korath)"
-		"Nest (Korath)"
-		"Modified Argosy (Korath)"
-		"Quicksilver (Korath)"
-		"'olofez" 2
-	variant 25
-		"Protector (Korath)"
-		"Nest (Korath)"
-		"Splinter (Korath)"
-		"Quicksilver (Korath)" 2
-		"'olofez" 2
-	variant 25
-		"Protector (Korath)"
-		"Nest (Korath)"
-		"Modified Argosy (Korath)"
-		"Quicksilver (Korath)" 2
-		"'olofez" 2
-	variant 25
-		"Vanguard (Korath)"
-		"Aerie (Korath)"
-		"Splinter (Korath)"
-		"Quicksilver (Korath)" 3
-		"'olofez" 2
-	variant 25
-		"Vanguard (Korath)"
-		"Aerie (Korath)"
-		"Modified Argosy (Korath)"
-		"Quicksilver (Korath)" 3
-		"'olofez" 2
-	variant 25
-		"Bastion (Korath)"
-		"Roost (Korath)"
-		"Splinter (Korath)"
-		"Quicksilver (Korath)" 4
-		"'olofez" 4
-	variant 25
-		"Bastion (Korath)"
-		"Roost (Korath)"
-		"Modified Argosy (Korath)"
-		"Quicksilver (Korath)" 4
-		"'olofez" 4
-	variant 25
-		"Bulk Freighter (Korath)"
-		"Aerie (Korath)"
-		"Roost (Korath)"
-		"Quicksilver (Korath)" 4
-		"'olofez" 6
-	variant 25
-		"Bulk Freighter (Korath)"
-		"Nest (Korath)"
-		"Roost (Korath)"
-		"Quicksilver (Korath)" 4
-		"'olofez" 6
+	variant 1
+		"Osprey (Alien Weapons)"
+		"Arrow (Hai)" 2
+	variant 1
+		"Corvette (Hai)"
+		"Headhunter (Hai)"
+	variant 1
+		"Corvette (Hai)"
+		"Bounder (Hai)" 2
+	variant 1
+		"Corvette (Hai)"
+		"Arrow (Hai)" 2
+
 
 
 
@@ -979,99 +1016,47 @@ fleet "S. Advanced Independent (Killable)"
 	personality plunders
 		confusion 20
 	variant 1
-		"Pelican"
-	variant 4
-		"Shadow Falcon"
-	variant 4
 		"Shadow Osprey"
-	variant 4
+	variant 2
 		"Shadow Raven"
 	variant 4
 		"Shadow Hawk"
 	variant 1
-		"Palavret"
-		"'olofez" 2
-	variant 4
-		"Falcon (Korath)"
-	variant 4
-		"Protector (Korath)"
-	variant 4
-		"Vanguard (Korath)"
-	variant 4
-		"Bastion (Korath)"
-	variant 4
-		"Bulk Freighter (Korath)"
-	variant 4
-		"Roost (Korath)"
-		"'olofez" 4
-	variant 4
-		"Aerie (Korath)"
-		"'olofez" 2
-	variant 4
-		"Nest (Korath)"
-		"'olofez" 2
-	variant 4
 		"Splinter (Korath)"
-	variant 4
+	variant 1
 		"Modified Argosy (Korath)"
-	variant 4
+	variant 2
 		"Quicksilver (Korath)"
+	variant 2
+		"Headhunter (Korath)"
+	variant 4
+		"Wasp (Korath)"
+	variant 4
+		"Fury (Korath)"
+	variant 4
+		"Hawk (Korath)"
+	variant 4
+		"Sparrow (Korath)"
 	variant 1
-		"Shield Beetle"
-	variant 1
-		"Geocoris"
-	variant 2
-		"Bactrian (Hai Engines)"
-		"Dagger" 3
-	variant 2
-		"Bactrian (Hai Weapons)"
-		"Dagger" 3
-	variant 2
 		"Firebird (Hai Shields)"
-	variant 2
+	variant 1
 		"Firebird (Hai Weapons)"
+	variant 2
+		"Headhunter (Hai)"
+	variant 1
+		"Hauler II (Hai)"
+	variant 2
+		"Hauler (Hai)"
 	variant 4
 		"Freighter (Hai)"
-	variant 2
-		"Leviathan (Hai Engines)"
-	variant 2
-		"Leviathan (Hai Weapons)"
-	variant 4
-		"Headhunter (Hai)"
-	variant 4
-		"Behemoth (Hai)"
-	variant 4
-		"Container Transport (Hai)"
-	variant 4
-		"Hauler III (Hai)"
-	variant 4
-		"Hauler II (Hai)"
-	variant 4
-		"Hauler (Hai)"
-	variant 2
-		"Mule (Hai Weapons)"
-	variant 2
-		"Mule (Hai Engines)"
-	variant 4
+	variant 1
 		"Corvette (Hai)"
 	variant 4
 		"Bounder (Hai)"
 	variant 4
-		"Star Queen (Hai)"
-	variant 4
-		"Flivver (Hai)"
-	variant 4
 		"Arrow (Hai)"
 	variant 1
 		"Osprey (Alien Weapons)"
-	variant 1
-		"Marauder Firebird (Hai)"
-	variant 1
-		"Marauder Quicksilver (Hai)"
-	variant 1
-		"Marauder Splinter (Hai)"
-	variant 1
-		"Marauder Bounder (Hai)"
 
 
 
@@ -1083,171 +1068,259 @@ fleet "L. Advanced Independent (Killable)"
 		confusion 20
 	variant 1
 		"Pelican"
+	variant 1
 		"Shadow Falcon"
 		"Shadow Osprey"
+	variant 1
+		"Shadow Falcon"
+		"Shadow Raven" 2
+	variant 1
+		"Shadow Falcon"
+		"Shadow Hawk" 3
+	variant 1
+		"Shadow Falcon"
+	variant 2
+		"Shadow Osprey"
 		"Shadow Raven"
-		"Shadow Hawk"
+	variant 2
+		"Shadow Osprey"
+		"Shadow Hawk" 2
+	variant 4
+		"Shadow Raven"
+		"Shadow Hawk" 3
 	variant 1
 		"Palavret"
 		"'olofez" 2
-		"Falcon (Korath)"
+	variant 1
 		"Protector (Korath)"
-		"Vanguard (Korath)"
-		"Bastion (Korath)"
 		"Bulk Freighter (Korath)"
 	variant 1
-		"Palavret"
-		"'olofez" 10
-		"Roost (Korath)"
-		"Aerie (Korath)"
-		"Nest (Korath)"
+		"Protector (Korath)"
 		"Splinter (Korath)"
-		"Modified Argosy (Korath)"
-		"Quicksilver (Korath)" 1
 	variant 1
-		"Shield Beetle"
+		"Protector (Korath)"
+		"Quicksilver (Korath)" 2
+	variant 1
+		"Protector (Korath)"
+		"Wasp (Korath)" 3
+	variant 1
+		"Protector (Korath)"
+	variant 1
+		"Vanguard (Korath)"
+		"Bulk Freighter (Korath)"
+	variant 1
+		"Vanguard (Korath)"
+		"Splinter (Korath)"
+	variant 1
+		"Vanguard (Korath)"
+		"Quicksilver (Korath)" 2
+	variant 1
+		"Vanguard (Korath)"
+		"Wasp (Korath)" 3
+	variant 1
+		"Falcon (Korath)"
+		"Headhunter (Korath)" 2
+	variant 1
+		"Falcon (Korath)"
+		"Fury (Korath)" 3
+	variant 1
+		"Falcon (Korath)"
+		"Hawk (Korath)" 3
+	variant 1
+		"Falcon (Korath)"
+		"Sparrow (Korath)" 3
+	variant 1
+		"Bastion (Korath)"
+		"Hawk (Korath)" 2
+	variant 1
+		"Roost (Korath)"
+		"'olofez" 4
+		"Hawk (Korath)" 2
+	variant 1
+		"Aerie (Korath)"
+		"'olofez" 2
+		"Fury (Korath)" 2
+	variant 1
+		"Nest (Korath)"
+		"'olofez" 2
+		"Hawk (Korath)" 2
+	variant 2
+		"Splinter (Korath)"
+		"Quicksilver (Korath)"
+	variant 2
+		"Splinter (Korath)"
+		"Headhunter (Korath)"
+	variant 2
+		"Splinter (Korath)"
+		"Wasp (Korath)" 2
+	variant 3
+		"Quicksilver (Korath)"
+		"Wasp (Korath)" 3
+	variant 3
+		"Quicksilver (Korath)" 3
+	variant 3
+		"Headhunter (Korath)"
+		"Hawk (Korath)" 3
+	variant 3
+		"Headhunter (Korath)" 3
+	variant 4
+		"Modified Argosy (Korath)"
+		"Sparrow (Korath)" 2
+	variant 4
+		"Modified Argosy (Korath)"
+		"Hawk (Korath)" 2
+	variant 4
+		"Modified Argosy (Korath)"
+		"Fury (Korath)" 2
+	variant 1
 		"Geocoris"
-		"Lightning Bug"
-		"Water Bug"
-		"Centipede"
-		"Aphid (Armed)"
-		"Grasshopper"
-	variant 10
+	variant 1
 		"Bactrian (Hai Weapons)"
+		"Dagger" 3
+	variant 1
+		"Bactrian (Hai Weapons)"
+		"Dagger" 3
 		"Firebird (Hai Shields)"
-		"Freighter (Hai)"
+	variant 1
+		"Bactrian (Hai Weapons)"
 		"Dagger" 3
-	variant 10
-		"Bactrian (Hai Engines)"
 		"Firebird (Hai Weapons)"
-		"Freighter (Hai)"
+	variant 1
+		"Bactrian (Hai Weapons)"
 		"Dagger" 3
-	variant 10
+		"Osprey (Alien Weapons)"
+	variant 1
+		"Bactrian (Hai Weapons)"
+		"Dagger" 3
+		"Corvette (Hai)"
+	variant 1
+		"Bactrian (Hai Weapons)"
+		"Dagger" 3
+		"Headhunter (Hai)" 2
+	variant 1
+		"Bactrian (Hai Weapons)"
+		"Dagger" 3
+		"Bounder (Hai)" 3
+	variant 1
+		"Bactrian (Hai Weapons)"
+		"Dagger" 3
+		"Arrow (Hai)" 3
+	variant 2
+		"Leviathan (Hai Weapons)"
+	variant 1
+		"Leviathan (Hai Weapons)"
+		"Container Transport (Hai)"
+	variant 1
+		"Leviathan (Hai Weapons)"
+		"Hauler III (Hai)"
+	variant 1
+		"Leviathan (Hai Weapons)"
+		"Star Queen (Hai)"
+	variant 1
 		"Leviathan (Hai Weapons)"
 		"Firebird (Hai Shields)"
-		"Freighter (Hai)"
-		"Headhunter (Hai)" 2
-	variant 10
-		"Leviathan (Hai Engines)"
+	variant 1
+		"Leviathan (Hai Weapons)"
 		"Firebird (Hai Weapons)"
-		"Freighter (Hai)"
+	variant 1
+		"Leviathan (Hai Weapons)"
+		"Osprey (Alien Weapons)"
+	variant 1
+		"Leviathan (Hai Weapons)"
+		"Corvette (Hai)"
+	variant 1
+		"Leviathan (Hai Weapons)"
+		"Hauler II (Hai)"
+	variant 1
+		"Leviathan (Hai Weapons)"
 		"Headhunter (Hai)" 2
-	variant 20
+	variant 1
+		"Leviathan (Hai Weapons)"
+		"Hauler (Hai)" 2
+	variant 1
+		"Leviathan (Hai Weapons)"
+		"Freighter (Hai)" 2
+	variant 1
+		"Leviathan (Hai Weapons)"
+		"Bounder (Hai)" 3
+	variant 1
+		"Leviathan (Hai Weapons)"
+		"Arrow (Hai)" 3
+	variant 1
+		"Behemoth (Hai)"
+	variant 1
+		"Behemoth (Hai)"
+		"Firebird (Hai Shields)"
+	variant 1
 		"Behemoth (Hai)"
 		"Firebird (Hai Weapons)"
-		"Headhunter (Hai)" 4
-	variant 20
-		"Bulk Freighter (Hai)"
-		"Firebird (Hai Weapons)"
-		"Headhunter (Hai)" 4
-	variant 20
-		"Container Transport (Hai)"
-		"Firebird (Hai Weapons)"
-		"Headhunter (Hai)" 4
-	variant 20
-		"Hauler III (Hai)"
-		"Hauler II (Hai)"
-		"Hauler (Hai)"
-		"Firebird (Hai Shields)"
-		"Firebird (Hai Weapons)"
-		"Headhunter (Hai)" 2
-	variant 10
-		"Mule (Hai Weapons)"
-		"Firebird (Hai Shields)"
-		"Freighter (Hai)"
-		"Headhunter (Hai)" 2
-		"Dagger"
-	variant 10
-		"Mule (Hai Engines)"
-		"Firebird (Hai Weapons)"
-		"Freighter (Hai)"
-		"Headhunter (Hai)" 2
-		"Dagger"
-	variant 20
+	variant 1
+		"Behemoth (Hai)"
+		"Osprey (Alien Weapons)"
+	variant 1
+		"Behemoth (Hai)"
 		"Corvette (Hai)"
-		"Freighter (Hai)"
-		"Bounder (Hai)"
-		"Flivver (Hai)" 2
-		"Arrow (Hai)" 2
-	variant 10
-		"Star Queen (Hai)"
+	variant 1
+		"Behemoth (Hai)"
+		"Headhunter (Hai)" 2
+	variant 1
+		"Behemoth (Hai)"
+		"Bounder (Hai)" 3
+	variant 1
+		"Behemoth (Hai)"
+		"Arrow (Hai)" 3
+	variant 1
+		"Mule (Hai Weapons)"
+	variant 1
+		"Firebird (Hai Shields)"
+	variant 1
+		"Firebird (Hai Weapons)"
+	variant 1
+		"Osprey (Alien Weapons)"
+	variant 1
+		"Corvette (Hai)"
+	variant 1
+		"Headhunter (Hai)" 2
+	variant 1
+		"Bounder (Hai)" 3
+	variant 1
+		"Arrow (Hai)" 3
+	variant 1
+		"Firebird (Hai Weapons)"
+		"Osprey (Alien Weapons)"
+	variant 1
+		"Firebird (Hai Weapons)"
+		"Corvette (Hai)"
+	variant 1
+		"Firebird (Hai Weapons)"
+		"Headhunter (Hai)"
+	variant 1
 		"Firebird (Hai Weapons)"
 		"Bounder (Hai)" 2
-		"Flivver (Hai)"
-		"Arrow (Hai)"
-	variant 10
-		"Star Queen (Hai)"
-		"Firebird (Hai Shields)"
+	variant 1
+		"Firebird (Hai Weapons)"
+		"Arrow (Hai)" 2
+	variant 1
+		"Osprey (Alien Weapons)"
+		"Corvette (Hai)"
+	variant 1
+		"Osprey (Alien Weapons)"
+		"Headhunter (Hai)"
+	variant 1
+		"Osprey (Alien Weapons)"
 		"Bounder (Hai)" 2
-		"Flivver (Hai)"
-		"Arrow (Hai)"
-	variant 20
-		"Osprey (Alien Weapons)" 3
-	variant 20
-		"Marauder Firebird (Hai)"
-		"Marauder Quicksilver (Hai)"
-		"Marauder Splinter (Hai)"
-		"Marauder Bounder (Hai)"
-	variant 25
-		"Falcon (Korath)"
-		"Nest (Korath)"
-		"Splinter (Korath)"
-		"Quicksilver (Korath)"
-		"'olofez" 2
-	variant 25
-		"Falcon (Korath)"
-		"Nest (Korath)"
-		"Modified Argosy (Korath)"
-		"Quicksilver (Korath)"
-		"'olofez" 2
-	variant 25
-		"Protector (Korath)"
-		"Nest (Korath)"
-		"Splinter (Korath)"
-		"Quicksilver (Korath)" 2
-		"'olofez" 2
-	variant 25
-		"Protector (Korath)"
-		"Nest (Korath)"
-		"Modified Argosy (Korath)"
-		"Quicksilver (Korath)" 2
-		"'olofez" 2
-	variant 25
-		"Vanguard (Korath)"
-		"Aerie (Korath)"
-		"Splinter (Korath)"
-		"Quicksilver (Korath)" 3
-		"'olofez" 2
-	variant 25
-		"Vanguard (Korath)"
-		"Aerie (Korath)"
-		"Modified Argosy (Korath)"
-		"Quicksilver (Korath)" 3
-		"'olofez" 2
-	variant 25
-		"Bastion (Korath)"
-		"Roost (Korath)"
-		"Splinter (Korath)"
-		"Quicksilver (Korath)" 4
-		"'olofez" 4
-	variant 25
-		"Bastion (Korath)"
-		"Roost (Korath)"
-		"Modified Argosy (Korath)"
-		"Quicksilver (Korath)" 4
-		"'olofez" 4
-	variant 25
-		"Bulk Freighter (Korath)"
-		"Aerie (Korath)"
-		"Roost (Korath)"
-		"Quicksilver (Korath)" 4
-		"'olofez" 6
-	variant 25
-		"Bulk Freighter (Korath)"
-		"Nest (Korath)"
-		"Roost (Korath)"
-		"Quicksilver (Korath)" 4
-		"'olofez" 6
+	variant 1
+		"Osprey (Alien Weapons)"
+		"Arrow (Hai)" 2
+	variant 1
+		"Corvette (Hai)"
+		"Headhunter (Hai)"
+	variant 1
+		"Corvette (Hai)"
+		"Bounder (Hai)" 2
+	variant 1
+		"Corvette (Hai)"
+		"Arrow (Hai)" 2
 
 
 
@@ -1593,7 +1666,7 @@ fleet "NukeNorth"
 	variant 1
 		"Modified Argosy (Nuclear)"
 	variant 1
-		"Rainmaker (Nuclear)"
+		"Missileboat (Nuclear)"
 
 fleet "NukeCore"
 	government "Pirate"

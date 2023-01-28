@@ -890,7 +890,7 @@ mission "Ship Sale: Marauder Firebird (Used)"
 				`	"Not interested in buying a ship right now."`
 					defer
 
-			`	The seller says "By the looks of the modification that have taken place, you suspect that this ship contains no original parts. With extra shield emitters, hull plating, and outfit space, this half-millennium-old design is finding new life with its heavy modification. The price is 11,875,000."`
+			`	The seller says "By the looks of the modification that have taken place, I suspect that this ship contains no original parts. With extra shield emitters, hull plating, and outfit space, this half-millennium-old design is finding new life with its heavy modification. The price is 11,875,000."`
 			choice
 				`	"Sounds good. I'll buy it!`
 				`	"That's way too much. I'll pay half that."`
@@ -2028,7 +2028,7 @@ mission "Ship Sale: Marauder Raven (Used)"
 				`	"Not interested in buying a ship right now."`
 					defer
 			
-			`	The seller says "Whoever modified this Raven has given more heft to an agile and elegant vessel. They've added a turret and some apparently-flimsy bulkheads over extra shield emitters and outfit space. If it weren't for the wings, the central hull would barely be recognizable as Lionheart's original under the patchwork that you expect has made an already deadly warship even more so. The price is 6,750,000."`
+			`	The seller says "Whoever modified this Raven has given more heft to an agile and elegant vessel. They've added a turret and some apparently-flimsy bulkheads over extra shield emitters and outfit space. If it weren't for the wings, the central hull would barely be recognizable as Lionheart's original under the patchwork that has made an already deadly warship even more so. The price is 6,750,000."`
 			choice
 				`	"Sounds good. I'll buy it!`
 				`	"That's way too much. I'll pay half that."`
@@ -3149,7 +3149,6 @@ mission "Ship Sale: Modified Argosy (Negotiate Used Slaver)"
 			has "Ship Sale: Modified Argosy (Screams of Madness): done"
 		random < 1
 		"credits" > 3330000
-		"Midnight Market" >= 20
 	on offer
 		conversation
 			scene "thumbnail/modified argosy"
@@ -3295,7 +3294,6 @@ mission "Ship Sale: Modified Argosy (Negotiate Used Smuggler)"
 			has "Ship Sale: Modified Argosy (Screams of Insanity): done"
 		random < 1
 		"credits" > 3460000
-		"Midnight Market" >= 20
 	on offer
 		conversation
 			scene "thumbnail/modified argosy"
@@ -3353,3 +3351,188 @@ mission "Ship Sale: Modified Argosy (Negotiate Used Smuggler)"
 		government "Bounty Hunter"
 		personality waiting staying vindictive coward
 		fleet "Hired Guns" 3
+
+
+
+# Stolen Navy Surplus
+
+
+
+mission "Ship Sale: Patrolboat (Used)"
+	invisible
+	repeat
+	minor
+	source
+		attributes "north pirate" "dirt belt pirate"
+	to offer
+		random < 1
+		"credits" >= 3200000
+		has "event: war begins"
+	on offer
+		conversation
+			scene "thumbnail/patrolboat-thumb"
+			`You notice someone trying to sell a used ship, a Patrolboat.`
+			choice
+				`	"Tell me more about this ship."`
+				`	"Not interested in buying a ship right now."`
+					defer
+
+			`	The seller says "The Patrolboat is an old ship that previously performed the role which the modern Gunboat fulfills. The main reason the Navy replaced it was the lack of a turret mount. Some retired Patrolboats have found a new role as merchant escorts or bounty hunters. The price is 3,200,000."`
+			choice
+				`	"Sounds good. I'll buy it!`
+				`	"That's way too much. I'll pay half that."`
+					goto negotiate
+				`	"I'm not interested."`
+					defer
+				`	"My gun says I can take this ship for free."`
+					goto shootout
+
+			label "purchase"
+			action
+				"Midnight Market" ++
+				payment -3200000
+				give ship "Patrolboat (Used)"
+			`	"Thank you for your purchase!"`
+				decline
+
+			label negotiate
+			branch "deal"
+				random < "Midnight Market"
+			`	"Sorry, I can't budge on the price."`
+			choice
+				`	"Alright. I'll buy it.`
+					goto purchase
+				`	"That's way too much. I'm not interested."`
+					defer
+				`	"My gun says I can take this ship for free."`
+					goto shootout
+
+			label "deal"
+			`	"How about we meet halfway? 2,400,000 credits."`
+			choice
+				`	"It's a deal. I'll buy it!`
+				`	"That's still too much. I'm not interested."`
+					defer
+				`	"My gun says I can take this ship for free."`
+					goto shootout
+
+			action
+				payment -2400000
+				give ship "Patrolboat (Used)"
+			`	"Thank you for your purchase!"`
+				decline
+
+			label shootout
+			branch "victory"
+				random < ( "flagship required crew" - 8 )
+
+			`	You try to take the ship by force, but die during the shootout.`
+				die
+
+			label victory
+			`	You and your crew manage to overpower the owner's crew and steal the ship!`
+				accept
+
+	on accept
+		"Midnight Market" -= 3
+		give ship "Patrolboat (Used)"
+		
+	on enter
+		dialog `Looks like the used ship dealer's friends were waiting to pay you back for stealing that Patrolboat.`
+
+	npc kill
+		government "Bounty Hunter"
+		personality waiting staying vindictive coward
+		fleet "Hired Guns" 3
+
+
+
+mission "Ship Sale: Missileboat (Used)"
+	invisible
+	repeat
+	minor
+	source
+		attributes "north pirate" "dirt belt pirate"
+	to offer
+		random < 1
+		"credits" >= 1580000
+		has "event: war begins"
+	on offer
+		conversation
+			scene "thumbnail/missileboat-thumb"
+			`You notice someone trying to sell a used ship, a Missileboat.`
+			choice
+				`	"Tell me more about this ship."`
+				`	"Not interested in buying a ship right now."`
+					defer
+
+			`	The seller says "For centuries, the Missileboat provided fleet admirals with a reliable artillery unit to support their front line vessels. The outdated systems interface on this ship have a higher crew requirement than the Rainmaker currently used by the Navy. Retired Missileboats are sometimes used by bounty hunters. The price is 1,580,000."`
+			choice
+				`	"Sounds good. I'll buy it!`
+				`	"That's way too much. I'll pay half that."`
+					goto negotiate
+				`	"I'm not interested."`
+					defer
+				`	"My gun says I can take this ship for free."`
+					goto shootout
+
+			label "purchase"
+			action
+				"Midnight Market" ++
+				payment -1580000
+				give ship "Missileboat (Used)"
+			`	"Thank you for your purchase!"`
+				decline
+
+			label negotiate
+			branch "deal"
+				random < "Midnight Market"
+			`	"Sorry, I can't budge on the price."`
+			choice
+				`	"Alright. I'll buy it.`
+					goto purchase
+				`	"That's way too much. I'm not interested."`
+					defer
+				`	"My gun says I can take this ship for free."`
+					goto shootout
+
+			label "deal"
+			`	"How about we meet halfway? 1,185,000 credits."`
+			choice
+				`	"It's a deal. I'll buy it!`
+				`	"That's still too much. I'm not interested."`
+					defer
+				`	"My gun says I can take this ship for free."`
+					goto shootout
+
+			action
+				payment -1185000
+				give ship "Missileboat (Used)"
+			`	"Thank you for your purchase!"`
+				decline
+
+			label shootout
+			branch "victory"
+				random < ( "flagship required crew" - 8 )
+
+			`	You try to take the ship by force, but die during the shootout.`
+				die
+
+			label victory
+			`	You and your crew manage to overpower the owner's crew and steal the ship!`
+				accept
+
+	on accept
+		"Midnight Market" -= 3
+		give ship "Missileboat (Used)"
+		
+	on enter
+		dialog `Looks like the used ship dealer's friends were waiting to pay you back for stealing that Missileboat.`
+
+	npc kill
+		government "Bounty Hunter"
+		personality waiting staying vindictive coward
+		fleet "Hired Guns" 3
+
+
+

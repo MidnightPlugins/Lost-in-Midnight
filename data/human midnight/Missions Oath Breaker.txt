@@ -723,7 +723,7 @@ mission "Escort Memoria Alpha"
 	npc accompany save
 		government "Merchant"
 		personality launching escort timid
-		ship "War Hauler" "Memoria Alpha"
+		ship "Memoria Alpha" "Memoria Alpha"
 
 	on visit
 		dialog phrase "generic arrived-without-npc dialog"
@@ -795,7 +795,7 @@ mission "Oathbreaker Memoria Alpha"
 	npc accompany save
 		government "Merchant"
 		personality launching escort timid
-		ship "War Hauler" "Memoria Alpha"
+		ship "Memoria Alpha" "Memoria Alpha"
 
 	on visit
 		dialog phrase "generic arrived-without-npc dialog"

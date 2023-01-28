@@ -514,6 +514,114 @@ ship "Shuttle Pod"
 
 
 
+# a variant is rewarded at the end Skeleton Key mission chain
+# base model appears in Deep Security fleets after Skeleton Key epilogue
+# technically appears in Valhalla's shipyard, but no Deep Security license is planned
+ship "Starcadia"
+	sprite "ship/starcadia"
+	thumbnail "thumbnail/starcadia-thumb"
+	attributes
+		category "Heavy Warship"
+		licenses
+			"Deep Security"
+		"cost" 10400000
+		"shields" 16000
+		"hull" 5000
+		"required crew" 42
+		"bunks" 88
+		"mass" 387
+		"drag" 10.4
+		"heat dissipation" .7
+		"fuel capacity" 500
+		"cargo space" 35
+		"outfit space" 450
+		"weapon capacity" 198
+		"engine capacity" 100
+		weapon
+			"blast radius" 200
+			"shield damage" 2000
+			"hull damage" 1000
+			"hit force" 3000
+	outfits
+		"Heavy Laser" 2
+		"Laser Turret" 4
+		"Anti-Missile Turret" 2
+		Torpedo 21
+		"Torpedo Pod" 2
+		"Torpedo Storage Rack"
+		
+		"Dwarf Core" 2
+		"LP072a Battery Pack"
+		"D67-TM Shield Generator"
+		"Cargo Scanner"
+		"Outfit Scanner"
+		"Outfits Expansion"
+		Ramscoop
+		"Small Radar Jammer"
+		"Laser Rifle" 20
+		"Security Station"
+		
+		"A370 Atomic Thruster"
+		"A375 Atomic Steering"
+		"AR120 Reverse Thruster"
+		Hyperdrive
+		
+	engine -41 97
+		zoom .25
+	engine 41 97
+		zoom .25
+	engine -31 103
+		zoom .35
+	engine 31 103
+		zoom .35
+	engine -21 111
+		zoom .40
+	engine 21 111
+		zoom .40
+	"reverse engine" -27 -50
+		zoom 0.6
+		angle 335
+	"reverse engine" 27 -50
+		zoom 0.6
+		angle 25
+	"steering engine" -27 -50
+		zoom 0.5
+		angle 60
+		right
+	"steering engine" 27 -50
+		zoom 0.5
+		angle 300
+		left
+	"steering engine" -52 34
+		zoom 0.5
+		angle 155
+		left
+	"steering engine" 52 34
+		zoom 0.5
+		angle 205
+		right
+	gun -14 -103 "Heavy Laser"
+	gun 14 -103 "Heavy Laser"
+	gun -25 -73 "Torpedo Pod"
+	gun 25 -73 "Torpedo Pod"
+	turret -20 -7 "Laser Turret"
+	turret 20 -7 "Laser Turret"
+	turret -30 17.5 "Laser Turret"
+	turret 30 17.5 "Laser Turret"
+	turret -20 42.5 "Anti-Missile Turret"
+	turret 20 42.5 "Anti-Missile Turret"
+	leak "leak" 40 50
+	leak "flame" 50 80
+	leak "big leak" 90 30
+	explode "tiny explosion" 18
+	explode "small explosion" 36
+	explode "medium explosion" 24
+	explode "large explosion" 8
+	"final explode" "final explosion medium"
+	description "The technology on the Starcadia, while in line with other modern ships, is surprisingly mundane for a newly deployed ship from the Deep. This has caused some to speculate that the Deep has lost their edge in technological advancement. Alternatively, conspiracy theorists suggest that the Deep has been sitting on this design for some time and is only releasing it now in preparation for some threat unknown to the general public. Deep Security, for its part, has no comment on these rumors."
+
+
+
 ################################
 #
 # The below ships are not sold in shipyards, but most can be captured or are received as mission rewards.
@@ -1932,7 +2040,7 @@ ship "Subsidurius"
 
 
 # A War Hauler appears in Grudge Family missions.
-# A War Hauler appears in Oathbreaker missions.
+# A variant War Hauler appears in Oathbreaker missions.
 # A War Hauler appears in a Double Cross mission.
 
 ship "War Hauler"

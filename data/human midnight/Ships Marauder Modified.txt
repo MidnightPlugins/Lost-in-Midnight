@@ -1274,6 +1274,7 @@ ship "Marauder Sparrow"
 		"outfit space" 170
 		"weapon capacity" 30
 		"engine capacity" 45
+		"self destruct" .25
 		"integrated systems" -1
 		weapon
 			"blast radius" 75

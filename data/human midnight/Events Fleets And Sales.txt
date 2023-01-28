@@ -2048,3 +2048,48 @@ event "Remove midnight navy surplus ships sales"
 		remove "Outrider (Surplus)"
 
 
+
+shipyard "Starcadia"
+	"Starcadia"
+
+event "starcadia added to deep security"
+	planet Valhalla
+		add shipyard "Starcadia"
+	fleet "Large Deep Security"
+		add variant 1
+			"Starcadia"
+		add variant 1
+			"Starcadia" 2
+		add variant 1
+			"Starcadia"
+			"Raven (Afterburner)" 2
+		add variant 1
+			"Starcadia"
+			"Raven (Heavy)" 2
+		add variant 1
+			"Starcadia"
+			"Raven" 2
+		add variant 1
+			"Starcadia"
+			"Aerie"
+			"Dagger" 2
+		add variant 1
+			"Starcadia"
+		add variant 1
+			"Starcadia"
+			"Corvette"
+		add variant 1
+			"Starcadia"
+			"Corvette (Speedy)"
+		add variant 1
+			"Starcadia"
+			"Corvette (Missile)"
+		add variant 1
+			"Starcadia"
+			"Headhunter" 2
+		add variant 1
+			"Starcadia"
+			"Headhunter (Particle)" 2
+		add variant 1
+			"Starcadia"
+			"Headhunter (Strike)" 2

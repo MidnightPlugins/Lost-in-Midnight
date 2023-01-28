@@ -464,6 +464,99 @@ mission "Escort South Pirate to Dirt Belt"
 
 
 
+mission "Hostage Exchange: easy"
+	job
+	repeat
+	name "Hostage Exchange"
+	description "Use your Brig to take this prisoner to <stopovers> for a hostage exchange. Then return the released hostage to <destination>. Payment is <payment>."
+	passengers 1
+	source
+		government "Pirate"
+		attributes "dirt belt pirate"
+	stopover
+		attributes "dirt belt"
+		attributes "uninhabited"
+	destination
+		government "Pirate"
+		attributes "dirt belt pirate"
+	to offer
+		random < 5
+		"reputation: Pirate" > 0
+		"combat rating" > 300
+	on offer
+		require "Brig"
+	on stopover
+		conversation
+			scene "outfit/brig"
+			`The hostage exchange goes smoothly. The released hostage asks to be returned to <destination> as soon as possible.`
+	on abort
+		"reputation: Pirate" --
+	on fail
+		"reputation: Pirate" --
+	on complete
+		payment 200000
+		dialog "The hostage's pirate faction pays you <payment> for the safe return of one of their members."
+
+mission "Hostage Exchange: hard"
+	job
+	repeat
+	name "Hostage Exchange"
+	description "Use your Brig to take this prisoner to <stopovers> for a hostage exchange. Then return the released hostage to <destination>. Payment is 200,000 credits."
+	passengers 1
+	source
+		government "Pirate"
+		attributes "dirt belt pirate"
+	stopover
+		attributes "dirt belt"
+		attributes "uninhabited"
+	to offer
+		random < 15
+		"reputation: Pirate" > -10
+		"combat rating" > 300
+	on offer
+		require "Brig"
+	on stopover
+		conversation
+			scene "outfit/laser rifle"
+			`It's a trap! You barely make it back to your ship without losing the hostage. Return your hostage to <destination> and maybe your client will give you something for your efforts.`
+	npc evade
+		to spawn
+			"combat rating" > 500
+		government "Bounty Hunter"
+		personality waiting vindictive unconstrained
+			confusion 10
+		fleet "Bounty Hunters"
+	npc evade
+		to spawn
+			"combat rating" > 750
+		government "Bounty Hunter"
+		personality waiting vindictive unconstrained
+			confusion 10
+		fleet "Bounty Hunters"
+	npc evade
+		to spawn
+			"combat rating" > 1000
+		government "Bounty Hunter"
+		personality waiting vindictive unconstrained
+			confusion 10
+		fleet "Bounty Hunters"
+	npc evade
+		government "Bounty Hunter"
+		personality waiting vindictive unconstrained
+			confusion 10
+		fleet "Hired Guns"
+	on abort
+		"reputation: Pirate" --
+	on fail
+		"reputation: Pirate" --
+	on complete
+		payment 20000
+		conversation
+			scene "outfit/handgun black"
+			"Although the exchange was a failure, your client is grateful you brought their hostage back. As one of their associates pays you <payment>, the hostage is taken through a door to another room. You hear a series of gunshots and muffled screams from the other side of the door as your client continues to congratulate you on a job well done..."
+
+
+
 mission "Jail Break A"
 	job
 	repeat
@@ -941,189 +1034,6 @@ mission "Smuggler Exchange (Dirt Belt, Lolami)"
 		"reputation: Pirate" += 5
 		dialog phrase "generic cargo delivery payment"
 
-mission "Smuggler Exchange (Dirt Belt, Regulus)"
-	job
-	repeat
-	deadline 15
-	name "Rendezvous at <waypoints>"
-	description "Exchange cargo with the <npc> at <waypoints>. Do not let law enforcement scan you. Return to <destination> by <date> for payment [<payment>.]"
-	source "Wang Xiang Tai"
-	waypoint "Regulus"
-	cargo "Smuggled Cargo" 5 2 .1
-	illegal 20000 `In addition to the fine, the <commodity> is confiscated from your cargo hold.`
-	to offer
-		has "New China Supplies to Diyu 2: done"
-		random < 15
-	on visit
-		dialog phrase "generic cargo on visit"
-	npc
-		to spawn
-			random < 50
-		government "Republic"
-		system
-			distance 9 10
-		personality heroic surveillance opportunistic
-		fleet
-			names "republic capital"
-			fighters "republic fighter"
-			variant
-				"Cruiser"
-				"Surveillance Drone" 4
-			variant
-				"Gunboat"
-	on enter "Regulus"
-		dialog "You've located the <npc> and exchanged cargo with it. Return to <destination> for payment."
-	npc
-		government "Bounty (Disguised)"
-		system "Regulus"
-		personality target waiting staying timid
-		fleet
-			names "pirate"
-			outfitters "Contraband"
-			variant
-				"Modified Clipper (Smuggler)"
-			variant
-				"Modified Argosy (Shields Smuggler)"
-			variant
-				"Modified Firebird (Smuggler)"
-	on abort
-		clear "New China Supplies to Diyu: done"
-		clear "New China Supplies to Diyu 2: done"
-		"reputation: Pirate" --
-		dialog `Your failure does not go unnoticed.`
-	on fail
-		clear "New China Supplies to Diyu: done"
-		clear "New China Supplies to Diyu 2: done"
-		"reputation: Pirate" --
-		dialog `Your failure does not go unnoticed.`
-	on complete
-		payment
-		payment 80000
-		"reputation: Pirate" += 5
-		dialog phrase "generic cargo delivery payment"
-
-mission "Smuggler Exchange (Dirt Belt, Fingol)"
-	job
-	repeat
-	deadline 20
-	name "Rendezvous at <waypoints>"
-	description "Exchange cargo with the <npc> at <waypoints>. Do not let law enforcement scan you. Return to <destination> by <date> for payment [<payment>.]"
-	source "Wang Xiang Tai"
-	waypoint "Fingol"
-	cargo "Smuggled Cargo" 5 2 .1
-	illegal 20000 `In addition to the fine, the <commodity> is confiscated from your cargo hold.`
-	to offer
-		has "New China Supplies to Diyu 2: done"
-		random < 10
-	on visit
-		dialog phrase "generic cargo on visit"
-	npc
-		to spawn
-			random < 50
-		government "Republic"
-		system
-			distance 9 10
-		personality heroic surveillance opportunistic
-		fleet
-			names "republic capital"
-			fighters "republic fighter"
-			variant
-				"Cruiser"
-				"Surveillance Drone" 4
-			variant
-				"Gunboat"
-	on enter "Fingol"
-		dialog "You've located the <npc> and exchanged cargo with it. Return to <destination> for payment."
-	npc
-		government "Bounty (Disguised)"
-		system "Fingol"
-		personality target waiting staying timid
-		fleet
-			names "pirate"
-			outfitters "Contraband"
-			variant
-				"Modified Clipper (Smuggler)"
-			variant
-				"Modified Argosy (Shields Smuggler)"
-			variant
-				"Modified Firebird (Smuggler)"
-	on abort
-		clear "New China Supplies to Diyu: done"
-		clear "New China Supplies to Diyu 2: done"
-		"reputation: Pirate" --
-		dialog `Your failure does not go unnoticed.`
-	on fail
-		clear "New China Supplies to Diyu: done"
-		clear "New China Supplies to Diyu 2: done"
-		"reputation: Pirate" --
-		dialog `Your failure does not go unnoticed.`
-	on complete
-		payment
-		payment 80000
-		"reputation: Pirate" += 5
-		dialog phrase "generic cargo delivery payment"
-
-mission "Smuggler Exchange (Dirt Belt, Nocte)"
-	job
-	repeat
-	deadline 20
-	name "Rendezvous at <waypoints>"
-	description "Exchange cargo with the <npc> at <waypoints>. Do not let law enforcement scan you. Return to <destination> by <date> for payment [<payment>.]"
-	source "Wang Xiang Tai"
-	waypoint "Nocte"
-	cargo "Smuggled Cargo" 5 2 .1
-	illegal 20000 `In addition to the fine, the <commodity> is confiscated from your cargo hold.`
-	to offer
-		has "New China Supplies to Diyu 2: done"
-		random < 10
-	on visit
-		dialog phrase "generic cargo on visit"
-	npc
-		to spawn
-			random < 50
-		government "Republic"
-		system
-			distance 9 10
-		personality heroic surveillance opportunistic
-		fleet
-			names "republic capital"
-			fighters "republic fighter"
-			variant
-				"Cruiser"
-				"Surveillance Drone" 4
-			variant
-				"Gunboat"
-	on enter "Nocte"
-		dialog "You've located the <npc> and exchanged cargo with it. Return to <destination> for payment."
-	npc
-		government "Bounty (Disguised)"
-		system "Nocte"
-		personality target waiting staying timid
-		fleet
-			names "pirate"
-			outfitters "Contraband"
-			variant
-				"Modified Clipper (Smuggler)"
-			variant
-				"Modified Argosy (Shields Smuggler)"
-			variant
-				"Modified Firebird (Smuggler)"
-	on abort
-		clear "New China Supplies to Diyu: done"
-		clear "New China Supplies to Diyu 2: done"
-		"reputation: Pirate" --
-		dialog `Your failure does not go unnoticed.`
-	on fail
-		clear "New China Supplies to Diyu: done"
-		clear "New China Supplies to Diyu 2: done"
-		"reputation: Pirate" --
-		dialog `Your failure does not go unnoticed.`
-	on complete
-		payment
-		payment 80000
-		"reputation: Pirate" += 5
-		dialog phrase "generic cargo delivery payment"
-
 mission "Smuggler Exchange (Dirt Belt, Ipsing)"
 	job
 	repeat
@@ -1429,127 +1339,6 @@ mission "Smuggler Exchange (Dirt Belt, Naper)"
 		"reputation: Pirate" += 5
 		dialog phrase "generic cargo delivery payment"
 
-mission "Smuggler Exchange (Dirt Belt, Umbral)"
-	job
-	repeat
-	deadline 30
-	name "Rendezvous at <waypoints>"
-	description "Exchange cargo with the <npc> at <waypoints>. Do not let law enforcement scan you. Return to <destination> by <date> for payment [<payment>.]"
-	source "Wang Xiang Tai"
-	waypoint "Umbral"
-	cargo "Smuggled Cargo" 5 2 .1
-	illegal 20000 `In addition to the fine, the <commodity> is confiscated from your cargo hold.`
-	to offer
-		has "New China Supplies to Diyu 2: done"
-		random < 5
-	on visit
-		dialog phrase "generic cargo on visit"
-	npc
-		to spawn
-			random < 50
-		government "Republic"
-		system
-			distance 9 10
-		personality heroic surveillance opportunistic
-		fleet
-			names "republic capital"
-			fighters "republic fighter"
-			variant
-				"Cruiser"
-				"Surveillance Drone" 4
-			variant
-				"Gunboat"
-	on enter "Umbral"
-		dialog "You've located the <npc> and exchanged cargo with it. Return to <destination> for payment."
-	npc
-		government "Bounty (Disguised)"
-		system "Umbral"
-		personality target waiting staying timid
-		fleet
-			names "pirate"
-			outfitters "Contraband"
-			variant
-				"Modified Clipper (Smuggler)"
-			variant
-				"Modified Argosy (Shields Smuggler)"
-			variant
-				"Modified Firebird (Smuggler)"
-	on abort
-		clear "New China Supplies to Diyu: done"
-		clear "New China Supplies to Diyu 2: done"
-		"reputation: Pirate" --
-		dialog `Your failure does not go unnoticed.`
-	on fail
-		clear "New China Supplies to Diyu: done"
-		clear "New China Supplies to Diyu 2: done"
-		"reputation: Pirate" --
-		dialog `Your failure does not go unnoticed.`
-	on complete
-		payment
-		payment 80000
-		"reputation: Pirate" += 5
-		dialog phrase "generic cargo delivery payment"
-
-mission "Smuggler Exchange (Dirt Belt, Sadr)"
-	job
-	repeat
-	deadline 30
-	name "Rendezvous at <waypoints>"
-	description "Exchange cargo with the <npc> at <waypoints>. Do not let law enforcement scan you. Return to <destination> by <date> for payment [<payment>.]"
-	source "Wang Xiang Tai"
-	waypoint "Sadr"
-	cargo "Smuggled Cargo" 5 2 .1
-	illegal 20000 `In addition to the fine, the <commodity> is confiscated from your cargo hold.`
-	to offer
-		has "New China Supplies to Diyu 2: done"
-		random < 5
-	on visit
-		dialog phrase "generic cargo on visit"
-	npc
-		to spawn
-			random < 50
-		government "Republic"
-		system
-			distance 9 10
-		personality heroic surveillance opportunistic
-		fleet
-			names "republic capital"
-			fighters "republic fighter"
-			variant
-				"Cruiser"
-				"Surveillance Drone" 4
-			variant
-				"Gunboat"
-	on enter "Sadr"
-		dialog "You've located the <npc> and exchanged cargo with it. Return to <destination> for payment."
-	npc
-		government "Bounty (Disguised)"
-		system "Sadr"
-		personality target waiting staying timid
-		fleet
-			names "pirate"
-			outfitters "Contraband"
-			variant
-				"Modified Clipper (Smuggler)"
-			variant
-				"Modified Argosy (Shields Smuggler)"
-			variant
-				"Modified Firebird (Smuggler)"
-	on abort
-		clear "New China Supplies to Diyu: done"
-		clear "New China Supplies to Diyu 2: done"
-		"reputation: Pirate" --
-		dialog `Your failure does not go unnoticed.`
-	on fail
-		clear "New China Supplies to Diyu: done"
-		clear "New China Supplies to Diyu 2: done"
-		"reputation: Pirate" --
-		dialog `Your failure does not go unnoticed.`
-	on complete
-		payment
-		payment 80000
-		"reputation: Pirate" += 5
-		dialog phrase "generic cargo delivery payment"
 
 mission "New China Courier"
 	repeat
@@ -1612,7 +1401,7 @@ mission "Underworld Meeting (easy)"
 	to offer
 		has "Cartography: Quarg Hitchhiker 4: done"
 		not "Underworld Meeting (hard): active"
-		random < 25
+		random < 10
 	on stopover
 		dialog
 			`Your passenger directs you through a network of underground caverns to reach the designated meeting spot. The other party arrives and they complete their business. Time to go back to <origin>.`
@@ -1637,7 +1426,7 @@ mission "Underworld Meeting (hard)"
 	to offer
 		has "Cartography: Quarg Hitchhiker 4: done"
 		not "Underworld Meeting (easy): active"
-		random < 25
+		random < 10
 	on accept
 		set "Underworld Meeting goes badly"
 	on stopover
@@ -2112,6 +1901,155 @@ mission "Stealth Drug Running (Dirt Belt) [1]"
 		"reputation: Pirate" += 5
 		dialog "You find the contact outside of the main city. Your cargo of <commodity> is removed from your ship and you collect your payment of <payment>."
 
+mission "Stealth Smuggling Exchange (Dirt Belt) [0]"
+	name "Bulk illegal cargo to <planet>"
+	job
+	repeat
+	infiltrating
+	description "Exchange cargo with smugglers at <stopovers>. Then deliver <cargo> to <destination>. Being scanned will result in a 250,000 credit fine and the cargo will be seized. Payment is <payment>."
+	cargo "Illegal Cargo" 25 2 .05
+	illegal 250000 `After being given a very hefty fine, the illegal cargo is confiscated from your hold. The pirates won't be happy to hear about this.`
+	stealth
+	to offer
+		random < 20
+		"reputation: Pirate" > 0
+		"combat rating" > 1100
+	source
+		government "Pirate"
+		attributes "dirt belt pirate"
+	stopover
+		attributes "dirt belt"
+		attributes "uninhabited"
+	destination
+		distance 3 12
+		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Pirate"
+	on stopover
+		conversation
+			scene "scene/scene-wooden crates"
+			`Another smuggler is waiting to make the exchange, which goes smoothly. Now you just have to smuggle these goods to <destination> and collect your pay.`
+	npc
+		government Republic
+		personality heroic waiting
+		system
+			distance 3
+		fleet
+			names "republic small"
+			variant
+				"Gunboat"
+	npc
+		government Republic
+		personality heroic waiting
+		system destination
+		fleet
+			names "republic small"
+			variant
+				"Gunboat"
+	npc
+		government Republic
+		personality heroic staying
+		system destination
+		fleet
+			names "republic small"
+			variant
+				"Gunboat"
+	on abort
+		"reputation: Pirate" -= 1
+		dialog "Your cargo of <commodity> never arrived at its destination. The pirates won't be happy to hear about this."
+	on fail
+		"reputation: Republic" -= 5
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 100000 375
+		"reputation: Pirate" += 5
+		dialog "You find the contact outside of the main city. Your cargo of <commodity> is removed from your ship and you collect your payment of <payment>."
+
+mission "Stealth Smuggling Exchange (Dirt Belt) [1]"
+	name "Bulk illegal cargo to <planet>"
+	job
+	repeat
+	infiltrating
+	description "Exchange cargo with smugglers at <stopovers>. Then deliver <cargo> to <destination>. Being scanned will result in a 325,000 credit fine and the cargo will be seized. Payment is <payment>."
+	cargo "Illegal Cargo" 25 2 .05
+	illegal 325000 `After being given a very hefty fine, the illegal cargo is confiscated from your hold. The pirates won't be happy to hear about this.`
+	stealth
+	to offer
+		random < 15
+		"reputation: Pirate" > 0
+		"combat rating" > 1100
+	source
+		government "Pirate"
+		attributes "dirt belt pirate"
+	stopover
+		attributes "dirt belt"
+		attributes "uninhabited"
+	destination
+		distance 3 12
+		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Pirate"
+	on stopover
+		conversation
+			scene "scene/scene-wooden crates"
+			`Another smuggler is waiting to make the exchange, which goes smoothly. Now you just have to smuggle these goods to <destination> and collect your pay.`
+	npc
+		government Republic
+		personality heroic waiting
+		system
+			distance 3 5
+		fleet
+			names "republic small"
+			variant
+				"Gunboat"
+	npc
+		government Republic
+		personality heroic waiting
+		system
+			distance 2 4
+		fleet
+			names "republic small"
+			variant
+				"Gunboat"
+	npc
+		government Republic
+		personality heroic waiting
+		system
+			distance 3
+		fleet
+			names "republic small"
+			variant
+				"Gunboat"
+	npc
+		government Republic
+		personality heroic waiting
+		system destination
+		fleet
+			names "republic small"
+			variant
+				"Gunboat"
+	npc
+		government Republic
+		personality heroic waiting entering
+		system destination
+		fleet
+			names "republic small"
+			variant
+				"Gunboat"
+	npc
+		system destination
+		personality heroic staying
+		government Republic
+		fleet "Navy Surveillance"
+	on abort
+		"reputation: Pirate" -= 1
+		dialog "Your cargo of <commodity> never arrived at its destination. The pirates won't be happy to hear about this."
+	on fail
+		"reputation: Republic" -= 5
+	on visit
+		dialog phrase "generic cargo on visit"
+	on complete
+		payment 125000 375
+		"reputation: Pirate" += 5
+		dialog "You find the contact outside of the main city. Your cargo of <commodity> is removed from your ship and you collect your payment of <payment>."
+
 
 
 mission "Highly Wanted Passenger (Dirt Belt)"
@@ -2475,3 +2413,322 @@ mission "Dirt Belt Assassination [3]"
 		dialog "Pirates on <planet> congratulate you for taking out the Navy commander and pay you <payment>."
 		"reputation: Republic" -= 20
 		"reputation: Pirate" += 7
+
+
+
+
+#####################
+#
+# deprecated
+#
+#####################
+
+# deprecated because the waypoint isn't part of the Dirt Belt
+mission "Smuggler Exchange (Dirt Belt, Regulus)"
+	job
+	deadline 15
+	name "Rendezvous at <waypoints>"
+	description "Exchange cargo with the <npc> at <waypoints>. Do not let law enforcement scan you. Return to <destination> by <date> for payment [<payment>.]"
+	source "Wang Xiang Tai"
+	waypoint "Regulus"
+	cargo "Smuggled Cargo" 5 2 .1
+	illegal 20000 `In addition to the fine, the <commodity> is confiscated from your cargo hold.`
+	to offer
+		never
+#		has "New China Supplies to Diyu 2: done"
+#		random < 15
+	on visit
+		dialog phrase "generic cargo on visit"
+	npc
+		to spawn
+			random < 50
+		government "Republic"
+		system
+			distance 9 10
+		personality heroic surveillance opportunistic
+		fleet
+			names "republic capital"
+			fighters "republic fighter"
+			variant
+				"Cruiser"
+				"Surveillance Drone" 4
+			variant
+				"Gunboat"
+	on enter "Regulus"
+		dialog "You've located the <npc> and exchanged cargo with it. Return to <destination> for payment."
+	npc
+		government "Bounty (Disguised)"
+		system "Regulus"
+		personality target waiting staying timid
+		fleet
+			names "pirate"
+			outfitters "Contraband"
+			variant
+				"Modified Clipper (Smuggler)"
+			variant
+				"Modified Argosy (Shields Smuggler)"
+			variant
+				"Modified Firebird (Smuggler)"
+	on abort
+		clear "New China Supplies to Diyu: done"
+		clear "New China Supplies to Diyu 2: done"
+		"reputation: Pirate" --
+		dialog `Your failure does not go unnoticed.`
+	on fail
+		clear "New China Supplies to Diyu: done"
+		clear "New China Supplies to Diyu 2: done"
+		"reputation: Pirate" --
+		dialog `Your failure does not go unnoticed.`
+	on complete
+		payment
+		payment 80000
+		"reputation: Pirate" += 5
+		dialog phrase "generic cargo delivery payment"
+
+# deprecated because the waypoint isn't part of the Dirt Belt
+mission "Smuggler Exchange (Dirt Belt, Fingol)"
+	job
+	deadline 20
+	name "Rendezvous at <waypoints>"
+	description "Exchange cargo with the <npc> at <waypoints>. Do not let law enforcement scan you. Return to <destination> by <date> for payment [<payment>.]"
+	source "Wang Xiang Tai"
+	waypoint "Fingol"
+	cargo "Smuggled Cargo" 5 2 .1
+	illegal 20000 `In addition to the fine, the <commodity> is confiscated from your cargo hold.`
+	to offer
+		never
+#		has "New China Supplies to Diyu 2: done"
+#		random < 10
+	on visit
+		dialog phrase "generic cargo on visit"
+	npc
+		to spawn
+			random < 50
+		government "Republic"
+		system
+			distance 9 10
+		personality heroic surveillance opportunistic
+		fleet
+			names "republic capital"
+			fighters "republic fighter"
+			variant
+				"Cruiser"
+				"Surveillance Drone" 4
+			variant
+				"Gunboat"
+	on enter "Fingol"
+		dialog "You've located the <npc> and exchanged cargo with it. Return to <destination> for payment."
+	npc
+		government "Bounty (Disguised)"
+		system "Fingol"
+		personality target waiting staying timid
+		fleet
+			names "pirate"
+			outfitters "Contraband"
+			variant
+				"Modified Clipper (Smuggler)"
+			variant
+				"Modified Argosy (Shields Smuggler)"
+			variant
+				"Modified Firebird (Smuggler)"
+	on abort
+		clear "New China Supplies to Diyu: done"
+		clear "New China Supplies to Diyu 2: done"
+		"reputation: Pirate" --
+		dialog `Your failure does not go unnoticed.`
+	on fail
+		clear "New China Supplies to Diyu: done"
+		clear "New China Supplies to Diyu 2: done"
+		"reputation: Pirate" --
+		dialog `Your failure does not go unnoticed.`
+	on complete
+		payment
+		payment 80000
+		"reputation: Pirate" += 5
+		dialog phrase "generic cargo delivery payment"
+
+# deprecated because the waypoint isn't part of the Dirt Belt
+mission "Smuggler Exchange (Dirt Belt, Nocte)"
+	job
+	deadline 20
+	name "Rendezvous at <waypoints>"
+	description "Exchange cargo with the <npc> at <waypoints>. Do not let law enforcement scan you. Return to <destination> by <date> for payment [<payment>.]"
+	source "Wang Xiang Tai"
+	waypoint "Nocte"
+	cargo "Smuggled Cargo" 5 2 .1
+	illegal 20000 `In addition to the fine, the <commodity> is confiscated from your cargo hold.`
+	to offer
+		never
+#		has "New China Supplies to Diyu 2: done"
+#		random < 10
+	on visit
+		dialog phrase "generic cargo on visit"
+	npc
+		to spawn
+			random < 50
+		government "Republic"
+		system
+			distance 9 10
+		personality heroic surveillance opportunistic
+		fleet
+			names "republic capital"
+			fighters "republic fighter"
+			variant
+				"Cruiser"
+				"Surveillance Drone" 4
+			variant
+				"Gunboat"
+	on enter "Nocte"
+		dialog "You've located the <npc> and exchanged cargo with it. Return to <destination> for payment."
+	npc
+		government "Bounty (Disguised)"
+		system "Nocte"
+		personality target waiting staying timid
+		fleet
+			names "pirate"
+			outfitters "Contraband"
+			variant
+				"Modified Clipper (Smuggler)"
+			variant
+				"Modified Argosy (Shields Smuggler)"
+			variant
+				"Modified Firebird (Smuggler)"
+	on abort
+		clear "New China Supplies to Diyu: done"
+		clear "New China Supplies to Diyu 2: done"
+		"reputation: Pirate" --
+		dialog `Your failure does not go unnoticed.`
+	on fail
+		clear "New China Supplies to Diyu: done"
+		clear "New China Supplies to Diyu 2: done"
+		"reputation: Pirate" --
+		dialog `Your failure does not go unnoticed.`
+	on complete
+		payment
+		payment 80000
+		"reputation: Pirate" += 5
+		dialog phrase "generic cargo delivery payment"
+
+# deprecated because the waypoint isn't part of the Dirt Belt
+mission "Smuggler Exchange (Dirt Belt, Umbral)"
+	job
+	deadline 30
+	name "Rendezvous at <waypoints>"
+	description "Exchange cargo with the <npc> at <waypoints>. Do not let law enforcement scan you. Return to <destination> by <date> for payment [<payment>.]"
+	source "Wang Xiang Tai"
+	waypoint "Umbral"
+	cargo "Smuggled Cargo" 5 2 .1
+	illegal 20000 `In addition to the fine, the <commodity> is confiscated from your cargo hold.`
+	to offer
+		never
+#		has "New China Supplies to Diyu 2: done"
+#		random < 5
+	on visit
+		dialog phrase "generic cargo on visit"
+	npc
+		to spawn
+			random < 50
+		government "Republic"
+		system
+			distance 9 10
+		personality heroic surveillance opportunistic
+		fleet
+			names "republic capital"
+			fighters "republic fighter"
+			variant
+				"Cruiser"
+				"Surveillance Drone" 4
+			variant
+				"Gunboat"
+	on enter "Umbral"
+		dialog "You've located the <npc> and exchanged cargo with it. Return to <destination> for payment."
+	npc
+		government "Bounty (Disguised)"
+		system "Umbral"
+		personality target waiting staying timid
+		fleet
+			names "pirate"
+			outfitters "Contraband"
+			variant
+				"Modified Clipper (Smuggler)"
+			variant
+				"Modified Argosy (Shields Smuggler)"
+			variant
+				"Modified Firebird (Smuggler)"
+	on abort
+		clear "New China Supplies to Diyu: done"
+		clear "New China Supplies to Diyu 2: done"
+		"reputation: Pirate" --
+		dialog `Your failure does not go unnoticed.`
+	on fail
+		clear "New China Supplies to Diyu: done"
+		clear "New China Supplies to Diyu 2: done"
+		"reputation: Pirate" --
+		dialog `Your failure does not go unnoticed.`
+	on complete
+		payment
+		payment 80000
+		"reputation: Pirate" += 5
+		dialog phrase "generic cargo delivery payment"
+
+# deprecated because the waypoint isn't part of the Dirt Belt
+mission "Smuggler Exchange (Dirt Belt, Sadr)"
+	job
+	deadline 30
+	name "Rendezvous at <waypoints>"
+	description "Exchange cargo with the <npc> at <waypoints>. Do not let law enforcement scan you. Return to <destination> by <date> for payment [<payment>.]"
+	source "Wang Xiang Tai"
+	waypoint "Sadr"
+	cargo "Smuggled Cargo" 5 2 .1
+	illegal 20000 `In addition to the fine, the <commodity> is confiscated from your cargo hold.`
+	to offer
+		never
+#		has "New China Supplies to Diyu 2: done"
+#		random < 5
+	on visit
+		dialog phrase "generic cargo on visit"
+	npc
+		to spawn
+			random < 50
+		government "Republic"
+		system
+			distance 9 10
+		personality heroic surveillance opportunistic
+		fleet
+			names "republic capital"
+			fighters "republic fighter"
+			variant
+				"Cruiser"
+				"Surveillance Drone" 4
+			variant
+				"Gunboat"
+	on enter "Sadr"
+		dialog "You've located the <npc> and exchanged cargo with it. Return to <destination> for payment."
+	npc
+		government "Bounty (Disguised)"
+		system "Sadr"
+		personality target waiting staying timid
+		fleet
+			names "pirate"
+			outfitters "Contraband"
+			variant
+				"Modified Clipper (Smuggler)"
+			variant
+				"Modified Argosy (Shields Smuggler)"
+			variant
+				"Modified Firebird (Smuggler)"
+	on abort
+		clear "New China Supplies to Diyu: done"
+		clear "New China Supplies to Diyu 2: done"
+		"reputation: Pirate" --
+		dialog `Your failure does not go unnoticed.`
+	on fail
+		clear "New China Supplies to Diyu: done"
+		clear "New China Supplies to Diyu 2: done"
+		"reputation: Pirate" --
+		dialog `Your failure does not go unnoticed.`
+	on complete
+		payment
+		payment 80000
+		"reputation: Pirate" += 5
+		dialog phrase "generic cargo delivery payment"

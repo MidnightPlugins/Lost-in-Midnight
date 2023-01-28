@@ -448,38 +448,8 @@ mission "Grudge Fight 5"
 		conversation
 			`When you land on <planet>, the Luna shipyards inform you that there is no record of any test battle scheduled in Nocte. You look up bounties and wanted pirate documents, searching for any mention of the Grudge Hammer. Eventually, you find a bounty for the destruction of that ship. The information indicates that the pirate you killed went by the name Papa Grudge, leader of the Grudge family outlaws. Papa Grudge organized their criminal activities, assigning each of the Grudge children to roles that best suited them. This region of space should be safer with him gone.`
 			`	You head to the local authorities, and show them your combat logs of your fight against the Grudge Hammer. They pay you <payment> for your effort.`
-		
-ship "War Hauler" "Grudge Hammer"
-	outfits
-		"Energy Cannon" 2
-		"Energy Cannon Turret" 6
-		"Anti-Missile Turret" 2
-		"Meteor Missile Launcher"
-		"Meteor Missile" 30
-		"Fission Reactor"
-		"LP072a Battery Pack"
-		"D41-HY Shield Generator"
-		"Modified D41-HY Shielding"
-		"Outfits Expansion"
-		"Large Radar Jammer"
-		"Antique Rifle" 3
-		"Fragmentation Grenades"
-		"Microwave Cannon"
-		"Security Station"
-		"Greyhound Plasma Thruster"
-		"Impala Plasma Steering"
-		Hyperdrive
-	gun "Energy Cannon"
-	gun "Meteor Missile Launcher"
-	gun "Energy Cannon"
-	turret "Energy Cannon Turret"
-	turret "Energy Cannon Turret"
-	turret "Energy Cannon Turret"
-	turret "Anti-Missile Turret"
-	turret "Anti-Missile Turret"
-	turret "Energy Cannon Turret"
-	turret "Energy Cannon Turret"
-	turret "Energy Cannon Turret"
+
+
 
 mission "Grudge Legacy"
 	landing

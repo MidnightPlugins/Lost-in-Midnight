@@ -338,6 +338,37 @@ ship "Bactrian" "Bactrian (Hijacked)"
 	turret "Heavy Laser Turret"
 	turret "Heavy Anti-Missile Turret"
 
+ship "Bactrian" "Bactrian (Shield Suppressor)"
+	outfits
+		"Sidewinder Missile Launcher" 2
+		"Sidewinder Missile" 90
+		"Heavy Laser" 2
+		"Heavy Laser Turret" 4
+		"Heavy Anti-Missile Turret" 2
+		"Fusion Reactor"
+		"LP144a Battery Pack"
+		"D94-YV Shield Generator"
+		"Large Radar Jammer"
+		"Luxury Accommodations"
+		"Ramscoop"
+		"Laser Rifle" 139
+		"Sniper Rifle"
+		"X4700 Ion Thruster"
+		"X5200 Ion Steering"
+		"Scram Drive"
+		"Shield Suppressor" 6
+	gun "Heavy Laser"
+	gun "Heavy Laser"
+	gun "Sidewinder Missile Launcher"
+	gun "Sidewinder Missile Launcher"
+	turret "Heavy Laser Turret"
+	turret "Heavy Anti-Missile Turret"
+	turret "Heavy Laser Turret"
+	turret "Heavy Laser Turret"
+	turret "Heavy Laser Turret"
+	turret "Heavy Anti-Missile Turret"
+
+
 
 
 ship "Battle Barge" "Battle Barge (Turbo Blaster)"
@@ -718,29 +749,28 @@ ship "Bulk Freighter" "Bulk Freighter (syndicate drones)"
 
 ship "Bulk Freighter" "Bulk Freighter (Korath)"
 	outfits
-		"Sidewinder Missile Launcher" 2
-		"Sidewinder Missile" 90
-		"Banisher Grav-Turret"
-		"Laser Turret" 2
-		"Warder Anti-Missile" 2
-		
-		"NT-200 Nucleovoltaic"
-		"Systems Core (Medium)"
-		"Small Heat Shunt"
-		"Small Radar Jammer"
+		"Banisher Grav-Turret" 2
+		"Fuel Processor"
+		"Generator (Furnace Class)"
 		"Interference Plating" 2
-		"Thermal Repeater Rifle"
-		"Laser Rifle" 6
-		
-		"X3700 Ion Thruster"
-		"X3200 Ion Steering"
 		"Jump Drive"
+		"Laser Rifle" 6
+		"Sidewinder Missile" 54
+		"Sidewinder Missile Pod" 2
+		"Sidewinder Missile Rack" 2
+		"Small Heat Shunt"
+		"Smuggler's Hideaway" 2
+		"Systems Core (Medium)"
+		"Thermal Repeater Rifle"
+		"Warder Anti-Missile" 3
+		"X3200 Ion Steering"
+		"X3700 Ion Thruster"
 
-	turret "Laser Turret"
-	turret "Warder Anti-Missile"
 	turret "Banisher Grav-Turret"
 	turret "Warder Anti-Missile"
-	turret "Laser Turret"
+	turret "Warder Anti-Missile"
+	turret "Warder Anti-Missile"
+	turret "Banisher Grav-Turret"
 
 ship "Bulk Freighter" "Bulk Freighter (Proton Turret-ATS)"
 	outfits
@@ -1267,36 +1297,32 @@ ship "Falcon" "Falcon (Flamethrower)"
 
 ship "Falcon" "Falcon (Korath)"
 	outfits
-		"Plasma Cannon" 2
-		"Torpedo Launcher" 2
-		"Torpedo" 60
-		"Banisher Grav-Turret" 2
-		"Warder Anti-Missile" 2
-
-		"Breeder Reactor"
-		"Systems Core (Medium)"
-		"Small Heat Shunt" 2
-		"Brig"
-		"Medical Bay"
-		"Thermal Repeater Rifle" 15
-		"Laser Rifle" 37
-
-		"Thruster (Planetary Class)"
-		"Steering (Planetary Class)"
+		"Blaze-Pike Turret" 2
+		Brig
+		"Digger Mining Beam" 2
+		"Digger Mining Turret"
+		"Double Plasma Core"
+		"Fuel Processor"
 		"Jump Drive"
-
-	gun "Plasma Cannon"
-	gun "Plasma Cannon"
+		"Large Heat Shunt"
+		"Laser Rifle" 37
+		"Outfits Expansion" 2
+		"Small Heat Shunt" 3
+		"Steering (Planetary Class)"
+		"Systems Core (Medium)"
+		"Thermal Repeater Rifle" 15
+		"Thruster (Planetary Class)"
+		Torpedo 60
+		"Torpedo Launcher" 2
+		"Warder Anti-Missile"
+	gun "Digger Mining Beam"
+	gun "Digger Mining Beam"
 	gun "Torpedo Launcher"
 	gun "Torpedo Launcher"
-	turret "Banisher Grav-Turret"
+	turret "Blaze-Pike Turret"
+	turret "Blaze-Pike Turret"
 	turret "Warder Anti-Missile"
-	turret "Warder Anti-Missile"
-	turret "Banisher Grav-Turret"
-
-
-
-
+	turret "Digger Mining Turret"
 
 
 
@@ -1411,6 +1437,25 @@ ship "Freighter" "Freighter (Proton Turret-ATS)"
 
 
 
+ship "Fury" "Fury (Korath)"
+	outfits
+		"Cargo Scanner"
+		"Digger Mining Beam"
+		Fire-Lance
+		"Generator (Furnace Class)"
+		"Jump Drive"
+		"Meteor Missile" 44
+		"Meteor Missile Box" 2
+		"Meteor Missile Pod" 2
+		"Small Heat Shunt"
+		"Small Radar Jammer"
+		"Steering (Asteroid Class)"
+		"Systems Core (Tiny)"
+		"Thruster (Asteroid Class)"
+	gun 
+	gun 
+	gun "Meteor Missile Pod"
+	gun "Meteor Missile Pod"
 
 ship "Fury" "Fury (Bomber Limit Break)"
 	outfits
@@ -1563,6 +1608,46 @@ ship "Hawk" "Hawk (Hai)"
 		"Small Radar Jammer"
 		"Dual Pulse Pistols"
 
+ship "Hawk" "Hawk (Korath)"
+	outfits
+		Brig
+		"Cargo Expansion"
+		"Digger Mining Beam"
+		Fire-Lance
+		"Fuel Processor"
+		"Generator (Furnace Class)"
+		"Interference Plating" 5
+		"Jump Drive"
+		"Small Heat Shunt"
+		"Small Radar Jammer"
+		"Steering (Asteroid Class)"
+		"Systems Core (Tiny)"
+		"Thruster (Asteroid Class)"
+
+
+
+ship "Headhunter" "Headhunter (Korath)"
+	outfits
+		Brig
+		"Cargo Scanner"
+		"Digger Mining Beam" 2
+		"Engine (Meteor Class)"
+		"Fuel Processor"
+		"Generator (Furnace Class)"
+		"Jump Drive"
+		"Sidewinder Missile" 54
+		"Sidewinder Missile Pod" 2
+		"Sidewinder Missile Rack" 2
+		"Small Heat Shunt"
+		"Steering (Asteroid Class)"
+		"Systems Core (Medium)"
+		"Thruster (Asteroid Class)"
+		"Warder Anti-Missile"
+	gun "Sidewinder Missile Pod"
+	gun "Sidewinder Missile Pod"
+	gun "Digger Mining Beam"
+	gun "Digger Mining Beam"
+
 
 
 ship "Leviathan" "Leviathan (Turbo Blaster)"
@@ -1586,6 +1671,29 @@ ship "Leviathan" "Leviathan (Turbo Blaster)"
 
 
 
+ship "Missileboat" "Missileboat (Nuclear)"
+	outfits
+		"Nuclear Missile" 2
+		"Sidewinder Missile Launcher" 2
+		"Sidewinder Missile" 113
+		"Sidewinder Missile Rack"
+		"nGVF-CC Fuel Cell"
+		"LP036a Battery Pack"
+		"D67-TM Shield Generator"
+		"Fuel Pod"
+		"Laser Rifle" 3
+		"Fragmentation Grenades" 3
+		"Sniper Rifle"
+		"A120 Atomic Thruster"
+		"A125 Atomic Steering"
+		"Scram Drive"
+	gun
+	gun
+	gun "Nuclear Missile"
+	gun "Nuclear Missile"
+	gun "Sidewinder Missile Launcher"
+	gun "Sidewinder Missile Launcher"
+
 ship "Missileboat" "Missileboat (Turbo Blaster)"
 	outfits
 		"Turbo Blaster" 2
@@ -1607,6 +1715,30 @@ ship "Missileboat" "Missileboat (Turbo Blaster)"
 	gun "Meteor Missile Launcher"
 	gun "Meteor Missile Launcher"
 	gun "Meteor Missile Launcher"
+
+ship "Missileboat" "Missileboat (Used)"
+	outfits
+		"Modified Blaster" 2
+		"Meteor Missile Launcher" 4
+		"Meteor Missile" 180
+		"Meteor Missile Box" 4
+		"nGVF-CC Fuel Cell"
+		"LP036a Battery Pack"
+		"D14-RN Shield Generator"
+		"Large Radar Jammer"
+		"Tactical Scanner"
+		"Limit Breaker"
+		"Sniper Rifle"
+		"X2700 Ion Thruster"
+		"X2200 Ion Steering"
+		"Hyperdrive"
+	gun "Modified Blaster"
+	gun "Modified Blaster"
+	gun "Meteor Missile Launcher"
+	gun "Meteor Missile Launcher"
+	gun "Meteor Missile Launcher"
+	gun "Meteor Missile Launcher"
+
 
 
 
@@ -1912,32 +2044,55 @@ ship "Patrolboat" "Patrolboat (Turbo Blaster)"
 		"X2200 Ion Steering"
 		"X3700 Ion Thruster"
 
+ship "Patrolboat" "Patrolboat (Used)"
+	outfits
+		Brig
+		"Cargo Scanner"
+		"Cooling Ducts"
+		"D41-HY Shield Generator"
+		Hyperdrive
+		"LP144a Battery Pack"
+		"Laser Rifle" 4
+		"Modified D23-QP Shielding"
+		"Outfit Scanner"
+		"RT-I Radiothermal"
+		"Small Radar Jammer"
+		"Tactical Scanner"
+		"Limit Breaker"
+		"Modified Blaster" 4
+		"X2200 Ion Steering"
+		"X3700 Ion Thruster"
+
 
 
 ship "Protector" "Protector (Korath)"
 	outfits
-		"Laser Turret" 2
-		"Grab-Strike Turret" 2
-		"Banisher Grav-Turret"
-		"Warder Anti-Missile"
-
-		"Fusion Reactor"
-		"Generator (Furnace Class)"
-		"LP072a Battery Pack"
-		"Systems Core (Medium)"
-		"Large Heat Shunt" 
-		"Thermal Repeater Rifle" 6
-		"Laser Rifle" 30
-
-		"X3700 Ion Thruster"
-		"X3200 Ion Steering"
+		"Blaze-Pike Turret" 2
+		"Cargo Scanner"
+		"Digger Mining Turret" 4
+		"Double Plasma Core"
+		"Fuel Processor"
+		"Interference Plating" 2
 		"Jump Drive"
-
-	turret "Laser Turret"
-	turret "Laser Turret"
-	turret "Grab-Strike Turret"
-	turret "Grab-Strike Turret"
-	turret "Banisher Grav-Turret"
+		"Large Heat Shunt"
+		"Laser Rifle" 30
+		"Meteor Missile" 44
+		"Meteor Missile Box" 2
+		"Meteor Missile Pod" 2
+		"Scram Drive"
+		"Small Heat Shunt" 3
+		"Systems Core (Medium)"
+		"Thermal Repeater Rifle" 6
+		"Warder Anti-Missile" 2
+		"X3200 Ion Steering"
+		"X3700 Ion Thruster"
+	turret "Warder Anti-Missile"
+	turret "Blaze-Pike Turret"
+	turret "Blaze-Pike Turret"
+	turret "Digger Mining Turret"
+	turret "Digger Mining Turret"
+	turret "Digger Mining Turret"
+	turret "Digger Mining Turret"
 	turret "Warder Anti-Missile"
 
 
@@ -1968,7 +2123,7 @@ ship "Protector" "Protector (Proton Turret-ATS)"
 
 
 
-ship "Rainmaker" "Rainmaker (Nuclear)"
+ship "Missileboat" "Rainmaker (Nuclear)"
 	outfits
 		"Nuclear Missile" 2
 		"Sidewinder Missile Launcher" 2
@@ -2211,6 +2366,19 @@ ship "Sparrow" "Sparrow (Afterburner)"
 		"X1700 Ion Thruster"
 		"nGVF-BB Fuel Cell"
 
+ship "Sparrow" "Sparrow (Korath)"
+	outfits
+		"Beam Laser"
+		"Cargo Scanner"
+		"Digger Mining Beam"
+		"Generator (Furnace Class)"
+		"Jump Drive"
+		"Small Heat Shunt"
+		"Small Radar Jammer"
+		"Steering (Asteroid Class)"
+		"Systems Core (Tiny)"
+		"Thruster (Asteroid Class)"
+
 ship "Sparrow" "Sparrow (Limit Break)"
 	outfits
 		"Beam Laser" 2
@@ -2260,27 +2428,23 @@ ship "Sparrow" "Sparrow (Turbo Blaster)"
 
 ship "Splinter" "Splinter (Korath)"
 	outfits
-		"Plasma Cannon" 2
-		"Blaster Turret" 2
-		"Warder Anti-Missile" 1
-		
-		"KP-6 Photovoltaic Array"
-		"NT-200 Nucleovoltaic"
-		"Systems Core (Medium)"
-		"Large Heat Shunt"
-		"Large Radar Jammer"
-		"Interference Plating" 4
-		"Brig"
-		"Thermal Repeater Rifle"
-		"Laser Rifle" 7
-		
-		"X3700 Ion Thruster"
-		"X3200 Ion Steering"
+		Brig
+		"Digger Mining Turret" 2
+		"Double Plasma Core"
+		Fire-Lance 2
+		"Fuel Processor"
+		"Interference Plating" 2
 		"Jump Drive"
-
-	turret "Blaster Turret"
+		"Large Heat Shunt"
+		"Laser Rifle" 7
+		"Systems Core (Medium)"
+		"Thermal Repeater Rifle"
+		"Warder Anti-Missile"
+		"X3200 Ion Steering"
+		"X3700 Ion Thruster"
+	turret "Digger Mining Turret"
 	turret "Warder Anti-Missile"
-	turret "Blaster Turret"
+	turret "Digger Mining Turret"
 
 
 
@@ -2546,41 +2710,75 @@ ship "Star Queen" "Star Queen (Hijacked)"
 
 
 
+ship "Starcadia" "Starcadia (Prototype)"
+	outfits
+		"Beam Laser" 2
+		"Torpedo Launcher" 2
+		"Torpedo" 60
+		"Laser Turret" 6
+		"Fission Reactor"
+		"LP144a Battery Pack"
+		"D41-HY Shield Generator"
+		"Large Radar Jammer"
+		"Antique Rifle" 10
+		"Fragmentation Grenades" 10
+		"Security Station"
+		"X3700 Ion Thruster"
+		"X3200 Ion Steering"
+		"Hyperdrive"
+	gun "Beam Laser"
+	gun "Beam Laser"
+	gun "Torpedo Launcher"
+	gun "Torpedo Launcher"
+	description "The Starcadia was a Deep Security prototype ship in development near the end of the Alpha War. The ship was stolen before the design could be finalized for mass production. While the technology on it is a bit dated, this was a cutting edge ship for its time, easily surpassing the Navy Frigate."
+
+
 
 ship "Quicksilver" "Quicksilver (Korath)"
 	outfits
-		"Fire-Lance" 2
-		
+		Brig
+		Fire-Lance 2
+		"Fuel Processor"
 		"Generator (Furnace Class)"
-		"LP036a Battery Pack"
-		"Supercapacitor"
-		"Systems Core (Medium)"
-		"Large Heat Shunt"
-		"Thermal Repeater Rifle"
-		"Laser Rifle" 3
-		
-		"Thruster (Asteroid Class)" 2
-		"Steering (Asteroid Class)" 2
+		"Interference Plating"
 		"Jump Drive"
+		"Laser Rifle" 3
+		"Small Heat Shunt"
+		"Small Radar Jammer" 2
+		"Steering (Asteroid Class)" 2
+		"Systems Core (Medium)"
+		"Thermal Repeater Rifle"
+		"Thruster (Asteroid Class)" 2
 
 
 
 ship "Vanguard" "Vanguard (Korath)"
 	outfits
-		"Fire-Lance" 7
-		"Warder Anti-Missile"
-		"Fusion Reactor"
-		"LP144a Battery Pack"
-		"Systems Core (Medium)" 1
+		Brig
+		"Cargo Scanner"
+		"Digger Mining Beam"
+		"Double Plasma Core"
+		Fire-Lance 6
+		"Fuel Processor"
+		"Interference Plating" 5
+		"Jump Drive"
 		"Large Heat Shunt"
-		"Small Heat Shunt"
-		"Interference Plating" 3
-		"Brig"
+		"Laser Rifle" 23
+		"Scram Drive"
+		"Small Heat Shunt" 3
+		"Small Radar Jammer"
+		"Systems Core (Medium)"
 		"Thermal Repeater Rifle" 4
-		"Laser Rifle" 23		
+		"Warder Anti-Missile"
 		"X3700 Ion Thruster"
 		"X4200 Ion Steering"
-		"Jump Drive"
+	gun "Digger Mining Beam"
+	gun "Fire-Lance"
+	gun "Fire-Lance"
+	gun "Fire-Lance"
+	gun "Fire-Lance"
+	gun "Fire-Lance"
+	gun "Fire-Lance"
 
 ship "Vanguard" "Vanguard (Plasma Cluster)"
 	outfits
@@ -2614,6 +2812,86 @@ ship "Vanguard" "Vanguard (Proton Gun-CF8)"
 
 
 
+ship "War Hauler" "Grudge Hammer"
+	outfits
+		"Energy Cannon" 2
+		"Energy Cannon Turret" 6
+		"Anti-Missile Turret" 2
+		"Meteor Missile Launcher"
+		"Meteor Missile" 30
+		"Fission Reactor"
+		"LP072a Battery Pack"
+		"D41-HY Shield Generator"
+		"Modified D41-HY Shielding"
+		"Outfits Expansion"
+		"Large Radar Jammer"
+		"Antique Rifle" 3
+		"Fragmentation Grenades"
+		"Microwave Cannon"
+		"Security Station"
+		"Greyhound Plasma Thruster"
+		"Impala Plasma Steering"
+		Hyperdrive
+	gun "Energy Cannon"
+	gun "Meteor Missile Launcher"
+	gun "Energy Cannon"
+	turret "Energy Cannon Turret"
+	turret "Energy Cannon Turret"
+	turret "Energy Cannon Turret"
+	turret "Anti-Missile Turret"
+	turret "Anti-Missile Turret"
+	turret "Energy Cannon Turret"
+	turret "Energy Cannon Turret"
+	turret "Energy Cannon Turret"
+
+ship "War Hauler" "Memoria Alpha"
+	outfits
+		"Energy Cannon" 2
+		"Energy Cannon Turret" 6
+		"Anti-Missile Turret" 2
+		"Meteor Missile Launcher"
+		"Meteor Missile" 30
+		"Fission Reactor"
+		"LP072a Battery Pack"
+		"D41-HY Shield Generator"
+		"Modified D41-HY Shielding"
+		"Outfits Expansion"
+		"Large Radar Jammer"
+		"Antique Rifle" 3
+		"Fragmentation Grenades"
+		"Shield Suppressor"
+		"Security Station"
+		"Greyhound Plasma Thruster"
+		"Impala Plasma Steering"
+		Hyperdrive
+	gun "Energy Cannon"
+	gun "Meteor Missile Launcher"
+	gun "Energy Cannon"
+	turret "Energy Cannon Turret"
+	turret "Energy Cannon Turret"
+	turret "Energy Cannon Turret"
+	turret "Anti-Missile Turret"
+	turret "Anti-Missile Turret"
+	turret "Energy Cannon Turret"
+	turret "Energy Cannon Turret"
+	turret "Energy Cannon Turret"
+
+
+
+ship "Wasp" "Wasp (Korath)"
+	outfits
+		"Cargo Scanner"
+		Fire-Lance
+		"Fuel Processor"
+		"Generator (Furnace Class)"
+		"Jump Drive"
+		"Small Heat Shunt"
+		"Small Radar Jammer"
+		"Steering (Asteroid Class)"
+		"Systems Core (Tiny)"
+		"Thruster (Asteroid Class)"
+
+
 ship "Wasp" "Wasp (Limit Break)"
 	outfits
 		"Energy Blaster" 2
@@ -2631,6 +2909,7 @@ ship "Wasp" "Wasp (Limit Break)"
 
 
 ship "Derelict Albatross"
+	"uncapturable"
 	plural "Albatrosses"
 	sprite "ship/albatross"
 	attributes
@@ -2645,6 +2924,7 @@ ship "Derelict Albatross"
 
 
 ship "Derelict Aerie"
+	"uncapturable"
 	sprite "ship/aerie"
 	thumbnail "thumbnail/aerie"
 	attributes
@@ -2657,6 +2937,7 @@ ship "Derelict Aerie"
 	explode "small explosion" 25
 
 ship "Derelict Argosy"
+	"uncapturable"
 	sprite "ship/argosy"
 	thumbnail "thumbnail/argosy"
 	attributes
@@ -2670,6 +2951,7 @@ ship "Derelict Argosy"
 
 
 ship "Derelict Bounder"
+	"uncapturable"
 	sprite "ship/bounder"
 	thumbnail "thumbnail/bounder"
 	attributes
@@ -2682,6 +2964,7 @@ ship "Derelict Bounder"
 	explode "small explosion" 20
 
 ship "Derelict Corvette"
+	"uncapturable"
 	sprite "ship/corvette"
 	thumbnail "thumbnail/corvette"
 	attributes
@@ -2695,6 +2978,7 @@ ship "Derelict Corvette"
 
 
 ship "Derelict Freighter"
+	"uncapturable"
 	sprite "ship/freighter"
 	thumbnail "thumbnail/freighter"
 	attributes
@@ -2709,6 +2993,7 @@ ship "Derelict Freighter"
 
 
 ship "Derelict Hauler"
+	"uncapturable"
 	sprite "ship/hauler i"
 	thumbnail "thumbnail/hauler i"
 	attributes
@@ -2721,6 +3006,7 @@ ship "Derelict Hauler"
 	explode "small explosion" 35
 
 ship "Derelict Hauler II"
+	"uncapturable"
 	sprite "ship/hauler ii"
 	thumbnail "thumbnail/hauler ii"
 	attributes
@@ -2733,6 +3019,7 @@ ship "Derelict Hauler II"
 	explode "small explosion" 25
 
 ship "Derelict Headhunter"
+	"uncapturable"
 	sprite "ship/headhunter"
 	thumbnail "thumbnail/headhunter"
 	attributes
@@ -2747,6 +3034,7 @@ ship "Derelict Headhunter"
 
 
 ship "Derelict Mule"
+	"uncapturable"
 	sprite "ship/mule"
 	thumbnail "thumbnail/mule"
 	attributes
@@ -2761,6 +3049,7 @@ ship "Derelict Mule"
 
 
 ship "Derelict Raven"
+	"uncapturable"
 	sprite "ship/raven"
 	thumbnail "thumbnail/raven"
 	attributes
@@ -2774,6 +3063,7 @@ ship "Derelict Raven"
 
 
 ship "Derelict Scout"
+	"uncapturable"
 	sprite "ship/scout"
 	thumbnail "thumbnail/scout"
 	attributes
@@ -2784,6 +3074,21 @@ ship "Derelict Scout"
 		"heat dissipation" .7
 	explode "tiny explosion" 10
 	explode "small explosion" 20
+
+ship "Derelict Marauder Falcon"
+	"uncapturable"
+	sprite "ship/mfalcons"
+	thumbnail "thumbnail/mfalcons"
+	attributes
+		category "Heavy Warship"
+		"hull" 410
+		"mass" 560
+		"drag" 6.7
+		"heat dissipation" .8
+	explode "small explosion" 55
+	explode "medium explosion" 60
+	explode "large explosion" 40
+
 
 
 ############
