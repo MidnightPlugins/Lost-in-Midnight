@@ -57,6 +57,13 @@ and from public domain sources
 Additional Image Sources:
 
 Files:
+ images/land/uclengineering1
+Copyright: UCL Engineering
+License: cc-by-sa-2.0
+Comment: cropped original image
+
+
+Files:
  images/land/nasa*
  images/planet/nasa*
 Copyright: NASA
