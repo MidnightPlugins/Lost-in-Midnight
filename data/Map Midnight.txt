@@ -1114,12 +1114,12 @@ planet "Wildland"
 	description `This earth-like planet is covered in decaying ruins. But they don't appear to be Hai ruins. On this world it seems another species evolved, thrived, then died out during the Hai's long absence. Wild animals roam the streets and birds nest in the taller structures. You imagine this is how Earth would turn out if humans ever abandoned it.`
 
 planet "Cadrelock Rock"
-	attributes uninhabited midnight "dirt belt"
+	attributes uninhabited station midnight "dirt belt"
 	landscape land/uclengineering1
 	music ambient/derelict
-	description `A haven from the patrols of the Navy, Cadrelock Rock is little more than a some fuel tanks and a ramscoop bolted onto an asteroid. It is a small hidden waystation used by pirates who don't have enough fuel to carry them through the Dirt Tunnel. Most of the structure is hidden beneath the rocky surface of the asteroid, making the waystation inconspicuous to anyone looking at it from a distance.
-	spaceport `The fueling equipment is ancient but still in working condition. The pirates must have an unspoken agreement not to trash this remote outpost.
-	government "Pirate"
+	description `Cadrelock Rock is little more than a some fuel tanks and a ramscoop bolted onto an asteroid. It is a small hidden waystation often used by pirates. Most of the structure is buried beneath the rocky surface of the asteroid, making the waystation inconspicuous to anyone looking at it from a distance.`
+	spaceport `The equipment for refueling ships is ancient but still in working condition. Either someone has been performing regular maintenance on it or the pirates have an agreement not to trash this remote outpost.`
+	government "Uninhabited"
 
 planet Corpse
 	attributes uninhabited midnight
@@ -1144,6 +1144,7 @@ planet "Eureka Station"
 	music ambient/derelict
 	description `Eureka Station was originally built as a processing facility and harvesting outpost during the early Deuterium Rush. It wasn't long before the station attracted the attention of pirates. After being captured, it remained under pirate control until shortly after the foundation of the Republic.`
 	description `	When the Navy began its crackdown on pirate activities, Eureka Station was among the first of the outlaw havens to fall. After the Republic established control of the station, attempts were made to restart deuterium processing operations. Those plans came to an end with the Alpha war. The battle of Ipsing brought about the station's final downfall. A barrage of rocket fire sent Eureka out of its established orbit. Since then it has remained an uninhabited derelict, slowly drifting towards the system's edge.`
+	spaceport `The damage that destroyed any hope of returning Eureka to its former glory has caused many sections of the station to either lack an atmosphere or be flooded with toxic chemicals released from the fuel processing equipment. Due to a malfunction in the environmental controls, the temperature in the few habitable areas is also below freezing. You can search the station for fuel, but wearing an environmental suit is essential.`
 	government Uninhabited
 	security 0
 
