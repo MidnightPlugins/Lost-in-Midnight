@@ -659,22 +659,24 @@ fleet "S. Advanced Independent"
 		"Firebird (Hai Shields)"
 	variant 1
 		"Firebird (Hai Weapons)"
-	variant 2
-		"Headhunter (Hai)"
-	variant 1
-		"Hauler II (Hai)"
-	variant 2
-		"Hauler (Hai)"
-	variant 4
-		"Freighter (Hai)"
 	variant 1
 		"Corvette (Hai)"
-	variant 4
-		"Bounder (Hai)"
-	variant 4
-		"Arrow (Hai)"
 	variant 1
-		"Osprey (Alien Weapons)"
+		"Aerie (Hai)"
+		"Lance"
+		"Dagger"
+	variant 2
+		"Headhunter (Hai)"
+	variant 2
+		"Raven (Hai)"
+	variant 4
+		"Hawk (Hai)"
+	variant 4
+		"Fury (Hai)"
+	variant 4
+		"Berserker (Hai)"
+	variant 4
+		"Scout (Hai)"
 
 
 
@@ -747,21 +749,6 @@ fleet "L. Advanced Independent"
 	variant 1
 		"Falcon (Korath)"
 		"Sparrow (Korath)" 3
-	variant 1
-		"Bastion (Korath)"
-		"Hawk (Korath)" 2
-	variant 1
-		"Roost (Korath)"
-		"'olofez" 4
-		"Hawk (Korath)" 2
-	variant 1
-		"Aerie (Korath)"
-		"'olofez" 2
-		"Fury (Korath)" 2
-	variant 1
-		"Nest (Korath)"
-		"'olofez" 2
-		"Hawk (Korath)" 2
 	variant 2
 		"Splinter (Korath)"
 		"Quicksilver (Korath)"
@@ -791,7 +778,7 @@ fleet "L. Advanced Independent"
 		"Modified Argosy (Korath)"
 		"Fury (Korath)" 2
 	variant 1
-		"Geocoris"
+		"Shield Beetle"
 	variant 1
 		"Bactrian (Hai Weapons)"
 		"Dagger" 3
@@ -806,7 +793,8 @@ fleet "L. Advanced Independent"
 	variant 1
 		"Bactrian (Hai Weapons)"
 		"Dagger" 3
-		"Osprey (Alien Weapons)"
+		"Aerie (Hai)"
+		"Lance" 2
 	variant 1
 		"Bactrian (Hai Weapons)"
 		"Dagger" 3
@@ -818,75 +806,56 @@ fleet "L. Advanced Independent"
 	variant 1
 		"Bactrian (Hai Weapons)"
 		"Dagger" 3
-		"Bounder (Hai)" 3
+		"Raven (Hai)" 2
 	variant 1
 		"Bactrian (Hai Weapons)"
 		"Dagger" 3
-		"Arrow (Hai)" 3
+		"Hawk (Hai)" 3
+	variant 1
+		"Bactrian (Hai Weapons)"
+		"Dagger" 3
+		"Fury (Hai)" 3
+	variant 1
+		"Bactrian (Hai Weapons)"
+		"Dagger" 3
+		"Berserker (Hai)" 3
+	variant 1
+		"Bactrian (Hai Weapons)"
+		"Dagger" 3
+		"Scout (Hai)" 3
 	variant 2
 		"Leviathan (Hai Weapons)"
 	variant 1
 		"Leviathan (Hai Weapons)"
-		"Container Transport (Hai)"
-	variant 1
-		"Leviathan (Hai Weapons)"
-		"Hauler III (Hai)"
-	variant 1
-		"Leviathan (Hai Weapons)"
-		"Star Queen (Hai)"
-	variant 1
-		"Leviathan (Hai Weapons)"
 		"Firebird (Hai Shields)"
 	variant 1
 		"Leviathan (Hai Weapons)"
 		"Firebird (Hai Weapons)"
 	variant 1
 		"Leviathan (Hai Weapons)"
-		"Osprey (Alien Weapons)"
+		"Aerie (Hai)"
+		"Dagger" 2
 	variant 1
 		"Leviathan (Hai Weapons)"
 		"Corvette (Hai)"
 	variant 1
 		"Leviathan (Hai Weapons)"
-		"Hauler II (Hai)"
-	variant 1
-		"Leviathan (Hai Weapons)"
 		"Headhunter (Hai)" 2
 	variant 1
 		"Leviathan (Hai Weapons)"
-		"Hauler (Hai)" 2
+		"Raven (Hai)" 2
 	variant 1
 		"Leviathan (Hai Weapons)"
-		"Freighter (Hai)" 2
+		"Hawk (Hai)" 3
 	variant 1
 		"Leviathan (Hai Weapons)"
-		"Bounder (Hai)" 3
+		"Fury (Hai)" 3
 	variant 1
 		"Leviathan (Hai Weapons)"
-		"Arrow (Hai)" 3
+		"Berserker (Hai)" 3
 	variant 1
-		"Behemoth (Hai)"
-	variant 1
-		"Behemoth (Hai)"
-		"Firebird (Hai Shields)"
-	variant 1
-		"Behemoth (Hai)"
-		"Firebird (Hai Weapons)"
-	variant 1
-		"Behemoth (Hai)"
-		"Osprey (Alien Weapons)"
-	variant 1
-		"Behemoth (Hai)"
-		"Corvette (Hai)"
-	variant 1
-		"Behemoth (Hai)"
-		"Headhunter (Hai)" 2
-	variant 1
-		"Behemoth (Hai)"
-		"Bounder (Hai)" 3
-	variant 1
-		"Behemoth (Hai)"
-		"Arrow (Hai)" 3
+		"Leviathan (Hai Weapons)"
+		"Scout (Hai)" 3
 	variant 1
 		"Mule (Hai Weapons)"
 	variant 1
@@ -894,18 +863,26 @@ fleet "L. Advanced Independent"
 	variant 1
 		"Firebird (Hai Weapons)"
 	variant 1
-		"Osprey (Alien Weapons)"
+		"Aerie (Hai)"
+		"Dagger" 2
 	variant 1
 		"Corvette (Hai)"
 	variant 1
 		"Headhunter (Hai)" 2
 	variant 1
-		"Bounder (Hai)" 3
+		"Raven (Hai)" 2
 	variant 1
-		"Arrow (Hai)" 3
+		"Hawk (Hai)" 3
+	variant 1
+		"Fury (Hai)" 3
+	variant 1
+		"Berserker (Hai)" 3
+	variant 1
+		"Scout (Hai)" 3
 	variant 1
 		"Firebird (Hai Weapons)"
-		"Osprey (Alien Weapons)"
+		"Aerie (Hai)"
+		"Dagger" 2
 	variant 1
 		"Firebird (Hai Weapons)"
 		"Corvette (Hai)"
@@ -914,32 +891,99 @@ fleet "L. Advanced Independent"
 		"Headhunter (Hai)"
 	variant 1
 		"Firebird (Hai Weapons)"
+		"Raven (Hai)"
+	variant 1
+		"Firebird (Hai Weapons)"
 		"Bounder (Hai)" 2
 	variant 1
 		"Firebird (Hai Weapons)"
-		"Arrow (Hai)" 2
+		"Hawk (Hai)" 2
 	variant 1
-		"Osprey (Alien Weapons)"
+		"Firebird (Hai Weapons)"
+		"Fury (Hai)" 2
+	variant 1
+		"Firebird (Hai Weapons)"
+		"Berserker (Hai)" 2
+	variant 1
+		"Firebird (Hai Weapons)"
+		"Scout (Hai)" 2
+	variant 1
+		"Aerie (Hai)"
+		"Dagger" 2
 		"Corvette (Hai)"
 	variant 1
-		"Osprey (Alien Weapons)"
+		"Aerie (Hai)"
+		"Dagger" 2
 		"Headhunter (Hai)"
 	variant 1
-		"Osprey (Alien Weapons)"
-		"Bounder (Hai)" 2
+		"Aerie (Hai)"
+		"Dagger" 2
+		"Raven (Hai)"
 	variant 1
-		"Osprey (Alien Weapons)"
-		"Arrow (Hai)" 2
+		"Aerie (Hai)"
+		"Dagger" 2
+	variant 1
+		"Aerie (Hai)"
+		"Dagger" 2
+		"Hawk (Hai)" 2
+	variant 1
+		"Aerie (Hai)"
+		"Dagger" 2
+		"Fury (Hai)" 2
+	variant 1
+		"Aerie (Hai)"
+		"Dagger" 2
+		"Berserker (Hai)" 2
+	variant 1
+		"Aerie (Hai)"
+		"Dagger" 2
+		"Scout (Hai)" 2
 	variant 1
 		"Corvette (Hai)"
 		"Headhunter (Hai)"
 	variant 1
 		"Corvette (Hai)"
-		"Bounder (Hai)" 2
+		"Raven (Hai)"
 	variant 1
 		"Corvette (Hai)"
-		"Arrow (Hai)" 2
-
+		"Hawk (Hai)" 2
+	variant 1
+		"Corvette (Hai)"
+		"Fury (Hai)" 2
+	variant 1
+		"Corvette (Hai)"
+		"Berserker (Hai)" 2
+	variant 1
+		"Corvette (Hai)"
+		"Scout (Hai)" 2
+	variant 1
+		"Mule (Hai Weapons)"
+		"Firebird (Hai Weapons)"
+	variant 1
+		"Mule (Hai Weapons)"
+		"Aerie (Hai)"
+		"Dagger"
+	variant 1
+		"Mule (Hai Weapons)"
+		"Corvette (Hai)"
+	variant 1
+		"Mule (Hai Weapons)"
+		"Raven (Hai)" 2
+	variant 1
+		"Mule (Hai Weapons)"
+		"Headhunter (Hai)" 2
+	variant 1
+		"Mule (Hai Weapons)"
+		"Hawk (Hai)" 3
+	variant 1
+		"Mule (Hai Weapons)"
+		"Fury (Hai)" 3
+	variant 1
+		"Mule (Hai Weapons)"
+		"Berserker (Hai)" 3
+	variant 1
+		"Mule (Hai Weapons)"
+		"Scout (Hai)" 3
 
 
 
@@ -1038,25 +1082,24 @@ fleet "S. Advanced Independent (Killable)"
 	variant 4
 		"Sparrow (Korath)"
 	variant 1
-		"Firebird (Hai Shields)"
-	variant 1
 		"Firebird (Hai Weapons)"
-	variant 2
-		"Headhunter (Hai)"
 	variant 1
-		"Hauler II (Hai)"
-	variant 2
-		"Hauler (Hai)"
-	variant 4
-		"Freighter (Hai)"
+		"Aerie (Hai)"
+		"Dagger"
 	variant 1
 		"Corvette (Hai)"
+	variant 2
+		"Raven (Hai)"
+	variant 2
+		"Headhunter (Hai)"
 	variant 4
-		"Bounder (Hai)"
+		"Hawk (Hai)"
 	variant 4
-		"Arrow (Hai)"
-	variant 1
-		"Osprey (Alien Weapons)"
+		"Fury (Hai)"
+	variant 4
+		"Berserker (Hai)"
+	variant 4
+		"Scout (Hai)"
 
 
 
@@ -1129,21 +1172,6 @@ fleet "L. Advanced Independent (Killable)"
 	variant 1
 		"Falcon (Korath)"
 		"Sparrow (Korath)" 3
-	variant 1
-		"Bastion (Korath)"
-		"Hawk (Korath)" 2
-	variant 1
-		"Roost (Korath)"
-		"'olofez" 4
-		"Hawk (Korath)" 2
-	variant 1
-		"Aerie (Korath)"
-		"'olofez" 2
-		"Fury (Korath)" 2
-	variant 1
-		"Nest (Korath)"
-		"'olofez" 2
-		"Hawk (Korath)" 2
 	variant 2
 		"Splinter (Korath)"
 		"Quicksilver (Korath)"
@@ -1173,7 +1201,7 @@ fleet "L. Advanced Independent (Killable)"
 		"Modified Argosy (Korath)"
 		"Fury (Korath)" 2
 	variant 1
-		"Geocoris"
+		"Shield Beetle"
 	variant 1
 		"Bactrian (Hai Weapons)"
 		"Dagger" 3
@@ -1188,7 +1216,8 @@ fleet "L. Advanced Independent (Killable)"
 	variant 1
 		"Bactrian (Hai Weapons)"
 		"Dagger" 3
-		"Osprey (Alien Weapons)"
+		"Aerie (Hai)"
+		"Lance" 2
 	variant 1
 		"Bactrian (Hai Weapons)"
 		"Dagger" 3
@@ -1200,75 +1229,56 @@ fleet "L. Advanced Independent (Killable)"
 	variant 1
 		"Bactrian (Hai Weapons)"
 		"Dagger" 3
-		"Bounder (Hai)" 3
+		"Raven (Hai)" 2
 	variant 1
 		"Bactrian (Hai Weapons)"
 		"Dagger" 3
-		"Arrow (Hai)" 3
+		"Hawk (Hai)" 3
+	variant 1
+		"Bactrian (Hai Weapons)"
+		"Dagger" 3
+		"Fury (Hai)" 3
+	variant 1
+		"Bactrian (Hai Weapons)"
+		"Dagger" 3
+		"Berserker (Hai)" 3
+	variant 1
+		"Bactrian (Hai Weapons)"
+		"Dagger" 3
+		"Scout (Hai)" 3
 	variant 2
 		"Leviathan (Hai Weapons)"
 	variant 1
 		"Leviathan (Hai Weapons)"
-		"Container Transport (Hai)"
-	variant 1
-		"Leviathan (Hai Weapons)"
-		"Hauler III (Hai)"
-	variant 1
-		"Leviathan (Hai Weapons)"
-		"Star Queen (Hai)"
-	variant 1
-		"Leviathan (Hai Weapons)"
 		"Firebird (Hai Shields)"
 	variant 1
 		"Leviathan (Hai Weapons)"
 		"Firebird (Hai Weapons)"
 	variant 1
 		"Leviathan (Hai Weapons)"
-		"Osprey (Alien Weapons)"
+		"Aerie (Hai)"
+		"Dagger" 2
 	variant 1
 		"Leviathan (Hai Weapons)"
 		"Corvette (Hai)"
 	variant 1
 		"Leviathan (Hai Weapons)"
-		"Hauler II (Hai)"
-	variant 1
-		"Leviathan (Hai Weapons)"
 		"Headhunter (Hai)" 2
 	variant 1
 		"Leviathan (Hai Weapons)"
-		"Hauler (Hai)" 2
+		"Raven (Hai)" 2
 	variant 1
 		"Leviathan (Hai Weapons)"
-		"Freighter (Hai)" 2
+		"Hawk (Hai)" 3
 	variant 1
 		"Leviathan (Hai Weapons)"
-		"Bounder (Hai)" 3
+		"Fury (Hai)" 3
 	variant 1
 		"Leviathan (Hai Weapons)"
-		"Arrow (Hai)" 3
+		"Berserker (Hai)" 3
 	variant 1
-		"Behemoth (Hai)"
-	variant 1
-		"Behemoth (Hai)"
-		"Firebird (Hai Shields)"
-	variant 1
-		"Behemoth (Hai)"
-		"Firebird (Hai Weapons)"
-	variant 1
-		"Behemoth (Hai)"
-		"Osprey (Alien Weapons)"
-	variant 1
-		"Behemoth (Hai)"
-		"Corvette (Hai)"
-	variant 1
-		"Behemoth (Hai)"
-		"Headhunter (Hai)" 2
-	variant 1
-		"Behemoth (Hai)"
-		"Bounder (Hai)" 3
-	variant 1
-		"Behemoth (Hai)"
-		"Arrow (Hai)" 3
+		"Leviathan (Hai Weapons)"
+		"Scout (Hai)" 3
 	variant 1
 		"Mule (Hai Weapons)"
 	variant 1
@@ -1276,18 +1286,26 @@ fleet "L. Advanced Independent (Killable)"
 	variant 1
 		"Firebird (Hai Weapons)"
 	variant 1
-		"Osprey (Alien Weapons)"
+		"Aerie (Hai)"
+		"Dagger" 2
 	variant 1
 		"Corvette (Hai)"
 	variant 1
 		"Headhunter (Hai)" 2
 	variant 1
-		"Bounder (Hai)" 3
+		"Raven (Hai)" 2
 	variant 1
-		"Arrow (Hai)" 3
+		"Hawk (Hai)" 3
+	variant 1
+		"Fury (Hai)" 3
+	variant 1
+		"Berserker (Hai)" 3
+	variant 1
+		"Scout (Hai)" 3
 	variant 1
 		"Firebird (Hai Weapons)"
-		"Osprey (Alien Weapons)"
+		"Aerie (Hai)"
+		"Dagger" 2
 	variant 1
 		"Firebird (Hai Weapons)"
 		"Corvette (Hai)"
@@ -1296,31 +1314,99 @@ fleet "L. Advanced Independent (Killable)"
 		"Headhunter (Hai)"
 	variant 1
 		"Firebird (Hai Weapons)"
+		"Raven (Hai)"
+	variant 1
+		"Firebird (Hai Weapons)"
 		"Bounder (Hai)" 2
 	variant 1
 		"Firebird (Hai Weapons)"
-		"Arrow (Hai)" 2
+		"Hawk (Hai)" 2
 	variant 1
-		"Osprey (Alien Weapons)"
+		"Firebird (Hai Weapons)"
+		"Fury (Hai)" 2
+	variant 1
+		"Firebird (Hai Weapons)"
+		"Berserker (Hai)" 2
+	variant 1
+		"Firebird (Hai Weapons)"
+		"Scout (Hai)" 2
+	variant 1
+		"Aerie (Hai)"
+		"Dagger" 2
 		"Corvette (Hai)"
 	variant 1
-		"Osprey (Alien Weapons)"
+		"Aerie (Hai)"
+		"Dagger" 2
 		"Headhunter (Hai)"
 	variant 1
-		"Osprey (Alien Weapons)"
-		"Bounder (Hai)" 2
+		"Aerie (Hai)"
+		"Dagger" 2
+		"Raven (Hai)"
 	variant 1
-		"Osprey (Alien Weapons)"
-		"Arrow (Hai)" 2
+		"Aerie (Hai)"
+		"Dagger" 2
+	variant 1
+		"Aerie (Hai)"
+		"Dagger" 2
+		"Hawk (Hai)" 2
+	variant 1
+		"Aerie (Hai)"
+		"Dagger" 2
+		"Fury (Hai)" 2
+	variant 1
+		"Aerie (Hai)"
+		"Dagger" 2
+		"Berserker (Hai)" 2
+	variant 1
+		"Aerie (Hai)"
+		"Dagger" 2
+		"Scout (Hai)" 2
 	variant 1
 		"Corvette (Hai)"
 		"Headhunter (Hai)"
 	variant 1
 		"Corvette (Hai)"
-		"Bounder (Hai)" 2
+		"Raven (Hai)"
 	variant 1
 		"Corvette (Hai)"
-		"Arrow (Hai)" 2
+		"Hawk (Hai)" 2
+	variant 1
+		"Corvette (Hai)"
+		"Fury (Hai)" 2
+	variant 1
+		"Corvette (Hai)"
+		"Berserker (Hai)" 2
+	variant 1
+		"Corvette (Hai)"
+		"Scout (Hai)" 2
+	variant 1
+		"Mule (Hai Weapons)"
+		"Firebird (Hai Weapons)"
+	variant 1
+		"Mule (Hai Weapons)"
+		"Aerie (Hai)"
+		"Dagger"
+	variant 1
+		"Mule (Hai Weapons)"
+		"Corvette (Hai)"
+	variant 1
+		"Mule (Hai Weapons)"
+		"Raven (Hai)" 2
+	variant 1
+		"Mule (Hai Weapons)"
+		"Headhunter (Hai)" 2
+	variant 1
+		"Mule (Hai Weapons)"
+		"Hawk (Hai)" 3
+	variant 1
+		"Mule (Hai Weapons)"
+		"Fury (Hai)" 3
+	variant 1
+		"Mule (Hai Weapons)"
+		"Berserker (Hai)" 3
+	variant 1
+		"Mule (Hai Weapons)"
+		"Scout (Hai)" 3
 
 
 
