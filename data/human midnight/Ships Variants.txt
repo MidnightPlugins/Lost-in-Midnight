@@ -2712,25 +2712,22 @@ ship "Star Queen" "Star Queen (Hijacked)"
 
 ship "Starcadia" "Starcadia (Prototype)"
 	outfits
-		"Beam Laser" 2
-		"Torpedo Launcher" 2
-		"Torpedo" 60
-		"Laser Turret" 6
-		"Fission Reactor"
-		"LP144a Battery Pack"
+		"Antique Rifle" 20
 		"D41-HY Shield Generator"
-		"Large Radar Jammer"
-		"Antique Rifle" 10
-		"Fragmentation Grenades" 10
-		"Security Station"
-		"X3700 Ion Thruster"
+		"Energy Cannon Turret" 6
+		"Fission Reactor"
+		Hyperdrive
+		"LP072a Battery Pack"
+		"Meteor Missile" 180
+		"Meteor Missile Box" 4
+		"Meteor Missile Launcher" 4
+		Ramscoop
+		"Security Station" 2
+		"Shield Suppressor"
+		"Small Radar Jammer" 6
+		"X1100 Ion Reverse Thruster"
 		"X3200 Ion Steering"
-		"Hyperdrive"
-	gun "Beam Laser"
-	gun "Beam Laser"
-	gun "Torpedo Launcher"
-	gun "Torpedo Launcher"
-	description "The Starcadia was a Deep Security prototype ship in development near the end of the Alpha War. The ship was stolen before the design could be finalized for mass production. While the technology on it is a bit dated, this was a cutting edge ship for its time, easily surpassing the Navy Frigate."
+		"X3700 Ion Thruster"
 
 
 

@@ -331,7 +331,7 @@ mission "Skeleton Key Core 1"
 			action
 				set "pookie clue"
 			scene "outfit/map"
-			`You demand to know what the pirates did with the dog they captured. One confesses that they sold it to a kennel on Stormhold in the Alcyone system. "Lots of hungry people there you know," he taunts you. "Maybe they already turned it into stew..." The pirate rubs his belly and grins.`
+			`You demand to know what the pirates did with the dog they captured. One confesses that they sold it to a kennel on Stormhold in the Alcyone system. "Lots of cold hungry people there you know," he taunts you. "Maybe they already turned it into a nice warm stew..." The pirate rubs his belly and grins.`
 	to complete
 		has "Skeleton Key Core 2: done"
 	on visit
@@ -449,6 +449,7 @@ mission "Skeleton Keys, Three 2"
 	stopover Watcher
 	stopover "Eureka Station"
 	stopover "Cadrelock Rock"
+	waypoint Eber
 	to complete
 		never
 
@@ -571,7 +572,13 @@ mission "Skeleton Keys, Three 3 (Cadrelock Rock)"
 				`	(Maybe another time...)`
 					goto delay
 			scene "thumbnail/starcadia-thumb"
-			`	A section of the wall retracts, revealing a passage leading farther into the rock. It leads to a concealed hangar, where a ship you're unfamiliar with is parked. While searching the ship, you find data files about this ship. It's the Starcadia, a Deep Security prototype ship that was in development near the end of the Alpha War. The ship was stolen before the design could be finalized for mass production. While the technology on it is a bit dated, this was a cutting edge ship for its time, easily surpassing the Navy Frigate.`
+			`	A section of the wall retracts, revealing a passage leading farther into the rock. It leads to a concealed hangar, where a ship you're unfamiliar with is parked. The entry hatch is open.`
+			choice
+				`	(Have a look inside.)`
+				`	(Maybe another time...)`
+					goto delay
+			scene "scene/scene-sivael3cropdark"
+			`	Looking through the halls and rooms, it appears that no one is aboard. While searching the ship's computers, you find data files about it. This is the Starcadia, a Deep Security prototype that was in development near the end of the Alpha War. The Starcadia was stolen before the design could be finalized for mass production. The blueprints are on file and you can see that the technology on it is a bit dated. However, this was a cutting edge ship for its time, easily surpassing the Navy Frigate.`
 				goto end
 			label delay
 			`	You put away the Skeleton Keys. You've decided that the secrets of Cadrelock Rock will have to wait for another day...`
@@ -755,12 +762,12 @@ mission "Skeleton Keys Starcadia Deep Epilogue"
 				`	(Run.)`
 					goto run
 			scene "thumbnail/dagger"
-			`	"Those were lost when the ship was stolen. Don't worry, we'll let you keep this ship. We are only interested in regaining the design specifications." While the officer is talking, a pair of Daggers pass overhead...`
+			`	"The only copy is in that ship's computer and was lost when the Starcadia was stolen. Don't worry, we'll let you keep this ship. We are only interested in regaining the blue prints and checking if any modifications were done since it was stolen." While the officer is talking, a pair of Daggers pass overhead...`
 			choice
 				`	"Alright, you can study the <ship>."`
 				`	(Run.)`
 			scene "thumbnail/starcadia-thumb"
-			`	"Thank you for your cooperation Captain <last>." The officers call in a tech team and they spend a few hours scanning and exploring the <ship>. Satisfied with their data, they release you.`
+			`	"Thank you for your cooperation Captain <last>." The officers call in a tech team and they retrieve the blue prints. While doing so, they make additional scans of the <ship>. Satisfied with their data, they release you.`
 				decline
 			label run
 			scene "thumbnail/raven"

@@ -530,13 +530,13 @@ ship "Starcadia"
 		"required crew" 42
 		"bunks" 88
 		"mass" 387
-		"drag" 10.4
-		"heat dissipation" .7
+		"drag" 6.5
+		"heat dissipation" .6
 		"fuel capacity" 500
-		"cargo space" 35
-		"outfit space" 450
-		"weapon capacity" 198
-		"engine capacity" 100
+		"cargo space" 40
+		"outfit space" 510
+		"weapon capacity" 250
+		"engine capacity" 110
 		weapon
 			"blast radius" 200
 			"shield damage" 2000
@@ -544,26 +544,20 @@ ship "Starcadia"
 			"hit force" 3000
 	outfits
 		"Heavy Laser" 2
-		"Laser Turret" 4
-		"Anti-Missile Turret" 2
-		Torpedo 21
-		"Torpedo Pod" 2
-		"Torpedo Storage Rack"
+		"Heavy Laser Turret" 3
+		"Anti-Missile Turret" 3
+		Torpedo 60
+		"Torpedo Launcher" 2
 		
 		"Dwarf Core" 2
 		"LP072a Battery Pack"
 		"D67-TM Shield Generator"
-		"Cargo Scanner"
-		"Outfit Scanner"
-		"Outfits Expansion"
 		Ramscoop
-		"Small Radar Jammer"
 		"Laser Rifle" 20
-		"Security Station"
+		"Security Station" 2
 		
 		"A370 Atomic Thruster"
 		"A375 Atomic Steering"
-		"AR120 Reverse Thruster"
 		Hyperdrive
 		
 	engine -41 97
@@ -602,14 +596,14 @@ ship "Starcadia"
 		right
 	gun -14 -103 "Heavy Laser"
 	gun 14 -103 "Heavy Laser"
-	gun -25 -73 "Torpedo Pod"
-	gun 25 -73 "Torpedo Pod"
-	turret -20 -7 "Laser Turret"
-	turret 20 -7 "Laser Turret"
-	turret -30 17.5 "Laser Turret"
-	turret 30 17.5 "Laser Turret"
+	gun -25 -73 "Torpedo Launcher"
+	gun 25 -73 "Torpedo Launcher"
+	turret -20 -7 "Anti-Missile Turret"
+	turret 20 -7 "Heavy Laser Turret"
+	turret -30 17.5 "Heavy Laser Turret"
+	turret 30 17.5 "Anti-Missile Turret"
 	turret -20 42.5 "Anti-Missile Turret"
-	turret 20 42.5 "Anti-Missile Turret"
+	turret 20 42.5 "Heavy Laser Turret"
 	leak "leak" 40 50
 	leak "flame" 50 80
 	leak "big leak" 90 30
