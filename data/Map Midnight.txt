@@ -1117,7 +1117,8 @@ planet "Cadrelock Rock"
 	attributes uninhabited midnight "dirt belt"
 	landscape land/uclengineering1
 	music ambient/derelict
-	description `Cadrelock is little more than a some fuel tanks and a ramscoop bolted onto an asteroid. It is a small hidden waystation used by pirates who don't have enough fuel to carry them through the Dirt Tunnel.`
+	description `A haven from the patrols of the Navy, Cadrelock Rock is little more than a some fuel tanks and a ramscoop bolted onto an asteroid. It is a small hidden waystation used by pirates who don't have enough fuel to carry them through the Dirt Tunnel. Most of the structure is hidden beneath the rocky surface of the asteroid, making the waystation inconspicuous to anyone looking at it from a distance.
+	spaceport `The fueling equipment is ancient but still in working condition. The pirates must have an unspoken agreement not to trash this remote outpost.
 	government "Pirate"
 
 planet Corpse
