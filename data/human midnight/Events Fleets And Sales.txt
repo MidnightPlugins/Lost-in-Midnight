@@ -71,9 +71,22 @@ event "midnight add dirt belt pirate fleets"
 		add fleet "Large Dirt Belt Pirates" 48000
 	system Mizar
 		add fleet "Small Dirt Belt Pirates" 12000
+		add fleet "Large Dirt Belt Pirates" 24000
 	system Ipsing
 		add fleet "Small Dirt Belt Pirates" 6000
-
+		add fleet "Large Dirt Belt Pirates" 12000
+	system Wei
+		add fleet "Small Dirt Belt Pirates" 8000
+		add fleet "Large Dirt Belt Pirates" 16000
+	system Alnasl
+		add fleet "Small Dirt Belt Pirates" 8000
+		add fleet "Large Dirt Belt Pirates" 16000
+	system Eber
+		add fleet "Small Dirt Belt Pirates" 4000
+		add fleet "Large Dirt Belt Pirates" 8000
+	system "Alpha Arae"
+		add fleet "Small Dirt Belt Pirates" 18000
+		add fleet "Large Dirt Belt Pirates" 36000
 
 
 mission "Midnight Independent Fleet Expansion"

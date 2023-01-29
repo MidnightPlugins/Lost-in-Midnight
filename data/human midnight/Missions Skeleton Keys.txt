@@ -478,8 +478,8 @@ mission "Skeleton Keys, Three 2"
 		system Ipsing
 		personality waiting staying timid uninterested unconstrained
 			confusion 20
-		ship "Vanguard (Korath)" "Crimson Dawn"
-		ship "Protector (Korath)" "Scarlet Dusk"
+		ship "Patrolboat (Turbo Blaster)" "Crimson Dawn"
+		ship "Modified Clipper (Turbo Blaster)" "Scarlet Dusk"
 	npc
 		government "Pirate"
 		system Alnasl
