@@ -98,6 +98,10 @@ phrase "friendly pirate"
 		"; that planet shouldn't be too far from here."
 		"; which hyperlane should I take to get there?"
 
+phrase "friendly pirate"
+	word
+		"Three pirates died on a rock. Three skeletons to open a lock."
+
 
 
 # Fake cargo package mission message
@@ -264,6 +268,12 @@ phrase "Hackerz LOL"
 
 # hails from the Hackerz
 
+phrase "friendly drone"
+	word
+		"Beep boop beep."
+		"110100110100110100110100110100110100110100110100110100110100110100110100110100110100110100110100110100110100110100110100..."
+		"001011001011001011001011001011001011001011001011001011001011001011001011001011001011001011001011001011001011001011001011..."
+
 phrase "hostile hackerz"
 	word
 		"By the time we're done we'll have routed your credits through multiple untraceable dummy accounts. No refunds!"
@@ -370,7 +380,7 @@ phrase "disabled oathbreaker"
 		"who is in "
 	word
 		"heaven."
-		"the afterlife."		
+		"the afterlife."
 
 phrase "friendly oathbreaker"
 	word

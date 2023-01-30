@@ -516,10 +516,12 @@ news "Midnight Graffiti"
 			"Graffiti painted on a wall"
 	message
 		word
+			"Lost in Midnight"
+			"A spray-painted image of an analog clock. The time indicated is 12:00."
 			"A spray-painted image of a reptilian eye logo. No matter what angle you look at it from, it seems to be staring at you."
 			"A spray-painted image of a black cube."
 			"Do you know the Inferno Dragon?"
-			"Lost in Midnight"
+			"Three pirates died on a rock. Three skeletons to open a lock."
 
 news "Midnight Wanderer Veteran"
 	to show

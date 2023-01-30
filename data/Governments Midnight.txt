@@ -121,6 +121,7 @@ government "Hackerz"
 		capture 0
 		destroy 0
 		atrocity 0
+	"friendly hail" "friendly drone"
 	"hostile hail" "hostile hackerz"
 	"hostile disabled hail" "hostile disabled hackerz"
 
