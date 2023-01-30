@@ -370,6 +370,7 @@ outfit "Execution Chamber"
 	"mass" 3
 	"outfit space" -3
 	"capture defense" 6.8
+	"required crew" 2
 	"unplunderable" 1
 	description "This is a specially designed room which can be installed in your ship. Anyone who boards you in an attempt to take over your ship will find themselves locked in this room by the self sealing doors. A pair of portholes allow your crew to safely sweep the chamber with weapons fire from the other side of the reinforced bulkhead."
 
@@ -384,6 +385,18 @@ outfit "Purger Rifle"
 	"unplunderable" 1
 	description "Purger Rifles are sometimes used as part of clandestine biohazard containment protocols. They fire Euthanasia rounds which ensure a quick and painless death for anyone unfortunate enough to be infected with experimental pathogens. Each rifle comes with four additional magazines to ensure an uninterrupted dispersal of mercy. A hollow point injector attachment holds additional inoculations for particularly virulent infestations."
 
+
+
+outfit "Security Station"
+	category "Hand to Hand"
+	cost 42000
+	thumbnail "outfit/security station"
+	"mass" 2
+	"outfit space" -2
+	"capture defense" 3.4
+	"required crew" 1
+	"unplunderable" 1
+	description "Additional security staff posted at this station helps to ensure that the ship is protected during boarding battles."
 
 
 outfit "Sniper Rifle"

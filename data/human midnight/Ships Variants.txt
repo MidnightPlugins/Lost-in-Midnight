@@ -3411,6 +3411,7 @@ ship "Cruiser" "Cruiser (Inferno Rockets)"
 		"Quad Turbo Blaster Turret" 3
 		Ramscoop
 		"Scram Drive"
+		"Security Station"
 		"Small Radar Jammer"
 		"Sniper Rifle"
 		"Tactical Scanner"
@@ -3641,7 +3642,6 @@ ship "Osprey" "Osprey (Inferno Rockets)"
 
 ship "Rainmaker" "Rainmaker (Inferno Rockets)"
 	outfits
-		"D14-RN Shield Generator"
 		Hyperdrive
 		"Inferno Rocket" 80
 		"Inferno Rocket Launcher" 2

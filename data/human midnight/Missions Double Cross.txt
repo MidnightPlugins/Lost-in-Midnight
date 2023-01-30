@@ -1488,3 +1488,115 @@ mission "Thraal: Moreau (Killed)"
 		set "Thraal: Moreau (Failed): offered"
 		set "Thraal: Moreau (Failed): declined"
 		fail
+
+
+
+mission "Prisoner Bribe Offer (Job)"
+	job
+	passengers 1
+	name "Prisoner transport to <planet>"
+	description "Transport a notorious felon to a penal colony on <destination>. Payment is <payment>."
+	source
+		government "Republic" "Free Worlds" "Syndicate"
+	destination
+		distance 10 20
+		government "Republic" "Free Worlds" "Syndicate"
+		attributes "frontier" "moon" "military"
+	to offer
+		random < 15
+		"combat rating" > 100
+		"reputation: Pirate" < -10
+	on offer
+		require "Brig"
+	on accept
+		log "Minor People" "Dirk Malone" `A notorious felon recently convicted for heinous crimes after the authorities spent years tracking him down. The trial was broadcast thoughout the galaxy.`
+		dialog `Your prisoner is the notorious felon Dirk Malone, recently convicted for heinous crimes after the authorities spent years tracking him down. The trial was broadcast thoughout the galaxy. He smirks as you lock him in your brig..."`
+	on visit
+		dialog phrase "generic passenger on visit"
+	on complete
+		payment 25000 200
+		dialog `Dirk grins as well-armed guards arrive to escort him off your ship. "Hey guys, good to be back! Did you miss me? I won't be here long..." You collect your payment of <payment> as they leave.`
+	npc
+		government "Bounty Hunter"
+		personality nemesis heroic unconstrained
+			confusion 10
+		system
+			distance 3 4
+		fleet "Hired Guns"
+	npc
+		government "Bounty Hunter"
+		personality nemesis heroic unconstrained
+			confusion 10
+		system
+			distance 6 7
+		fleet "Hired Guns" 2
+	npc
+		government "Bounty Hunter"
+		personality nemesis heroic unconstrained
+			confusion 10
+		system
+			distance 9 10
+		fleet "Hired Guns" 4
+	on enter
+		dialog `Dirk Malone, the notorious felon, is doing some exercises when you check on him in your brig. "It's a long way to <planet>. I'm using my time well. How about you?"`
+	on enter
+		dialog `Dirk accepts his dinner of canned slop. "I know some taverns on pirate planets with better dishes. You should check them out sometime."`
+	on enter
+		dialog `Dirk asks "<planet> is so far away. We could go on for what, a week? Two weeks? Why not just drop me off at the nearest pirate planet. Whatever it is they're paying you, I'll pay more...`
+	on enter
+		dialog `Dirk says "Sorry about the hired guns. My friends must have found out you're transporting me. You could make things a lot easier on yourself if you just drop me off at the nearest pirate planet..."`
+	on fail
+		"reputation: Republic" --
+		"reputation: Free Worlds" --
+		"reputation: Syndicate" --
+
+mission "Prisoner Bribe Release (Job)"
+	landing
+	repeat
+	invisible
+	deadline 3
+	source
+		government "Pirate"
+	destination
+		distance 20 21
+	to offer
+		has "Prisoner Bribe Offer (Job): active"
+	on offer
+		conversation
+			scene "outfit/brig"
+			`Dirk grins when you land. "You've made the right choice. Release me and I'll have <payment> brought here for you."`
+			choice
+				`	"Just get me the money."`
+					goto release
+				`	"How do I know you'll pay me?"`
+				`	"I didn't come here to release you."`
+					decline
+			`	"You don't get far in the criminal underworld by backstabbing everyone. Just the ones you can get away with. Feeling confident?"`
+			choice
+				`	"Just get me the money."`
+				`	"I changed my mind. I'm not releasing you."`
+					decline
+			label release
+			scene "scene/scene-wooden crates"
+			`	After an hour, crates arrive at your landing pad with <payment>. They seem real...`
+				accept
+	on accept
+		fail "Prisoner Bribe Offer (Job)"
+		payment 25000 400
+	on enter
+		log `After accepting a bribe to release the notorious felon Dirk Malone, he sent his fleet of pirate raiders to attack me.`
+		dialog 	`You receive a message from the felon you just released: "You got your payment, so technically I've done my part of the agreement. Now we're just going to do what pirates do...`
+	npc evade
+		government "Pirate"
+		personality entering nemesis plunders
+			confusion 20
+		fleet "pirate raid" 6
+	npc evade
+		government "Pirate"
+		system
+			distance 2 3
+		personality entering nemesis plunders
+			confusion 20
+		fleet "pirate raid" 12
+
+
