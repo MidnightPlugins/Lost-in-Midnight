@@ -36,14 +36,14 @@ event "midnight pug reinforcements 1"
 	fleet "Small Pug (Wanderer)"
 		add variant 1
 			"Pug Zibruka (Seeker)"
-		add variant 2
+		add variant 1
 			"Pug Zibruka (Seeker)" 2
-		add variant 2
+		add variant 1
 			"Pug Enfolta (Seeker)"
 		add variant 1
 			"Pug Enfolta (Seeker)"
 			"Pug Zibruka (Seeker)"
-		add variant 2
+		add variant 1
 			"Pug Enfolta (Zapper)"
 		add variant 1
 			"Pug Enfolta (Zapper)"
@@ -56,14 +56,14 @@ event "midnight pug reinforcements 1"
 			"Pug Enfolta (Seeker)" 2
 		add variant 1
 			"Pug Zibruka (Seeker)" 5
-		add variant 2
+		add variant 1
 			"Pug Maboro (Seeker)"
 			"Pug Zibruka (Seeker)" 2
-		add variant 3
+		add variant 1
 			"Pug Maboro (Seeker)"
 			"Pug Enfolta (Seeker)"
 			"Pug Zibruka (Seeker)"
-		add variant 2
+		add variant 1
 			"Pug Maboro (Seeker)"
 			"Pug Enfolta (Seeker)" 2
 		add variant 1
@@ -75,14 +75,14 @@ event "midnight pug reinforcements 1"
 			"Pug Zibruka (Seeker)" 2
 		add variant 1
 			"Pug Enfolta (Zapper)" 2
-		add variant 2
+		add variant 1
 			"Pug Maboro (Zapper)"
 			"Pug Zibruka" 2
-		add variant 3
+		add variant 1
 			"Pug Maboro (Zapper)"
 			"Pug Enfolta (Zapper)"
 			"Pug Zibruka"
-		add variant 2
+		add variant 1
 			"Pug Maboro (Zapper)"
 			"Pug Enfolta (Zapper)" 2
 		add variant 1
