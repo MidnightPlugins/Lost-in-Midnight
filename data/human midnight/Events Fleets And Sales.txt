@@ -40,14 +40,14 @@ outfitter "Advanced Turbo Blasters"
 
 
 
-mission "Midnight Add Dirt Belt Pirate Fleets"
+mission "Midnight Add Dirt Belt Pirates"
 	landing
 	invisible
 	on offer
-		event "midnight add dirt belt pirate fleets"
+		event "midnight add dirt belt pirates"
 		fail
 
-event "midnight add dirt belt pirate fleets"
+event "midnight add dirt belt pirates"
 	system Orbona
 		add fleet "Small Dirt Belt Pirates" 6000
 		add fleet "Large Dirt Belt Pirates" 12000
@@ -87,6 +87,28 @@ event "midnight add dirt belt pirate fleets"
 	system "Alpha Arae"
 		add fleet "Small Dirt Belt Pirates" 18000
 		add fleet "Large Dirt Belt Pirates" 36000
+	system Sargas
+		add fleet "Small Dirt Belt Pirates" 8000
+		add fleet "Large Dirt Belt Pirates" 16000
+	system Algieba
+		add fleet "Small Dirt Belt Pirates" 18000
+		add fleet "Large Dirt Belt Pirates" 36000
+
+
+# deprecated add dirt belt pirate fleets
+mission "Midnight Add Dirt Belt Pirate Fleets"
+	landing
+	invisible
+	to offer
+		never
+	on offer
+		event "midnight add dirt belt pirate fleets"
+		fail
+
+event "midnight add dirt belt pirate fleets"
+
+
+
 
 
 mission "Midnight Independent Fleet Expansion"

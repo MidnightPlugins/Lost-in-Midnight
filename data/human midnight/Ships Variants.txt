@@ -3388,39 +3388,42 @@ ship "Corvette" "Corvette (Inferno Rockets)"
 
 ship "Cruiser" "Cruiser (Inferno Rockets)"
 	outfits
-		"Inferno Rocket Launcher" 2
-		"Inferno Rocket" 40
-		"Plasma Cannon" 4
-		"Heavy Laser Turret" 2
-		"Heavy Anti-Missile Turret"
-		"Quad Blaster Turret"
-		"Sniper Rifle"
-		"Laser Rifle" 20
-		"Fragmentation Grenades" 20
-		"Armageddon Core"
-		"Dwarf Core"
-		"Supercapacitor"
-		"Modified D94-YV Shielding"
-		"Small Radar Jammer"
-		"Liquid Helium Cooler"
-		"Ramscoop"
-		"Outfits Expansion"
-		"Brig"
 		"A520 Atomic Thruster"
 		"A525 Atomic Steering"
-		"X2200 Ion Steering"
-		"Scram Drive"
+		"Armageddon Core"
+		Brig
+		"Cargo Scanner"
 		"Engineering Room"
+		"Fragmentation Grenades" 20
+		"Heavy Anti-Missile Turret"
+		"Inferno Rocket" 60
+		"Inferno Rocket Launcher" 2
+		"Inferno Rocket Rack" 2
+		"Interference Plating" 6
+		"LP288a Battery Pack"
+		"Laser Rifle" 20
+		"Limit Breaker"
+		"Liquid Helium Cooler"
+		"Luxury Accommodations"
 		"Medical Bay"
-	gun "Plasma Cannon"
-	gun "Plasma Cannon"
-	gun "Plasma Cannon"
-	gun "Plasma Cannon"
+		"Modified D94-YV Shielding"
+		"Outfit Scanner"
+		"Quad Turbo Blaster Turret" 3
+		Ramscoop
+		"Scram Drive"
+		"Small Radar Jammer"
+		"Sniper Rifle"
+		"Tactical Scanner"
+		"Turbo Blaster" 4
+	gun "Turbo Blaster"
+	gun "Turbo Blaster"
+	gun "Turbo Blaster"
+	gun "Turbo Blaster"
 	gun "Inferno Rocket Launcher"
 	gun "Inferno Rocket Launcher"
-	turret "Quad Blaster Turret"
-	turret "Heavy Laser Turret"
-	turret "Heavy Laser Turret"
+	turret "Quad Turbo Blaster Turret"
+	turret "Quad Turbo Blaster Turret"
+	turret "Quad Turbo Blaster Turret"
 	turret "Heavy Anti-Missile Turret"
 
 
@@ -3476,34 +3479,36 @@ ship "Firebird" "Firebird (Inferno Rockets)"
 
 ship "Frigate" "Frigate (Inferno Rockets)"
 	outfits
-		"Plasma Cannon" 2
-		"Inferno Rocket Launcher" 2
-		"Inferno Rocket" 60
-		"Inferno Rocket Rack" 2
-		"Anti-Missile Turret"
-		"Blaster Turret" 2
-		"NT-200 Nucleovoltaic"
-		"Dwarf Core"
-		"LP072a Battery Pack"
-		"Supercapacitor"
-		"Modified D41-HY Shielding"
-		"Small Radar Jammer"
-		"Water Coolant System"
-		"Outfits Expansion"
-		"Laser Rifle" 8
-		"Fragmentation Grenades" 8
-		"Sniper Rifle"
 		"A250 Atomic Thruster"
 		"A375 Atomic Steering"
-		"Hyperdrive"
+		"Anti-Missile Turret"
+		Brig
 		"Engineering Room"
+		"Fission Reactor"
+		"Fragmentation Grenades" 8
+		Hyperdrive
+		"Inferno Rocket" 60
+		"Inferno Rocket Launcher" 2
+		"Inferno Rocket Rack" 2
+		"Interference Plating" 4
+		"LP072a Battery Pack"
+		"Laser Rifle" 8
+		"Limit Breaker"
+		"Liquid Nitrogen Cooler"
+		"Medical Bay"
+		"Modified D41-HY Shielding"
+		"Outfits Expansion"
+		"Quad Turbo Blaster Turret" 2
+		"Small Radar Jammer"
+		"Sniper Rifle"
+		"Turbo Blaster" 2
 	gun "Inferno Rocket Launcher"
 	gun "Inferno Rocket Launcher"
-	gun "Plasma Cannon"
-	gun "Plasma Cannon"
+	gun "Turbo Blaster"
+	gun "Turbo Blaster"
 	turret "Anti-Missile Turret"
-	turret "Blaster Turret"
-	turret "Blaster Turret"
+	turret "Quad Turbo Blaster Turret"
+	turret "Quad Turbo Blaster Turret"
 
 
 
@@ -3521,6 +3526,25 @@ ship "Fury" "Fury (Inferno Rockets)"
 		"X2700 Ion Thruster"
 		"Chipmunk Plasma Steering"
 		"Hyperdrive"
+
+
+
+ship "Gunboat" "Gunboat (Inferno Rockets)"
+	outfits
+		Brig
+		"D14-RN Shield Generator"
+		Hyperdrive
+		"Inferno Rocket" 44
+		"Inferno Rocket Pod" 2
+		"Inferno Rocket Rack" 4
+		"LP144a Battery Pack"
+		"Limit Breaker"
+		"Quad Turbo Blaster Turret"
+		"RT-I Radiothermal"
+		"Small Radar Jammer"
+		"X2200 Ion Steering"
+		"X3700 Ion Thruster"
+
 
 
 ship "Hawk" "Hawk (Inferno Rockets)"
@@ -3613,6 +3637,29 @@ ship "Osprey" "Osprey (Inferno Rockets)"
 	gun "Inferno Rocket Launcher"
 	gun "Inferno Rocket Launcher"
 
+
+
+ship "Rainmaker" "Rainmaker (Inferno Rockets)"
+	outfits
+		"D14-RN Shield Generator"
+		Hyperdrive
+		"Inferno Rocket" 80
+		"Inferno Rocket Launcher" 2
+		"Inferno Rocket Rack" 4
+		"LP036a Battery Pack"
+		"Large Radar Jammer"
+		"Limit Breaker"
+		"Modified D14-RN Shielding"
+		"Turbo Blaster" 2
+		"X2200 Ion Steering"
+		"X2700 Ion Thruster"
+		"nGVF-CC Fuel Cell"
+	gun "Turbo Blaster"
+	gun "Turbo Blaster"
+	gun "Inferno Rocket Launcher"
+	gun "Inferno Rocket Launcher"
+	gun 
+	gun 
 
 
 ship "Raven" "Raven (Inferno Rockets)"

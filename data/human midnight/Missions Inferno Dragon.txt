@@ -30,17 +30,17 @@ mission "Inferno Dragon: Inferno Rocket Fleets"
 		ship "Combat Drone" "Red Dragon 2"
 		ship "Combat Drone" "Red Dragon 3"
 		ship "Combat Drone" "Red Dragon 4"
-		ship "Fury (Inferno Rockets)" "Dragon's Guard"
-		ship "Hawk (Inferno Rockets)" "Dragon's Sentry"
-		ship "Berserker (Inferno Rockets)" "Dragon's Sentnel"
+		ship "Gunboat (Inferno Rockets)" "Dragon's Guard"
+		ship "Rainmaker (Inferno Rockets)" "Dragon's Sentry"
+		ship "Rainmaker (Inferno Rockets)" "Dragon's Sentnel"
 	npc kill
 		government "Independent (Killable)"
 		system Sargas
 		personality waiting staying marked vindictive
 			confusion 10
-		ship "Frigate (Inferno Rockets)" "Dragon's Claws"
-		ship "Frigate (Inferno Rockets)" "Dragon's Breath"
-		ship "Frigate (Inferno Rockets)" "Dragon's Wings"
+		ship "Gunboat (Inferno Rockets)" "Dragon's Claws"
+		ship "Rainmaker (Inferno Rockets)" "Dragon's Breath"
+		ship "Rainmaker (Inferno Rockets)" "Dragon's Wings"
 
 event "inferno rocket fleets"
 	fleet "Small Southern Pirates"
@@ -688,11 +688,16 @@ event "inferno rocket pod patch"
 	outfitter "Pirate Outfits"
 		add "Inferno Rocket Pod"
 
-
+phrase "red dragon"
+	phrase
+		"bad outcomes"
+	word
+		" Dragon"
 
 mission "Inferno Dragon: Dragon's Hoard"
 	invisible
 	minor
+	deadline 7
 	source Lares
 	to offer
 		has "event: inferno rockets at pirate outfitters"
@@ -922,50 +927,63 @@ mission "Inferno Dragon: Dragon's Hoard"
 	on enter
 		conversation
 			scene "thumbnail/frigate"
-			`That's a navy frigate, but you have a hunch the ones piloting it aren't here to clean up piracy...`
+			`That looks like a navy frigate, but you have a hunch the ones piloting it aren't here to clean up piracy...`
 			`They hail you: "We're with the Red Dragons. Our security system alerted us that someone was stupid enough to make an unauthorized entry at the Lares vault. Looks like we caught a thief trying to escape with our treasure. You'll burn for that!`
 
 	npc kill
 		government "Pirate"
+		system Mora
+		personality target entering heroic unconstrained nemesis
+			confusion 20
+		fleet
+			names "red dragon"
+			cargo 1
+			outfitters "Inferno Rockets"
+			variant
+				"Frigate (Inferno Rockets)"
+				"Gunboat (Inferno Rockets)" 2
+				"Rainmaker (Inferno Rockets)" 2
+	npc kill
+		government "Pirate"
 		system Limen
-		personality target entering plunders heroic unconstrained
-			confusion 20
-		fleet
-			names "pirate"
-			cargo 0
-			variant
-				"Vanguard (Inferno Rockets)"
-				"Splinter (Inferno Rockets)"
-				"Modified Argosy (Inferno Rocket)"
-				"Hawk (Inferno Rockets)"
-	npc kill
-		government "Pirate"
-		system Orbona
-		personality target entering plunders heroic unconstrained
-			confusion 20
-		fleet
-			names "pirate"
-			cargo 0
-			variant
-				"Leviathan (Inferno Rockets)"
-				"Corvette (Inferno Rockets)"
-				"Firebird (Inferno Rockets)"
-				"Raven (Inferno Rockets)"
-				"Berserker (Inferno Rockets)"
-	npc kill
-		government "Pirate"
-		personality target waiting plunders heroic unconstrained
+		personality target entering heroic unconstrained nemesis
 			confusion 20
 		ship "Frigate (Inferno Rockets)" "Dragon's Avenger"
 		fleet
-			names "pirate"
-			cargo 0
+			names "red dragon"
+			cargo 1
+			outfitters "Inferno Rockets"
 			variant
-				"Falcon (Inferno Rockets)"
-				"Bastion (Inferno Rockets)"
-				"Osprey (Inferno Rockets)"
-				"Clipper (Inferno Rockets)"
-				"Fury (Inferno Rockets)"
+				"Frigate (Inferno Rockets)"
+				"Gunboat (Inferno Rockets)" 2
+				"Rainmaker (Inferno Rockets)" 2
+	npc kill
+		government "Pirate"
+		system Orbona
+		personality target entering heroic unconstrained nemesis
+			confusion 20
+		fleet
+			names "red dragon"
+			cargo 1
+			outfitters "Inferno Rockets"
+			variant
+				"Frigate (Inferno Rockets)"
+				"Gunboat (Inferno Rockets)" 2
+				"Rainmaker (Inferno Rockets)" 2
+	npc kill
+		government "Pirate"
+		personality target waiting heroic unconstrained nemesis
+			confusion 20
+		fleet
+			names "red dragon"
+			cargo 1
+			outfitters "Inferno Rockets"
+			variant
+				"Frigate (Inferno Rockets)"
+				"Gunboat (Inferno Rockets)" 2
+				"Rainmaker (Inferno Rockets)" 2
+	on fail
+		log `Found the Red Dragon's treasure hoard in a secluded cave on Lares. Had to solve a puzzle based on the Inferno Dragon poem and fight off a Red Dragon pirate fleet.`
 	on complete
 		log `Found the Red Dragon's treasure hoard in a secluded cave on Lares. Had to solve a puzzle based on the Inferno Dragon poem and fight off a Red Dragon pirate fleet.`
 

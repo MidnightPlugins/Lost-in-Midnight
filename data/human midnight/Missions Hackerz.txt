@@ -378,7 +378,7 @@ mission "Hackerz 3"
 		government "Derelict"
 		system "Alpha Centauri"
 		personality derelict target waiting staying mute marked
-		ship "Explosive Derelict Bactrian" "P.K.'s Party Palace"
+		ship "Derelict Bactrian" "P.K.'s Party Palace"
 		conversation
 			scene "thumbnail/bactrian"
 			`When the airlock opens your senses are overwhelmed by the sound of loud music and the scent of burnt recreational herbs. Hundreds of partygoers are too busy enjoying themselves to take notice of your entrance. After searching around for a bit, you find that the ship has power for life support, lighting, and music. But no weapons, navigation, or propulsion. You also haven't found any networking equipment.`
@@ -389,6 +389,24 @@ mission "Hackerz 3"
 		"reputation: Derelict" >?= 0
 		log `Took on a job to locate the Hackerz. The information lead me to a rave on a derelict space ship instead. While searching the ship, a bomb was set to explode. I barely escaped. Trying to track down the Hackerz is getting dangerous.`
 		dialog `Trying to track down the Hackerz is getting dangerous.`
+
+ship "Derelict Bactrian"
+	sprite "ship/bactrian"
+	thumbnail "thumbnail/bactrian"
+	attributes
+		category "Heavy Warship"
+		"hull" 8600
+		"mass" 940
+		"drag" 16.1
+		"heat dissipation" .4
+		weapon
+			"blast radius" 300
+			"shield damage" 3000
+			"hull damage" 1500
+			"hit force" 4500
+	explode "large explosion" 40
+	explode "huge explosion" 10
+	"final explode" "final explosion large"
 
 ship "Explosive Derelict Bactrian"
 	sprite "ship/bactrian"
