@@ -2425,8 +2425,8 @@ ship "Thermopylae Station"
 		"Quad Blaster Turret" 12
 		"Heavy Anti-Missile Turret" 12
 		"Asteroid Catapult"
-		"Metallic Asteroid" 95
-		"Asteroid Storage" 5
+		"Metallic Asteroid" 130
+		"Asteroid Storage" 10
 		
 		"Armageddon Core"
 		"Dwarf Core" 2

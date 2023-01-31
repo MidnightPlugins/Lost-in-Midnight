@@ -14,13 +14,12 @@ outfit "Asteroid Storage"
 	category "Ammunition"
 	cost 45000
 	thumbnail "outfit/asteroid storage"
-	"mass" 130
-	"outfit space" 0
-	"cargo space" -130
-	"asteroid capacity" 13
+	"mass" 50
+	"cargo space" -50
+	"asteroid capacity" 10
 	"required crew" 5
 	ammo "Metallic Asteroid"
-	description "This box of rocks holds extra asteroids for the Asteroid Catapult. Since it's basically a cargo container, it occupies your cargo hold rather than your ships outfit systems. Five crewmembers are needed to transport the asteroids from the ship's cargo bay to the catapult and load it."
+	description "This box of rocks holds extra asteroids for the Asteroid Catapult. Since it's basically a cargo container, it occupies your cargo hold rather than your ship's outfit systems. Five crewmembers are needed to transport the asteroids from the ship's cargo bay to the catapult and load it."
 
 
 outfit "Metallic Asteroid"
@@ -29,7 +28,7 @@ outfit "Metallic Asteroid"
 	cost 3000
 	thumbnail "outfit/metallic asteroid"
 	"flotsam sprite" "effect/flotsam metallic"
-	"mass" 10
+	"mass" 5
 	"asteroid capacity" -1
 	description `The most difficult part of operating an Asteroid Catapult is locating ammunition with the right size, shape, density, and magnetic properties.`
 
