@@ -229,15 +229,17 @@ mission "Midnight Market: Trailblazer 2"
 				"Frigate (Mark II)"
 				"Frigate"
 				"Gunboat (Mark II)"
-				"Gunboat" 3
+				"Gunboat" 2
+				"Patrolboat"
 				"Rainmaker (Mark II)"
-				"Rainmaker" 3
+				"Rainmaker" 2
+				"Missileboat"
 
-				
 ship "Saryd Trailblazer" "Saryd Trailblazer (Pirate)"
 	outfits
-		"Modified Blaster" 4
-		"Modified Blaster Turret" 6
+		"Torpedo Launcher" 4
+		"Torpedo" 120
+		"Quad Mod Blaster Turret" 6
 		"Large Collector Module" 2
 		"Small Collector Module" 2
 		"Large Reactor Module"
@@ -255,7 +257,7 @@ ship "Saryd Trailblazer" "Saryd Trailblazer (Pirate)"
 		"Large Steering Module" 4
 		"Small Steering Module" 2
 		Hyperdrive
-		
+
 
 
 outfitter "Coalition Smuggling"

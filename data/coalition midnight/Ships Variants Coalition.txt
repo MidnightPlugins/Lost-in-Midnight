@@ -13,19 +13,16 @@
 
 ship "Arach Hulk" "Arach Hulk (pirate)"
 	outfits
-		"Modified Blaster Turret" 4
+		"Quad Mod Blaster Turret" 4
 		"Torpedo Launcher" 2
 		"Torpedo" 60
 
 		"Large Collector Module"
 		"Large Battery Module"
 		"Small Battery Module"
-		"Breeder Reactor"
 
-		"S-970 Regenerator"
 		"Small Shield Module" 2
 		"Large Repair Module"
-		"Liquid Nitrogen Cooler"
 		"Cooling Module"
 		"Laser Rifle" 12
 		
@@ -61,17 +58,14 @@ ship "Arach Hulk" "Arach Hulk (smuggler)"
 
 ship "Arach Freighter" "Arach Freighter (pirate)"
 	outfits
-		"Modified Blaster Turret" 2
+		"Quad Mod Blaster Turret" 2
 		"Torpedo Launcher" 2
 		"Torpedo" 60
 
 		"Small Collector Module" 3
 		"Small Battery Module" 2
-		"NT-200 Nucleovoltaic"
 		"Small Shield Module"
 		"Small Repair Module" 2
-		"S-270 Regenerator"
-		"Liquid Nitrogen Cooler"
 		
 		"Large Thrust Module"
 		"Small Thrust Module" 2
@@ -129,18 +123,15 @@ ship "Heliarch Hunter" "Heliarch Hunter Trapper (Jump)"
 
 ship "Kimek Spire" "Kimek Spire (pirate)"
 	outfits
-		"Modified Blaster Turret" 4
+		"Quad Mod Blaster Turret" 4
 		"Torpedo Launcher" 2
 		"Torpedo" 60
 
 		"Large Collector Module"
 		"Small Collector Module"
 		"Large Battery Module"
-		"NT-200 Nucleovoltaic"
 		"Large Shield Module"
 		"Small Shield Module"
-		"S-970 Regenerator"
-		"Liquid Nitrogen Cooler"
 		"Laser Rifle" 23
 		
 		"Large Thrust Module" 2
@@ -174,16 +165,13 @@ ship "Kimek Spire" "Kimek Spire (smuggler)"
 
 ship "Kimek Thistle" "Kimek Thistle (pirate)"
 	outfits
-		"Modified Blaster Turret" 2
+		"Quad Mod Blaster Turret" 2
 		"Torpedo Launcher" 2
 		"Torpedo" 60
 
 		"Large Collector Module"
 		"Small Battery Module"
-		"Dwarf Core"
 		"Small Shield Module" 3
-		"S-270 Regenerator"
-		"Liquid Nitrogen Cooler"
 		
 		"Large Thrust Module"
 		"Small Thrust Module" 2
@@ -196,20 +184,16 @@ ship "Kimek Thistle" "Kimek Thistle (pirate)"
 
 ship "Saryd Sojourner" "Saryd Sojourner (pirate)"
 	outfits
-		"Modified Blaster Turret" 4
+		"Quad Mod Blaster Turret" 4
 		"Torpedo Launcher" 2
 		"Torpedo" 60
 
 		"Large Collector Module"
 		"Small Collector Module" 3
 		"Large Battery Module"
-		"Breeder Reactor"
-
 
 		"Large Shield Module"
 		"Small Repair Module" 2
-		"S-970 Regenerator"
-		"Liquid Nitrogen Cooler"
 
 		"Laser Rifle" 21
 		
@@ -245,20 +229,16 @@ ship "Saryd Sojourner" "Saryd Sojourner (smuggler)"
 
 ship "Saryd Traveler" "Saryd Traveler (pirate)"
 	outfits
-		"Modified Blaster Turret" 2
+		"Quad Mod Blaster Turret" 2
 		"Torpedo Launcher" 4
 		"Torpedo Storage Rack" 4
 		"Torpedo" 60
 
 		"Small Collector Module" 3
 		"Small Battery Module"
-		"NT-200 Nucleovoltaic"
-
 
 		"Small Shield Module" 2
 		"Small Repair Module"
-		"S-970 Regenerator"
-		"Liquid Nitrogen Cooler"
 
 		"Laser Rifle" 21
 		
