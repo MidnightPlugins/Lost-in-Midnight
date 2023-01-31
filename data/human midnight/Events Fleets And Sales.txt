@@ -108,6 +108,158 @@ mission "Midnight Add Dirt Belt Pirate Fleets"
 event "midnight add dirt belt pirate fleets"
 
 
+mission "Add Quad Mod Blaster Turrets"
+	landing
+	invisible
+	source
+		attributes "pirate"
+	to offer
+		has "event: war begins"
+	on offer
+		event "add quad mod blaster turrets"
+		conversation
+			scene "outfit/quad mod blaster turret"
+			`War brings advancements in weapons technology. You see an outfitter rigging four Modified Blasters onto a turret platform.`
+				decline
+
+event "add quad mod blaster turrets"
+	outfitter "Pirate Outfits"
+		add "Quad Mod Blaster Turret"
+	fleet "pirate raid"
+		add variant 1
+			"Falcon (Quad Mod Blaster)"
+		add variant 1
+			"Bastion (Quad Mod Blaster)"
+		add variant 1
+			"Argosy (Quad Mod Blaster)"
+		add variant 1
+			"Argosy (Quad Mod Blaster)"
+			"Hawk (Rocket)"
+		add variant 1
+			"Modified Argosy (Quad Mod Blaster)"
+		add variant 1
+			"Modified Argosy (Quad Mod Blaster)"
+			"Raven (Afterburner)" 2
+		add variant 1
+			"Firebird (Quad Mod Blaster)"
+		add variant 1
+			"Firebird (Quad Mod Blaster)"
+			"Corvette"
+		add variant 1
+			"Firebird (Quad Mod Blaster)"
+			"Berserker" 2
+		add variant 1
+			"Leviathan (Quad Mod Blaster)"
+		add variant 1
+			"Leviathan (Quad Mod Blaster)"
+			"Firebird (Quad Mod Blaster)"
+		add variant 1
+			"Protector (Quad Mod Blaster)"
+		add variant 1
+			"Splinter (Quad Mod Blaster)" 2
+		add variant 1
+			"Splinter (Quad Mod Blaster)"
+			"Quicksilver"
+	fleet "pirate raid (rivals)"
+		add variant 1
+			"Falcon (Quad Mod Blaster)"
+		add variant 1
+			"Bastion (Quad Mod Blaster)"
+		add variant 1
+			"Argosy (Quad Mod Blaster)"
+		add variant 1
+			"Argosy (Quad Mod Blaster)"
+			"Hawk (Rocket)"
+		add variant 1
+			"Modified Argosy (Quad Mod Blaster)"
+		add variant 1
+			"Modified Argosy (Quad Mod Blaster)"
+			"Raven (Afterburner)" 2
+		add variant 1
+			"Firebird (Quad Mod Blaster)"
+		add variant 1
+			"Firebird (Quad Mod Blaster)"
+			"Corvette"
+		add variant 1
+			"Firebird (Quad Mod Blaster)"
+			"Berserker" 2
+		add variant 1
+			"Leviathan (Quad Mod Blaster)"
+		add variant 1
+			"Leviathan (Quad Mod Blaster)"
+			"Firebird (Quad Mod Blaster)"
+		add variant 1
+			"Protector (Quad Mod Blaster)"
+		add variant 1
+			"Splinter (Quad Mod Blaster)" 2
+		add variant 1
+			"Splinter (Quad Mod Blaster)"
+			"Quicksilver"
+	fleet "Large Southern Pirates"
+		add variant 1
+			"Falcon (Quad Mod Blaster)"
+		add variant 1
+			"Bastion (Quad Mod Blaster)"
+		add variant 1
+			"Argosy (Quad Mod Blaster)"
+		add variant 1
+			"Argosy (Quad Mod Blaster)"
+			"Sparrow" 2
+		add variant 1
+			"Modified Argosy (Quad Mod Blaster)"
+		add variant 1
+			"Modified Argosy (Quad Mod Blaster)"
+			"Sparrow" 2
+	fleet "Large Independent"
+		add variant 1
+			"Falcon (Quad Mod Blaster)"
+		add variant 1
+			"Bastion (Quad Mod Blaster)"
+		add variant 1
+			"Argosy (Quad Mod Blaster)"
+		add variant 1
+			"Argosy (Quad Mod Blaster)"
+			"Hawk (Rocket)"
+		add variant 1
+			"Modified Argosy (Quad Mod Blaster)"
+		add variant 1
+			"Modified Argosy (Quad Mod Blaster)"
+			"Raven (Afterburner)" 2
+		add variant 1
+			"Firebird (Quad Mod Blaster)"
+		add variant 1
+			"Firebird (Quad Mod Blaster)"
+			"Corvette"
+		add variant 1
+			"Firebird (Quad Mod Blaster)"
+			"Berserker" 2
+		add variant 1
+			"Leviathan (Quad Mod Blaster)"
+		add variant 1
+			"Leviathan (Quad Mod Blaster)"
+			"Firebird (Quad Mod Blaster)"
+	fleet "Large Northern Pirates"
+		add variant 1
+			"Firebird (Quad Mod Blaster)"
+		add variant 1
+			"Firebird (Quad Mod Blaster)"
+			"Corvette"
+		add variant 1
+			"Firebird (Quad Mod Blaster)"
+			"Berserker" 2
+		add variant 1
+			"Leviathan (Quad Mod Blaster)"
+		add variant 1
+			"Leviathan (Quad Mod Blaster)"
+			"Firebird (Quad Mod Blaster)"
+	fleet "Large Core Pirates"
+		add variant 1
+			"Protector (Quad Mod Blaster)"
+		add variant 1
+			"Splinter (Quad Mod Blaster)" 2
+		add variant 1
+			"Splinter (Quad Mod Blaster)"
+			"Quicksilver"
 
 
 

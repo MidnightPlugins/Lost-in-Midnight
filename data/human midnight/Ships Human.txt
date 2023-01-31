@@ -2411,9 +2411,9 @@ ship "Thermopylae Station"
 		"mass" 9999
 		"drag" 100
 		"heat dissipation" .4
-		"cargo space" 1300
-		"outfit space" 1460
-		"weapon capacity" 782
+		"cargo space" 1000
+		"outfit space" 1520
+		"weapon capacity" 842
 		"engine capacity" 38
 		"inscrutable" 1
 		weapon
@@ -2438,12 +2438,14 @@ ship "Thermopylae Station"
 		
 		"Large Radar Jammer" 3
 		"Cargo Scanner"
+		"Engineering Room"
 		"Outfit Scanner"
 		"Tactical Scanner"
 		"Brig"
 		"Interference Plating"
 		"Laser Rifle" 600
 		"Security Station"
+		"Medical Bay"
 		
 		"A120 Atomic Thruster"
 		"A125 Atomic Steering"

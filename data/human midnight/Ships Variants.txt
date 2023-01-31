@@ -231,6 +231,20 @@ ship "Argosy" "Argosy (Turbo Blaster)"
 		"X2700 Ion Thruster"
 		"Hyperdrive"
 
+ship "Argosy" "Argosy (Quad Mod Blaster)"
+	outfits
+		"Modified Blaster" 4
+		"Quad Mod Blaster Turret"
+		"Anti-Missile Turret"
+		"Fission Reactor"
+		"LP072a Battery Pack"
+		"D41-HY Shield Generator"
+		"Cooling Ducts"
+		"Outfits Expansion"
+		"X3200 Ion Steering"
+		"X2700 Ion Thruster"
+		"Hyperdrive"
+
 
 
 ship "Auxiliary" "Auxiliary (Battle)"
@@ -406,7 +420,6 @@ ship "Bastion" "Bastion (Flamethrower)"
 		"Flamethrower" 2
 		"Blaster Turret" 2
 		"Anti-Missile Turret"
-		
 		"S3 Thermionic"
 		"LP144a Battery Pack"
 		"nGVF-BB Fuel Cell"
@@ -416,11 +429,9 @@ ship "Bastion" "Bastion (Flamethrower)"
 		"Fuel Pod" 4
 		"Fragmentation Grenades" 7
 		"Laser Rifle" 17
-		
 		"Impala Plasma Thruster"
 		"Impala Plasma Steering"
 		"Hyperdrive"
-
 	gun "Flamethrower"
 	gun "Plasma Cannon"
 	gun "Flamethrower"
@@ -429,15 +440,11 @@ ship "Bastion" "Bastion (Flamethrower)"
 	turret "Blaster Turret"
 	turret "Anti-Missile Turret"
 
-
-
-
 ship "Bastion" "Bastion (Korath)"
 	outfits
 		"Plasma Cannon" 2
 		"Quad Blaster Turret" 2
 		"Warder Anti-Missile"
-		
 		"NT-200 Nucleovoltaic"
 		"Systems Core (Medium)" 2
 		"Large Heat Shunt"
@@ -445,11 +452,9 @@ ship "Bastion" "Bastion (Korath)"
 		"Brig"
 		"Thermal Repeater Rifle" 7
 		"Laser Rifle" 17
-		
 		"Impala Plasma Thruster"
 		"Impala Plasma Steering"
 		"Jump Drive"
-
 	gun
 	gun "Plasma Cannon"
 	gun
@@ -457,6 +462,29 @@ ship "Bastion" "Bastion (Korath)"
 	turret "Quad Blaster Turret"
 	turret "Quad Blaster Turret"
 	turret "Warder Anti-Missile"
+
+ship "Bastion" "Bastion (Quad Mod Blaster)"
+	outfits
+	outfits
+		"Anti-Missile Turret"
+		"Breeder Reactor"
+		Brig
+		"D67-TM Shield Generator"
+		Hyperdrive
+		"Interference Plating" 3
+		"LP072a Battery Pack"
+		"Laser Rifle" 8
+		"Liquid Nitrogen Cooler"
+		"Orca Plasma Steering"
+		"Outfits Expansion" 2
+		"Plasma Cannon" 4
+		"Quad Mod Blaster Turret" 2
+		"Tactical Scanner"
+		"X3700 Ion Thruster"
+	turret "Quad Mod Blaster Turret"
+	turret "Quad Mod Blaster Turret"
+	turret "Anti-Missile Turret"
+
 
 
 
@@ -1325,6 +1353,36 @@ ship "Falcon" "Falcon (Korath)"
 	turret "Digger Mining Turret"
 
 
+ship "Falcon" "Falcon (Quad Mod Blaster)"
+	outfits
+		"Breeder Reactor"
+		Brig
+		"D41-HY Shield Generator" 2
+		"Heavy Anti-Missile Turret"
+		Hyperdrive
+		"Impala Plasma Steering"
+		"Impala Plasma Thruster"
+		"Interference Plating" 3
+		"LP144a Battery Pack"
+		"Large Radar Jammer"
+		"Laser Rifle" 15
+		"Liquid Nitrogen Cooler"
+		"Outfits Expansion" 2
+		"Plasma Cannon" 2
+		"Quad Mod Blaster Turret" 3
+		Torpedo 60
+		"Torpedo Launcher" 2
+	gun "Plasma Cannon"
+	gun "Plasma Cannon"
+	gun "Torpedo Launcher"
+	gun "Torpedo Launcher"
+	turret "Quad Mod Blaster Turret"
+	turret "Quad Mod Blaster Turret"
+	turret "Heavy Anti-Missile Turret"
+	turret "Quad Mod Blaster Turret"
+
+
+
 
 ship "Finch" "Finch (Flamethrower)"
 	outfits
@@ -1394,6 +1452,32 @@ ship "Firebird" "Firebird (Turbo Blaster)"
 	gun "Meteor Missile Launcher"
 	turret "Anti-Missile Turret"
 	turret "Quad Turbo Blaster Turret"
+
+ship "Firebird" "Firebird (Quad Mod Blaster)"
+	outfits
+		"Anti-Missile Turret"
+		"D41-HY Shield Generator"
+		Hyperdrive
+		"LP144a Battery Pack"
+		"Laser Rifle" 3
+		"Meteor Missile" 60
+		"Meteor Missile Launcher" 2
+		"Particle Cannon" 2
+		"Quad Mod Blaster Turret"
+		"RT-I Radiothermal"
+		"Water Coolant System"
+		"X3200 Ion Steering"
+		"X3700 Ion Thruster"
+		"nGVF-CC Fuel Cell"
+	gun "Particle Cannon"
+	gun "Particle Cannon"
+	gun "Meteor Missile Launcher"
+	gun "Meteor Missile Launcher"
+	turret "Anti-Missile Turret"
+	turret "Quad Mod Blaster Turret"
+
+
+
 
 
 ship "Frigate" "Frigate (Pug)"
@@ -1669,6 +1753,25 @@ ship "Leviathan" "Leviathan (Turbo Blaster)"
 	turret "Anti-Missile Turret"
 	turret "Anti-Missile Turret"
 
+ship "Leviathan" "Leviathan (Quad Mod Blaster)"
+	outfits
+		"Anti-Missile Turret" 2
+		"D67-TM Shield Generator"
+		"Fusion Reactor"
+		Hyperdrive
+		"LP144a Battery Pack"
+		"Laser Rifle" 15
+		"Liquid Helium Cooler"
+		"Modified D67-TM Shielding"
+		"Particle Cannon" 4
+		"Quad Mod Blaster Turret" 2
+		"X3700 Ion Thruster"
+		"X4200 Ion Steering"
+	turret "Quad Mod Blaster Turret"
+	turret "Quad Mod Blaster Turret"
+	turret "Anti-Missile Turret"
+	turret "Anti-Missile Turret"
+
 
 
 ship "Missileboat" "Missileboat (Nuclear)"
@@ -1917,6 +2020,22 @@ ship "Modified Argosy" "Modified Argosy (Turbo Blaster)"
 		"X3200 Ion Steering"
 		"Hyperdrive"
 
+ship "Modified Argosy" "Modified Argosy (Quad Mod Blaster)"
+	outfits
+		"Modified Blaster" 4
+		"Quad Mod Blaster Turret"
+		"Heavy Anti-Missile Turret"
+		"Fission Reactor"
+		"LP072a Battery Pack"
+		"LP036a Battery Pack"
+		"Modified D67-TM Shielding"
+		"Liquid Nitrogen Cooler"
+		"Brig"
+		"Laser Rifle" 3
+		"X2700 Ion Thruster"
+		"X3200 Ion Steering"
+		"Hyperdrive"
+
 
 
 ship "Nest" "Nest (Korath)"
@@ -2120,6 +2239,37 @@ ship "Protector" "Protector (Proton Turret-ATS)"
 	turret "Proton Turret-ATS"
 	turret "Proton Turret-ATS"
 	turret
+
+
+
+ship "Protector" "Protector (Quad Mod Blaster)"
+	outfits
+		"Anti-Missile Turret" 2
+		Brig
+		"D67-TM Shield Generator"
+		"D94-YV Shield Generator"
+		"Fusion Reactor"
+		Hyperdrive
+		"Interference Plating" 2
+		"LP144a Battery Pack"
+		"Laser Rifle" 6
+		"Liquid Nitrogen Cooler"
+		"Meteor Missile" 44
+		"Meteor Missile Box" 2
+		"Meteor Missile Pod" 2
+		"Outfits Expansion"
+		"Quad Mod Blaster Turret" 6
+		"X3200 Ion Steering"
+		"X3700 Ion Thruster"
+	turret "Anti-Missile Turret"
+	turret "Quad Mod Blaster Turret"
+	turret "Quad Mod Blaster Turret"
+	turret "Quad Mod Blaster Turret"
+	turret "Quad Mod Blaster Turret"
+	turret "Quad Mod Blaster Turret"
+	turret "Quad Mod Blaster Turret"
+	turret "Anti-Missile Turret"
+
 
 
 
@@ -2445,6 +2595,29 @@ ship "Splinter" "Splinter (Korath)"
 	turret "Digger Mining Turret"
 	turret "Warder Anti-Missile"
 	turret "Digger Mining Turret"
+
+ship "Splinter" "Splinter (Quad Mod Blaster)"
+	outfits
+		"Anti-Missile Turret"
+		Brig
+		"Cargo Scanner"
+		"D67-TM Shield Generator"
+		"Fission Reactor"
+		Hyperdrive
+		"Interference Plating" 5
+		"LP144a Battery Pack"
+		"Laser Rifle" 4
+		"Meteor Missile" 90
+		"Meteor Missile Box" 2
+		"Meteor Missile Launcher" 2
+		"Quad Mod Blaster Turret" 2
+		"Small Radar Jammer" 2
+		"Water Coolant System"
+		"X3200 Ion Steering"
+		"X3700 Ion Thruster"
+	turret "Quad Mod Blaster Turret"
+	turret "Anti-Missile Turret"
+	turret "Quad Mod Blaster Turret"
 
 
 

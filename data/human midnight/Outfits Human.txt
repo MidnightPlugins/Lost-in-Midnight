@@ -125,20 +125,6 @@ outfit "Liquid Metal Hull"
 
 
 
-outfit "Medical Bay"
-	category "Hand to Hand"
-	cost 250000
-	thumbnail "outfit/medical bay"
-	"mass" 10
-	"outfit space" -10
-	"capture defense" 25
-	"unplunderable" 1
-	"required crew" 1
-	"operating costs" 200
-	description "A medical bay staffed by a trained doctor helps keep your crew in good health, boosting morale. When defending the ship, injured crew members will likely be brought here for treatment, often making defense of the medical bay a rallying point of interest in tense boarding battles."
-
-
-
 outfit "Modified D14-RN Shielding"
 	category "Systems"
 	cost 25000
@@ -373,6 +359,20 @@ outfit "Execution Chamber"
 	"required crew" 2
 	"unplunderable" 1
 	description "This is a specially designed room which can be installed in your ship. Anyone who boards you in an attempt to take over your ship will find themselves locked in this room by the self sealing doors. A pair of portholes allow your crew to safely sweep the chamber with weapons fire from the other side of the reinforced bulkhead."
+
+
+
+outfit "Medical Bay"
+	category "Hand to Hand"
+	cost 250000
+	thumbnail "outfit/medical bay"
+	"mass" 10
+	"outfit space" -10
+	"capture defense" 25
+	"unplunderable" 1
+	"required crew" 1
+	"operating costs" 200
+	description "A medical bay staffed by a trained doctor helps keep your crew in good health, boosting morale. When defending the ship, injured crew members will likely be brought here for treatment, often making defense of the medical bay a rallying point of interest in tense boarding battles."
 
 
 
