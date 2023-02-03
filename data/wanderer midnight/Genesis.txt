@@ -75,16 +75,18 @@ phrase "genesis"
 		"iz"
 		"ith"
 		"oth"
-	
+
 
 
 ship "Genesis Spacecraft"
 	sprite "ship/genesis spacecraft"
-	"never disabled"
 	attributes
 		category "Light Freighter"
+		licenses
+			"Genesis"
 		"cost" 960000
 		"hull" 2300
+		"threshold percentage" .05
 		"required crew" 4
 		"bunks" 7
 		"mass" 270
@@ -131,9 +133,9 @@ ship "Genesis Spacecraft"
 	description "A basic space exploration vessel from a pre-hyperdrive civilization."
 
 
+
 ship "Genesis Spacecraft" "Genesis Freighter"
 	sprite "ship/genesis freighter"
-	"never disabled"
 	add attributes
 		"cargo space" 40
 		"outfit space" -40
@@ -141,7 +143,7 @@ ship "Genesis Spacecraft" "Genesis Freighter"
 	outfits
 		"Radiothermal"
 		"Small Battery"
-		"Fuel Pod" 6		
+		"Fuel Pod" 6
 		"Afterburner"
 		"Engines"
 	engine -33 65
@@ -150,13 +152,16 @@ ship "Genesis Spacecraft" "Genesis Freighter"
 
 
 ship "Genesis Probe"
-	sprite "ship/genesis probe"
-	"never disabled"
+	sprite "ship/genesis probe"	"never disabled"
 	attributes
 		category "Drone"
+		licenses
+			"Genesis"
 		"cost" 50000
 		"hull" 400
+		"threshold percentage" .05
 		"automaton" 1
+		"crew equivalent" 1
 		"mass" 30
 		"drag" 2
 		"heat dissipation" 1
@@ -188,11 +193,13 @@ ship "Genesis Probe"
 
 ship "Genesis Transport"
 	sprite "ship/genesis transport"
-	"never disabled"	
 	attributes
 		category "Transport"
+		licenses
+			"Genesis"
 		"cost" 1110000
 		"hull" 900
+		"threshold percentage" .05
 		"required crew" 3
 		"bunks" 28
 		"mass" 220
@@ -215,7 +222,7 @@ ship "Genesis Transport"
 		"Luxury Accommodations"
 
 		"Afterburner"
-		"Engines"	
+		"Engines"
 		
 	engine -42.5 52
 	engine 42.5 52
@@ -229,14 +236,17 @@ ship "Genesis Transport"
 	description "The Children of The Garden developed these transports to ferry civilians to their nearby space colonies."
 
 
-	
+
 ship "Genesis Cryoship"
 	sprite "ship/genesis cryoship"
-	"never disabled"	
+	"crew" 184
 	attributes
 		category "Heavy Warship"
+		licenses
+			"Genesis"
 		"cost" 8300000
 		"hull" 8600
+		"threshold percentage" .05
 		"required crew" 7
 		"bunks" 24
 		"mass" 940
@@ -257,7 +267,7 @@ ship "Genesis Cryoship"
 
 		"Fusion"
 		"Medium Battery"
-		"Cryo Chamber" 1000
+		"Cryostasis Pod" 160
 		
 		"Afterburner"
 		"Engines"
@@ -279,14 +289,16 @@ outfit "Cryo Chamber"
 	thumbnail "outfit/unknown"
 	"mass" 1
 	"outfit space" -1
-	"bunks" 1
-	"required crew" 1
-	"capture attack" -1
-	"capture defense" -2
+	"crew equivalent" 1
 	description `The Children of The Garden use these stasis pods to survive the long journey between the stars.`
 
 
 
+shipyard "Genesis"
+	"Genesis Spacecraft"
+	"Genesis Probe"
+	"Genesis Freighter"
+	"Genesis Transport"
 
 
 outfitter "Genesis"
@@ -490,9 +502,11 @@ outfit "Engines"
 	"outfit space" -20
 	"engine capacity" -20
 	"thrust" 4.0
+	"thrusting fuel" .1
 	"thrusting energy" .4
 	"thrusting heat" .6
 	"turn" 110
+	"turning fuel" .1
 	"turning energy" .25
 	"turning heat" .5
 	"flare sprite" "effect/ion flare/tiny"
@@ -714,9 +728,10 @@ event "Genesis Colony"
 				period 47.3937
 				offset 196.692
 	planet "The Garden"
-		add description `They have set up an outfitter. Many of the outfits are similar to equivalents you can find in human space.`
+		add description `They have set up an outfitter and shipyard. Many of the outfits are similar to equivalents you can find in human space.`
 		spaceport `The Childen of The Garden have constructed a simple spaceport, with runways, landing/launching pads, and hangars. Though they haven't developed a Hyperdrive, they still use hyperspace fuel in their engines and are able to refuel your ship.`
 		outfitter "Genesis"
+		shipyard "Genesis"
 	planet "The Gate"
 		attributes midnight genesis
 		landscape land/earthrisever8
@@ -795,6 +810,8 @@ event "Genesis Cryoships Deployed"
 		add "Laser"
 		add "Fusion"
 		add "Medium Battery"
+	shipyard "Genesis"
+		add "Genesis Cryoship"
 
 mission "Genesis Patch Revelation3"
 	landing
