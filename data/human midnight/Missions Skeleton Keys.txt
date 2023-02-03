@@ -135,6 +135,7 @@ mission "Skeleton Key South 1"
 		random < 10 + ( 20 * "skeleton key north" ) + ( 20 * "skeleton key core")
 	on offer
 		conversation
+			scene "planet/station15"
 			`When you land, you are surprised to find a message waiting for you from Joe, the young man you transported from Smuggler's Den to Millrace to help his family escape their lives as pirate crew members. "Dear Captain <last>," he writes, "I didn't want to worry Maria, so she doesn't know I've written this letter. But I've learned that there may have been some kind of pirate rebellion on Smuggler's Den. While I don't regret leaving the pirates, I can't say we didn't have some friends among them. If you happen to visit Smuggler's Den again, could you please look up the crew of the Deadly Wager? It's the ship Maria and I were on. The captain and his officers were scum, but some of the regular crew weren't so bad. I don't know who else to ask, so I've decided to reach out to you."`
 			choice
 				`	(Honor Joe's request.)`
@@ -269,7 +270,6 @@ mission "Skeleton Key Core 1"
 	description "Locate a pirate raider named the <npc> near <system> and board it to rescue Pookie. Then return her to <destination>."
 	source
 		government Republic
-		attributes "frontier"
 		attributes "north"
 		not attributes "uninhabited"
 		not planet "Shroud"
@@ -280,6 +280,7 @@ mission "Skeleton Key Core 1"
 		random < 10 + ( 20 * "skeleton key north" ) + ( 20 * "skeleton key south")
 	on offer
 		conversation
+			scene "outfit/unknown"
 			`While walking through the spaceport you bump into a tall woman in a suit carrying a leash. Her face brightens up upon recognizing you. "I remember you! You're that transportor who took Pookie home that one time! Please, I need your help!" This woman is the "aunt" of Pookie the dog, one of your more memorable passengers.`
 			choice
 				`	"How can I help?"`
