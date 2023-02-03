@@ -152,7 +152,8 @@ ship "Genesis Spacecraft" "Genesis Freighter"
 
 
 ship "Genesis Probe"
-	sprite "ship/genesis probe"	"never disabled"
+	sprite "ship/genesis probe"
+	"never disabled"
 	attributes
 		category "Drone"
 		licenses
