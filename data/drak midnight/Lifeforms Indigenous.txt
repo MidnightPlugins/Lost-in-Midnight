@@ -388,12 +388,12 @@ ship "Subsidurial" "Subsidurial Weaponized C"
 		"weapon capacity" 80
 	outfits
 		Mouthparts? 3
-		"Modified Blaster Turret" 2
+		"Quad Mod Blaster Turret" 2
 	gun Mouthparts?
 	gun Mouthparts?
 	gun Mouthparts?
-	turret "Modified Blaster Turret"
-	turret "Modified Blaster Turret"
+	turret "Quad Mod Blaster Turret"
+	turret "Quad Mod Blaster Turret"
 
 mission "Day of Subsidurius"
 	minor
