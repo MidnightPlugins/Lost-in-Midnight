@@ -1172,7 +1172,7 @@ mission "Danger In Darkwaste Escape Epilogue"
 	invisible
 	source
 		government Hai
-		attributes "spaceport"
+		attributes spaceport
 		not attributes "uninhabited"
 		not planet "Darkwaste"
 	to offer

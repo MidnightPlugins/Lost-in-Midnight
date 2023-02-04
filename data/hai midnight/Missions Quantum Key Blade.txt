@@ -1224,7 +1224,7 @@ mission "QKBlade: Honor of the Blade Bearer - Courier (Hai)"
 	destination
 		distance 5 20
 		government "Hai"
-		attributes "spaceport"
+		attributes spaceport
 		not attributes "uninhabited"
 	to offer
 		has "Honor of the Blade Bearer"
@@ -1258,7 +1258,7 @@ mission "QKBlade: Honor of the Blade Bearer - Courier (Unfettered)"
 	destination
 		distance 5 15
 		government "Hai (Unfettered)"
-		attributes "spaceport"
+		attributes spaceport
 		not attributes "uninhabited"
 	to offer
 		has "Honor of the Blade Bearer"
