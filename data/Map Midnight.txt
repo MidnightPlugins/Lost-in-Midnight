@@ -32,16 +32,16 @@ system Archipelago
 	minables aluminum 18 1.321
 	minables titanium 12 1.023
 	minables uranium 6 1.223
-	trade Clothing 290
-	trade Electronics 640
-	trade Equipment 530
-	trade Food 450
-	trade "Heavy Metals" 260
-	trade Industrial 620
-	trade "Luxury Goods" 920
-	trade Medical 680
-	trade Metal 160
-	trade Plastic 390
+	trade Clothing 345
+	trade Electronics 851
+	trade Equipment 677
+	trade Food 459
+	trade "Heavy Metals" 615
+	trade Industrial 890
+	trade "Luxury Goods" 992
+	trade Medical 871
+	trade Metal 138
+	trade Plastic 466
 	hazard "Heliosphere Plasma Storm" 10000
 	fleet "Small Independent" 1200
 	fleet "Large Independent" 1600
@@ -158,16 +158,16 @@ system Aya'arak
 	minables aluminum 20 1.132
 	minables copper 12 2.023
 	minables tungsten 4 3.223
-	trade Clothing 290
-	trade Electronics 740
-	trade Equipment 530
-	trade Food 350
-	trade "Heavy Metals" 960
-	trade Industrial 720
-	trade "Luxury Goods" 1220
-	trade Medical 680
-	trade Metal 390
-	trade Plastic 390
+	trade Clothing 256
+	trade Electronics 831
+	trade Equipment 595
+	trade Food 407
+	trade "Heavy Metals" 1046
+	trade Industrial 628
+	trade "Luxury Goods" 1227
+	trade Medical 678
+	trade Metal 285
+	trade Plastic 442
 	object
 		sprite star/giant
 		period 10
@@ -220,16 +220,16 @@ system Chasm
 	minables iron 19 1.132
 	minables copper 6 1.023
 	minables silver 3 1.223
-	trade Clothing 290
-	trade Electronics 740
-	trade Equipment 530
-	trade Food 350
-	trade "Heavy Metals" 960
-	trade Industrial 720
-	trade "Luxury Goods" 1220
-	trade Medical 680
-	trade Metal 390
-	trade Plastic 390
+	trade Clothing 266
+	trade Electronics 786
+	trade Equipment 533
+	trade Food 240
+	trade "Heavy Metals" 926
+	trade Industrial 670
+	trade "Luxury Goods" 984
+	trade Medical 848
+	trade Metal 542
+	trade Plastic 491
 	fleet "Small Southern Pirates" 600
 	fleet "Small Dirt Belt Pirates" 1200
 	fleet "Large Dirt Belt Pirates" 3600
@@ -302,16 +302,16 @@ system Diyu
 	minables iron 14 1.132
 	minables aluminum 9 1.153
 	minables copper 6 2.223
-	trade Clothing 290
-	trade Electronics 740
-	trade Equipment 530
-	trade Food 350
-	trade "Heavy Metals" 960
-	trade Industrial 720
-	trade "Luxury Goods" 1220
-	trade Medical 680
-	trade Metal 390
-	trade Plastic 390
+	trade Clothing 310
+	trade Electronics 689
+	trade Equipment 394
+	trade Food 538
+	trade "Heavy Metals" 931
+	trade Industrial 602
+	trade "Luxury Goods" 1168
+	trade Medical 547
+	trade Metal 457
+	trade Plastic 291
 	fleet "Small Dirt Belt Pirates" 1200
 	fleet "Large Dirt Belt Pirates" 3600
 	fleet "pirate raid" 4800
@@ -381,16 +381,16 @@ system Ehmahai
 	minables silicon 19 1.023
 	minables copper 14 1.132
 	minables aluminum 9 1.153
-	trade Clothing 290
-	trade Electronics 740
-	trade Equipment 530
-	trade Food 350
-	trade "Heavy Metals" 960
-	trade Industrial 720
-	trade "Luxury Goods" 1220
-	trade Medical 680
-	trade Metal 390
-	trade Plastic 390
+	trade Clothing 168
+	trade Electronics 765
+	trade Equipment 330
+	trade Food 437
+	trade "Heavy Metals" 985
+	trade Industrial 561
+	trade "Luxury Goods" 925
+	trade Medical 795
+	trade Metal 488
+	trade Plastic 472
 	fleet "Nova Firefly" 3000
 	object
 		sprite star/g5
@@ -445,16 +445,16 @@ system Genesis
 	minables silicon 19 1.023
 	minables iron 14 1.132
 	minables aluminum 9 1.153
-	trade Clothing 290
-	trade Electronics 740
-	trade Equipment 530
-	trade Food 350
-	trade "Heavy Metals" 960
-	trade Industrial 720
-	trade "Luxury Goods" 1220
-	trade Medical 680
-	trade Metal 390
-	trade Plastic 390
+	trade Clothing 314
+	trade Electronics 777
+	trade Equipment 589
+	trade Food 481
+	trade "Heavy Metals" 783
+	trade Industrial 706
+	trade "Luxury Goods" 1188
+	trade Medical 641
+	trade Metal 404
+	trade Plastic 336
 	object
 		sprite star/g0
 		distance 33.374
@@ -519,6 +519,16 @@ system Hazehai
 	minables gold 6 1.38671
 	minables yottrite 3 2.3863
 	minables quantumium 1 3.1863
+	trade Clothing 243
+	trade Electronics 599
+	trade Equipment 513
+	trade Food 511
+	trade "Heavy Metals" 1254
+	trade Industrial 623
+	trade "Luxury Goods" 933
+	trade Medical 452
+	trade Metal 276
+	trade Plastic 328
 	fleet "Nova Firefly Hatchery" 900
 	fleet "Nova Firefly" 4000
 	object
@@ -548,16 +558,16 @@ system Heiahai
 	minables silicon 19 1.023
 	minables iron 14 1.132
 	minables titanium 9 1.153
-	trade Clothing 290
-	trade Electronics 740
-	trade Equipment 530
-	trade Food 350
-	trade "Heavy Metals" 960
-	trade Industrial 720
-	trade "Luxury Goods" 1220
-	trade Medical 680
-	trade Metal 390
-	trade Plastic 390
+	trade Clothing 418
+	trade Electronics 695
+	trade Equipment 470
+	trade Food 598
+	trade "Heavy Metals" 705
+	trade Industrial 811
+	trade "Luxury Goods" 1245
+	trade Medical 925
+	trade Metal 248
+	trade Plastic 472
 	fleet "Nova Firefly" 3000
 	object
 		sprite star/g5
@@ -617,6 +627,16 @@ system Kalsolli
 	minables iron 10 3.1863
 	minables neodymium 5 2.48669
 	minables quantumium 1 2
+	trade Clothing 216
+	trade Electronics 857
+	trade Equipment 640
+	trade Food 258
+	trade "Heavy Metals" 848
+	trade Industrial 854
+	trade "Luxury Goods" 1090
+	trade Medical 726
+	trade Metal 217
+	trade Plastic 524
 	object
 		sprite star/f5-old
 		distance 31.5287
@@ -664,16 +684,16 @@ system Nebulous
 	habitable 233.28
 	fleet "Plasma Parasites" 3600
 	fleet "Nesting Plasma Parasites" 400
-	trade Clothing 290
-	trade Electronics 740
-	trade Equipment 530
-	trade Food 350
-	trade "Heavy Metals" 960
-	trade Industrial 720
-	trade "Luxury Goods" 1220
-	trade Medical 680
-	trade Metal 390
-	trade Plastic 390
+	trade Clothing 361
+	trade Electronics 800
+	trade Equipment 485
+	trade Food 335
+	trade "Heavy Metals" 806
+	trade Industrial 838
+	trade "Luxury Goods" 1456
+	trade Medical 914
+	trade Metal 297
+	trade Plastic 412
 	object
 		sprite star/wr1
 		period 10
@@ -787,16 +807,16 @@ system "Pebble Beach"
 	minables silver 12 1.132
 	minables gold 6 1.327
 	minables platinum 3 1.423
-	trade Clothing 0
-	trade Electronics 0
-	trade Equipment 0
-	trade Food 0
-	trade "Heavy Metals" 0
-	trade Industrial 0
-	trade "Luxury Goods" 0
-	trade Medical 0
-	trade Metal 0
-	trade Plastic 0
+	trade Clothing 321
+	trade Electronics 672
+	trade Equipment 455
+	trade Food 272
+	trade "Heavy Metals" 1028
+	trade Industrial 703
+	trade "Luxury Goods" 1097
+	trade Medical 811
+	trade Metal 413
+	trade Plastic 408
 	object
 		sprite star/g5
 		period 10
@@ -846,6 +866,16 @@ system Quarantine
 	asteroids "ringworld debris h" 1 1.25
 	minables silicon 1 2.423
 	minables titanium 1 1.223
+	trade Clothing 292
+	trade Electronics 793
+	trade Equipment 421
+	trade Food 144
+	trade "Heavy Metals" 986
+	trade Industrial 684
+	trade "Luxury Goods" 576
+	trade Medical 678
+	trade Metal 175
+	trade Plastic 329
 	object Orphan
 		sprite planet/ice0
 		distance 1
@@ -877,6 +907,16 @@ system Tekochtli
 	minables lead 8 4.8391
 	minables uranium 4 3.48669
 	minables quantumium 2 5.5863
+	trade Clothing 320
+	trade Electronics 663
+	trade Equipment 371
+	trade Food 252
+	trade "Heavy Metals" 821
+	trade Industrial 859
+	trade "Luxury Goods" 1471
+	trade Medical 850
+	trade Metal 517
+	trade Plastic 423
 	object
 		sprite star/nova-small
 		period 100
@@ -929,6 +969,16 @@ system Temeh
 	minables silver 3 7.68495
 	minables gold 2 8.1359 
 	minables platinum 1 9.4869
+	trade Clothing 290
+	trade Electronics 658
+	trade Equipment 588
+	trade Food 116
+	trade "Heavy Metals" 694
+	trade Industrial 728
+	trade "Luxury Goods" 1004
+	trade Medical 874
+	trade Metal 240
+	trade Plastic 531
 	object
 		sprite star/carbon
 		period 100
@@ -973,15 +1023,6 @@ system "Watcher's Nest"
 	asteroids "medium rock" 1 1.7684
 	asteroids "small metal" 4 2.578
 	asteroids "medium metal" 1 1.6432
-	trade Electronics 740
-	trade Equipment 530
-	trade Food 350
-	trade "Heavy Metals" 960
-	trade Industrial 720
-	trade "Luxury Goods" 1220
-	trade Medical 680
-	trade Metal 390
-	trade Plastic 390
 	fleet "Watcher's Nest Phenomenon (dangerous)" 2000
 	fleet "Watcher's Nest Phenomenon (harmless)" 2000
 	object
@@ -1026,16 +1067,16 @@ system Zubahai
 	minables silicon 19 1.023
 	minables iron 14 1.132
 	minables neodymium 5 2.48669
-	trade Clothing 290
-	trade Electronics 740
-	trade Equipment 530
-	trade Food 350
-	trade "Heavy Metals" 960
-	trade Industrial 720
-	trade "Luxury Goods" 1220
-	trade Medical 680
-	trade Metal 390
-	trade Plastic 390
+	trade Clothing 408
+	trade Electronics 885
+	trade Equipment 730
+	trade Food 237
+	trade "Heavy Metals" 1305
+	trade Industrial 911
+	trade "Luxury Goods" 1125
+	trade Medical 615
+	trade Metal 368
+	trade Plastic 532
 	fleet "Nova Firefly Scout" 10000
 	object
 		sprite star/g0
