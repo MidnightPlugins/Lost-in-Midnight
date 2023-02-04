@@ -79,7 +79,7 @@ mission "Midnight Lost Orphan: Captain of Atrocity 2"
 	invisible
 	minor
 	source
-		attributes "spaceport"
+		attributes spaceport
 		not attributes "uninhabited"
 	to offer
 		"captain of atrocity" >= 10
@@ -94,7 +94,7 @@ mission "Midnight Lost Orphan: Captain of Atrocity 3"
 	invisible
 	minor
 	source
-		attributes "spaceport"
+		attributes spaceport
 		not attributes "uninhabited"
 	to offer
 		"captain of atrocity" >= 15
@@ -109,7 +109,7 @@ mission "Midnight Lost Orphan: Captain of Atrocity 4"
 	invisible
 	minor
 	source
-		attributes "spaceport"
+		attributes spaceport
 		not attributes "uninhabited"
 	to offer
 		"captain of atrocity" >= 20
@@ -124,7 +124,7 @@ mission "Midnight Lost Orphan: Captain of Atrocity 5"
 	invisible
 	minor
 	source
-		attributes "spaceport"
+		attributes spaceport
 		not attributes "uninhabited"
 	to offer
 		"captain of atrocity" >= 25
