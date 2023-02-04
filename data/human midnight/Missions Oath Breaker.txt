@@ -1424,7 +1424,7 @@ mission "Nemesis: Oath Breaker"
 	invisible
 	source
 		government "Free Worlds"
-		attributes "spaceport"
+		attributes spaceport
 		not attributes "uninhabited"
 	to offer
 		has "Oathbreaker Pirate Gossip: declined"

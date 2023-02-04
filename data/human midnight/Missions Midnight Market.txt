@@ -231,7 +231,8 @@ event "Hauler VI Market timer"
 			"Hauler" 2
 		add variant 1
 			"Hauler VI"
-			"Berserker" 2
+			"Berserker"
+			"Berserker (Limit Break)"
 
 
 ship "Hauler VI" "Hauler VI (prototype)"
@@ -617,7 +618,7 @@ mission "Midnight Market: Wanderer Micro-sat"
 	minor
 	source
 		government "Pirate"
-		attributes "spaceport"
+		attributes spaceport
 	to offer
 		has "stole a wanderer micro-sat"
 		not "Wanderers: Alpha Surveillance B: done"

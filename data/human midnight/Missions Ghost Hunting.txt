@@ -1332,7 +1332,7 @@ mission "Ghost Hunting: Curse of the Carabao Passengers [human]"
 	landing
 	repeat
 	source
-		attributes "spaceport"
+		attributes spaceport
 		not attributes "uninhabited"
 	to offer
 		has "curse of the carabao"

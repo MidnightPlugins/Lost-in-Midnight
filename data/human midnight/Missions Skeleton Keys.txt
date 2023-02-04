@@ -23,7 +23,7 @@ mission "Skeleton Key North 1"
 		or
 			has "Paradise Fortune 4: done"
 			has "Paradise Fortune 4: declined"
-		random < 10 + ( 20 * "skeleton key south" ) + ( 20 * "skeleton key core")
+		random < 50 + ( 20 * "skeleton key south" ) + ( 20 * "skeleton key core")
 	on offer
 		conversation
 			scene "planet/forest6"
@@ -126,17 +126,17 @@ mission "Skeleton Key South 1"
 	description "Visit <destination> and find out what happened to the Deadly Wager."
 	source
 		government "Syndicate"
-		attributes "spaceport"
+		attributes spaceport
 		not attributes "uninhabited"
 	destination "Smuggler's Den"
 	to offer
 		has "Smuggler's Den: Follow Up: failed"
 		has "main plot completed"
-		random < 10 + ( 20 * "skeleton key north" ) + ( 20 * "skeleton key core")
+		random < 50 + ( 20 * "skeleton key north" ) + ( 20 * "skeleton key core")
 	on offer
 		conversation
 			scene "planet/station15"
-			`When you land, you are surprised to find a message waiting for you from Joe, the young man you transported from Smuggler's Den to Millrace to help his family escape their lives as pirate crew members. "Dear Captain <last>," he writes, "I didn't want to worry Maria, so she doesn't know I've written this letter. But I've learned that there may have been some kind of pirate rebellion on Smuggler's Den. While I don't regret leaving the pirates, I can't say we didn't have some friends among them. If you happen to visit Smuggler's Den again, could you please look up the crew of the Deadly Wager? It's the ship Maria and I were on. The captain and his officers were scum, but some of the regular crew weren't so bad. I don't know who else to ask, so I've decided to reach out to you."`
+			`When you land, you are surprised to receive a message from Joe, the young man you transported from Smuggler's Den to Millrace to help his family escape their lives as pirate crew members. "Dear Captain <last>," he writes, "I didn't want to worry Maria, so she doesn't know I've written this letter. But I've learned that there may have been some kind of pirate rebellion on Smuggler's Den. While I don't regret leaving the pirates, I can't say we didn't have some friends among them. If you happen to visit Smuggler's Den again, could you please look up the crew of the Deadly Wager? It's the ship Maria and I were on. The captain and his officers were scum, but some of the regular crew weren't so bad. I don't know who else to ask, so I've decided to reach out to you."`
 			choice
 				`	(Honor Joe's request.)`
 					accept
@@ -241,7 +241,7 @@ mission "Skeleton Key South 2"
 				accept
 	on enter "Beta Lupi"
 		conversation
-			scene "ship/mfalcons"
+			scene "thumbnail/mfalcons"
 			`You've found the <npc>. It is adrift and not responding to hails. You'll have to board it to get answers.`
 	npc board
 		government "Pirate"
@@ -251,7 +251,7 @@ mission "Skeleton Key South 2"
 		conversation
 			action
 				outfit "Skeleton Key" 1
-				set "skeleton key north"
+				set "skeleton key south"
 			scene "outfit/skeleton key"
 			`The crew aboard the <npc> are dead. Some escape pods are missing, so there may be survivors. But the captain isn't among them. Clutched in his hand with a death grip is some sort of key... You've heard urban legends about three "Skeleton Keys" which unlock pirate treasure. Could this be one of them? You pocket the key.`
 			``
@@ -267,7 +267,7 @@ mission "Skeleton Key South 2"
 mission "Skeleton Key Core 1"
 	minor
 	name "Rescue Pookie!"
-	description "Locate a pirate raider named the <npc> near <system> and board it to rescue Pookie. Then return her to <destination>."
+	description "Locate a pirate raider named the <npc> in the uninhabited systems of the Northern Passage and board it to rescue Pookie. Then return her to <destination>."
 	source
 		government Republic
 		attributes "north"
@@ -277,7 +277,7 @@ mission "Skeleton Key Core 1"
 	to offer
 		has "Pookie, Part 2: done"
 		has "main plot completed"
-		random < 10 + ( 20 * "skeleton key north" ) + ( 20 * "skeleton key south")
+		random < 50 + ( 20 * "skeleton key north" ) + ( 20 * "skeleton key south")
 	on offer
 		conversation
 			scene "outfit/unknown"
@@ -304,7 +304,7 @@ mission "Skeleton Key Core 1"
 			choice
 				`	"So what do you want me to do about it?"`
 			``
-			`	"The kidnappers were on a pirate ship named the <npc>. I've reported this to the authorities, but they won't devote resources to rescuing a dog. Please help!"`
+			`	"The kidnappers were on a pirate ship named the <npc>. They fled to the uninhabited systems of the Northern Passage, those empty systems stretching south from Alnitak. I've reported this to the authorities, but they won't devote resources to rescuing a dog. Please help!"`
 			choice
 				`	"I don't work for free."`
 				`	"Sorry, not interested."`
@@ -322,28 +322,36 @@ mission "Skeleton Key Core 1"
 			label agree
 			`	"Thank you so much!" She hands you the leash and starts reminding you about feeding schedules and other details that turned out to be irrelevant the last time you dealt with Pookie. "I'll be waiting for you on <destination>."`
 				accept
+	on enter Hassaleh
+		conversation
+			scene "thumbnail/mule"
+			`You've located the <npc>! Board the ship and find Pookie!`
 	npc board
 		government "Bounty"
-		system
-			distance 1 2
+		system Hassaleh
 		personality target waiting staying plunders
 		ship "Mule" "Bone Cruncher"
 		conversation
-			action
-				set "pookie clue"
 			scene "outfit/map"
 			`You demand to know what the pirates did with the dog they captured. One confesses that they sold it to a kennel on Stormhold in the Alcyone system. "Lots of cold hungry people there you know," he taunts you. "Maybe they already turned it into a nice warm stew..." The pirate rubs his belly and grins.`
-	to complete
-		has "Skeleton Key Core 2: done"
+	to fail
+		has "Skeleton Key Core 2: offered"
 	on visit
+		dialog `You have to rescue Pookie! Track down the <npc> and board the ship!`
+	on complete
 		conversation
-			branch clue
-				has "pookie clue"
-			scene "outfit/unknown"
-			`	You have to rescue Pookie! Track down the <npc> and board the ship!`
-			label clue
 			scene "outfit/attention"
 			`	The crew of the <npc> sold Pookie to someone on Stormhold in the Alcyone system! Visit that world and rescue her!`
+
+mission "Skeleton Key Core 1B"
+	minor
+	name "Rescue Pookie!"
+	description "The crew of the <npc> sold Pookie to someone on <destination>! Visit that world and rescue her!"
+	source "Shroud"
+	destination "Stormhold"
+	to offer
+		has "Skeleton Key Core 1: done"
+		not "Skeleton Key Core 2: offered"
 
 mission "Skeleton Key Core 2"
 	landing
@@ -351,10 +359,10 @@ mission "Skeleton Key Core 2"
 	source Stormhold
 	destination "Shroud"
 	to offer
-		has "Skeleton Key Core 1: active"
-		has "pookie clue"
+		or
+			has "Skeleton Key Core 1: active"
+			has "Skeleton Key Core 1B: done"
 	on offer
-		clear "pookie clue"
 		outfit "Skeleton Key" 1
 		set "skeleton key core"
 		conversation
@@ -383,9 +391,14 @@ mission "Skeleton Keys, Three 1"
 		not planet "Millrace"
 	destination "Millrace"
 	to offer
-		has "skeleton key north"
-		has "skeleton key core"
-		has "skeleton key south"
+		or
+			and
+				has "skeleton key north"
+				has "skeleton key core"
+				has "skeleton key south"
+			and
+				has "Skeleton Key Core 2: done"
+				has "Skeleton Key North 2: done"
 		has "Skeleton Key South 2: done"
 	on offer
 		clear "skeleton key north"
