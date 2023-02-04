@@ -1128,7 +1128,7 @@ mission "Gremlin: Burst Fuel Pod (spaceport)"
 	landing
 	repeat
 	source
-		attributes "spaceport"
+		attributes spaceport
 	to offer
 		has "Gremlin start"
 		not "Betelgeuse offer [Gremlin 3]: failed"
@@ -1610,6 +1610,8 @@ mission "Kamikaze Ambush"
 				"Marauder Sparrow (Mod Blaster)"
 			variant 1
 				"Marauder Sparrow (Meteor Missile)"
+			variant 1
+				"Marauder Sparrow (Turbo Blaster)"
 		dialog `If this Marauder Sparrow has the same device as yours, it may not be wise to approach it.`
 
 
