@@ -985,7 +985,7 @@ mission "Sheragi Shenanigans: Counterfeits (Mammon)"
 	name "Sheragi: Counterfeiter"
 	description "Infiltrate the counterfeiter's manufacturing facility on <planet> to steal their prototype and computer data."
 	source
-		attributes "spaceport"
+		attributes spaceport
 	destination "Smuggler's Den"
 	to offer
 		has "Sheragi Shenanigans: Counterfeits (North): done"
