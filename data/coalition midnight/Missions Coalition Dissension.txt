@@ -2150,47 +2150,47 @@ mission "Coalition Dissension: Temlamrem Bounty"
 	stopover
 		government "Coalition"
 		attributes "saryd"
-		attributes "spaceport"
+		attributes spaceport
 	stopover
 		government "Coalition"
 		attributes "saryd"
-		attributes "spaceport"
+		attributes spaceport
 	stopover
 		government "Coalition"
 		attributes "saryd"
-		attributes "spaceport"
+		attributes spaceport
 	stopover
 		government "Coalition"
 		attributes "saryd"
-		attributes "spaceport"
+		attributes spaceport
 	stopover
 		government "Coalition"
 		attributes "saryd"
-		attributes "spaceport"
+		attributes spaceport
 	stopover
 		government "Coalition"
 		attributes "saryd"
-		attributes "spaceport"
+		attributes spaceport
 	stopover
 		government "Coalition"
 		attributes "saryd"
-		attributes "spaceport"
+		attributes spaceport
 	stopover
 		government "Coalition"
 		attributes "saryd"
-		attributes "spaceport"
+		attributes spaceport
 	stopover
 		government "Coalition"
 		attributes "saryd"
-		attributes "spaceport"
+		attributes spaceport
 	stopover
 		government "Coalition"
 		attributes "saryd"
-		attributes "spaceport"
+		attributes spaceport
 	stopover
 		government "Coalition"
 		attributes "saryd"
-		attributes "spaceport"
+		attributes spaceport
 	to offer
 		has "Coalition Dissension: Heliarch Intrigues 1: done"
 		has "heliarch intrigues" > 5
@@ -2405,7 +2405,7 @@ mission "Coalition Dissension: Spaceport Bomber (Saryd)"
 	destination
 		government "Coalition" "Heliarch"
 		attributes "saryd"
-		attributes "spaceport"
+		attributes spaceport
 		not attributes "uninhabited"
 		distance 1 1
 	passengers 5
