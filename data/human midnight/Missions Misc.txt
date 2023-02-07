@@ -1545,6 +1545,42 @@ mission "Pirate FW invite 3"
 
 
 
+mission "Stranded Dirtbelt Merchant"
+	landing
+	name "Passenger to <planet>"
+	description "<bunks> freighter crew you found stranded on <origin> have offered a reward of <payment> for transporting them to <destination>."
+	passengers 2 3
+	source
+		attributes "uninhabited"
+		attributes "dirt belt"
+	destination
+		distance 3 6
+		not attributes "uninhabited"
+	to offer
+		has "event: midnight: reveal cadrelock rock in eber"
+		random < 3
+	on offer
+		conversation
+			scene "outfit/unknown"
+			`A man in shabby clothing approaches your ship. "Please help! Pirates stole our ship! We've been stranded here for days!" There are <bunks> of them. "We can get you <payment> if you transport us to <destination>." What will you do?`
+			choice
+				`	(Rescue them.)`
+				`	(Leave them.)`
+					decline
+			scene "outfit/bunk room"
+			`	The <bunks> of them thank you and board your ship...`
+				accept
+	npc evade
+		government "Pirate"
+		personality plunders harvests
+			confusion 20
+		fleet "Large Dirt Belt Pirates"
+	on complete
+		payment 50000
+		dialog `The rescued crew thank you for bringing them to planet. As promised, they pay you <payment> for your efforts.`
+
+
+
 mission "Testing: Proton Gun-CF8"
 	minor
 	name "Syndicate product test"

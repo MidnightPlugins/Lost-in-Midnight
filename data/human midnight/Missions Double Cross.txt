@@ -1463,7 +1463,7 @@ mission "Thraal: Moreau (Cleanup)"
 		log "People" "Thraal" `A human who supposedly survived the Korath attack on the Icarus. Thraal claims to get along well with the Korath, but the nature of his relationship with them remains unclear.`
 		conversation
 			scene "planet/station2k"
-			`You decided to ignore Thraal's invitation to meet the Korath. They've proven themselves to be nothing but dangerous and you have little reason to put your trust in Thraal. With no change in their disposition towards you, they will continue on as a dangerous foe to be wary of.`
+			`You decided to ignore Thraal's invitation to meet the Korath. They've proven themselves to be nothing but dangerous and you have little reason to put your trust in Thraal. With no change in their disposition towards you, they will continue on as a hostile foe to be wary of.`
 				decline
 
 mission "Thraal: Moreau (Failed)"
@@ -1542,7 +1542,7 @@ mission "Prisoner Bribe Offer (Job)"
 	on enter
 		dialog `Dirk accepts his dinner of canned slop. "I know some taverns on pirate planets with better dishes. You should check them out sometime."`
 	on enter
-		dialog `Dirk asks "<planet> is so far away. We could go on for what, a week? Two weeks? Why not just drop me off at the nearest pirate planet. Whatever it is they're paying you, I'll pay more...`
+		dialog `Dirk says, "<planet> is so far away. We could go on for what, a week? Two weeks? Why not just drop me off at the nearest pirate planet. Whatever it is they're paying you, I'll pay more...`
 	on enter
 		dialog `Dirk says "Sorry about the hired guns. My friends must have found out you're transporting me. You could make things a lot easier on yourself if you just drop me off at the nearest pirate planet..."`
 	on fail
@@ -1599,4 +1599,40 @@ mission "Prisoner Bribe Release (Job)"
 			confusion 20
 		fleet "pirate raid" 12
 
+
+
+mission "Stranded Dirtbelt Saboteur"
+	landing
+	deadline 2
+	name "Passenger to <planet>"
+	description "2 freighter crew you found stranded on <origin> have offered a reward of <payment> for transporting them to <destination>."
+	source
+		attributes "uninhabited"
+		attributes "dirt belt"
+	destination
+		distance 3 6
+		not attributes "uninhabited"
+	to offer
+		has "event: midnight: reveal cadrelock rock in eber"
+		random < 2
+	on offer
+		conversation
+			scene "outfit/unknown"
+			`A man in shabby clothing approaches your ship. "Please help! Pirates stole our ship! We've been stranded here for days!" There are 2 of them. "We can get you <payment> if you transport us to <destination>." What will you do?`
+			choice
+				`	(Rescue them.)`
+				`	(Leave them.)`
+					decline
+			scene "outfit/bunk room"
+			`	The 2 of them thank you and board your ship... But they realize they forgot something and they rush back out. "Go ahead and finish pre-flight preparations. We'll be back aboard when you leave."`
+				accept
+	on enter
+		conversation
+			scene "outfit/shield suppressor"
+			`Something is wrong with your shield generator... You also notice that the 2 passengers who asked to be rescued from <origin> aren't aboard your ship...`
+	npc evade
+		government "Pirate"
+		personality plunders harvests
+			confusion 20
+		fleet "Large Dirt Belt Pirates"
 

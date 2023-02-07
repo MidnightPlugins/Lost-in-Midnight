@@ -58,6 +58,41 @@ mission "Archipelago Sketchy Passenger"
 
 
 
+mission "Cadrelock Rock Maintenance"
+	job
+	repeat
+	name "Cadrelock Rock Ramscoop"
+	description "Some of the fuel equipment on <destination> was mysteriously damaged. Deliver and install new equipment to replace it. Payment is <payment>."
+	cargo "fuel equipment" 10
+	source
+		attributes "dirt belt pirate"
+	destination "Cadrelock Rock"
+	to offer
+		has "event: Astero Nautilus Cross Chasm"
+		has "event: midnight: reveal cadrelock rock in eber"
+		or
+			and
+				not "Cadrelock Rock Maintenance: done"
+				random < 50
+			and
+				has "Cadrelock Rock Maintenance: done"
+				random < 10
+	on enter Eber
+		dialog `Several asteroids are moving strangely...`
+	npc evade
+		government "Indigenous Predator"
+		system Eber
+		personality mining harvests plunders unconstrained mute
+		fleet "Large Astero Nautilus"
+	on fail
+		dialog `[MISSION FAILED] You've lost the replacement equipment for <planet>! If life were a game, you could reload a save file and try again.`
+	on complete
+		payment 50000
+		"reputation: Pirate" ++
+		dialog `You install the replacement equipment and send a video to your client showing it working. The pirates pay you <payment> for helping keep this waystation operational.`
+
+
+
 mission "Vesta Tribute"
 	name "Vesta Tribute to <planet>"
 	job

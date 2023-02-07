@@ -616,6 +616,8 @@ mission "Midnight Market: Intrusion Countermeasures 2"
 
 mission "Midnight Market: Wanderer Micro-sat"
 	minor
+	invisible
+	deadline 2
 	source
 		government "Pirate"
 		attributes spaceport
@@ -686,7 +688,7 @@ mission "Midnight Market: Wanderer Micro-sat"
 		set "sold a wanderer micro-sat"
 	npc kill
 		government "Pirate"
-		personality waiting harvests plunders coward
+		personality waiting staying harvests plunders coward
 			confusion 20
 		fleet
 			names "pirate"

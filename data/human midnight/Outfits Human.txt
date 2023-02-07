@@ -222,6 +222,7 @@ outfit "Shield Suppressor"
 	"shield generation multiplier" -.5
 	"shield delay" 60
 	"depleted shield delay" 300
+	"unplunderable" 1
 	description "Saboteurs use these devices to disrupt the shield generators on the ship it is installed on."
 	description "	If you find this installed on your ship, get rid of it as soon as possible!"
 

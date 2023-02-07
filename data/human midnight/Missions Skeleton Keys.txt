@@ -53,6 +53,8 @@ mission "Skeleton Key North 1"
 		personality entering plunders unconstrained
 			confusion 20
 		fleet "Small Southern Pirates" 3
+	on fail
+		dialog `[MISSION FAILED] You failed to bring Diana Howl to <planet>. If life were a game, you could load a save file and try again.`
 	on complete
 		conversation
 			`You finally arrive at <planet>. Diana opens her bag and pulls out something dangerous...`
@@ -71,6 +73,7 @@ mission "Skeleton Key North 2"
 	landing
 	name "Rescue Diana"
 	description "A pirates kidnapped Diana and are holding her captive on the <npc>. Meet them at <waypoints> if you want her back. Take her to destination once she's safe."
+	passengers 1
 	waypoint "Tortor"
 	destination "Farpoint"
 	to offer
@@ -104,7 +107,9 @@ mission "Skeleton Key North 2"
 		ship "Bactrian (Shield Suppressor)" "Vicious Rain"
 		conversation
 			scene "outfit/shield suppressor"
-			`The battle was suspiciously easier than you expected and it isn't long before Diane runs up to you. Her backpack is noticeably empty. "Thanks for coming to rescue me <first>! I managed to stick those suppressor thingies all over the ship while they were distracted by you. When the shields stopped working, they started blaming each other..." With Diana safely in your custody, you should head to <destination>. With luck there may actually be a bounty worth collecting on the <npc>.`
+			`The battle was suspiciously easier than you expected and it isn't long before Diane runs up to you. Her backpack is noticeably empty. She grins and says, "Thanks for coming to rescue me <first>! I managed to stick those suppressor thingies all over the ship while they were distracted by you. When the shields stopped working, they started blaming each other..." With Diana safely in your custody, you should head to <destination>. With luck there may actually be a bounty worth collecting on the <npc>.`
+	on fail
+		dialog `[MISSION FAILED] You failed to bring Diana Howl to safety. If life were a game, you could load a save file and try again.`
 	on complete
 		outfit "Skeleton Key" 1
 		set "skeleton key north"
@@ -355,7 +360,10 @@ mission "Skeleton Key Core 1B"
 
 mission "Skeleton Key Core 2"
 	landing
-	invisible
+	name "Rescue Pookie!"
+	description "Return Pookie to <destination>."
+	passengers 1
+	blocked `You don't have a spare bunk for Pookie! Return when you do.`
 	source Stormhold
 	destination "Shroud"
 	to offer
@@ -376,6 +384,8 @@ mission "Skeleton Key Core 2"
 			``
 			`	As you're thinking about this, Pookie decides to pee on your leg... You quickly pocket the key and put her on the leash. Better get her back to <destination> before she vomits on anything.`
 				accept
+	on fail
+		dialog `[MISSION FAILED] You failed to bring Pookie to <planet>. If life were a game, you could load a save file and try again.`
 	on complete
 		payment 160000
 		log "Minor People" "Pocahontas (Pookie)" `	Pookie was kidnapped while being looked after by her "aunt". The pirates who took her had sold the dog to a kennel on Stormhold. Found Pookie wandering in the snow and brought her back to her "aunt" on Shroud.`
@@ -407,7 +417,7 @@ mission "Skeleton Keys, Three 1"
 		require "Skeleton Key" 3
 		conversation
 			scene "outfit/map"
-			`You have three Skeleton Keys, but are uncertain where to find the treasure they are meant to unseal. It's time you to consulted with a former pirate. Joe on <destination> may have more information that could help you.`
+			`You have three Skeleton Keys, but are uncertain where to find the treasure they are meant to unseal. It's time you consulted with a former pirate. Joe on <destination> may have more information that could help you.`
 				accept
 	on enter "Fomalhaut"
 		event "midnight: reveal cadrelock rock in eber"
@@ -855,3 +865,119 @@ mission "Skeleton Keys Starcadia Deep Epilogue"
 				"Marauder Raven (Weapons)"
 	on decline
 		event "starcadia added to deep security" 60
+
+
+# Alternate reveal for Cadrelock Rock
+mission "Skeletons Declined: Cadrelock Rock Reveal"
+	minor
+	invisible
+	source
+		attributes "dirt belt" "south"
+		not government "Pirate"
+	to offer
+		or
+			has "Paradise Fortune 1: declined"
+			has "Paradise Fortune 1: failed"
+			has "Paradise Fortune 1: aborted"
+			has "Paradise Fortune 2: declined"
+			has "Paradise Fortune 2: failed"
+			has "Paradise Fortune 2: aborted"
+			has "Paradise Fortune 3: declined"
+			has "Paradise Fortune 3: failed"
+			has "Paradise Fortune 3: aborted"
+			has "Pookie, Part 1: declined"
+			has "Pookie, Part 1: failed"
+			has "Pookie, Part 1: aborted"
+			has "Pookie, Part 2: failed"
+			has "Pookie, Part 2: aborted"
+			has "Smuggler's Den, Part 1: declined"
+			has "Smuggler's Den, Part 1: failed"
+			has "Smuggler's Den, Part 1: aborted"
+			has "Smuggler's Den, Part 2: declined"
+			has "Smuggler's Den, Part 2: failed"
+			has "Smuggler's Den, Part 2: aborted"
+			has "Smuggler's Den: Follow Up: declined"
+			has "Skeleton Key North 1: declined"
+			has "Skeleton Key North 1: failed"
+			has "Skeleton Key North 1: aborted"
+			has "Skeleton Key North 2: failed"
+			has "Skeleton Key North 2: aborted"
+			has "Skeleton Key South 1: declined"
+			has "Skeleton Key South 1: aborted"
+			has "Skeleton Key South 2: failed"
+			has "Skeleton Key South 2: aborted"
+			has "Skeleton Key Core 1: declined"
+			and
+				has "Skeleton Key Core 1: failed"
+				not "Skeleton Key Core 2: offered"
+			has "Skeleton Key Core 1: aborted"
+			has "Skeleton Key Core 1B: aborted"
+			has "Skeleton Key Core 2: failed"
+			has "Skeleton Key Core 2: aborted"
+		or
+			and
+				not "Randomize Skeletons Declined: Cadrelock Rock Reveal"
+				random < 70
+			and
+				has "Randomize Skeletons Declined: Cadrelock Rock Reveal"
+				random < 10
+	on offer
+		conversation
+			branch one
+				random < 75
+			scene "thumbnail/argosy"
+			`You see a severely damaged Argosy being repaired.`
+			choice
+				`	(Ask what happened.)`
+					goto ask
+				`	(Ignore it.)`
+					defer
+			label one
+			branch two
+				random < 66
+			scene "thumbnail/clipper"
+			`You see a severely damaged Clipper being repaired.`
+			choice
+				`	(Ask what happened.)`
+					goto ask
+				`	(Ignore it.)`
+					defer
+			label two
+			branch three
+				random < 50
+			scene "thumbnail/hauler i"
+			`You see a severely damaged Hauler being repaired.`
+			choice
+				`	(Ask what happened.)`
+					goto ask
+				`	(Ignore it.)`
+					defer
+			label three
+			scene "thumbnail/freighter"
+			`You see a severely damaged Freighter being repaired.`
+			choice
+				`	(Ask what happened.)`
+					goto ask
+				`	(Ignore it.)`
+					defer
+			label ask
+			scene "outfit/fuel pod"
+			`	"We were trying to get through the Dirt Tunnel, that string of uninhabited systems on the southern edge of the Dirt Belt. But we got low on fuel. It seemed that we'd be stranded for a while, but one of the crew spotted some sort of structure built into an asteroid. After getting a closer look, we realized it was a hidden refueling station! We docked and started filling our fuel tanks."`
+			choice
+				`	"Did a malfunction cause the fuel to explode?"`
+				`	"Did one of the crew light a cigarette near the fuel?"`
+			scene "thumbnail/sparrow"
+			`	"No, the damage wasn't caused by a fuel explosion. Just as we were finishing up, a pirate Sparrow found us!" The damage to their ship seems more severe than you'd expect from a single Sparrow.`
+			choice
+				`	"A Sparrow did all this?"`
+			scene "outfit/red screwdriver"
+			`	"We could have handled a single Sparrow. But this one had friends. It turns out that the station is maintained by pirates! They called it 'Cadrelock Rock' and said we had invaded their turf. They wanted a bribe, but we didn't have enough credits. It was a miracle we were able to get out of there in one piece."`
+			choice
+				`	"What system is it in?"`
+			scene "planet/asteroid base2"
+			`	"We were more focused on getting out alive than maintaining our maps... But I'm fairly sure it was in Eber."`
+				decline
+	on defer
+		set "Randomize Skeletons Declined: Cadrelock Rock Reveal"
+	on decline
+		event "midnight: reveal cadrelock rock in eber"
