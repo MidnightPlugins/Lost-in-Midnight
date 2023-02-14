@@ -442,7 +442,7 @@ mission "Midnight Market: Cloaking Device 1"
 	to offer
 		"Midnight Market" > 4
 		"Corporate espionage: done" + "Corporate espionage [1]: done" + "Corporate espionage [2]: done" + "Free Worlds espionage: done" >= 4
-		has "event: Stolen Cloaking Device"		
+		has "event: Stolen Cloaking Device"
 		"net worth" > 8000000
 		"credits" >= 6000000
 		or

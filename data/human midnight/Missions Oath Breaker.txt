@@ -20,7 +20,6 @@
 
 
 
-
 phrase "R.N.S. Poisonwood"
 	word
 		"R.N.S. Poisonwood"
@@ -1574,7 +1573,7 @@ mission "Nemesis: Oath Breaker"
 	on complete
 		payment 4321
 		event "Oathbreaker diminish 2"
-		event "Oathbreaker diminish 3" 350 380
+		event "Oathbreaker diminish 3" 180 240
 		dialog `The government of <planet> thanks you for eliminating the Oathbreaker threat and rewards you with <payment>, the last of the reward money. With their leader gone, the remaining Oathbreakers will eventually fall apart.`
 		log `Fought the main Oathbreaker fleet today. Arnold Benedict will no longer terrorize the Free Worlds. Some of his surviving followers will still need to be hunted down. I was rewarded with the last of the reward money, a meager 4,321 credits.`
 
