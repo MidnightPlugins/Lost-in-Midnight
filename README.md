@@ -9,9 +9,9 @@ Some highlights:
 - a doomsday device left behind by a long dead civilization
 - a pre-Hyperdrive civilization
 - new (rare) stuff to harvest from asteroids
-- Dirt Belt pirates
-- indigenous/invasive life forms
-- a system with four suns
+- Dirt Belt pirates armed with Turbo Blasters
+- several indigenous/invasive life forms
+- a system with more than four suns
 - a system with no suns
 - a bloody detour through the Wanderer storyline
 - weapons trading with the Unfettered
@@ -35,7 +35,10 @@ Some highlights:
 - Subsidurial Herding
 - an asteroid catapult
 - more Sheragi ships appear in human space
-- pirates develop a new rocket
+- smugglers develop a new rocket
 - new unfettered weapons
 - treasure maps
 - comets
+- Pug reinforcements armed with new technology
+- three Skeleton Keys to unlock a hidden treasure
+
