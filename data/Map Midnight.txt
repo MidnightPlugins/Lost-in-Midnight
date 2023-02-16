@@ -13,7 +13,7 @@
 
 system Archipelago
 	hidden
-	pos -704 -129
+	pos -708 -146
 	government Neutral
 	attributes "midnight"
 	habitable 1504
