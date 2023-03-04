@@ -88,6 +88,8 @@ mission "Oathbreaker Siege 1"
 	destination
 		government "Free Worlds"
 		distance 2 3
+		not attributes "station"
+		not attributes "uninhabited"
 	to offer
 		has "First Contact: Hai: declined"
 		has "free worlds plot completed"
@@ -154,6 +156,7 @@ mission "Oathbreaker Siege 2"
 		government "Free Worlds"
 		distance 3 4
 		not attributes "uninhabited"
+		not attributes "station"
 	to offer
 		has "event: Oathbreaker planning"
 		random < 70
@@ -222,16 +225,17 @@ mission "Oathbreaker Siege (Random)"
 		government "Free Worlds"
 		distance 3 4
 		not attributes "uninhabited"
+		not attributes "station"
 	to offer
 		has "Oathbreaker Siege 2: done"
 		not "event: Oathbreaker diminish"
 		or
 			and
 				not "event: Oathbreaker Random"
-				random < 10
+				random < 7
 			and
 				has "event: Oathbreaker Random"
-				random < 5
+				random < 3
 	on offer
 		conversation
 			`You're trying to relax at the bar when the holovideos are interrupted. A familiar image of a gruff man in a disheveled navy uniform appears. "Greetings, people of 'The Free Worlds'. You may have driven off our fleet previously. But know this: We fight on."`
@@ -260,11 +264,22 @@ mission "Oathbreaker Siege (Random)"
 		system destination
 		fleet "Small Militia"
 	npc evade
+		to spawn
+			not "event: Oathbreaker Random" 
 		government "Oathbreaker"
 		personality heroic staying target harvests plunders coward
 		system destination
 		fleet "Large Oathbreaker"
 		fleet "Small Oathbreaker" 2
+	npc evade
+		to spawn
+			has "event: Oathbreaker Random" 
+		government "Oathbreaker"
+		personality heroic staying target harvests plunders coward
+		system destination
+		fleet "Large Oathbreaker"
+		fleet "Small Oathbreaker"
+		fleet "Fugitive Oathbreaker"
 
 	on visit
 		dialog `You've landed on <planet>, but the battle is still raging overhead. You should take off and help drive off the invaders.`
@@ -282,6 +297,8 @@ mission "Oathbreaker Supply Run"
 	description "You've stumbled across an Oathbreaker fleet on <planet>. Fight or flight time."
 	source
 		government "Pirate"
+		not attributes "uninhabited"
+		not attributes "station"
 	to offer
 		has "Oathbreaker Siege 2: done"
 		random < 50
@@ -472,7 +489,7 @@ mission "Oathbreakers: Rum Cellar Fight"
 
 			`	Before things turn violent, their captain orders them to stand down. He must have noticed that you have a crew of your own to back you up. The Oathbreakers glare at you as they stand aside.`
 			choice
-				`	(Shove one of them aside.)`
+				`	(Shove one of them.)`
 					goto fight
 				`	(Board your ship.)`
 					launch
