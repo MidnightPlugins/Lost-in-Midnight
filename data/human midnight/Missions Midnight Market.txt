@@ -397,6 +397,7 @@ mission "Midnight Market: Cloaking Device 0"
 	to offer
 		has "FW Syndicate Extremists 1B: done"
 		has "main plot completed"
+		not "flagship model: Pug Arfecta"
 		random < 70
 	on offer
 		require "Cloaking Device"
