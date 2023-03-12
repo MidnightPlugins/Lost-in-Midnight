@@ -1090,7 +1090,7 @@ ship "Modified Kestrel" "Modified Kestrel (Remnant Engines)"
 		"engine capacity" 30
 	outfits
 		"Aeon Cell"
-		Afterburner
+		"Volcano Afterburner"
 		"Cargo Scanner"
 		"Crystal Capacitor"
 		"D67-TM Shield Generator"
@@ -1115,6 +1115,7 @@ ship "Modified Kestrel" "Modified Kestrel (Remnant Engines)"
 	turret "Thrasher Turret"
 	turret "Point Defense Turret"
 	turret "Point Defense Turret"
+	description "Featuring more engine space and extra fuel capacity, his Kestrel has been altered from the retail version to emphasize speed over all else."
 
 ship "Modified Kestrel" "Modified Kestrel (Remnant Shields)"
 	sprite "ship/kestrels"
@@ -1150,6 +1151,7 @@ ship "Modified Kestrel" "Modified Kestrel (Remnant Shields)"
 	turret "Thrasher Turret"
 	turret "Point Defense Turret"
 	turret "Point Defense Turret"
+	description "Featuring additional shield emitters and a reinforced hull, this Kestrel has been altered from the retail version to emphasize defense over all else."
 
 ship "Modified Kestrel" "Modified Kestrel (Remnant Weapons)"
 	sprite "ship/kestrelw"
@@ -1196,6 +1198,7 @@ ship "Modified Kestrel" "Modified Kestrel (Remnant Weapons)"
 	turret 7 -4 "Thrasher Turret"
 	turret -23 14 "Point Defense Turret"
 	turret 23 14 "Point Defense Turret"
+	description "Featuring additional gun ports and weapon space, this Kestrel has been altered from the retail version to emphasize offense over all else."
 
 
 

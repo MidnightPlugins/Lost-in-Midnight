@@ -1259,7 +1259,7 @@ mission "Grave Digger: Thrasher Turrets 2"
 			`	You make sure the gun at your hip is fully loaded before opening the cargo bay doors. An old man wearing a formal business suit waves at you and holds up a data pad. "Simply confirm payment on this data pad and it's all yours!"`
 			`	"What, exactly, am I buying?" you ask.`
 			scene "outfit/thrasher turret"
-			`	"Behold!" he gestures towards the warehouse. As he speaks, the door to the warehouse swings open and the dock workers are wheeling out several shipping crates. "Gun turrets of an alien origin from beyond human space! Our supplier refers to them as 'Thrasher Turrets'. We are selling them as a lot of four units. They make a truly exotic addition to anyone's arsenal.`
+			`	"Behold!" he gestures towards the warehouse. As he speaks, the door to the warehouse swings open and the dock workers are wheeling out several shipping crates. "Gun turrets of an alien origin from beyond human space! Our supplier refers to them as 'Thrasher Turrets'. We are selling them as a lot of four units. They make a fearsome addition to anyone's arsenal.`
 			`	By the time he finishes his sales pitch, the dock workers have pried open one of the crates. The crate contains one of the turrets that was described.`
 			`	The salesman holds the data pad out expectantly.`
 			choice
@@ -1271,8 +1271,8 @@ mission "Grave Digger: Thrasher Turrets 2"
 					goto investigate
 
 			label investigate
-			`	"Nice merchandise. Where did you steal it?" you ask.`
-			`	"I don't know what you're talking about. If you don't want to make a pur..."`
+			`	"Nice merchandise. Where did you acquire it?" you ask.`
+			`	"I can't disclose my source. If you don't want to make a pur..."`
 			choice
 				`	(Threaten him.)`
 					goto strongarm
@@ -1374,7 +1374,7 @@ mission "Grave Digger: Point Defense Turrets 2"
 			`	You make sure the gun at your hip is fully loaded before opening the cargo bay doors. A middle aged woman wearing shorts and a shirt with tropical designs on it waves at you and holds up a data pad. "Simply confirm payment on this data pad and it's all yours!"`
 			`	"What, exactly, am I buying?" you ask.`
 			scene "outfit/point defense"
-			`	"Behold!" she gestures towards the warehouse. As she speaks, the door to the warehouse swings open and the dock workers are wheeling out several shipping crates. "Gun turrets of an alien origin from beyond human space! Our supplier refers to them as 'Point Defense Turrets'. We are selling them as a lot of four units. They make a truly exotic addition to anyone's arsenal.`
+			`	"A special rarity!" she gestures towards the warehouse. As she speaks, the door to the warehouse swings open and the dock workers are wheeling out several shipping crates. "Gun turrets from an alien civilization beyond human space! Our supplier refers to them as 'Point Defense Turrets'. We are selling them together as a lot of four units. These will make a truly exotic addition to anyone's arsenal.`
 			`	By the time she finishes her sales pitch, the dock workers have pried open one of the crates. The crate contains one of the turrets that was described.`
 			`	The saleswoman holds the data pad out expectantly.`
 			choice
@@ -1386,8 +1386,8 @@ mission "Grave Digger: Point Defense Turrets 2"
 					goto investigate
 
 			label investigate
-			`	"Nice merchandise. Where did you steal it?" you ask.`
-			`	"I don't know what you're talking about. If you don't want to make a pur..."`
+			`	"Nice merchandise. Where did you acquire it?" you ask.`
+			`	"I can't reveal my supplier. If you don't want to make a pur..."`
 			choice
 				`	(Threaten her.)`
 					goto strongarm
@@ -1396,9 +1396,9 @@ mission "Grave Digger: Point Defense Turrets 2"
 					
 			label strongarm
 			`	You grab her and point your gun at her head. "Sorry, but I really need to know who you got these from." The security guards who were approaching you back off to calm you down.`
-			`	"All right! All right. We acquired this merchandise from Captain Lu Bu of the Grave Digger. He is a prolific trader in exotic merchandise. I've told you what you want. Would you please let me go?"`
+			`	"Hey, no need for violence! I... I'll talk." She hesitates, perhaps hoping someone will come to her rescue, but a nudge from your gun is enough to force her to continue. "We acquired this merchandise from Captain Lu Bu of the Grave Digger. He is a prolific trader in exotic merchandise. I've told you what you want. Would you please let me go?"`
 			`	"No hard feelings I hope," you state as you release her.`
-			`	She puts away the data pad. "Unfortunately, it appears we were unable to reach an agreement. Thank you for your time. However, I suggest you depart immediately." The security guards are starting to return with reinforcements and you decide to follow the woman's suggestion.`
+			`	She puts away the data pad. "It appears we were unable to reach an agreement." She adjusts her clothing, smoothing out some wrinkles. "I suggest you depart immediately." The security guards are starting to return with reinforcements and you decide to follow the woman's suggestion.`
 				launch
 
 			label turnabout
@@ -1501,8 +1501,8 @@ mission "Grave Digger: Inhibitor Cannons 2"
 					goto investigate
 
 			label investigate
-			`	"Nice merchandise. Where did you steal it?" you ask.`
-			`	"I don't know what you're talking about. If you don't want to make a pur..."`
+			`	"Nice merchandise. Where did you acquire it?" you ask.`
+			`	"I can't give out the recipe for the secret sauce. If you don't want to make a pur..."`
 			choice
 				`	(Threaten him.)`
 					goto strongarm
