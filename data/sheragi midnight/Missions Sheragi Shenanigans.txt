@@ -720,8 +720,7 @@ mission "Diamondback Jamboree"
 		attributes "dirt belt" "near earth"
 	destination "Zug"
 	to offer
-		or
-			has "Diamondback Sale: done"
+		has "Diamondback Sale: done"
 		or
 			and
 				not "Randomize Diamondback Jamboree"
@@ -750,7 +749,7 @@ mission "Diamondback Jamboree"
 				`	"I'll be glad to join you."`
 				`	"Sorry, I have other things to do."`
 					decline
-			`	"Great! I'm Peter. The others are Paul, Mary, and Leonard." The other pilots welcome you into their group. Leonard is playing an old recording of a song about a magical dragon. It's a catchy tune."`
+			`	"Great! I'm Peter. The others are Paul, Mary, and Leonard." The other pilots welcome you into their group. Leonard has an old recording of a song about a magical dragon playing on some loudspeakers. It's a catchy tune.`
 				accept
 	on defer
 		set "Randomize Diamondback Jamboree"
@@ -800,7 +799,7 @@ mission "Diamondback Jamboree"
 		ship "Diamondback (Transport)" "Summer Mist"
 		ship "Diamondback (Lasers)" "Puff Magic"
 	on visit
-		dialog `The pirates are still chasing you. You should get back in orbit and make sure the Diamondbacks are safe.`
+		dialog `The Diamondbacks haven't arrived. You should get back in orbit and make sure they're safe.`
 	on complete
 		payment 300000
 		clear "Randomize Diamondback Jamboree"
