@@ -158,10 +158,21 @@ License: public-domain
 
 Files:
  sounds/ambient/*
- sounds/asteroid catapult.wav
 Copyright: various
 License: public-domain
  Based on public domain sounds taken from freesound.org.
+
+Files:
+ sounds/splatter.wav
+Copyright: Michael Arsollon
+License: public-domain
+Comment: Edited Endless Sky minelayer sound. Derived from public domain sounds taken from freesound.org.
+
+Files:
+ sounds/asteroid catapult.wav
+Copyright: Michael Arsollon
+License: public-domain
+Comment: Edited Endless Sky ionball sound. Derived from work by pluralz from https://freesound.org/people/pluralz/sounds/475806/
 
 Files:
  sounds/jump_drive-ver8.wav
@@ -169,6 +180,12 @@ Files:
 Copyright: Écrivain, Iwan Gabovitch, Bart Kelsey, others.
 License: public-domain
  From opengameart.org. The contributors have placed these sounds in the public domain.
+
+Files:
+ sounds/hull impact.wav
+Copyright: Michael Arsollon
+License: public-domain
+Comment: Edited Endless Sky small asteroid crunch sound. Derived from work by AlanCat at https://freesound.org/people/AlanCat/sounds/381645/
 
 Files:
  sounds/hyperspace-ver8.wav
