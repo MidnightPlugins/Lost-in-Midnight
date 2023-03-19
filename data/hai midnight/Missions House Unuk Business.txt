@@ -702,7 +702,8 @@ mission "House Unuk Cookie Crook 2"
 			cargo 1
 			commodities "Food"
 			variant
-				"Marauder Firebird (Hai)" 2
+				"Firebird (Hai Shields)"
+				"Firebird (Hai Weapons)"
 				Dagger 2
 	npc board
 		government "Bounty"

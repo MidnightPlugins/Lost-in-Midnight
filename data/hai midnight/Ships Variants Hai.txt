@@ -246,13 +246,14 @@ ship "Solifuge" "Solifuge Prototype"
 		"Hai Corundum Regenerator"
 		"Hai Diamond Regenerator"
 		"Hai Williwaw Cooling" 8
-		"Dual Pulse Pistols"		
+		"Quantum Keystone"
+		"Dual Pulse Pistols"
 		"Pulse Rifle" 71
 		"Ion Flash Bang" 35
 		`"Bufaer" Atomic Steering`
 		`"Bondir" Atomic Thruster`
 		"Jump Drive"
-			
+		"Hyperdrive"
 	engine -32.5 137.5
 	engine 34.5 137.5
 	gun 0 -140.5 "Pulse Cannon"
@@ -273,7 +274,7 @@ ship "Solifuge" "Solifuge Prototype"
 	bay "Fighter" 51.5 0 under
 	bay "Fighter" -51.5 60 under
 	bay "Fighter" 51.5 60 under
-	description `This is the prototype. There are slight differences from the final production model, but the essential core elements of the Solifuge haven't changed.`
+	description `This is the prototype Solifuge. There are slight differences from the final production model, but the essential core elements of the Solifuge haven't changed.`
 
 
 
