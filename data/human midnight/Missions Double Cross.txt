@@ -1605,15 +1605,17 @@ mission "Stranded Dirtbelt Saboteur"
 	landing
 	deadline 2
 	name "Passenger to <planet>"
-	description "2 freighter crew you found stranded on <origin> have offered a reward of <payment> for transporting them to <destination>."
+	description "2 freighter crew you found stranded on <origin> have offered a reward of 30,000 credits for transporting them to <destination>."
 	source
 		attributes "uninhabited"
 		attributes "dirt belt"
+		not attributes "outfitter"
 	destination
 		distance 3 6
 		not attributes "uninhabited"
 	to offer
 		has "event: midnight: reveal cadrelock rock in eber"
+		"combat rating" > 300
 		random < 2
 	on offer
 		conversation
@@ -1622,10 +1624,12 @@ mission "Stranded Dirtbelt Saboteur"
 			choice
 				`	(Rescue them.)`
 				`	(Leave them.)`
-					decline
+					defer
 			scene "outfit/bunk room"
 			`	The 2 of them thank you and board your ship... But they realize they forgot something and they rush back out. "Go ahead and finish pre-flight preparations. We'll be back aboard when you leave."`
 				accept
+	on accept
+		outfit "Shield Suppressor" 1
 	on enter
 		conversation
 			scene "outfit/shield suppressor"
