@@ -2141,30 +2141,31 @@ ship "Modified Argosy" "Modified Argosy (Quad Mod Blaster)"
 
 
 
-ship "Modified Dromedary" "Modified Dromedary (Metro)"
-	outfits
-		"Energy Cannon Turret" 3
-		"Heavy Anti-Missile Turret" 2
-		Torpedo 180
-		"Torpedo Launcher" 4
-		"Torpedo Storage Rack" 4
-		"Fusion Reactor"
-		"LP144a Battery Pack"
-		"Modified D67-TM Shielding"
-		"Modified D94-YV Shielding"
-		"Outfits Expansion"
-		Ramscoop
-		"Large Radar Jammer"
-		"Laser Rifle" 150
-		"X4700 Ion Thruster"
-		"X5200 Ion Steering"
-		Hyperdrive
-	turret "Energy Cannon Turret"
-	turret "Heavy Anti-Missile Turret"
-	turret "Energy Cannon Turret"
-	turret "Energy Cannon Turret"
-	turret "Heavy Anti-Missile Turret"
-	description `The Tycho Crater Cooperative's Dromedary was one of the foremost colonization ships during the early era before piracy became rampant and triggered the necessity for city-ships to be more combat-oriented. These ships incorporate extensive hydroponics, large construction equipment installations, and hundreds of densely packed "dream cells" built to transport people in bulk.`
+# Should make non-modified Dromedary instead; keeping for reference
+#ship "Modified Dromedary" "Modified Dromedary (Metro)"
+#	outfits
+#		"Energy Cannon Turret" 3
+#		"Heavy Anti-Missile Turret" 2
+#		Torpedo 180
+#		"Torpedo Launcher" 4
+#		"Torpedo Storage Rack" 4
+#		"Fusion Reactor"
+#		"LP144a Battery Pack"
+#		"Modified D67-TM Shielding"
+#		"Modified D94-YV Shielding"
+#		"Outfits Expansion"
+#		Ramscoop
+#		"Large Radar Jammer"
+#		"Laser Rifle" 150
+#		"X4700 Ion Thruster"
+#		"X5200 Ion Steering"
+#		Hyperdrive
+#	turret "Energy Cannon Turret"
+#	turret "Heavy Anti-Missile Turret"
+#	turret "Energy Cannon Turret"
+#	turret "Energy Cannon Turret"
+#	turret "Heavy Anti-Missile Turret"
+#	description `The Tycho Crater Cooperative's Dromedary was one of the foremost colonization ships during the early era before piracy became rampant and triggered the necessity for city-ships to be more combat-oriented. These ships incorporate extensive hydroponics, large construction equipment installations, and hundreds of densely packed "dream cells" built to transport people in bulk.`
 
 
 
