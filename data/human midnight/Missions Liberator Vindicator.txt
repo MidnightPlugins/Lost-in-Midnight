@@ -747,9 +747,9 @@ mission "Plexus Prototype 4"
 				`	"I'll see what I can do."`
 					goto support
 				`	"No! All the Jump Drives are belong to me!"`
-			`	Alondo looks at you incredulously. Get out.`
+			`	Alondo looks at you incredulously. Forget it. I'll find someone else.`
 				decline
-						
+			
 			label support
 
 			scene "scene/scene-liberator"
@@ -875,7 +875,7 @@ mission "Plexus Jump Drives"
 	description "Bring a Jump Drive to the Free Worlds to help boost defense against threats from beyond human space."
 	source "Bourne"
 	to offer
-		has "Plexus Prototype 5: done"
+		has "Plexus Prototype 4: done"
 		random < 50
 	on complete
 		outfit "Jump Drive" -1
@@ -893,7 +893,7 @@ mission "Plexus Alpha Raid"
 	source
 		near Zubeneschamali 0 2
 	to offer
-		has "Plexus Prototype 5: done"
+		has "Plexus Prototype 3: done"
 		random < 5
 	on offer
 		conversation
