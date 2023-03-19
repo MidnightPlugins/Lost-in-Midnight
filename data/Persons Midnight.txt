@@ -244,7 +244,7 @@ ship "Modified Blackbird"
 
 
 person "Poltergeist King"
-	government "Author"
+	government "Hackerz"
 	frequency "100"
 	system
 		government "Syndicate" "Republic" "Free Worlds" "Pirate"
@@ -543,6 +543,7 @@ person "Midnight Predator"
 			"Gazer Specimens"
 			"Shield Suppressors"
 			"Smuggler's Hideaways"
+			"Stinger Missiles"
 			"Thermo Detonators"
 			"Limit Breakers"
 		word
