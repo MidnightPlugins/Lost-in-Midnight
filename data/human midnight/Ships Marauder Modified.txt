@@ -789,8 +789,7 @@ ship "Marauder Argosy"
 
 		"NT-200 Nucleovoltaic"
 		"LP072a Battery Pack"
-		"S-270 Regenerator"
-		"S-970 Regenerator"
+		"Modified D67-TM Shielding"
 		"Fuel Pod"
 		"Outfits Expansion"
 		"Laser Rifle" 7
@@ -832,8 +831,7 @@ ship "Marauder Argosy" "Marauder Argosy (Sniper)"
 		"Sidewinder Missile Launcher" 2
 		"LP072a Battery Pack"
 		"NT-200 Nucleovoltaic"
-		"S-270 Regenerator"
-		"S-970 Regenerator"
+		"Modified D67-TM Shielding"
 		"Outfits Expansion"
 		Supercapacitor
 		"Tactical Scanner"
@@ -859,8 +857,7 @@ ship "Marauder Argosy" "Marauder Argosy (Afterburner)"
 		"Sidewinder Missile Launcher" 2
 		"NT-200 Nucleovoltaic"
 		"LP072a Battery Pack"
-		"S-270 Regenerator"
-		"S-970 Regenerator"
+		"Modified D67-TM Shielding"
 		"Tactical Scanner"
 		"Fuel Pod"
 		"Outfits Expansion"
@@ -887,8 +884,7 @@ ship "Marauder Argosy" "Marauder Argosy (Bounty Hunter)"
 		"Heavy Anti-Missile Turret"
 		"NT-200 Nucleovoltaic"
 		"LP072a Battery Pack"
-		"S-270 Regenerator"
-		"S-970 Regenerator"
+		"Modified D67-TM Shielding"
 		"Brig"
 		"Tactical Scanner"
 		"Outfits Expansion"
@@ -1714,9 +1710,9 @@ ship "Marauder Hauler" "Marauder Hauler (weapons)"
 	turret -17.5 70 "Quad Blaster Turret"
 	turret 19 70 "Quad Blaster Turret"
 	description "The previous owner of this Hauler chose to replace the central cargo unit with an additional weapons platform. With this radical change to the ship's functionality one could argue that this model should be considered a completely different ship instead of a mere variant."
-	
-	
-	
+
+
+
 ###########################
 # Variant Vanilla Marauders
 ###########################

@@ -263,6 +263,57 @@ event "add quad mod blaster turrets"
 
 
 
+outfitter "Stinger Missile"
+	"Stinger Missile"
+
+mission "Add Stinger Missiles"
+	landing
+	invisible
+	on offer
+		event "add stinger missiles"
+		fail
+
+event "add stinger missiles"
+	outfitter "Pirate Outfits"
+		add "Stinger Missile"
+		add "Stinger Missile Rack"
+		add "Stinger Missile Launcher"
+	planet Zenith
+		add outfitter "Stinger Missile"
+	planet Freedom
+		add outfitter "Stinger Missile"
+	fleet "pirate raid"
+		add variant 1
+			"Modified Argosy (Stinger)"
+		add variant 1
+			"Berserker (Strike Limit Break)"
+			"Fury (Bomber Limit Break)"
+			"Rancor (Berserker)"
+	fleet "Small Northern Pirates"
+		add variant 1
+			"Rancor (Berserker)"
+		add variant 2
+			"Berserker (Strike Limit Break)"
+	fleet "Small Core Pirates"
+		add variant 1
+			"Rancor (Berserker)"
+		add variant 2
+			"Hawk (Stinger)"
+	fleet "Small Southern Pirates"
+		add variant 1
+			"Rancor (Berserker)"
+		add variant 1
+			"Fury (Bomber Limit Break)"
+		add variant 1
+			"Hawk (Stinger)"
+		add variant 1
+			"Modified Argosy (Stinger)"
+	fleet "Large Southern Pirates"
+		add variant 1
+			"Modified Argosy (Stinger)"
+
+
+
 mission "Midnight Independent Fleet Expansion"
 	landing
 	invisible
@@ -678,6 +729,9 @@ event "add energy cannons"
 			"Modified Aerie"
 			"Berserker (Limit Break)"
 			"Berserker (Energy Cannons)"
+	fleet "Small Independent"
+		add variant 1
+			"Rancor"
 
 
 

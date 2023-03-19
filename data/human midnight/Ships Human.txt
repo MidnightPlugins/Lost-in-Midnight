@@ -2512,12 +2512,13 @@ ship "Thermopylae Station"
 	bay "Drone" 0 0 under back
 	bay "Drone" 0 0 under back
 	bay "Drone" 0 0 under back
-	leak "leak" 30 50
-	leak "flame" 30 80
-	leak "big leak" 50 30
-	explode "small explosion" 75
-	explode "medium explosion" 105
-	explode "large explosion" 135
-	explode "huge explosion" 90
+	leak "leak" 50 50
+	leak "flame" 80 80
+	leak "big leak" 30 30
+	explode "tiny explosion" 200
+	explode "small explosion" 160
+	explode "medium explosion" 120
+	explode "large explosion" 80
+	explode "huge explosion" 40
 	"final explode" "final explosion large"
 	description "A prototype built before the war that was never actually deployed into active service. The Asteroid Catapult installed on it was supposed to be securely locked away in a Navy testing facility."

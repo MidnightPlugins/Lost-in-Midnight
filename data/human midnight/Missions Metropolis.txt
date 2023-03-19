@@ -825,6 +825,18 @@ mission "Metropolis 2"
 
 	npc evade
 		to spawn
+			has "event: remnant: shattered light"
+		system Sol
+		government "Pirate"
+		personality target waiting disables
+		ship "Modified Dromedary (Metro)" "Shadowed Light"
+		fleet
+			fighters "pirate"
+			variant
+				"Shuttle Pod (Fire Support)" 2
+
+	npc evade
+		to spawn
 			has "Wanderers: Alpha Surveillance J: done"
 		system Sol
 		government "Pirate"
@@ -835,6 +847,14 @@ mission "Metropolis 2"
 			variant
 				"'olofez" 4
 				"Far Lek 14" 6
+
+	npc evade
+		to spawn
+			has "event: plasma repeater advanced"
+		system Sol
+		government "Pirate"
+		personality target waiting disables
+		ship "Leviathan (Plasma Repeater)" "Chunk"
 
 	npc evade
 		to spawn
@@ -869,11 +889,19 @@ mission "Metropolis 2"
 
 	npc evade
 		to spawn
-			has "event: Grudge Legacy"
+			has "Pirate Duel: done"
 		system Sol
 		government "Pirate"
 		personality target waiting disables
-		fleet "Grudge Parade"
+		ship "Vanguard (Plasma Slow)" "Sea Devil"
+
+	npc evade
+		to spawn
+			has "defeated scar's legion"
+		system Sol
+		government "Pirate"
+		personality target waiting disables
+		ship "Leviathan (Hai Weapons)" "Callus"
 
 	npc evade
 		system Sol

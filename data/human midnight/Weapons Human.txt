@@ -416,6 +416,120 @@ effect "silencer beam impact"
 
 
 
+outfit "Stinger Missile"
+	category "Ammunition"
+	cost 1000
+	thumbnail "outfit/stinger missile"
+	"mass" .4
+	"stinger capacity" -1
+	description "A Stinger Missile serves as ammunition for the Stinger Missile Launcher. Each missile launcher has its own capacity; you cannot install missiles if you have not first purchased a pod, launcher, or storage to store them in."
+	description "	Mass produced under horrendous conditions on pirate worlds, Stinger Missiles utilize outdated radar tracking technology and are also easily destroyed by anti-missile weapons. Often, the slaves assigned to manufacture them are sick or elderly. In other words, the ones too weak to fight or have low potential future value. Accidental exposure to the toxic materials in these weapons during construction is common, resulting in a high mortality rate among the laborers."
+
+outfit "Stinger Missile Rack"
+	plural "Meteor Missile Boxes"
+	category "Ammunition"
+	cost 18000
+	thumbnail "outfit/stinger storage"
+	"mass" 2
+	"outfit space" -7
+	"stinger capacity" 15
+	ammo "Stinger Missile"
+	description "The Stinger Missile Rack is used to store extra ammunition for Stinger Missile Launchers."
+
+outfit "Stinger Missile Launcher"
+	category "Secondary Weapons"
+	cost 30000
+	thumbnail "outfit/stinger launcher"
+	"mass" 10
+	"outfit space" -20
+	"weapon capacity" -20
+	"gun ports" -1
+	"stinger capacity" 30
+	weapon
+		sprite "projectile/stinger"
+			"frame rate" 4
+		sound "meteor-ver8"
+		ammo "Stinger Missile"
+		icon "icon/stinger"
+		"fire effect" "meteor fire"
+		"die effect" "glow blood" 3
+		"hit effect" "stinger splatter" 5
+		"inaccuracy" 5
+		"velocity" 8
+		"lifetime" 350
+		"reload" 120
+		"firing energy" 1
+		"firing heat" 20
+		"acceleration" .8
+		"drag" .1
+		"turn" 1.8
+		"homing" 1
+		"radar tracking" .65
+		"shield damage" 30
+		"discharge damage" 6.9
+		"hull damage" 50
+		"corrosion damage" 8.0
+		"hit force" 50
+		"missile strength" 6
+	description "The use of hazardous waste as a weapon has long been a popular tactic among anarchists and terrorists. Stinger Missiles are one example of this. Devoloped during the early turf wars, the materials to make them are readily available and there is no shortage of suppliers."
+	description "	After splattering the target with its dangerous payload, the residue will continue to drain the shields or corrode the hull for some time after the initial impact."
+
+outfit "Stinger Missile Pod"
+	category "Secondary Weapons"
+	cost 10000
+	thumbnail "outfit/stinger pod"
+	"mass" 3
+	"outfit space" -6
+	"weapon capacity" -6
+	"gun ports" -1
+	"stinger capacity" 7
+	weapon
+		sprite "projectile/stinger"
+			"frame rate" 4
+		sound "meteor-ver8"
+		ammo "Stinger Missile"
+		icon "icon/stinger"
+		"fire effect" "meteor fire"
+		"die effect" "glow blood" 3
+		"hit effect" "stinger splatter" 5
+		"inaccuracy" 5
+		"velocity" 8
+		"lifetime" 350
+		"reload" 250
+		"burst count" 7
+		"burst reload" 120
+		"firing energy" 1
+		"firing heat" 20
+		"acceleration" .8
+		"drag" .1
+		"turn" 1.8
+		"homing" 1
+		"radar tracking" .65
+		"shield damage" 30
+		"discharge damage" 6.9
+		"hull damage" 50
+		"corrosion damage" 8.0
+		"hit force" 50
+		"missile strength" 6
+	description "The use of hazardous waste as a weapon has long been a popular tactic among anarchists and terrorists. Stinger Missiles are one example of this. Devoloped during the early turf wars, the materials to make them are readily available and there is no shortage of suppliers."
+	description "	After splattering the target with its dangerous payload, the residue will continue to drain the shields or corrode the hull for some time after the initial impact."
+	description "	Pods enable fighters and other light craft to carry small quantities of rockets into battle while retaining enough space for other weapons. Large ships are better off with full-size launchers."
+
+effect "stinger splatter"
+	sprite "effect/glow blood"
+		"no repeat"
+		"frame rate" 10
+		"random start frame"
+	sound "splatter"
+	"lifetime" 61
+	"random angle" 20
+	"random velocity" 1
+	"random spin" 5
+	"velocity scale" .01
+
+
+
+
 outfit "Thermo Detonator"
 	category "Secondary Weapons"
 	thumbnail "outfit/thermo detonator"
@@ -501,7 +615,6 @@ outfit "Turbo Blaster Turret"
 		"hull damage" 8.8
 	description "This is a turreted version of the Turbo Blaster, which is a Modified Energy Blaster enhanced with an increased rate of fire. The twin blasters provide double the fire power of a single Turbo Blaster."
 	description "	These weapons first appeared on pirate ships in the Dirt Belt and may hint at hidden pirate bases in the area."
-
 
 outfit "Quad Turbo Blaster Turret"
 	category "Turrets"
