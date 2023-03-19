@@ -80,7 +80,7 @@ outfit "Metal Tentacle?"
 		sprite "projectile/tentacle gray"
 			"frame rate" 1
 			"random start frame"
-		sound "asteroid crunch small"
+		"hit effect" "tentacle slap"
 		"turret turn" 180
 		"inaccuracy" .4
 		"velocity" 70
@@ -88,7 +88,7 @@ outfit "Metal Tentacle?"
 		"reload" 1
 		"hit force" 10
 		"shield damage" 12
-		"hull damage" 28
+		"hull damage" 33
 		"piercing" .2
 
 outfit "Liquid Metal Specimen"

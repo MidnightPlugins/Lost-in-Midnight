@@ -69,8 +69,8 @@ ship "Nova Firefly"
 		"jump drive" 1
 		"jump speed" 1
 		"jump effect" "flare belcher die"
-		"jump in sound" "nuke"
-		"jump out sound" "nuke"
+		"jump in sound" "hyperspace-ver8"
+		"jump out sound" "hyperspace-ver8"
 		"ramscoop" 2
 		"solar collection" 2
 		weapon
