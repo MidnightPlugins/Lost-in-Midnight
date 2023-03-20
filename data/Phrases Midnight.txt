@@ -62,7 +62,12 @@ phrase "friendly civilian"
 		" "
 	word
 		"Whatever you do, don't destroy them! They'll rob you blind without firing a shot."
-		
+
+phrase "friendly civilian"
+	word
+		"If you think Radar Jammers are useless, you must not have been tortured by Stinger Missiles."
+		"Garbage Scows are disgusting, but society would collapse without them."
+
 
 phrase "friendly pirate"
 	word
@@ -91,6 +96,7 @@ phrase "friendly pirate"
 		"Zenith"
 		"Mutiny"
 		"Trinket"
+		"New Tortuga"
 	word
 		", but my starmap doesn't list it."
 		"; do you know where I can find it?"
@@ -101,6 +107,7 @@ phrase "friendly pirate"
 phrase "friendly pirate"
 	word
 		"Three pirates died on a rock. Three skeletons to open a lock."
+		"Sometimes unfamiliar ships with strange weapons on them pass through remote systems. I wonder where they get their toys."
 
 
 

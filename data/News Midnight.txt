@@ -482,6 +482,27 @@ news "Red Dragons"
 		word
 			`"`
 
+news "Stinger Missiles"
+	to show
+		has "event: add stinger missiles"
+	location
+		government "Pirate"
+	name
+		word
+			"Pirate"
+			"Warlord"
+			"Buccaneer"
+			"Bandit"
+	message
+		word
+			`"`
+		word
+			"It may sound strange for me to say this, but people who use Stinger Missiles are really demented."
+			"The sound of a crew begging for their lives as a Stinger slowly eats away at their hull is music to my ears..."
+			"One of my crew accidentally dropped a Stinger Missile while loading it onto our ship. Horrible way to go. The only thing left of him was a stain on the landing pad."
+		word
+			`"`
+
 
 
 news "Midnight Unfettered"
@@ -570,3 +591,4 @@ news "Proton Turret-ATS unemployed"
 			"The Proton Turret-ATS took my job."
 		word
 			`"`
+
