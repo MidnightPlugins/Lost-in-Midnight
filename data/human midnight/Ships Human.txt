@@ -342,7 +342,7 @@ ship "Patrolboat"
 		
 		"RT-I Radiothermal"
 		"LP144a Battery Pack"
-		"D14-RN Shield Generator"
+		"D23-QP Shield Generator"
 		"Small Radar Jammer"
 		"Cargo Scanner"
 		"Outfit Scanner"
