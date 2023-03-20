@@ -75,6 +75,8 @@ outfit "Korath Fireswarm Nest"
 	"outfit space" -6
 	"fireswarm capacity" 10
 	ammo "Korath Fireswarm"
+	"energy generation" 0.2
+	"heat generation" 1
 
 outfit "Korath Fireswarm"
 	category "Ammunition"
@@ -97,7 +99,7 @@ outfit "Korath Fireswarm Launcher"
 		sprite "projectile/fireswarm"
 			"frame rate" 4
 			"random start frame"
-		sound "nuke"
+		sound "rocket-ver8"
 		ammo "Korath Fireswarm"
 		icon "icon/fireswarm"
 		"hit effect" "large explosion" 10
