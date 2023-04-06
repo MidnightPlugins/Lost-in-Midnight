@@ -1021,7 +1021,7 @@ mission "Star Explorer Fan Tour"
 		dialog `Captain Smirk sends out a message, "The Grabons have stopped attacking thanks to the help of our escort! To celebrate, drinks and snacks are 10% off for the next hour at the ship lounge."`
 		
 	on enter "Sospi"
-		dialog `Captain Smirk sends out a message, "You are seeing a rare site folks. This is a Wolf-Rayet star. The galaxy is filled with awesome wonders like this. You just have to search for them."`
+		dialog `Captain Smirk sends out a message, "You are seeing a rare sight folks. This is a Wolf-Rayet star. The galaxy is filled with awesome wonders like this. You just have to search for them."`
 
 	on enter "Acamar"
 		dialog `Captain Smirk sends out a message, "Red Alert! Hostile Grabons are attacking!" This must be one of the mock battles. You're only supposed to disable them, but those lasers are real...`
