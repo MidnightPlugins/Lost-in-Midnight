@@ -38,7 +38,14 @@ mission "Gathering Specimens Clear"
 		fail "Gathering Specimens: Plasma Parasite"
 		fail "Gathering Specimens: Nova Firefly"
 		fail "Gathering Specimens: Star Gazer"
-	
+		clear "Gathering Specimens: Gray Eye: offered"
+		clear "Gathering Specimens: Luminazoa: offered"
+		clear "Gathering Specimens: Ionic Leech: offered"
+		clear "Gathering Specimens: Astero Nautilus: offered"
+		clear "Gathering Specimens: Plasma Parasite: offered"
+		clear "Gathering Specimens: Nova Firefly: offered"
+		clear "Gathering Specimens: Star Gazer: offered"
+
 
 mission "Gathering Specimens: Gray Eye"
 	landing
