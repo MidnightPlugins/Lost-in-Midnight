@@ -88,6 +88,7 @@ mission "Gathering Specimens: Gray Eye Lost"
 		require "Gray Eye Specimen" 0
 		clear "Specimen: Gray Eye"
 		fail "Gathering Specimens: Gray Eye"
+		clear "Gathering Specimens: Gray Eye: offered"
 		fail
 
 
@@ -145,6 +146,7 @@ mission "Gathering Specimens: Luminazoa Lost"
 		require "Luminazoa Specimen" 0
 		clear "Specimen: Luminazoa"
 		fail "Gathering Specimens: Luminazoa"
+		clear "Gathering Specimens: Luminazoa: offered"
 		fail
 
 
@@ -203,6 +205,7 @@ mission "Gathering Specimens: Ionic Leech Lost"
 		require "Leech Specimen" 0
 		clear "Specimen: Ionic Leech"
 		fail "Gathering Specimens: Ionic Leech"
+		clear "Gathering Specimens: Ionic Leech: offered"
 		fail
 
 
@@ -260,6 +263,7 @@ mission "Gathering Specimens: Astero Nautilus Lost"
 		require "Nautilus Specimen" 0
 		clear "Specimen: Astero Nautilus"
 		fail "Gathering Specimens: Astero Nautilus"
+		clear "Gathering Specimens: Astero Nautilus: offered"
 		fail
 
 
@@ -317,6 +321,7 @@ mission "Gathering Specimens: Plasma Parasite Lost"
 		require "Plasma Specimen" 0
 		clear "Specimen: Plasma Parasite"
 		fail "Gathering Specimens: Plasma Parasite"
+		clear "Gathering Specimens: Plasma Parasite: offered"
 		fail
 	
 
@@ -379,6 +384,7 @@ mission "Gathering Specimens: Nova Firefly Lost"
 		require "Firefly Specimen" 0
 		clear "Specimen: Nova Firefly"
 		fail "Gathering Specimens: Nova Firefly"
+		clear "Gathering Specimens: Nova Firefly: offered"
 		fail
 
 
@@ -436,6 +442,7 @@ mission "Gathering Specimens: Star Gazer Lost"
 		require "Gazer Specimen" 0
 		clear "Specimen: Star Gazer"
 		fail "Gathering Specimens: Star Gazer"
+		clear "Gathering Specimens: Star Gazer: offered"
 		fail
 
 
