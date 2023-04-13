@@ -304,6 +304,7 @@ mission "Melchior 1"
 	description `Go to <planet> in the <system> system and inquire about the Prefecture ship Melchior.`
 	source
 		government "Free Worlds"
+		not planet "Zug"
 	destination Zug
 	to offer
 		has "Metropolis 1: active"
