@@ -3366,7 +3366,7 @@ mission "Ship Sale: Patrolboat (Used)"
 		attributes "north pirate" "dirt belt pirate"
 	to offer
 		random < 1
-		"credits" >= 3200000
+		"credits" >= 4216000
 		has "event: war begins"
 	on offer
 		conversation
@@ -3377,7 +3377,7 @@ mission "Ship Sale: Patrolboat (Used)"
 				`	"Not interested in buying a ship right now."`
 					defer
 
-			`	The seller says "The Patrolboat is an old ship that previously performed the role which the modern Gunboat fulfills. The main reason the Navy replaced it was the lack of a turret mount. Some retired Patrolboats have found a new role as merchant escorts or bounty hunters. The price is 3,200,000."`
+			`	The seller says "The Patrolboat is an old ship that previously performed the role which the modern Gunboat fulfills. The main reason the Navy replaced it was the lack of a turret mount. Some retired Patrolboats have found a new role as merchant escorts or bounty hunters. The price is 4,216,000."`
 			choice
 				`	"Sounds good. I'll buy it!`
 				`	"That's way too much. I'll pay half that."`
@@ -3390,7 +3390,7 @@ mission "Ship Sale: Patrolboat (Used)"
 			label "purchase"
 			action
 				"Midnight Market" ++
-				payment -3200000
+				payment -4216000
 				give ship "Patrolboat (Used)"
 			`	"Thank you for your purchase!"`
 				decline
@@ -3408,7 +3408,7 @@ mission "Ship Sale: Patrolboat (Used)"
 					goto shootout
 
 			label "deal"
-			`	"How about we meet halfway? 2,400,000 credits."`
+			`	"How about we meet halfway? 3,162,000 credits."`
 			choice
 				`	"It's a deal. I'll buy it!`
 				`	"That's still too much. I'm not interested."`
@@ -3417,7 +3417,7 @@ mission "Ship Sale: Patrolboat (Used)"
 					goto shootout
 
 			action
-				payment -2400000
+				payment -3162000
 				give ship "Patrolboat (Used)"
 			`	"Thank you for your purchase!"`
 				decline
@@ -3455,7 +3455,7 @@ mission "Ship Sale: Missileboat (Used)"
 		attributes "north pirate" "dirt belt pirate"
 	to offer
 		random < 1
-		"credits" >= 1580000
+		"credits" >= 2340000
 		has "event: war begins"
 	on offer
 		conversation
@@ -3466,7 +3466,7 @@ mission "Ship Sale: Missileboat (Used)"
 				`	"Not interested in buying a ship right now."`
 					defer
 
-			`	The seller says "For centuries, the Missileboat provided fleet admirals with a reliable artillery unit to support their front line vessels. The outdated systems interface on this ship have a higher crew requirement than the Rainmaker currently used by the Navy. Retired Missileboats are sometimes used by bounty hunters. The price is 1,580,000."`
+			`	The seller says "For centuries, the Missileboat provided fleet admirals with a reliable artillery unit to support their front line vessels. The outdated systems interface on this ship have a higher crew requirement than the Rainmaker currently used by the Navy. Retired Missileboats are sometimes used by bounty hunters. The price is 2,340,000."`
 			choice
 				`	"Sounds good. I'll buy it!`
 				`	"That's way too much. I'll pay half that."`
@@ -3479,7 +3479,7 @@ mission "Ship Sale: Missileboat (Used)"
 			label "purchase"
 			action
 				"Midnight Market" ++
-				payment -1580000
+				payment -2340000
 				give ship "Missileboat (Used)"
 			`	"Thank you for your purchase!"`
 				decline
@@ -3497,7 +3497,7 @@ mission "Ship Sale: Missileboat (Used)"
 					goto shootout
 
 			label "deal"
-			`	"How about we meet halfway? 1,185,000 credits."`
+			`	"How about we meet halfway? 1,755,000 credits."`
 			choice
 				`	"It's a deal. I'll buy it!`
 				`	"That's still too much. I'm not interested."`
@@ -3506,7 +3506,7 @@ mission "Ship Sale: Missileboat (Used)"
 					goto shootout
 
 			action
-				payment -1185000
+				payment -1755000
 				give ship "Missileboat (Used)"
 			`	"Thank you for your purchase!"`
 				decline

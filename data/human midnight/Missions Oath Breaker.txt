@@ -1635,7 +1635,7 @@ ship "Auxiliary" "Auxiliary (Oathbreaker)"
 	"crew" 250
 	outfits
 		"Sidewinder Missile Launcher" 2
-		"Sidewinder Missile" 100
+		"Sidewinder Missile" 90
 		"Quad Blaster Turret" 2
 		"Heavy Anti-Missile Turret" 2
 		"Fusion Reactor"
@@ -1644,7 +1644,7 @@ ship "Auxiliary" "Auxiliary (Oathbreaker)"
 		"D67-TM Shield Generator"
 		"Water Coolant System"
 		"Large Radar Jammer"
-		"Ramscoop"		
+		"Ramscoop"
 		"X4700 Ion Thruster"
 		"X1700 Ion Thruster"
 		"X5200 Ion Steering"
@@ -1653,7 +1653,6 @@ ship "Auxiliary" "Auxiliary (Oathbreaker)"
 		"Sniper Rifle" 5
 		"Fragmentation Grenades" 45
 		"Laser Rifle" 200
-
 	turret "Heavy Anti-Missile Turret"
 	turret "Quad Blaster Turret"
 	turret "Quad Blaster Turret"

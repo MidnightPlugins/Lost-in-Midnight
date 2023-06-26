@@ -252,8 +252,9 @@ ship "Marauder Hauler" "Relentless Grudge"
 		"outfit space" 40
 		"weapon capacity" 40
 	outfits
-		"Sidewinder Missile Launcher" 2
-		"Sidewinder Missile" 90
+		"Sidewinder Missile" 54
+		"Sidewinder Missile Pod" 2
+		"Sidewinder Missile Rack" 2
 		"Quad Blaster Turret" 4
 		"Anti-Missile Turret" 2
 
@@ -274,8 +275,8 @@ ship "Marauder Hauler" "Relentless Grudge"
 
 	engine -44 113
 	engine 45.5 113
-	gun -10.5 -87.5 "Sidewinder Missile Launcher"
-	gun 18 -87.5 "Sidewinder Missile Launcher"
+	gun -10.5 -87.5 "Sidewinder Missile Pod"
+	gun 18 -87.5 "Sidewinder Missile Pod"
 	turret -17.5 -41 "Quad Blaster Turret"
 	turret 25.5 -41 "Quad Blaster Turret"
 	turret -16.5 11.5 "Anti-Missile Turret"

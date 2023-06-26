@@ -39,9 +39,10 @@ ship "Modified Aerie"
 			"hit force" 1200
 	outfits
 		"Energy Cannon" 2
-		"Meteor Missile Launcher" 4
-		"Meteor Missile Box" 4
-		"Meteor Missile" 180
+		"Meteor Missile Launcher" 2
+		"Meteor Missile Pod" 2
+		"Meteor Missile Box" 5
+		"Meteor Missile" 149
 		"Quad Blaster Turret" 2
 		"Anti-Missile Turret"
 		
@@ -63,10 +64,10 @@ ship "Modified Aerie"
 	engine 10 91
 	gun -13 -79 "Energy Cannon"
 	gun 13 -79 "Energy Cannon"
-	gun -47 -2 "Meteor Missile Launcher"
+	gun -47 -2 "Meteor Missile Pod"
 	gun -32 -2 "Meteor Missile Launcher"
 	gun 32 -2 "Meteor Missile Launcher"
-	gun 47 -2 "Meteor Missile Launcher"
+	gun 47 -2 "Meteor Missile Pod"
 	turret 0 0 "Anti-Missile Turret"
 	turret -17 14 "Quad Blaster Turret"
 	turret 17 14 "Quad Blaster Turret"
@@ -157,9 +158,9 @@ ship "Modified Clipper"
 			"hit force" 550
 	outfits
 		"Beam Laser" 2
-		"Heavy Rocket Launcher" 2
-		"Heavy Rocket Rack"
-		"Heavy Rocket" 50
+		"Heavy Rocket Pod" 2
+		"Heavy Rocket Rack" 5
+		"Heavy Rocket" 54
 
 		"LP072a Battery Pack"
 		"RT-I Radiothermal"
@@ -181,8 +182,8 @@ ship "Modified Clipper"
 	engine 22 47
 	gun -21.5 -18 "Beam Laser"
 	gun 21.5 -18 "Beam Laser"
-	gun -11 -8.5 "Heavy Rocket Launcher"
-	gun 11 -8.5 "Heavy Rocket Launcher"
+	gun -11 -8.5 "Heavy Rocket Pod"
+	gun 11 -8.5 "Heavy Rocket Pod"
 	leak "leak" 60 50
 	leak "flame" 50 80
 	explode "tiny explosion" 15
@@ -230,8 +231,9 @@ ship "Modified Clipper" "Modified Clipper (Bounty Hunter)"
 		"Modified D41-HY Shielding"
 		"RT-I Radiothermal"
 		Ramscoop
-		"Sidewinder Missile" 90
-		"Sidewinder Missile Launcher" 2
+		"Sidewinder Missile" 77
+		"Sidewinder Missile Pod" 2
+		"Sidewinder Missile Rack" 3
 		"Tactical Scanner" 2
 		"Volcano Afterburner"
 		"Water Coolant System"
@@ -239,8 +241,8 @@ ship "Modified Clipper" "Modified Clipper (Bounty Hunter)"
 		"X3200 Ion Steering"
 	gun "Heavy Laser"
 	gun "Heavy Laser"
-	gun "Sidewinder Missile Launcher"
-	gun "Sidewinder Missile Launcher"
+	gun "Sidewinder Missile Pod"
+	gun "Sidewinder Missile Pod"
 
 
 ship "Modified Clipper" "Modified Clipper (Miner)"
@@ -263,12 +265,10 @@ ship "Modified Clipper" "Modified Clipper (Miner)"
 
 ship "Modified Clipper" "Modified Clipper (Turbo Blaster)"
 	outfits
-		Brig
 		"Cargo Expansion"
 		"Cargo Scanner"
-		"Cooling Ducts"
 		"D41-HY Shield Generator"
-		"LP072a Battery Pack"
+		"LP036a Battery Pack"
 		"Large Radar Jammer"
 		"Laser Rifle" 4
 		"Limit Breaker"
@@ -279,12 +279,16 @@ ship "Modified Clipper" "Modified Clipper (Turbo Blaster)"
 		"Small Radar Jammer"
 		Supercapacitor
 		"Tactical Scanner"
-		"Turbo Blaster" 4
+		"Turbo Blaster" 2
+		"Twin Turbo Blaster" 2
 		"Volcano Afterburner"
 		"Water Coolant System"
 		"X2700 Ion Thruster"
 		"X3200 Ion Steering"
-
+	gun "Twin Turbo Blaster"
+	gun "Twin Turbo Blaster"
+	gun "Turbo Blaster"
+	gun "Turbo Blaster"
 
 
 
@@ -702,8 +706,9 @@ ship "Modified Roost"
 			"hull damage" 400
 			"hit force" 1200
 	outfits
-		"Meteor Missile Launcher" 2
-		"Meteor Missile" 60
+		"Meteor Missile Pod" 2
+		"Meteor Missile" 44
+		"Meteor Missile Box" 2
 		"Quad Blaster Turret" 2
 		"Heavy Anti-Missile Turret" 2
 		
@@ -723,8 +728,8 @@ ship "Modified Roost"
 		
 	engine -45 159.5
 	engine 45 159.5
-	gun -14.5 -129.5 "Meteor Missile Launcher"
-	gun 14.5 -129.5 "Meteor Missile Launcher"
+	gun -14.5 -129.5 "Meteor Missile Pod"
+	gun 14.5 -129.5 "Meteor Missile Pod"
 	turret -21.5 -84.5 "Quad Blaster Turret"
 	turret 21.5 -84.5 "Heavy Anti-Missile Turret"
 	turret -18.5 115.5 "Heavy Anti-Missile Turret"
@@ -823,12 +828,15 @@ ship "Marauder Argosy"
 ship "Marauder Argosy" "Marauder Argosy (Sniper)"
 	outfits
 		"Heavy Anti-Missile Turret" 2
-		"Heavy Rocket" 40
-		"Heavy Rocket Launcher" 2
-		"Meteor Missile" 60
-		"Meteor Missile Launcher" 2
-		"Sidewinder Missile" 90
-		"Sidewinder Missile Launcher" 2
+		"Heavy Rocket" 34
+		"Heavy Rocket Pod" 2
+		"Heavy Rocket Rack" 3
+		"Meteor Missile" 59
+		"Meteor Missile Pod" 2
+		"Meteor Missile Box" 3
+		"Sidewinder Missile" 77
+		"Sidewinder Missile Pod" 2
+		"Sidewinder Missile Rack" 3
 		"LP072a Battery Pack"
 		"NT-200 Nucleovoltaic"
 		"Modified D67-TM Shielding"
@@ -839,22 +847,24 @@ ship "Marauder Argosy" "Marauder Argosy (Sniper)"
 		"A250 Atomic Thruster"
 		"A375 Atomic Steering"
 		Hyperdrive
-	gun "Heavy Rocket Launcher"
-	gun "Heavy Rocket Launcher"
-	gun "Meteor Missile Launcher"
-	gun "Meteor Missile Launcher"
-	gun "Sidewinder Missile Launcher"
-	gun "Sidewinder Missile Launcher"
+	gun "Heavy Rocket Pod"
+	gun "Heavy Rocket Pod"
+	gun "Meteor Missile Pod"
+	gun "Meteor Missile Pod"
+	gun "Sidewinder Missile Pod"
+	gun "Sidewinder Missile Pod"
 
 ship "Marauder Argosy" "Marauder Argosy (Afterburner)"
 	outfits
 		"Beam Laser" 2
 		"Laser Turret"
 		"Heavy Anti-Missile Turret"
-		"Meteor Missile" 60
-		"Meteor Missile Launcher" 2
-		"Sidewinder Missile" 90
-		"Sidewinder Missile Launcher" 2
+		"Meteor Missile" 59
+		"Meteor Missile Pod" 2
+		"Meteor Missile Box" 3
+		"Sidewinder Missile" 77
+		"Sidewinder Missile Pod" 2
+		"Sidewinder Missile Rack" 3
 		"NT-200 Nucleovoltaic"
 		"LP072a Battery Pack"
 		"Modified D67-TM Shielding"
@@ -869,10 +879,10 @@ ship "Marauder Argosy" "Marauder Argosy (Afterburner)"
 		Hyperdrive
 	gun "Beam Laser"
 	gun "Beam Laser"
-	gun "Meteor Missile Launcher"
-	gun "Meteor Missile Launcher"
-	gun "Sidewinder Missile Launcher"
-	gun "Sidewinder Missile Launcher"
+	gun "Meteor Missile Pod"
+	gun "Meteor Missile Pod"
+	gun "Sidewinder Missile Pod"
+	gun "Sidewinder Missile Pod"
 	turret "Laser Turret"
 	turret "Heavy Anti-Missile Turret"
 
@@ -995,8 +1005,9 @@ ship "Marauder Behemoth"
 		"Heavy Laser Turret" 2
 		"Electron Turret" 2
 		"Heavy Anti-Missile Turret" 2
-		"Torpedo Launcher" 2
-		Torpedo 60
+		"Torpedo Pod" 2
+		Torpedo 51
+		"Torpedo Storage Rack" 3
 		"Breeder Reactor"
 		"LP144a Battery Pack"
 		"S-270 Regenerator"
@@ -1016,8 +1027,8 @@ ship "Marauder Behemoth"
 	engine 34 143 0.8
 	engine -56 148.5 0.6
 	engine 56 148.5 0.6
-	gun -47.5 -57.5 "Torpedo Launcher"
-	gun 47.5 -57.5 "Torpedo Launcher"
+	gun -47.5 -57.5 "Torpedo Pod"
+	gun 47.5 -57.5 "Torpedo Pod"
 	turret -31 -50 "Heavy Laser Turret"
 	turret 31 -50 "Heavy Laser Turret"
 	turret -47.5 33.5 "Electron Turret"
@@ -1065,30 +1076,31 @@ ship "Marauder Behemoth" "Marauder Behemoth (Hai)"
 
 ship "Marauder Behemoth" "Marauder Behemoth (Secret Prototype)"
 	outfits
-		"Heavy Laser Turret" 2
-		"Electron Turret" 2
-		"Heavy Anti-Missile Turret" 2
-		"Torpedo Launcher" 2
-		Torpedo 60
-		"Breeder Reactor"
-		"LP144a Battery Pack"
-		"S-270 Regenerator"
-		"S-970 Regenerator"
-		"Outfits Expansion" 7
-		"Liquid Helium Cooler"
-		"Large Radar Jammer"
-		Ramscoop
-		"Laser Rifle" 18
-		"Ionic Afterburner"
 		"A125 Atomic Steering"
-		"A375 Atomic Steering"
 		"A250 Atomic Thruster"
+		"A375 Atomic Steering"
+		"Cargo Scanner"
+		"Fusion Reactor"
+		"Heavy Anti-Missile Turret" 2
+		"Industrial Ramscoop"
+		"Ionic Afterburner"
+		"LP072a Battery Pack"
+		"Laser Rifle" 18
+		"Liquid Helium Cooler"
+		"Outfit Scanner"
+		"Outfits Expansion" 7
+		"Particle Burst Turret" 4
+		"Prototype D122-ZX Shielding"
 		"Scram Drive"
 		"Secret Prototype"
-	turret "Heavy Laser Turret"
-	turret "Heavy Laser Turret"
-	turret "Electron Turret"
-	turret "Electron Turret"
+		"Swingfire Missile" 68
+		"Swingfire Missile Launcher" 2
+	gun "Swingfire Missile Launcher"
+	gun "Swingfire Missile Launcher"
+	turret "Particle Burst Turret"
+	turret "Particle Burst Turret"
+	turret "Particle Burst Turret"
+	turret "Particle Burst Turret"
 	turret "Heavy Anti-Missile Turret"
 	turret "Heavy Anti-Missile Turret"
 
@@ -1171,7 +1183,7 @@ ship "Marauder Protector"
 		"fuel capacity" 400
 		"cargo space" 50
 		"outfit space" 610
-		"weapon capacity" 242
+		"weapon capacity" 245
 		"engine capacity" 100
 		"self destruct" .15
 		weapon
@@ -1224,23 +1236,24 @@ ship "Marauder Protector"
 
 ship "Marauder Protector" "Marauder Protector (Secret Prototype)"
 	outfits
-		"Meteor Missile Pod" 2
-		"Meteor Missile" 44
-		"Meteor Missile Box" 2
-		"Proton Turret-ATS" 6
-		"Anti-Missile Turret" 2
-		"Fusion Reactor"
-		"LP072a Battery Pack"
-		"S-970 Regenerator"
-		"S-270 Regenerator"
-		"Liquid Helium Cooler"
-		"Outfits Expansion"
-		"Catalytic Ramscoop"
-		"Laser Rifle" 30
 		"A370 Atomic Thruster"
 		"A375 Atomic Steering"
-		"Hyperdrive"
+		"Anti-Missile Turret" 2
+		"Cargo Scanner"
+		"Fusion Reactor"
+		Hyperdrive
+		"KP-6 Photovoltaic Panel" 2
+		"LP072a Battery Pack"
+		"Laser Rifle" 30
+		"Liquid Helium Cooler"
+		"Outfits Expansion"
+		"Proton Turret-ATS" 6
+		"S-270 Regenerator" 2
+		"S-970 Regenerator" 2
 		"Secret Prototype"
+		"Swingfire Missile" 23
+		"Swingfire Missile Pod" 2
+		"Swingfire Missile Rack"
 	turret "Proton Turret-ATS"
 	turret "Proton Turret-ATS"
 	turret "Anti-Missile Turret"
@@ -1258,7 +1271,7 @@ ship "Marauder Sparrow"
 	attributes
 		category "Interceptor"
 		"cost" 450000
-		"shields" 1200
+		"shields" 1400
 		"hull" 300
 		"required crew" 1
 		"bunks" 1
@@ -1295,9 +1308,11 @@ ship "Marauder Sparrow"
 		
 	engine -5 35
 	engine 5 35
-	gun -7 -10
-	gun 7 -10
-	turret 0 0
+	gun -7 -10 "Beam Laser"
+	gun 7 -10 "Beam Laser"
+	gun -10.5 -8.5
+	gun 10.5 -8.5
+	turret 0 0 "Thermo Detonator"
 	"explode" "nuke explosion (small)"
 	"explode" "nuke residue fast" 10
 	"explode" "nuke residue slow" 10
@@ -1319,7 +1334,7 @@ ship "Marauder Sparrow" "Marauder Sparrow (Blaster)"
 	outfits
 		"Energy Blaster" 2
 		"Thermo Detonator"
-		Supercapacitor 4
+		"LP036a Battery Pack"
 		"nGVF-BB Fuel Cell"
 		"Modified D23-QP Shielding"
 		"Cargo Expansion"
@@ -1329,9 +1344,14 @@ ship "Marauder Sparrow" "Marauder Sparrow (Blaster)"
 		"A120 Atomic Thruster"
 		"A125 Atomic Steering"
 		Hyperdrive
+	gun 
+	gun 
+	gun "Energy Blaster"
+	gun "Energy Blaster"
 
 ship "Marauder Sparrow" "Marauder Sparrow (Gatling)"
 	outfits
+		"Energy Blaster" 2
 		"Gatling Gun" 2
 		"Gatling Gun Ammo" 6000
 		"Thermo Detonator"
@@ -1340,22 +1360,24 @@ ship "Marauder Sparrow" "Marauder Sparrow (Gatling)"
 		"Modified D23-QP Shielding"
 		"Cargo Expansion"
 		"Fuel Pod"
-		"Small Bunk Room"
 		"Laser Rifle"
 		"A120 Atomic Thruster"
 		"A125 Atomic Steering"
 		Hyperdrive
+	gun "Gatling Gun"
+	gun "Gatling Gun"
+	gun "Energy Blaster"
+	gun "Energy Blaster"
 
 ship "Marauder Sparrow" "Marauder Sparrow (Mod Blaster)"
 	outfits
-		"Modified Blaster" 2
+		"Modified Blaster" 4
 		"Thermo Detonator"
-		Supercapacitor 3
+		Supercapacitor 2
 		"nGVF-BB Fuel Cell"
 		"Modified D23-QP Shielding"
 		"Cargo Expansion"
 		"Fuel Pod"
-		"Small Bunk Room"
 		"Laser Rifle"
 		"A120 Atomic Thruster"
 		"A125 Atomic Steering"
@@ -1363,6 +1385,7 @@ ship "Marauder Sparrow" "Marauder Sparrow (Mod Blaster)"
 
 ship "Marauder Sparrow" "Marauder Sparrow (Meteor Missile)"
 	outfits
+		"Energy Blaster" 2
 		"Meteor Missile Pod" 2
 		"Meteor Missile Box" 2
 		"Meteor Missile" 44
@@ -1372,27 +1395,35 @@ ship "Marauder Sparrow" "Marauder Sparrow (Meteor Missile)"
 		"Modified D23-QP Shielding"
 		"Cargo Expansion"
 		"Fuel Pod"
-		"Small Bunk Room"
 		"Laser Rifle"
 		"A120 Atomic Thruster"
 		"A125 Atomic Steering"
 		Hyperdrive
+	gun "Meteor Missile Pod"
+	gun "Meteor Missile Pod"
+	gun "Energy Blaster"
+	gun "Energy Blaster"
 
 ship "Marauder Sparrow" "Marauder Sparrow (Afterburner)"
 	outfits
 		"Beam Laser" 2
+		"Heavy Rocket Pod" 2
+		"Heavy Rocket" 4
 		"Thermo Detonator"
 		Supercapacitor
 		"nGVF-BB Fuel Cell"
 		"Modified D14-RN Shielding"
 		"Cargo Expansion"
 		"Fuel Pod" 2
-		"Small Bunk Room"
 		"Laser Rifle"
 		"Volcano Afterburner"
 		"X1200 Ion Steering"
 		"X1700 Ion Thruster"
 		Hyperdrive
+	gun "Heavy Rocket Pod"
+	gun "Heavy Rocket Pod"
+	gun "Beam Laser"
+	gun "Beam Laser"
 
 ship "Marauder Sparrow" "Marauder Sparrow (Heavy)"
 	outfits
@@ -1407,21 +1438,25 @@ ship "Marauder Sparrow" "Marauder Sparrow (Heavy)"
 		"A120 Atomic Thruster"
 		"A125 Atomic Steering"
 		Hyperdrive
+	gun "Heavy Laser"
+	gun "Heavy Laser"
+	gun 
+	gun 
 
 ship "Marauder Sparrow" "Marauder Sparrow (Turbo Blaster)"
 	outfits
-		"Turbo Blaster" 2
+		"Turbo Blaster" 4
 		"Thermo Detonator"
-		Supercapacitor 3
+		Supercapacitor 2
 		"nGVF-BB Fuel Cell"
 		"Modified D23-QP Shielding"
 		"Cargo Expansion"
 		"Fuel Pod"
-		"Small Bunk Room"
 		"Laser Rifle"
 		"A120 Atomic Thruster"
 		"A125 Atomic Steering"
 		Hyperdrive
+
 
 
 ship "Marauder Vanguard"
@@ -1493,22 +1528,21 @@ ship "Marauder Vanguard"
 
 ship "Marauder Vanguard" "Marauder Vanguard (Secret Prototype)"
 	outfits
-		"Electron Beam" 6
-		"Heavy Anti-Missile Turret"
-		"Typhoon Launcher"
-		"Typhoon Torpedo" 30
-		"LP072a Battery Pack"
-		"Fusion Reactor"
-		"S-270 Regenerator" 2
-		"S-970 Regenerator" 2
-		"Liquid Nitrogen Cooler"
-		"Catalytic Ramscoop"
-		"Outfits Expansion"
-		"Laser Rifle" 25
-		"Ionic Afterburner"
 		"A370 Atomic Thruster"
 		"A375 Atomic Steering"
+		"Cargo Scanner" 2
+		"Fusion Reactor"
+		"Heavy Anti-Missile Turret"
 		Hyperdrive
+		"Ionic Afterburner"
+		"KP-6 Photovoltaic Panel"
+		"LP072a Battery Pack"
+		"Laser Rifle" 25
+		"Liquid Nitrogen Cooler"
+		"Outfits Expansion"
+		"Proton Gun-CF8" 7
+		"S-270 Regenerator" 2
+		"S-970 Regenerator" 2
 		"Secret Prototype"
 
 ship "Marauder Vanguard" "Marauder Vanguard (Plasma Cluster)"
@@ -1632,8 +1666,9 @@ ship "Marauder Hauler" "Marauder Hauler (engines)"
 		"engine capacity" 40
 
 	outfits
-		"Meteor Missile Launcher" 2
-		"Meteor Missile" 60
+		"Meteor Missile Pod" 2
+		"Meteor Missile" 44
+		"Meteor Missile Box" 2
 		"Quad Blaster Turret" 2
 		"Anti-Missile Turret" 2
 		
@@ -1654,8 +1689,8 @@ ship "Marauder Hauler" "Marauder Hauler (engines)"
 
 	engine -45 86.5
 	engine 44 86.5
-	gun -12.5 -60 "Meteor Missile Launcher"
-	gun 16 -60 "Meteor Missile Launcher"
+	gun -12.5 -60 "Meteor Missile Pod"
+	gun 16 -60 "Meteor Missile Pod"
 	turret -20 -12 "Quad Blaster Turret"
 	turret 23 -12 "Quad Blaster Turret"
 	turret -17.5 40 "Anti-Missile Turret"
@@ -1678,8 +1713,9 @@ ship "Marauder Hauler" "Marauder Hauler (weapons)"
 		"outfit space" 40
 		"weapon capacity" 40
 	outfits
-		"Sidewinder Missile Launcher" 2
-		"Sidewinder Missile" 90
+		"Sidewinder Missile" 54
+		"Sidewinder Missile Pod" 2
+		"Sidewinder Missile Rack" 2
 		"Quad Blaster Turret" 4
 		"Anti-Missile Turret" 2
 
@@ -1701,8 +1737,8 @@ ship "Marauder Hauler" "Marauder Hauler (weapons)"
 
 	engine -44 113
 	engine 45.5 113
-	gun -10.5 -87.5 "Sidewinder Missile Launcher"
-	gun 18 -87.5 "Sidewinder Missile Launcher"
+	gun -10.5 -87.5 "Sidewinder Missile Pod"
+	gun 18 -87.5 "Sidewinder Missile Pod"
 	turret -17.5 -41 "Quad Blaster Turret"
 	turret 25.5 -41 "Quad Blaster Turret"
 	turret -16.5 11.5 "Anti-Missile Turret"
@@ -1811,22 +1847,26 @@ ship "Marauder Falcon" "Marauder Falcon (Secret Prototype)"
 	outfits
 		"A370 Atomic Thruster"
 		"A525 Atomic Steering"
-		"Catalytic Ramscoop"
-		Flamethrower 4
-		"Fuel Pod"
+		"Cargo Scanner"
+		Flamethrower 2
+		"Fuel Canister"
+		"Fuel Tank"
 		"Fusion Reactor"
 		"Heavy Anti-Missile Turret" 2
 		Hyperdrive
-		"Ionic Afterburner"
-		"LP072a Battery Pack"
+		"Industrial Ramscoop"
 		"Laser Rifle" 80
 		"Liquid Helium Cooler"
-		"Outfits Expansion" 2
+		"Outfits Expansion" 3
+		"Plasma Cannon" 2
 		"Plasma Turret" 2
-		"S-270 Regenerator"
-		"S-970 Regenerator"
-		"Small Radar Jammer"
+		"Prototype T88-AO Shielding"
 		"Secret Prototype"
+		"TP144q Battery Pack"
+	gun Flamethrower
+	gun Flamethrower
+	gun "Plasma Cannon"
+	gun "Plasma Cannon"
 	turret "Heavy Anti-Missile Turret"
 	turret "Heavy Anti-Missile Turret"
 	turret "Plasma Turret"
@@ -1834,23 +1874,31 @@ ship "Marauder Falcon" "Marauder Falcon (Secret Prototype)"
 
 ship "Marauder Leviathan" "Marauder Leviathan (Secret Prototype)"
 	outfits
+		"A120 Atomic Thruster"
 		"A370 Atomic Thruster"
 		"A525 Atomic Steering"
+		"Cargo Scanner"
 		"Catalytic Ramscoop"
-		"Electron Beam" 4
+		"Electron Beam" 2
 		"Electron Turret" 2
-		"Fuel Pod"
 		"Fusion Reactor"
 		"Heavy Anti-Missile Turret" 2
 		Hyperdrive
-		"Ionic Afterburner"
 		"LP072a Battery Pack"
 		"Laser Rifle" 69
 		"Liquid Helium Cooler"
+		"Modified D23-QP Shielding"
+		"Outfit Scanner"
 		"Outfits Expansion"
-		"S-270 Regenerator" 2
-		"S-970 Regenerator" 2
+		"Prototype D122-ZX Shielding"
 		"Secret Prototype"
+		Torpedo 42
+		"Torpedo Storage Rack" 2
+		"Twin Torpedo Pod" 2
+	gun "Twin Torpedo Pod"
+	gun "Twin Torpedo Pod"
+	gun "Electron Beam"
+	gun "Electron Beam"
 	turret "Heavy Anti-Missile Turret"
 	turret "Heavy Anti-Missile Turret"
 	turret "Electron Turret"
@@ -1924,8 +1972,7 @@ ship "Marauder Leviathan" "Marauder Leviathan (Shields)"
 
 ship "Marauder Manta" "Marauder Manta (Shields)"
 	outfits
-		"Plasma Cannon" 2
-		"Particle Cannon" 2
+		"Plasma Cannon" 4
 		"Meteor Missile Launcher" 2
 		"Meteor Missile" 60
 		"Quad Blaster Turret"
@@ -1938,6 +1985,12 @@ ship "Marauder Manta" "Marauder Manta (Shields)"
 		"A250 Atomic Thruster"
 		"A525 Atomic Steering"
 		"Hyperdrive"
+	gun "Plasma Cannon"
+	gun "Plasma Cannon"
+	gun "Plasma Cannon"
+	gun "Plasma Cannon"
+	gun "Meteor Missile Launcher"
+	gun "Meteor Missile Launcher"
 
 ship "Marauder Splinter" "Marauder Splinter (Shields)"
 	outfits

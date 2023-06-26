@@ -44,7 +44,7 @@ mission "Drone Hacking 10"
 	to offer
 		has "How to Hack a Science Drone For Fun and Profit" >= 8
 	on offer
-		"salary: Hackerz" = 10
+		"salary: Hackerz" += 10
 		conversation
 			scene "outfit/data pad"
 			`Your efforts hacking drone scanning systems has paid off. You're earning 10 credits per day from hacked drones.`
@@ -55,7 +55,7 @@ mission "Drone Hacking 100"
 	to offer
 		has "How to Hack a Science Drone For Fun and Profit" >= 16
 	on offer
-		"salary: Hackerz" = 100
+		"salary: Hackerz" += 90
 		conversation
 			scene "outfit/data pad"
 			`Your efforts hacking drone scanning systems has paid off. You're earning 100 credits per day from hacked drones.`
@@ -66,7 +66,7 @@ mission "Drone Hacking 1000"
 	to offer
 		has "How to Hack a Science Drone For Fun and Profit" >= 32
 	on offer
-		"salary: Hackerz" = 1000
+		"salary: Hackerz" += 900
 		conversation
 			scene "outfit/data pad"
 			`Your efforts hacking drone scanning systems has paid off. You're earning 1000 credits per day from hacked drones.`
@@ -77,7 +77,7 @@ mission "Drone Hacking 2000"
 	to offer
 		has "How to Hack a Science Drone For Fun and Profit" >= 64
 	on offer
-		"salary: Hackerz" = 2000
+		"salary: Hackerz" += 1000
 		conversation
 			scene "outfit/data pad"
 			`Your efforts hacking drone scanning systems has paid off. You're earning 2000 credits per day from hacked drones.`
@@ -88,7 +88,7 @@ mission "Drone Hacking 3000"
 	to offer
 		has "How to Hack a Science Drone For Fun and Profit" >= 128
 	on offer
-		"salary: Hackerz" = 3000
+		"salary: Hackerz" += 1000
 		conversation
 			scene "outfit/data pad"
 			`Your efforts hacking drone scanning systems has paid off. You're earning 3000 credits per day from hacked drones.`
@@ -99,7 +99,7 @@ mission "Drone Hacking 4000"
 	to offer
 		has "How to Hack a Science Drone For Fun and Profit" >= 256
 	on offer
-		"salary: Hackerz" = 4000
+		"salary: Hackerz" += 1000
 		conversation
 			scene "outfit/data pad"
 			`Your efforts hacking drone scanning systems has paid off. You're earning 4000 credits per day from hacked drones.`
@@ -110,7 +110,7 @@ mission "Drone Hacking 5000"
 	to offer
 		has "How to Hack a Science Drone For Fun and Profit" >= 512
 	on offer
-		"salary: Hackerz" = 5000
+		"salary: Hackerz" += 1000
 		conversation
 			scene "outfit/data pad"
 			`Your efforts hacking drone scanning systems has paid off. You're earning 5000 credits per day from hacked drones.`
@@ -121,7 +121,7 @@ mission "Drone Hacking 6000"
 	to offer
 		has "How to Hack a Science Drone For Fun and Profit" >= 1024
 	on offer
-		"salary: Hackerz" = 6000
+		"salary: Hackerz" += 1000
 		conversation
 			scene "outfit/data pad"
 			`Your efforts hacking drone scanning systems has paid off. You're earning 6000 credits per day from hacked drones.`
@@ -132,7 +132,7 @@ mission "Drone Hacking 7000"
 	to offer
 		has "How to Hack a Science Drone For Fun and Profit" >= 2048
 	on offer
-		"salary: Hackerz" = 7000
+		"salary: Hackerz" += 1000
 		conversation
 			scene "outfit/data pad"
 			`Your efforts hacking drone scanning systems has paid off. You're earning 7000 credits per day from hacked drones.`
@@ -143,7 +143,7 @@ mission "Drone Hacking 8000"
 	to offer
 		has "How to Hack a Science Drone For Fun and Profit" >= 4096
 	on offer
-		"salary: Hackerz" = 8000
+		"salary: Hackerz" += 1000
 		conversation
 			scene "outfit/data pad"
 			`Your efforts hacking drone scanning systems has paid off. You're earning 8000 credits per day from hacked drones.`
@@ -154,7 +154,7 @@ mission "Drone Hacking 9000"
 	to offer
 		has "How to Hack a Science Drone For Fun and Profit" >= 8198
 	on offer
-		"salary: Hackerz" = 9000
+		"salary: Hackerz" += 1000
 		conversation
 			scene "outfit/data pad"
 			`Your efforts hacking drone scanning systems has paid off. You're earning 9000 credits per day from hacked drones.`
@@ -165,7 +165,7 @@ mission "Drone Hacking 10000"
 	to offer
 		has "How to Hack a Science Drone For Fun and Profit" >= 16396
 	on offer
-		"salary: Hackerz" = 10000
+		"salary: Hackerz" += 1000
 		conversation
 			scene "outfit/data pad"
 			`Your efforts hacking drone scanning systems has paid off. You're earning 10000 credits per day from hacked drones.`
@@ -238,7 +238,7 @@ mission "Hackerz"
 		personality waiting surveillance
 		ship "Hacker Drone" "Hackerz"
 		conversation
-			apply
+			action
 				set "You've been hacked"
 			scene "ship/science drone"
 			`	Your ship's hyperspace network relay starts making unusual sounds. After a moment it returns to normal...`
@@ -487,7 +487,7 @@ mission "Hackerz 4"
 			`	You hold your hands up and try to reason with him. But he is too crazed to have a discussion with. You are hit by a shotgun slug and your headless corpse falls to the floor.`
 				die
 			label dodge
-			apply
+			action
 				set "Hackerz Angry Bounty Hunter"
 			`	You narrowly avoid a shotgun slug and jump out the nearest window. Fortunately, the window was already broken, but you still get some minor scrapes from the few shards of glass remaining in the frame. "Better than a shotgun slug to the head," you exclaim to yourself as you run for your ship.`
 				launch
@@ -614,7 +614,7 @@ mission "Hackerz 5"
 				goto ship
 
 			label ship
-			apply
+			action
 				set "Trace Hackerz Hope Ambush"
 			``
 			`	As you run, several more Subsidurial shaped robots armed with gatling guns appear and open fire. By now, it's obvious that the whole amusement park is rigged with these robots. Once you are safely aboard your ship, you fire up the engines and begin to lift off. As you clear the atmosphere, the warning alarms start blaring. A swarm of drones is headed for you.`
@@ -730,7 +730,7 @@ mission "Hackerz 6"
 
 			label command
 			scene "outfit/command center"
-			apply
+			action
 				set "Trace Hackerz Prison Break"
 				"reputation: Republic" <?= -1000
 			`	You head for the station's command center to get answers. Along the way, you notice blood stains on the floors and walls. Something is definitely wrong here. When you finally arrive, the area is deserted. The communications equipment is damaged, allowing incoming transmissions to be received, but none to be sent. As you take all this in, someone hails the station: "Attention escaped prisoners and their allies. The Republic will not tolerate a prison break of this magnitude. You have all been sentenced to death."`
@@ -1042,7 +1042,7 @@ mission "Hackerz: New Tibet Sentry"
 		personality waiting surveillance
 		ship "Hacker Drone" "Hackerz"
 		conversation
-			apply
+			action
 				set "You've been hacked"
 			scene "ship/science drone"
 			`	Your ship's hyperspace network relay starts making unusual sounds. After a moment it returns to normal...`
@@ -1073,7 +1073,7 @@ mission "Hackerz: Harmony Sentry"
 		personality waiting surveillance
 		ship "Hacker Drone" "Hackerz"
 		conversation
-			apply
+			action
 				set "You've been hacked"
 			scene "ship/science drone"
 			`	Your ship's hyperspace network relay starts making unusual sounds. After a moment it returns to normal...`

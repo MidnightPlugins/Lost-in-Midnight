@@ -18,31 +18,21 @@
 
 
 
-outfit "Cloaking Device (Damaged)"
+outfit "Damaged D41-HY Shielding"
 	category "Systems"
-	cost 1200000
-	"mass" 10
-	"outfit space" -10
-	"cloak" .007
-	"cloaking energy" 1.3
-	"cloaking fuel" .25
-	"unplunderable" 1
-	"fused circuits" 1
-	"reinstall" -1
-	description "You're sure the cloaking device is here somewhere, but you can't see it."
-
-
-
-outfit "Contraband"
-	category "Special"
-	cost 100000
-	thumbnail "outfit/attention"
-	"mass" 1
-	"illegal" 500000
-	description "Illegal merchadise found in a smuggler's cargo bay. You might be able to sell it for a profit if the authorities haven't caught you with it first."
-
-outfitter "Contraband"
-	"Contraband"
+	cost 35000
+	thumbnail "outfit/medium shield dmg"
+	"mass" 30
+	"outfit space" -30
+	"shield generation" .41
+	"shield energy" .51
+	"shield heat" .32
+	"energy consumption" .26
+	"heat generation" .11
+	"shield delay" 60
+	"depleted shield delay" 300
+	description "The D41-HY Shield Generator is a more powerful shield generator designed for ships that are likely to see frequent combat, or that have such a large shield capacity that recharging them would take a long time with a smaller generator."
+	description "A malfunction in this generator is causing reduced performance, excessive energy consumption, and waste heat. It also seems to be causing a slight delay before the shield regeneration process actually begins."
 
 
 
@@ -71,6 +61,36 @@ outfit "Engineering Room"
 
 
 
+outfit "Fuel Canister"
+	category "Systems"
+	cost 11000
+	thumbnail "outfit/fuel pod mini"
+	"mass" 5
+	"outfit space" -5
+	"fuel capacity" 50
+	description "A Fuel Canister increases your fuel capacity slightly. It's not enough to make a hyperspace jump, but can provide extra reserves for an afterburner."
+
+outfit "Fuel Tank"
+	category "Systems"
+	cost 30000
+	thumbnail "outfit/fuel pod large"
+	"mass" 10
+	"outfit space" -10
+	"fuel capacity" 150
+	description "A Fuel Tank increases your fuel capacity greatly, enough to power a Scramdrive for one additional hyperspace jump."
+
+outfit "Fuel Tank (Reinforced)"
+	category "Systems"
+	cost 35000
+	thumbnail "outfit/fuel pod reinforced"
+	"mass" 10
+	"outfit space" -10
+	"fuel capacity" 100
+	"fuel protection" .1
+	description "Although this carries less fuel than a regular Fuel Tank, it has a thicker armored casing to protect against leaks."
+
+
+
 outfit "H6 Refrigeration Module"
 	category "Systems"
 	cost 200000
@@ -83,12 +103,38 @@ outfit "H6 Refrigeration Module"
 
 
 
+outfit "Hull Repair Equipment"
+	category "Systems"
+	cost 200000
+	thumbnail "outfit/blue screwdriver"
+	"hull repair rate" 0.05
+	"repair delay" 300
+	"outfit space" -10
+	"required crew" 10
+	unplunderable 1
+	description "Equipment designed to fix the hull of a ship while it is still in operation. This includes the actual repair tools as well as diagnostic equipment and environmental suits for accessing external areas of the ship."
+	description "	Before hull repairs can begin there is a delay while the crew analyzes the damage to determine how to fix it."
+
+
+
+outfit "Industrial Ramscoop"
+	category "Systems"
+	cost 190000
+	thumbnail "outfit/industrial ramscoop"
+	"mass" 13
+	"outfit space" -13
+	"ramscoop" 3
+	description "An Industrial Ramscoop is often used to supplement deuterium harvesting operations on space stations. It's bulkier than a regular ramscoop but is able to process hyperspace fuel more efficiently."
+
+
+
 outfit "Infiltrator Tech"
 	category "Systems"
 	thumbnail "outfit/infiltrator tech"
-	description "The Infiltrator has this specialized scan interference and radar jamming technology integrated into the hull. Data on its inner workings is classified information not available to the general public."
+	description "The Infiltrator has this specialized scan interference and radar jamming technology integrated into the hull. It also features an optical jamming feature that causes the shields to shimmer in a way that helps the ship blend in with starry backgrounds. Data on its inner workings is classified information not available to the general public."
 	"scan interference" 5.5
 	"radar jamming" 10
+	"optical jamming" 5
 	"mass" 30
 	"outfit space" -30
 	"integrated systems" 1
@@ -109,6 +155,7 @@ outfit "Limit Breaker"
 	description `	Installing more than one of these outfits reduces their effectiveness as they interfere with each other as well as your ship's internal safety shutdown systems.`
 
 
+
 outfit "Liquid Metal Hull"
 	category "Systems"
 	thumbnail "outfit/liquid metal hull"
@@ -121,7 +168,7 @@ outfit "Liquid Metal Hull"
 	"integrated systems" 1
 	"reinstall" -1
 	"unplunderable" 1
-	description `Made with Korath nanomachine technology. Its ability to regenerate the hull is unparalleled.`
+	description `Made with Korath nanomachine technology. Its ability to regenerate itself is unparalleled.`
 
 
 
@@ -200,6 +247,34 @@ outfit "North Wind Cooling"
 
 
 
+outfit "Prototype D122-ZX Shielding"
+	category "Systems"
+	cost 500000
+	thumbnail "outfit/proto huge shield d"
+	"mass" 75
+	"outfit space" -75
+	"shield generation" 2.49
+	"shield energy" 3.37
+	"shield heat" 2.1
+	description "The Prototype D122-ZX Shielding from Deep Sky is a next generation shield generator under development in human space. Larger than the the D94-YV Shield Generator, it boasts a shield generation rate beyond anything Deep Sky has ever produced."
+	description "	This experimental generator draws immense energy while producing a massive amount of waste heat, reminiscent of the modified generators sometimes used by pirates."
+
+outfit "Prototype T88-AO Shielding"
+	category "Systems"
+	cost 1000000
+	thumbnail "outfit/proto huge shield t"
+	"mass" 75
+	"outfit space" -75
+	"shield generation" 4.39
+	"shield energy" 5.42
+	"shield heat" 3.37
+	"depleted shield delay" 300
+	description "Inspired by observations of Quarg technology, the Prototype T88-AO Shielding from Tarazed is a test model generator used for experiments in human space. Larger than anything sold at regular outfitters, it pushes the limits of shield generation technology."
+	description "	This experimental generator draws immense energy while producing a massive amount of waste heat. It also temporarily overloads all shield generation once the ship's shields have been depleted."
+
+
+
+
 outfit "Rusty Asteroid Scanner"
 	category "Systems"
 	cost 12200
@@ -210,7 +285,22 @@ outfit "Rusty Asteroid Scanner"
 	"fused circuits" 1
 	"reinstall" -1
 	"unplunderable" 1
-	description "The circuits of this rusty old asteroid scanner are fused into your ship, but it does still work. Unfortunately the effective range is so low you might not realize an asteroid is minable until you're practically on top of it."
+	description "The circuits of this rusty old asteroid scanner are fused into your ship, but it still works. Unfortunately the effective range is so low you might not realize an asteroid is minable until you're practically on top of it."
+
+
+
+outfit "Broadband Amplifier"
+	category "Systems"
+	cost 4000
+	thumbnail "outfit/scan amplifier"
+	"mass" 1
+	"outfit space" -1
+	"outfit scan power" 8
+	"outfit scan efficiency" -2
+	"cargo scan power" 4
+	"cargo scan efficiency" -1
+	description "An artifact from the early era of space exploration, a Broadband Amplifier improves the range of your existing cargo and outfit scanners. However, this also reduces the effectiveness of those scans. It is primarily found on science vessels for which maintaining a safe distance from dangerous intersellar phenomena is more relevant than quickly scanning ships for contraband or tactical information."
+	description "	This device cannot be installed on a ship that doesn't already have equipment for scanning both cargo and outfits."
 
 
 
@@ -235,6 +325,7 @@ outfit "Smuggler's Hideaway"
 	"mass" 16
 	"cargo space" -20
 	"scan interference" 2
+	"scan concealment" 1
 	"cooling inefficiency" 1
 	"heat dissipation" -.01
 	description "This hidden compartment, lined with a material similar to Interference Plating, helps conceal part of your cargo bay from scans and searches."
@@ -282,6 +373,83 @@ outfit "Heavy Fusion Core"
 
 
 
+outfit "QT-800 Nucleovoltaic"
+	category "Power"
+	cost 1140000
+	thumbnail "outfit/tarazed nucleovoltaic"
+	"mass" 65
+	"outfit space" -65
+	"energy generation" 7.2
+	"heat generation" 15
+	"cooling energy" -3.6
+	"active cooling" 0.0001
+	description "Nucleovoltaic generators are a relatively recent generator technology that harvests energy from the decay of a radioisotope source and converts it directly into electricity. They are the most powerful generator that relies on nuclear decay instead of an active nuclear chain reaction."
+	description "	Tarazed's research into Quarg technology has had some unexpected findings. This prototype generator, for example, is able to achieve a significantly higher power output than the Nucleovoltaics produced by Deep Sky. Yet it is unable to do so consistently. Testing results reveal a pattern of energy spikes accompanying incidents when the test ship was overheating. However the reason for this has yet to be solved, baffling even Tarazed's most knowledgable scientists."
+
+
+
+outfit "TP036q Battery Pack"
+	category "Power"
+	cost 7800
+	thumbnail "outfit/tarazed battery tiny"
+	"mass" 10
+	"outfit space" -10
+	"energy capacity" 5200
+	"cooling energy" 4.0
+	"active cooling" 0.0001
+	description "A ship can run without batteries if its generator's instantaneous power output is higher than the total energy consumption of its systems, but batteries make it possible to store up energy when it is not needed and thus to use a much smaller and cheaper generator."
+	description "	Research on Quarg technology has enabled Tarazed to develop this higher capacity battery. Unfortunately, it becomes unstable when exposed to high temperatures, losing its ability to retain the energy stored within. Insufficient generators can result in a cascade failure that can drain other batteries."
+
+outfit "TP072q Battery Pack"
+	category "Power"
+	cost 18200
+	thumbnail "outfit/tarazed battery small"
+	"mass" 20
+	"outfit space" -20
+	"energy capacity" 11440
+	"cooling energy" 8.0
+	"active cooling" 0.0001
+	description "This battery pack has more than twice the energy capacity of the most basic model, allowing your ship to engage in combat for longer periods of time before running out of energy. Some pilots have even been known to install these in lieu of any generator at all, trusting that they can reach their destination planet and recharge before running out of battery power, but that is a risky proposition."
+	description "	Research on Quarg technology has enabled Tarazed to develop this higher capacity battery. Unfortunately, it becomes unstable when exposed to high temperatures, losing its ability to retain the energy stored within. Insufficient generators can result in a cascade failure that can drain other batteries."
+
+outfit "TP144q Battery Pack"
+	category "Power"
+	cost 41600
+	thumbnail "outfit/tarazed battery medium"
+	"mass" 40
+	"outfit space" -40
+	"energy capacity" 24960
+	"cooling energy" 16.0
+	"active cooling" 0.0001
+	description "This medium-sized battery pack is intended for ships that need to fire the occasional salvo of high-powered weaponry without running out of energy. As with all battery packs, relying on batteries is risky if combat lasts long enough for them to become depleted."
+	description "	Research on Quarg technology has enabled Tarazed to develop this higher capacity battery. Unfortunately, it becomes unstable when exposed to high temperatures, losing its ability to retain the energy stored within. Insufficient generators can result in a cascade failure that can drain other batteries."
+
+outfit "TP288q Battery Pack"
+	category "Power"
+	cost 70200
+	thumbnail "outfit/tarazed battery large"
+	"mass" 60
+	"outfit space" -60
+	"energy capacity" 40560
+	"cooling energy" 24.0
+	"active cooling" 0.0001
+	description "This is a large battery pack designed for ships that may occasionally have high power needs but do not want the expense or the heat associated with a more powerful ship's generator."
+	description "	Research on Quarg technology has enabled Tarazed to develop this higher capacity battery. Unfortunately, it becomes unstable when exposed to high temperatures, losing its ability to retain the energy stored within. Insufficient generators can result in a cascade failure that can drain other batteries."
+
+outfit "TP576q Battery Pack"
+	category "Power"
+	cost 104000
+	thumbnail "outfit/tarazed battery huge"
+	"mass" 80
+	"outfit space" -80
+	"energy capacity" 59800
+	"cooling energy" 32.0
+	"active cooling" 0.0001
+	description "For most ships that require this much power, a larger generator makes more sense than a battery this size. However, battery packs have the advantage that they generate no heat, so some captains use them instead of powerful generators if they do not expect to be in combat frequently or for extended periods of time."
+	description "	Research on Quarg technology has enabled Tarazed to develop this higher capacity battery. Unfortunately, it becomes unstable when exposed to high temperatures, losing its ability to retain the energy stored within. Insufficient generators can result in a cascade failure that can drain other batteries."
+
+
+
 #############################
 #
 # Engines
@@ -294,13 +462,13 @@ outfit "Hybrid Afterburner"
 	category "Engines"
 	"cost" 374000
 	thumbnail "outfit/hybrid afterburner"
-	"mass" 26
-	"outfit space" -26
-	"engine capacity" -26
-	"afterburner thrust" 33.0
-	"afterburner fuel" .5
+	"mass" 17
+	"outfit space" -17
+	"engine capacity" -17
+	"afterburner thrust" 35.7
+	"afterburner fuel" .125
 	"afterburner energy" 5.1
-	"afterburner heat" 12.0
+	"afterburner heat" 10.0
 	"afterburner effect" "hybrid afterburner"
 	description "A modified afterburner that also taps into your ships batteries for additional power, providing an increased burst of speed."
 
@@ -311,7 +479,7 @@ outfit "Sunracer Afterburner"
 	"mass" 18
 	"outfit space" -18
 	"engine capacity" -18
-	"afterburner thrust" 49.5
+	"afterburner thrust" 37.5
 	"afterburner fuel" .1
 	"afterburner energy" 5.1
 	"afterburner heat" 10.0
@@ -360,6 +528,17 @@ outfit "Execution Chamber"
 	"required crew" 2
 	"unplunderable" 1
 	description "This is a specially designed room which can be installed in your ship. Anyone who boards you in an attempt to take over your ship will find themselves locked in this room by the self sealing doors. A pair of portholes allow your crew to safely sweep the chamber with weapons fire from the other side of the reinforced bulkhead."
+
+
+
+outfit "Guncraft"
+	category "Unique"
+	cost 2500
+	thumbnail "outfit/handgun rust"
+	"capture attack" .3
+	"capture defense" .4
+	"unplunderable" 1
+	description "An old relic from the early turf wars, the Guncraft is considered by many to be the pinnacle of handgun design. This particular one is starting to show small traces of rust in some areas, which could impact its performance and collectability. The basic model has a well balanced grip and precision sigting, but there are rumors of Guncrafts that have been transformed into terrifying weapons by skilled gunsmiths."
 
 
 
@@ -419,6 +598,20 @@ outfit "Sniper Rifle"
 
 
 
+outfit "Contraband"
+	category "Special"
+	cost 100000
+	thumbnail "outfit/attention"
+	"mass" 1
+	"illegal" 100000
+	"flotsam chance" 1
+	installable -1
+	description "Illegal merchadise found in a smuggler's cargo bay. You might be able to sell it for a profit if the authorities haven't caught you with it first."
+
+outfitter "Contraband"
+	"Contraband"
+
+
 outfit "Drone Hacking"
 	category "Special"
 	cost 30
@@ -459,6 +652,7 @@ outfit "Alien Torture Device"
 
 
 outfit "Almachian Brain Maggots"
+	plural "Almachian Brain Maggots"
 	category "Unique"
 	cost 75000
 	thumbnail "outfit/almachian brain maggots"
@@ -493,10 +687,39 @@ outfit "Carabao AI"
 
 
 outfit "Catapult Schematics"
+	plural "Catapult Schematics"
 	category "Unique"
 	cost 0
 	thumbnail "outfit/schematics"
 	description `The schematics for the Asteroid Catapult that was installed on the Thermopylae space battle station. Without a skilled engineer willing to actually make one, these are just pictures on a computer screen.`
+
+
+
+outfit "Cloaking Device (Damaged)"
+	category "Unique"
+	cost 1200000
+	"mass" 10
+	"outfit space" -10
+	"cloak" .007
+	"cloaking energy" 1.1
+	"cloaking fuel" .22
+	"unplunderable" 1
+	"fused circuits" 1
+	"reinstall" -1
+	description "You're sure the cloaking device is here somewhere, but you can't see it."
+
+
+
+outfit "DFN-53 Android"
+	category "Unique"
+	cost 57000
+	thumbnail "outfit/defense android"
+	"capture attack" .8
+	"capture defense" 2.8
+	"energy consumption" 0.01
+	unplunderable 1
+	description "While these were once considered cutting-edge outfits, their lack of autonomous capabilities and economic benefit ensured they were never licensed by a manufacturer."
+	description "	Despite this, some captains commissioned these directly from their inventor. This defense android does little to assist with shipboard operations. Instead, it was programmed to protect the ship from hostile boarders. While this does function as an effective defender, it quickly becomes disoriented when forced to fight in unfamiliar territory."
 
 
 
@@ -508,7 +731,7 @@ outfit "Guncraft I"
 	"capture defense" .3
 	"unplunderable" 1
 	description "An old relic from the early turf wars, the Guncraft is considered by many to be the pinnacle of handgun design. This particular one has been kept in perfect condition. The basic model has a well balanced grip and precision sigting, but you've heard rumors of gunsmiths who posess the knowledge and skill to make parts modifications that could transform it into a terrifying weapon."
-	
+
 outfit "Guncraft II"
 	category "Unique"
 	cost 10000
@@ -623,6 +846,17 @@ outfit "Melchior Post Card"
 
 
 
+outfit "CRG-0 Android"
+	category "Unique"
+	cost 80000
+	thumbnail "outfit/cargo android"
+	"cargo space" 1
+	"energy consumption" 0.01
+	unplunderable 1
+	description "While these were once considered cutting-edge outfits, their lack of autonomous capabilities and economic benefit ensured they were never licensed by a manufacturer."
+	description "	Despite this, some captains commissioned these directly from their inventor. This cargo android does little to assist with most shipboard operations. Instead, it was programmed to load cargo bays with a focus on making effective use of the available space. While this does allow more cargo to be crammed onto a ship, it can make retrieving a specific package more difficult than some would consider worth the effort."
+
+
 outfit "Microwave Cannon"
 	category "Unique"
 	cost 106000
@@ -647,19 +881,20 @@ outfit "T.H.O.R."
 	thumbnail "outfit/thor"
 	description "Produced by Kraz Cybernetics, this prototype Tactical Heavy Offensive Robot is armed with a heavy laser rifle, a shoulder mounted gatling gun, and an arm mounted pile driver. An installable storage bay for charging, maintenance, and repairs is included. Combat testing of the artificial intelligence is incomplete and the mass production design has not yet been finalized. Therefore pre-orders are not being accepted at this time."
 	description "When this is installed on a ship, a dedicated maintenance crew must be hired for it."
-	"mass" 4
-	"outfit space" -4
+	"mass" 1
+	"outfit space" -1
 	"capture attack" 30
 	"capture defense" 30
 	"energy consumption" 0.034
+	"maintenance costs" 100
 	"required crew" 2
 	"unplunderable" 1
 
 outfit "T.H.O.R. (Damaged)"
 	category "Unique"
-	thumbnail "outfit/android"
+	thumbnail "outfit/thor disarmed"
 	description "Produced by Kraz Cybernetics, this prototype Tactical Heavy Offensive Robot has taken severe damage. The engineers on Rust in the Kraz system can probably repair it, but it won't be cheap."
 	description "Although it is not able to be deployed, you should keep this installed on your ship to prevent it from being mixed in with the regular cargo."
-	"mass" 4
-	"outfit space" -4
+	"mass" 1
+	"outfit space" -1
 	"unplunderable" 1

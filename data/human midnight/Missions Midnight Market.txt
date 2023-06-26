@@ -237,8 +237,9 @@ event "Hauler VI Market timer"
 
 ship "Hauler VI" "Hauler VI (prototype)"
 	outfits
-		"Meteor Missile Launcher" 2
-		"Meteor Missile" 60
+		"Meteor Missile Pod" 2
+		"Meteor Missile" 44
+		"Meteor Missile Box" 2
 		"Quad Blaster Turret" 2
 		"Heavy Anti-Missile Turret" 2
 		"S3 Thermionic"

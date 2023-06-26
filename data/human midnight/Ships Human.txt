@@ -14,7 +14,7 @@
 # Contents: 
 # - Ships sold in shipyards (may have to complete some missions/events).
 # - Ships not sold in shipyards but can be captured or received in missions.
-# - Uncapturable ships. 
+
 
 
 
@@ -48,8 +48,9 @@ ship "Battle Barge"
 		Hyperdrive
 		"LP072a Battery Pack"
 		"Large Radar Jammer"
-		"Meteor Missile" 60
-		"Meteor Missile Launcher" 2
+		"Meteor Missile Pod" 2
+		"Meteor Missile" 44
+		"Meteor Missile Box" 2
 		"Modified Blaster Turret" 12
 		"Small Radar Jammer"
 		"Water Coolant System"
@@ -106,8 +107,9 @@ ship "Hauler VI"
 			"hull damage" 500
 			"hit force" 1500
 	outfits
-		"Meteor Missile Launcher" 2
-		"Meteor Missile" 60
+		"Meteor Missile Pod" 2
+		"Meteor Missile" 44
+		"Meteor Missile Box" 2
 		"Quad Blaster Turret" 2
 		"Heavy Anti-Missile Turret" 2
 		
@@ -123,8 +125,8 @@ ship "Hauler VI"
 
 	engine -45 159.5
 	engine 45 159.5
-	gun -14.5 -130 "Meteor Missile Launcher"
-	gun 14.5 -130 "Meteor Missile Launcher"
+	gun -14.5 -130 "Meteor Missile Pod"
+	gun 14.5 -130 "Meteor Missile Pod"
 	turret -21.5 -85 "Quad Blaster Turret"
 	turret 21.5 -85 "Heavy Anti-Missile Turret"
 	turret -18.5 155.5 "Heavy Anti-Missile Turret"
@@ -218,9 +220,10 @@ ship "Missileboat"
 			"hit force" 600
 	outfits
 		"Energy Blaster" 2
-		"Meteor Missile Launcher" 4
-		"Meteor Missile" 180
-		"Meteor Missile Box" 4
+		"Meteor Missile Launcher" 2
+		"Meteor Missile Pod" 2
+		"Meteor Missile" 179
+		"Meteor Missile Box" 7
 		
 		"nGVF-CC Fuel Cell"
 		"LP036a Battery Pack"
@@ -239,8 +242,8 @@ ship "Missileboat"
 	gun 10 -30 "Energy Blaster"
 	gun -27 -5 "Meteor Missile Launcher"
 	gun 27 -5 "Meteor Missile Launcher"
-	gun -17 -5 "Meteor Missile Launcher"
-	gun 17 -5 "Meteor Missile Launcher"
+	gun -17 -5 "Meteor Missile Pod"
+	gun 17 -5 "Meteor Missile Pod"
 	leak "leak" 50 50
 	explode "tiny explosion" 10
 	explode "small explosion" 20
@@ -546,8 +549,9 @@ ship "Starcadia"
 		"Heavy Laser" 2
 		"Heavy Laser Turret" 3
 		"Anti-Missile Turret" 3
-		Torpedo 60
-		"Torpedo Launcher" 2
+		Torpedo 51
+		"Torpedo Pod" 2
+		"Torpedo Storage Rack" 3
 		
 		"Dwarf Core" 2
 		"LP072a Battery Pack"
@@ -596,8 +600,8 @@ ship "Starcadia"
 		right
 	gun -14 -103 "Heavy Laser"
 	gun 14 -103 "Heavy Laser"
-	gun -25 -73 "Torpedo Launcher"
-	gun 25 -73 "Torpedo Launcher"
+	gun -25 -73 "Torpedo Pod"
+	gun 25 -73 "Torpedo Pod"
 	turret -20 -7 "Anti-Missile Turret"
 	turret 20 -7 "Heavy Laser Turret"
 	turret -30 17.5 "Heavy Laser Turret"
@@ -715,7 +719,9 @@ ship "Carabao"
 		"Heavy Laser" 2
 		"Heavy Laser Turret" 4
 		"Heavy Anti-Missile Turret" 2
-		"Torpedo Launcher" 2
+		"Torpedo Pod" 2
+		"Torpedo" 66
+		"Torpedo Storage Rack" 4
 
 		"LP144a Battery Pack"
 		"Fusion Reactor"
@@ -735,9 +741,9 @@ ship "Carabao"
 		parallel
 	gun -56 -176 "Heavy Laser"
 		parallel
-	gun 44.5 -170 "Torpedo Launcher"
+	gun 44.5 -170 "Torpedo Pod"
 		parallel
-	gun 61 -134 "Torpedo Launcher"
+	gun 61 -134 "Torpedo Pod"
 		parallel
 	turret 3.5 -123.5 "Heavy Anti-Missile Turret"
 	turret -54 -45.5 "Heavy Laser Turret"
@@ -764,42 +770,42 @@ ship "Carabao"
 
 ship "Carabao" "Carabao (Quash)"
 	outfits
-		"Ion Cannon"
-		"Pulse Cannon"
-		"Bombardment Cannon"
-		"Shard Fabricator"
-
-		"Ka'het Ravager Turret" 2
-		"Ka'het Annihilator Turret" 2
-		"Point Defense Turret"
-		"Quarg Anti-Missile"
-		
 		"Antimatter Core"
-		"Nanotech Battery"
-		"Quantum Shield Generator"
-		"Large Repair Module"
-		"Command Center"
-		"Large Heat Shunt"
-		"Electronic Warfare System"
-		"Quantum Key Stone"
-		"Ramscoop"
-		"Intrusion Countermeasures" 70
+		"Astuit Battery"
 		"Carabao AI"
-
-		"Medium Graviton Thruster"
-		"Medium Graviton Steering"
+		"Command Center"
+		"Digger Mining Beam"
+		"Electronic Warfare System"
+		"Intrusion Countermeasures" 70
+		"Ion Cannon"
 		"Jump Drive"
+		"Ka'het Annihilator Turret"
+		"Ka'het Ravager Turret"
+		"Large Repair Module"
+		"Locust Turret"
+		"Medium Graviton Steering"
+		"Medium Graviton Thruster"
+		"Nanotech Battery"
+		"Point Defense Turret"
+		"Pulse Cannon"
+		"Quantum Shield Generator"
+		Quantumium
+		"Quarg Anti-Missile"
+		Ramscoop
+		"Shard Fabricator"
+		"Small Heat Shunt"
+		"Systems Core (Tiny)"
 
 	gun "Ion Cannon"
 	gun "Pulse Cannon"
-	gun "Bombardment Cannon"
+	gun "Digger Mining Beam"
 	gun "Shard Fabricator"
 	turret "Ka'het Ravager Turret"
 	turret "Ka'het Annihilator Turret"
 	turret "Quarg Anti-Missile"
-	turret "Ka'het Annihilator Turret"
+	turret "Astuit Battery"
 	turret "Point Defense Turret"
-	turret "Ka'het Ravager Turret"
+	turret "Locust Turret"
 
 ship "Carabao" "Carabao (Quash Abandoned)"
 	outfits
@@ -1484,6 +1490,7 @@ ship "Parade Float"
 # Plexus is the predecessor to the original design of the Liberator/Vindicator
 
 ship "Plexus"
+	plural "Plexuses"
 	sprite "ship/plexus"
 		"delay" 2
 	attributes
@@ -1634,17 +1641,28 @@ ship "Phantom Drone Launcher"
 		"turn" 600
 		"fuel capacity" 100
 		"hyperdrive" 1
-		"jump speed" .2		
+		"jump speed" .2
 	outfits
 		"Timer Weapon"
 	gun 0 0
 	bay "Drone" 0 0
+
+ship "Phantom Drone Launcher" "Phantom Drone Launcher (jump)"
+	"never disabled"
+	add attributes
+		"fuel capacity" 100
+		"hyperdrive" -1
+		"jump drive" 1
+		"jump effect" "invisible jump"
+		"jump in sound" "ion tiny"
+		"jump out sound" "ion tiny"
 
 
 
 # The Shield Fortress is a unique ship that can be captured in an Oathbreakers mission.
 
 ship "Shield Fortress"
+	plural "Shield Fortresses"
 	sprite "ship/shield fortress"
 	thumbnail "thumbnail/shield fortress-thumb"
 	"crew" 120
@@ -1750,7 +1768,7 @@ ship "Star Explorer"
 		"fuel capacity" 700
 		"cargo space" 120
 		"outfit space" 540
-		"weapon capacity" 180
+		"weapon capacity" 185
 		"engine capacity" 150
 		"atmosphere scan" 100
 		weapon
@@ -1774,7 +1792,9 @@ ship "Star Explorer"
 		"Engineering Room"
 		Ramscoop
 		"Asteroid Scanner"
+		"Broadband Amplifier"
 		"Cargo Scanner"
+		"Fuel Pod"
 		"Outfit Scanner"
 		"Tactical Scanner"
 		"Medical Bay"
@@ -1818,6 +1838,7 @@ ship "Star Explorer"
 # Strategos and Enforcer Drones appear in Oathbreaker missions.
 
 ship "Strategos"
+	plural "Strategoi"
 	sprite "ship/strategos/strategos"
 		"delay" 2
 	thumbnail "thumbnail/strategos-thumb"
@@ -1846,8 +1867,10 @@ ship "Strategos"
 			"hit force" 5800
 	outfits
 		"Particle Cannon" 4
-		"Sidewinder Missile Launcher" 4
-		"Sidewinder Missile" 180
+		"Swingfire Missile Launcher" 2
+		"Swingfire Missile Pod" 2
+		"Swingfire Missile" 91
+		"Swingfire Missile Rack"
 		"Electron Turret" 3
 		"Heavy Anti-Missile Turret" 2
 
@@ -1878,10 +1901,10 @@ ship "Strategos"
 	gun 17 -228
 	gun -17 -228
 	gun 17 -228
-	gun -26 -219
-	gun 26 -219
-	gun -26 -219
-	gun 26 -219
+	gun -26 -219 "Swingfire Missile Launcher"
+	gun 26 -219 "Swingfire Missile Launcher"
+	gun -26 -219 "Swingfire Missile Pod"
+	gun 26 -219 "Swingfire Missile Pod"
 	turret -18 -184
 	turret 18 -184
 	turret 0 -123
@@ -1960,6 +1983,7 @@ ship "Enforcer Drone"
 # The Subsidurius is a unique ship that can be captured in an Lifeforms Indigenous mission.
 
 ship "Subsidurius"
+	plural "Subsidurii"
 	sprite "ship/subsidurius"
 	attributes
 		category "Light Warship"
@@ -2054,7 +2078,7 @@ ship "War Hauler"
 		"heat dissipation" .67
 		"fuel capacity" 400
 		"cargo space" 40
-		"outfit space" 490
+		"outfit space" 495
 		"weapon capacity" 280
 		"engine capacity" 80
 		weapon
@@ -2119,6 +2143,7 @@ ship "War Hauler"
 # The Metropolis city ship is awarded at the end of the Metropolis mission chain.
 
 ship "Metropolis"
+	plural "Metropolises"
 	sprite "ship/metropolis"
 		"delay" 2
 	thumbnail "thumbnail/metropolis-thumb"
@@ -2144,8 +2169,9 @@ ship "Metropolis"
 			"hull damage" 3900
 			"hit force" 11700
 	outfits
-		"Heavy Rocket Launcher" 2
-		"Heavy Rocket" 40
+		"Heavy Rocket Pod" 2
+		"Heavy Rocket" 54
+		"Heavy Rocket Rack" 5
 		"Quad Blaster Turret" 5
 		"Heavy Anti-Missile Turret" 6
 		
@@ -2177,8 +2203,8 @@ ship "Metropolis"
 
 	engine -12 370.5
 	engine 25.5 371
-	gun -38.5 -309 "Heavy Rocket Launcher"
-	gun 42.5 -310.5 "Heavy Rocket Launcher"
+	gun -38.5 -309 "Heavy Rocket Pod"
+	gun 42.5 -310.5 "Heavy Rocket Pod"
 	turret 21 -263.5 "Heavy Anti-Missile Turret"
 	turret -7 -244.5 "Heavy Anti-Missile Turret"
 	turret -13.5 -118.5 "Quad Blaster Turret"
@@ -2354,8 +2380,9 @@ ship "Municipality"
 			"hull damage" 1300
 			"hit force" 3900
 	outfits
-		"Heavy Rocket Launcher" 2
-		"Heavy Rocket" 40
+		"Heavy Rocket Pod" 2
+		"Heavy Rocket" 54
+		"Heavy Rocket Rack" 5
 		"Heavy Anti-Missile Turret" 2
 		
 		"Fusion Reactor"
@@ -2371,8 +2398,8 @@ ship "Municipality"
 		
 	engine -13 131.5
 	engine 24 131
-	gun -36.5 -71 "Heavy Rocket Launcher"
-	gun 44 -71.5 "Heavy Rocket Launcher"
+	gun -36.5 -71 "Heavy Rocket Pod"
+	gun 44 -71.5 "Heavy Rocket Pod"
 	turret 22.5 -25.5 "Heavy Anti-Missile Turret"
 	turret -5.5 -7 "Heavy Anti-Missile Turret"
 	bay "Fighter" 8 41.5
@@ -2390,135 +2417,3 @@ ship "Municipality"
 
 
 
-####################################
-# "Ships" not meant to be captured.
-####################################
-
-
-ship "Thermopylae Station"
-	sprite "ship/thermopylae station"
-		"scale" 4
-		"rewind"
-		"delay" 2
-	"never disabled"
-	attributes
-		category "Heavy Warship"
-		"cost" 30000000
-		"shields" 300000
-		"hull" 200000
-		"required crew" 800
-		"bunks" 1600
-		"mass" 9999
-		"drag" 100
-		"heat dissipation" .4
-		"cargo space" 1000
-		"outfit space" 1520
-		"weapon capacity" 842
-		"engine capacity" 38
-		"inscrutable" 1
-		weapon
-			"blast radius" 5000
-			"shield damage" 50000
-			"hull damage" 25000
-			"hit force" 75000
-	outfits
-		"Quad Blaster Turret" 12
-		"Heavy Anti-Missile Turret" 12
-		"Asteroid Catapult"
-		"Metallic Asteroid" 130
-		"Asteroid Storage" 10
-		
-		"Armageddon Core"
-		"Dwarf Core" 2
-		"LP576a Battery Pack" 2
-		
-		"D94-YV Shield Generator" 3
-
-		"Liquid Helium Cooler"
-		
-		"Large Radar Jammer" 3
-		"Cargo Scanner"
-		"Engineering Room"
-		"Outfit Scanner"
-		"Tactical Scanner"
-		"Brig"
-		"Interference Plating"
-		"Laser Rifle" 600
-		"Security Station"
-		"Medical Bay"
-		
-		"A120 Atomic Thruster"
-		"A125 Atomic Steering"
-		"AR120 Reverse Thruster"
-		
-	gun 0 -342 "Asteroid Catapult"
-	turret -18.5 -52.5 "Quad Blaster Turret"
-		under
-	turret 19 -54 "Quad Blaster Turret"
-		under
-	turret -60.5 -60.5 "Heavy Anti-Missile Turret"
-		under
-	turret 64 -55.5 "Heavy Anti-Missile Turret"
-		under
-	turret -120.5 -30 "Quad Blaster Turret"
-		under
-	turret 122.5 -39 "Quad Blaster Turret"
-		under
-	turret -154.5 -21 "Heavy Anti-Missile Turret"
-		under
-	turret 170.5 -20 "Heavy Anti-Missile Turret"
-		under
-	turret -200 2.5 "Quad Blaster Turret"
-		under
-	turret 204 -11 "Quad Blaster Turret"
-		under
-	turret -259.5 56.5 "Heavy Anti-Missile Turret"
-		under
-	turret 265 28 "Heavy Anti-Missile Turret"
-		under
-	turret -258.5 104.5 "Quad Blaster Turret"
-	turret 265.5 104.5 "Quad Blaster Turret"
-	turret -225.5 130.5 "Heavy Anti-Missile Turret"
-	turret 249 117 "Heavy Anti-Missile Turret"
-	turret -198 149.5 "Quad Blaster Turret"
-	turret 214.5 138 "Quad Blaster Turret"
-	turret -156 163 "Heavy Anti-Missile Turret"
-	turret 178.5 152.5 "Heavy Anti-Missile Turret"
-	turret -126 176 "Quad Blaster Turret"
-	turret 133.5 165 "Quad Blaster Turret"
-	turret -56 181 "Heavy Anti-Missile Turret"
-	turret 33 180 "Heavy Anti-Missile Turret"
-	bay "Fighter" 0 0 under front
-	bay "Fighter" 0 0 under front
-	bay "Fighter" 0 0 under front
-	bay "Fighter" 0 0 under left
-	bay "Fighter" 0 0 under left
-	bay "Fighter" 0 0 under left
-	bay "Fighter" 0 0 under right
-	bay "Fighter" 0 0 under right
-	bay "Fighter" 0 0 under right
-	bay "Fighter" 0 0 under back
-	bay "Fighter" 0 0 under back
-	bay "Fighter" 0 0 under back
-	bay "Drone" 0 0 under front
-	bay "Drone" 0 0 under front
-	bay "Drone" 0 0 under front
-	bay "Drone" 0 0 under left
-	bay "Drone" 0 0 under left
-	bay "Drone" 0 0 under left
-	bay "Drone" 0 0 under right
-	bay "Drone" 0 0 under right
-	bay "Drone" 0 0 under right
-	bay "Drone" 0 0 under back
-	bay "Drone" 0 0 under back
-	bay "Drone" 0 0 under back
-	leak "leak" 50 50
-	leak "flame" 80 80
-	leak "big leak" 30 30
-	explode "tiny explosion" 200
-	explode "small explosion" 160
-	explode "medium explosion" 120
-	explode "large explosion" 80
-	explode "huge explosion" 40
-	"final explode" "final explosion large"
-	description "A prototype built before the war that was never actually deployed into active service. The Asteroid Catapult installed on it was supposed to be securely locked away in a Navy testing facility."

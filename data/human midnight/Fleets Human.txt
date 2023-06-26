@@ -24,14 +24,15 @@ fleet "Small Dirt Belt Pirates"
 		"Berserker (Turbo Blaster)"
 	variant 1
 		"Scout (Turbo Blaster)"
-	variant 3
-		"Rancor (Turbo Blaster)"
 	variant 1
 		"Rancor"
+	variant 1
 		"Rancor (Turbo Blaster)"
 	variant 1
 		"Rancor (Berserker)"
-		"Rancor (Turbo Blaster)"
+		"Scrapper (Turbo Blaster)"
+	variant 1
+		"Scrapper (Turbo Blaster)"
 	variant 1
 		"Outrider (Turbo Blaster)"
 	variant 2
@@ -81,10 +82,13 @@ fleet "Large Dirt Belt Pirates"
 	personality
 		plunders harvests coward
 		confusion 20
-	variant 3
+	variant 2
 		"Rancor"
 		"Rancor (Berserker)"
 		"Rancor (Turbo Blaster)" 3
+	variant 1
+		"Scrapper (Mod Shielding)"
+		"Scrapper (Turbo Blaster)" 3
 	variant 4
 		"Modified Argosy (Turbo Blaster)"
 	variant 1
@@ -2086,8 +2090,6 @@ fleet "Grave Digger raid"
 fleet "Grave Digger Lurker"
 	government "Grave Diggers"
 	names "grave diggers"
-	personality waiting uninterested unconstrained mute coward
-		confusion 20
 	outfitters "Remnant Weapons"
 	variant 1
 		"Starling (Gravedigger)"
@@ -2097,14 +2099,15 @@ fleet "Grave Digger Lurker"
 fleet "Grave Digger Smugglers"
 	government "Independent (Killable)"
 	names "grave diggers"
-	personality waiting uninterested unconstrained mute
-		confusion 20
 	outfitters "Remnant Weapons"
 	variant 1
 		"Shadow Falcon"
+	variant 2
 		"Shadow Osprey"
+	variant 3
 		"Shadow Raven"
-		"Shadow Hawk" 2
+	variant 4
+		"Shadow Hawk"
 
 
 

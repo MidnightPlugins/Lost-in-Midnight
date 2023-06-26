@@ -464,7 +464,7 @@ mission "North Wind 9: Greenwater stocked"
 	to offer
 		has "event: North Wind Turner"
 	on offer
-		"salary: Turner Incorporated" = 4500
+		"salary: Turner Incorporated" += 500
 		fail
 
 
@@ -626,7 +626,7 @@ mission "Turner Inc.: Hai Power Gnome Core Stocked"
 	to offer
 		has "event: Gnome Core Delivered"
 	on offer
-		"salary: Turner Incorporated" = 6000
+		"salary: Turner Incorporated" += 1500
 		fail
 
 
@@ -877,7 +877,7 @@ mission "Turner Inc.: Hai Power Fission S2 Reactor Stocked"
 	to offer
 		has "event: Fission S2 Reactor Delivered"
 	on offer
-		"salary: Turner Incorporated" = 8000
+		"salary: Turner Incorporated" += 2000
 		fail
 
 
@@ -1041,7 +1041,7 @@ mission "Turner Inc.: Hai Power Heavy Fusion Core Stocked"
 	to offer
 		has "event: Heavy Fusion Core Delivered"
 	on offer
-		"salary: Turner Incorporated" = 10000
+		"salary: Turner Incorporated" += 2000
 		fail
 
 

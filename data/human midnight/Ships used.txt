@@ -106,8 +106,9 @@ ship "Marauder Hauler" "Marauder Hauler (used engines)"
 		"LP072a Battery Pack"
 		"Large Radar Jammer"
 		"Limit Breaker"
-		"Meteor Missile" 60
-		"Meteor Missile Launcher" 2
+		"Meteor Missile Pod" 2
+		"Meteor Missile" 44
+		"Meteor Missile Box" 2
 		"Modified Blaster Turret" 4
 		"Modified D67-TM Shielding"
 		"NT-200 Nucleovoltaic"
@@ -117,8 +118,8 @@ ship "Marauder Hauler" "Marauder Hauler (used engines)"
 
 	engine -45 86.5
 	engine 44 86.5
-	gun -12.5 -60 "Meteor Missile Launcher"
-	gun 16 -60 "Meteor Missile Launcher"
+	gun -12.5 -60
+	gun 16 -60
 	turret -20 -12 "Modified Blaster Turret"
 	turret 23 -12 "Modified Blaster Turret"
 	turret -17.5 40 "Modified Blaster Turret"
@@ -155,15 +156,16 @@ ship "Marauder Hauler" "Marauder Hauler (used weapons)"
 		"Modified Blaster Turret" 4
 		"Modified D67-TM Shielding"
 		"NT-200 Nucleovoltaic"
-		"Sidewinder Missile" 90
-		"Sidewinder Missile Launcher" 2
+		"Sidewinder Missile" 54
+		"Sidewinder Missile Pod" 2
+		"Sidewinder Missile Rack" 2
 		"Small Radar Jammer"
 		"Tactical Scanner"
 		"Water Coolant System"
 	engine -44 113
 	engine 45.5 113
-	gun -10.5 -87.5 "Sidewinder Missile Launcher"
-	gun 18 -87.5 "Sidewinder Missile Launcher"
+	gun -10.5 -87.5
+	gun 18 -87.5
 	turret -17.5 -41 "Modified Blaster Turret"
 	turret 25.5 -41 "Modified Blaster Turret"
 	turret -16.5 11.5 "Anti-Missile Turret"
@@ -196,8 +198,8 @@ ship "Modified Argosy" "Modified Argosy (used slaver)"
 
 	gun "Modified Blaster"
 	gun "Modified Blaster"
-	gun "Meteor Missile Launcher"
-	gun "Meteor Missile Launcher"
+	gun
+	gun
 	turret "Heavy Anti-Missile Turret"
 	turret "Modified Blaster Turret"
 	description "The Argosy has long been a favorite ship for independent spacefarers, who have come up with many tricks for modifying them to be more suitable to their purposes. The previous owner of this ship configured it for transporting prisoners..."
@@ -224,8 +226,8 @@ ship "Modified Argosy" "Modified Argosy (used smuggler)"
 
 	gun "Modified Blaster"
 	gun "Modified Blaster"
-	gun "Meteor Missile Launcher"
-	gun "Meteor Missile Launcher"
+	gun
+	gun
 	turret "Heavy Anti-Missile Turret"
 	turret "Modified Blaster Turret"
 	description "The Argosy has long been a favorite ship for independent spacefarers, who have come up with many tricks for modifying them to be more suitable to their purposes. The previous owner of this ship configured it for evading cargo inspectors..."
@@ -680,8 +682,8 @@ ship "Marauder Manta" "Marauder Manta (Used)"
 		"A525 Atomic Steering"
 		"Hyperdrive"
 	
-	gun "Meteor Missile Launcher"
-	gun "Meteor Missile Launcher"
+	gun
+	gun
 	gun "Modified Blaster"
 	gun "Modified Blaster"
 	gun "Modified Blaster"
@@ -714,8 +716,8 @@ ship "Marauder Manta" "Marauder Manta (Used Engines)"
 	engine -33.5 38
 	engine 0 76
 	engine 33.5 38
-	gun "Meteor Missile Launcher"
-	gun "Meteor Missile Launcher"
+	gun
+	gun
 	gun "Modified Blaster"
 	gun "Modified Blaster"
 	gun "Modified Blaster"
@@ -750,8 +752,8 @@ ship "Marauder Manta" "Marauder Manta (Used Weapons)"
 		
 	engine -33.5 38
 	engine 33.5 38
-	gun -66 -34 "Meteor Missile Launcher"
-	gun 66 -34 "Meteor Missile Launcher"
+	gun -66 -34
+	gun 66 -34
 	gun -27 -35 "Proton Gun"
 	gun 27 -35 "Proton Gun"
 	gun -20 -35 "Modified Blaster"
@@ -999,3 +1001,48 @@ ship "Marauder Splinter" "Marauder Splinter (Used Weapons)"
 	turret 0 -28 "Heavy Anti-Missile Turret"
 	turret 17 -28 "Modified Blaster Turret"
 	description "This Splinter has had extensive modification to its weapons space, with two new forward hard points on either side of the bridge. Large sections of the hull are covered with extra shield emitters and hull plating. Much of the stock cargo space has been converted to space for outfits, weapons, and engines; coupled with a streamlining of existing internal systems, it makes the prospect of meeting this flexible war machine in an uninhabited system seem pretty unappealing."
+
+# 2.34M
+ship "Missileboat" "Missileboat (Used)"
+	outfits
+		"Modified Blaster" 2
+		"Meteor Missile Launcher" 2
+		"Meteor Missile Pod" 2
+		"Meteor Missile" 164
+		"Meteor Missile Box" 6
+		"nGVF-CC Fuel Cell"
+		"LP036a Battery Pack"
+		"D14-RN Shield Generator"
+		"Large Radar Jammer"
+		"Tactical Scanner"
+		"Limit Breaker"
+		"Sniper Rifle"
+		"X2700 Ion Thruster"
+		"X2200 Ion Steering"
+		"Hyperdrive"
+	gun "Modified Blaster"
+	gun "Modified Blaster"
+	gun
+	gun
+	gun "Meteor Missile Pod"
+	gun "Meteor Missile Pod"
+
+# 4.216M
+ship "Patrolboat" "Patrolboat (Used)"
+	outfits
+		Brig
+		"Cargo Scanner"
+		"Cooling Ducts"
+		"D41-HY Shield Generator"
+		Hyperdrive
+		"LP144a Battery Pack"
+		"Laser Rifle" 4
+		"Modified D23-QP Shielding"
+		"Outfit Scanner"
+		"RT-I Radiothermal"
+		"Small Radar Jammer"
+		"Tactical Scanner"
+		"Limit Breaker"
+		"Modified Blaster" 4
+		"X2200 Ion Steering"
+		"X3700 Ion Thruster"

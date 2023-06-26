@@ -814,7 +814,7 @@ mission "Ghost Hunting: Zubenelgenubi Ghost Ship"
 		personality target derelict pacifist mute staying
 		ship "Saryd Trailblazer (warship)" "Reliquary of War"
 		conversation
-			apply
+			action
 				set "trailblazer encountered"
 			scene "scene/scene-sivael3cropflipdark"
 			`Hints of the scent of rotting flesh are mixed in with the otherwise stale air. The ships internal lights unsteadily flicker on and off. Life support is functional, but erratic.`

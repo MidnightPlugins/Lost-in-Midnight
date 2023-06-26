@@ -13,116 +13,243 @@
 
 mission "Skeleton Key North 1"
 	minor
-	name "Transport to <planet>"
-	description "Diana Howl says she has some pirate treasure she's willing to share if you take her to <destination>."
-	passengers 1
-	source
-		attributes "south pirate"
-	destination "Haven"
+	name "Search for Tod"
+	description "Follow the pirates that took Tod to <destination>."
+	source "Placer"
+	destination "Mutiny"
 	to offer
+		has "Lost Boy 3: done"
 		or
-			has "Paradise Fortune 4: done"
-			has "Paradise Fortune 4: declined"
-		random < 50 + ( 20 * "skeleton key south" ) + ( 20 * "skeleton key core")
+			and
+				not "Randomize Skeleton Key North 1"
+				random < 50 + ( 20 * "skeleton key south" ) + ( 20 * "skeleton key core")
+			and
+				has "Randomize Skeleton Key North 1"
+				random < 10
 	on offer
 		conversation
-			scene "planet/forest6"
-			`You are trying to get through the crowds at the spaceport when you bump into a familiar face: Diana Howl, the daughter of wealthy Paradise Planet family who stole half a billion credits from her family's wealth only to abandon it for a new life away from home.`
-			`	<first>! I never thought I'd run into you again! Good timing though, I need a lift to <destination>. Have you ever been there?`
+			`This is the planet where you left Tod, the boy you rescued from pirates, to start his new job as a miner. Check to see how he is doing?`
 			choice
-				`	"I could take you there. But what's in it for me?"`
-					goto barter
-				`	"That's awfully far away. And I'm heading in a different direction."`
-			`	"Too bad. I would have liked to travel together again." You say your farewell to Diana. She seems to be doing alright, but <origin> isn't the safest world to be scraping a living off of. Who knows what kind of trouble she's been getting into...`
-				defer
-			label barter
-			`	She spins around and you can see she has a new backpack. It's crammed full of something... "I managed to score some loot. I'll share some if you'll help me." Diana wants to hitch a ride while carrying a bag of stolen loot. This seems familiar. You instinctively look around, but there don't appear to be any angry security guards chasing her.`
+				`	(Search for Tod.)`
+				`	(Not now.)`
+					defer
+			`The labor department isn't very helpful. Citing employee privacy, they refuse to give you any information. As you head back to your ship, it seems someone who was also at the office is following you.`
 			choice
-				`	"OK, I'll take you."`
-					goto end
-				`	"Not again. No, I'm not doing this."`
-			`	"That's too bad. I was hoping we could travel together, like before." You say goodbye to Diana. She seems to be doing well, but <origin> isn't the safest world to be scraping a living off of. And who knows what kind of trouble she's got in mind for <planet>. Whatever it is, you've decided to stay as far away as possible from it.`
+				`	"Do you need something from me?"`
+					goto talk
+				`	(Shake them off your trail.)`
+			`	After turning a corner you break into a run, taking a roundabout course to get back to your ship. You managed to give them the slip. Whatever it is they were after shall remain unknown to you.`
 				decline
-			label end
-			`	"Yay!" She jumps then hugs you. "This will be fun!"`
-				accept
-	on enter
-		dialog `Some pirates hail you: "We know you have the girl. Surrender her and maybe we'll just take your credits." This is already starting to feel familiar.`
-	npc evade
+			label talk
+			`	Your pursuer appears to be a miner. "You're a friend of Tod Copper, aren't you?" He stares at you with an uncertain expression.`
+			choice
+				`	"Yes, I'm his friend. Can you tell me where Tod is?"`
+			scene "planet/ice4"
+			`	With a look of relief he says, "We were ambushed by some thugs while on our way back to the dorms after our shift yesterday. From the sound of it, they were pirates who knew Tod. He bargained for them to spare us in exchange for guiding them to something they are seeking on <destination>. We reported this to our employer, but they aren't doing anything about it!" Thanking him for information, you are left with the decision of whether to rescue Tod once again.`
+			choice
+				`	(Rescue Tod.)`
+				`	(Abandon Tod.)`
+					decline
+			scene "outfit/small bunk room"
+			`	You prepare for the journey to <planet>. Make sure to keep an empty bunk for Tod.`
+					accept
+	on defer
+		set "Randomize Skeleton Key North 1"
+	on enter Gienah
+		dialog `A battle between rival pirate gangs is taking place over Mutiny. Land on the planet and find Tod!`
+	npc
 		government "Pirate"
-		personality entering plunders unconstrained
+		system Gienah
+		personality waiting vindictive harvests
 			confusion 20
+		fleet "Small Core Pirates" 3
+	npc
+		government "Pirate (Rivals)"
+		system Gienah
+		personality waiting vindictive harvests
+			confusion 20
+		fleet "Small Northern Pirates" 3
 		fleet "Small Southern Pirates" 3
-	on fail
-		dialog `[MISSION FAILED] You failed to bring Diana Howl to <planet>. If life were a game, you could load a save file and try again.`
+		fleet "Small Dirt Belt Pirates" 3
 	on complete
-		conversation
-			`You finally arrive at <planet>. Diana opens her bag and pulls out something dangerous...`
-			choice
-				`	"Isn't that a Shield Suppressor?"`
-			scene "outfit/shield suppressor"
-			`	"Shield Suppressor?" She looks at the outfit in her hands. "I thought these were some kind of modified shield generator..." It figures she wouldn't know the difference.`
-			`	"These devices are used for sabotaging a shield generator. Every outfitter has a sign warning new pilots to get rid of it if they find one installed on their ship." Is this really the loot she wanted to share?`
-			choice
-				`	"You can keep them. All of them."`
-				`	"Get these off my ship right now."`
-			scene "outfit/shield suppressor"
-			`	"I'm sorry first, I really didn't know..." Diana seems to be holding back tears as she stuffs the Shield Suppressor back into her bag, then leaves. It might be a good idea to check your ship in the outfitter, just in case one got left behind.`
+		clear "Randomize Skeleton Key North 1"
 
 mission "Skeleton Key North 2"
 	landing
-	name "Rescue Diana"
-	description "A pirates kidnapped Diana and are holding her captive on the <npc>. Meet them at <waypoints> if you want her back. Take her to destination once she's safe."
+	name "Return Tod Home"
+	description "Search for the pirate treasure at <waypoints>. Then take Tod back to his home on <destination>."
 	passengers 1
-	waypoint "Tortor"
-	destination "Farpoint"
+	blocked "You don't have space for Tod!"
+	source "Mutiny"
+	waypoint "Gorvi"
+	destination "Moonshake"
 	to offer
 		has "Skeleton Key North 1: done"
 	on offer
 		conversation
-			`A short while later you receive a video message from Diana: "So, <first>, the people I was supposed to meet turned out to be pirates..." That's no surprise. "And I ended up being kidnapped..." Oh, really? "While talking with them your name came up..." This can't be good. "And now they want you to pay them the half billion credits I left you or they'll make me a slave..."`
+			`As you descend through the atmosphere, you notice a group of pirate ships has converged around a canyon near the equator. With no other leads, you set the <ship> to land nearby. Preparing for the worst, you open the hatch and walk into what could be an ambush.`
 			choice
-				`	"Just tell me where to meet them and I'll be there."`
-					goto details
-				`	"Sorry, you're on your own."`
-			`	"What? Are you serious? Come on <first>! I really need your help here! These pirates aren't playing around!"`
+				`	(Confindently stride into the viper's nest.)`
+				`	(Sneak up on them by creeping among the rocks.)`
+					goto sneak
+			`	You boldly walk through the canyon and find the pirates deliberating over a sealed crate. Despite your bravado, none notice you. Everyone is focused on the argument taking place between the captains of two different factions or too busy looting the dead corpses of a third faction.`
+				goto foundTod
+			label sneak
+			`	You creep among the rocks, trying to stay hidden. As you slowly make progress, you can hear two men arguing. Risking a glance, you see all the pirates are gathered around a sealed crate. Any pirates not focused on the spectacle of the argument between the captains of their factions is too busy looting the corpses of a third faction.`
+			label foundTod
+			`	Tod quietly approaches you and mouths, "Let's leave before they notice us."`
 			choice
-				`	"Alright, fine. Where do I go to meet them?"`
-			label details
-			scene "thumbnail/bactrian"
-			`	"You'll save me? Thanks <first>! I'm being held aboard an old city ship called the <npc>. They want you to meet them at <waypoints>." She never asks if you actually have the credits. This is definitely a trap. You won't need to have half a billion credits, but being prepared for a fight is essential.`
+				`	(Take Tod back to the <ship>.)`
+					goto escape
+				`	(Stay and watch what happens.)`
+			`	One of the pirate captain yells, "How do we even know the treasure is in there?"`
+			`	Tod tugs at your sleeve. He seems eager to leave.`
+			choice
+				`	(Take Tod back to the <ship>.)`
+					goto escape
+				`	(Stay and watch what happens.)`
+			`	The other responds, "This do be the crate what the boy done lead us to."`
+			`	Tod tugs at your sleeve. He seems eager to leave.`
+			choice
+				`	(Take Tod back to the <ship>.)`
+					goto escape
+				`	(Stay and watch what happens.)`
+			scene "scene/scene-empty box"
+			`	"And where's that boy now?" asks the first pirate captain, looking around."`
+			`	The other captain, suddenly aware of Tod's absence, yanks the lid of the crate open. "Empty!" The pirates all draw their weapons. "Find the boy! Find the treasure!" Turning to Tod, you notice he's already running off, in the wrong direction of your ship! As you move to follow, someone shoots you in the back! Collapsing to the ground, you bleed out, as the sounds of more gunfire and scream of anguish briefly enter your consciousness. The pirate's temporary truce has unraveled into a chaotic bloodbath. You notice with irony that you can no longer feel the pain from your wound. Your mind starts to wander, wondering why you're lying on the ground in this canyon or what your name is. Was it Tod? No, Tod is someone else. <first>? Maybe. Yeah, that's probably it. You smile in satisfaction at the name. At least you think you're smiling. Wait, are you smiling? Why? You're not really sure. The answers to these random questions no longer seem to matter as your existence fades into a dark realm of nothingness.`
+				die
+			label escape
+			`	You lead Tod through the canyon back to your ship. "The crate's a decoy setup by the pirate captain you rescued me from. What they're really looking for is in my head."`
+			choice
+				`	"What's that supposed to mean?"`
+			scene "outfit/asteroid scanner"
+			`	He recites a string of numbers. It sounds like the scan setting for an Asteroid Scanner. "I didn't realize it before, but now I think it's some kind of mapping code. The pirate that took me off Placer said he wants the map to a treasure in <waypoints>."`
+			`	Closing the hatch to your ship, you start up the engines. <waypoints> is on the other side of the galaxy.`
+			choice
+				`	"I could take you to <waypoints>, but the ride won't be cheap."`
+			`	"I'll split the treasure with you. Once we have that, I'd like to return to my mom on <planet>." With that settled, you activate the engines and head for the stars.`
 				accept
-	on enter "Tortor"
-		conversation
-			scene "thumbnail/bactrian"
-			`The <npc> is waiting for you, as indicated. It sends a hail, "Greeting Captain <last>. Did you bring the half billion credits?"`
-			choice
-				`	"No, I'm hoping to collect a bounty on you."`
-				`	"Get real. She's not worth that much."`
-			`	You cut them off and prepare to fight. To rescue Diane, you'll have to board the <npc> and defeat its crew without destroying it first.`
-	npc capture
-		government "Bounty"
-		system "Tortor"
-		personality target waiting staying plunders
-		ship "Bactrian (Shield Suppressor)" "Vicious Rain"
-		conversation
-			scene "outfit/shield suppressor"
-			`The battle was suspiciously easier than you expected and it isn't long before Diane runs up to you. Her backpack is noticeably empty. She grins and says, "Thanks for coming to rescue me <first>! I managed to stick those suppressor thingies all over the ship while they were distracted by you. When the shields stopped working, they started blaming each other..." With Diana safely in your custody, you should head to <destination>. With luck there may actually be a bounty worth collecting on the <npc>.`
-	on fail
-		dialog `[MISSION FAILED] You failed to bring Diana Howl to safety. If life were a game, you could load a save file and try again.`
-	on complete
-		outfit "Skeleton Key" 1
-		set "skeleton key north"
-		payment 1000000
-		log "People" "Diana Howl" `	After reuniting with Diana on a southern pirate world, I transported her to Haven where she was kidnapped. After being rescued, she decided to remain at the military outpost on Farpoint.`
-		log `Rescued Diana Howl from pirates. While aboard their ship she found some sort of key... I've heard urban legends about three "Skeleton Keys" which unlock pirate treasure. Could this be one of them? Perhaps someday I'll eventually find the treasure it unlocks...`
-		conversation
-			`	On <planet> you find an outstanding bounty of <payment> for the <npc>. After collecting your pay, you find a note from Diana: "Thank you for rescuing me <first>. I've decided to stay on <planet> for a while and see what opportunities and can find." Other than the military, there isn't much on <planet>. But maybe being here will be a good experience for her. As you are about put away the note, you notice an envelope with a short message written on it: "I found something while I was on the <npc>. I hope you have a use for it."`
-			choice
-				`	(Open the envelope.)`
-			scene "outfit/skeleton key"
-			`	The envelope contains some sort of key... You've heard urban legends about three "Skeleton Keys" which unlock pirate treasure. Could this be one of them? Perhaps someday you'll eventually find the treasure it unlocks...`
+	on accept
+		event "Treasure: Gorvi"
+		log "Treasure Maps" "Received a treasure map for the Gorvi system."
+	npc
+		government "Pirate"
+		system Gienah
+		personality waiting vindictive harvests
+			confusion 20
+		fleet "Small Core Pirates" 3
+	npc
+		government "Pirate (Rivals)"
+		system Gienah
+		personality waiting vindictive harvests
+			confusion 20
+		fleet "Small Northern Pirates" 3
+		fleet "Small Southern Pirates" 3
+		fleet "Small Dirt Belt Pirates" 3
 
+	on enter "Gorvi"
+		conversation
+			action
+				outfit "Skeleton Key" 1
+				set "skeleton key north"
+				payment 2000000
+			scene "asteroid/small rock/spin"
+			`After scanning the frequency indicated by Tod's code, a non-descript chunk of rock lights up. Digging into the asteroid, you find a crate containing 10,000 credit chips and a small object that resembles a key. As you are studying the strange artifact, the scanner highlights another rock. Pocketing the key, you maneuver the <ship> towards the new asteroid. This one has 30,000 credit chips in it. Several more rocks are highlighted. After salvaging a few more, you've managed to collect 2,000,000 credit chips.`
+			`	"We're rich <first>!" Tod raises his hand in the air expectantly.`
+			choice
+				`	(Give him a thumbs up.)`
+				`	(Give him a high five.)`
+					goto fiver
+				`	(Raise your hand in response.)`
+					goto spork
+			`	You give him a thumbs up. Tod looks at you awkwardly. "Didn't they do high five's where you're from?"`
+			label history
+			choice
+				`	"Oh, I remember seeing that in a movie once."`
+				`	"I remember my teacher mentioned that in a lecture about old Earth customs."`
+			`	"Well then, gimme five!" Tod stretches his hand higher up.`
+				goto fiver
+			label spork
+			`	You raise your hand similarly and say, "Live strong in prosperity."`
+			`	Tod looks at you awkwardly. As you start to wonder if you got Mr. Spork's catchphrase wrong, he asks, "Didn't they do high five's where you're from?"`
+				goto history
+			label fiver
+			`	You raise your open hand and Tod smacks your palm with his. Grinning, he lowers his palm and says, "Down low!" Before you can respond, the warning system goes off. A hostile ship is targeting the <ship>!`
+			``
+			scene "ship/battle barge"
+			``
+			`	"Why is a bulk freighter attacking us?" Tod stares at the ship wide eyed.`
+			choice
+				`	"That's no Bulk Freighter!"`
+			``
+			scene "thumbnail/battle barge-thumb"
+			``
+			`	"That's a Battle Barge, a heavy war ship used by pirates in the Dirt Belt." As you finish your explanation, the enemy hails you and a familiar voice speaks.`
+			`	"You thought you done gave me and my boys the slip on Mutiny, did you? You done thought wrong."`
+			`	Closing the communications channel, you get ready to fight when Tod asks, "Can't we just run? We've got enough treasure." Even if you escape, there's no guarantee these pirates will leave Tod alone in the future. Stopping them here is the best course of action.`
+
+	npc
+		government "Pirate"
+		system "Gorvi"
+		personality waiting staying plunders unconstrained heroic
+		fleet
+			names "pirate"
+			cargo 0
+			variant
+				"Outrider (Turbo Blaster)" 2
+	npc
+		to spawn
+			"combat rating" > 500
+		government "Pirate"
+		system "Gorvi"
+		personality waiting staying plunders unconstrained heroic
+		fleet
+			names "pirate"
+			cargo 0
+			variant
+				"Patrolboat (Turbo Blaster)"
+				"Missileboat (Turbo Blaster)"
+	npc
+		to spawn
+			"combat rating" > 800
+			"ships: Heavy Warship" + "ships: Heavy Freighter" + "ships: Utility" + "ships: Superheavy" > 1
+		government "Pirate"
+		system "Gorvi"
+		personality waiting staying plunders unconstrained heroic
+		fleet
+			names "pirate"
+			cargo 0
+			variant
+				"Modified Hauler III (Turbo Blaster)"
+				"Modified Hauler II (Turbo Blaster)"
+				"Modified Hauler (Turbo Blaster)"
+				"Shuttle Pod (Turbo Blaster)" 6
+	npc kill
+		government "Pirate"
+		system "Gorvi"
+		personality target waiting staying plunders timid
+		"cargo settings"
+			cargo 0
+		ship "Battle Barge (Turbo Blaster)" "Hell's Armory"
+		dialog "You've eliminated the pirate flag ship. Hopefully that was enough to deter the rest from chasing Tod. Make sure he gets to <destination> safely!"
+
+	on fail
+		dialog `[MISSION FAILED] You lost track of Tod! If life were a game, you could load a save file and try again.`
+	on complete
+		payment -1000000
+		log "People" "Tod Copper" `The boy you rescued from slavers recalled a secret code that revealed the location of a pirate's treasure.`
+		log `Found a strange key amongst some pirate treasure hidden in the asteroids of Gorvi. I've heard urban legends about three "Skeleton Keys" which unlock pirate treasure. Could this be one of them? Perhaps someday I'll eventually find the treasure it unlocks...`
+		conversation
+			scene "outfit/treasure"
+			`You were able to get in touch with Tod's mother before landing. As the <ship> touched down on the landing pad, Tod wastes no time opening the hatch and running out to greet her. You hand him his share of the treasure, giving them a million credits to make a better life for themselves. Despite the incredible haul, it's not entirely certain that you and Tod found all of the hidden treasure at Gorvi before the pirates interrupted your search. Perhaps it might be worthwhile to visit the system again with an Asteroid Scanner the next time you head north. After bidding them farewell, you stick your hands into your pockets and feel your fingertips brush against a rough hewn object.`
+			choice
+				`	(Study the key.)`
+			scene "outfit/skeleton key"
+			`	The key found in the first crate at Gorvi... You've heard urban legends about three "Skeleton Keys" which unlock pirate treasure. Could this be one of them? Perhaps someday you'll eventually find the treasure it unlocks...`
+
+event "Treasure: Gorvi"
+	system Gorvi
+		add minables treasure 1 3
 
 
 mission "Skeleton Key South 1"
@@ -249,9 +376,9 @@ mission "Skeleton Key South 2"
 			scene "thumbnail/mfalcons"
 			`You've found the <npc>. It is adrift and not responding to hails. You'll have to board it to get answers.`
 	npc board
-		government "Pirate"
+		government "Derelict (Killable)"
 		system "Beta Lupi"
-		personality target waiting derelict marked
+		personality target waiting derelict marked mute
 		ship "Derelict Marauder Falcon" "Deadly Wager"
 		conversation
 			action
@@ -280,13 +407,15 @@ mission "Skeleton Key Core 1"
 		not planet "Shroud"
 	destination "Shroud"
 	to offer
-		has "Pookie, Part 2: done"
+		or
+			has "Pookie, Part 3: declined"
+			has "Pookie, Part 5: declined"
 		has "main plot completed"
 		random < 50 + ( 20 * "skeleton key north" ) + ( 20 * "skeleton key south")
 	on offer
 		conversation
 			scene "outfit/unknown"
-			`While walking through the spaceport you bump into a tall woman in a suit carrying a leash. Her face brightens up upon recognizing you. "I remember you! You're that transportor who took Pookie home that one time! Please, I need your help!" This woman is the "aunt" of Pookie the dog, one of your more memorable passengers.`
+			`While walking through the spaceport you bump into a tall woman in a suit carrying a leash. Her face brightens up upon recognizing you. "I remember you! You're that transporter who took Pookie home that one time! Please, I need your help!" This woman is the "aunt" of Pookie the dog, one of your more memorable passengers.`
 			choice
 				`	"How can I help?"`
 					goto help
@@ -307,7 +436,17 @@ mission "Skeleton Key Core 1"
 			`	"Yes!"`
 			``
 			choice
+				`	"Did this happen recently?"`
+					to display
+						has "Pookie, Part 5: declined"
 				`	"So what do you want me to do about it?"`
+					goto whyme
+			``
+			`	"Just yesterday!" That means Pookie was found sometime after you presented Puny to Pookie's owner.`
+			``
+			choice
+				`	"So what do you want me to do about it?"`
+			label whyme
 			``
 			`	"The kidnappers were on a pirate ship named the <npc>. They fled to the uninhabited systems of the Northern Passage, those empty systems stretching south from Alnitak. I've reported this to the authorities, but they won't devote resources to rescuing a dog. Please help!"`
 			choice
@@ -319,7 +458,13 @@ mission "Skeleton Key Core 1"
 				`	"Alright, I'll track down Pookie."`
 					goto agree
 				`	"Wouldn't it be cheaper to just buy a new dog?"`
+			branch Puny
+				has "Pookie, Part 5: declined"
 			`	"I tried looking, but none of the ones for sale look remotely like Pookie..." That's right, Pookie belongs to a different woman on Hestia. This one was just taking care of her.`
+				goto end
+			label Puny
+			`	"I tried looking, but none of the ones for sale look remotely like Pookie..." That's right, Pookie's owner rejected Puny based on the dog's appearance.`
+			label end
 			choice
 				`	"Alright, I'll track down Pookie."`
 				`	"Sorry, not interested."`
@@ -371,18 +516,18 @@ mission "Skeleton Key Core 2"
 			has "Skeleton Key Core 1: active"
 			has "Skeleton Key Core 1B: done"
 	on offer
-		outfit "Skeleton Key" 1
+		outfit "Skeleton Key"
 		set "skeleton key core"
 		conversation
 			scene "outfit/unknown"
 			`Although most of it is uninhabited frosty wilderness, Stormhold is still a big world. Even if Pookie hasn't been eaten, there's no guarantee you'll be able to find her. As these thoughts go through your head, you find the kennel nearest to the spaceport and try your luck. As you open the door, your senses are assaulted by the smell of dogs kept indoors for too long and a chorus of random barking. Looking at the poor animals in cages, you see no sign of Pookie. It looks like you'll have to try somewhere else. You exit the kennel and begin trudging through the cold to the next one. How many kennels will you have to search through anyway?`
-			`	Before you can dwell on that question for too long, Pookie runs up towards you! It wags its tail and rubs against your leg. You notice there's something in its mouth.`
+			`	Before you can dwell on that question for too long, a dog resembling Pookie runs up towards you! It wags its tail and rubs against your leg. You notice there's something in its mouth.`
 			choice
 				`	"What have you got there?"`
 			scene "outfit/skeleton key"
 			`	It's a human arm, severed at the elbow... It looks half frozen, as if Pookie dug it up from beneath the snow. Gripped in its hand is some sort of key. You've heard urban legends about three "Skeleton Keys" which unlock pirate treasure. Could this be one of them?`
 			``
-			`	As you're thinking about this, Pookie decides to pee on your leg... You quickly pocket the key and put her on the leash. Better get her back to <destination> before she vomits on anything.`
+			`	As you're thinking about this, Pookie decides to pee on your leg... Any doubts you may have had about whether or not this is really Pookie just got washed away. You quickly pocket the key and put her on the leash. Better get her back to <destination> before she vomits on anything.`
 				accept
 	on fail
 		dialog `[MISSION FAILED] You failed to bring Pookie to <planet>. If life were a game, you could load a save file and try again.`
@@ -417,7 +562,7 @@ mission "Skeleton Keys, Three 1"
 		require "Skeleton Key" 3
 		conversation
 			scene "outfit/map"
-			`You have three Skeleton Keys, but are uncertain where to find the treasure they are meant to unseal. It's time you consulted with a former pirate. Joe on <destination> may have more information that could help you.`
+			`You have three Skeleton Keys, but are uncertain where to find the treasure they are meant to unseal. It's time you consulted with a former pirate. While Tod was enslaved by them for a time, Joe on <destination> had more experience and may have more information that could help you.`
 				accept
 	on enter "Fomalhaut"
 		event "midnight: reveal cadrelock rock in eber"
@@ -890,6 +1035,12 @@ mission "Skeletons Declined: Cadrelock Rock Reveal"
 			has "Pookie, Part 1: aborted"
 			has "Pookie, Part 2: failed"
 			has "Pookie, Part 2: aborted"
+			has "Pookie, Part 3: failed"
+			has "Pookie, Part 3: aborted"
+			has "Pookie, Part 4: failed"
+			has "Pookie, Part 4: aborted"
+			has "Pookie, Part 5: failed"
+			has "Pookie, Part 5: aborted"
 			has "Smuggler's Den, Part 1: declined"
 			has "Smuggler's Den, Part 1: failed"
 			has "Smuggler's Den, Part 1: aborted"

@@ -11,11 +11,48 @@
 
 
 
+outfitter "Basic Expansions"
+	"Cargo Expansion"
+	"Outfits Expansion"
+
+outfitter "Lovelace Laboratory"
+	"Twin Particle Cannon"
+	"Particle Burst Turret"
+	"Double Anti-Missile Turret"
+	"Swingfire Missile Launcher"
+	"Swingfire Missile Pod"
+	"Swingfire Missile"
+	"Swingfire Missile Rack"
+
+outfitter "Tarazed Laboratory"
+	"Isochronal Laser"
+	"Isochronal Laser Turret"
+	"Prototype T88-AO Shielding"
+	"QT-800 Nucleovoltaic"
+	"TP036q Battery Pack"
+	"TP072q Battery Pack"
+	"TP144q Battery Pack"
+	"TP288q Battery Pack"
+	"TP576q Battery Pack"
+
+shipyard "Marauder Basics"
+	"Marauder Leviathan"
+	"Marauder Falcon"
+	"Marauder Firebird"
+	"Marauder Raven"
+	"Marauder Quicksilver"
+	"Marauder Arrow"
+	"Marauder Bounder"
+	"Marauder Splinter"
+	"Marauder Manta"
+
+
 shipyard "Dirt Belt Pirates"
 	"Modified Argosy"
 	"Modified Hauler"
 	"Modified Hauler II"
 	"Rancor (Used)"
+	"Scrapper (Mod Blaster)"
 	"Shuttle Pod"
 
 shipyard "Advanced Dirt Belt Pirates"
@@ -36,9 +73,43 @@ outfitter "Basic Turbo Blasters"
 	"Turbo Blaster Turret"
 
 outfitter "Advanced Turbo Blasters"
-	"Quad Turbo Blaster Turret"
+	"Twin Turbo Blaster"
 
+mission "Midnight Add Isochronal Lasers"
+	landing
+	invisible
+	on offer
+		event "midnight add isochronal lasers"
+		fail
 
+event "midnight add isochronal lasers"
+	fleet "Large Southern Merchants"
+		add variant 1
+			"Freighter (Fancy)"
+			"Hawk (Isochronal)"
+		add variant 1
+			"Blackbird (Isochronal)"
+			"Sparrow (Isochronal)" 2
+	fleet "Small Militia"
+		add variant 1
+			"Sparrow (Isochronal)"
+		add variant 1
+			"Hawk (Isochronal)"
+		add variant 1
+			"Osprey (Isochronal)"
+	fleet "Large Militia"
+		add variant 1
+			"Falcon (Isochronal)"
+	fleet "Small Southern Pirates"
+		add variant 1
+			"Sparrow (Isochronal)"
+		add variant 1
+			"Hawk (Isochronal)"
+	fleet "Large Southern Pirates"
+		add variant 1
+			"Osprey (Isochronal)"
+		add variant 1
+			"Falcon (Isochronal)"
 
 mission "Midnight Add Dirt Belt Pirates"
 	landing
@@ -108,23 +179,37 @@ mission "Midnight Add Dirt Belt Pirate Fleets"
 event "midnight add dirt belt pirate fleets"
 
 
-mission "Add Quad Mod Blaster Turrets"
-	landing
+
+mission "Pirate Blaster Outfitter Upgrade"
+	outfitter
 	invisible
 	source
 		attributes "pirate"
 	to offer
 		has "event: war begins"
 	on offer
-		event "add quad mod blaster turrets"
+		event "pirate blaster outfitter upgrade"
 		conversation
 			scene "outfit/quad mod blaster turret"
-			`War brings advancements in weapons technology. You see an outfitter rigging four Modified Blasters onto a turret platform.`
+			`War brings proliferation of weapons technology. You see the outfitter rigging four Modified Blasters onto a turret platform. Pirate outfitters across the galaxy will probably be adding these to their inventory soon.`
 				decline
 
-event "add quad mod blaster turrets"
+event "pirate blaster outfitter upgrade"
 	outfitter "Pirate Outfits"
 		add "Quad Mod Blaster Turret"
+	outfitter "Advanced Turbo Blasters"
+		add "Quad Turbo Blaster Turret"
+
+
+
+mission "Add Quad Mod Blaster Turrets"
+	landing
+	invisible
+	on offer
+		event "add quad mod blaster turrets"
+		fail
+
+event "add quad mod blaster turrets"
 	fleet "pirate raid"
 		add variant 1
 			"Falcon (Quad Mod Blaster)"
@@ -278,6 +363,7 @@ event "add stinger missiles"
 		add "Stinger Missile"
 		add "Stinger Missile Rack"
 		add "Stinger Missile Launcher"
+		add "Stinger Missile Pod"
 	planet Zenith
 		add outfitter "Stinger Missile"
 	planet Freedom
@@ -497,6 +583,17 @@ event "midnight sales update 1"
 		add "Medical Bay"
 
 
+outfitter "Basic Fuel"
+	"Fuel Canister"
+	"Fuel Pod"
+
+outfitter "Advanced Fuel"
+	"Fuel Canister"
+	"Fuel Pod"
+	"Fuel Tank"
+	"Fuel Tank (Reinforced)"
+	"Ramscoop"
+	"Industrial Ramscoop"
 
 mission "Add Navy Outfitter"
 	landing
@@ -506,6 +603,7 @@ mission "Add Navy Outfitter"
 		fail
 
 outfitter "Navy Basics"
+	"Fragmentation Grenades"
 	"Sniper Rifle"
 
 event "outfitter navy basics"
@@ -750,8 +848,6 @@ mission "Pirate Surveillance Pods"
 
 event "pirate surveillance pods"
 	planet "Smuggler's Den"
-		add outfitter "Surveillance Pod"
-	planet "Greenrock"
 		add outfitter "Surveillance Pod"
 
 

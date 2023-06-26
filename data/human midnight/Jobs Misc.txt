@@ -13,6 +13,7 @@
 
 mission "Bounty Hunting: Mother Goose"
 	job
+	deadline 14
 	name "Wanted Bandit near <system>"
 	description "An old Aerie named the Mother Goose and its fighters have been attacking merchants near <system>. Eliminate the fleet, then report to <destination> for payment (<payment>)."
 	source
@@ -24,7 +25,7 @@ mission "Bounty Hunting: Mother Goose"
 	npc kill
 		government "Bounty"
 		system
-			distance 1 2
+			distance 1 1
 		personality target waiting staying plunders harvests
 			confusion 20
 		ship "Aerie (Energy Cannons)" "Mother Goose"
@@ -39,6 +40,7 @@ mission "Bounty Hunting: Mother Goose"
 
 mission "Bounty Hunting: Humpty Dumpty"
 	job
+	deadline 14
 	name "Wanted Bandit near <system>"
 	description "An old Hauler named the <npc> has been attacking merchants near <system>. Eliminate the ship, then report to <destination> for payment (<payment>)."
 	source
@@ -50,7 +52,7 @@ mission "Bounty Hunting: Humpty Dumpty"
 	npc kill
 		government "Bounty"
 		system
-			distance 1 2
+			distance 1 1
 		personality target waiting staying plunders harvests
 			confusion 20
 		ship "Hauler (Energy Cannons)" "Humpty Dumpty"
@@ -63,6 +65,7 @@ mission "Bounty Hunting: Humpty Dumpty"
 
 mission "Bounty Hunting: Jabberwocky"
 	job
+	deadline 14
 	name "Wanted Bandit near <system>"
 	description "A Modified Aerie named the <npc> has been attacking merchants near <system>. Eliminate the ship, then report to <destination> for payment (<payment>)."
 	source
@@ -74,7 +77,7 @@ mission "Bounty Hunting: Jabberwocky"
 	npc kill
 		government "Bounty"
 		system
-			distance 1 2
+			distance 1 1
 		personality target waiting staying plunders harvests
 			confusion 20
 		ship "Modified Aerie" "Jabberwocky"
@@ -234,8 +237,8 @@ mission "Engineering Room: Prototype Test 3"
 outfit "Prototype Shield Modulator SD-DSD"
 	category "Systems"
 	thumbnail "outfit/unknown"
-	"shield delay" 800
-	"depleted shield delay" 800
+	"shield delay" 600
+	"depleted shield delay" 600
 	description "This prototype isn't working as intended..."
 
 mission "Engineering Room: Prototype Test 4"
@@ -430,7 +433,7 @@ mission "Executive Guard: Syndicated Systems"
 		personality waiting staying heroic
 		ship "Executive Guard" "S.S. Magnus"
 		conversation
-			apply
+			action
 				"reputation: Syndicate" <?= -1000
 			scene "outfit/brig"		
 			`You've captured the CEO of Syndicated Systems! Return to <destination> where he'll be held for ransom.`
@@ -522,7 +525,7 @@ mission "Executive Guard: Syndicated Shipyards"
 		personality waiting staying heroic
 		ship "Executive Guard" "S.S. Decimus"
 		conversation
-			apply
+			action
 				"reputation: Syndicate" <?= -1000
 			scene "outfit/brig"		
 			`You've captured the CEO of Syndicated Shipyards! Return to <destination> where he'll be held for ransom.`
@@ -545,6 +548,7 @@ phrase "Cupid's Arrow"
 
 mission "Holiday: Cupid's Arrow"
 	job
+	deadline 14
 	name "Cupid's Arrow"
 	description "Chocolate deliveries are being raided by a pirate ship known as Cupid's Arrow near <system>. Destroy the ship then return to <planet> for payment (<payment>)."
 	source
@@ -553,11 +557,11 @@ mission "Holiday: Cupid's Arrow"
 		not attributes "station"
 	to offer
 		month == 2
-		day == 14
+		day < 14
 	npc kill
 		government "Bounty (Disguised)"
 		system
-			distance 1 2
+			distance 1 1
 		personality target waiting staying uninterested
 		fleet
 			names "Cupid's Arrow"
@@ -596,7 +600,7 @@ mission "Holiday: Saint Nick"
 		not attributes "station"
 	to offer
 		month == 12
-		random < 30 - "day"
+		random < 31 - "day"
 	npc
 		government "Pirate"
 		system destination
@@ -626,7 +630,7 @@ mission "Holiday: Saint Nick"
 		ship "Bactrian" "Bad Santa"
 		ship "Dagger" "Snow Devil"
 		ship "Dagger" "Jack Frost"
-		ship "Dagger" "Bad Eggnog"
+		ship "Dagger" "Rotten Eggnog"
 	npc accompany save
 		government "Merchant"
 		personality target escort pacifist
@@ -654,9 +658,10 @@ mission "Bounty Hunting (Secret Prototype)"
 	description "A heavy warship known as the <npc> has stolen a secret prototype near the <system> system. Recover the cargo and return it to <planet> for payment (<payment>)"
 	repeat
 	job
+	deadline 14
 	to offer
 		"combat rating" > 1000
-		random < 10
+		random < 5
 	source
 		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
 		attributes "rim" "south" "north" "dirt belt" "core" "frontier"
@@ -664,7 +669,7 @@ mission "Bounty Hunting (Secret Prototype)"
 		government "Bounty (Disguised)"
 		personality heroic staying marked target
 		system
-			distance 2 3
+			distance 1 1
 		fleet
 			names "pirate"
 			cargo 3
@@ -1058,7 +1063,7 @@ mission "Militia: Joint Operations (Sparrow)"
 			distance 2
 		personality escort heroic
 		fleet
-			names "militia"
+			names "militia small"
 			variant
 				"Sparrow" 5
 		conversation
@@ -1105,7 +1110,7 @@ mission "Militia: Joint Operations (Hawk)"
 			distance 2
 		personality escort heroic
 		fleet
-			names "militia"
+			names "militia small"
 			variant
 				"Hawk (Speedy)"
 				"Hawk (Rocket)" 2
@@ -1154,7 +1159,7 @@ mission "Militia: Joint Operations (Fury)"
 			distance 2
 		personality escort heroic
 		fleet
-			names "militia"
+			names "militia small"
 			variant
 				"Fury"
 				"Fury (Laser)"
@@ -1204,7 +1209,7 @@ mission "Militia: Joint Operations (Argosy)"
 			distance 2
 		personality escort heroic
 		fleet
-			names "militia"
+			names "militia small"
 			variant
 				"Argosy"
 			variant
@@ -1259,7 +1264,7 @@ mission "Militia: Joint Operations (Osprey)"
 			distance 2
 		personality escort heroic
 		fleet
-			names "militia"
+			names "militia capital"
 			variant
 				"Osprey"
 			variant
@@ -1310,7 +1315,7 @@ mission "Militia: Joint Operations (Bastion)"
 			distance 2
 		personality escort heroic
 		fleet
-			names "militia"
+			names "militia capital"
 			variant
 				"Bastion"
 			variant
@@ -1361,7 +1366,7 @@ mission "Militia: Joint Operations (Falcon)"
 			distance 2
 		personality escort heroic
 		fleet
-			names "militia"
+			names "militia capital"
 			variant
 				"Falcon"
 			variant
@@ -1589,6 +1594,7 @@ mission "Mining: Platinum"
 
 mission "Navy: Captured Ship"
 	job
+	deadline 30
 	repeat
 	name "Captured Navy"
 	description "Search for a stolen Navy ship, the <npc>, near the northern pirate systems. Destroy it, then report to <destination> for payment (<payment>)."
@@ -1620,6 +1626,7 @@ mission "Navy: Captured Ship"
 mission "Raider Bounty"
 	job
 	repeat
+	deadline 14
 	name "Alien Raider near <system>"
 	description "An alien ship has been attacking merchants near <system>. Destroy the ship then return to <planet> for payment [<payment>]."
 	source
@@ -1633,7 +1640,7 @@ mission "Raider Bounty"
 	npc kill
 		government "Korath"
 		system
-			distance 1 2
+			distance 1 1
 		personality target waiting staying plunders
 		fleet
 			names "pirate"
@@ -1751,20 +1758,24 @@ mission "Star Explorer: Missing Science Vessel"
 	description "The science vessel <npc> was last seen on an expedition heading to <waypoints>. It has not been seen since. Locate and rescue the vessel. Then return it safely to <destination> for <payment>."
 	job
 	repeat
+	deadline 60
 	to offer
 		random < 1
 		"combat rating" > 100
 	source
-		government "Republic" "Free Worlds" "Syndicate"
+		government "Republic" "Syndicate"
 		attributes "research"
-	waypoint
-		government "Pirate"
-		neighbor distance 6 50
+	waypoint Durax
 	on accept
 		clear "star explorer pirate raid activated"
 	on waypoint
 		set "star explorer pirate raid activated"
 		dialog "You've located the <npc>! Help them repair their ship, then return them safely to <planet>."
+	npc
+		government "Pirate"
+		system Atik
+		personality nemesis waiting staying plunders
+		fleet "pirate raid"
 	npc
 		to spawn
 			has "star explorer pirate raid activated"
@@ -1777,9 +1788,10 @@ mission "Star Explorer: Missing Science Vessel"
 		government "Pirate"
 		personality nemesis waiting plunders
 		system destination
-		fleet "pirate raid" 3
+		fleet "pirate raid"
 	npc assist accompany save
 		government "Merchant"
+		system Atik
 		personality target derelict timid
 		fleet
 			names "intellectuals"
@@ -1988,7 +2000,7 @@ mission "Rescue: Sabotaged Ship (Free Worlds)"
 		system "Lesath"
 		personality target waiting derelict
 		fleet
-			names "militia"
+			names "militia capital"
 			cargo 0
 			variant
 				"Dreadnought (Sabotaged)"

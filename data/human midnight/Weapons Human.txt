@@ -65,7 +65,6 @@ outfit "Asteroid Catapult"
 		"firing energy" 710
 		"firing force" 90
 		"firing heat" 160
-		"turn" 1
 		"shield damage" 4000
 		"hull damage" 7000
 		"piercing" .5
@@ -81,6 +80,28 @@ outfit "Asteroid Deterioration"
 		"lifetime" 100
 		"shield damage" 2000
 		"hull damage" 3500
+
+
+
+outfit "Double Anti-Missile Turret"
+	category "Turrets"
+	cost 130000
+	thumbnail "outfit/anti-missile double"
+	"mass" 23
+	"outfit space" -23
+	"weapon capacity" -23
+	"turret mounts" -1
+	weapon
+		"hardpoint sprite" "hardpoint/anti-missile double"
+		"hardpoint offset" 4.
+		"hit effect" "small anti-missile"
+		"anti-missile" 5
+		"velocity" 150
+		"lifetime" 1
+		"reload" 4
+		"firing energy" 5
+		"firing heat" 3
+	description "The Double Anti-Missile Turret fills the role of a medium weight anti-missile weapon. Its high rate of fire makes it an ideal choice for thinning out missile swarms."
 
 
 
@@ -179,9 +200,9 @@ outfit "Inferno Rocket Launcher"
 	category "Secondary Weapons"
 	cost 40000
 	thumbnail "outfit/inferno rocket launcher"
-	"mass" 10
-	"outfit space" -20
-	"weapon capacity" -20
+	"mass" 15
+	"outfit space" -25
+	"weapon capacity" -25
 	"gun ports" -1
 	"inferno rocket capacity" 20
 	weapon
@@ -196,21 +217,22 @@ outfit "Inferno Rocket Launcher"
 		"hit effect" "inferno rocket burn small" 20
 		"die effect" "medium explosion"
 		"inaccuracy" 1
-		"velocity" 8
+		"velocity" 0
+		"velocity override" 8
 		"lifetime" 125
 		"reload" 240
 		"firing energy" 1
 		"firing heat" 250
-		"acceleration" .8
-		"drag" .1
+		"acceleration" .2
+		"drag" .025
 		"trigger radius" 20
 		"blast radius" 50
 		"shield damage" 192
 		"hull damage" 168
 		"hit force" 60
 		"missile strength" 8
-		"heat damage" 42000
-		"burn damage" 60
+		"heat damage" 24000
+		"burn damage" 240
 	description "A weapon secretly developed through cooperation between different pirate factions, Inferno Rockets splatter their targets with a highly flammable substance."
 
 outfit "Inferno Rocket Pod"
@@ -234,24 +256,25 @@ outfit "Inferno Rocket Pod"
 		"hit effect" "inferno rocket burn small" 20
 		"die effect" "medium explosion"
 		"inaccuracy" 1
-		"velocity" 8
+		"velocity" 0
+		"velocity override" 8
 		"lifetime" 125
 		"reload" 500
-		"range override" 500
+		"range override" 1000
 		"burst count" 2
 		"burst reload" 240
 		"firing energy" 1
 		"firing heat" 250
-		"acceleration" .8
-		"drag" .1
+		"acceleration" .2
+		"drag" .025
 		"trigger radius" 20
 		"blast radius" 50
 		"shield damage" 192
 		"hull damage" 168
 		"hit force" 60
 		"missile strength" 8
-		"heat damage" 42000
-		"burn damage" 60
+		"heat damage" 24000
+		"burn damage" 240
 	description "A weapon secretly developed through cooperation between different pirate factions, Inferno Rockets splatter their targets with a highly flammable substance."
 	description "	Pods enable fighters and other light craft to carry small quantities of rockets into battle while retaining enough space for other weapons. Large ships are better off with full-size launchers."
 
@@ -299,6 +322,138 @@ effect "inferno rocket burn small"
 	"random spin" 5
 	"random velocity" .1
 	"velocity scale" .05
+
+
+
+outfit "Isochronal Laser"
+	category "Guns"
+	cost 60000
+	thumbnail "outfit/isochronal laser"
+	"mass" 11
+	"outfit space" -11
+	"weapon capacity" -11
+	"gun ports" -1
+	weapon
+		sprite "projectile/isochronal laser"
+			"frame rate" 1
+		sound "modified heavy_laser-ver8"
+		"hit effect" "isochronal impact"
+		"inaccuracy" .4
+		"velocity" 350
+		"lifetime" 1
+		"reload" 2
+		"firing energy" 1.995
+		"firing heat" 4.2
+		"shield damage" 2.55
+		"hull damage" 3.6
+	description "The Isochronal Laser was a failed attempt by Tarazed to recreate the Skylances installed on Quarg ships. While their engineers managed to create a powerful beam, they were unable to keep it stable."
+	description "	These were never adopted for widespread use and Tarazed was eventually forced to stop production of them due to poor sales. Ships in the South can sometimes be found with these rare weapons installed. However the vast majority of Isochronal Lasers are still held by Tarazed itself."
+
+outfit "Isochronal Laser Turret"
+	category "Turrets"
+	cost 320000
+	thumbnail "outfit/isochronal laser turret"
+	"mass" 31
+	"outfit space" -31
+	"weapon capacity" -31
+	"turret mounts" -1
+	"required crew" 1
+	weapon
+		sprite "projectile/2x isochronal laser"
+			"frame rate" 1
+		"hardpoint sprite" "hardpoint/heavy laser turret"
+		"hardpoint offset" 8.
+		sound "modified heavy_laser-ver8"
+		"hit effect" "isochronal impact"
+		"inaccuracy" .4
+		"turret turn" 3.1
+		"velocity" 350
+		"lifetime" 1
+		"reload" 2
+		"firing energy" 3.99
+		"firing heat" 8.4
+		"shield damage" 5.1
+		"hull damage" 7.2
+	description "The Isochronal Laser was a failed attempt by Tarazed to recreate the Skylances installed on Quarg ships. While their engineers managed to create a powerful beam, they were unable to keep it stable."
+	description "	This turreted version of the Isochronal Laser appeals to a very niche market of pilots who want an upgrade to Deep Sky's Laser Turret, but lack the space for Heavy Lasers on their ships."
+
+effect "isochronal impact"
+	sprite "effect/isochronal impact"
+		"no repeat"
+		"frame rate" 30
+	"lifetime" 5
+	"random angle" 2
+	"random spin" 1
+	"random velocity" 1
+	"velocity scale" -.007
+
+
+
+outfit "Twin Particle Cannon"
+	category "Guns"
+	cost 530000
+	thumbnail "outfit/particle cannon"
+	"mass" 64
+	"outfit space" -64
+	"weapon capacity" -64
+	"gun ports" -1
+	weapon
+		sound "particle"
+		"submunition" "Particle Submunition"
+			"offset" 1 0
+		"submunition" "Particle Submunition"
+			"offset" -1 0
+		"hit effect" "particle impact" 2
+		"inaccuracy" .5
+		"lifetime" 0
+		"velocity override" 30
+		"range override" 750
+		"reload" 20
+		"firing energy" 70
+		"firing force" 20
+		"firing heat" 240
+	description "Both barrels of the Twin Particle Cannon fire similtaneously, releasing double the force of a single Particle Cannon all at once. The size of this weapon is its main drawback, as few ships can accomodate it. While this product is fully functional, the sales department has raised concerns about its viability in the marketplace."
+
+outfit "Particle Submunition"
+	weapon
+		sprite "projectile/particle beam"
+		"hit effect" "particle impact"
+		"velocity" 30
+		"lifetime" 25
+		"hit force" 80
+		"shield damage" 65
+		"hull damage" 62
+
+outfit "Particle Burst Turret"
+	category "Turrets"
+	cost 330000
+	thumbnail "outfit/particle burst turret"
+	"mass" 45
+	"outfit space" -45
+	"weapon capacity" -45
+	"turret mounts" -1
+	"required crew" 1
+	weapon
+		sprite "projectile/particle beam"
+		"hardpoint sprite" "hardpoint/particle burst turret"
+		"hardpoint offset" 14.
+		sound "particle"
+		"hit effect" "particle impact"
+		"inaccuracy" .5
+		"turret turn" 0.6
+		"velocity" 30
+		"lifetime" 25
+		"reload" 26
+		"burst count" 3
+		"burst reload" 20
+		"firing energy" 35
+		"firing force" 10
+		"firing heat" 120
+		"hit force" 80
+		"shield damage" 65
+		"hull damage" 62
+	description "One of the most frequent product requests submitted to Lovelace Labs is for a turreted version of the Particle Cannon. While none have made it past the prototype testing phase before, this version looks promising. A major issue in previous designs was jamming in the turret turning mechanism due to the stress of the firing recoil. In addition to reinforcing the turret mount, the Particle Burst Turret limits the rate of fire to a three shot burst. While lab results have been satisfactory so far, actual field testing is required to determine if this approach has fully eliminated the turret turning issue."
+	description "This weapon is still in development at Lovelace Labs and is unavailable to the general public. A few lucky pilots with connections within the company have been given access to prototypes for field testing."
 
 
 
@@ -403,7 +558,7 @@ outfit "Silencer Beam"
 		"hull damage" 1
 		"disabled damage" 0.7
 	description "A specialized weapon used by Republic Intelligence operatives, the Silencer Beam is optimized for disabling ships instead of destroying them. This comes at the cost of increased heat accumulation."
-	description "Its name refers to how the weapon produces less sound compared to a regular Beam Laser."
+	description "	Its name refers to how the weapon produces less sound compared to a regular Beam Laser."
 
 effect "silencer beam impact"
 	sprite "effect/silencer impact"
@@ -440,9 +595,9 @@ outfit "Stinger Missile Launcher"
 	category "Secondary Weapons"
 	cost 30000
 	thumbnail "outfit/stinger launcher"
-	"mass" 10
-	"outfit space" -20
-	"weapon capacity" -20
+	"mass" 15
+	"outfit space" -25
+	"weapon capacity" -25
 	"gun ports" -1
 	"stinger capacity" 30
 	weapon
@@ -455,21 +610,23 @@ outfit "Stinger Missile Launcher"
 		"die effect" "glow blood" 3
 		"hit effect" "stinger splatter" 5
 		"inaccuracy" 5
-		"velocity" 8
+		"velocity" 0
+		"velocity override" 14
 		"lifetime" 350
+		"range override" 4900
 		"reload" 120
 		"firing energy" 1
 		"firing heat" 20
-		"acceleration" .8
-		"drag" .1
-		"turn" 1.8
+		"acceleration" .3
+		"drag" .021
+		"turn" 2
 		"homing" 1
 		"radar tracking" .65
 		"shield damage" 30
-		"discharge damage" 6.9
-		"hull damage" 50
-		"corrosion damage" 8.0
-		"hit force" 50
+		"discharge damage" 8.7
+		"hull damage" 60
+		"corrosion damage" 10
+		"hit force" 60
 		"missile strength" 6
 	description "The use of hazardous waste as a weapon has long been a popular tactic among anarchists and terrorists. Stinger Missiles are one example of this. Devoloped during the early turf wars, the materials to make them are readily available and there is no shortage of suppliers."
 	description "	After splattering the target with its dangerous payload, the residue will continue to drain the shields or corrode the hull for some time after the initial impact."
@@ -493,23 +650,25 @@ outfit "Stinger Missile Pod"
 		"die effect" "glow blood" 3
 		"hit effect" "stinger splatter" 5
 		"inaccuracy" 5
-		"velocity" 8
+		"velocity" 0
+		"velocity override" 14
 		"lifetime" 350
+		"range override" 4900
 		"reload" 250
 		"burst count" 7
 		"burst reload" 120
 		"firing energy" 1
 		"firing heat" 20
-		"acceleration" .8
-		"drag" .1
-		"turn" 1.8
+		"acceleration" .3
+		"drag" .021
+		"turn" 2
 		"homing" 1
 		"radar tracking" .65
 		"shield damage" 30
-		"discharge damage" 6.9
-		"hull damage" 50
-		"corrosion damage" 8.0
-		"hit force" 50
+		"discharge damage" 8.7
+		"hull damage" 60
+		"corrosion damage" 10
+		"hit force" 60
 		"missile strength" 6
 	description "The use of hazardous waste as a weapon has long been a popular tactic among anarchists and terrorists. Stinger Missiles are one example of this. Devoloped during the early turf wars, the materials to make them are readily available and there is no shortage of suppliers."
 	description "	After splattering the target with its dangerous payload, the residue will continue to drain the shields or corrode the hull for some time after the initial impact."
@@ -520,13 +679,125 @@ effect "stinger splatter"
 		"no repeat"
 		"frame rate" 10
 		"random start frame"
-	sound "splatter"
+	sound "medium_explosion-ver8"
 	"lifetime" 61
 	"random angle" 20
 	"random velocity" 1
 	"random spin" 5
 	"velocity scale" .01
 
+
+
+outfit "Swingfire Missile"
+	category "Ammunition"
+	cost 990
+	thumbnail "outfit/swingfire"
+	"mass" .2
+	"swingfire capacity" -1
+	description "The Swingfire Missile is ammunition for the Swingfire Missile Launcher; each launcher that you have installed can be armed with up to 34 of them, while pods can carry 3. You cannot install a missile without a pod or launcher to fire it from."
+
+outfit "Swingfire Missile Rack"
+	category "Ammunition"
+	cost 22000
+	thumbnail "outfit/swingfire storage"
+	"mass" 2.4
+	"outfit space" -7
+	"swingfire capacity" 17
+	ammo "Swingfire Missile"
+	description "The Swingfire Missile Rack is used to store extra ammunition for Swingfire Missile Launchers."
+
+outfit "Swingfire Missile Launcher"
+	category "Secondary Weapons"
+	cost 66000
+	thumbnail "outfit/swingfire launcher"
+	"mass" 11
+	"outfit space" -20
+	"weapon capacity" -20
+	"gun ports" -1
+	"swingfire capacity" 34
+	weapon
+		sprite "projectile/swingfire"
+			"no repeat"
+			"frame rate" .25
+		sound "swingfire"
+		ammo "Swingfire Missile"
+		icon "icon/swingfire"
+		"fire effect" "sidewinder fire"
+		"die effect" "missile death"
+		"hit effect" "missile hit"
+		"inaccuracy" 4
+		"velocity" 0
+		"velocity override" 14
+		"lifetime" 35
+		"reload" 60
+		"firing energy" 1
+		"firing heat" 15
+		"acceleration" .2
+		"drag" .025
+		"turn" 4.5
+		"homing" 4
+		"radar tracking" .9
+		"submunition" "Swingfire Locked"
+		"missile strength" 14
+	description "An upgrade from Lovelace Labs popular Sidewinders, the Swingfire Missile is equipped with additional maneuvering thrusters and an enhanced targeting system. After being launched, it will recalculate a target's trajectory relative to its original position before activating its main rocket to pursue it. This increases the missile's accuracy while extending its range."
+
+outfit "Swingfire Missile Pod"
+	category "Secondary Weapons"
+	cost 22000
+	thumbnail "outfit/swingfire pod"
+	"mass" 2
+	"outfit space" -4
+	"weapon capacity" -4
+	"gun ports" -1
+	"swingfire capacity" 3
+	weapon
+		sprite "projectile/swingfire"
+			"no repeat"
+			"frame rate" .25
+		sound "swingfire"
+		ammo "Swingfire Missile"
+		icon "icon/swingfire"
+		"fire effect" "sidewinder fire"
+		"die effect" "missile death"
+		"hit effect" "missile hit"
+		"inaccuracy" 4
+		"velocity" 0
+		"velocity override" 14
+		"lifetime" 35
+		"reload" 150
+		"burst count" 4
+		"burst reload" 60
+		"firing energy" 1
+		"firing heat" 15
+		"acceleration" .2
+		"drag" .025
+		"turn" 4.5
+		"homing" 4
+		"radar tracking" .9
+		"submunition" "Swingfire Locked"
+		"missile strength" 14
+	description "An upgrade from Lovelace Labs popular Sidewinders, the Swingfire Missile is equipped with additional maneuvering thrusters and an enhanced targeting system. After being launched, it will recalculate a target's trajectory relative to its original position before activating its main rocket to pursue it. This increases the missile's accuracy while extending its range."
+	description "	Pods enable fighters and other light craft to carry small quantities of missiles into battle while retaining enough space for other weapons. Large ships are better off with full-size launchers."
+
+outfit "Swingfire Locked"
+	weapon
+		sprite "projectile/swingfire locked"
+			"no repeat"
+			"frame rate" .25
+		"die effect" "missile death"
+		"hit effect" "missile hit"
+		"inaccuracy" 2
+		"velocity" .3
+		"lifetime" 350
+		"acceleration" .3
+		"drag" .021
+		"turn" 4
+		"homing" 4
+		"radar tracking" .9
+		"shield damage" 286
+		"hull damage" 198
+		"hit force" 187
+		"missile strength" 13
 
 
 
@@ -586,8 +857,44 @@ outfit "Turbo Blaster"
 		"firing heat" 25.2
 		"shield damage" 13.2
 		"hull damage" 8.8
-	description "A new form of Modified Energy Blaster, the Turbo Blaster has been further modified to increase its rate of fire. The result is an incredibly powerful blaster weapon. The heat from this weapon can accumulate quickly, especially when used in multiples."
+	description "A new form of Modified Energy Blaster, the Turbo Blaster has been further modified to increase its rate of fire. The result is an incredibly powerful weapon. The heat from this blaster can accumulate quickly, especially when used in multiples."
 	description "	These weapons first appeared on pirate ships in the Dirt Belt and may hint at hidden pirate bases in the area."
+
+outfit "Twin Turbo Blaster"
+	category "Guns"
+	cost 135000
+	thumbnail "outfit/twin turbo blaster"
+	"mass" 16
+	"outfit space" -16
+	"weapon capacity" -16
+	"gun ports" -1
+	weapon
+		sound "mod_blaster-ver8"
+		"submunition" "Twin Turbo Blaster Submunition"
+			"offset" 1 0
+			"facing" 0.45
+		"submunition" "Twin Turbo Blaster Submunition"
+			"offset" -1 0
+			"facing" -0.45
+		"hit effect" "turbo blaster impact" 2
+		"inaccuracy" 4
+		"lifetime" 0
+		"velocity override" 9.375
+		"range override" 450
+		"reload" 8
+		"firing energy" 13
+		"firing heat" 50.4
+	description "The Twin Turbo Blaster's high rate of fire is capable of launching four projectiles before other twin blasters can fire their second volley. The heat generated from firing both barrels at once is considerable."
+	description "	These weapons first appeared on pirate ships in the Dirt Belt and may hint at hidden pirate bases in the area."
+
+outfit "Twin Turbo Blaster Submunition"
+	weapon
+		sprite "projectile/turbo blaster"
+		"hit effect" "turbo blaster impact"
+		"velocity" 9.375
+		"lifetime" 48
+		"shield damage" 13.2
+		"hull damage" 8.8
 
 outfit "Turbo Blaster Turret"
 	category "Turrets"
@@ -613,7 +920,7 @@ outfit "Turbo Blaster Turret"
 		"firing heat" 25.2
 		"shield damage" 13.2
 		"hull damage" 8.8
-	description "This is a turreted version of the Turbo Blaster, which is a Modified Energy Blaster enhanced with an increased rate of fire. The twin blasters provide double the fire power of a single Turbo Blaster."
+	description "This is a turreted version of the Turbo Blaster, which is a Modified Energy Blaster enhanced with an increased rate of fire. These mounted blasters can cover a 360 degree arc with double the fire power of a single Turbo Blaster."
 	description "	These weapons first appeared on pirate ships in the Dirt Belt and may hint at hidden pirate bases in the area."
 
 outfit "Quad Turbo Blaster Turret"
@@ -678,3 +985,58 @@ outfit "Quad Mod Blaster Turret"
 		"shield damage" 13.2
 		"hull damage" 8.8
 	description "Four Modified Blasters mounted on a turret base provide double the firepower of a regular Modified Blaster Turret, but also double the heat generated and energy consumed."
+
+
+
+outfit "Twin Torpedo Pod"
+	category "Secondary Weapons"
+	cost 30000
+	thumbnail "outfit/twintorpedopod"
+	"mass" 12
+	"outfit space" -18
+	"weapon capacity" -18
+	"gun ports" -1
+	"torpedo capacity" 6
+	weapon
+		sound "torpedo"
+		"submunition" "Torpedo Submunition"
+			"offset" 1 0
+			"facing" 0.45
+		"submunition" "Torpedo Submunition"
+			"offset" -1 0
+			"facing" 0.45
+		ammo "Torpedo" 2
+		icon "icon/twin torpedo"
+		"fire effect" "torpedo fire" 2
+		"hit effect" "torpedo hit" 2
+		"inaccuracy" 5
+		"lifetime" 0
+		"velocity override" 7
+		"range override" 6300
+		"reload" 320
+		"burst count" 3
+		"burst reload" 150
+		"firing energy" 4
+		"firing heat" 90
+		"missile strength" 30
+	description "Torpedoes are the most powerful homing weapon, but they move slowly enough that fast ships can simply outrun them, making them most useful against large targets or against small ships at times when they are too distracted to dodge."
+	description "	At first glance this looks like a regular Torpedo Launcher. But a closer inspection reveals that these are a pair of Torpedo Pods jury rigged to be crammed into a single gunport. Both are programmed to fire simultaneously, launching a pair of Torpedos when fired. This weapon won't fire if enough ammunition for both pods isn't installed."
+
+outfit "Torpedo Submunition"
+	weapon
+		sprite "projectile/torpedo"
+			"frame rate" 2
+			"random start frame"
+		"hit effect" "torpedo hit"
+		"die effect" "tiny explosion"
+		"velocity" 0
+		"lifetime" 900
+		"acceleration" .1
+		"drag" .015
+		"turn" 1.5
+		"homing" 3
+		"optical tracking" .8
+		"shield damage" 820
+		"hull damage" 820
+		"hit force" 300
+		"missile strength" 30

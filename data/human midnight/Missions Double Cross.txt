@@ -861,23 +861,44 @@ mission "Peace Tour 2"
 			`A package was left for you by a client. You open it to find a nasty surprise: a nuclear warhead with a countdown timer!`
 			choice
 				`	(Run.)`
-					goto explode
 				`	(Try to disarm it.)`
+					goto trydisarm
+					to display
+						not "learned nuke deactivation"
+				`	(Try to deactivate it.)`
+					goto trydeactivate
+					to display
+						has "learned nuke deactivation"
+			scene "scene/scene-explosion"
+			`	Despite your best efforts, there is no escaping the explosion.`
+				die
+
+			label trydisarm
 			branch disarm
 				random < 20
 				
 			scene "scene/scene-explosion"
-			`	Despite your effort, you were unable to disarm the warhead before it explodes. If life were a game, you could load a save file and try disarming it again.`
+			`	Despite your effort, you were unable to disarm the warhead before it explodes. If life were a game, you could load a save file and try disarming it again. You might have had better success if you learned how these devices work.`
 				die
 
 			label disarm
-			`	Somehow, you managed to safely disarm a nuclear warhead!`
+			`	Somehow, you managed to safely disarm a nuclear warhead! You hand over the disarmed warhead over to the authorities and explain what happened.`
 				goto end
-			
-			label explode
+
+			label trydeactivate
+			`	Recalling what you previously learned about nuke activation settings, you pop open a panel and see the activation code is set at "6-6-6". Enter the deactivation code. It is:`
+			choice
+				`	(0-0-0)`
+				`	(1-2-3)`
+				`	(2-3-4)`
+					goto deactivate
+				`	(3-4-5)`
 			scene "scene/scene-explosion"
-			`	Despite your best efforts, there is no escaping the explosion.`
+			`	Unfortunately, you must have remembered the deactivation code incorrectly. You barely have time to register this as you are instantly vaporized in the nuclear blast. If this were a game, you could load a save file and search your logbook for a clue.`
 				die
+
+			label deactivate
+			`	Fortunately, you correctly remembered the deactivation code. You hand over the disarmed warhead over to the authorities and explain what happened.`
 
 			label end
 			scene "portrait/human59"
@@ -998,39 +1019,83 @@ mission "Midnight Market: Nukes of Peace?"
 				
 			`	Fortunately you are armed and manage to fight off your attackers. With nothing better to do, you decide to check out some of those shops on the long walk back to the spaceport.`
 				defer
-				
+
 			label death
 			scene "scene/scene-bloodyknife"
-			`	Sudden pain pierces your back! You turn to see one of your attackers holding a knife covered with your blood. The rest of them close in to finish you off...`
+			`	Before you can draw your weapon, sudden pain pierces your back! You turn to see one of your attackers holding a knife covered with your blood. The rest of them close in to finish you off...`
 				die
-			
+
 			label legitimate
 			scene "outfit/nuke"
 			`	After a long walk you arrive at what looks like an abandoned store. The doors and windows are boarded up. Despite this, you notice someone move to hide behind a curtain on the upper floor. The stranger leads you to a side entrance. Inside are a pair of massive crates. The stranger opens one, saying "Behold! Nuclear missiles, a powerful addition to your arsenal. Just confirm payment of 2,000,000 credits on this datapad and they're yours."`
+			label nukechoice
 			choice
+				`	(Show me how they work.)`
+					goto show
+					to display
+						not "learned nuke deactivation"
 				`	(Buy the Nuclear Missiles.)`
 					goto purchase
 				`	(Don't buy the Nuclear Missiles.)`
 					goto refuse
 				`	(Steal the Nuclear Missiles.)`
 			`	You pull out your gun and tell the stranger you'll be taking the missiles for free.`
+
 			branch thief
 				random < 20
 			scene "scene/scene-bloodyknife"
 			`	The room explodes in a burst of violence as guards suddenly swarm in from other rooms in the building. You manage to put several down before one of them gets lucky with a knife. Your hands become slick with blood as you grasp at the wound. The surviving guards put a bullet into your head.`
 				die
-			
+
 			label thief
 			`	The room explodes in a burst of violence as guards suddenly swarm in from other rooms in the building. Though you expend all of your bullets in the fire fight, you miraculously come out of that bloodbath unharmed. A search of the building reveals several more crates in a hidden underground bunker. You begin the arduous task of hauling them back to your ship.`
 				decline
-			
+
 			label refuse
+			action
+				"Midnight Market" --
 			`	The stranger puts away the datapad while some guards enter from adjoining rooms. "It appears our negotiations have failed. Please find your own way back to the spaceport." You begin the long walk back. Maybe you can grab something to eat from one of the shops you passed earlier...`
 				defer
-			
+
 			label purchase
 			`	"Good choice captain. We'll help haul them back to your ship." Several burly men appear from other rooms in the building and help load the crates into a truck. The ride back is smooth and uneventful.`
 				accept
+
+			label show
+			`	The seller opens a panel on the missile's side. "Have you read the Bible?"`
+			choice
+				`	"I know it."`
+				`	"Never read it."`
+					goto nobible
+			`	Inside the panel are a set of controls for entering three digits. "The factory default is all zeroes. Activation is the number of the beast." The stranger sets all three digits to "6-6-6". A mechanism within the missile activates and you can hear a low hum that slowly fades away. "Deactivation is a walk through the valley of the shadow of death. Go ahead."`
+			choice
+				`	(Set the digits to 1-2-3.)`
+				`	(Set the digits to 2-3-4.)`
+					goto psalm
+				`	(Set the digits to 3-4-5.)`
+				`	"I, uh, don't remember reading that part..."`
+					goto notread
+			scene "scene/scene-explosion"
+			`	"What are you doing!?!" The stranger shrieks as you are all vaporized in a nuclear blast..."`
+				die
+			label notread
+			action
+				set "learned nuke deactivation"
+				log `Today I learned the activation code for a Nuclear Missile is the number of the beast and deactivation code is "2-3-4". The latter is supposedly inspired by Psalm 23:4 from the Bible.`
+			`	The stranger reaches over and sets the digits to "2-3-4". Closing the panel, the stranger say, "Psalm twenty three four. Well?"`
+				goto nukechoice
+			label psalm
+			action
+				set "learned nuke deactivation"
+				log `Today I learned the activation code for a Nuclear Missile is the number of the beast and deactivation code is "2-3-4". The latter is inspired by Psalm twenty three four from the Bible: "Even though I walk through the valley of the shadow of death, I will fear no evil, for you are with me; your rod and your staff, they comfort me."`
+			`	Setting the digits to "2-3-4" causes the mechanism within to deactivate. The stranger smiles while closing the panel. "Well?"`
+				goto nukechoice
+			label nobible
+			action
+				set "learned nuke deactivation"
+				log `Today I learned activation code for a Nuclear Missile is "6-6-6" and the deactivation code is "2-3-4". These are supposedly references to something from the Bible, but the person who taught you never specified what they are.`
+			`	Inside the panel are a set of controls for setting three digits. "The factory default is all zeroes. Activation is six, six, and six." The stranger sets all three digits to "6-6-6". A mechanism within the missile activates and you can hear a low hum that slowly fades away. "Deactivation is two, three, and four." The stranger sets the digits to "2-3-4" and closes the panel. "Well?"`
+				goto nukechoice
 	on decline
 		outfit "Nuclear Missile" 50
 		"Midnight Market" <?= -1000
@@ -1040,6 +1105,49 @@ mission "Midnight Market: Nukes of Peace?"
 		"Midnight Market" ++
 		clear "Midnight Market: Nukes of Peace?: offered"
 		fail
+
+mission "Nuke Deactivation Code"
+	outfitter
+	minor
+	invisible
+	source "Solace"
+	to offer
+		has "event: fwc solace has nukes"
+		not "learned nuke deactivation"
+		random < 70
+	on offer
+		conversation
+			scene "outfit/nuke"
+			`	A sales clerk is demonstrating how to operate Nuclear Missiles to other customers. Listen in?`
+			choice
+				`	(Listen to the lecture.)`
+					goto lecture
+				`	(Ignore them.)`
+			scene "outfit/attention"
+			`	Are you sure? This information could help save your life in the future.`
+			choice
+				`	(Listen to the lecture.)`
+				`	(I am not interested in this information.)`
+					decline
+			label lecture
+			`	The sales clerk opens a panel on the side of the missile. Inside are controls for setting three digits. "The factory setting on these defaults to zero, zero, and zero. Activation is set at six, six, and six. To deactivate, set the digits to two, three, and four. Any questions?"`
+			choice
+				`	"Can you demonstrate?"`
+				`	"Can it be reactivated?"`
+					goto used
+				`	(No questions.)`
+					goto end
+			`	"Sorry, I'm not authorized to do that."`
+				goto end
+			label used
+			`	"Yes! Simply set the digits back to six, six, and six."`
+			label end
+			scene "outfit/nuke"
+			action
+				set "learned nuke deactivation"
+				log `Today I learned the activation code for a Nuclear Missile is "6-6-6" and the deactivation is "2-3-4". At least, that's what the sales clerk at the Solace outfitter claimed.`
+			`	The sales clerk closes the panel. "Thanks for listening to this lecture. Please use your Nuclear Missiles responsibly!"`
+				decline
 
 
 
@@ -1284,13 +1392,13 @@ mission "Pot-o'-honey"
 		government "Bounty (Disguised)"
 		personality target marked launching harvests plunders
 			confusion 20
-		ship "Bulk Freighter (hai drones)" "Pot-o'-honey"
+		ship "Bulk Freighter(hai) " "Pot-o'-honey"
 		fleet
 			fighters "republic fighter"
 			variant
 				"Pirate Drone" 10
 		conversation
-			apply
+			action
 				"reputation: Bounty (Disguised)" >?= 1
 			`The Pot-o'-honey and its drones have been defeated. You make a mental note to check with the authorities on <destination> to see if there is any reward for your effort.`
 
@@ -1347,7 +1455,7 @@ mission "Escort Trap Freighter (Hai)"
 			names "civilian"
 			fighters "republic fighter"
 			variant
-				"Bulk Freighter (hai drones)"
+				"Bulk Freighter(hai) "
 				"Pirate Drone" 10
 	on abort
 		"reputation: Bounty (Disguised)" >?= 1
@@ -1395,7 +1503,7 @@ mission "Escort Trap Freighter (Human)"
 			names "civilian"
 			fighters "pirate"
 			variant
-				"Bulk Freighter (syndicate drones)"
+				"Bulk Freighter(proton) "
 				"Pirate Drone" 10
 	on abort
 		"reputation: Bounty (Disguised)" >?= 1

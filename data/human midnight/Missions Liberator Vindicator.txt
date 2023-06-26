@@ -776,7 +776,7 @@ mission "Plexus Prototype 4"
 			label chooseplexus
 
 			scene "ship/plexus"
-			apply
+			action
 				set "Dreadnought Evolution: chose Plexus"
 			`	"The Plexus... I suppose a sturdier carrier would help bolster our fleets. Thanks <first>, I'll try my best to convince the senate to go along with that." Alondo bids you farewell as you exit his office.`
 				accept
@@ -784,7 +784,7 @@ mission "Plexus Prototype 4"
 			label choosevindicator
 
 			scene "ship/liberator"
-			apply
+			action
 				set "Dreadnought Evolution: chose Vindicator"
 			`	"The Vindicator... I suppose a stronger battleship would help bolster our fleets. Thanks <first>, I'll try my best to convince the senate to go along with that." Alondo bids you farewell as you exit his office.`
 				accept
@@ -792,7 +792,7 @@ mission "Plexus Prototype 4"
 			label chooseliberator
 			
 			scene "ship/liberator"
-			apply
+			action
 				set "Dreadnought Evolution: chose Liberator"
 			`	"The Liberator... I suppose a stronger battleship would help bolster our fleets. Thanks <first>, I'll try my best to convince the senate to go along with that." Alondo bids you farewell as you exit his office.`
 				accept
