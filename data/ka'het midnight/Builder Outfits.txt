@@ -45,9 +45,9 @@ outfit "Ka'het Scanner"
 	"atmosphere scan" 100
 	"asteroid scan power" 20
 	"outfit scan power" 50
-	"outfit scan speed" 2
+	"outfit scan efficiency" 30
 	"cargo scan power" 18
-	"cargo scan speed" 2
+	"cargo scan efficiency" 10
 	"tactical scan power" 64
 	description "A powerful scanner outfitted onto the Ka'het to gather information on hostile alien species. The Builders never envisioned it being used to gather information on them."
 
@@ -107,6 +107,7 @@ outfit "Builder Negator"
 		"shield damage" 120
 		"hull damage" 40
 		"ion damage" 150
+		"scrambling damage" 150
 		"hit force" 50
 		"blast radius" 20
 	description "A rapid fire version of the Nullifier, the Negator can drain its own ships power reserves if not used with discretion."

@@ -184,7 +184,7 @@ mission "Omnipotence: Grave Digger Epilogue 2"
 		ship "Veliante'ixis" "Omnipotence"
 		conversation
 			scene "ship/veliante'ixis/veliante'ixis"
-			apply
+			action
 				set "graveyard map"
 			`The Builder ship Omnipotence is no longer a threat. Hopefully this is the last of the Grave Diggers.`
 
