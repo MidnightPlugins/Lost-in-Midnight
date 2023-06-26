@@ -18,9 +18,9 @@ outfit "Korath Scanner"
 	"mass" 14
 	"outfit space" -14
 	"outfit scan power" 16
-	"outfit scan speed" 2
+	"outfit scan efficiency" 20
 	"cargo scan power" 4
-	"cargo scan speed" 2
+	"cargo scan efficiency" 10
 	"atmosphere scan" 100
 	"tactical scan power" 9
 	"radar jamming" 5

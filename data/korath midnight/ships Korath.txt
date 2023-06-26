@@ -151,13 +151,13 @@ ship "Palavret" "Korath Raider (Torpedo)"
 		"Double Plasma Core"
 		"Generator (Inferno Class)"
 		"Systems Core (Medium)"
-		"Systems Core (Small)"
 		"Large Heat Shunt"
 		"Small Heat Shunt" 3
 		"Fuel Processor"
 		"Thermal Repeater Rifle" 196
 		"Thruster (Planetary Class)"
 		"Steering (Planetary Class)"
+		"Hyperdrive"
 		"Jump Drive"
 	gun 32.5 -1 "Torpedo Launcher"
 		angle 60
