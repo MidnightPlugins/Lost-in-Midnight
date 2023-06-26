@@ -198,7 +198,7 @@ mission "Angry Squirrels: Fragmentation Grenade Deal"
 
 
 fleet "unfettered weapon collectors"
-	government "Hai (Unfettered)"
+	government "Hai (Unfettered Civilians)"
 	names "hai"
 	cargo 1
 	personality
@@ -486,24 +486,24 @@ mission "Angry Squirrels: Dominate Unfettered"
 		has "First Contact: Unfettered: offered"
 	on offer
 		event "unfettered tribute main"
+		fail
 
 event "unfettered tribute main"
 	planet Firelode
 		tribute 2000
-			threshold 5000
-			fleet "Small Unfettered" 10
-			fleet "Large Unfettered" 15
-	planet Darkcloak
-		tribute 5000
 			threshold 10000
-			fleet "Small Unfettered" 10
-			fleet "Large Unfettered" 20
-			fleet "Unfettered Raid" 5
-	planet Warfeed
-		tribute 2000
-			threshold 5000
-			fleet "Small Unfettered" 10
 			fleet "Large Unfettered" 15
+			fleet "Small Unfettered" 5
+	planet Darkcloak
+		tribute 3500
+			threshold 10000
+			fleet "Large Unfettered" 25
+			fleet "Small Unfettered" 15
+	planet Warfeed
+		tribute 6000
+			threshold 10000
+			fleet "Large Unfettered" 10
+			fleet "Small Unfettered" 100
 
 
 
@@ -519,11 +519,10 @@ mission "Angry Squirrels: planet Varu Mer'ek"
 
 event "unfettered tribute Varu Mer'ek"
 	planet "Varu Mer'ek"
-		tribute 3000
-			threshold 8000
-			fleet "Small Unfettered" 10
-			fleet "Large Unfettered" 10
-			fleet "Unfettered Raid" 10
+		tribute 2000
+			threshold 10000
+			fleet "Large Unfettered" 15
+			fleet "Small Unfettered" 5
 
 mission "Angry Squirrels: planet Kort Vek'kri"
 	landing
@@ -535,11 +534,10 @@ mission "Angry Squirrels: planet Kort Vek'kri"
 
 event "unfettered tribute Vek'kri"
 	planet "Kort Vek'kri"
-		tribute 3000
-			threshold 8000
-			fleet "Small Unfettered" 10
-			fleet "Large Unfettered" 10
-			fleet "Unfettered Raid" 10
+		tribute 2000
+			threshold 10000
+			fleet "Large Unfettered" 15
+			fleet "Small Unfettered" 5
 			
 mission "Angry Squirrels: more planets"
 	landing
@@ -553,27 +551,24 @@ mission "Angry Squirrels: more planets"
 		
 event "unfettered tribute Vara Ke'sok"
 	planet "Vara Ke'sok"
-		tribute 3000
-			threshold 8000
-			fleet "Small Unfettered" 10
-			fleet "Large Unfettered" 10
-			fleet "Unfettered Raid" 10
+		tribute 2000
+			threshold 10000
+			fleet "Large Unfettered" 15
+			fleet "Small Unfettered" 5
 			
 event "unfettered tribute Vara Ke'stai"
 	planet "Vara Ke'stai"
-		tribute 3000
-			threshold 8000
-			fleet "Small Unfettered" 10
-			fleet "Large Unfettered" 10
-			fleet "Unfettered Raid" 10
+		tribute 2000
+			threshold 10000
+			fleet "Large Unfettered" 15
+			fleet "Small Unfettered" 5
 
 event "unfettered tribute Var' Kar'i'i"
 	planet "Var' Kar'i'i"
-		tribute 3000
-			threshold 8000
-			fleet "Small Unfettered" 10
-			fleet "Large Unfettered" 10
-			fleet "Unfettered Raid" 10
+		tribute 2000
+			threshold 10000
+			fleet "Large Unfettered" 15
+			fleet "Small Unfettered" 5
 
 			
 mission "Angry Squirrels: planet Varu K'est"
@@ -586,11 +581,10 @@ mission "Angry Squirrels: planet Varu K'est"
 
 event "unfettered tribute Varu K'est"
 	planet "Varu K'est"
-		tribute 3000
-			threshold 8000
-			fleet "Small Unfettered" 10
-			fleet "Large Unfettered" 10
-			fleet "Unfettered Raid" 10
+		tribute 2000
+			threshold 10000
+			fleet "Large Unfettered" 15
+			fleet "Small Unfettered" 5
 
 
 
@@ -711,7 +705,7 @@ mission "Angry Squirrels: Journey to the Southwest"
 		"reputation: Hai (Unfettered)" >?= 10
 	
 	npc
-		government "Hai (Unfettered)"
+		government "Hai (Friendly Unfettered)"
 		personality heroic plunders escort
 		fleet
 			names "hai"
@@ -939,7 +933,7 @@ mission "Ancestral Lands: Nova Firefly Swarm"
 			`A few Unfettered pilots have gathered to help repel the Nova Firefly swarm. You join them, and take off together...`
 				launch
 	on defer
-		"reputation: Hai (Unfettered)" <?= -1000		
+		"reputation: Hai (Unfettered)" <?= -1000
 		set "Randomize Ancestral Lands: Nova Firefly Swarm"
 	npc
 		government "Hai (Unfettered)"
@@ -1038,7 +1032,7 @@ mission "Danger In Darkwaste 2"
 					goto end
 			scene "scene/scene-campfire"
 			`	"Don't worry about supplies. We've brought enough to share." The group welcomes you and introduce themselves as they begin their hike into the nearby mountains. After a few hours, you arrive at a place where several other groups have set up tents and campfires. By the time the sun sets Blawi's camping club has their own campfire going.`
-			`	"Let's roast chestnuts!" One of the club members, Hemijo if you remember her name correctly, is holding up a big bag of what are supposedly chestnuts. After she tears it open, Dolewi, a husky Hai who had some trouble during the earlier hike, started impaling the nuts on barbecue sticks. From their large size and ease with which he pierced them, it's obvious that these aren't the chestnuts from Earth that are sold and distributed throughout human space. Hemijo notices your interest and explains, "Oh <first>! These aren't the chestnuts imported from human space. It's actually a tropical fruit native to Greenbloom's rainforests. We just call them chestnuts because that's what humans say they are reminded of when we roast them."`
+			`	"Let's roast chestnuts!" One of the club members, Hemijo if you remember her name correctly, is holding up a big bag of what are supposedly chestnuts. After she tears it open, Dolewi, a husky Hai who had some trouble during the earlier hike, starts impaling the nuts on barbecue sticks. From their large size and ease with which he pierced them, it's obvious that these aren't the chestnuts from Earth that are sold and distributed throughout human space. Hemijo notices your interest and explains, "Oh <first>! These aren't the chestnuts imported from human space. It's actually a tropical fruit native to Greenbloom's rainforests. We just call them chestnuts because that's what humans say they are reminded of when we roast them."`
 			`	Dolewi soon has some "chestnuts" roasting over the fire and hands one finished stick to you. As they roast, a sweet aroma fills your nostrils.`
 			choice
 				`	(Dig in!)`
@@ -1052,7 +1046,7 @@ mission "Danger In Darkwaste 2"
 					goto eat
 				`	(Hand it to Blawi.)`
 			scene "scene/scene-campfire"
-			`	You offer the stick of roasted fruit to Blawi, who has just finished setting up a tent. "Thanks <first>!" He bites into fruit, munching on it as some juice leaks from the corners of his mouth. "Mmm! Tasty! Just what I needed!"`
+			`	You offer the stick of roasted fruit to Blawi, who has just finished setting up a tent. "Thanks <first>!" He bites into the fruit, munching on it as some juice leaks from the corners of his mouth. "Mmm! Tasty! Just what I needed!"`
 			`	"This one is just about done." Dolewi looks at you as he holds out the stick of roasted fruit. "Be careful. It's hot."`
 			choice
 				`	(Dig in!)`
@@ -1067,7 +1061,7 @@ mission "Danger In Darkwaste 2"
 				`	(Go for a walk.)`
 					goto walk
 			scene "scene/scene-campfire"
-			`	You pick up the last stick and hold it out over the fire. "Keep it above the flame or you'll burn it," warns Dolewi. After a while you can hear the juices sizzling within. Hot steam wafts up from the roasted fruit when you pull the it back from the flames. Its sweet aroma tantalizes your senses. Remembering how Dolewi reacted earlier, you blow on the "chestnut" a few times to let it cool before taking a bite. Blawi, Hemijo, and Dolewi are all staring as you swallow...`
+			`	You pick up the last stick and hold it out over the fire. "Keep it above the flame or you'll burn it," warns Dolewi. After a while you can hear the juices sizzling within. Hot steam wafts up from the roasted fruit when you pull it back from the flames. Its sweet aroma tantalizes your senses. Remembering how Dolewi reacted earlier, you blow on the "chestnut" a few times to let it cool before taking a bite. Blawi, Hemijo, and Dolewi are all staring as you swallow...`
 			choice
 				`	(The nightmare begins.)`
 					goto nightmare
@@ -1165,7 +1159,7 @@ mission "Danger In Darkwaste 2"
 		payment 1000000
 		conversation
 			scene "effect/blood"
-			`	After landing Blawi and his companions thank you for making the trip possible and hand over credit chips worth <payment>. That's a lot to be carrying around. After they're gone you notice a dark stain where Blawi had stored his gear. When you try wiping it away the wash cloth smeared red, as if stained with blood...`
+			`	After landing Blawi and his companions thank you for making the trip possible and hand over credit chips worth <payment>. That's a lot to be carrying around. After they're gone you notice a dark stain where Blawi had stored his gear. When you try wiping it away the wash cloth smears red, as if stained with blood...`
 
 mission "Danger In Darkwaste Escape Epilogue"
 	landing
@@ -1176,7 +1170,7 @@ mission "Danger In Darkwaste Escape Epilogue"
 		not attributes "uninhabited"
 		not planet "Darkwaste"
 	to offer
-		has "Danger In Darkwaste 2: decline"
+		has "Danger In Darkwaste 2: declined"
 	on offer
 		conversation
 			scene "scene/scene-campfire"

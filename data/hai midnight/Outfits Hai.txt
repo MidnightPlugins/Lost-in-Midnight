@@ -34,7 +34,7 @@ outfit "Ion Pulse Cannon"
 	weapon
 		sprite "projectile/ion pulse"
 		sound "sidewinder-ver8"
-		"hit effect" "ion impact" 2
+		"hit effect" "ion impact"
 		"inaccuracy" 1
 		"velocity" 15
 		"lifetime" 30
@@ -46,8 +46,9 @@ outfit "Ion Pulse Cannon"
 		"shield damage" 84
 		"hull damage" 30
 		"ion damage" 2.5
+		"scrambling damage" 2.5
 		"cluster"
-	description "Unfettered Ion Pulse Cannons disrupt the electrical systems on any ship they hit, draining its energy. Individually, they aren't as effective as Ion Cannons, but these weapons are meant to be used in multiples. As a group they synchronize their rate of fire, creating waves of ionizing projectiles."
+	description "Deployed at the start of the Unfettered invasion of Wanderer space, Ion Pulse Cannons disrupt the electrical systems on any ship they hit. Individually, they aren't as effective as Ion Cannons, but these weapons are meant to be used in multiples. As a group they synchronize their rate of fire, creating waves of ionizing projectiles."
 
 
 
@@ -55,6 +56,7 @@ outfit "Ion Pulse Cannon"
 # Some NPC captains wield Dual Pulse Pistols.
 
 outfit "Dual Pulse Pistols"
+	plural "Dual Pulse Pistols"
 	category "Hand to Hand"
 	cost 77777
 	thumbnail "outfit/dual pulse pistols"
