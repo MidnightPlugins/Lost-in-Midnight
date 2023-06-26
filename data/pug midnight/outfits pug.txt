@@ -36,6 +36,7 @@ outfit "Pug Ion Zapper"
 		"shield damage" 3.7
 		"hull damage" 2.9
 		"ion damage" .1
+		"scrambling damage" .1
 	description "This Pug Zapper has been modified to add Ionic damage to the beam it generates."
 
 outfit "Pug Ion Zapper Turret"
@@ -66,6 +67,7 @@ outfit "Pug Ion Zapper Turret"
 		"shield damage" 7.4
 		"hull damage" 5.8
 		"ion damage" .2
+		"scrambling damage" .2
 	description "The Pug Ion Zapper Turret delivers twice the ionic damage as the non-turreted version."
 
 outfit "Pug Dual Seeker"
@@ -187,15 +189,45 @@ outfit "Pug Akcorlo Engines"
 	"thrusting energy" 1.1
 	"thrusting heat" 1.5
 	"flare sprite" "effect/pug flare/tiny"
-		"frame rate" 20
+		"frame rate" 8
 	"flare sound" "ion tiny"
 	"turn" 432
 	"turning energy" .7
 	"turning heat" 1.1
 	"steering flare sprite" "effect/pug flare/tiny"
-		"frame rate" 20
+		"frame rate" 8
 	"steering flare sound" "ion tiny"
 	description "These engines are intended to be the primary means of locomotion for Pug fighters and drones."
+
+outfit "Pug Maretar Thruster"
+	category "Engines"
+	"cost" 2678000
+	thumbnail "outfit/pug maretar thruster"
+	"mass" 115
+	"outfit space" -115
+	"engine capacity" -115
+	"thrust" 92.4
+	"thrusting energy" 7
+	"thrusting heat" 9
+	"flare sprite" "effect/pug flare/titanic"
+		"frame rate" 23.5
+	"flare sound" "ion huge"
+	description "This is a huge thruster designed by the Pug. It is not quite as powerful as a similarly sized atomic engine, but it makes up for that by being almost as energy efficient as ion engines."
+
+outfit "Pug Maretar Steering"
+	category "Engines"
+	"cost" 2572000
+	thumbnail "outfit/pug maretar steering"
+	"mass" 87
+	"outfit space" -87
+	"engine capacity" -87
+	"turn" 2828
+	"turning energy" 4
+	"turning heat" 6.9
+	"steering flare sprite" "effect/pug flare/titanic"
+		"frame rate" 23.5
+	"steering flare sound" "ion huge"
+	description "This is a huge steering system designed by the Pug. It is not quite as powerful as a similarly sized atomic engine, but it makes up for that by being almost as energy efficient as ion engines."
 
 outfit "Pug Afterburner"
 	category "Engines"
@@ -204,10 +236,10 @@ outfit "Pug Afterburner"
 	"mass" 22
 	"outfit space" -22
 	"engine capacity" -22
-	"afterburner thrust" 55.5
+	"afterburner thrust" 43.5
 	"afterburner fuel" .025
-	"afterburner energy" 5.1
-	"afterburner heat" 4.0
+	"afterburner energy" 4.0
+	"afterburner heat" 5.1
 	"afterburner effect" "pug afterburner"
 	description "Some Pug use this afterburner to supplement their normal thrusters. Unlike regular afterburners, it consumes more energy than fuel."
 

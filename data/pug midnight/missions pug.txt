@@ -455,41 +455,24 @@ ship "Hallucination" "Hallucination (hai)"
 	"never disabled"
 	add attributes
 		"hull" 500
-	outfits
-		"Imaginary Weapon" 2
-	gun -5 0 "Imaginary Weapon"
-	gun 5 0 "Imaginary Weapon"
 
 ship "Hallucination" "Hallucination (korath)"
 	sprite "ship/hallucination korath"
 	"never disabled"
 	add attributes
 		"hull" 500
-	outfits
-		"Imaginary Weapon" 2
-	gun -5 0 "Imaginary Weapon"
-	gun 5 0 "Imaginary Weapon"
 
 ship "Hallucination" "Hallucination (quarg)"
 	sprite "ship/hallucination quarg"
 	"never disabled"
 	add attributes
 		"hull" 500
-	outfits
-		"Imaginary Weapon" 2
-	gun -5 0 "Imaginary Weapon"
-	gun 5 0 "Imaginary Weapon"
 
 ship "Hallucination" "Hallucination (wanderer)"
 	sprite "ship/hallucination wanderer"
 	"never disabled"
 	add attributes
 		"hull" 500
-	outfits
-		"Imaginary Weapon" 2
-	gun -5 0 "Imaginary Weapon"
-	gun 5 0 "Imaginary Weapon"
-
 
 mission "Dream Crystal Hallucination"
 	invisible

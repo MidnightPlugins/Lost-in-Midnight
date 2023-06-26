@@ -57,7 +57,7 @@ ship "Pug Karota"
 	explode "pug medium explosion" 10
 	explode "pug large explosion" 5
 	"final explode" "final explosion small"
-	description "The Karota is an escort for Pug ships that have fighter bays."
+	description "The Karot is a small escort fighter for Pug ships that have the bays to carry them."
 
 
 
@@ -112,8 +112,8 @@ ship "Pug Paragon Zibruka"
 	explode "pug medium explosion" 20
 	explode "pug large explosion" 10
 	"final explode" "final explosion small"
-	description "The Zibruka is the smallest Pug ship that you know of."
-	description "	The Paragon variant of the Zibruka is intended for battles rated tier 2 and above. It has increased shielding and a reinforced hull. It also adds a turret mount with additional space to use it."
+	description `The Zibruka is the smallest Pug warship that you know of. It is a fearsome ship to face off against, especially in swarms.`
+	description "	The Paragon variant of the Zibruka is intended for battles rated tier 2 and above. It has increased shielding and a reinforced hull. It also adds a turret mount and the additional space to use it."
 
 ship "Pug Paragon Zibruka" "Pug Paragon Zibruka (Dual Seeker)"
 	outfits
@@ -205,8 +205,8 @@ ship "Pug Paragon Enfolta"
 	explode "pug medium explosion" 25
 	explode "pug large explosion" 15
 	"final explode" "final explosion medium"
-	description "This is a medium-sized Pug warship."
-	description "	The Paragon variant of the Enfolta is intended for battles rated tier 2 and above. It has increased shielding and a reinforced hull. It also adds one more turret mount with additional space to use it."
+	description `The Enfolta is a medium-sized Pug warship. A single Enfolta can take on multiple smaller human ships.`
+	description "	The Paragon variant of the Enfolta is intended for battles rated tier 2 and above. It has increased shielding and a reinforced hull. It also adds one more turret mount with the additional space to use it."
 
 ship "Pug Paragon Enfolta" "Pug Paragon Enfolta (Dual Seeker)"
 	outfits
@@ -319,8 +319,8 @@ ship "Pug Paragon Maboro"
 	explode "pug large explosion" 20
 	explode "pug huge explosion" 5
 	"final explode" "final explosion large"
-	description "This is the largest Pug warship."
-	description "	The Paragon variant of the Marboro is intended for battles rated tier 2 and above. It has increased shielding and a reinforced hull. It also adds two more turret mounts with additional space to use them."
+	description `The Maboro appears to be the Pug's capital warship. It is a ship that only the strongest human capital ships are able to oppose.`
+	description "	The Paragon variant of the Marboro is intended for battles rated tier 2 and above. It has increased shielding and a reinforced hull. It also adds two more turret mounts with the additional space to use them."
 
 ship "Pug Paragon Maboro" "Pug Paragon Maboro (Dual Seeker)"
 	outfits
