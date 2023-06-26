@@ -213,7 +213,7 @@ mission "Hunting Beelzebub: Modified Bactrian 1"
 		or
 			has "Remnant: Deep Surveillance: done"
 			has "Remnant: Deep Surveillance: declined"
-			has "Remnant: Deep Surveillance: failed"			
+			has "Remnant: Deep Surveillance: failed"
 		or
 			has "defeated scar's legion"
 			has "Pirate Troubles [4]: done"
@@ -814,7 +814,7 @@ mission "Hunting Beelzebub: Ember Nightmare"
 	on enter
 		conversation
 			scene "ship/ember nightmare/ember nightmare"			
-			`You receive a hail. "Did you think I wouldn't notice you snooping around my business? This is a fitting place for you to pass on to the next life." The transmission came from a ship that looks like a heavily modified Albatross. The red glowing lights nestled within the shadows of the ship match the description of the Ember Nightmare. That's Beelzebub's ship. The ship jumps away as a fleet of dark warships and interceptors swarm around you.`
+			`You receive a hail. "Did you think I wouldn't notice you snooping around my business? This is a fitting place for you to pass on to the next life." The transmission came from a ship that looks like a heavily modified Albatross. The red glowing lights nestled within the shadows of the ship match the description of the Ember Nightmare. That's Beelzebub's ship. The Ember Nightmare jumps away as a fleet of dark warships and interceptors swarm around you.`
 			`	Paris growls, "Forget these guys. We need to chase after Beelzebub!" He must have fled to one of the nearby systems...`
 	on enter Terminus
 		dialog `The Ember Nightmare is here and it's not alone.`
@@ -835,7 +835,7 @@ mission "Hunting Beelzebub: Ember Nightmare"
 		fleet
 			names "pirate"
 			variant
-				"Shadow Falcon (B)"				
+				"Shadow Falcon (B)"
 				"Shadow Osprey (B)" 2
 				"Shadow Raven (B)" 2
 				"Shadow Hawk (B)" 4
@@ -858,7 +858,7 @@ mission "Hunting Beelzebub: Ember Nightmare"
 		fleet
 			names "pirate"
 			variant
-				"Shadow Falcon (B)"				
+				"Shadow Falcon (B)"
 				"Shadow Osprey (B)" 2
 	npc
 		to spawn
@@ -901,7 +901,10 @@ mission "Hunting Beelzebub: Ember Nightmare"
 	npc kill
 		government "Nemesis"
 		system Terminus
-		personality waiting staying vindictive heroic unconstrained marked
+		personality waiting staying vindictive unconstrained marked timid
+		"cargo settings"
+			cargo 6
+			outfitters "Remnant Weapons"
 		ship "Ember Nightmare" "Ember Nightmare"
 		dialog `You've defeated Beelzebub. Paris asks that you take him to <destination>.`
 	on complete
@@ -915,7 +918,7 @@ mission "Hunting Beelzebub: Ember Nightmare"
 			label TMBR
 			`You part ways with Paris. With Beelzebub gone, Tom may return to Deep Security. After checking with the Deep government, it turns out there's a <payment> bounty on Beelzebub and it's all yours.`
 			``
-			`You notice a flier advertising a There Might Be Riots concert later that evening. Maybe Garrison, Hannah, and Pierre will be there. If you run into them, you'll let them know that Beelzebub was brought to justice. It won't bring Laura back, but maybe it will give them some closure.`
+			`You notice a flier advertising a There Might Be Riots concert later that evening. Maybe Garrison, Hannah, and Pierre will be there. If you run into them, you'll be able to let them know that Beelzebub was brought to justice. It won't bring Laura back, but maybe it will give them some closure.`
 				accept
 
 
@@ -938,7 +941,7 @@ ship "Ember Nightmare"
 		"drag" 8.6
 		"heat dissipation" 0.7
 		"fuel capacity" 600
-		"ramscoop" 2
+		"ramscoop" 2.75
 		"outfit space" 885
 		"weapon capacity" 393
 		"engine capacity" 144
@@ -947,8 +950,9 @@ ship "Ember Nightmare"
 		"hull repair rate" 2.5
 		"hull energy" 1.95
 		"outfit scan power" 18
-		"outfit scan speed" 1
+		"outfit scan efficiency" 24
 		"tactical scan power" 39
+		"integrated systems" -1
 		weapon
 			"blast radius" 360
 			"shield damage" 3600
@@ -975,6 +979,7 @@ ship "Ember Nightmare"
 		"Fragmentation Grenades" 12
 		"Dual Pulse Pistols"
 		"Medical Bay"
+		"Heart of Nightmare"
 
 		"Smelter-Class Steering"
 		"Smelter-Class Thruster"
@@ -1310,33 +1315,4 @@ ship "Modified Bactrian" "Modified Bactrian (Remnant)"
 
 
 
-outfit "Inhibitor Blaster"
-	category "Guns"
-	licenses
-		Remnant
-	cost 471000
-	thumbnail "outfit/inhibitor blaster"
-	"mass" 16
-	"outfit space" -16
-	"weapon capacity" -16
-	"gun ports" -1
-	weapon
-		sprite "projectile/inhibitor"
-			"frame rate" 10
-			"no repeat"
-		sound "inhibitor"
-		"hit effect" "inhibitor impact" 3
-		"inaccuracy" .5
-		"velocity" 36
-		"random velocity" .5
-		"lifetime" 24
-		"reload" 13
-		"firing energy" 26
-		"firing heat" 45.5
-		"firing force" 13
-		"shield damage" 26
-		"hull damage" 19.5
-		"hit force" 39
-		"slowing damage" .5
-	description `This modified version of the Inhibitor Cannon lacks the firing synchronization of the standard Remnant version. The result is that instead of firing a volley of inhibitor projectiles, a group of these weapons will produce a steady stream. Intimate knowledge of how the weapon works is necessary to make this sort of modification while leaving the weapon's other attributes unchanged.`
 

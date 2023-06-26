@@ -39,6 +39,20 @@ ship "Albatross" "Albatross (Gravedigger)"
 	turret
 	turret "Point Defense Turret"
 
+ship "Derelict Albatross"
+	"uncapturable"
+	plural "Albatrosses"
+	sprite "ship/albatross"
+	attributes
+		category "Heavy Warship"
+		"hull" 2520
+		"mass" 610
+		"drag" 8.6
+		"heat dissipation" 0.6
+	explode "medium explosion" 60
+	explode "large explosion" 40
+
+
 
 ship "Starling" "Starling (Gravedigger)"
 	add attributes

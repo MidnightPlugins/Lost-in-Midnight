@@ -28,7 +28,7 @@ ship "Nightingale"
 		"heat dissipation" .7
 		"fuel capacity" 25
 		"energy capacity" 250
-		"ramscoop" 0.5
+		"ramscoop" 1.25
 		"outfit space" 59
 		"weapon capacity" 0
 		"engine capacity" 26
@@ -41,9 +41,9 @@ ship "Nightingale"
 		"cloaking fuel" .05
 		"gaslining" 1
 		"cargo scan power" 10
-		"outfit scan speed" 1
+		"cargo scan efficiency" 24
 		"outfit scan power" 20
-		"outfit scan speed" 1
+		"outfit scan efficiency" 24
 		"tactical scan power" 40
 		"atmosphere scan" 100
 		"asteroid scan power" 60
@@ -91,7 +91,7 @@ ship "Prefect's Albatross"
 		"drag" 7.6
 		"heat dissipation" 0.6
 		"fuel capacity" 700
-		"ramscoop" 2
+		"ramscoop" 2.75
 		"outfit space" 672
 		"weapon capacity" 236
 		"engine capacity" 172
@@ -100,7 +100,7 @@ ship "Prefect's Albatross"
 		"hull repair rate" 1.5
 		"hull energy" 1.2
 		"outfit scan power" 18
-		"outfit scan speed" 1
+		"outfit scan efficiency" 24
 		"tactical scan power" 39
 		weapon
 			"blast radius" 360
@@ -172,7 +172,7 @@ ship "Raptor Prototype"
 		"drag" 7.2
 		"heat dissipation" 0.7
 		"fuel capacity" 600
-		"ramscoop" 1
+		"ramscoop" 1.75
 		"outfit space" 493
 		"weapon capacity" 147
 		"engine capacity" 141
@@ -183,7 +183,7 @@ ship "Raptor Prototype"
 		"ion resistance" 1
 		"ion protection" 3
 		"outfit scan power" 12
-		"outfit scan speed" 1
+		"outfit scan efficiency" 24
 		"tactical scan power" 26
 		weapon
 			"blast radius" 320
@@ -239,18 +239,17 @@ ship "Shadow Falcon"
 		"shields" 12800
 		"hull" 3700
 		"required crew" 52
-		"bunks" 75
+		"bunks" 91
 		"mass" 510
 		"drag" 6.7
 		"heat dissipation" .7
 		"fuel capacity" 600
-		"cargo space" 90
-		"outfit space" 540
-		"weapon capacity" 240
+		"cargo space" 130
+		"outfit space" 560
+		"weapon capacity" 250
 		"engine capacity" 150
 		"radar jamming" 12
 		"scan interference" 3
-		"inscrutable" 1
 		weapon
 			"blast radius" 160
 			"shield damage" 1600
@@ -327,9 +326,9 @@ ship "Shadow Hawk"
 		"cost" 670000
 		"shields" 2500
 		"hull" 500
-		"required crew" 2
+		"required crew" 1
 		"bunks" 4
-		"mass" 150
+		"mass" 110
 		"drag" 2.1
 		"heat dissipation" .8
 		"fuel capacity" 300
@@ -339,7 +338,6 @@ ship "Shadow Hawk"
 		"engine capacity" 70
 		"radar jamming" 2
 		"scan interference" 1
-		"inscrutable" 1
 		weapon
 			"blast radius" 30
 			"shield damage" 300
@@ -408,7 +406,6 @@ ship "Shadow Osprey"
 		"engine capacity" 130
 		"radar jamming" 10
 		"scan interference" 2
-		"inscrutable" 1
 		weapon
 			"blast radius" 80
 			"shield damage" 800
@@ -497,7 +494,6 @@ ship "Shadow Raven"
 		"engine capacity" 100
 		"radar jamming" 4
 		"scan interference" 2
-		"inscrutable" 1
 		weapon
 			"blast radius" 60
 			"shield damage" 600

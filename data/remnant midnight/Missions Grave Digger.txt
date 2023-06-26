@@ -1,3 +1,6 @@
+# Copyright (c) 2021 by Michael Arsollon
+# derived from original game at https://github.com/endless-sky/endless-sky
+#
 # Endless Sky is free software: you can redistribute it and/or modify it under the
 # terms of the GNU General Public License as published by the Free Software
 # Foundation, either version 3 of the License, or (at your option) any later version.
@@ -5,7 +8,6 @@
 # Endless Sky is distributed in the hope that it will be useful, but WITHOUT ANY
 # WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
 # PARTICULAR PURPOSE.  See the GNU General Public License for more details.
-
 
 
 # Contents: Missions involving the thief Lu Bu and his stolen Kestrel, the Grave Digger.
@@ -522,7 +524,7 @@ mission "Grave Digger: Suspicious Ship"
 			not government "Remnant"
 			not attributes "inaccessible"
 			not system Aki'il Patir
-		personality target waiting staying uninterested
+		personality target waiting staying uninterested secretive
 		fleet
 			names "independent"
 			outfitters "Contraband"
@@ -564,7 +566,7 @@ mission "Grave Digger: Suspicious Ship Job"
 			not government "Remnant"
 			not attributes "inaccessible"
 			not system Aki'il Patir
-		personality target waiting staying uninterested
+		personality target waiting staying uninterested secretive
 		fleet
 			names "independent"
 			outfitters "Contraband"
@@ -772,7 +774,7 @@ mission "Grave Digger: Graveyard Robbery Job A"
 
 	npc
 		government "Grave Diggers"
-		personality waiting uninterested unconstrained mute
+		personality waiting uninterested unconstrained mute secretive
 		system Relifer
 		fleet "Grave Digger Lurker"
 
@@ -823,7 +825,7 @@ mission "Grave Digger: Graveyard Robbery Job B"
 
 	npc
 		government "Grave Diggers"
-		personality waiting uninterested unconstrained mute
+		personality waiting uninterested unconstrained mute secretive
 		system Fearis
 		fleet "Grave Digger Lurker"
 
@@ -874,7 +876,7 @@ mission "Grave Digger: Graveyard Robbery Job C"
 
 	npc
 		government "Grave Diggers"
-		personality waiting uninterested unconstrained mute
+		personality waiting uninterested unconstrained mute secretive
 		system Delia
 		fleet "Grave Digger Lurker"
 
@@ -1101,7 +1103,7 @@ mission "Grave Digger: Prefect's Albatross 1"
 	npc
 		system Cardea
 		government "Independent"
-		personality waiting staying mute
+		personality waiting staying mute secretive
 		fleet
 			names "independent"
 			cargo 0
@@ -1160,7 +1162,8 @@ mission "Grave Digger: Suspicious Ship Tracking"
 	npc "scan cargo" "scan outfits"
 		government "Independent (Killable)" 
 		system Terminus
-		personality target waiting staying uninterested mute
+		personality target waiting staying uninterested mute secretive
+			confusion 20
 		fleet "Grave Digger Smugglers"
 	on complete
 		"reputation: Remnant" ++
@@ -1549,6 +1552,7 @@ event "Grave Digger Testimony"
 mission "Grave Digger: Bounty Job"
 	job
 	repeat
+	deadline 30
 	name "Shadow Warlord near <system>"
 	description "Dark warships with alien weapons are attacking merchant ships near <system>. Locate and destroy them. Then report to <destination>. Payment is <payment>."
 	source
@@ -1556,13 +1560,27 @@ mission "Grave Digger: Bounty Job"
 		not attributes "paradise" "near earth"
 	to offer
 		has "event: Grave Digger Testimony"
-		random < 10
+		random < 5
 	npc kill
 		government "Bounty" 
 		system
-			distance 2 3
+			distance 1 2
 		personality target waiting staying plunders harvests
-		fleet "Grave Digger Smugglers" 3
+		fleet
+			names "grave diggers"
+			cargo 1
+			commodities "Luxury Goods"
+			variant 1
+				"Shadow Falcon"
+				"Shadow Osprey" 2
+			variant 1
+				"Shadow Falcon"
+				"Shadow Raven" 4
+			variant 1
+				"Shadow Falcon"
+				"Shadow Hawk" 8
+
+
 	on complete
 		payment 800000
 		dialog `The government of <planet> thanks you for eliminating the <npc> and its fleet of shadow warships. You are rewarded with <payment>.`
@@ -1607,8 +1625,11 @@ mission "Nemesis: Grave Digger"
 		to spawn
 			has "Grave Digger: Void Rifle: declined"
 		government "Nemesis"
-		personality target waiting staying plunders marked unconstrained vindictive
+		personality target waiting staying unconstrained vindictive timid
 		system Aki'il
+		"cargo settings"
+			cargo 6
+			outfitters "Remnant Weapons" "Ka'het Weapons Salvage"
 		ship "Kestrel Prototype (Void Rifle)" "Grave Digger"
 		dialog `Lu Bu makes one final taunt. "You think the Remnant didn't have me run scans on you!?! Remnant only look out for Remnant. After I'm gone, you are next!"`
 
@@ -1616,8 +1637,11 @@ mission "Nemesis: Grave Digger"
 		to spawn
 			has "Grave Digger: Penguin: declined"
 		government "Nemesis"
-		personality target waiting staying plunders marked unconstrained vindictive
+		personality target waiting staying unconstrained vindictive timid
 		system Aki'il
+		"cargo settings"
+			cargo 6
+			outfitters "Remnant Weapons" "Ka'het Weapons Salvage"
 		ship "Kestrel Prototype" "Grave Digger"
 		dialog `Lu Bu makes one final taunt. "You think the Remnant didn't have me run scans on you!?! Remnant only look out for Remnant. After I'm gone, you are next!"`
 
@@ -1625,14 +1649,22 @@ mission "Nemesis: Grave Digger"
 		to spawn
 			has "Grave Digger: Penguin: declined"
 		government "Grave Diggers"
-		personality target waiting staying plunders marked unconstrained harvests mute
+		personality waiting staying plunders harvests unconstrained
+			confusion 10
 		system Aki'il
+		"cargo settings"
+			cargo 6
+			outfitters "Remnant Weapons" "Ka'het Weapons Salvage"
 		ship "Penguin (Gravedigger)" "Black Lotus"
 
 	npc
 		government "Grave Diggers"
-		personality target waiting staying plunders marked unconstrained harvests mute
+		personality waiting staying plunders harvests unconstrained
+			confusion 10
 		system Aki'il
+		"cargo settings"
+			cargo 6
+			outfitters "Remnant Weapons" "Ka'het Weapons Salvage"
 		ship "Starling (Gravedigger)" "Nightshade Assassin"
 		ship "Starling (Gravedigger)" "Reaper of Nightmares"
 		ship "Starling (Gravedigger)" "Shadow Skulker"
@@ -1646,11 +1678,12 @@ mission "Nemesis: Grave Digger"
 
 	npc
 		government "Grave Diggers"
-		personality target waiting coward plunders marked unconstrained harvests mute
+		personality target waiting plunders harvests daring
+			confusion 10
 		system Aki'il
 		fleet
 			names "grave diggers"
-			outfitters "Ka'het Weapons Salvage"
+			outfitters "Ka'het Weapons Salvage" "Remnant Weapons"
 			variant
 				"Albatross (Gravedigger)"
 				"Pelican (Gravedigger)"
