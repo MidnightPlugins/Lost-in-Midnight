@@ -19,6 +19,7 @@ outfit "Camouflaged Blaster"
 	"weapon capacity" -12
 	"gun ports" -1
 	"scan interference" .75
+	"scan concealment" 1
 	weapon
 		sprite "projectile/mod blaster"
 		sound "mod blaster"
@@ -45,6 +46,7 @@ outfit "Camouflaged Blaster Turret"
 	"turret mounts" -1
 	"required crew" 1
 	"scan interference" 1.6
+	"scan concealment" 1
 	weapon
 		sprite "projectile/mod blaster"
 		"hardpoint sprite" "hardpoint/model turret"

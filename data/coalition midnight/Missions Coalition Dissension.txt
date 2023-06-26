@@ -994,7 +994,7 @@ mission "Coalition Dissension: Rogue Heliarch Arach (Neutralizer)"
 		fleet "Rogue Heliarch (Neutralizer)"
 		conversation
 			scene "thumbnail/heliarch neutralizer"
-			apply
+			action
 				"reputation: Heliarch" -= 5
 				"coalition dissension" ++
 			`You receive a message from the Heliarch demanding to know why you have attacked the <npc>. Visit <destination> to explain yourself.`
@@ -1045,7 +1045,7 @@ mission "Coalition Dissension: Rogue Heliarch Kimek (Neutralizer)"
 		fleet "Rogue Heliarch (Neutralizer)"
 		conversation
 			scene "thumbnail/heliarch neutralizer"
-			apply
+			action
 				"reputation: Heliarch" -= 5
 				"coalition dissension" ++
 			`You receive a message from the Heliarch demanding to know why you have attacked the <npc>. Visit <destination> to explain yourself.`
@@ -1096,7 +1096,7 @@ mission "Coalition Dissension: Rogue Heliarch Saryd (Neutralizer)"
 		dialog `You receive a message from the Heliarch demanding to know why you have taken posession of the <npc>. Report to <destination> to explain yourself.`
 		conversation
 			scene "thumbnail/heliarch neutralizer"
-			apply
+			action
 				"reputation: Heliarch" -= 5
 				"coalition dissension" ++
 			`You receive a message from the Heliarch demanding to know why you have attacked the <npc>. Visit <destination> to explain yourself.`
@@ -1148,7 +1148,7 @@ mission "Coalition Dissension: Rogue Heliarch Arach (Breacher)"
 		fleet "Rogue Heliarch (Breacher)"
 		conversation
 			scene "thumbnail/heliarch breacher"
-			apply
+			action
 				"reputation: Heliarch" -= 3
 				"coalition dissension" ++
 			`You receive a message from the Heliarch demanding to know why you have attacked the <npc>. Visit <destination> to explain yourself.`
@@ -1198,7 +1198,7 @@ mission "Coalition Dissension: Rogue Heliarch Kimek (Breacher)"
 		fleet "Rogue Heliarch (Breacher)"
 		conversation
 			scene "thumbnail/heliarch breacher"
-			apply
+			action
 				"reputation: Heliarch" -= 3
 				"coalition dissension" ++
 			`You receive a message from the Heliarch demanding to know why you have attacked the <npc>. Visit <destination> to explain yourself.`
@@ -1249,7 +1249,7 @@ mission "Coalition Dissension: Rogue Heliarch Saryd (Breacher)"
 		fleet "Rogue Heliarch (Breacher)"
 		conversation
 			scene "thumbnail/heliarch breacher"
-			apply
+			action
 				"reputation: Heliarch" -= 3
 				"coalition dissension" ++
 			`You receive a message from the Heliarch demanding to know why you have attacked the <npc>. Visit <destination> to explain yourself.`
@@ -1301,7 +1301,7 @@ mission "Coalition Dissension: Rogue Heliarch Arach (Interdictor)"
 		fleet "Rogue Heliarch (Interdictor)"
 		conversation
 			scene "thumbnail/heliarch interdictor"
-			apply
+			action
 				"reputation: Heliarch" -= 14
 				"coalition dissension" ++
 			`You receive a message from the Heliarch demanding to know why you have attacked the <npc>. Visit <destination> to explain yourself.`
@@ -1351,7 +1351,7 @@ mission "Coalition Dissension: Rogue Heliarch Kimek (Interdictor)"
 		fleet "Rogue Heliarch (Interdictor)"
 		conversation
 			scene "thumbnail/heliarch interdictor"
-			apply
+			action
 				"reputation: Heliarch" -= 14
 				"coalition dissension" ++
 			`You receive a message from the Heliarch demanding to know why you have attacked the <npc>. Visit <destination> to explain yourself.`
@@ -1401,7 +1401,7 @@ mission "Coalition Dissension: Rogue Heliarch Saryd (Interdictor)"
 		fleet "Rogue Heliarch (Interdictor)"
 		conversation
 			scene "thumbnail/heliarch interdictor"
-			apply
+			action
 				"reputation: Heliarch" -= 14
 				"coalition dissension" ++
 			`You receive a message from the Heliarch demanding to know why you have attacked the <npc>. Visit <destination> to explain yourself.`
@@ -1453,7 +1453,7 @@ mission "Coalition Dissension: Rogue Heliarch Arach (Hunter)"
 		fleet "Rogue Heliarch (Hunter)"
 		conversation
 			scene "thumbnail/heliarch hunter"
-			apply
+			action
 				"reputation: Heliarch" -= 8
 				"coalition dissension" ++
 			`You receive a message from the Heliarch demanding to know why you have attacked the <npc>. Visit <destination> to explain yourself.`
@@ -1503,7 +1503,7 @@ mission "Coalition Dissension: Rogue Heliarch Kimek (Hunter)"
 		fleet "Rogue Heliarch (Hunter)"
 		conversation
 			scene "thumbnail/heliarch hunter"
-			apply
+			action
 				"reputation: Heliarch" -= 8
 				"coalition dissension" ++
 			`You receive a message from the Heliarch demanding to know why you have attacked the <npc>. Visit <destination> to explain yourself.`
@@ -1553,7 +1553,7 @@ mission "Coalition Dissension: Rogue Heliarch Saryd (Hunter)"
 		fleet "Rogue Heliarch (Hunter)"
 		conversation
 			scene "thumbnail/heliarch hunter"
-			apply
+			action
 				"reputation: Heliarch" -= 8
 				"coalition dissension" ++
 			`You receive a message from the Heliarch demanding to know why you have attacked the <npc>. Visit <destination> to explain yourself.`
@@ -1605,7 +1605,7 @@ mission "Coalition Dissension: Rogue Heliarch Arach (Judicator)"
 		fleet "Rogue Heliarch (Judicator)"
 		conversation
 			scene "thumbnail/heliarch judicator"
-			apply
+			action
 				"reputation: Heliarch" -= 10
 				"coalition dissension" ++
 			`You receive a message from the Heliarch demanding to know why you have attacked the <npc>. Visit <destination> to explain yourself.`
@@ -1655,7 +1655,7 @@ mission "Coalition Dissension: Rogue Heliarch Kimek (Judicator)"
 		fleet "Rogue Heliarch (Judicator)"
 		conversation
 			scene "thumbnail/heliarch judicator"
-			apply
+			action
 				"reputation: Heliarch" -= 10
 				"coalition dissension" ++
 			`You receive a message from the Heliarch demanding to know why you have attacked the <npc>. Visit <destination> to explain yourself.`
@@ -1705,7 +1705,7 @@ mission "Coalition Dissension: Rogue Heliarch Saryd (Judicator)"
 		fleet "Rogue Heliarch (Judicator)"
 		conversation
 			scene "thumbnail/heliarch judicator"
-			apply
+			action
 				"reputation: Heliarch" -= 10
 				"coalition dissension" ++
 			`You receive a message from the Heliarch demanding to know why you have attacked the <npc>. Visit <destination> to explain yourself.`
@@ -1757,7 +1757,7 @@ mission "Coalition Dissension: Rogue Heliarch Arach (Punisher)"
 		fleet "Rogue Heliarch (Punisher)"
 		conversation
 			scene "thumbnail/heliarch punisher"	
-			apply
+			action
 				"reputation: Heliarch" -= 24
 				"coalition dissension" ++
 			`You receive a message from the Heliarch demanding to know why you have attacked the <npc>. Visit <destination> to explain yourself.`
@@ -1807,7 +1807,7 @@ mission "Coalition Dissension: Rogue Heliarch Kimek (Punisher)"
 		fleet "Rogue Heliarch (Punisher)"
 		conversation
 			scene "thumbnail/heliarch punisher"
-			apply
+			action
 				"reputation: Heliarch" -= 24
 				"coalition dissension" ++
 			`You receive a message from the Heliarch demanding to know why you have attacked the <npc>. Visit <destination> to explain yourself.`
@@ -1857,7 +1857,7 @@ mission "Coalition Dissension: Rogue Heliarch Saryd (Punisher)"
 		fleet "Rogue Heliarch (Punisher)"
 		conversation
 			scene "thumbnail/heliarch punisher"
-			apply
+			action
 				"reputation: Heliarch" -= 24
 				"coalition dissension" ++
 			`You receive a message from the Heliarch demanding to know why you have attacked the <npc>. Visit <destination> to explain yourself.`
@@ -1972,9 +1972,12 @@ mission "Coalition Dissension: Heliarch Intrigues 1"
 	npc "scan outfits" save
 		government "Heliarch"
 		system "Ki War Ek" "Quaru"
-		personality target waiting staying uninterested
+		personality target waiting staying uninterested secretive
 		ship "Heliarch Interdictor (Evidence)" "Zealous Superior"
 		dialog `Your scans revealed evidence of Temlamrem's involvement in corrupt Heliarch activities! Share the data with Chikee on <destination>.`
+	on fail
+		dialog "[MISSION FAILED] Destroying the <npc> wasn't part of the plan! If life were a game, you could load a save file and try again."
+		"reputation: Heliarch" <?= -1000
 	on complete
 		event "kimek bramble preorders" 90
 		"heliarch intrigues" ++

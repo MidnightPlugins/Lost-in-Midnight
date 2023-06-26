@@ -166,8 +166,9 @@ ship "Kimek Spire" "Kimek Spire (smuggler)"
 ship "Kimek Thistle" "Kimek Thistle (pirate)"
 	outfits
 		"Quad Mod Blaster Turret" 2
-		"Torpedo Launcher" 2
-		"Torpedo" 60
+		"Torpedo Pod" 2
+		"Torpedo" 66
+		"Torpedo Storage Rack" 4
 
 		"Large Collector Module"
 		"Small Battery Module"
@@ -230,9 +231,10 @@ ship "Saryd Sojourner" "Saryd Sojourner (smuggler)"
 ship "Saryd Traveler" "Saryd Traveler (pirate)"
 	outfits
 		"Quad Mod Blaster Turret" 2
-		"Torpedo Launcher" 4
+		"Torpedo Launcher" 2
+		"Torpedo Pod" 2
 		"Torpedo Storage Rack" 4
-		"Torpedo" 60
+		"Torpedo" 126
 
 		"Small Collector Module" 3
 		"Small Battery Module"
