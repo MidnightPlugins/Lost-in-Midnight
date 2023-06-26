@@ -3735,7 +3735,7 @@ event "smuggler's den station defense job"
 				sprite planet/smoke
 				distance 302
 				period 14.0811
-	planet "Smuggler's Den Station"
+	planet "Smuggler's Den"
 		add attributes uninhabited
 		government Uninhabited
 	government "Independent"
@@ -3761,7 +3761,7 @@ event "smuggler's den station defense job success"
 					scale 0.5
 				distance 302
 				period 14.0811
-	planet "Smuggler's Den Station"
+	planet "Smuggler's Den"
 		remove attributes uninhabited
 		government clear
 	government "Independent"
@@ -4001,7 +4001,7 @@ event "charybdis station defense job success"
 				sprite planet/smoke
 				distance 281
 				period 13.1034
-		add Scheat
+		add object
 			sprite planet/gas0
 			distance 2229.12
 			period 1683.91
