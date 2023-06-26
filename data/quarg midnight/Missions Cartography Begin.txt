@@ -208,7 +208,7 @@ mission "Cartography: The Map Obtained"
 				goto wreck
 
 			label wreck
-			apply
+			action
 				set "trailblazer encountered"
 				set "trailblazer map"
 			
@@ -404,7 +404,7 @@ mission "Cartography: The Map (Alexandria) 2"
 				
 	on decline
 		event "Diyu reveal"
-		
+
 event "Diyu reveal"
 	system Diyu
 		remove hidden
@@ -430,6 +430,7 @@ mission "Cartography: Diyu Link"
 				`	(Refuse to buy them.)`
 					decline
 			`	You exchange your credits for the codes and instructions on how to transmit them. Hopefully this isn't some scam.`
+				accept
 	on accept
 		payment -100000
 		event "Diyu hyperlinks"
