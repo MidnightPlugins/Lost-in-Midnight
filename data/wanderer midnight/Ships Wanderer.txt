@@ -135,7 +135,7 @@ ship "Storm Seeker"
 		"weapon capacity" 250
 		"engine capacity" 114
 		"outfit scan power" 25
-		"outfit scan speed" 1
+		"outfit scan efficiency" 15
 		"tactical scan power" 25
 		weapon
 			"blast radius" 200
@@ -168,7 +168,7 @@ ship "Storm Seeker"
 	explode "medium explosion" 40
 	explode "large explosion" 20
 	"final explode" "final explosion medium"
-	description "An old relic from a time when the Wanderers occupied what is now southern human space, the Storm Seeker is a destroyer with an array of information warfare technologies built directly into the hull."
+	description "An old relic from a time when the Wanderers occupied what is now southern human space, the Storm Seeker is a security patrol ship with an array of information warfare technologies built directly into the hull."
 
 
 
@@ -474,6 +474,7 @@ ship "Tsunami"
 # Deep River Rapids appear in Storm Seeker Raids.
 
 ship "Deep River Rapids"
+	plural "Deep River Rapids"
 	sprite "ship/deep river"
 	thumbnail "thumbnail/deep river"
 	attributes

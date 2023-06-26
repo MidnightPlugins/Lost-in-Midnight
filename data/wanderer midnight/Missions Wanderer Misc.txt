@@ -64,7 +64,7 @@ event "add wanderer advanced cooling"
 			"Strong Wind" 2
 
 mission "Wanderer Ringworld Debris 2"
-	landing
+	outfitter
 	invisible
 	source
 		government "Wanderer"
