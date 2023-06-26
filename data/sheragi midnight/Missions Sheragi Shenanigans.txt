@@ -161,12 +161,12 @@ mission "Sheragi Shenanigans: Sapphire Shield 4"
 			target launching escort
 		ship "Sapphire Shield" "Sapphire Shield"
 	on fail
-		log `I learned that the "Sapphire Shield" is a fake Sheragi ship. I agreed to accept Dr. Stumpernickle's bribery, but he never reached the Alexandria to arrange payment.`
+		log `I learned that the "Sapphire Shield" is a fake Sheragi ship. I agreed to accept Dr. Stumpernickle's bribery, but he never reached Alexandria to arrange payment.`
 		"reputation: Merchant" -= 100
 		dialog `The <npc> never reached its destination. Rumors spread that you hijacked the ship yourself.`
 	on complete
 		log `I learned that the "Sapphire Shield" is a fake Sheragi ship and accepted Dr. Stumpernickle's bribery.`
-		"salary: Sapphire Shield" = 100
+		"salary: Sapphire Shield" += 100
 		dialog "Dr. Stumpernickle sets up an account to pay you 100 credits per day (3000 per month), as agreed."
 		
 event "sapphire shield financial ruin"
@@ -519,31 +519,31 @@ mission "Diamondback Sale"
 				`	"Hauling cargo."`
 					goto cargo
 				`	"I'm not sure..."`
-			apply
+			action
 				set "Diamondback: Stock"
 			`	The mechanic thinks for a bit...`
 				goto end
 
 			label pirate
-			apply
+			action
 				set "Diamondback: Lasers"
 			`	The mechanic thinks for a bit...`
 				goto end
 
 			label mining
-			apply
+			action
 				set "Diamondback: Mining"
 			`	The mechanic thinks for a bit...`
 				goto end
 
 			label passengers
-			apply
+			action
 				set "Diamondback: Transport"
 			`	The mechanic thinks for a bit...`
 				goto end
 
 			label cargo
-			apply
+			action
 				set "Diamondback: Freighter"
 			`	The mechanic thinks for a bit...`
 				goto end
@@ -877,7 +877,7 @@ mission "Sheragi Shenanigans: Counterfeits (North)"
 	on offer
 		conversation
 			scene "outfit/fake pwave cannon"
-			`You've got a lead on the counterfeit Sheragi weapons! A warship called the <npc> is supposedly armed with Particle Waveform Cannons and is attacking Merchant ships near <system>. Hunt the fugitive down and get some answers from its captain. The <payment> bounty being offered for eliminating the ship sweetens the deal.`
+			`A job board posting indicates that a warship called the <npc> is supposedly armed with Particle Waveform Cannons and is attacking Merchant ships near <system>. You've got a lead on the counterfeit Sheragi weapons!  Hunt the fugitive down and get some answers from its captain. The <payment> bounty being offered for eliminating the ship sweetens the deal.`
 				accept
 	npc
 		government "Pirate"
@@ -892,7 +892,7 @@ mission "Sheragi Shenanigans: Counterfeits (North)"
 			distance 1 2
 		personality target waiting staying plunders
 		ship "Marauder Leviathan (Sheragi Counterfeit)" "Storm Kraken"
-		dialog `The captain says the Particle Waveform Cannons were already installed on the ship when he stole it. You aren't going to learn anything useful from him.`
+		dialog `The captain says the Particle Waveform Cannons were already installed on this ship when he stole it. You aren't going to learn anything useful from him.`
 	on fail
 		dialog `[MISSION FAILED]: You failed to board the target before it was destroyed. If life were a game, you could load a save file and try again.`
 	on complete
@@ -915,7 +915,7 @@ mission "Sheragi Shenanigans: Counterfeits (Core)"
 	on offer
 		conversation
 			scene "outfit/fake pwave cannon"
-			`You've got a lead on the counterfeit Sheragi weapons! A warship called the <npc> is supposedly armed with Particle Waveform Cannons and is attacking Merchant ships near <system>. Hunt the fugitive down and get some answers from its captain. The <payment> bounty being offered for eliminating the ship is icing on the cake.`
+			`A job board posting indicates that a warship called the <npc> is supposedly armed with Particle Waveform Cannons and is attacking Merchant ships near <system>. You've got a lead on the counterfeit Sheragi weapons!  Hunt the fugitive down and get some answers from its captain. The <payment> bounty being offered for eliminating the ship sweetens the deal.`
 				accept
 	npc
 		government "Pirate"
@@ -953,7 +953,7 @@ mission "Sheragi Shenanigans: Counterfeits (South)"
 	on offer
 		conversation
 			scene "outfit/fake pwave cannon"
-			`You've got a lead on the counterfeit Sheragi weapons! A warship called the <npc> is supposedly armed with Particle Waveform Cannons and is attacking Merchant ships near <system>. Hunt the fugitive down and get some answers from its captain. The <payment> bounty being offered for eliminating the ship is gravy.`
+			`A job board posting indicates that a warship called the <npc> is supposedly armed with Particle Waveform Cannons and is attacking Merchant ships near <system>. You've got a lead on the counterfeit Sheragi weapons!  Hunt the fugitive down and get some answers from its captain. The <payment> bounty being offered for eliminating the ship sweetens the deal.`
 				accept
 	npc
 		government "Pirate"
@@ -1299,13 +1299,17 @@ ship "Modified Argosy" "Modified Argosy (Sheragi Counterfeit)"
 		"LP072a Battery Pack"
 		"Laser Rifle" 10
 		"Laser Turret"
-		"Meteor Missile" 60
-		"Meteor Missile Launcher" 2
+		"Meteor Missile Pod" 2
+		"Meteor Missile Box" 2
+		"Meteor Missile" 44
 		"NT-200 Nucleovoltaic"
 		"S-970 Regenerator"
 		"Security Station"
 		"Small Radar Jammer"
-
+	gun "Fake Sheragi Cannon"
+	gun "Fake Sheragi Cannon"
+	gun 
+	gun 
 
 ship "Marauder Falcon" "Marauder Falcon (Sheragi Counterfeit)"
 	sprite "ship/mfalconw"
@@ -1356,8 +1360,9 @@ ship "Marauder Firebird" "Marauder Firebird (Sheragi Counterfeit)"
 		"LP072a Battery Pack"
 		"Laser Rifle" 25
 		"Liquid Helium Cooler"
-		"Meteor Missile" 60
-		"Meteor Missile Launcher" 2
+		"Meteor Missile" 44
+		"Meteor Missile Pod" 2
+		"Meteor Missile Box" 2
 		"Outfits Expansion"
 		"S-970 Regenerator"
 		"Security Station"
@@ -1365,8 +1370,8 @@ ship "Marauder Firebird" "Marauder Firebird (Sheragi Counterfeit)"
 		Supercapacitor
 	gun -27.5 -33.5 "Fake Sheragi Cannon"
 	gun 27.5 -33.5 "Fake Sheragi Cannon"
-	gun -38.5 -18.5 "Meteor Missile Launcher"
-	gun 38.5 -18.5 "Meteor Missile Launcher"
+	gun -38.5 -18.5 "Meteor Missile Pod"
+	gun 38.5 -18.5 "Meteor Missile Pod"
 	turret 0 -44 "Heavy Laser Turret"
 	turret 0 -2.5 "Anti-Missile Turret"
 
@@ -1421,18 +1426,19 @@ ship "Marauder Manta" "Marauder Manta (Sheragi Counterfeit)"
 		"LP144a Battery Pack"
 		"Laser Rifle" 11
 		"Liquid Nitrogen Cooler"
-		"Meteor Missile" 120
-		"Meteor Missile Launcher" 4
+		"Meteor Missile" 133
+		"Meteor Missile Pod" 4
+		"Meteor Missile Box" 7
 		"S-970 Regenerator"
 		"Water Coolant System"
 	engine -33.5 38
 	engine 33.5 38
 	gun -66 -34 "Fake Sheragi Cannon"
 	gun 66 -34 "Fake Sheragi Cannon"
-	gun -27 -35 "Meteor Missile Launcher"
-	gun 27 -35 "Meteor Missile Launcher"
-	gun -20 -35 "Meteor Missile Launcher"
-	gun 20 -35 "Meteor Missile Launcher"
+	gun -27 -35 "Meteor Missile Pod"
+	gun 27 -35 "Meteor Missile Pod"
+	gun -20 -35 "Meteor Missile Pod"
+	gun 20 -35 "Meteor Missile Pod"
 	turret 0 -29 "Anti-Missile Turret"
 
 
@@ -1501,16 +1507,17 @@ ship "Marauder Splinter" "Marauder Splinter (Sheragi Counterfeit)"
 		"LP072a Battery Pack"
 		"Laser Rifle" 22
 		"Liquid Nitrogen Cooler"
-		"Meteor Missile" 60
-		"Meteor Missile Launcher" 2
+		"Meteor Missile" 44
+		"Meteor Missile Pod" 2
+		"Meteor Missile Box" 2
 		"Modified Blaster Turret" 2
 		"S-970 Regenerator"
 		"Security Station"
 		"Water Coolant System"
 	gun -7.5 -98 "Fake Sheragi Cannon"
 	gun 7.5 -98 "Fake Sheragi Cannon"
-	gun -15 -82 "Meteor Missile Launcher"
-	gun 15 -82 "Meteor Missile Launcher"
+	gun -15 -82 "Meteor Missile Pod"
+	gun 15 -82 "Meteor Missile Pod"
 	turret -17 -28 "Modified Blaster Turret"
 	turret 0 -28 "Anti-Missile Turret"
 	turret 17 -28 "Modified Blaster Turret"
