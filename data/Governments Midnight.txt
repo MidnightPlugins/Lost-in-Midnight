@@ -49,7 +49,9 @@ government "Creature Hunter"
 	
 	"player reputation" 10
 	"attitude toward"
+		"Forest (Prey)" -.04
 		"Indigenous Lifeform" -.04
+		"Indigenous Lifeform (Astral)" -.04
 		"Indigenous Predator" -.04
 		"Invasive Lifeform" -.04
 		"Invasive Lifeform (Passive)" -.04
@@ -151,20 +153,44 @@ government "Indigenous Predator"
 		"Builder" -.01
 		"Bounty (Disguised)" -.01
 		"Bounty Hunter" -.01
+		"Bounty Hunter that Won't Enter Hai Space" -.01
+		"Bounty Hunter (licensed)" -.01
+		"Bunrodea" -.01
+		"Bunrodea (Erabu)" -.01
+		"Bunrodea (Guard)" -.01
+		"Bunrodea (Megasa)" -.01
 		"Coalition" -.01
+		"Creature Hunter" -.01
 		"Deep Security" -.01
+		"Drak" -.01
+		"Drak (Hostile)" -.01
 		"Free Worlds" -.01
+		"Free Worlds that won't enter wormhole" -.01
+		"Elenctic Commune" -.01
+		"Escort (Betraying)" -.01
+		"Forest (Prey)" -.01
+		"Gegno" -.01
+		"Gegno Scin" -.01
+		"Gegno Vi" -.01
+		"Gegno Scin (Neutral)" -.01
+		"Gegno Vi (Neutral)" -.01
+		"Gegno Vi (Duelist A)" -.01
+		"Gegno Vi (Duelist B)" -.01
 		"Grave Diggers" -.01
 		"Hai" -.01
 		"Hai Merchant" -.01
 		"Hai Merchant (Human)" -.01
 		"Hai Merchant (Sympathizers)" -.01
 		"Hai (Unfettered)" -.01
+		"Hai (Unfettered Wanderer Tribute)" -.01
+		"Hai (Friendly Unfettered)" -.01
+		"Hai (Unfettered Civilians)" -.01
 		"Hai (Wormhole Access)" -.01
 		"Heliarch" -.01
 		"Independent" -.01
 		"Independent (Killable)" -.01
 		"Indigenous Lifeform" -.01
+		"Indigenous Lifeform (Astral)" -.01
 		"Invasive Lifeform" -.01
 		"Ka'het" -.01
 		"Ka'het (Infighting)" -.01
@@ -179,21 +205,32 @@ government "Indigenous Predator"
 		"Kor Scrappers" -.01
 		"Kor Scrappers (Hostile)" -.01
 		"Merchant" -.01
+		"Merchant (Hijacked)" -.01
 		"Militia" -.01
 		"Navy Intelligence" -.01
 		"Navy (Oathkeeper)" -.01
 		"Neutral" -.01
+		"Parrot" -.01
 		"Pirate" -.01
+		"Pirate (Devil-Run Gang)" -.01
 		"Pirate (Rival)" -.01
+		"Pirate (Rivals)" -.01
 		"Pug" -.01
 		"Pug (Wanderer)" -.01
 		"Quarg" -.01
+		"Quarg (Hai)" -.01
+		"Quarg (Kor Efret)" -.01
+		"Quarg (Gegno)" -.01
 		"Remnant" -.01
 		"Remnant (Research)" -.01
 		"Republic" -.01
+		"Republic Intelligence" -.01
+		"Republic that won't enter wormhole" -.01
 		"Republic (Friendly)" -.01
+		"Rulei" -.01
 		"Scar's Legion" -.01
 		"Scar's Legion (Killable)" -.01
+		"Smuggler (Hai Trafficker)" -.01
 		"Swarming Lifeform" -.01
 		"Syndicate" -.01
 		"Syndicate (Corrupt)" -.01
@@ -201,6 +238,7 @@ government "Indigenous Predator"
 		"Test Dummy" -.01
 		"Ember Waste" -.01
 		"Wanderer" -.01
+		"Wanderer (Hostile)" -.01
 	"bribe" 0
 	"fine" 0
 	"penalty for"
@@ -220,22 +258,44 @@ government "Invasive Lifeform"
 		"Builder" -.01
 		"Bounty (Disguised)" -.01
 		"Bounty Hunter" -.01
+		"Bounty Hunter that Won't Enter Hai Space" -.01
+		"Bounty Hunter (licensed)" -.01
+		"Bunrodea" -.01
+		"Bunrodea (Erabu)" -.01
+		"Bunrodea (Guard)" -.01
+		"Bunrodea (Megasa)" -.01
 		"Coalition" -.01
+		"Creature Hunter" -.01
 		"Deep Security" -.01
 		"Drak" -.01
 		"Drak (Hostile)" -.01
 		"Free Worlds" -.01
+		"Free Worlds that won't enter wormhole" -.01
+		"Elenctic Commune" -.01
+		"Escort (Betraying)" -.01
+		"Forest (Prey)" -.01
+		"Gegno" -.01
+		"Gegno Scin" -.01
+		"Gegno Vi" -.01
+		"Gegno Scin (Neutral)" -.01
+		"Gegno Vi (Neutral)" -.01
+		"Gegno Vi (Duelist A)" -.01
+		"Gegno Vi (Duelist B)" -.01
 		"Grave Diggers" -.01
 		"Hai" -.01
 		"Hai Merchant" -.01
 		"Hai Merchant (Human)" -.01
 		"Hai Merchant (Sympathizers)" -.01
 		"Hai (Unfettered)" -.01
+		"Hai (Unfettered Wanderer Tribute)" -.01
+		"Hai (Friendly Unfettered)" -.01
+		"Hai (Unfettered Civilians)" -.01
 		"Hai (Wormhole Access)" -.01
 		"Heliarch" -.01
 		"Independent" -.01
 		"Independent (Killable)" -.01
 		"Indigenous Lifeform" -.01
+		"Indigenous Lifeform (Astral)" -.01
 		"Indigenous Predator" -.01
 		"Ka'het" -.01
 		"Ka'het (Infighting)" -.01
@@ -250,22 +310,32 @@ government "Invasive Lifeform"
 		"Kor Scrappers" -.01
 		"Kor Scrappers (Hostile)" -.01
 		"Merchant" -.01
+		"Merchant (Hijacked)" -.01
 		"Militia" -.01
 		"Navy Intelligence" -.01
 		"Navy (Oathkeeper)" -.01
 		"Neutral" -.01
 		"Parrot" -.01
 		"Pirate" -.01
+		"Pirate (Devil-Run Gang)" -.01
 		"Pirate (Rival)" -.01
+		"Pirate (Rivals)" -.01
 		"Pug" -.01
 		"Pug (Wanderer)" -.01
 		"Quarg" -.01
+		"Quarg (Hai)" -.01
+		"Quarg (Kor Efret)" -.01
+		"Quarg (Gegno)" -.01
 		"Remnant" -.01
 		"Remnant (Research)" -.01
 		"Republic" -.01
+		"Republic Intelligence" -.01
+		"Republic that won't enter wormhole" -.01
 		"Republic (Friendly)" -.01
+		"Rulei" -.01
 		"Scar's Legion" -.01
 		"Scar's Legion (Killable)" -.01
+		"Smuggler (Hai Trafficker)" -.01
 		"Swarming Lifeform" -.01
 		"Syndicate" -.01
 		"Syndicate (Corrupt)" -.01
@@ -273,6 +343,7 @@ government "Invasive Lifeform"
 		"Test Dummy" -.01
 		"Ember Waste" -.01
 		"Wanderer" -.01
+		"Wanderer (Hostile)" -.01
 	"bribe" 0
 	"fine" 0
 	"penalty for"
@@ -321,21 +392,44 @@ government "Phenomenon (dangerous)"
 		"Builder" -.01
 		"Bounty (Disguised)" -.01
 		"Bounty Hunter" -.01
+		"Bounty Hunter that Won't Enter Hai Space" -.01
+		"Bounty Hunter (licensed)" -.01
+		"Bunrodea" -.01
+		"Bunrodea (Erabu)" -.01
+		"Bunrodea (Guard)" -.01
+		"Bunrodea (Megasa)" -.01
 		"Coalition" -.01
+		"Creature Hunter" -.01
 		"Deep Security" -.01
 		"Drak" -.01
 		"Drak (Hostile)" -.01
 		"Free Worlds" -.01
+		"Free Worlds that won't enter wormhole" -.01
+		"Elenctic Commune" -.01
+		"Escort (Betraying)" -.01
+		"Forest (Prey)" -.01
+		"Gegno" -.01
+		"Gegno Scin" -.01
+		"Gegno Vi" -.01
+		"Gegno Scin (Neutral)" -.01
+		"Gegno Vi (Neutral)" -.01
+		"Gegno Vi (Duelist A)" -.01
+		"Gegno Vi (Duelist B)" -.01
+		"Grave Diggers" -.01
 		"Hai" -.01
 		"Hai Merchant" -.01
 		"Hai Merchant (Human)" -.01
 		"Hai Merchant (Sympathizers)" -.01
 		"Hai (Unfettered)" -.01
+		"Hai (Unfettered Wanderer Tribute)" -.01
+		"Hai (Friendly Unfettered)" -.01
+		"Hai (Unfettered Civilians)" -.01
 		"Hai (Wormhole Access)" -.01
 		"Heliarch" -.01
 		"Independent" -.01
 		"Independent (Killable)" -.01
 		"Indigenous Lifeform" -.01
+		"Indigenous Lifeform (Astral)" -.01
 		"Indigenous Predator" -.01
 		"Invasive Lifeform" -.01
 		"Ka'het" -.01
@@ -351,22 +445,32 @@ government "Phenomenon (dangerous)"
 		"Kor Scrappers" -.01
 		"Kor Scrappers (Hostile)" -.01
 		"Merchant" -.01
+		"Merchant (Hijacked)" -.01
 		"Militia" -.01
 		"Navy Intelligence" -.01
 		"Navy (Oathkeeper)" -.01
 		"Neutral" -.01
 		"Parrot" -.01
 		"Pirate" -.01
+		"Pirate (Devil-Run Gang)" -.01
 		"Pirate (Rival)" -.01
+		"Pirate (Rivals)" -.01
 		"Pug" -.01
 		"Pug (Wanderer)" -.01
 		"Quarg" -.01
+		"Quarg (Hai)" -.01
+		"Quarg (Kor Efret)" -.01
+		"Quarg (Gegno)" -.01
 		"Remnant" -.01
 		"Remnant (Research)" -.01
 		"Republic" -.01
+		"Republic Intelligence" -.01
+		"Republic that won't enter wormhole" -.01
 		"Republic (Friendly)" -.01
+		"Rulei" -.01
 		"Scar's Legion" -.01
 		"Scar's Legion (Killable)" -.01
+		"Smuggler (Hai Trafficker)" -.01
 		"Swarming Lifeform" -.01
 		"Syndicate" -.01
 		"Syndicate (Corrupt)" -.01
@@ -374,6 +478,7 @@ government "Phenomenon (dangerous)"
 		"Test Dummy" -.01
 		"Ember Waste" -.01
 		"Wanderer" -.01
+		"Wanderer (Hostile)" -.01
 	"bribe" 0
 	"fine" 0
 	"penalty for"
@@ -484,23 +589,41 @@ government "Swarming Lifeform"
 		"Builder" .03
 		"Bounty (Disguised)" .03
 		"Bounty Hunter" .03
+		"Bounty Hunter that Won't Enter Hai Space" .03
 		"Bounty Hunter (licensed)" .03
+		"Bunrodea" .03
+		"Bunrodea (Erabu)" .03
+		"Bunrodea (Guard)" .03
+		"Bunrodea (Megasa)" .03
 		"Coalition" .03
 		"Deep Security" .03
 		"Drak" .03
 		"Drak (Hostile)" .03
 		"Free Worlds" .03
+		"Free Worlds that won't enter wormhole" .03
+		"Elenctic Commune" .03
+		"Escort (Betraying)" .03
+		"Gegno" .03
+		"Gegno Scin" .03
+		"Gegno Vi" .03
+		"Gegno Scin (Neutral)" .03
+		"Gegno Vi (Neutral)" .03
+		"Gegno Vi (Duelist A)" .03
+		"Gegno Vi (Duelist B)" .03
 		"Grave Diggers" .03
 		"Hai" .03
 		"Hai Merchant" .03
 		"Hai Merchant (Human)" .03
 		"Hai Merchant (Sympathizers)" .03
 		"Hai (Unfettered)" .03
+		"Hai (Unfettered Wanderer Tribute)" .03
+		"Hai (Friendly Unfettered)" .03
+		"Hai (Unfettered Civilians)" .03
 		"Hai (Wormhole Access)" .03
 		"Heliarch" .03
 		"Independent" .03
 		"Independent (Killable)" .03
-		"Indigenous Lifeform" .03
+		"Indigenous Lifeform (Astral)" -0.01
 		"Ka'het" .03
 		"Ka'het (Infighting)" .03
 		"Ka'sei" .03
@@ -514,6 +637,7 @@ government "Swarming Lifeform"
 		"Kor Scrappers" .03
 		"Kor Scrappers (Hostile)" .03
 		"Merchant" .03
+		"Merchant (Hijacked)" .03
 		"Militia" .03
 		"Navy Intelligence" .03
 		"Navy (Oathkeeper)" .03
@@ -521,21 +645,30 @@ government "Swarming Lifeform"
 		"Parrot" .03
 		"Pirate" .03
 		"Pirate (Rival)" .03
+		"Pirate (Rivals)" .03
+		"Pirate (Devil-Run Gang)" .03
 		"Pug" .03
 		"Pug (Wanderer)" .03
 		"Quarg" .03
+		"Quarg (Hai)" .03
+		"Quarg (Kor Efret)" .03
+		"Quarg (Gegno)" .03
 		"Remnant" .03
 		"Remnant (Research)" .03
 		"Republic" .03
+		"Republic Intelligence" .03
+		"Republic that won't enter wormhole" .03
 		"Republic (Friendly)" .03
+		"Rulei" .03
 		"Scar's Legion" .03
 		"Scar's Legion (Killable)" .03
+		"Smuggler (Hai Trafficker)" .03
 		"Syndicate" .03
 		"Syndicate (Corrupt)" .03
 		"Syndicate (Extremist)" .03
 		"Test Dummy" .03
-		"Ember Waste" .03
 		"Wanderer" .03
+		"Wanderer (Hostile)" .03
 	"bribe" 0
 	"fine" 0
 	"penalty for"
@@ -566,6 +699,8 @@ government "Wanderer (Hostile)"
 	"display name" "Wanderer"
 	swizzle 2
 	color .70 .91 .12
+	"crew attack" 1.4
+	"crew defense" 1.8
 	"player reputation" -1000
 	language "Wanderer"
 	"hostile hail" "wanderer untranslated"

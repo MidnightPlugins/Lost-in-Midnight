@@ -20,7 +20,10 @@ system Paeli
 	government Uninhabited
 	attributes "ember waste" "graveyard" "wormhole"
 	arrival 500
-	habitable 10
+	ramscoop
+		universal 0
+		addend -0.02
+		multiplier 1.5	habitable 10
 	belt 1500
 	haze _menu/haze-red
 	link Esix

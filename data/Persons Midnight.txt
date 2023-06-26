@@ -198,6 +198,8 @@ ship "Modified Blackbird"
 		"weapon capacity" 90
 		"engine capacity" 110
 		"inscrutable" 1
+		"radar jamming" 4
+		"optical jamming" 2
 		"atmosphere scan" 100
 		"self destruct" 1
 		weapon
@@ -817,62 +819,66 @@ ship "Korath Devourer" "Korath Predator"
 	add attributes
 		"spinal mount" 1
 	outfits
-		"Korath Incinerator"
-		"Husk-Slice Turret"
-		"Shield Disruptor Turret"
-		"Grab-Strike Turret" 2
-		"Digger Mining Turret" 3
-		"Warder Anti-Missile" 3
-
-		"Triple Plasma Core"
-		"Systems Core (Large)" 3
-		"Liquid Sodium Cooler"
-		"Fuel Processor"
-		"Engineering Room"
-		"Korath Scanner"
-		"Large Heat Shunt"
-		"Quantum Bloodstone"
-		"Quantumium"
-		"Drone Hacking"
-		"Smuggler's Hideaway"
-
+		"Afterburner (Meteor Class)"
 		"Antique Rifle"
+		"Broadband Amplifier"
+		"DFN-53 Android"
+		Deuterium
+		"Digger Mining Turret" 3
 		"Dream Crystal"
+		"Drone Hacking"
 		"Dual Pulse Pistols"
+		Dysprosium
 		"Enforcer Confrontation Gear"
 		"Enforcer Riot Staff"
+		"Engineering Room"
 		"Execution Chamber"
+		Fossil
 		"Fragmentation Grenades"
+		"Fuel Processor"
+		"Grab-Strike Turret" 2
+		"Guncraft"
+		"Hackerz Plugin Alpha"
+		"Hackerz Plugin Omega"
+		"Hackerz Plugin Sigma"
+		"Husk-Slice Turret"
 		"Intrusion Countermeasures"
 		"Ion Flash Bang"
+		"Irate Carronade"
+		"Jump Drive"
+		"Korath Incinerator"
+		"Korath Scanner"
 		"Korath Sentinel"
+		"Large Heat Shunt"
 		"Laser Rifle"
+		"Lasher Pistol"
+		"Liquid Sodium Cooler"
 		"Medical Bay"
 		"Microbot Defense Station"
+		"Mysterious Treasure"
 		"Nerve Gas"
+		"Plasma Grenades"
+		Plasmasickle
 		"Pug Biodefenses"
 		"Pug Peacekeeping Staff"
 		"Pulse Rifle"
 		"Purger Rifle"
+		"Quantum Bloodstone"
+		Quantumium
 		"Riot Containment Barrier"
+		"Savagery Pike"
 		"Security Station"
+		"Shield Disruptor Turret"
+		"Smuggler's Hideaway"
 		"Sniper Rifle"
-		"Thermal Repeater Rifle" 502
-		"Tuning Rifle"
-
-		"Afterburner (Meteor Class)"
 		"Steering (Planetary Class)"
-		"Thruster (Planetary Class)"
-		"Jump Drive"
-
 		"Subsidurial Plushie"
-		"Deuterium"
-		"Dysprosium"
-		"Fossil"
-		"Mysterious Treasure"
-		"Hackerz Plugin Omega"
-		"Hackerz Plugin Alpha"
-		"Hackerz Plugin Sigma"
+		"Systems Core (Large)" 3
+		"Thermal Repeater Rifle" 495
+		"Thruster (Planetary Class)"
+		"Triple Plasma Core"
+		"Tuning Rifle"
+		"Warder Anti-Missile" 3
 
 	turret "Digger Mining Turret"
 	turret "Shield Disruptor Turret"

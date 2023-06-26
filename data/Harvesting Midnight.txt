@@ -146,6 +146,12 @@ outfitter "Silicon"
 outfitter "Silver"
 	"Silver"
 
+outfitter "Tungsten"
+	"Tungsten"
+
+outfitter "Uranium"
+	"Uranium"
+
 
 
 mission "Harvesting: Metallic Asteroids"

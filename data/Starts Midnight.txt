@@ -17,13 +17,25 @@
 #	- Kamikaze
 #	- Guncraft
 
-
+mission "Global: main plot completed"
+	landing
+	invisible
+	to offer
+		has "main plot completed"
+		not "global: main plot completed"
+	on offer
+		"global: main plot completed" ++
+		fail
 
 start
 	name "Time Skip"
+	to unlock
+		has "main plot completed"
+	on reveal
+		description `Unlocked after completion of the main plot.`
 	description `Home Planet: New Boston`
 	description `Job History: textile mill`
-	description `Ship: default`
+	description `Ship: ?`
 	description `	For experienced pilots who've already flown the Endless Skies. No intro missions here!`
 	description `	There's no starting loan to pay off, but you have less time to prepare before the main events of the game start happening.`
 	description `	As you travel the galaxy, your memories of the local systems may be restored.`
@@ -44,12 +56,34 @@ start
 
 conversation "Time Skip intro"
 	scene "planet/wormhole"
-	`You wake up in your old home on New Boston, your head reeling from a pounding headache. The last thing you remember was traveling through a  wormhole. The rest of your memories are fuzzy. As the pain and dizzyness fade away, you check the date and realize you've traveled back in time! It's a few months after you recall buying your first ship. Checking your possessions, the only noteworthy item you have right now is your pilot's license. The bank indicates you have no outstanding loans, but as far as you can tell, you don't have a single ship to your name. It seems this is an alternate time line.`
+	`You wake up in your old home on New Boston, your head reeling from a pounding headache. The last thing you remember was traveling through a  wormhole. The rest of your memories are fuzzy. As the pain and dizzyness fade away, you check the date and realize you've traveled back in time! It's a few months after you recall buying your first ship. Checking your possessions, the only noteworthy item you have right now is your pilot's license. The bank indicates you have 450,000 credits and no outstanding loans. But as far as you can tell, you don't have a single ship to your name. It seems this is an alternate time line.`
 	`	With no clue how you got here and no guidance for returning to your original time line, you set out for the shipyard.`
 	`	A sales clerk approaches you and offers her assistance. You ask to see the ships available for sale and introduce yourself:`
 	name
 	scene "scene/scene-basic ships"
 	`	Walking among the rusted out hulks and newer ships that gleam in the sunlight, you smell grease and dirt and rocket fuel; nostalgic smells. There are three ship models within your price range. Will you choose the same one you chose before?`
+	choice
+		`	(Choose from among the three new models.)`
+			decline
+		`	(Ask if any used ships are available.)`
+	scene "scene/scene-basic ships"
+	scene "thumbnail/pirate scrapper"
+	action
+		event "add scrapper to basic shipyard"
+	`	The sales clerk leads you to an old Scrapper parked far from the newer model ships. At a mere 231,000 credits, this rust bucket is definitely within your price range. But the hull may not hold up against a pirate attack. Are you willing to risk your life just to save some credits?`
+	choice
+		`	(Choose from among the three new models.)`
+			decline
+		`	(Buy the Scrapper.)`
+	scene "thumbnail/pirate scrapper"
+	`	You purchase the Scrapper for 231,000 credits.`
+	action
+		give ship "Scrapper" "Yesterday's Tomorrow"
+		payment -231000
+
+event "add scrapper to basic shipyard"
+	shipyard "Basic Ships"
+		add "Scrapper"
 
 mission "Intro [Time Skip]"
 	invisible
@@ -98,6 +132,7 @@ mission "Time Skip Map"
 	invisible
 	to offer
 		has "Time Skip start"
+		not "global: "
 	on offer
 		outfit "Local Map"
 		conversation
@@ -108,6 +143,9 @@ mission "Time Skip Map"
 mission "Time Skip Mapping"
 	landing
 	invisible
+	repeat
+	source
+		government "Republic" "Syndicate" "Free Worlds" "Pirate" "Independent" "Neutral"
 	to offer
 		has "Time Skip start"
 		random < 10
@@ -119,6 +157,8 @@ mission "Time Skip Mapping"
 			`Some of your memories of this galactic region return to you. Continuing your travels of the galaxy may restore more of your memories.`
 				decline
 
+
+
 #############################
 
 
@@ -128,7 +168,7 @@ start
 	description `Home Planet: New Boston`
 	description `Job History: textile mill`
 	description `Ship: Modified Berserker`
-	description `	This starter interceptor is outfitted for mining and has a weapon more powerful at close range.`
+	description `	This interceptor is outfitted for mining and has a weapon more powerful at close range.`
 	thumbnail "thumbnail/berserker"
 	date 16 11 3013
 	system "Rutilicus"
@@ -159,7 +199,7 @@ start
 			"hull" 550
 			"required crew" 1
 			"bunks" 2
-			"mass" 130
+			"mass" 90
 			"drag" 2.2
 			"heat dissipation" .85
 			"fuel capacity" 400
@@ -445,7 +485,7 @@ start
 	description `Home Planet: New Boston`
 	description `Job History: textile mill`
 	description `Ship: Infiltrator`
-	description `	This starter transport is outfitted for espionage and smuggling missions.`
+	description `	This transport is outfitted for espionage and smuggling missions.`
 	thumbnail "thumbnail/infiltrator-thumb"
 	date 16 11 3013
 	system "Rutilicus"
@@ -499,6 +539,7 @@ start
 			"LP036a Battery Pack"
 			"D14-RN Shield Generator"
 			"Brig"
+			"Broadband Amplifier"
 			"Cargo Scanner"
 			"Outfit Scanner"
 			"Infiltrator Tech"
@@ -904,7 +945,6 @@ mission "Free Worlds Espionage [Mata Hari]"
 		"reputation: Free Worlds" >= 0
 		has "war begins"
 		not "chosen sides"
-		not "event: navy using mark ii ships"
 		random < 70
 	source
 		outfits "Outfit Scanner"
@@ -966,7 +1006,7 @@ start
 	description `Home Planet: New Boston`
 	description `Job History: textile mill`
 	description `Ship: Gremlin`
-	description `	This starter freighter has some flaws, but may lead to a profitable business venture.`
+	description `	This freighter has some flaws, but may lead to a profitable business venture.`
 	thumbnail "thumbnail/gremlin-thumb"
 	date 16 11 3013
 	system "Rutilicus"
@@ -1038,6 +1078,7 @@ start
 		description "Betelgeuse Shipyards Gremlin has seen limited adoption among merchant fleets. It has become especially popular among smugglers, who've created alternative configurations using Interference Plating."
 
 outfit "Gremlin Circuits"
+	plural "Gremlin Circuits"
 	category "Systems"
 	thumbnail "outfit/damaged capacitor"
 	"fused circuits" 1
@@ -1352,7 +1393,7 @@ mission "Betelgeuse offer [Gremlin 3]"
 		require "Gremlin Circuits"
 		conversation
 			scene "thumbnail/gremlin-thumb"
-			`You find Henrietta after checking with the receptionist at Betelgeuse headquarters. "<first> <last>, your still al- I mean, has it been a year already? Time flies. Did you bring it?"`
+			`You find Henrietta after checking with the receptionist at Betelgeuse headquarters. "<first> <last>, you're still al- I mean, has it been a year already? Time flies. Did you bring it?"`
 			choice
 				`	"Yeah. So how much is Betelgeuse offering?"`
 				`	"I've changed my mind. I'm not interested afterall."`
@@ -1376,7 +1417,7 @@ mission "Betelgeuse offer [Gremlin 4]"
 		has "Betelgeuse offer [Gremlin 3]: failed"
 		has "event: Gremlin Betelgeuse Production"
 	on offer
-		"salary: Betelgeuse" = 200
+		"salary: Betelgeuse" += 200
 		conversation
 			scene "thumbnail/gremlin-thumb"
 			`You receive a message from Henrietta: "The Gremlin is now available at Betelgeuse shipyards!" You should start receiving your payments soon.`
@@ -1392,7 +1433,7 @@ start
 	description `Home Planet: New Boston`
 	description `Job History: textile mill`
 	description `Ship: Marauder Sparrow`
-	description `	This starter interceptor has an explosive secret! Features early game duels with other Marauder Sparrows.`
+	description `	This interceptor has an explosive secret! Features early game duels with other Marauder Sparrows and more opportunities for early bounty hunting jobs.`
 	thumbnail "thumbnail/marauder sparrow-thumb"
 	date 16 11 3013
 	system "Rutilicus"
@@ -1416,7 +1457,7 @@ start
 		attributes
 			category "Interceptor"
 			"cost" 450000
-			"shields" 1200
+			"shields" 1400
 			"hull" 300
 			"required crew" 1
 			"bunks" 1
@@ -1438,23 +1479,26 @@ start
 		outfits
 			"Beam Laser" 2
 			"Thermo Detonator"
-
+			
 			Supercapacitor
 			"nGVF-BB Fuel Cell"
 			"Modified D23-QP Shielding"
 			"Cargo Expansion"
 			"Fuel Pod"
 			"Small Bunk Room"
-
+			"Laser Rifle"
+			
 			"A120 Atomic Thruster"
 			"A125 Atomic Steering"
 			Hyperdrive
 			
 		engine -5 35
 		engine 5 35
-		gun -7 -10
-		gun 7 -10
-		turret 0 0
+		gun -7 -10 "Beam Laser"
+		gun 7 -10 "Beam Laser"
+		gun -10.5 -8.5
+		gun 10.5 -8.5
+		turret 0 0 "Thermo Detonator"
 		"explode" "nuke explosion (small)"
 		"explode" "nuke residue fast" 10
 		"explode" "nuke residue slow" 10
@@ -1555,7 +1599,6 @@ mission "Kamikaze Chaser"
 	landing
 	invisible
 	source "New Boston"
-	deadline 1
 	to offer
 		has "Kamikaze start"
 	on offer
@@ -1571,7 +1614,10 @@ mission "Kamikaze Chaser"
 		personality target waiting vindictive nemesis
 			confusion 20
 		ship "Marauder Sparrow (Blaster)" "Robber's Revenge"
-		dialog `The bank robbers must have had plans for the strange device you found aboard their Marauder Sparrow.`
+		dialog `The bank robbers must have had plans for the strange device you found aboard their Marauder Sparrow. You should check if the authorities on  <origin> have placed a price on their heads.`
+	on complete
+		payment 25000
+		dialog phrase "generic bounty hunting payment dialog"
 
 mission "Kamikaze Ambush"
 	landing
@@ -1585,13 +1631,7 @@ mission "Kamikaze Ambush"
 			has "Kamikaze Chaser: done"
 			has "Kamikaze Chaser: failed"
 		not "Kamikaze Ambush: active"
-		or
-			and
-				"Kamikaze Ambush: offered" < 8
-				random < 100 - ( "Kamikaze Ambush: offered" * 10 )
-			and
-				"Kamikaze Ambush: offered" >= 8
-				random < 25
+		random < 100 - ( "Kamikaze Ambush: offered" * 10 )
 	on offer
 		require "Thermo Detonator"
 	npc disable
@@ -1612,8 +1652,142 @@ mission "Kamikaze Ambush"
 				"Marauder Sparrow (Meteor Missile)"
 			variant 1
 				"Marauder Sparrow (Turbo Blaster)"
-		dialog `If this Marauder Sparrow has the same device as yours, it may not be wise to approach it.`
+		dialog `If this Marauder Sparrow has the same device as yours, it may not be wise to approach it. You should check if the authorities on  <origin> have placed a price on their heads.`
+	on complete
+		payment 25000
+		dialog phrase "generic bounty hunting payment dialog"
 
+mission "Bounty Hunting (Kamikaze Very Tiny)"
+	name "Wanted corsair near <system>"
+	description "A small pirate fighter named the <npc> has been attacking merchants near the <system> system. Destroy it and return to <planet> by <day> for payment (<payment>)."
+	repeat
+	job
+	deadline 14
+	to offer
+		has "Kamikaze start"
+		or
+			has "ships: Interceptor"
+			has "ships: Light Warship"
+		"combat rating" > 1
+		"combat rating" < 200
+		random < 50
+	source
+		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
+		attributes "rim" "south" "north" "dirt belt" "core" "frontier"
+	npc kill
+		government "Bounty"
+		personality heroic staying nemesis target
+		system
+			distance 1 1
+		fleet
+			names "pirate"
+			variant 3
+				"Scrapper"
+			variant 6
+				"Sparrow"
+			variant
+				"Wasp"
+			variant
+				"Wasp (Gatling)"
+			variant
+				"Wasp (Javelin)"
+			variant
+				"Wasp (Meteor)"
+			variant
+				"Wasp (Plasma)"
+			variant
+				"Wasp (Proton)"
+		dialog phrase "generic hunted bounty eliminated dialog"
+	on visit
+		dialog phrase "generic bounty hunting on visit"
+	on complete
+		payment 25000
+		dialog phrase "generic bounty hunting payment dialog"
+
+mission "Bounty Hunting (Kamikaze Tiny)"
+	name "Wanted outlaw near <system>"
+	description "A well armed pirate fighter named the <npc> has been attacking merchants near the <system> system. Destroy it and return to <planet> by <day> for payment (<payment>)."
+	repeat
+	job
+	deadline 14
+	to offer
+		has "Kamikaze start"
+		or
+			has "ships: Interceptor"
+			has "ships: Light Warship"
+		"combat rating" > 15
+		"combat rating" < 200
+		random < 45
+	source
+		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
+		attributes "rim" "south" "north" "dirt belt" "core" "frontier"
+	npc kill
+		government "Bounty"
+		personality heroic staying nemesis target
+		system
+			distance 1 1
+		fleet
+			names "pirate"
+			variant
+				"Hawk"
+			variant
+				"Hawk (Rocket)"
+			variant
+				"Hawk (Speedy)"
+			variant
+				"Hawk (Bomber)"
+			variant
+				"Berserker"
+			variant
+				"Berserker (Afterburner)"
+			variant
+				"Berserker (Strike)"
+			variant
+				"Fury"
+			variant
+				"Fury (Missile)"
+			variant
+				"Fury (Heavy)"
+			variant
+				"Fury (Laser)"
+			variant
+				"Fury (Bomber)"
+		dialog phrase "generic hunted bounty eliminated dialog"
+	on visit
+		dialog phrase "generic bounty hunting on visit"
+	on complete
+		payment 50000
+		dialog phrase "generic bounty hunting payment dialog"
+
+mission "Bounty Hunting (Kamikaze Marauder I)"
+	name "Marauder interceptor near <system>"
+	description "A Marauder interceptor named the <npc> has been attacking merchants near the <system> system. Destroy it and return to <planet> by <day> for payment (<payment>)."
+	repeat
+	job
+	deadline 14
+	to offer
+		has "Kamikaze start"
+		or
+			has "ships: Interceptor"
+			has "ships: Light Warship"
+		"combat rating" > 25
+		"combat rating" < 200
+		random < 10
+	source
+		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
+		attributes "rim" "south" "north" "dirt belt" "core" "frontier"
+	npc kill
+		government "Bounty"
+		personality heroic staying nemesis target
+		system
+			distance 1 1
+		fleet "Marauder I"
+		dialog phrase "generic hunted bounty eliminated dialog"
+	on visit
+		dialog phrase "generic bounty hunting on visit"
+	on complete
+		payment 130000
+		dialog phrase "generic bounty hunting payment dialog"
 
 
 ####################################
@@ -1674,7 +1848,6 @@ mission "Guncraft II"
 		or
 			and
 				not "Randomize Guncraft II"
-				random < 70
 			and
 				has "Randomize Guncraft II"
 				random < 5
@@ -1732,7 +1905,6 @@ mission "Guncraft III"
 		or
 			and
 				not "Randomize Guncraft III"
-				random < 70
 			and
 				has "Randomize Guncraft III"
 				random < 5
@@ -1782,12 +1954,15 @@ mission "Guncraft IV"
 		attributes "outfitter"
 		not attributes "uninhabited"
 	to offer
-		"combat rating" >= 2981
 		has "Guncraft III: done"
+		or
+			"combat rating" >= 2981
+			and
+				"combat rating" >= 148
+				has "global: unlocked kestrel"
 		or
 			and
 				not "Randomize Guncraft IV"
-				random < 70
 			and
 				has "Randomize Guncraft IV"
 				random < 5
@@ -1842,12 +2017,15 @@ mission "Guncraft V"
 		not attributes "uninhabited"
 	waypoint "Sargas"
 	to offer
-		"combat rating" >= 8103
 		has "Guncraft IV: done"
+		or
+			"combat rating" >= 8000
+			and
+				"combat rating" >= 403
+				has "global: unlocked kestrel"
 		or
 			and
 				not "Randomize Guncraft V"
-				random < 70
 			and
 				has "Randomize Guncraft V"
 				random < 5
@@ -1926,12 +2104,16 @@ mission "Guncraft VI"
 		attributes "outfitter"
 		not attributes "uninhabited"
 	to offer
-		"combat rating" >= 22026
 		has "Guncraft V: done"
+		or
+			"combat rating" >= 10000
+			and
+				"combat rating" >= 1097
+				has "global: unlocked kestrel"
+				has "global: main plot completed"
 		or
 			and
 				not "Randomize Guncraft VI"
-				random < 70
 			and
 				has "Randomize Guncraft VI"
 				random < 5
@@ -1999,12 +2181,16 @@ mission "Guncraft VII"
 		attributes "outfitter"
 		not attributes "uninhabited" "pirate"
 	to offer
-		"combat rating" >= 59874
 		has "Guncraft VI: done"
+		or
+			"combat rating" >= 12000
+			and
+				"combat rating" >= 2981
+				has "global: unlocked kestrel"
+				has "global: main plot completed"
 		or
 			and
 				not "Randomize Guncraft VII"
-				random < 70
 			and
 				has "Randomize Guncraft VII"
 				random < 5
@@ -2064,12 +2250,16 @@ mission "Guncraft VIII"
 		attributes "outfitter"
 		not attributes "uninhabited" "core pirate"
 	to offer
-		"combat rating" >= 162755
 		has "Guncraft VII: done"
+		or
+			"combat rating" >= 14000
+			and
+				"combat rating" >= 8103
+				has "global: unlocked kestrel"
+				has "global: main plot completed"
 		or
 			and
 				not "Randomize Guncraft VIII"
-				random < 70
 			and
 				has "Randomize Guncraft VIII"
 				random < 5

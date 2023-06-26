@@ -592,3 +592,24 @@ news "Proton Turret-ATS unemployed"
 		word
 			`"`
 
+news "Fliers: Frontier"
+	location
+		attributes "frontier"
+	name
+		word
+			"Posted Notice"
+			"Posted Flier"
+	message
+		word
+			"WARNING: Pirates, anarchists, and terrorists have been known to attach Shield Suppressors onto ships without the owner's knowledge. Doing so sabotages their ability to regenerate shielding. This makes the victim an easier target for future attacks. If you find such a device installed on your vessel, remove it as soon as possible!"
+
+news "Fliers: Pirate"
+	location
+		attributes "frontier"
+	name
+		word
+			"Posted Notice"
+			"Posted Flier"
+	message
+		word
+			"UNLEASH YOUR POTENTIAL: Take your ship to the next level by installing a Limit Breaker. Guaranteed to keep your ship operational long past the point it would normally be disabled by excessive damage. Break your limits and buy a Limit Breaker today!"
