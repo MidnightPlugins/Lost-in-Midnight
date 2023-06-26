@@ -3969,7 +3969,7 @@ mission "Midnight Charybdis Station Defense Job"
 			`	1,000,000 credits are deposited into your account.`
 
 event "charybdis station defense job"
-	system Menkar
+	system Scheat
 		remove object
 			sprite planet/gas0
 			distance 2229.12
