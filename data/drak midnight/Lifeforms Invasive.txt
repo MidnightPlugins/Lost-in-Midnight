@@ -51,17 +51,20 @@ ship "Nova Firefly"
 		"hull" 3500
 		"mass" 220
 		"drag" 5.3
-		"heat dissipation" .9
+		"heat dissipation" 1.8
 		"cargo space" 32
 		"thrust" 22
 		"turn" 500
 		"hull repair rate" 2
-		"heat protection" 6
 		"hull protection" 1
 		"burn protection" 3
+		"heat protection" 3
+		"burn resistance" 3
 		"energy protection" 1
 		"ion protection" 3
+		"scramble protection" 3
 		"ion resistance" 1
+		"scramble resistance" 1
 		"energy capacity" 200
 		"fuel capacity" 399
 		"inscrutable" 1
@@ -122,7 +125,6 @@ outfit "Flare Belcher Projectile"
 		"shield damage" .8
 		"hull damage" .7
 		"heat damage" 200
-		"burn damage" .2
 
 effect "flare belcher die"
 	sprite "effect/explosion/pug/small"
@@ -162,11 +164,15 @@ ship "Egg Pouch"
 		"energy capacity" 100
 		"fuel capacity" 99
 		"hull repair rate" 1
-		"heat protection" 3
 		"hull protection" 1
 		"energy protection" 3
+		"burn protection" 3
+		"heat protection" 3
+		"burn resistance" 3
 		"ion protection" 3
+		"scramble protection" 3
 		"ion resistance" 1
+		"scramble resistance" 1
 		"inscrutable" 1
 		"ramscoop" 1
 		"solar collection" 1
@@ -202,7 +208,13 @@ ship "Firefly Young"
 		"thrust" 18
 		"turn" 400
 		"hull repair rate" 1
+		"burn protection" 2
 		"heat protection" 2
+		"burn resistance" 2
+		"ion protection" 3
+		"scramble protection" 3
+		"ion resistance" 1
+		"scramble resistance" 1
 		"energy capacity" 20
 		"inscrutable" 1
 		"gaslining" 1
@@ -215,8 +227,14 @@ ship "Firefly Young"
 	explode "glow blood" 15
 	"final explode" "glow blood"
 	description "A freshly hatched Nova Firely. They have not yet developed their parent's territorial hostility or their ability to vomit bursts of flame."
-	
+
+
+phrase "nova firefly"
+	word
+		"Nova Firefly"
+
 fleet "Nova Firefly"
+	names "nova firefly"
 	government "Invasive Lifeform"
 	cargo 0
 	personality vindictive mining harvests mute
@@ -228,6 +246,7 @@ fleet "Nova Firefly"
 		"Nova Firefly" 3
 
 fleet "Nova Firefly Hatchery"
+	names "nova firefly"
 	government "Invasive Lifeform (Passive)"
 	cargo 0
 	personality mining harvests mute
@@ -236,6 +255,7 @@ fleet "Nova Firefly Hatchery"
 		"Firefly Young" 4
 
 fleet "Nova Firefly Scout"
+	names "nova firefly"
 	government "Invasive Lifeform (Passive)"
 	cargo 0
 	personality vindictive mining harvests mute
@@ -296,7 +316,9 @@ ship "Star Gazer"
 		"hull repair rate" 3
 		"hull protection" 1
 		"ion protection" 3
+		"scramble protection" 3
 		"ion resistance" 1
+		"scramble resistance" 1
 		"energy capacity" 100
 		"solar collection" .2
 		"inscrutable" 1
@@ -310,10 +332,11 @@ ship "Star Gazer"
 		"jump out sound" "jump_drive-ver8"
 		"ramscoop" 1
 		"outfit scan power" 32
-		"outfit scan speed" 4
+		"outfit scan efficiency" 40
 		"cargo scan power" 8
-		"cargo scan speed" 4
+		"cargo scan efficiency" 20
 		"atmosphere scan" 100
+		"asteroid scan power" 50
 	outfits
 		"Quill Launcher?" 8
 
@@ -328,7 +351,7 @@ ship "Star Gazer"
 	leak "blood" 30 50
 	explode "blood" 45
 	"final explode" "blood"
-	description "An invasive species from beyond our galaxy. While not particularly aggressive, they can be dangerous if provoked. Their bodies generate replacement quills quickly, allowing them to maintain a constant stream of fire. These projectiles are made of a material that evades detection by anti-missile systems and may have other unknown properties."
+	description "An invasive species from beyond our galaxy. They seem possessed by an insatiable curiosity, observing everything they encounter with multiple eyes and other, more alien, sensory organs. While not particularly aggressive, Stargazers can be dangerous if provoked. Their bodies are covered with sharp quills that can be flung towards predators. They regenerate quickly, allowing them to maintain a constant stream of fire. These projectiles are made of a material that evades detection by anti-missile systems and may have other unknown properties."
 
 effect "jump drive wisp"
 	sprite "effect/jump drive wisp"
@@ -362,7 +385,12 @@ outfit "Quill Launcher?"
 		"firing energy" .1
 		"phasing"
 
+phrase "star gazer"
+	word
+		"Star Gazer"
+
 fleet "Star Gazer Passive"
+	names "star gazer"
 	government "Invasive Lifeform (Passive)"
 	cargo 0
 	personality surveillance opportunistic mute
@@ -374,6 +402,7 @@ fleet "Star Gazer Passive"
 		"Star Gazer" 5
 
 fleet "Star Gazer Aggressive"
+	names "star gazer"
 	government "Invasive Lifeform"
 	cargo 0
 	personality vindictive opportunistic unconstrained mute
@@ -403,7 +432,7 @@ mission "First Contact: Star Gazer"
 		government "Invasive Lifeform (Passive)"
 		system "Watcher's Nest"
 		personality waiting staying opportunistic surveillance mute
-		ship "Star Gazer"
+		ship "Star Gazer" "Star Gazer"
 
 event "Reveal Watcher's Nest"
 	system "Watcher's Nest"
@@ -474,9 +503,9 @@ mission "Gaze Through The Eye"
 		government "Invasive Lifeform (Passive)"
 		system "Sko'karak"
 		personality waiting staying surveillance mute
-		ship "Star Gazer"
+		ship "Star Gazer" "Star Gazer"
 	npc
 		government "Invasive Lifeform (Passive)"
 		system "Sabriset"
 		personality waiting staying surveillance mute
-		ship "Star Gazer"
+		ship "Star Gazer" "Star Gazer"

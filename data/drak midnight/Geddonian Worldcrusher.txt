@@ -57,6 +57,7 @@ government "Doomsday Device"
 		"Navy Intelligence" -.01
 		"Navy (Oathkeeper)" -.01
 		"Neutral" -.01
+		"Phenomenon (dangerous)" -.01
 		"Pirate" -.01
 		"Pirate (Rival)" -.01
 		"Pug" -.01
@@ -189,6 +190,71 @@ outfit "Imaginary Number Fusion Matrix"
 	description "You have no idea how this works."
 
 
+outfit "Omni-Directional Photonic Emitter"
+	category "Turrets"
+	thumbnail outfit/unknown
+	"mass" 54
+	"outfit space" -54
+	"weapon capacity" -54
+	"turret mounts" -1
+	"required crew" 1
+	"unplunderable" 1
+	"reinstall" -1
+	weapon
+		sprite "projectile/photonic"
+			"frame rate" 1
+		"hardpoint offset" 0
+		sound "skylance"
+		"hit effect" "skylance impact"
+		"inaccuracy" .2
+		"turret turn" 8
+		"velocity" 1000
+		"lifetime" 1
+		"reload" 1
+		"firing energy" 10
+		"firing heat" 30
+		"shield damage" 100
+		"hull damage" 80
+	description "You have no idea how this works."
+
+
+outfit "Space Differential Stabilizer"
+	category "Turrets"
+	thumbnail outfit/unknown
+	"mass" 45
+	"outfit space" -45
+	"weapon capacity" -45
+	"turret mounts" -1
+	"required crew" 1
+	"unplunderable" 1
+	"reinstall" -1
+	weapon
+		"hardpoint offset" 0
+		"inaccuracy" 0
+		"turret turn" 2.9
+		"velocity" 500
+		"lifetime" 1
+		"reload" 1
+		"firing energy" 36.6
+		"firing heat" 90
+		"firing force" 6
+	description "You have no idea how this works."
+
+
+outfit "Zero Division Core"
+	category "Power"
+	thumbnail outfit/unknown
+	"mass" 73
+	"outfit space" -73
+	"energy generation" 90
+	"heat generation" 243
+	"energy capacity" 1800
+	"shield generation" 4.5
+	"shield energy" 4.5
+	"unplunderable" 1
+	"reinstall" -1
+	description "You have no idea how this works."
+
 
 ship "Worldcrusher"
 	sprite "ship/geddonian worldcrusher/geddonian worldcrusher"
@@ -212,16 +278,30 @@ ship "Worldcrusher"
 		"outfit space" 7360
 		"weapon capacity" 6054
 		"engine capacity" 270
+		"hull protection" 9
+		"disruption protection" 9
+		"energy protection" 9
+		"force protection" 9
+		"heat protection" 9
 		"ion protection" 9
+		"piercing protection" 9
+		"slowing protection" 9
+		"burn protection" 9
+		"corrosion protection" 9
+		"burn resistance" 9
+		"corrosion resistance" 9
+		"disruption resistance" 9
 		"ion resistance" 9
+		"piercing resistance" .9
+		"slowing resistance" 9
 		"ramscoop" 9
 		"inscrutable" 1
 	outfits
-		"Graviton Channeler" 1
+		"Graviton Channeler"
 		"Quantum Paradox Diffusion" 12
-		"Quantum Paradox Inversion" 1
-		"Imaginary Number Fusion Matrix" 1
-		"Quantum Paradox Propulsion" 1
+		"Quantum Paradox Inversion"
+		"Imaginary Number Fusion Matrix"
+		"Quantum Paradox Propulsion"
 	turret -0.5 -208 "Quantum Paradox Diffusion"
 	turret -108.5 -170.5 "Quantum Paradox Diffusion"
 	turret 107.5 -169 "Quantum Paradox Diffusion"
@@ -284,6 +364,54 @@ effect "jump drive explode huge"
 effect "final jump drive"
 	sound "jump out"
 
+ship "Crystal Sentry"
+	sprite "ship/crystal sentry/crystal sentry"
+		"frame rate" 1
+		"rewind"
+	"never disabled"
+	attributes
+		category "Drone"
+		licenses
+			Author
+		"shields" 99999
+		"hull" 99999
+		"automaton" 1
+		"mass" 999
+		"drag" 9.0
+		"heat dissipation" 1.8
+		"cargo space" 0
+		"outfit space" 172
+		"weapon capacity" 99
+		"inscrutable" 1
+		weapon
+			"blast radius" 500
+			"shield damage" 10000
+			"hull damage" 5000
+			"hit force" 10000
+	outfits
+		"Omni-Directional Photonic Emitter"
+		"Space Differential Stabilizer"
+		"Zero Division Core"
+	turret 0 0 "Space Differential Stabilizer"
+	turret 0 0 "Omni-Directional Photonic Emitter"
+	leak "nano spark" 50 80
+	explode "ion spark" 120
+	"final explode" "nuke explosion"
+	description "This Crystal Sentry is still has some functionality."
+
+phrase "???"
+	word
+		"???"
+
+fleet "Small Crystal Sentry"
+	government "Phenomenon (dangerous)"
+	personality vindictive unconstrained mute
+	names "???"
+	cargo 0
+	variant
+		"Crystal Sentry"
+		"Phantom Drone Launcher (jump)"
+
 
 
 mission "Geddonia's Folly (Corpse)"
@@ -300,7 +428,7 @@ mission "Geddonia's Folly (Corpse)"
 				`	"Why did they build the Worldcrusher?"`
 				`	"Who were the Geddonians fighting?"`
 			`	"You may find this difficult to believe. But the Worldcrusher was not built as a weapon of war. One of their youths constructed it in an attempt to impress the elders in a competition of scientific prowess," replies the voice in your head.`
-			`	"A science project? You're telling me a kid's science project caused the downfall of their entire civilization?" you ask, disbelieving.`
+			`	"A science project? You're telling me a kid's science project caused the downfall of their entire civilization?" you ask.`
 			`	"Yes. It was the Geddonian's folly that taught us the wisdom of limiting technological access to those who have the maturity to use it responsibly. Remember the Geddonians and learn from their downfall."`
 			`	As the voice fades from your mind you see visions of aliens made of light living in large crystalline structures that shatter as their world is destroyed. The image the vision presents of the Geddonian's physical nature is completely beyond your own experience. The closest approximation you can relate to them is that each resembled a star smaller in size than a human. They possessed telekinetic powers to manipulate their environment. Somehow, you're certain that if you were to encounter one and gaze upon it with your own eyes, you would go blind from the intensity of the light.`
 				decline
@@ -308,7 +436,8 @@ mission "Geddonia's Folly (Corpse)"
 event "Reveal Temeh"
 	system Temeh
 		remove hidden
-			
+
+
 mission "First Contact: Geddonia"
 	landing
 	invisible
@@ -317,7 +446,7 @@ mission "First Contact: Geddonia"
 		system Temeh
 		government "Doomsday Device"
 		personality waiting staying mining vindictive unconstrained
-		ship "Worldcrusher" "Geddonia"
+		ship "Worldcrusher" "???"
 		conversation
 			`A telepathic voice speaks to you again. "Congratulations. You are one of a very few who have managed to force the Worldcrusher to phase into another quantum space time. None can predict when it will return."`
 			choice
@@ -333,10 +462,23 @@ mission "Geddonian Worldcrusher"
 	to offer
 		has "First Contact: Geddonia: done"
 		random < 5
+	npc
+		system Temeh
+		government "Phenomenon (dangerous)"
+		personality waiting staying vindictive unconstrained mute
+		fleet
+			names "???"
+			cargo 0
+			variant
+				"Crystal Sentry" 3
+			variant
+				"Crystal Sentry" 5
+			variant
+				"Crystal Sentry" 7
 	npc kill
 		system Temeh
 		government "Doomsday Device"
 		personality waiting staying mining vindictive unconstrained
-		ship "Worldcrusher" "Geddonia"
+		ship "Worldcrusher" "???"
 	on complete
 		clear "Geddonia Worldcrusher: offered"

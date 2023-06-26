@@ -94,6 +94,7 @@ outfit "Metal Tentacle?"
 outfit "Liquid Metal Specimen"
 	category "Special"
 	thumbnail "outfit/liquid metal specimen"
+	"flotsam chance" 1
 	description "Specimen ID Number: HG-80"
 	description "Source: Moktar"
 	description "Notes: Multimorphic Nanomachines. Can mimic shape, not color."
