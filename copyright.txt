@@ -158,15 +158,11 @@ License: public-domain
 
 Files:
  sounds/ambient/*
+ sounds/icicle
+ sounds/swingfire
 Copyright: various
 License: public-domain
  Based on public domain sounds taken from freesound.org.
-
-Files:
- sounds/splatter.wav
-Copyright: Michael Arsollon
-License: public-domain
-Comment: Edited Endless Sky minelayer sound. Derived from public domain sounds taken from freesound.org.
 
 Files:
  sounds/asteroid catapult.wav
@@ -176,7 +172,7 @@ Comment: Edited Endless Sky ionball sound. Derived from work by pluralz from htt
 
 Files:
  sounds/jump_drive-ver8.wav
- sounds/siren.wav
+ sounds/medium_explosion-ver8.wav
 Copyright: Écrivain, Iwan Gabovitch, Bart Kelsey, others.
 License: public-domain
  From opengameart.org. The contributors have placed these sounds in the public domain.
@@ -193,7 +189,8 @@ Copyright: Stephen M. Cameron
 License: CC-BY-SA-3.0
  (creativecommons.org/licenses/by-sa/3.0)
 
-Files: sounds/mod_blaster-ver8.wav
+Files:
+ sounds/mod_blaster-ver8.wav
 Copyright: Dravenx (www.dravenxgames.com)
 License: CC-BY-3.0
  (creativecommons.org/licenses/by/3.0)
@@ -206,11 +203,25 @@ License: CC-BY-3.0
 
 Files: 
  sounds/laser-ver8~.wav
-Copyright: Jesús Lastra
 License: CC-BY-3.0
  (creativecommons.org/licenses/by/3.0)
 
+Files: 
+ sounds/modified heavy_laser-ver8~.wav
+Copyright: Michael Arsollon
+License: CC-BY-3.0
+ (creativecommons.org/licenses/by/3.0)
+Comment: Derived from works by Jesús Lastra (from under the same license).
+
+
+Files: 
+ sounds/genesislaser~.wav
+Copyright: Michael Arsollon
+License: public-domain
+Comment: Edited Endless Sky laser sound, a public domain sound taken from freesound.org.
+
 Files:
+ sounds/meteor-ver8.wav
  sounds/sidewinder-ver8.wav
 Copyright: Michel Baradari (apollo-music.de)
 License: CC-BY-3.0
