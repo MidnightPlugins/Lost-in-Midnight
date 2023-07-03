@@ -27,7 +27,7 @@ mission "Biohazard 1: Star Explorer"
 				random < 70
 			and
 				has "Randomize Star Explorer Biohazard"
-				random < 10
+				random < 5
 	on offer
 		conversation
 			scene "ship/star explorer"
@@ -46,7 +46,7 @@ mission "Biohazard 1: Star Explorer"
 	npc
 		government "Bounty"
 		system "Gorvi"
-		personality target waiting staying
+		personality waiting staying
 			confusion 20
 		ship "Scout (Bounty Hunter)" "Jekyll"
 		ship "Scout (Bounty Hunter)" "Hyde"
@@ -55,7 +55,7 @@ mission "Biohazard 1: Star Explorer"
 	npc board
 		government "Bounty"
 		system "Gorvi"
-		personality target waiting staying
+		personality target waiting staying mute
 			confusion 10
 		ship "Star Explorer (Biohazard)" "Biohazard-031"
 		conversation
@@ -70,6 +70,8 @@ mission "Biohazard 1: Star Explorer"
 			scene "outfit/purger rifle"
 			`	You find several more dead bodies as you explore the ship. Some appear to be escaped prisoners with the strange green patches on their skin while others are normal humans in lab coats or tactical gear. The ones in uniforms bear a patch with "BH-031" printed on them. The humans are carrying rifles loaded with some sort of injection round. A bayonet style needle protrudes from under the barrel.`
 			`	As you take all this in, a door at the far end of the hall opens and an escaped prisoner emerges from it before running in your direction! Green splotches mar her arms and face. She yells out, "Help! They're killing us!" One of the Biohazard crew members appears from behind her, shooting her in the back of the leg with a single injection round. She falls, seemingly dead before she even hits the floor. More Biohazard crew arrive and they turn these weapons towards you...`
+	on fail
+		dialog "[MISSION FAILED]: You were supposed to rescue the kidnapped victims before destroying the Biohazard-031. If life were a game, you could reload a save file and try again."
 	on complete
 		payment 200000
 		event "independent star explorers"
@@ -77,6 +79,7 @@ mission "Biohazard 1: Star Explorer"
 		conversation
 			scene "scene/scene-biohazard031"
 			`Although you failed to rescue any of the victims, the government of <planet> pays you <payment>. You managed to stop the Biohazard from kidnapping any more people for their twisted experiments. But some details about this mission linger. The crew of the Biohazard didn't seem like normal pirates. The uniforms were too professional. And the antipersonnel weapons they carried require specialized ammunition. But most concerning of all was the "031" appended to the ship's name. It seems to suggest that there are other Biohazard ships out there...`
+
 
 
 
@@ -672,11 +675,29 @@ mission "Infiltrator: War Begins"
 	deadline 30
 	to offer
 		has "event: war begins"
+	npc
+		government "Republic"
+		system Castor
+		personality staying waiting surveillance timid mute
+		fleet
+			fighters "republic fighter"
+			cargo 0
+			variant
+				"Surveillance Drone" 4
 	npc kill
 		government "Republic"
 		system Castor
 		personality staying waiting surveillance timid mute
 		ship "Infiltrator" "Subterfuge"
+	npc
+		government "Republic"
+		system Pollux
+		personality staying waiting surveillance timid mute
+		fleet
+			fighters "republic fighter"
+			cargo 0
+			variant
+				"Surveillance Drone" 4
 	npc kill
 		government "Republic"
 		system Pollux
@@ -842,7 +863,7 @@ mission "Midnight Paradise Fortune 2"
 	waypoint "Tortor"
 	destination "Farpoint"
 	to offer
-		has "Skeleton Key North 1: done"
+		has "Midnight Paradise Fortune 1: done"
 	on offer
 		conversation
 			`You finally arrive at <planet>. Diana opens her bag and pulls out something dangerous...`
@@ -938,7 +959,16 @@ mission "Midnight Paradise Fortune 2"
 		conversation
 			`	On <planet> you find an outstanding bounty of <payment> for the <npc>. After collecting your pay, you find a note from Diana: "Thank you for rescuing me <first>. I've decided to stay on <planet> for a while and see what opportunities I can find." Other than the military, there isn't much on <planet>. But maybe being here will be a good experience for her.`
 
-
+mission "Midnight Paradise Fortune Patch"
+	landing
+	invisible
+	to offer
+		has "Midnight Paradise Fortune 2: offered"
+		not "Midnight Paradise Fortune 1: done"
+	on offer
+		clear "Midnight Paradise Fortune 2: offered"
+		fail "Midnight Paradise Fortune 2"
+		fail
 
 mission "Pandora's Problems 1"
 	invisible

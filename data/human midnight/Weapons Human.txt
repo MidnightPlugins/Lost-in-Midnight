@@ -392,7 +392,7 @@ effect "isochronal impact"
 outfit "Twin Particle Cannon"
 	category "Guns"
 	cost 530000
-	thumbnail "outfit/particle cannon"
+	thumbnail "outfit/twin particle cannon"
 	"mass" 64
 	"outfit space" -64
 	"weapon capacity" -64
