@@ -577,6 +577,7 @@ person "Midnight Predator"
 			"Kwach."
 			"Quatch."
 			"Kwatch."
+			"Quiche."
 	phrase
 		word
 			"When capturing enemy ships "
@@ -836,7 +837,7 @@ ship "Korath Devourer" "Korath Predator"
 		Fossil
 		"Fragmentation Grenades"
 		"Fuel Processor"
-		"Grab-Strike Turret" 2
+		"Shock-Strike Turret" 2
 		"Guncraft"
 		"Hackerz Plugin Alpha"
 		"Hackerz Plugin Omega"
@@ -883,8 +884,8 @@ ship "Korath Devourer" "Korath Predator"
 	turret "Digger Mining Turret"
 	turret "Shield Disruptor Turret"
 	turret "Husk-Slice Turret"
-	turret "Grab-Strike Turret"
-	turret "Grab-Strike Turret"
+	turret "Shock-Strike Turret"
+	turret "Shock-Strike Turret"
 	turret "Digger Mining Turret"
 	turret "Warder Anti-Missile"
 	turret "Warder Anti-Missile"
