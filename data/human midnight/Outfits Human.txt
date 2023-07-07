@@ -673,6 +673,20 @@ outfit "Balthazar Model"
 
 
 
+outfit "Biohazard Gas"
+	plural "Biohazard Gas"
+	category "Unique"
+	cost 375000
+	thumbnail "outfit/biohazard gas"
+	"capture attack" 28
+	"capture defense" 8
+	"scan brightness" 1
+	"atrocity" 1
+	"unplunderable" 1
+	description "This illegal weapon designed for hand-to-hand combat seems to have been developed through experiments using the gas produced by Pug Biodefenses on unwilling human test subjects."
+
+
+
 outfit "Carabao AI"
 	category "Unique"
 	cost 0

@@ -748,11 +748,13 @@ ship "Bulk Freighter" "Bulk Freighter (Biohazard)"
 		"Stinger Missile Rack" 4
 		"Fusion Reactor"
 		"LP036a Battery Pack"
-		"Supercapacitor"
 		"Water Coolant System"
 		"Cooling Ducts"
 		"S-970 Regenerator"
 		"Purger Rifle" 18
+		"Pug Biodefenses"
+		"Biohazard Gas"
+		"Security Station"
 		"Brig"
 		"Interference Plating"
 		"A250 Atomic Thruster"
@@ -2374,6 +2376,29 @@ ship "Leviathan" "Leviathan (Quad Mod Blaster)"
 
 
 
+ship "Manta" "Manta (Korath)"
+	outfits
+		Fire-Lance 4
+		"Fuel Processor"
+		"Generator (Furnace Class)"
+		"Jump Drive"
+		"Laser Rifle" 2
+		"Steering (Asteroid Class)"
+		"Systems Core (Medium)"
+		"Thermal Repeater Rifle"
+		Torpedo 51
+		"Torpedo Pod" 2
+		"Torpedo Storage Rack" 3
+		"X3200 Ion Steering"
+		"X3700 Ion Thruster"
+	gun "Fire-Lance"
+	gun "Fire-Lance"
+	gun "Fire-Lance"
+	gun "Fire-Lance"
+	gun "Torpedo Pod"
+	gun "Torpedo Pod"
+
+
 ship "Missileboat" "Missileboat (Nuclear)"
 	outfits
 		"Modified Blaster" 2
@@ -2908,6 +2933,16 @@ ship "Patrolboat" "Patrolboat (Turbo Blaster)"
 
 
 
+ship "Pirate Drone" "Pirate Drone (Modified)"
+	outfits
+		"Supercapacitor"
+		"X1700 Ion Thruster"
+		"X1200 Ion Steering"
+		"Modified Blaster"
+		"nGVF-AA Fuel Cell"
+
+
+
 ship "Protector" "Protector (Korath)"
 	outfits
 		"Blaze-Pike Turret" 2
@@ -2938,8 +2973,6 @@ ship "Protector" "Protector (Korath)"
 	turret "Digger Mining Turret"
 	turret "Warder Anti-Missile"
 
-
-
 ship "Protector" "Protector (Proton Turret-ATS)"
 	outfits
 		"Meteor Missile Launcher" 2
@@ -2963,8 +2996,6 @@ ship "Protector" "Protector (Proton Turret-ATS)"
 	turret "Proton Turret-ATS"
 	turret "Proton Turret-ATS"
 	turret
-
-
 
 ship "Protector" "Protector (Quad Mod Blaster)"
 	outfits
