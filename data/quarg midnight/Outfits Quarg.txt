@@ -56,9 +56,8 @@ outfit "Evidence of ********"
 
 outfit "Quarg Graviton Generator"
 	category "Unique"
-#	thumbnail "outfit/graviton generator"
-	thumbnail "outfit/unknown"
-	description "A weapon that once belonged to a Quarg criminal, the Graviton Generator causes a small singularity to appear temporarily at the distance and direction set by the wielder. Anything caught within the implosion point is instantly crushed from the extreme gravitational forces generated. Unlike traditional firearms no projectile is actually launched from the weapon, rendering line of sight seemingly meaningless."
+	thumbnail "outfit/graviton generator"
+	description "A weapon that once belonged to a rogue Quarg, the Graviton Generator causes a small singularity to appear temporarily at the distance and direction set by the wielder. Anything caught within the implosion point is instantly crushed from the extreme gravitational forces generated. Unlike traditional firearms no projectile is actually launched from the weapon, rendering line of sight seemingly meaningless."
 	description "	Due to the potential collateral damage this weapon can cause, using it to defend your own ship from boarders is ill advised."
 	"capture attack" 20
 	"capture defense" 0
@@ -68,11 +67,10 @@ outfit "Quarg Graviton Generator"
 
 outfit "Quarg Quantum Phase Pistol"
 	category "Unique"
-#	thumbnail "outfit/quantum phase pistol"
-	thumbnail "outfit/unknown"
-	description "While the Quarg criminal who previously owned this could have wielded it in one hand, humans and other smaller species need both arms to use this Quantum Phase Pistol. Once locked onto the chosen target, it creates and fires a projectile which phases through any matter that would impede its trajectory. The technology that enables this weapon to work is beyond your understanding."
-	"capture attack" 12
-	"capture defense" 8
+	thumbnail "outfit/quantum phase pistol"
+	description "While the rogue Quarg who previously owned this could have wielded it in one hand, humans and other smaller species need both arms to use this Quantum Phase Pistol. Once locked onto the chosen target, it creates and fires a projectile which phases through any matter that would impede its trajectory. The technology that enables this weapon to work is beyond your understanding."
+	"capture attack" 14
+	"capture defense" 6
 	"energy consumption" 0.009
 	"unplunderable" 1
 	"illegal" 1000000
