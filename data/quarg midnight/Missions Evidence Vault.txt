@@ -747,15 +747,13 @@ mission "Vault Weapon Lasher Rifle"
 		random < 25
 	on offer
 		conversation
-	on offer
-		conversation
 			scene "outfit/unknown"
 			`An information broker approaches you. "Captain <last>, I have a hot tip on one of the exotic weapons stolen from Farpoint's evidence vault. Only 1,000,000 credits. You're interested, aren't you?"`
 			choice
 				`	(Buy the info.)`
 				`	(Ignore this opportunity.)`
 					decline
-			scene "thumbnail/marauder vanguard""
+			scene "thumbnail/marauder vanguard"
 			`	The info broker takes your payment and says, "The captain of the Antlion has it. It's a Marauder Vanguard that lurks in the systems near Durax."`
 				accept
 	on enter Atik
