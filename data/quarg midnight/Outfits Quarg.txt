@@ -30,7 +30,20 @@ outfit "Celestial Compass"
 
 
 
-# Midnight's Lost Orphan is an atrocity obtainable via a Cartography mission.
+# Evidence Vault epilogue
+outfit "Insurgent Subjugation Gear"
+	category "Unique"
+	cost 3690000
+	thumbnail "outfit/insurgent subjugation gear"
+	"capture attack" 15.5
+	"capture defense" 24.5
+	"unplunderable" 1
+	description "This equipment is only used by the Quarg when it is necessary to educate violent species of the dangers resulting from insubordination."
+	description "	The Coalition are the youngest in the galaxy to have witnessed the mass deployment of these weapons. Their Enforcement Confrontation Gear is merely a weak replica when compared to the original."
+
+
+
+# Midnight's Lost Orphan is obtainable via a Cartography mission.
 
 outfit "Midnight's Lost Orphan"
 	category "Unique"

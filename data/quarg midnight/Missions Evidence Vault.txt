@@ -12,7 +12,8 @@
 
 mission "Vault Weapon Pulse Rifle"
 	minor
-	invisible
+	name "<npc>"
+	description "A pirate ship named <npc> may be in possession of an exotic weapon stolen from Farpoint's evidence vault. Find the ship and capture the weapon before the authorities do."
 	source
 		government Republic
 	to offer
@@ -57,7 +58,8 @@ mission "Vault Weapon Pulse Rifle"
 
 mission "Vault Weapon Ion Pulse Shotgun"
 	minor
-	invisible
+	name "<npc>"
+	description "A pirate ship named <npc> may be in possession of an exotic weapon stolen from Farpoint's evidence vault. Find the ship and capture the weapon before the authorities do."
 	source
 		attributes "north pirate"
 	to offer
@@ -95,7 +97,8 @@ mission "Vault Weapon Ion Pulse Shotgun"
 
 mission "Vault Weapon Tuning Rifle"
 	minor
-	invisible
+	name "<npc>"
+	description "A pirate ship named <npc> may be in possession of an exotic weapon stolen from Farpoint's evidence vault. Find the ship and capture the weapon before the authorities do."
 	source
 		government Republic
 	to offer
@@ -140,7 +143,8 @@ mission "Vault Weapon Tuning Rifle"
 
 mission "Vault Weapon Reverberator Rifle"
 	minor
-	invisible
+	name "<npc>"
+	description "A pirate ship named <npc> may be in possession of an exotic weapon stolen from Farpoint's evidence vault. Find the ship and capture the weapon before the authorities do."
 	source
 		attributes "south pirate"
 	to offer
@@ -164,7 +168,7 @@ mission "Vault Weapon Reverberator Rifle"
 	npc capture
 		government Bounty
 		system Ildaria
-		personality waiting staying timid vindictive
+		personality target waiting staying timid vindictive
 		ship "Marauder Falcon (Reverberator Rifle)" "Grim Darkness"
 		conversation
 			action
@@ -175,7 +179,8 @@ mission "Vault Weapon Reverberator Rifle"
 
 mission "Vault Weapon Thermal Repeater Rifle"
 	minor
-	invisible
+	name "<npc>"
+	description "A pirate ship named <npc> may be in possession of an exotic weapon stolen from Farpoint's evidence vault. Find the ship and capture the weapon before the authorities do."
 	source
 		government Syndicate
 	to offer
@@ -220,7 +225,8 @@ mission "Vault Weapon Thermal Repeater Rifle"
 
 mission "Vault Weapon Meltdown Cannon"
 	minor
-	invisible
+	name "<npc>"
+	description "A pirate ship named <npc> may be in possession of an exotic weapon stolen from Farpoint's evidence vault. Find the ship and capture the weapon before the authorities do."
 	source
 		attributes "core pirate"
 	to offer
@@ -244,7 +250,7 @@ mission "Vault Weapon Meltdown Cannon"
 		government Bounty
 		system
 			distance 1
-		personality waiting staying timid vindictive
+		personality target waiting staying timid vindictive
 		ship "Marauder Vanguard (Meltdown Cannon)" "Melting Point"
 		conversation
 			action
@@ -255,7 +261,8 @@ mission "Vault Weapon Meltdown Cannon"
 
 mission "Vault Weapon Enforcer Confrontation Gear"
 	minor
-	invisible
+	name "<npc>"
+	description "A pirate ship named <npc> may be in possession of an exotic weapon stolen from Farpoint's evidence vault. Find the ship and capture the weapon before the authorities do."
 	source
 		government "Free Worlds"
 	to offer
@@ -300,7 +307,8 @@ mission "Vault Weapon Enforcer Confrontation Gear"
 
 mission "Vault Weapon Lasher Pistol"
 	minor
-	invisible
+	name "<npc>"
+	description "A pirate ship named <npc> may be in possession of an exotic weapon stolen from Farpoint's evidence vault. Find the ship and capture the weapon before the authorities do."
 	source
 		government Syndicate
 	to offer
@@ -722,3 +730,50 @@ mission "Vault Weapon Quash 6"
 		conversation
 			scene "outfit/graviton generator"
 			`You return both weapons to the Farpoint evidence vault where they will, hopefully, be kept safe. The Republic rewards you with <payment>, along with a reminder that the existence of these weapons is to be kept secret.`
+
+
+
+mission "Vault Weapon Lasher Rifle"
+	minor
+	name "<npc>"
+	description "A pirate ship named <npc> may be in possession of an exotic weapon stolen from Farpoint's evidence vault. Find the ship and capture the weapon before the authorities do."
+	source
+		attributes "core pirate"
+		not attributes "uninhabited"
+	to offer
+		or
+			has "Vault Weapon Quash 6: done"
+			has "Vault Weapon Quash 6: declined"
+		random < 25
+	on offer
+		conversation
+	on offer
+		conversation
+			scene "outfit/unknown"
+			`An information broker approaches you. "Captain <last>, I have a hot tip on one of the exotic weapons stolen from Farpoint's evidence vault. Only 1,000,000 credits. You're interested, aren't you?"`
+			choice
+				`	(Buy the info.)`
+				`	(Ignore this opportunity.)`
+					decline
+			scene "thumbnail/marauder vanguard""
+			`	The info broker takes your payment and says, "The captain of the Antlion has it. It's a Marauder Vanguard that lurks in the systems near Durax."`
+				accept
+	on enter Atik
+		dialog `The Antlion sends out a strange hail: "Zey hazzz dizturbed ze hive! Go my wazpzzz, and teach zem to rezpect ze bugzzz!"`
+	npc
+		government Bounty
+		system Atik
+		personality waiting staying heroic vindictive
+		fleet
+			variant
+				"Wasp (Korath)" 24
+	npc capture
+		government Bounty
+		system Atik
+		personality target waiting staying timid vindictive
+		ship "Marauder Vanguard (Lasher Rifle)" "Antlion"
+		conversation
+			action
+				fail "Vault Weapon Lasher Rifle"
+			scene "outfit/lasher rifle"
+			`The pirate captain wielded an exotic rifle... This must be another weapon that was stolen from the evidence vault on Farpoint.`

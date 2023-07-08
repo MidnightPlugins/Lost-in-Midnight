@@ -598,8 +598,8 @@ mission "Cartography: Quarg Hitchhiker 5"
 		fleet
 			names "quarg"
 			variant
-				"Quarg Skylark"
-					
+				"Quarg Skylark (Scanner)"
+
 	npc
 		system "Ki War Ek"
 		government "Heliarch"
@@ -671,7 +671,7 @@ mission "Cartography: Humanika Side Trip"
 		log "People" "Quash" `Quash claims it had some alterations to its physiology done in the distant past, allowing it to visit worlds other Quarg claim are environmentally inhospitable to their species.`
 		conversation
 			scene "thumbnail/carabao-thumb"
-			`Quash steps out of the Halcyon and takes a deep breath. "It's nice to visit Humanka again, but I'd like to get to the Ring of Friendship. Please wrap up your business here quickly."`
+			`Quash steps out of the Halcyon and takes a deep breath. "It's nice to visit Humanika again, but I'd like to get to the Ring of Friendship. Please wrap up your business here quickly."`
 			choice
 				`	"Doesn't the environment here bother you?"`
 				`	"I won't take long."`
@@ -690,7 +690,7 @@ mission "Cartography: Humanika Side Trip"
 		fleet
 			names "quarg"
 			variant
-				"Quarg Wardragon"
+				"Quarg Wardragon (Scanner)"
 
 
 
@@ -816,7 +816,7 @@ mission "Cartography: Quarg Hitchhiker 7"
 		fleet
 			names "quarg"
 			variant
-				"Quarg Wardragon"
+				"Quarg Wardragon (Scanner)"
 
 	on enter Dabih
 		dialog `A Quarg vessel sends out a general hail: "The Outcast must be stopped!"`
@@ -827,7 +827,7 @@ mission "Cartography: Quarg Hitchhiker 7"
 		fleet
 			names "quarg"
 			variant
-				"Quarg Wardragon"
+				"Quarg Wardragon (Scanner)"
 
 	on enter Tarazed
 		dialog `A Quarg vessel sends out a general hail: "The Outcast must be stopped!"`
@@ -838,7 +838,7 @@ mission "Cartography: Quarg Hitchhiker 7"
 		fleet
 			names "quarg"
 			variant
-				"Quarg Wardragon"
+				"Quarg Wardragon (Scanner)"
 
 	on enter Umbral
 		dialog `A Quarg vessel sends out a general hail: "The Outcast must be stopped!"`
@@ -849,7 +849,7 @@ mission "Cartography: Quarg Hitchhiker 7"
 		fleet
 			names "quarg"
 			variant
-				"Quarg Wardragon"
+				"Quarg Wardragon (Scanner)"
 
 	on enter Quarantine
 		dialog `The "system" you've entered is nothing more than an orphaned planet with a ruined shard of a Quarg ring world orbiting it. Could this really be what Quash was searching for?`
@@ -981,8 +981,8 @@ mission "Cartography: Midnight's Lost Orphan"
 			names "quarg"
 			cargo 1
 			variant
-				"Quarg Skylark" 4
-				"Quarg Wardragon" 4
+				"Quarg Skylark (Scanner)" 4
+				"Quarg Wardragon (Scanner)" 4
 
 
 
