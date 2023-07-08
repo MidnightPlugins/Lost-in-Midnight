@@ -845,7 +845,7 @@ person "Midnight Predator"
 			"Pirate Drone"
 			"Plexus"
 			"Prefect's Albatross"
-			"Quarg Seakraken
+			"Quarg Seakraken"
 			"Quarg Skyswift"
 			"Quarg Wardrake"
 			"Quarg Warwyvern"
