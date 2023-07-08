@@ -19,7 +19,7 @@ mission "Biohazard 1: Star Explorer"
 		attributes "north"
 		not attributes "uninhabited"
 	to offer
-		has "event: star explorer fleet update"
+		has "event: star explorer update"
 		"combat rating" > 300
 		or
 			and
@@ -1435,7 +1435,7 @@ mission "Star Explorer Korath Raid"
 		attributes "core"
 	destination Earth
 	to offer
-		has "event: star explorer fleet update"
+		has "event: star explorer update"
 	on offer
 		require "Jump Drive"
 	on enter "Kor Ak'Mari"
@@ -2207,7 +2207,7 @@ mission "Quash: Humanika Infiltration 2"
 			names "quarg"
 			cargo 10
 			variant
-				"Quarg Wardragon"
+				"Quarg Wardragon (Scanner)"
 	on complete
 		"reputation: Quarg" >?= "stored reputation: Quarg"
 		"reputation: Quarg (Hai)" >?= "stored reputation: Quarg (Hai)"

@@ -1548,6 +1548,39 @@ ship "Marauder Vanguard"
 	"final explode" "final explosion medium"
 	description `This Syndicate Shipyards Vanguard has been customized with additional armored plating as well as upgraded shielding to accomodate the latest experimental technologies.`
 
+ship "Marauder Vanguard" "Marauder Vanguard (Lasher Rifle)"
+	crew 49
+	outfits
+		Brig
+		"Cargo Scanner"
+		"Double Plasma Core"
+		"Engineering Room"
+		Fire-Lance 6
+		"Firelight Missile" 40
+		"Firelight Missile Bank"
+		"Firelight Storage Rack" 2
+		"Fuel Processor"
+		"Jump Drive"
+		"Large Heat Shunt"
+		"Lasher Rifle"
+		"Medical Bay"
+		"Security Station"
+		"Small Heat Shunt" 3
+		"Small Radar Jammer"
+		"Steering (Planetary Class)"
+		"Systems Core (Medium)"
+		"Tactical Scanner"
+		"Thermal Repeater Rifle" 46
+		"Thruster (Planetary Class)"
+		"Warder Anti-Missile"
+	gun "Firelight Missile Bank"
+	gun "Fire-Lance"
+	gun "Fire-Lance"
+	gun "Fire-Lance"
+	gun "Fire-Lance"
+	gun "Fire-Lance"
+	gun "Fire-Lance"
+
 ship "Marauder Vanguard" "Marauder Vanguard (Meltdown Cannon)"
 	crew 49
 	outfits
