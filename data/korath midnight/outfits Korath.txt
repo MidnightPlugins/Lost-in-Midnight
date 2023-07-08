@@ -25,7 +25,7 @@ outfit "Botanical Garden"
 	"biome" -1
 	description "Some Korath World-Ships are outfitted with the necessary equipment to maintain artificial biomes stocked with an assortment of biological samples from their destoyed worlds."
 	description "	This Botanical Garden is a collection of trees, plants, and other vegetation that can be used for a variety of purposes including conservation, research, and food production."
-	description "	In addition outfit space, this production outfit requires cargo space reserved for the commodities produced."
+	description "	In addition to outfit space, this production outfit requires cargo space reserved for the commodities produced."
 
 outfit "Microbot Fabricator"
 	category "Systems"
@@ -41,7 +41,7 @@ outfit "Microbot Fabricator"
 	"industry" -1
 	description "Some Korath World-Ships are outfitted with the necessary equipment to operate full scale manufacturing facilities."
 	description "	This Microbot Fabricator is programmed to produce basic consumer goods such as clothing, medicine, and electronics that are easily traded at spaceports across the galaxy."
-	description "	In addition outfit space, this production outfit requires cargo space reserved for the commodities produced."
+	description "	In addition to outfit space, this production outfit requires cargo space reserved for the commodities produced."
 
 
 
@@ -100,11 +100,12 @@ outfit "Shock-Strike Turret"
 
 
 
-# part of Evedence Vault missions 
+# part of Evidence Vault missions 
 outfit "Meltdown Cannon"
 	category "Unique"
+	cost 530000
 	thumbnail "outfit/meltdown cannon"
-	description "A weapon stolen from Farpoint's evidence vault, this bears a resemblance to the Korath Thermal Repeater Rifle. It launches a glob of burning plasma that can melt though titanium on contact. Firing this weapon once to discourage boarders, then switching to a different weapon for raiding the opposing ship is probably how it was meant to be used. It's possible that this is the last one of these weapons to exist. The heat it generates is so intense that it can melt its own components if not given adequate time to cool down."
+	description "A weapon stolen from Farpoint's evidence vault, this bears a resemblance to the Korath Thermal Repeater Rifle. It launches a glob of burning plasma that can melt though titanium on contact. It's possible that this is the last one of these weapons to exist. The heat it generates is so intense that it can melt its own components if not given adequate time to cool down."
 	"capture attack" 8
 	"capture defense" 12
 	"unplunderable" 1
