@@ -727,6 +727,8 @@ mission "Vault Weapon Quash 6"
 		"reputation: Republic" <?= 0
 	on complete
 		payment 2000000
+		outfit "Quarg Quantum Phase Pistol" -1
+		outfit "Quarg Graviton Generator" -1
 		conversation
 			scene "outfit/graviton generator"
 			`You return both weapons to the Farpoint evidence vault where they will, hopefully, be kept safe. The Republic rewards you with <payment>, along with a reminder that the existence of these weapons is to be kept secret.`
@@ -775,3 +777,85 @@ mission "Vault Weapon Lasher Rifle"
 				fail "Vault Weapon Lasher Rifle"
 			scene "outfit/lasher rifle"
 			`The pirate captain wielded an exotic rifle... This must be another weapon that was stolen from the evidence vault on Farpoint.`
+
+
+
+mission "Vault Weapon Insurgent Subjugation Gear"
+	minor
+	name "<npc>"
+	description "A pirate ship named <npc> may be in possession of an exotic weapon stolen from Farpoint's evidence vault. Find the ship and capture the weapon. Then deliver it to <destination>."
+	source
+		attributes "frontier"
+		attributes "south"
+		not attributes "uninhabited"
+	to offer
+		or
+			has "Vault Weapon Quash 6: done"
+		random < 25
+	on offer
+		conversation
+			scene planet/cloud8
+			`You receive a message from the governor on Poisonwood: "Hello Captain <first> <last>. Our contacts on Farpoint recommended you to us for a delicate sitation regarding an item stolen from their evidence vault. We had recovered the object from someone attempting to illegally sell it and had it ready for a freighter to transport to Farpoint. But a pirate ship posing as the official courier tricked the dockworkers into loading it onto their ship instead. We suspect the Behemoth that took this valuable cargo is still somewhere in the south near Graffias. If you are willing to assist us, please retrieve the stolen cargo and return it to Farpoint. Know that the nature of the item must be kept secret."`
+			choice
+				`	"Alright, I'll retrieve the item."`
+				`	"Sorry, find someone else to do it."`
+					goto refuse
+			"thumbnail/behemoth"
+			`	You've decided to hunt down what is likely another stolen weapon from Farpoint's evidence vault. A Behemoth is an uncommon sight in the south. Tracking this one down shouldn't be too difficult. Their message was oddly vague however. Maybe the stolen object was one of the Quarg weapons again.`
+				accept
+			label refuse
+			`	You've decided not to get involved in what is likely yet another stolen weapon hunt.`
+				decline
+	on enter Ablodab
+		conversation
+			scene "thumbnail/pirate mammoth"
+			`There appears to be a Behemoth here. Could this be the mysterious "Behemoth" that took the stolen item from the Poisonwood dockworkers? A closer look reveals that it's actually a Mammoth, a heavily modified Behemoth sometimes used by pirates. It powers up its weapons. The captain has abandoned all pretense of being peaceful. If they do have the stolen weapon, they aren't going to give it up willingly.`
+	npc capture
+		government "Bounty"
+		system Ablodab
+		personality target waiting staying timid vindictive
+		"cargo settings"
+			cargo 5
+			outfitters "Coalition Smuggling"
+		ship "Mammoth (Insurgent Subjugation Gear)" "Vault of Secrets"
+		conversation
+			scene "outfit/insurgent subjugation gear"
+			`The pirate captain wielded an exotic weapon... This must be the item that was stolen from the evidence vault. Will you return it to Farpoint or keep it for yourself?`
+			choice
+				`	(Return the weapon to Farpoint.)`
+				`	(Keep it for youself.)`
+					goto keep
+			action
+				set "transporting insurgent subjugation gear"
+			scene "planet/forest0-b"
+			`	You've decided to deliver the weapon back to the evidence vault on Farpoint. As long as the Quarg don't catch you with it, it should be fine.`
+				accept
+			label keep
+			`	You've decided to keep the weapon for yourself. If the Quarg catch you with it, they might turn hostile.`
+			action
+				"reputation: Republic" <?= 0
+				fail "Vault Weapon Insurgent Subjugation Gear"
+	npc evade
+		to spawn
+			has "transporting insurgent subjugation gear"
+		government "Quarg"
+		system Enif
+		personality waiting surveillance
+		ship "Quarg Skylark (Scanner)"
+	npc evade
+		to spawn
+			has "transporting insurgent subjugation gear"
+		government "Quarg"
+		system destination
+		personality waiting surveillance
+		ship "Quarg Wardragon (Scanner)"
+	on abort
+		"reputation: Republic" <?= 0
+		clear "transporting insurgent subjugation gear"
+	on complete
+		outfit "Insurgent Subjugation Gear" -1
+		clear "transporting insurgent subjugation gear"
+		payment 1000000
+		conversation
+			scene "outfit/insurgent subjugation gear"
+			`The Insurgent Subjugation Gear is placed back into the evidence vault and you are given <payment> along with a reminder to keep all details regarding this mission secret.`
