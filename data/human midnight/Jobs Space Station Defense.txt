@@ -2633,7 +2633,7 @@ mission "Midnight Arachne Station Defense Job"
 				"Falcon (Tarazed Lab)"
 	npc accompany save
 		to spawn
-			has "event: fw tarazed joins"
+			has "free worlds reconciliation"
 		government "Free Worlds"
 		personality target launching staying timid opportunistic
 			confusion 30
@@ -2643,8 +2643,8 @@ mission "Midnight Arachne Station Defense Job"
 		ship "Arachne Station" "Arachne"
 	npc accompany save
 		to spawn
-			has "event: fw tarazed republic"
-		government "Free Worlds"
+			has "free worlds checkmate"
+		government "Republic"
 		personality target launching staying timid opportunistic
 			confusion 30
 		"cargo settings"
@@ -2675,7 +2675,7 @@ mission "Midnight Arachne Station Defense Job"
 				`	(Just accept the credits.)`
 					goto credits
 			branch checkmate
-				has "event: fw tarazed republic"
+				has "free worlds checkmate"
 			action
 				event "arachne station tarazed laboratory outfitter"
 				"reputation: Free Worlds" += 100
@@ -2691,7 +2691,7 @@ mission "Midnight Arachne Station Defense Job"
 				accept
 			label credits
 			branch "checkmate credits"
-				has "event: fw tarazed republic"
+				has "free worlds checkmate"
 			action
 				payment 1000000
 				"reputation: Free Worlds" += 100
@@ -3012,9 +3012,6 @@ event "muninn station defense job success"
 				sprite planet/smoke
 				distance 272
 				period 12.9498
-			sprite planet/gas0
-			distance 1637.56
-			period 1249.53
 		add object
 			sprite planet/gas0
 			distance 1637.56
@@ -3041,6 +3038,17 @@ event "muninn station ammo outfitter"
 	planet "Muninn Station"
 		add outfitter "Ammo North"
 		add outfitter "Ammo South"
+
+
+
+mission "Midnight Muninn Station Defense Sprite Patch"
+	landing
+	invisible
+	to offer
+		has "event: muninn station defense job success"
+	on offer
+		event "muninn station defense job success"
+		fail
 
 
 
