@@ -92,9 +92,8 @@ mission "Ghost Hunting: Dire Omen 2"
 		personality derelict target pacifist mute
 		fleet "Derelict Northern Pirate"
 		dialog `The ship is an abandoned derelict. Large portions of key systems look to have melted right off. Whatever did this must generate intense heat. It's clear that this ship, or what's left of it, is not going anywhere. You'll have to leave it behind.`
-	on complete
-		"Ghost Hunting: Dire Omen 2" --
-
+	to fail
+		has "Ghost Hunting: Dire Omen 5: done"
 
 
 
