@@ -132,6 +132,8 @@ ship "Genesis Logistic"
 		"Hydrogen Collector" 9
 		"Hydrogen Missile" 2
 		"Genesis Radiothermal"
+	engine -18 91
+	engine 18.5 91.5
 	gun -15 -70 "High Calibur Gun"
 	gun 15 -70 "High Calibur Gun"
 	gun -20 -55
@@ -139,8 +141,6 @@ ship "Genesis Logistic"
 	turret -18 -18
 	turret 18 -18
 	turret 0 64 "Genesis Anti-Missile"
-	engine -18 91
-	engine 18.5 91.5
 	description "The inhabitants of Genesis developed this ship to supply their nearby space colonies. It has enough weaponry to contribute to defense operations as well."
 
 ship "Genesis Logistic" "Genesis Logistic (Icicle)"
@@ -245,7 +245,7 @@ ship "Genesis Transport"
 		"Genesis Photovoltaic Array" 3
 		"Genesis Photovoltaic Panel"
 		"Genesis Thermionic"
-	engine -17 5
+	engine -17 50
 	engine 17 50
 	gun -48 19
 	gun 48 19
