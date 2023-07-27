@@ -10,7 +10,7 @@
 # PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 
 
-
+# The negative reputation requirement is a placeholder until PR9086 is gets into stable
 mission "Cartography: Quarg Hitchhiker 1"
 	minor
 	name "Quarg Hitch Hiker"
@@ -34,6 +34,7 @@ mission "Cartography: Quarg Hitchhiker 1"
 				random < 20
 		or
 			"reputation: Pirate" > 0
+			"reputation: Pirate" < -50000
 			and
 				or
 					"tribute: Albatross" > 0
