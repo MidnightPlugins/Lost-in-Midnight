@@ -457,6 +457,7 @@ outfit "Twin Particle Cannon"
 		"firing energy" 70
 		"firing force" 20
 		"firing heat" 240
+		"cluster"
 	description "Both barrels of the Twin Particle Cannon fire similtaneously, releasing double the force of a single Particle Cannon all at once. The size of this weapon is its main drawback, as few ships can accomodate it. While this product is fully functional, the sales department has raised concerns about its viability in the marketplace."
 
 outfit "Particle Submunition"
