@@ -135,9 +135,9 @@ outfit "Energy Cannon Turret"
 	category "Turrets"
 	cost 256000
 	thumbnail "outfit/energy cannon turret"
-	"mass" 18
-	"outfit space" -18
-	"weapon capacity" -18
+	"mass" 15
+	"outfit space" -15
+	"weapon capacity" -15
 	"turret mounts" -1
 	"required crew" 1
 	weapon
