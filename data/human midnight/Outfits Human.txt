@@ -580,18 +580,6 @@ outfit "Purger Rifle"
 
 
 
-outfit "Security Station"
-	category "Hand to Hand"
-	cost 42000
-	thumbnail "outfit/security station"
-	"mass" 2
-	"outfit space" -2
-	"capture defense" 3.4
-	"required crew" 1
-	"unplunderable" 1
-	description "Additional security staff posted at this station helps to ensure that the ship is protected during boarding battles."
-
-
 outfit "Sniper Rifle"
 	category "Hand to Hand"
 	cost 12000
