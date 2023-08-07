@@ -561,7 +561,7 @@ ship "Starbus"
 	explode "small explosion" 16
 	"final explode" "final explosion small"
 	description "A major component to their Hauler freighters, Southbound's Starbus heavy shuttle can sacrifice mobility for increased armaments."
-	description "	With tensions rising between the Free Worlds and Republic, Southbound Shipyards is bringing back the Starbus."
+	description "	When tensions arose between the Free Worlds and Republic, Southbound Shipyards brought the Starbus heavy shuttle back into production."
 
 
 
