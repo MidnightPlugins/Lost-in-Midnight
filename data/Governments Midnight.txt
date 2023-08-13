@@ -53,6 +53,7 @@ government "Creature Hunter"
 		"Indigenous Lifeform" -.04
 		"Indigenous Lifeform (Astral)" -.04
 		"Indigenous Predator" -.04
+		"Indigenous Prey" -.04
 		"Invasive Lifeform" -.04
 		"Invasive Lifeform (Passive)" -.04
 		"Swarming Lifeform" -.04
@@ -402,6 +403,7 @@ government "Invasive Lifeform"
 		"Indigenous Lifeform" -.01
 		"Indigenous Lifeform (Astral)" -.01
 		"Indigenous Predator" -.01
+		"Indigenous Prey" -.01
 		"Ka'het" -.01
 		"Ka'het (Infighting)" -.01
 		"Ka'sei" -.01
