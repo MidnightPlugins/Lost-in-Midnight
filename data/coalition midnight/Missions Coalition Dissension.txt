@@ -2658,7 +2658,7 @@ mission "Culminator Ammo [Outfitter]"
 		government "Coalition"
 	to offer
 		has "coalition dissension"
-		"credits" > 1400000
+		"credits" > 2400000
 		or
 			and
 				not "Culminator Ammo [Outfitter]: offered"
@@ -2711,16 +2711,16 @@ mission "Culminator Ammo [Outfitter]"
 			label buy
 			`	"Certain this is a good idea, I am not..."`
 			choice
-				`	"I'll pay 1,400,000."`
+				`	"I'll pay 1,200,000."`
 					goto end
 				`	"Nevermind."`
 			`	You both wait in silence until the sales clerk is ready to handle your tranactions.`
 				decline
 			label end
 			action
-				payment -1400000
-				outfit "Culminator Storage Tube" 4
-				outfit "Culminator Torpedo" 80
+				payment -1200000
+				outfit "Culminator Storage Tube" 2
+				outfit "Culminator Torpedo" 40
 			`	"A good deal, that is. Alright! To you I will sell." The sales clerk is still busy with the other customer and doesn't notice your exchange...`
 				decline
 
