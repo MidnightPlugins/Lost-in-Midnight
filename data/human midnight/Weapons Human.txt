@@ -748,7 +748,7 @@ outfit "Swingfire Missile Rack"
 	thumbnail "outfit/swingfire storage"
 	"mass" 2.4
 	"outfit space" -7
-	"swingfire capacity" 17
+	"swingfire capacity" 20
 	ammo "Swingfire Missile"
 	description "The Swingfire Missile Rack is used to store extra ammunition for Swingfire Missile Launchers."
 
@@ -760,7 +760,7 @@ outfit "Swingfire Missile Launcher"
 	"outfit space" -20
 	"weapon capacity" -20
 	"gun ports" -1
-	"swingfire capacity" 34
+	"swingfire capacity" 40
 	weapon
 		sprite "projectile/swingfire"
 			"no repeat"
