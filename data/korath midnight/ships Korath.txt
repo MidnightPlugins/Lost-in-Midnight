@@ -131,6 +131,9 @@ ship "Kor Explorer"
 	bay "Fighter" -46 -41
 	bay "Fighter" 46 -41
 	bay "Fighter" 0 -41
+	bay "Drone" -46 -75 
+	bay "Drone" 46 -75 
+	bay "Drone" 0 -75 
 	explode "tiny explosion" 30
 	explode "small explosion" 45
 	explode "medium explosion" 50
