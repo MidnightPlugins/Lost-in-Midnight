@@ -199,7 +199,6 @@ fleet "Korath Explorers"
 	cargo 0
 	variant 8
 		"Kor Explorer"
-		"'olofez" 3
 		"Kas'ik Tek 7" 3
 
 mission "Midnight: Kor Explorers"
