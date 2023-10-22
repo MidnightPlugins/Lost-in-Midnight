@@ -59,6 +59,7 @@ outfit "Graveyard Map"
 	category "Unique"
 	cost 0
 	thumbnail "outfit/graveyard map"
+	"unique" 1
 	description "A map of the graveyard found aboard the Omnipotence. Several systems are marked."
 
 
