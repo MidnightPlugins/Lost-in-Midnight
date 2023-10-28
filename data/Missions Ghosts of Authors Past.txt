@@ -171,7 +171,7 @@ mission "Ghosts of Authors Past: Michael Zahniser"
 		require "Spirit Board" 1
 	npc kill
 		government "Phenomenon (dangerous)"
-		personality entering vindictive heroic unconstrained mute
+		personality entering vindictive heroic unconstrained mute marked
 		fleet
 			names "???"
 			cargo 0
@@ -196,7 +196,7 @@ mission "Ghosts of Authors Past: Captain Nate"
 		require "Spirit Board" 1
 	npc kill
 		government "Phenomenon (dangerous)"
-		personality entering vindictive heroic unconstrained mute
+		personality entering vindictive heroic unconstrained mute marked
 		fleet
 			names "???"
 			cargo 0
@@ -220,7 +220,7 @@ mission "Ghosts of Authors Past: Power of the People"
 		require "Spirit Board" 1
 	npc kill
 		government "Phenomenon (dangerous)"
-		personality entering vindictive heroic unconstrained mute
+		personality entering vindictive heroic unconstrained mute marked
 		fleet
 			names "???"
 			cargo 0
@@ -244,7 +244,7 @@ mission "Ghosts of Authors Past: Local God"
 		require "Spirit Board" 1
 	npc kill
 		government "Phenomenon (dangerous)"
-		personality entering vindictive heroic unconstrained mute
+		personality entering vindictive heroic unconstrained mute marked
 		fleet
 			names "???"
 			cargo 0
@@ -268,7 +268,7 @@ mission "Ghosts of Authors Past: Rais Iris XVIII"
 		require "Spirit Board" 1
 	npc kill
 		government "Phenomenon (dangerous)"
-		personality entering vindictive heroic unconstrained mute
+		personality entering vindictive heroic unconstrained mute marked
 		fleet
 			names "???"
 			cargo 0
@@ -292,7 +292,7 @@ mission "Ghosts of Authors Past: Zitchas"
 		require "Spirit Board" 1
 	npc kill
 		government "Phenomenon (dangerous)"
-		personality entering vindictive heroic unconstrained mute
+		personality entering vindictive heroic unconstrained mute marked
 		fleet
 			names "???"
 			cargo 0
@@ -319,7 +319,7 @@ mission "Ghosts of Authors Past: Brick"
 		require "Spirit Board" 1
 	npc kill
 		government "Phenomenon (dangerous)"
-		personality entering vindictive heroic unconstrained mute
+		personality entering vindictive heroic unconstrained mute marked
 		fleet
 			names "???"
 			cargo 0
@@ -343,7 +343,7 @@ mission "Ghosts of Authors Past: Gefullte Taubenbrust"
 		require "Spirit Board" 1
 	npc kill
 		government "Phenomenon (dangerous)"
-		personality entering vindictive heroic unconstrained mute
+		personality entering vindictive heroic unconstrained mute marked
 		fleet
 			names "???"
 			cargo 0
@@ -367,7 +367,7 @@ mission "Ghosts of Authors Past: MasterOfGrey"
 		require "Spirit Board" 1
 	npc kill
 		government "Phenomenon (dangerous)"
-		personality entering vindictive heroic unconstrained mute
+		personality entering vindictive heroic unconstrained mute marked
 		fleet
 			names "???"
 			cargo 0
