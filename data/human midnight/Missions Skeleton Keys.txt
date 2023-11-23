@@ -552,7 +552,7 @@ mission "Skeleton Keys, Three 1"
 			and
 				has "Skeleton Key Core 2: done"
 				has "Skeleton Key North 2: done"
-		has "Skeleton Key South 2: done"
+				has "Skeleton Key South 2: done"
 	on offer
 		clear "skeleton key north"
 		clear "skeleton key core"
