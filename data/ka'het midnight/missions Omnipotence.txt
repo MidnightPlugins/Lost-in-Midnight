@@ -651,6 +651,291 @@ mission "Omnipotence Map: Builder Negator part 2"
 
 
 
+mission "Midnight Builder Hull Armor 100%"
+	landing
+	invisible
+	repeat
+	source
+		attributes "requires: gaslining"
+	to offer
+		has "outfit (flagship installed): Builder Hull Armor (100%)"
+	on offer
+		outfit "Builder Hull Armor (100%)" -1
+		outfit "Builder Hull Armor (90%)" 1
+		dialog "[---W A R N I N G !---] High atmospheric pressure has reduced the effectiveness of Builder Hull Armor to 90%."
+	on accept
+		fail
+
+mission "Midnight Builder Hull Armor 90%"
+	landing
+	invisible
+	repeat
+	source
+		attributes "requires: gaslining"
+	to offer
+		has "outfit (flagship installed): Builder Hull Armor (90%)"
+		random < 95
+	on offer
+		outfit "Builder Hull Armor (90%)" -1
+		outfit "Builder Hull Armor (80%)" 1
+		dialog "[---W A R N I N G !---] High atmospheric pressure has reduced the effectiveness of Builder Hull Armor to 80%."
+	on accept
+		fail
+
+mission "Midnight Builder Hull Armor 80%"
+	landing
+	invisible
+	repeat
+	source
+		attributes "requires: gaslining"
+	to offer
+		has "outfit (flagship installed): Builder Hull Armor (80%)"
+		random < 95
+	on offer
+		outfit "Builder Hull Armor (80%)" -1
+		outfit "Builder Hull Armor (70%)" 1
+		dialog "[---W A R N I N G !---] High atmospheric pressure has reduced the effectiveness of Builder Hull Armor to 70%."
+	on accept
+		fail
+
+mission "Midnight Builder Hull Armor 70%"
+	landing
+	invisible
+	repeat
+	source
+		attributes "requires: gaslining"
+	to offer
+		has "outfit (flagship installed): Builder Hull Armor (70%)"
+		random < 95
+	on offer
+		outfit "Builder Hull Armor (70%)" -1
+		outfit "Builder Hull Armor (60%)" 1
+		dialog "[---W A R N I N G !---] High atmospheric pressure has reduced the effectiveness of Builder Hull Armor to 60%."
+	on accept
+		fail
+
+mission "Midnight Builder Hull Armor 60%"
+	landing
+	invisible
+	repeat
+	source
+		attributes "requires: gaslining"
+	to offer
+		has "outfit (flagship installed): Builder Hull Armor (60%)"
+		random < 95
+	on offer
+		outfit "Builder Hull Armor (60%)" -1
+		outfit "Builder Hull Armor (50%)" 1
+		dialog "[---W A R N I N G !---] High atmospheric pressure has reduced the effectiveness of Builder Hull Armor to 50%."
+	on accept
+		fail
+
+mission "Midnight Builder Hull Armor 50%"
+	landing
+	invisible
+	repeat
+	source
+		attributes "requires: gaslining"
+	to offer
+		has "outfit (flagship installed): Builder Hull Armor (50%)"
+		random < 95
+	on offer
+		outfit "Builder Hull Armor (50%)" -1
+		outfit "Builder Hull Armor (40%)" 1
+		dialog "[---W A R N I N G !---] High atmospheric pressure has reduced the effectiveness of Builder Hull Armor to 40%."
+	on accept
+		fail
+
+mission "Midnight Builder Hull Armor 40%"
+	landing
+	invisible
+	repeat
+	source
+		attributes "requires: gaslining"
+	to offer
+		has "outfit (flagship installed): Builder Hull Armor (40%)"
+		random < 95
+	on offer
+		outfit "Builder Hull Armor (40%)" -1
+		outfit "Builder Hull Armor (30%)" 1
+		dialog "[---W A R N I N G !---] High atmospheric pressure has reduced the effectiveness of Builder Hull Armor to 30%."
+	on accept
+		fail
+
+mission "Midnight Builder Hull Armor 30%"
+	landing
+	invisible
+	repeat
+	source
+		attributes "requires: gaslining"
+	to offer
+		has "outfit (flagship installed): Builder Hull Armor (30%)"
+		random < 95
+	on offer
+		outfit "Builder Hull Armor (30%)" -1
+		outfit "Builder Hull Armor (20%)" 1
+		dialog "[---W A R N I N G !---] High atmospheric pressure has reduced the effectiveness of Builder Hull Armor to 20%."
+	on accept
+		fail
+
+mission "Midnight Builder Hull Armor 20%"
+	landing
+	invisible
+	repeat
+	source
+		attributes "requires: gaslining"
+	to offer
+		has "outfit (flagship installed): Builder Hull Armor (20%)"
+		random < 95
+	on offer
+		outfit "Builder Hull Armor (20%)" -1
+		outfit "Builder Hull Armor (10%)" 1
+		dialog "[---W A R N I N G !---] High atmospheric pressure has reduced the effectiveness of Builder Hull Armor to 10%."
+	on accept
+		fail
+
+mission "Midnight Builder Hull Armor 10%"
+	landing
+	invisible
+	repeat
+	source
+		attributes "requires: gaslining"
+	to offer
+		has "outfit (flagship installed): Builder Hull Armor (10%)"
+		random < 95
+	on offer
+		outfit "Builder Hull Armor (10%)" -1
+		conversation
+			scene "outfit/attention"
+			`The sound of creaks, groans, and pops emanates from the hull of the <ship> under the high atmospheric pressure of <origin>. Suddenly, you hear several loud bangs followed by the sound of metal being ripped apart! The <ship>'s warning indicators inform you that the Builder Hull Armor that allowed the <ship> to survive your previous forays into gas giant atmospheres has been completely obliterated. If you don't return to the safety of open space, the <ship> will be crushed by <origin>'s atmosphere.`
+			choice
+				`	(Take the <ship> into orbit.)`
+					flee
+				`	(Stay here.)`
+			scene "effect/blood"
+			`	There are several loud crashes and crunching sounds as the <ship>'s hull is destroyed by the high pressure. Eventually the hull fails and you yourself are squashed into a red paste that vanishes into <origin>'s swirling mists.`
+				die
+
+
+
+
+
+##############
+# Patch
+##############
+
+mission "Omnipotence Map patch"
+	landing
+	invisible
+	to offer
+		has "Omnipotence Map: Builder Anti-Missile 1: offered"
+	on offer
+		fail "Omnipotence Map: Builder Ships 1"
+		fail "Omnipotence Map: Builder Ships 2"
+		fail "Omnipotence Map: Builder Ships 3"
+		fail "Omnipotence Map: Builder Ships 4"
+		fail "Omnipotence Map: Builder Anti-Missile 1"
+		fail "Omnipotence Map: Builder Anti-Missile 2"
+		fail "Omnipotence Map: Builder Drones 1"
+		fail "Omnipotence Map: Builder Drones 2"
+		fail "Omnipotence Map: Ka'het Outfitter 1"
+		fail "Omnipotence Map: Ka'het Outfitter 2"
+		fail "Omnipotence Map: Builder Negator 1"
+		fail "Omnipotence Map: Builder Negator 2"
+
+
+mission "Omnipotence Map: Builder Anti-Missile 1"
+	invisible
+	to offer
+		never
+	on offer
+		fail
+
+mission "Omnipotence Map: Builder Anti-Missile 2"
+	invisible
+	to offer
+		never
+	on offer
+		fail
+
+mission "Omnipotence Map: Builder Drones 1"
+	invisible
+	to offer
+		never
+	on offer
+		fail
+
+mission "Omnipotence Map: Builder Drones 2"
+	invisible
+	to offer
+		never
+	on offer
+		fail
+
+mission "Omnipotence Map: Builder Negator 1"
+	invisible
+	to offer
+		never
+	on offer
+		fail
+
+mission "Omnipotence Map: Builder Negator 2"
+	invisible
+	to offer
+		never
+	on offer
+		fail
+
+mission "Omnipotence Map: Builder Ships 1"
+	invisible
+	to offer
+		never
+	on offer
+		fail
+
+mission "Omnipotence Map: Builder Ships 2"
+	invisible
+	to offer
+		never
+	on offer
+		fail
+
+mission "Omnipotence Map: Builder Ships 3"
+	invisible
+	to offer
+		never
+	on offer
+		fail
+
+mission "Omnipotence Map: Builder Ships 4"
+	invisible
+	to offer
+		never
+	on offer
+		fail
+
+mission "Omnipotence Map: Ka'het Outfitter 1"
+	invisible
+	to offer
+		never
+	on offer
+		fail
+
+mission "Omnipotence Map: Ka'het Outfitter 2"
+	invisible
+	to offer
+		never
+	on offer
+		fail
+
+
+
+#################################
+#
+# deprecated
+#
+#################################
+
 mission "Midnight Builder Hull Plating 100%"
 	landing
 	invisible
@@ -816,114 +1101,3 @@ mission "Midnight Builder Hull Plating 10%"
 			`	There are several loud crashes and crunching sounds as the <ship>'s hull is destroyed by the high pressure. Eventually the hull fails and you yourself are squashed into a red paste that vanishes into <origin>'s swirling mists.`
 				die
 
-
-
-
-
-##############
-# Patch
-##############
-
-mission "Omnipotence Map patch"
-	landing
-	invisible
-	to offer
-		has "Omnipotence Map: Builder Anti-Missile 1: offered"
-	on offer
-		fail "Omnipotence Map: Builder Ships 1"
-		fail "Omnipotence Map: Builder Ships 2"
-		fail "Omnipotence Map: Builder Ships 3"
-		fail "Omnipotence Map: Builder Ships 4"
-		fail "Omnipotence Map: Builder Anti-Missile 1"
-		fail "Omnipotence Map: Builder Anti-Missile 2"
-		fail "Omnipotence Map: Builder Drones 1"
-		fail "Omnipotence Map: Builder Drones 2"
-		fail "Omnipotence Map: Ka'het Outfitter 1"
-		fail "Omnipotence Map: Ka'het Outfitter 2"
-		fail "Omnipotence Map: Builder Negator 1"
-		fail "Omnipotence Map: Builder Negator 2"
-
-
-mission "Omnipotence Map: Builder Anti-Missile 1"
-	invisible
-	to offer
-		never
-	on offer
-		fail
-
-mission "Omnipotence Map: Builder Anti-Missile 2"
-	invisible
-	to offer
-		never
-	on offer
-		fail
-
-mission "Omnipotence Map: Builder Drones 1"
-	invisible
-	to offer
-		never
-	on offer
-		fail
-
-mission "Omnipotence Map: Builder Drones 2"
-	invisible
-	to offer
-		never
-	on offer
-		fail
-
-mission "Omnipotence Map: Builder Negator 1"
-	invisible
-	to offer
-		never
-	on offer
-		fail
-
-mission "Omnipotence Map: Builder Negator 2"
-	invisible
-	to offer
-		never
-	on offer
-		fail
-
-mission "Omnipotence Map: Builder Ships 1"
-	invisible
-	to offer
-		never
-	on offer
-		fail
-
-mission "Omnipotence Map: Builder Ships 2"
-	invisible
-	to offer
-		never
-	on offer
-		fail
-
-mission "Omnipotence Map: Builder Ships 3"
-	invisible
-	to offer
-		never
-	on offer
-		fail
-
-mission "Omnipotence Map: Builder Ships 4"
-	invisible
-	to offer
-		never
-	on offer
-		fail
-
-mission "Omnipotence Map: Ka'het Outfitter 1"
-	invisible
-	to offer
-		never
-	on offer
-		fail
-
-mission "Omnipotence Map: Ka'het Outfitter 2"
-	invisible
-	to offer
-		never
-	on offer
-		fail
