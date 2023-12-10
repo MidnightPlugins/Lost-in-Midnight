@@ -28,6 +28,7 @@ event "midnight earth retirement inheritance timer"
 
 mission "Midnight Earth Retirement Inheritance"
 	landing
+	deadline
 	name "Funeral on <planet>"
 	description "Travel to <destination> by <date> and participate in the funeral of Charles, who you previously transported to <planet> for retirement."
 	source
