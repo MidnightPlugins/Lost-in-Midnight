@@ -1601,7 +1601,7 @@ mission "Midnight Sunracer Tertio 4"
 				set "tertio bounty"
 				log "Minor People" "Al Cologne" `Mr. Cologne cut ties with me after some Tertio race results didn't meet his expectations. He was very threatening in his final message regarding that business.`
 			scene "outfit/attention"
-			`	You receive a message from an angry Mister Cologne: "You did it again! That's it! Your finished! Do you understand me? FINISHED!" It seems your partnership with Mister Cologne has come to an end.`
+			`	You receive a message from an angry Mister Cologne: "You did it again! That's it! You're finished! Do you understand me? FINISHED!" It seems your partnership with Mister Cologne has come to an end.`
 				goto 7th
 			label 7th
 			branch 6th
@@ -1941,7 +1941,7 @@ mission "Midnight Sunracer Tertio Puppet"
 		random < 70
 	on offer
 		conversation
-			`Some men in suits appoach you. "This fine space faring vessel is the <ship>, which would indubitably make you the one and only Captain <last>. We come to you on this fine day, to extend a formal invitation to a very exclusive and elite private business meeting with our most esteemed boss, Mister Al Cologne." It would appear you've attracted the attention of the local mafia. "We strongly advise you not to turn down this most fortunate of opportunities our boss has chosen to grace you with." They probably want you to do something highly illegal...`
+			`Some men in suits appoach you. "This grand space faring vessel is the <ship>, which would indubitably make you the one and only Captain <last>. We come to you on this fine day, to extend a formal invitation to a very exclusive and elite private business meeting with our most esteemed boss, Mister Al Cologne." It would appear you've attracted the attention of the local mafia. "We strongly advise you not to turn down this very fortunate of opportunities our boss has chosen to grace you with." They probably want you to do something highly illegal...`
 			label decisions
 			choice
 				`	"Alright, take me to your boss."`
@@ -2079,7 +2079,7 @@ mission "Midnight Sunracer Tertio Puppet"
 				set "tertio cheater"
 				log "Minor People" "Al Cologne" `The head of a mafia organization. He has worked out a gambling scheme that will be mutually beneficial if you lose certain Tertio League races on purpose.`
 			"outfit/rock scavenger meat"
-			`	"Perfectly timed," Cologne exclaims as a maid walks in carrying a fresh plate and sets on the table for you. "Go on." He gestures to you. "Have a seat at the table. We're partners now." You take your place at the table...`
+			`	"Perfectly timed," Cologne exclaims as a maid walks in carrying a fresh plate which she sets on the table for you. "Go on." He gestures to you. "Have a seat. We're partners now." You take your place at the table...`
 				decline
 			label outplayed
 			scene "outfit/handgun black"
