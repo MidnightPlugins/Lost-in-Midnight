@@ -262,6 +262,7 @@ License: CC-BY-3.0
 Files:
  sounds/jump_drive-ver8.wav
  sounds/medium_explosion-ver8.wav
+ sounds/anti-missile-ver8.wav
 Copyright: Écrivain, Iwan Gabovitch, Bart Kelsey, others.
 License: public-domain
  From opengameart.org. The contributors have placed these sounds in the public domain.
@@ -274,6 +275,7 @@ Comment: Edited Endless Sky small asteroid crunch sound. Derived from work by Al
 
 Files:
  sounds/hyperspace-ver8.wav
+ sounds/tiny_explosion-ver8.wav
 Copyright: Stephen M. Cameron
 License: CC-BY-SA-3.0
  (creativecommons.org/licenses/by-sa/3.0)
@@ -286,6 +288,7 @@ License: CC-BY-3.0
 
 Files:
  sounds/torpedo-ver8.wav
+ sounds/heavy_anti-missile-ver8.wav
 Copyright: HorrorPen (opengameart.org/users/horrorpen)
 License: CC-BY-3.0
  (creativecommons.org/licenses/by/3.0)
