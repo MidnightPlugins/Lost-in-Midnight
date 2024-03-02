@@ -229,19 +229,19 @@ mission "Midnight Quarg Distress"
 	destination "Earth"
 	npc kill
 		government "Quarg"
-		personality opportunistic vindictive
+		personality entering opportunistic vindictive
 		fleet "Quarg"
 	npc kill
 		to spawn
 			random < 66
 		government "Quarg"
-		personality opportunistic vindictive
+		personality entering opportunistic vindictive
 		fleet "Quarg"
 	npc kill
 		to spawn
 			random < 33
 		government "Quarg"
-		personality opportunistic vindictive
+		personality entering opportunistic vindictive
 		fleet "Quarg"
 
 
