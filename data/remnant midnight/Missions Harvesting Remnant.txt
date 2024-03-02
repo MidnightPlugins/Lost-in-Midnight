@@ -19,6 +19,7 @@ mission "Sabotage: Engine Restraint (boarding)"
 	deadline 1
 	source
 		government "Remnant"
+		category "Fighter" "Interceptor" "Light Warship" "Medium Warship" "Heavy Warship"
 		not attributes "automaton"
 	destination "Earth"
 	to offer
@@ -38,8 +39,48 @@ mission "Sabotage: Engine Restraint (boarding)"
 				accept
 	npc kill
 		government "Remnant"
-		personality entering heroic plunders
+		personality entering disables heroic plunders appeasing secretive
 		fleet "Large Remnant"
+
+mission "Midnight Remnant Distress"
+	invisible
+	boarding
+	repeat
+	minor
+	deadline 1
+	to offer
+		random < 5
+	source
+		government "Remnant" "Remnant (Research)"
+		not attributes "automaton"
+	on offer
+		conversation
+			scene "outfit/attention"
+			`As you prepare to board the <origin>, a warning alert indicates that it is sending out a distress signal to Remnant ships in the area...`
+				launch
+	destination "Earth"
+	npc kill
+		government "Remnant"
+		personality entering disables heroic plunders appeasing secretive
+		fleet "Small Remnant"
+	npc kill
+		to spawn
+			random < 75
+		government "Remnant"
+		personality entering disables heroic plunders appeasing secretive
+		fleet "Small Remnant"
+	npc kill
+		to spawn
+			random < 50
+		government "Remnant"
+		personality entering disables heroic plunders appeasing secretive
+		fleet "Small Remnant"
+	npc kill
+		to spawn
+			random < 25
+		government "Remnant"
+		personality entering disables heroic plunders appeasing secretive
+		fleet "Small Remnant"
 
 
 
