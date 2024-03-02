@@ -542,39 +542,10 @@ mission "Angry Squirrels: Countermeasures 3"
 
 
 #########################################
+#
 # Allows domination of Unfettered worlds.
+#
 #########################################
-
-
-mission "Angry Squirrels: Dominate Unfettered"
-	landing
-	invisible
-	to offer
-		has "First Contact: Unfettered: offered"
-	on offer
-		event "unfettered tribute main"
-		fail
-
-event "unfettered tribute main"
-	planet Firelode
-		tribute 2000
-			threshold 10000
-			fleet "Large Unfettered" 15
-			fleet "Small Unfettered" 5
-	planet Darkcloak
-		tribute 3500
-			threshold 10000
-			fleet "Large Unfettered" 25
-			fleet "Small Unfettered" 15
-	planet Warfeed
-		tribute 6000
-			threshold 10000
-			fleet "Large Unfettered" 10
-			fleet "Small Unfettered" 100
-
-
-
-# Allows domination of Wanderer worlds conqured by the Unfettered
 
 mission "Angry Squirrels: planet Varu Mer'ek"
 	landing
@@ -1260,4 +1231,42 @@ mission "Danger In Darkwaste Escape Epilogue"
 	on decline
 		event "add quantum bloodstones"
 		log "The authorities claim the existance of the Hai cultists is nothing more than a conspiracy theory. A Hai criminal claims that the Hai cultists are real and that they are associated with Quantum Bloodstones."
+
+
+
+
+############################################
+#
+# deprecated
+#
+############################################
+
+mission "Angry Squirrels: Dominate Unfettered"
+	landing
+	invisible
+	to offer
+		never
+#		has "First Contact: Unfettered: offered"
+	on offer
+		event "unfettered tribute main"
+		fail
+
+event "unfettered tribute main"
+	planet Firelode
+		tribute 2000
+			threshold 10000
+			fleet "Large Unfettered" 15
+			fleet "Small Unfettered" 5
+	planet Darkcloak
+		tribute 3500
+			threshold 10000
+			fleet "Large Unfettered" 25
+			fleet "Small Unfettered" 15
+	planet Warfeed
+		tribute 6000
+			threshold 10000
+			fleet "Large Unfettered" 10
+			fleet "Small Unfettered" 100
+
+
 
