@@ -27,7 +27,8 @@ mission "Sabotage: Ionic Snare (boarding)"
 	repeat
 	deadline 1
 	source
-		government "Hai (Unfettered)" "Hai (Unfettered Wanderer Tribute)" "Hai (Friendly Unfettered)" "Hai (Unfettered Civilians)" 
+		government "Hai (Unfettered)" "Hai (Unfettered Wanderer Tribute)"
+		category "Fighter" "Interceptor" "Light Warship" "Medium Warship" "Heavy Warship"
 		not attributes "automaton"
 	destination "Earth"
 	to offer
@@ -57,7 +58,8 @@ mission "Sabotage: Ionic Snare (Hai) (boarding)"
 	repeat
 	deadline 1
 	source
-		government "Hai" "Hai Merchant" "Hai Merchant (Human)" 
+		government "Hai"
+		category "Fighter" "Interceptor" "Light Warship" "Medium Warship" "Heavy Warship"
 		not attributes "automaton"
 	destination "Earth"
 	to offer
@@ -81,6 +83,80 @@ mission "Sabotage: Ionic Snare (Hai) (boarding)"
 		fleet "Large Hai"
 
 
+
+mission "Midnight Hai Distress"
+	invisible
+	boarding
+	repeat
+	minor
+	deadline 1
+	to offer
+		random < 10
+	source
+		government "Hai" "Hai Merchant" "Hai Merchant (Human)" "Merchant"
+		not attributes "automaton"
+	on offer
+		conversation
+			scene "outfit/attention"
+			`As you prepare to board the <origin>, a warning alert indicates that it is sending out a distress signal to Hai ships in the area...`
+				launch
+	destination "Earth"
+	npc kill
+		government "Hai"
+		personality entering disables opportunistic merciful
+		fleet "Hai Surveillance"
+	npc kill
+		to spawn
+			random < 75
+		government "Hai"
+		personality entering disables opportunistic merciful
+		fleet "Hai Surveillance"
+	npc kill
+		to spawn
+			random < 50
+		government "Hai"
+		personality entering disables opportunistic merciful
+		fleet "Hai Surveillance"
+	npc kill
+		to spawn
+			random < 25
+		government "Hai"
+		personality entering disables opportunistic merciful
+		fleet "Hai Surveillance"
+
+mission "Midnight Unfettered Distress"
+	invisible
+	boarding
+	repeat
+	minor
+	deadline 1
+	to offer
+		random < 5
+	source
+		government "Hai (Unfettered)" "Hai (Unfettered Wanderer Tribute)" "Hai (Friendly Unfettered)" "Hai (Unfettered Civilians)"
+		not attributes "automaton"
+	on offer
+		conversation
+			scene "outfit/attention"
+			`As you prepare to board the <origin>, a warning alert indicates that it is sending out a distress signal to Unfettered ships in the area...`
+				launch
+	destination "Earth"
+	npc kill
+		government "Hai (Unfettered)"
+		personality entering disables plunders
+		fleet "Large Unfettered"
+	npc kill
+		to spawn
+			random < 66
+		government "Hai (Unfettered)"
+		personality entering disables plunders
+		fleet "Small Unfettered"
+	npc kill
+		to spawn
+			random < 33
+		government "Hai (Unfettered)"
+		personality entering disables plunders
+		fleet "Small Unfettered"
 
 
 
