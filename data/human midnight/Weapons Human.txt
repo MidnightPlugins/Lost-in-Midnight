@@ -496,7 +496,7 @@ outfit "Kludge Submunition"
 		"lifetime" 48
 		"shield damage" 13.2
 		"hull damage" 8.8
-		"prospecting" .1
+		"minable damage" 10.6
 
 outfit "Triple Kludge Blaster"
 	category "Guns"
