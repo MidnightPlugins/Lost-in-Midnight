@@ -70,13 +70,16 @@ mission "Midnight Blaster Roulette 0 (Assist)"
 
 mission "Midnight Blaster Roulette 0 (Assist) Patch"
 	landing
-	invisible
+	name "Puppetmaster"
+	description "Bring a Blaster Charger to <destination> to take the Puppetmaster's Challenge."
 	to offer
 		has "Midnight Blaster Roulette 0 (Assist): declined"
 	on offer
-		clear "Midnight Blaster Roulette 0 (Assist): offered"
 		clear "Midnight Blaster Roulette 0 (Assist): declined"
-		fail
+		set "Midnight Blaster Roulette 0 (Assist): done"
+	destination "Bailey"
+	on complete
+		dialog "Visit the spaceport to search for the Puppetmaster or sell the Blaster Charger to one of the locals."
 
 mission "Midnight Blaster Roulette 1"
 	invisible
