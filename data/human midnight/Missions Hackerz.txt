@@ -298,6 +298,7 @@ mission "Hackerz 1"
 					decline
 			action
 				outfit "Drone Hacking"
+				payment -60
 			scene "outfit/data pad"
 			`You pay 60 credits for the book and the street vendor hands you a data drive containing a digital copy of "How to Hack a Science Drone For Fun and Profit." Looking it over, there's nothing to indicate whether or not this is a legitimate copy of the book. While you were inspecting the data drive, the street vendor walked away without you noticing...`
 				decline
