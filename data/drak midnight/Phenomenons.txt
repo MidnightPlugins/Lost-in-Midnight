@@ -328,7 +328,7 @@ outfitter "Deuterium"
 	"Deuterium"
 
 fleet "Comet"
-	government "Uninhabited"
+	government "Phenomenon (harmless)"
 	personality entering surveillance mute
 	cargo 1
 	outfitters "Deuterium"
@@ -1508,7 +1508,7 @@ effect "mystery dust"
 
 fleet "Mysterious Comet"
 	names "???"
-	government "Uninhabited"
+	government "Phenomenon (harmless)"
 	personality entering surveillance mute
 	cargo 1
 	outfitters "Unknown Element"
@@ -1583,7 +1583,7 @@ mission "Unknown Element: Sundive 1"
 	on enter Deneb
 		dialog `The mysterious comet must be somewhere in this system...`
 	npc save "scan outfits" "scan cargo"
-		government "Uninhabited"
+		government "Phenomenon (harmless)"
 		system "Deneb"
 		personality target waiting staying surveillance mute
 		ship "Mysterious Comet" "???"
@@ -1619,7 +1619,7 @@ mission "Unknown Element: Sundive 2"
 	on enter Deneb
 		dialog `The mysterious comet must be somewhere in this system...`
 	npc kill
-		government "Uninhabited"
+		government "Phenomenon (harmless)"
 		system "Deneb"
 		personality target waiting staying surveillance mute
 		"cargo settings"
