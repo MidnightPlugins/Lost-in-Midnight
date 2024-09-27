@@ -399,6 +399,22 @@ ship "Millipede"
 		
 	engine -5 181 
 	engine 5 181 
+	"steering engine" -64 -113 
+		angle 270
+		right
+		under
+	"steering engine" 64 -113 
+		angle 90
+		left
+		under
+	"steering engine" -64 100 
+		angle 90
+		left
+		under
+	"steering engine" 64 100 
+		angle 270
+		right
+		under
 	gun 0 -181 "Heavy Pulse Cannon"
 	gun 0 -181 "Hai Tracker Pod"
 	turret -35 -123 "Pulse Turret"

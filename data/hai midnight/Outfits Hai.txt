@@ -293,6 +293,19 @@ outfit "Ionic Snare"
 	description "	If you find this installed on your ship, get rid of it as soon as possible!"
 
 
+outfit "Modified Nugget Finder"
+	category "Systems"
+	cost 130000
+	thumbnail "outfit/modified nugget finder"
+	"mass" 5
+	"outfit space" -5
+	"outfit scan power" 25
+	"outfit scan efficiency" 15
+	"asteroid scan power" 40
+	"heat generation" 2
+	description "As its name suggests, the Nugget Finder was originally used by the ancient Hai to mine asteroids. However, the Unfettered discovered that a few subtle adjustments allows it to target a ship and identify the outfits it has installed."
+
+
 outfit "Quantum Bloodstone"
 	category "Systems"
 	cost 4800000

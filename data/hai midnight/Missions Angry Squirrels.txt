@@ -344,8 +344,10 @@ fleet "unfettered weapon collectors"
 	personality
 		disables
 		plunders
-	variant 1
+	variant 2
 		"Shield Beetle (Weapon Collector)"
+	variant 1
+		"Shield Beetle (Nutcracker Collector)"
 
 mission "Angry Squirrels: Unfettered Weapon Collectors"
 	landing
@@ -615,6 +617,445 @@ mission "Angry Squirrels: Countermeasures 3"
 		dialog `Go Foo Ku hasn't said anything since the Intrusion Device blew up. All his energy and excitement is gone. After you open the exit hatch he mutters his thanks and leaves. The experimental weapons business can be an unstable one. For a moment you think of Barmy Edward, Chief Offensive Engineer at Kraz Cybernetics, and wonder what he'd have to say about this venture. Then you decide it might be best to keep this story to yourself.`
 
 
+mission "Midnight Pulse Repeater"
+	minor
+	invisible
+	source "Darkcloak"
+	to offer
+		has "Angry Squirrels: Countermeasures 3: done"
+		not "Asteroid Catapult: Angry Squirrels: active"
+		or
+			has "outfit (all): Pulse Repeater"
+			has "outfit (all): Pulse Repeater Turret"
+		random < 70
+	on offer
+		conversation
+			scene "outfit/pulse repeater"
+			`You remember dropping off the Unfettered weapons designer, Go Foo Ku, on this planet. Do you want to see if he'd be willing to convert your Pulse Cannons into Pulse Repeaters?`
+			choice
+				`	(Yes.)`
+				`	(No, I'm not interested.)`
+					decline
+			branch revisit
+				has "visited Go Foo Ku's lab"
+			action
+				set "visited Go Foo Ku's lab"
+			`	After some searching, you find his laboratory isolated in a desolate valley. There are a number of craters nearby. The scorch marks and the smell of burnt ozone in the air give you the impression that these were formed recently. When you meet Go Foo Ku, he seems to be in a better mood than he was the last time you saw him.`
+				goto gofooku
+
+			label revisit
+			`	You travel to his laboratory isolated in a desolate valley. As before, the land is burned with scorch marks and marred by craters of various sizes. Fortunately, the building is still standing. Go Foo Ku is inside, engaged in his wild research experiments.`
+
+			label gofooku
+			`	"Welcome, Captain <last>! What brings you to my humble laboratory? Have you come to see what progress I've made with the countermeasures technology?"`
+			choice
+				`	"Actually, are you familiar with Pulse Repeaters?"`
+				`	"No... I'm wondering if you know about Pulse Repeaters."`
+			scene "outfit/pulse repeater turret"
+			`	"Of course I am! Making that little tweak is one of the first tricks I learned the first time I worked as a technician on board Lord Kao Abun Ga's Emperor Beetle... Wait, are you looking for someone willing to convert Pulse Cannons into Pulse Repeaters?"`
+			choice
+				`	"Would you be willing to do that?"`
+				`	"If it wouldn't be too much trouble..."`
+			action
+				set "Go Foo Ku pulse repeater agreement"
+			`	Go Foo Ku laughs. "I should have expected a monkey to be interested in that! Sure, I can do that sort of work. I'm busy now, but if I have some free time you can contact me ahead of time via the job boards and I'll prepare some for you."`
+				decline
+
+mission "Midnight Pulse Repeater Order"
+	job
+	repeat
+	name "Pulse Repeater Order"
+	description "Visit Go Foo Ku on <destination> to buy some Pulse Repeaters and/or Pulse Repeater Turrets."
+	source
+		government Hai "Hai (Unfettered)"
+		not planet "Darkcloak"
+		attributes "spaceport"
+	destination "Darkcloak"
+	to offer
+		has "Go Foo Ku pulse repeater agreement"
+		not "Midnight Pulse Repeater Order: active"
+		not "Asteroid Catapult: Angry Squirrels: active"
+		credits > 590000
+		random < month + ( day * 2 )
+	on accept
+		clear "Pulse Repeater ordered 0PR"
+		clear "Pulse Repeater Turret ordered 0PRT"
+		conversation
+			scene "outfit/pulse repeater"
+			`Go Foo Ku has some free time to prepare some Pulse Repeaters. How many guns do you want?`
+			label gunorder
+			choice
+				`	(1 Pulse Repeater for 130,000 credits.)`
+				`	(2 Pulse Repeaters for 260,000 credits.)`
+					goto 2PR
+					to display
+						credits > 260000
+				`	(3 Pulse Repeaters for 390,000 credits.)`
+					goto 3PR
+					to display
+						credits > 390000
+				`	(4 Pulse Repeaters for 520,000 credits.)`
+					goto 4PR
+					to display
+						credits > 520000
+				`	(5 Pulse Repeaters for 650,000 credits.)`
+					goto 5PR
+					to display
+						credits > 650000
+				`	(6 Pulse Repeaters for 780,000 credits.)`
+					goto 6PR
+					to display
+						credits > 780000
+				`	(7 Pulse Repeaters for 910,000 credits.)`
+					goto 7PR
+					to display
+						credits > 910000
+				`	(8 Pulse Repeaters for 1,040,000 credits.)`
+					goto 8PR
+					to display
+						credits > 1040000
+				`	(None.)`
+					goto nogun
+			scene "outfit/pulse repeater"
+			action
+				set "Pulse Repeater ordered 1PR"
+				payment -130000
+			`130,000 credits were sent to Go Foo Ku.`
+				goto PRT
+			label 2PR
+			action
+				set "Pulse Repeater ordered 2PR"
+				payment -260000
+			`260,000 credits were sent to Go Foo Ku.`
+				goto PRT
+			label 3PR
+			action
+				set "Pulse Repeater ordered 3PR"
+				payment -390000
+			`390,000 credits were sent to Go Foo Ku.`
+				goto PRT
+			label 4PR
+			action
+				set "Pulse Repeater ordered 4PR"
+				payment -520000
+			`520,000 credits were sent to Go Foo Ku.`
+				goto PRT
+			label 5PR
+			action
+				set "Pulse Repeater ordered 5PR"
+				payment -650000
+			`650,000 credits were sent to Go Foo Ku.`
+				goto PRT
+			label 6PR
+			action
+				set "Pulse Repeater ordered 6PR"
+				payment -780000
+			`780,000 credits were sent to Go Foo Ku.`
+				goto PRT
+			label 7PR
+			action
+				set "Pulse Repeater ordered 7PR"
+				payment -910000
+			`910,000 credits were sent to Go Foo Ku.`
+				goto PRT
+			label 8PR
+			action
+				set "Pulse Repeater ordered 8PR"
+				payment -1040000
+			`1,040,000 credits were sent to Go Foo Ku.`
+				goto PRT
+
+			label nogun
+			scene "outfit/unknown"
+			`	You've ordered zero guns. Are you sure?`
+			choice
+				`	(Yes, no guns.)`
+				`	(Change my order.)`
+					goto gunorder
+
+			action
+				set "Pulse Repeater ordered 0PR"
+
+			label PRT
+			branch poor
+				credits < 590000
+
+			scene "outfit/pulse repeater turret"
+			`	And how many turrets do you want?`
+
+			label turretorder
+			choice
+				`	(1 Pulse Repeater Turret for 590,000 credits.)`
+					to display
+						credits >= 590000
+				`	(2 Pulse Repeater Turrets for 1,180,000 credits.)`
+					goto 2PRT
+					to display
+						credits > 1180000
+				`	(3 Pulse Repeater Turrets for 1,770,000 credits.)`
+					goto 3PRT
+					to display
+						credits > 1770000
+				`	(4 Pulse Repeater Turrets for 2,360,000 credits.)`
+					goto 4PRT
+					to display
+						credits > 2360000
+				`	(5 Pulse Repeater Turrets for 2,950,000 credits.)`
+					goto 5PRT
+					to display
+						credits > 2950000
+				`	(6 Pulse Repeater Turrets for 3,540,000 credits.)`
+					goto 6PRT
+					to display
+						credits > 3540000
+				`	(7 Pulse Repeater Turrets for 4,130,000 credits.)`
+					goto 7PRT
+					to display
+						credits > 4130000
+				`	(8 Pulse Repeater Turrets for 4,720,000 credits.)`
+					goto 8PRT
+					to display
+						credits > 4720000
+				`	(None.)`
+					goto noturret
+
+			scene "outfit/pulse repeater turret"
+			action
+				set "Pulse Repeater Turret ordered 1PRT"
+				payment -590000
+			`590,000 credits were sent to Go Foo Ku.`
+				goto end
+			label 2PRT
+			action
+				set "Pulse Repeater Turret ordered 2PRT"
+				payment -1180000
+			`1,180,000 credits were sent to Go Foo Ku.`
+				goto end
+			label 3PRT
+			action
+				set "Pulse Repeater Turret ordered 3PRT"
+				payment -1770000
+			`1,770,000 credits were sent to Go Foo Ku.`
+				goto end
+			label 4PRT
+			action
+				set "Pulse Repeater Turret ordered 4PRT"
+				payment -2360000
+			`2,360,000 credits were sent to Go Foo Ku.`
+				goto end
+			label 5PRT
+			action
+				set "Pulse Repeater Turret ordered 5PRT"
+				payment -2950000
+			`2,950,000 credits were sent to Go Foo Ku.`
+				goto end
+			label 6PRT
+			action
+				set "Pulse Repeater Turret ordered 6PRT"
+				payment -3540000
+			`3,540,000 credits were sent to Go Foo Ku.`
+				goto end
+			label 7PRT
+			action
+				set "Pulse Repeater Turret ordered 7PRT"
+				payment -4130000
+			`4,130,000 credits were sent to Go Foo Ku.`
+				goto end
+			label 8PRT
+			action
+				set "Pulse Repeater Turret ordered 8PRT"
+				payment -4720000
+			`4,720,000 credits were sent to Go Foo Ku.`
+				goto end
+
+			label noturret
+			scene "outfit/unknown"
+			`	You've ordered zero turrets. Are you sure?`
+			choice
+				`	(Yes, no turrets.)`
+				`	(Change my order.)`
+					goto turretorder
+
+			label poor
+			action
+				set "Pulse Repeater Turret ordered 0PRT"
+
+			label end
+			branch ordercancel
+				has "Pulse Repeater ordered 0PR"
+				has "Pulse Repeater Turret ordered 0PRT"
+			`	Everything you ordered should be ready when you arrive on <destination>. No refunds if you cancel!`
+				accept
+			label ordercancel
+			`	You cancel your request.`
+				accept
+	to fail
+		has "Pulse Repeater ordered 0PR"
+		has "Pulse Repeater Turret ordered 0PRT"
+	on fail
+		clear "Pulse Repeater ordered 0PR"
+		clear "Pulse Repeater Turret ordered 0PRT"
+	on abort
+		dialog "Go Foo Koo warned you what would happen if you cancel. No refunds!"
+	on complete
+		conversation
+			branch 1PR
+				has "Pulse Repeater ordered 1PR"
+			branch 2PR
+				has "Pulse Repeater ordered 2PR"
+			branch 3PR
+				has "Pulse Repeater ordered 3PR"
+			branch 4PR
+				has "Pulse Repeater ordered 4PR"
+			branch 5PR
+				has "Pulse Repeater ordered 5PR"
+			branch 6PR
+				has "Pulse Repeater ordered 6PR"
+			branch 7PR
+				has "Pulse Repeater ordered 7PR"
+			branch 8PR
+				has "Pulse Repeater ordered 8PR"
+			``
+				goto PRT
+
+			label 1PR
+			action
+				outfit "Pulse Repeater"
+				clear "Pulse Repeater ordered 1PR"
+			scene "outfit/pulse repeater"
+			`You receive 1 Pulse Repeater.`
+				goto PRT
+			label 2PR
+			action
+				outfit "Pulse Repeater" 2
+				clear "Pulse Repeater ordered 2PR"
+			scene "outfit/pulse repeater"
+			`You receive 2 Pulse Repeaters.`
+				goto PRT
+			label 3PR
+			action
+				outfit "Pulse Repeater" 3
+				clear "Pulse Repeater ordered 3PR"
+			scene "outfit/pulse repeater"
+			`You receive 3 Pulse Repeaters.`
+				goto PRT
+			label 4PR
+			action
+				outfit "Pulse Repeater" 4
+				clear "Pulse Repeater ordered 4PR"
+			scene "outfit/pulse repeater"
+			`You receive 4 Pulse Repeaters.`
+				goto PRT
+			label 5PR
+			action
+				outfit "Pulse Repeater" 5
+				clear "Pulse Repeater ordered 5PR"
+			scene "outfit/pulse repeater"
+			`You receive 5 Pulse Repeaters.`
+				goto PRT
+			label 6PR
+			action
+				outfit "Pulse Repeater" 6
+				clear "Pulse Repeater ordered 6PR"
+			scene "outfit/pulse repeater"
+			`You receive 6 Pulse Repeaters.`
+				goto PRT
+			label 7PR
+			action
+				outfit "Pulse Repeater" 7
+				clear "Pulse Repeater ordered 7PR"
+			scene "outfit/pulse repeater"
+			`You receive 7 Pulse Repeaters.`
+				goto PRT
+			label 8PR
+			action
+				outfit "Pulse Repeater" 8
+				clear "Pulse Repeater ordered 8PR"
+			scene "outfit/pulse repeater"
+			`You receive 8 Pulse Repeaters.`
+
+			label PRT
+
+			branch 1PRT
+				has "Pulse Repeater Turret ordered 1PRT"
+			branch 2PRT
+				has "Pulse Repeater Turret ordered 2PRT"
+			branch 3PRT
+				has "Pulse Repeater Turret ordered 3PRT"
+			branch 4PRT
+				has "Pulse Repeater Turret ordered 4PRT"
+			branch 5PRT
+				has "Pulse Repeater Turret ordered 5PRT"
+			branch 6PRT
+				has "Pulse Repeater Turret ordered 6PRT"
+			branch 7PRT
+				has "Pulse Repeater Turret ordered 7PRT"
+			branch 8PRT
+				has "Pulse Repeater Turret ordered 8PRT"
+			``
+				goto end
+
+			label 1PRT
+			action
+				outfit "Pulse Repeater Turret"
+				clear "Pulse Repeater Turret ordered 1PRT"
+			scene "outfit/pulse repeater turret"
+			`You receive 1 Pulse Repeater Turret.`
+				goto end
+			label 2PRT
+			action
+				outfit "Pulse Repeater Turret" 2
+				clear "Pulse Repeater Turret ordered 2PRT"
+			scene "outfit/pulse repeater turret"
+			`You receive 2 Pulse Repeater Turrets.`
+				goto end
+			label 3PRT
+			action
+				outfit "Pulse Repeater Turret" 3
+				clear "Pulse Repeater Turret ordered 3PRT"
+			scene "outfit/pulse repeater turret"
+			`You receive 3 Pulse Repeater Turrets.`
+				goto end
+			label 4PRT
+			action
+				outfit "Pulse Repeater Turret" 4
+				clear "Pulse Repeater Turret ordered 4PRT"
+			scene "outfit/pulse repeater turret"
+			`You receive 4 Pulse Repeater Turrets.`
+				goto end
+			label 5PRT
+			action
+				outfit "Pulse Repeater Turret" 5
+				clear "Pulse Repeater Turret ordered 5PRT"
+			scene "outfit/pulse repeater turret"
+			`You receive 5 Pulse Repeater Turrets.`
+				goto end
+			label 6PRT
+			action
+				outfit "Pulse Repeater Turret" 6
+				clear "Pulse Repeater Turret ordered 6PRT"
+			scene "outfit/pulse repeater turret"
+			`You receive 6 Pulse Repeater Turrets.`
+				goto end
+			label 7PRT
+			action
+				outfit "Pulse Repeater Turret" 7
+				clear "Pulse Repeater Turret ordered 7PRT"
+			scene "outfit/pulse repeater turret"
+			`You receive 7 Pulse Repeater Turrets.`
+				goto end
+			label 8PRT
+			action
+				outfit "Pulse Repeater Turret" 8
+				clear "Pulse Repeater Turret ordered 8PRT"
+			scene "outfit/pulse repeater turret"
+			`You receive 8 Pulse Repeater Turrets.`
+
+			label end
+			``
+			`	Go Foo Ku thanks you for your order.`
+
+
 
 #########################################
 #
@@ -749,18 +1190,9 @@ mission "Midnight Bloodstone Murders 1"
 		payment 4000
 		log "People" "Inspector Ku Ran Chee Akran" `A Hai investigator who wears a hat traditionally associated with ancient human detectives. He tries to maintain an upbeat attitude despite the grim nature of his work.`
 		log "Minor People" "Dr. April Oaks" `A human medical examiner in Hai space. She assists Inspector Akran with his investigations.`
-		conversation
-			scene "outfit/coffin"
-			`Inspector Akran pays you <payment> while Dr. Oaks unloads the coffin from your ship. "Would you be willing to give us another ride? Depending on how my conversation with the family of the deceased goes, I may need one."`
-			choice
-				`	"Sure. Let's meet at the spaceport later."`
-				`	"Sorry, I'm not interested."`
-					accept
-			action
-				set "midnight bloodstone murders reserved"
-			`	Akran salutes. "Thanks, I will be there." He and Oaks haul the coffin away.`
 
 mission "Midnight Bloodstone Murders 2"
+	landing
 	name "Inspector Akran to <planet>"
 	description "Help Inspector Akran with his investigation by transporting him and Dr. Oaks to <destination>."
 	passengers 2
@@ -768,11 +1200,18 @@ mission "Midnight Bloodstone Murders 2"
 	source Greenwater
 	destination Thornlight
 	to offer
-		has "midnight bloodstone murders reserved"
 		has "Midnight Bloodstone Murders 1: done"
 	on offer
-		clear "midnight bloodstone murders reserved"
 		conversation
+			scene "outfit/coffin"
+			`Inspector Akran pays you while Dr. Oaks unloads the coffin from your ship. "Would you be willing to give us another ride? Depending on how my conversation with the family of the deceased goes, I may need one."`
+			choice
+				`	"Sure. I'll wait here."`
+				`	"Sorry, I'm not interested."`
+					decline
+			``
+			`...`
+			``
 			`Inspector Akran and Dr. Oaks return to your ship with a grim expressions. "According to the family of the deceased, the relatives of some of their other friends have also died recently. We need to start by visiting <destination> and see what the local authorities there have to say about their deaths."`
 			choice
 				`	"Alright, get on board."`
@@ -783,17 +1222,9 @@ mission "Midnight Bloodstone Murders 2"
 	on complete
 		payment 0 200
 		payment 4000
-		conversation
-			`The residents of <planet> are patients undergoing physical therapy. Only relatives of these patients are allowed past the reception area.  Inspector Akran isn't concerned about these restrictions. While Dr. Oaks speaks with the receptionist, Akran pays you <payment> and asks if you would be willing to transport them again.`
-			choice
-				`	"Sure. Let's meet at the spaceport later."`
-				`	"Sorry, I'm not interested."`
-					accept
-			action
-				set "midnight bloodstone murders reserved"
-			`	Akran salutes. "Thanks, I will be there." Oaks managed to convince the receptionist to let them past the reception area and Akran quickly follows her.`
 
 mission "Midnight Bloodstone Murders 3"
+	landing
 	name "Inspector Akran to <planet>"
 	description "Help Inspector Akran with his investigation by transporting him and Dr. Oaks to <destination>."
 	passengers 2
@@ -801,11 +1232,17 @@ mission "Midnight Bloodstone Murders 3"
 	source Thornlight
 	destination Greenbloom
 	to offer
-		has "midnight bloodstone murders reserved"
 		has "Midnight Bloodstone Murders 2: done"
 	on offer
-		clear "midnight bloodstone murders reserved"
 		conversation
+			`The residents of <planet> are patients undergoing physical therapy. Only relatives of these patients are allowed past the reception area.  Inspector Akran isn't concerned about these restrictions. While Dr. Oaks speaks with the receptionist, Akran pays you and asks if you would be willing to transport them again.`
+			choice
+				`	"Sure. I'll wait here."`
+				`	"Sorry, I'm not interested."`
+					decline
+			``
+			`...`
+			``
 			`Inspector Akran returns to your ship with a perplexed expression. "I just had an informative discussion with the station security chief. It appears the second victim was an employee of the station, not one of the paying residents."`
 			`	Dr. Oaks adds, "Of particular interest is that the cause of death for both victims was the same."`
 			choice
@@ -827,17 +1264,9 @@ mission "Midnight Bloodstone Murders 3"
 	on complete
 		payment 0 200
 		payment 4000
-		conversation
-			`Inspector Akran breaths in the cool ocean breeze. "How refreshing after being on that stuffy station!" Dr. Oaks hails a taxi while Akran pays you <payment> and asks if you would be willing to wait for themm while they interview the local law enforcement officials.`
-			choice
-				`	"Sure. Let's meet at the spaceport later."`
-				`	"Sorry, I'm not interested."`
-					accept
-			action
-				set "midnight bloodstone murders reserved"
-			`	Akran salutes. "Thanks, I will be there." The taxi arrives and Oaks motions for Akran to join her.`
 
 mission "Midnight Bloodstone Murders 4"
+	landing
 	name "Inspector Akran to <planet>"
 	description "Help Inspector Akran with his investigation by transporting him and Dr. Oaks to <destination>."
 	passengers 2
@@ -845,11 +1274,17 @@ mission "Midnight Bloodstone Murders 4"
 	source Greenbloom
 	destination Ochrescoop
 	to offer
-		has "midnight bloodstone murders reserved"
 		has "Midnight Bloodstone Murders 3: done"
 	on offer
-		clear "midnight bloodstone murders reserved"
 		conversation
+			`Inspector Akran breaths in the cool ocean breeze. "How refreshing after being on that stuffy station!" Dr. Oaks hails a taxi while Akran pays you and asks if you would be willing to wait for themm while they interview the local law enforcement officials.`
+			choice
+				`	"Sure. I'll wait here."`
+				`	"Sorry, I'm not interested."`
+					decline
+			``
+			`...`
+			``
 			`You are enjoying the coastal scenery when Inspector Akran and Dr. Oaks return. "As I expected, the third victim also suffered the same cause of death as the other two. It is clear there is a pattern here." He looks around at the scenery while Oaks pays the taxi drive. "Our next stop is <destination>."`
 			choice
 				`	"Couldn't we have gone there first?"`
@@ -872,17 +1307,9 @@ mission "Midnight Bloodstone Murders 4"
 	on complete
 		payment 0 200
 		payment 8000
-		conversation
-			`Inspector Akran scrunches up his nose when you open the hatch to the station. You and Dr. Oaks aren't affected. Perhaps the human nose isn't sensitive enough to detect whatever odors are affecting him. After handing you <payment> Akran says, "I can understand if you do not want to wait for me this time. I also would rather not stay here any longer than I have to."`
-			choice
-				`	"Don't worry about that. Let's meet at the spaceport later."`
-				`	"Yeah, sorry. Good luck with your investigation."`
-					accept
-			action
-				set "midnight bloodstone murders reserved"
-			`	Akran salutes. "Thanks, I will be there." Oaks pats him on the back as he is suddenly caught up in a coughing fit.`
 
 mission "Midnight Bloodstone Murders 5"
+	landing
 	name "Inspector Akran to <planet>"
 	description "Help Inspector Akran with his investigation by transporting him and Dr. Oaks to <destination>."
 	passengers 2
@@ -890,11 +1317,17 @@ mission "Midnight Bloodstone Murders 5"
 	source Ochrescoop
 	destination Iritoroost
 	to offer
-		has "midnight bloodstone murders reserved"
 		has "Midnight Bloodstone Murders 4: done"
 	on offer
-		clear "midnight bloodstone murders reserved"
 		conversation
+			`Inspector Akran scrunches up his nose when you open the hatch to the station. You and Dr. Oaks aren't affected. Perhaps the human nose isn't sensitive enough to detect whatever odors are affecting him. After handing you your payment Akran says, "I can understand if you do not want to wait for me this time. I also would rather not stay here any longer than I have to."`
+			choice
+				`	"Don't worry about that. I'll be here."`
+				`	"Yeah, sorry. Good luck with your investigation."`
+					decline
+			``
+			`...`
+			``
 			`While waiting for Inspector Akran and Dr. Oaks to return, a Hai worker says something in their language and hands you a piece of paper with something written on it. It appears to also be written in the Hai language and you aren't able to read the letters.`
 			``
 			`	When Akron returns his nose is running and Oaks is doing her best to help him. "The station staff say that the victim died in an accident. It seems this one was unrelated to the other deaths." Oaks is out of tissues and motions for him to get back on your ship.`
@@ -907,6 +1340,7 @@ mission "Midnight Bloodstone Murders 5"
 
 
 mission "Midnight Bloodstone Murders 6"
+	landing
 	name "Inspector Akran to <planet>"
 	description "Help Inspector Akran return Dr. Oaks to her family on <destination>."
 	passengers 1

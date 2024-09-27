@@ -256,6 +256,7 @@ ship "Sea Scorpion" "Sea Scorpion (Ion Pulse)"
 		"Value Detector"
 		"Hyperdrive"
 		"Pulse Rifle" 15
+		Barracks
 
 ship "Sea Scorpion" "Sea Scorpion (Ion Pulse, Jump)"
 	outfits
@@ -273,6 +274,7 @@ ship "Sea Scorpion" "Sea Scorpion (Ion Pulse, Jump)"
 		"Value Detector"
 		"Jump Drive"
 		"Pulse Rifle" 15
+		Barracks
 
 ship "Sea Scorpion" "Sea Scorpion (Pulse, Jump)"
 	outfits
@@ -291,6 +293,7 @@ ship "Sea Scorpion" "Sea Scorpion (Pulse, Jump)"
 		"Value Detector"
 		"Jump Drive"
 		"Pulse Rifle" 15
+		Barracks
 
 ship "Sea Scorpion" "Sea Scorpion (Pulse Repeater)"
 	outfits
@@ -310,6 +313,7 @@ ship "Sea Scorpion" "Sea Scorpion (Pulse Repeater)"
 		"Dual Pulse Pistols"
 		"Ion Flash Bang" 7
 		"Pulse Rifle" 15
+		Barracks
 
 ship "Sea Scorpion" "Sea Scorpion (Pulse Repeater, Jump)"
 	outfits
@@ -329,6 +333,7 @@ ship "Sea Scorpion" "Sea Scorpion (Pulse Repeater, Jump)"
 		"Dual Pulse Pistols"
 		"Ion Flash Bang" 7
 		"Pulse Rifle" 15
+		Barracks
 
 ship "Sea Scorpion" "Sea Scorpion (Tracker, Jump)"
 	outfits
@@ -341,6 +346,7 @@ ship "Sea Scorpion" "Sea Scorpion (Tracker, Jump)"
 		"Boulder Reactor"
 		"Hai Ravine Batteries"
 		"Hai Diamond Regenerator"
+		Barracks
 		`"Bondir" Atomic Thruster`
 		`"Bondir" Atomic Steering`
 		"Value Detector"
@@ -364,6 +370,7 @@ ship "Shield Beetle" "Shield Beetle (Bloodstone)"
 		"Quantum Bloodstone"
 		"Pulse Rifle" 55
 		"Ion Flash Bang" 27
+		Barracks
 		`"Bondir" Atomic Thruster`
 		`"Bufaer" Atomic Steering`
 		"Hyperdrive"
@@ -382,6 +389,7 @@ ship "Shield Beetle" "Shield Beetle (Heavy Pulse)"
 		`"Bondir" Atomic Thruster`
 		`"Bufaer" Atomic Steering`
 		"Hyperdrive"
+		Barracks
 	gun "Heavy Pulse Cannon"
 	gun "Heavy Pulse Cannon"
 	gun "Pulse Cannon"
@@ -404,9 +412,11 @@ ship "Shield Beetle" "Shield Beetle (Heavy Pulse Tracker)"
 		"Hai Valley Batteries"
 		"Hai Diamond Regenerator"
 		"Hai Mistral Cooling"
-		"Value Detector" 2
+		"Value Detector"
+		"Modified Nugget Finder"
 		"Quantum Keystone"
 		"Pulse Rifle" 65
+		Barracks
 		`"Bondir" Atomic Thruster`
 		`"Bufaer" Atomic Steering`
 		"Hyperdrive"
@@ -444,7 +454,7 @@ ship "Shield Beetle" "Shield Beetle (Police, Ancestral)"
 		"Hai Gorge Batteries"
 		"Outfits Expansion" 4
 		"Hai Diamond Regenerator" 2
-		"Outfit Scanner" 7
+		"Modified Nugget Finder" 2
 		"Value Detector"
 		"Brig"
 		"Hai Mistral Cooling"
@@ -631,6 +641,7 @@ ship "Shield Beetle" "Shield Beetle (Pulse Repeater)"
 		"Pulse Rifle" 55
 		"Ion Flash Bang" 27
 		"Dual Pulse Pistols"
+		Barracks
 		`"Bondir" Atomic Thruster`
 		`"Bufaer" Atomic Steering`
 		"Hyperdrive"
@@ -748,6 +759,47 @@ ship "Shield Beetle" "Shield Beetle (Weapon Collector)"
 	turret "Chameleon Anti-Missile"
 	turret "Chameleon Anti-Missile"
 
+ship "Shield Beetle" "Shield Beetle (Nutcracker Collector)"
+	outfits
+		`"Bondir" Atomic Thruster`
+		`"Bufaer" Atomic Steering`
+		"Boulder Reactor"
+		"Chameleon Anti-Missile" 2
+		"Dual Pulse Pistols"
+		"Enforcer Confrontation Gear"
+		"Fragmentation Grenades"
+		"Geode Reactor"
+		"Hai Corundum Regenerator"
+		"Hai Diamond Regenerator"
+		"Hai Mistral Cooling"
+		"Hai Octopus Jammer" 2
+		"Hai Ravine Batteries"
+		"Hai Nutcracker" 6
+		"Hai Williwaw Cooling" 2
+		Hyperdrive
+		"Ion Flash Bang" 13
+		"Ionic Blaster Prototype" 2
+		"Ionic Turret Prototype" 2
+		"Laser Rifle"
+		"Pulse Rifle" 27
+		"Quantum Keystone"
+		"Thermal Repeater Rifle"
+		"Tuning Rifle"
+		"Value Detector" 2
+	gun "Ionic Blaster Prototype"
+	gun "Ionic Blaster Prototype"
+	gun "Hai Nutcracker"
+	gun "Hai Nutcracker"
+	gun "Hai Nutcracker"
+	gun "Hai Nutcracker"
+	gun "Hai Nutcracker"
+	gun "Hai Nutcracker"
+	turret "Ionic Turret Prototype"
+	turret "Ionic Turret Prototype"
+	turret "Chameleon Anti-Missile"
+	turret "Chameleon Anti-Missile"
+
+
 
 ship "Solifuge" "Solifuge Prototype"
 	"display name" "Solifuge Prototype"
@@ -839,6 +891,7 @@ ship "Solifuge" "Solifuge (Komodo)"
 		"Pulse Rifle" 62
 		"Ion Flash Bang" 31
 		"Dual Pulse Pistols"
+		Barracks
 		`"Benga" Atomic Steering`
 		`"Bondir" Atomic Thruster`
 		`"Bufaer" Atomic Steering`
@@ -870,6 +923,7 @@ ship "Solifuge" "Solifuge (Komodo, Jump)"
 		"Pulse Rifle" 62
 		"Ion Flash Bang" 31
 		"Dual Pulse Pistols"
+		Barracks
 		`"Benga" Atomic Steering`
 		`"Bondir" Atomic Thruster`
 		`"Bufaer" Atomic Steering`
@@ -903,6 +957,7 @@ ship "Solifuge" "Solifuge (Komodo, Repeater)"
 		"Pulse Rifle" 62
 		"Ion Flash Bang" 31
 		"Dual Pulse Pistols"
+		Barracks
 		`"Benga" Atomic Steering`
 		`"Bondir" Atomic Thruster`
 		`"Bufaer" Atomic Steering`
@@ -929,6 +984,7 @@ ship "Solifuge" "Solifuge (Komodo, Tracker)"
 		"Pulse Rifle" 62
 		"Ion Flash Bang" 31
 		"Dual Pulse Pistols"
+		Barracks
 		`"Benga" Atomic Steering`
 		`"Bondir" Atomic Thruster`
 		`"Bufaer" Atomic Steering`
@@ -957,6 +1013,7 @@ ship "Solifuge" "Solifuge (Ion Flash)"
 		"Pulse Rifle" 62
 		"Ion Flash Bang" 31
 		"Dual Pulse Pistols"
+		Barracks
 		`"Benga" Atomic Steering`
 		`"Bufaer" Atomic Steering`
 		`"Bondir" Atomic Thruster`
