@@ -303,7 +303,7 @@ outfit "Modified Nugget Finder"
 	"outfit scan efficiency" 15
 	"asteroid scan power" 40
 	"heat generation" 2
-	description "As its name suggests, the Nugget Finder was originally used by the ancient Hai to mine asteroids. However, the Unfettered discovered that a few subtle adjustments allows it to target a ship and identify the outfits it has installed."
+	description "As its name suggests, the Nugget Finder was originally used by the ancient Hai to mine asteroids. However, the Unfettered discovered that a few subtle adjustments allow it to target a ship and identify the outfits it has installed."
 
 
 outfit "Quantum Bloodstone"
