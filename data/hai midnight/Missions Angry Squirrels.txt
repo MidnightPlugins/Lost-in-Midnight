@@ -1700,12 +1700,12 @@ mission "Midnight Bloodstone Theft 4"
 				`	(Go after him!)`
 				`	(Tend to Akran.)`
 					goto tend
-			action
-				fail "Midnight Bloodstone Theft 4B"
 			scene "thumbnail/hai grasshopper"
 			`	You rush aboard the <ship> and head out in pursuit.`
 				launch
 			label tend
+			action
+				set "midnight bloodstone theft 4 akran medic"
 			`	The Grasshopper flees while you tend to Akran. He took a hard blow to the head but you are able to mitigate the bleeding. He slowly regains consciousness and asks, "Did you catch him?" Seeing the expression on your face he says, "I see." Groaning while you help him to his feet he remarks, "I think I need to get checked out. Take me to Makerplace."`
 				decline
 
@@ -1724,7 +1724,6 @@ mission "Midnight Bloodstone Theft 4"
 					goto abandon2
 			scene "outfit/attention"
 			action
-				fail "Midnight Bloodstone Theft 4B"
 				set "bloodstone thief void akran"
 			`	Another hour passes and the thief steps out of the darkness into the docking bay. "Hello monkey! I sent your friend on a spacewalk, without an environmental suit!" Pointing at you, he declares "You're next!"`
 			choice
@@ -1773,7 +1772,6 @@ mission "Midnight Bloodstone Theft 4"
 
 			label abandon1
 			action
-				fail "Midnight Bloodstone Theft 4B"
 				set "bloodstone thief voidbay"
 			`	After an hour of exploring the twisting corridors and winding tunnels you find no sign of the thief. Suddenly you hear an alarm followed by an automated announcement spoken in Hai. Then the silence returns. Whatever that announcement was, you're certain both Akran and the thief heard it.`
 			choice
@@ -1782,7 +1780,6 @@ mission "Midnight Bloodstone Theft 4"
 
 			label abandon2
 			action
-				fail "Midnight Bloodstone Theft 4B"
 				set "bloodstone thief voidbay"
 			`	Searching the station, you find a section that has been depressurized.`
 			choice
@@ -1805,21 +1802,18 @@ mission "Midnight Bloodstone Theft 4"
 
 mission "Midnight Bloodstone Theft 4B"
 	landing
-	name "Emergency transport to <planet>"
-	description "Take Inspector Akran to <destination> for emergency treatment."
-	passengers 1
-	source Ironfirth
-	destination Makerplace
+	invisible
+	source Makerplace
 	to offer
-		has "Midnight Bloodstone Theft 3: done"
-	on complete
-		payment 0 200
-		payment 2000
+		has "midnight bloodstone theft 4 akran medic"
+	on offer
+		payment 4000
 		log "A thief stole the murder weapon that was used to kill Dr. Oaks. Despite our best efforts, Inspector Akran and I failed to catch the thief."
 		conversation
 			scene "outfit/medical bay"
 			`You inform the spaceport authority that you have a passenger in need of medical treatment. By the time you land, a team is ready to take Inspector Akran to the local emergency room for examination and treatment. As they start to wheel him away Akran says, "We'll get him next time, I'm sure..."`
 			`	Some time later, a messenger delivers <payment> to your ship on Akran's behalf. An attached note expresses Akran's gratitude for your assistance.`
+				decline
 
 mission "Midnight Bloodstone Theft 5"
 	landing
