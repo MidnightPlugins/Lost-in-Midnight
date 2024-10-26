@@ -108,8 +108,9 @@ event "midnight add tch'esar"
 			"Tch'esar (Damaged Jump Drive)"
 		add variant 1
 			"Ra'gru Ik 618"
-			"Tch'esar" 3
-			"Tch'esar (Damaged Jump Drive)" 3
+			"Tch'esar" 2
+			"Tch'esar (Damaged Jump Drive)" 2
+			"Tch'esar (Inferno-Trident)"
 		add variant 1
 			"Ra'at Ik 621 (Storm)"
 			"'olofez" 5
@@ -120,8 +121,9 @@ event "midnight add tch'esar"
 			"Ra'at Ik 621"
 			"'olofez" 5
 			"'olofez (Expeller)" 4
-			"Tch'esar" 3
-			"Tch'esar (Damaged Jump Drive)" 3
+			"Tch'esar" 2
+			"Tch'esar (Damaged Jump Drive)" 2
+			"Tch'esar (Inferno-Trident)"
 		add variant 1
 			"Rano'erek"
 			"'olofez" 2
@@ -133,15 +135,93 @@ event "midnight add tch'esar"
 			"Palavret (Blaze)"
 			"Palavret (Ember Shunt)"
 			"'olofez" 6
-			"Tch'esar" 3
-			"Tch'esar (Damaged Jump Drive)" 3
+			"Tch'esar" 2
+			"Tch'esar (Damaged Jump Drive)" 2
+			"Tch'esar (Inferno-Trident)"
 		add variant 1
 			"Ra'gru Ik 618 (Shock Strike)"
-			"Tch'esar" 3
-			"Tch'esar (Damaged Jump Drive)" 3
+			"Tch'esar" 2
+			"Tch'esar (Damaged Jump Drive)" 2
+			"Tch'esar (Inferno-Trident)"
 		add variant 1
 			"Ra'at Ik 621 (Shock Strike)"
 			"'olofez" 9
+			"Tch'esar" 2
+			"Tch'esar (Damaged Jump Drive)" 2
+			"Tch'esar (Inferno-Trident)"
+		add variant 1
+			"Tch'esar (Inferno-Trident)"
+			"Tch'esar" 3
+			"Tch'esar (Damaged Jump Drive)" 3
+
+mission "Midnight Tch'esar Inferno Trident Patch"
+	landing
+	invisible
+	on offer
+		event "midnight tch'esar inferno trident patch"
+		fail
+
+event "midnight tch'esar inferno trident patch"
+	fleet "Korath Defense"
+		remove variant 1
+			"Ra'gru Ik 618"
+			"Tch'esar" 3
+			"Tch'esar (Damaged Jump Drive)" 3
+		remove variant 1
+			"Ra'at Ik 621"
+			"'olofez" 5
+			"'olofez (Expeller)" 4
+			"Tch'esar" 3
+			"Tch'esar (Damaged Jump Drive)" 3
+		remove variant 1
+			"Palavret"
+			"Palavret (Blaze)"
+			"Palavret (Ember Shunt)"
+			"'olofez" 6
+			"Tch'esar" 3
+			"Tch'esar (Damaged Jump Drive)" 3
+		remove variant 1
+			"Ra'gru Ik 618 (Shock Strike)"
+			"Tch'esar" 3
+			"Tch'esar (Damaged Jump Drive)" 3
+		remove variant 1
+			"Ra'at Ik 621 (Shock Strike)"
+			"'olofez" 9
+			"Tch'esar" 3
+			"Tch'esar (Damaged Jump Drive)" 3
+		add variant 1
+			"Ra'gru Ik 618"
+			"Tch'esar" 2
+			"Tch'esar (Damaged Jump Drive)" 2
+			"Tch'esar (Inferno-Trident)"
+		add variant 1
+			"Ra'at Ik 621"
+			"'olofez" 5
+			"'olofez (Expeller)" 4
+			"Tch'esar" 2
+			"Tch'esar (Damaged Jump Drive)" 2
+			"Tch'esar (Inferno-Trident)"
+		add variant 1
+			"Palavret"
+			"Palavret (Blaze)"
+			"Palavret (Ember Shunt)"
+			"'olofez" 6
+			"Tch'esar" 2
+			"Tch'esar (Damaged Jump Drive)" 2
+			"Tch'esar (Inferno-Trident)"
+		add variant 1
+			"Ra'gru Ik 618 (Shock Strike)"
+			"Tch'esar" 2
+			"Tch'esar (Damaged Jump Drive)" 2
+			"Tch'esar (Inferno-Trident)"
+		add variant 1
+			"Ra'at Ik 621 (Shock Strike)"
+			"'olofez" 9
+			"Tch'esar" 2
+			"Tch'esar (Damaged Jump Drive)" 2
+			"Tch'esar (Inferno-Trident)"
+		add variant 1
+			"Tch'esar (Inferno-Trident)"
 			"Tch'esar" 3
 			"Tch'esar (Damaged Jump Drive)" 3
 
@@ -570,13 +650,13 @@ mission "Midnight: Kor Explorers"
 	npc
 		government "Korath (Civilian)"
 		system Tekochtli
-		personality waiting staying mining harvests
+		personality waiting staying heroic
 		fleet
 			names "korath"
-			cargo 3
+			cargo 0
 			variant
-				"Tch'esar"
-				"Tch'esar (Damaged Jump Drive)"
+				"Tch'esar (Inferno-Trident)" 2
+				"'olofez" 5
 	npc
 		government "Korath (Civilian)"
 		system Tekochtli
@@ -587,7 +667,15 @@ mission "Midnight: Kor Explorers"
 			variant
 				"'olofez (Expeller)" 13
 				"'olofez (Digger)" 6
-				"'olofez" 5
+	npc
+		government "Korath (Civilian)"
+		system Tekochtli
+		personality waiting staying swarming
+		fleet
+			names "korath"
+			cargo 3
+			variant
+				"'olofez (Expeller)" 13
 	npc kill
 		government "Korath (Civilian)"
 		system Tekochtli
