@@ -45,6 +45,7 @@ mission "Midnight Add Tch'esar"
 	invisible
 	on offer
 		event "midnight add tch'esar"
+		set "midnight tch'esar inferno trident patched"
 		fail
 
 event "midnight add tch'esar"
@@ -157,6 +158,9 @@ event "midnight add tch'esar"
 mission "Midnight Tch'esar Inferno Trident Patch"
 	landing
 	invisible
+	to offer
+		has "event: midnight add tch'esar"
+		not "midnight tch'esar inferno trident patched"
 	on offer
 		event "midnight tch'esar inferno trident patch"
 		fail
