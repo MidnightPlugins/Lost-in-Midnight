@@ -692,7 +692,7 @@ outfit "Chimera Junk Thruster"
 	"thrusting heat" 1.8
 	"flare sprite" "effect/junk flare/tiny"
 		"frame rate" 5
-	"flare sound" "junk tiny"
+	"flare sound" "plasma tiny"
 	description "This motley collection of spare parts has been assembled into a Junk propulsion system. This tiny thruster is suitable for very light fighters and interceptors."
 	description "	Junk engines are usually a bit more powerful than ion engines of the same size, but they are less efficient than plasma engines."
 
@@ -710,7 +710,7 @@ outfit "Griffin Junk Thruster"
 	"thrusting heat" 3.4
 	"flare sprite" "effect/junk flare/small"
 		"frame rate" 6
-	"flare sound" "junk small"
+	"flare sound" "plasma small"
 	description "Many frontier tinkerers with no formal education began their careers by cobbling together a Junk propulsion system. This thruster is intended for small ships and freighters."
 	description "	Junk engines are usually a bit more powerful than ion engines of the same size, but they are less efficient than plasma engines."
 
@@ -728,7 +728,7 @@ outfit "Hippogriff Junk Thruster"
 	"thrusting heat" 6.5
 	"flare sprite" "effect/junk flare/medium"
 		"frame rate" 7
-	"flare sound" "junk medium"
+	"flare sound" "plasma medium"
 	description "Considering how they're manufactured, it's a technical marvel that the various parts used to construct a Junk propulsion system are functional. This thruster is suitable for smaller capital ships."
 	description "	Junk engines are usually a bit more powerful than ion engines of the same size, but they are less efficient than plasma engines."
 
@@ -746,7 +746,7 @@ outfit "Manticore Junk Thruster"
 	"thrusting heat" 12.3
 	"flare sprite" "effect/junk flare/large"
 		"frame rate" 8
-	"flare sound" "junk large"
+	"flare sound" "plasma large"
 	description "Finding quality propulsion systems can be difficult on some distant frontier worlds. This large thruster is a necessity on ships too heavy for smaller engines to handle."
 	description "	Junk engines are usually a bit more powerful than ion engines of the same size, but they are less efficient than plasma engines."
 
@@ -764,7 +764,7 @@ outfit "Tarasque Junk Thruster"
 	"thrusting heat" 19.1
 	"flare sprite" "effect/junk flare/huge"
 		"frame rate" 9
-	"flare sound" "junk huge"
+	"flare sound" "plasma huge"
 	description "Frontier captains will resort to using Junk propulsion systems when alternative options are unavailable. This set of huge thrusters can only be installed on ships large enough to handle them."
 	description "	Junk engines are usually a bit more powerful than ion engines of the same size, but they are less efficient than plasma engines."
 
@@ -783,7 +783,7 @@ outfit "Chimera Junk Steering"
 	"turning heat" 1.1
 	"steering flare sprite" "effect/junk flare/tiny"
 		"frame rate" 5
-	"steering flare sound" "junk tiny"
+	"steering flare sound" "plasma tiny"
 	description "Junk steering systems are patchwork constructs made from the salvaged parts of other engines. This tiny engine is named after a mythical creature that had a lion's head, a goat's body, and a serpent's tail."
 	description "	Junk engines are usually a bit more powerful than ion engines of the same size, but they are less efficient than plasma engines."
 
@@ -801,7 +801,7 @@ outfit "Griffin Junk Steering"
 	"turning heat" 2.1
 	"steering flare sprite" "effect/junk flare/small"
 		"frame rate" 6
-	"steering flare sound" "junk small"
+	"steering flare sound" "plasma small"
 	description "Junk steering systems are patchwork constructs made from the salvaged parts of other engines. This small engine is named after a mythical creature that had the head, forepart, and wings of an eagle and the body, hind legs, and tail of a lion."
 	description "	Junk engines are usually a bit more powerful than ion engines of the same size, but they are less efficient than plasma engines."
 
@@ -819,7 +819,7 @@ outfit "Hippogriff Junk Steering"
 	"turning heat" 4.1
 	"steering flare sprite" "effect/junk flare/medium"
 		"frame rate" 7
-	"steering flare sound" "junk medium"
+	"steering flare sound" "plasma medium"
 	description "Junk steering systems are patchwork constructs made from the salvaged parts of other engines. This medium sized engine is named after a mythical creature that had the foreparts of a griffin and the body of a horse."
 	description "	Junk engines are usually a bit more powerful than ion engines of the same size, but they are less efficient than plasma engines."
 
@@ -837,7 +837,7 @@ outfit "Manticore Junk Steering"
 	"turning heat" 7.7
 	"steering flare sprite" "effect/junk flare/large"
 		"frame rate" 8
-	"steering flare sound" "junk large"
+	"steering flare sound" "plasma large"
 	description "Junk steering systems are patchwork constructs made from the salvaged parts of other engines. This large engine is named after a mythical creature that had the head of a man, the body of a lion, and the tail of a scorpion."
 	description "	Junk engines are usually a bit more powerful than ion engines of the same size, but they are less efficient than plasma engines."
 
@@ -855,7 +855,7 @@ outfit "Tarasque Junk Steering"
 	"turning heat" 12.5
 	"steering flare sprite" "effect/junk flare/huge"
 		"frame rate" 9
-	"steering flare sound" "junk huge"
+	"steering flare sound" "plasma huge"
 	description "Junk steering systems are patchwork constructs made from the salvaged parts of other engines. This huge engine is named after a mythical creature that had the head of a lion, the body of a turtle, the feet of a bear, and a serpent's tail."
 	description "	Junk engines are usually a bit more powerful than ion engines of the same size, but they are less efficient than plasma engines."
 

@@ -463,10 +463,8 @@ outfit "Kludge Blaster"
 		"shield damage" 13.2
 		"hull damage" 8.8
 		"minable damage" 10.6
-		"prospecting" 0.001
 		"cluster"
 	description "Kludge Blasters started out as a failed attempt at modifying an Energy Blaster. Despite their shady origins, the most basic version eventually gained widespread popularity as a budget alternative mining weapon and are available at many legitimate outfitters across the galaxy."
-	description "	The more complex Kludge Blasters used by pirates can be so effective at shattering asteroids that they ruin most of the precious ores contained within."
 	description `	This weapon is set to fire in "cluster" mode, synchronizing its rate of fire when multiple copies are installed together.`
 
 outfit "Twin Kludge Blaster"
