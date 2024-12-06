@@ -162,7 +162,7 @@ mission "Grudge Fight 2"
 mission "Grudge Fight 3"
 	minor
 	name "Espionage"
-	description "The Goldstrike is scheduled to pass through the <waypoints> system. Locate it and make detailed scans of its cargo, which are of considerable interest to your employer on origin; proceed there for payment after retrieving the data."
+	description "The Goldstrike is scheduled to pass through the <waypoints> system. Locate it and make detailed scans of its cargo, which are of considerable interest to your employer on <origin>; proceed there for <payment> after retrieving the data."
 	source
 		near "Menkent" 1 5
 		government "Republic" "Free Worlds" "Syndicate"
@@ -173,13 +173,13 @@ mission "Grudge Fight 3"
 		random < 70
 	on offer
 		conversation
-			`A nervous man in a suit approaches you as you disembark from your ship. "Excuse me, are you Captain <last>?."`
+			`A nervous man in a suit approaches you as you disembark from your ship. "Excuse me, are you Captain <last>?"`
 			choice
 				`	"How did you know my name?"`
 					goto confirm
 				`	"I don't know who you're talking about."`
 			
-			`	"What? I could have sworn the <ship> belonged to <first>."`
+			`	"What? I could have sworn the <ship> belonged to <first>.`
 			
 			label confirm
 			`	"This is the <ship>, your ship, isn't it?" he asks. You can't argue with that statement.`
