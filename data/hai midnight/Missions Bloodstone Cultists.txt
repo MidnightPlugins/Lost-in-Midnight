@@ -487,7 +487,8 @@ mission "Midnight Bloodstone Murders 6"
 			label fork
 			`	The three of you head out. After an hour you reach a fork in the hallway. "We should split up to cover more ground. Oaks, you go with Captain <last>. It will be safer for you. Yell if you find anything."`
 			choice
-				`	"I'll keep her safe"`
+				`	"I'll keep her safe."`
+
 					goto split
 				`	"This is a bad idea."`
 			`	Oaks agrees. Sighing with resignation, Akran picks a path and the two of you follow. Suddenly, something rushes out of the darkness and crashes into Oaks! She screams as she collapses onto the floor! Akran yells and tackles the dark shape that was standing over her. You see that Oaks has been stabbed in the chest with the jagged edge of what appears to be a Quantum Keystone. Her body twitches violently as blood gushes from the wound. "<last>!" yells Akran. The dark shape throws Akran aside and scampers down the hallway. The Inspector slams into the wall hard before slumping to the floor, unconscious.`
