@@ -2084,7 +2084,7 @@ mission "Coalition Dissension: Heliarch Intrigues 2"
 		"heliarch intrigues" ++
 		conversation
 			scene "outfit/unknown"
-			`	You contact Chikee and share the video with him. "Embarassed I am at this video. From when I was still a student this was. Not serious, this is. But a message someone is sending me." Chikee thanks you for telling him about the video and asks you to destroy any copies you have. He pays you <payment> as a token of good faith.`
+			`	You contact Chikee and share the video with him. "Embarrassed I am at this video. From when I was still a student this was. Not serious, this is. But a message someone is sending me." Chikee thanks you for telling him about the video and asks you to destroy any copies you have. He pays you <payment> as a token of good faith.`
 
 event "kimek bramble sales"
 	shipyard "Kimek"
@@ -2445,7 +2445,7 @@ mission "Coalition Dissension: Spaceport Bomber (Arach)"
 			label stop
 			action
 				set "Coalition Dissension: Spaceport Bomber (Arach) stopped"
-			`	The Arach appraches you and gestures back towards the direction of the plaza. "To the plaza you must go. Many questions we have for you. Resist you must not." She is holding one of their weapons, no mere Laser Rifle. A shot from this would probably put a very large hole in you.`
+			`	The Arach approches you and gestures back towards the direction of the plaza. "To the plaza you must go. Many questions we have for you. Resist you must not." She is holding one of their weapons, no mere Laser Rifle. A shot from this would probably put a very large hole in you.`
 				goto decision
 
 			label obey
@@ -2565,7 +2565,7 @@ mission "Coalition Dissension: Spaceport Bomber (Kimek)"
 			choice
 				`	(Look outside.)`
 			scene "scene/scene-explosion"
-			`	The building next door is on fire! Alarm sirens start blaring and the spaceport exits are quickly sealed off by Riot Containment Barriers. The Heliarch are directing fire suppresion teams to put out the blaze while rescue workers retrieve the burnt remains of those who were caught in the blast. It seems this was a Heliarch facility and most of the victims are their agents. Once the fire is out, the Heliarch begin taking witness statements from everyone.`
+			`	The building next door is on fire! Alarm sirens start blaring and the spaceport exits are quickly sealed off by Riot Containment Barriers. The Heliarch are directing fire suppression teams to put out the blaze while rescue workers retrieve the burnt remains of those who were caught in the blast. It seems this was a Heliarch facility and most of the victims are their agents. Once the fire is out, the Heliarch begin taking witness statements from everyone.`
 			choice
 				`	(Tell them about the Kimek carrying a briefcase.)`
 					goto testify
@@ -2656,7 +2656,7 @@ mission "Coalition Dissension: Tinderbox (Peacekeepers Arach)"
 			`	An hour passes with no change to the situation. No ships are landing or taking off.`
 				goto wait
 			label request
-			`	You send the request for an exeption.`
+			`	You send the request for an exception.`
 			choice
 				`	(Wait for a response.)`
 				`	(Send the request again.)`
@@ -2725,7 +2725,7 @@ mission "Coalition Dissension: Tinderbox (Peacekeepers Kimek)"
 			`	An hour passes with no change to the situation. No ships are landing or taking off.`
 				goto wait
 			label request
-			`	You send the request for an exeption.`
+			`	You send the request for an exception.`
 			choice
 				`	(Wait for a response.)`
 				`	(Send the request again.)`
@@ -2794,7 +2794,7 @@ mission "Coalition Dissension: Tinderbox (Peacekeepers Saryd)"
 			`	An hour passes with no change to the situation. No ships are landing or taking off.`
 				goto wait
 			label request
-			`	You send the request for an exeption.`
+			`	You send the request for an exception.`
 			choice
 				`	(Wait for a response.)`
 				`	(Send the request again.)`
@@ -2853,7 +2853,7 @@ mission "Culminator Ammo [Outfitter]"
 		require "Culminator Pod"
 		conversation
 			scene "outfit/culminator storage"
-			`While visiting the outfitter, someone carts in some dusty storage tubes filled with ancient Culminator Torpedos. The sales clerk is busy with a different customer...`
+			`While visiting the outfitter, someone carts in some dusty storage tubes filled with ancient Culminator Torpedoes. The sales clerk is busy with a different customer...`
 			choice
 				`	"Where did you find those?"`
 				`	(Ignore this.)`

@@ -172,7 +172,7 @@ mission "Balthazar 4"
 			choice
 				`	(One more thing...)`
 
-			`	Before leaving, you head over to the local seaport and file the paperwork for salvaging rights. Unsurprisingly, the application is rejected because someone else aready has those rights. You look up their information and find that the rights holder is based out of a local fishing operation.`
+			`	Before leaving, you head over to the local seaport and file the paperwork for salvaging rights. Unsurprisingly, the application is rejected because someone else already has those rights. You look up their information and find that the rights holder is based out of a local fishing operation.`
 			choice
 				`	(Visit Barnacle Bobby's Bait and Fish.)`
 			

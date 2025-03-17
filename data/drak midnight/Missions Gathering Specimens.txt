@@ -1570,7 +1570,7 @@ mission "Gathering Specimens: Wanderer Ionic Research 2"
 		"reputation: Wanderer" >= 0.01
 		has "event: Storm Seeker Reborn"
 	on offer
-		dialog `You recieve a message from Sobari Tele'ek: "The [research, investigation] from the Ionic [Leech, Bloodworm] [tissue, meat] sample is [complete, concluded]. Come to <destination> if you are [interested, curious] in seeing the [result, solution].`
+		dialog `You receive a message from Sobari Tele'ek: "The [research, investigation] from the Ionic [Leech, Bloodworm] [tissue, meat] sample is [complete, concluded]. Come to <destination> if you are [interested, curious] in seeing the [result, solution].`
 	on complete
 		dialog `Visit the spaceport to see the research results that Sobari Tele'ek mentioned.`
 

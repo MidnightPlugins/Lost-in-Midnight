@@ -972,7 +972,7 @@ mission "Midnight Sunracer Geminae 3"
 			dialog "Another racer passes while you stop to board the disabled ship."
 		on assist
 			"racing position geminae" --
-			"reputation: Indepdendent" ++
+			"reputation: Independent" ++
 			dialog "Another racer passes while you stop to assist the disabled ship."
 	on complete
 		clear "sunracer asteroid"
@@ -1445,7 +1445,7 @@ mission "Midnight Sunracer Tertio 3"
 			dialog "Another racer passes while you stop to board the disabled ship."
 		on assist
 			"racing position tertio" --
-			"reputation: Indepdendent" ++
+			"reputation: Independent" ++
 			dialog "Another racer passes while you stop to assist the disabled ship."
 	on complete
 		clear "sunracer asteroid"
@@ -1609,7 +1609,7 @@ mission "Midnight Sunracer Tertio 4"
 				payment 8000
 				"racing position tertio" >?= -1
 			scene "outfit/license geminae"
-			`	You finished in last place. A consolation prize of 8,000 credits is awarded to you. During the race, more than a few racers took an agressive stance towards you, as if there's a bounty to keep you out of the top rankings...`
+			`	You finished in last place. A consolation prize of 8,000 credits is awarded to you. During the race, more than a few racers took an aggressive stance towards you, as if there's a bounty to keep you out of the top rankings...`
 			``
 			`	You might have to get your hands dirty. Disabling one of these aggressive racers might convince some of the others to back off in the future.`
 				accept
@@ -1759,7 +1759,7 @@ mission "Midnight Sunracer Pirate Hack 1"
 	on offer
 		conversation
 			scene "outfit/data pad"
-			`You are appoached by a cyborg. It speaks to you with a mechanical male voice, a hint of the person buried underneath the external machinery. "YoU aRe <first> <last>, CaPtAiN oF ThE <ship>. YoU HaVe ExPeRiEnCe HaCkInG dRoNeS. wE hAvE a JoB fOr YoU." You notice it speaks differently when it says the name of you and your ship...`
+			`You are approached by a cyborg. It speaks to you with a mechanical male voice, a hint of the person buried underneath the external machinery. "YoU aRe <first> <last>, CaPtAiN oF ThE <ship>. YoU HaVe ExPeRiEnCe HaCkInG dRoNeS. wE hAvE a JoB fOr YoU." You notice it speaks differently when it says the name of you and your ship...`
 			choice
 				`	"What sort of job?"`
 				`	"Go away, I'm not interested."`
@@ -1949,7 +1949,7 @@ mission "Sunracer Afterburner 3"
 		log `It seems Patrick succeeded in making a better version of the Hybrid Afterburner.`
 		conversation
 			scene "outfit/sunracer afterburner"
-			`	You notice a new afterburner in the outfitter. It looks like Patrick suceeded in making a better version of the prototype Hybrid Afterburner.`
+			`	You notice a new afterburner in the outfitter. It looks like Patrick succeeded in making a better version of the prototype Hybrid Afterburner.`
 				decline
 
 mission "Midnight Sunracer Afterburner Update"

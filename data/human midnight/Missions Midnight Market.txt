@@ -846,7 +846,7 @@ mission "Midnight Market: Wanderer Micro-sat"
 				`	(Leave.)`
 					goto end
 			scene "scene/scene-explosion"
-			`	He is poking at one corner of the cube with one of this tools when there is an audible 'click'. The micro-satellite begins to glow red while emmitting a high pitched whine. The last thing you see before you die is the explosion...`
+			`	He is poking at one corner of the cube with one of this tools when there is an audible 'click'. The micro-satellite begins to glow red while emitting a high pitched whine. The last thing you see before you die is the explosion...`
 				die
 
 			label keep

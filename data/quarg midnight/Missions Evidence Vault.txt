@@ -72,7 +72,7 @@ mission "Vault Weapon Ion Pulse Shotgun"
 	on offer
 		conversation
 			scene "thumbnail/mleviathans"
-			`You see two pirates arguing. "I lost half my crew tring to board that Leviathan! You didn't tell me that the captain of the Seeds of Doom has some exotic weapon stolen from Farpoint's evidence vault!" The other pirate tries to apologize to the first, but they end up in a vicious knife fight. It sounds like the Seeds of Doom has some interesting plunder.`
+			`You see two pirates arguing. "I lost half my crew trying to board that Leviathan! You didn't tell me that the captain of the Seeds of Doom has some exotic weapon stolen from Farpoint's evidence vault!" The other pirate tries to apologize to the first, but they end up in a vicious knife fight. It sounds like the Seeds of Doom has some interesting plunder.`
 			choice
 				`	(Try to find the Seeds of Doom.)`
 				`	(Ignore this opportunity.)`
@@ -950,7 +950,7 @@ mission "Vault Weapon Insurgent Subjugation Gear"
 			`The pirate captain wielded an exotic weapon... This must be the item that was stolen from the evidence vault. Will you return it to Farpoint or keep it for yourself?`
 			choice
 				`	(Return the weapon to Farpoint.)`
-				`	(Keep it for youself.)`
+				`	(Keep it for yourself.)`
 					goto keep
 			action
 				set "transporting insurgent subjugation gear"

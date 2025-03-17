@@ -1641,7 +1641,7 @@ mission "Thraal: Moreau"
 				`	"Are you serious?"`
 				`	"You've got to be kidding!"`
 			scene "planet/station2k"
-			`	Thraal places the cover back on some recently repaired ciruits and says, "Would you like to meet them? I can arrange it." The Korath have been an implacable adversary. This could be a chance to establish peaceful relations with them. Before you respond, Thraal hails Gresku Fodar, the Korath station in this system, and speaks to them in their language. After a short exchange, he smiles at you reassuringly. "They're waiting."`
+			`	Thraal places the cover back on some recently repaired circuits and says, "Would you like to meet them? I can arrange it." The Korath have been an implacable adversary. This could be a chance to establish peaceful relations with them. Before you respond, Thraal hails Gresku Fodar, the Korath station in this system, and speaks to them in their language. After a short exchange, he smiles at you reassuringly. "They're waiting."`
 			choice
 				`	(Visit Gresku Fodar.)`
 					accept
@@ -1812,7 +1812,7 @@ mission "Prisoner Bribe Release (Job)"
 		payment 25000 400
 	on enter
 		log `After accepting a bribe to release the notorious felon Dirk Malone, he sent his fleet of pirate raiders to attack me.`
-		dialog 	`You receive a message from the felon you just released: "You got your payment, so technically I've fufilled my part of the agreement. Now we're just going to do what pirates do...`
+		dialog 	`You receive a message from the felon you just released: "You got your payment, so technically I've fulfilled my part of the agreement. Now we're just going to do what pirates do...`
 	npc evade
 		government "Pirate"
 		personality entering nemesis plunders

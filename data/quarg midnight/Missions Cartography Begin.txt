@@ -297,7 +297,7 @@ mission "Cartography: Quarg Hitchhiker 2"
 		conversation
 			scene "thumbnail/carabao-thumb"
 			`When you arrive at landing pad Q, you a greeted by a dreadful sight. The Carabao, known as the "cursed" city ship, featured in many horror stories where the colonists die off one by one as the ship's automated systems accidentally kill them in grisly and gruesome ways.`
-			`	Quash's voice booms fron an external speaker. "I'm glad you finally arrived, Captain <first> <last>. I hope you had no trouble finding your way here. Please, come aboard my new ship. It's called a Carabao." A boarding ramp descends from an open entry hatch. The area within is dark, making it difficult to see the ship's interior from outside.`
+			`	Quash's voice booms from an external speaker. "I'm glad you finally arrived, Captain <first> <last>. I hope you had no trouble finding your way here. Please, come aboard my new ship. It's called a Carabao." A boarding ramp descends from an open entry hatch. The area within is dark, making it difficult to see the ship's interior from outside.`
 			choice
 				`	(Enter the ship.)`
 					goto enter
@@ -1452,7 +1452,7 @@ mission "Cartography: Rum Cellar Side Trip"
 				event "link chasm"
 				clear pokerscore
 			scene scene "outfit/map"
-			`	The other players have had enough. One of them shares the hyperlink codes for entering this system with you before leaving. Quash offers you praise. "Congratulations! You demonstated remarkable skill at that game. I tried playing once before. It did not suit me."`
+			`	The other players have had enough. One of them shares the hyperlink codes for entering this system with you before leaving. Quash offers you praise. "Congratulations! You demonstrated remarkable skill at that game. I tried playing once before. It did not suit me."`
 				accept
 			label bust
 			action

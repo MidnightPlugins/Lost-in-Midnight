@@ -607,9 +607,9 @@ event "Metallic Asteroids Deep Space"
 
 
 
-mission "Alternative Astroid Ammo"
+mission "Alternative Asteroid Ammo"
 	minor
-	name "Alternative Astroid Ammo"
+	name "Alternative Asteroid Ammo"
 	description "Deliver 60 tons of junk metal to <destination>, where it can be converted into ammunition for your asteroid catapult."
 	destination
 		attributes "factory" "mining" "dirt belt"

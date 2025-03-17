@@ -551,7 +551,7 @@ mission "Hackerz 4"
 			`	You narrowly avoid a shotgun slug and jump out the nearest window. Fortunately, the window was already broken, but you still get some minor scrapes from the few shards of glass remaining in the frame. "Better than a shotgun slug to the head," you exclaim to yourself as you run for your ship.`
 				launch
 			label revisit
-			`The angry bountry hunter is still pursuing you in his Headhunter.`
+			`The angry bounty hunter is still pursuing you in his Headhunter.`
 				launch
 	npc
 		government "Independent (Killable)"

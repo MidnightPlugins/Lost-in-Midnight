@@ -277,7 +277,7 @@ start
 		explode "tiny explosion" 10
 		explode "small explosion" 15
 		"final explode" "final explosion small"
-		description "This Berserker was salvaged from a war zone. Its weapons layout is different from the standard Berserker. The weapons pods on the wingtips have been converted into cargo pods while a gun has been installed in the ship's foreward section."
+		description "This Berserker was salvaged from a war zone. Its weapons layout is different from the standard Berserker. The weapons pods on the wingtips have been converted into cargo pods while a gun has been installed in the ship's forward section."
 
 outfit "Rusty Asteroid Scanner"
 	category "Systems"
@@ -313,7 +313,7 @@ conversation "blood rage intro"
 	scene "outfit/rusty asteroid scanner"
 	`	You smell grease and dirt and rocket fuel; wonderful smells. As you understand it, your uncle bought this used Berserker for asteroid mining. You're not sure if the rusty old asteroid scanner installed on it is worth keeping, but it does still work. Unfortunately the effective range is so low you might not realize an asteroid is minable until you're practically on top of it.`
 	scene "outfit/energy cannon"
-	`	The one who sold this ship to your uncle salvaged it from a war zone. Its weapons layout is different from the standard Berserker. The weapons pods on the wingtips have been converted into cargo pods while a gun has been installed in the ship's foreward section. You note the guns mounted on the ship are two different sizes. The larger one is an Energy Cannon, a brutal relic from a war that occurred long ago. Hopefully you won't have to actually kill anyone with this...`
+	`	The one who sold this ship to your uncle salvaged it from a war zone. Its weapons layout is different from the standard Berserker. The weapons pods on the wingtips have been converted into cargo pods while a gun has been installed in the ship's forward section. You note the guns mounted on the ship are two different sizes. The larger one is an Energy Cannon, a brutal relic from a war that occurred long ago. Hopefully you won't have to actually kill anyone with this...`
 
 
 
