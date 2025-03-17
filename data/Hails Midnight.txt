@@ -179,7 +179,7 @@ phrase "hostile disabled nemesis"
 	word
 		"Don't be shy! Come on over!"
 		"I'm not surrendering."
-		"Shall we meet face to face?"
+		"Shalll we meet face to face?"
 		"This battle's not over!"
 	word
 		" "

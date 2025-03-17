@@ -1151,7 +1151,7 @@ mission "Coalition Dissension: Rogue Heliarch Saryd (Neutralizer)"
 			near "Sol Saryd" 1 2
 		personality target waiting staying vindictive
 		fleet "Rogue Heliarch (Neutralizer)"
-		dialog `You receive a message from the Heliarch demanding to know why you have taken posession of the <npc>. Report to <destination> to explain yourself.`
+		dialog `You receive a message from the Heliarch demanding to know why you have taken possession of the <npc>. Report to <destination> to explain yourself.`
 		conversation
 			scene "thumbnail/heliarch neutralizer"
 			action
@@ -2661,7 +2661,7 @@ mission "Coalition Dissension: Tinderbox (Peacekeepers Arach)"
 				`	(Wait for a response.)`
 				`	(Send the request again.)`
 			``
-			`	After some delay, the Heliarchs give you permission to land. During this time, you've noticed a large swarm of Plasma Parasites has been drawn to the area by the engine emmissions from such a great gathering of ships. If someone were to lose their cool and fire on them...`
+			`	After some delay, the Heliarchs give you permission to land. During this time, you've noticed a large swarm of Plasma Parasites has been drawn to the area by the engine emissions from such a great gathering of ships. If someone were to lose their cool and fire on them...`
 				accept
 	npc
 		government "Heliarch"
@@ -2730,7 +2730,7 @@ mission "Coalition Dissension: Tinderbox (Peacekeepers Kimek)"
 				`	(Wait for a response.)`
 				`	(Send the request again.)`
 			``
-			`	After some delay, the Heliarchs give you permission to land. During this time, you've noticed a large swarm of Plasma Parasites has been drawn to the area by the engine emmissions from such a great gathering of ships. If someone were to lose their cool and fire on them...`
+			`	After some delay, the Heliarchs give you permission to land. During this time, you've noticed a large swarm of Plasma Parasites has been drawn to the area by the engine emissions from such a great gathering of ships. If someone were to lose their cool and fire on them...`
 				accept
 	npc
 		government "Heliarch"
@@ -2799,7 +2799,7 @@ mission "Coalition Dissension: Tinderbox (Peacekeepers Saryd)"
 				`	(Wait for a response.)`
 				`	(Send the request again.)`
 			``
-			`	After some delay, the Heliarchs give you permission to land. During this time, you've noticed a large swarm of Plasma Parasites has been drawn to the area by the engine emmissions from such a great gathering of ships. If someone were to lose their cool and fire on them...`
+			`	After some delay, the Heliarchs give you permission to land. During this time, you've noticed a large swarm of Plasma Parasites has been drawn to the area by the engine emissions from such a great gathering of ships. If someone were to lose their cool and fire on them...`
 				accept
 	npc
 		government "Heliarch"
@@ -2889,7 +2889,7 @@ mission "Culminator Ammo [Outfitter]"
 				`	"Let me buy them."`
 					goto buy
 				`	"I'm sure they'll be done eventually."`
-			`	You both wait in silence until the sales clerk is ready to handle your tranactions.`
+			`	You both wait in silence until the sales clerk is ready to handle your transactions.`
 				decline
 			label buy
 			`	"Certain this is a good idea, I am not..."`
@@ -2897,7 +2897,7 @@ mission "Culminator Ammo [Outfitter]"
 				`	"I'll pay 1,200,000."`
 					goto end
 				`	"Nevermind."`
-			`	You both wait in silence until the sales clerk is ready to handle your tranactions.`
+			`	You both wait in silence until the sales clerk is ready to handle your transactions.`
 				decline
 			label end
 			action

@@ -1,6 +1,6 @@
 # Copyright (c) 2021 by Michael Arsollon
 # derived from original game at https://github.com/endless-sky/endless-sky
-#ship
+#
 # Endless Sky is free software: you can redistribute it and/or modify it under the
 # terms of the GNU General Public License as published by the Free Software
 # Foundation, either version 3 of the License, or (at your option) any later version.
@@ -83,7 +83,7 @@ mission "Midnight Korbschläger 2"
 	invisible
 	source
 		government "Free Worlds"
-		attributes "south" "dirtbelt"
+		attributes "south" "dirt belt"
 		not attributes uninhabited
 	to offer
 		has "FW Southern Battle 2: done"
@@ -161,7 +161,7 @@ mission "Oathbreaker Strategos Deployed"
 	invisible
 	minor
 	source
-		attributes "deep" "north" "paradise" "core" "dirtbelt"
+		attributes "deep" "north" "paradise" "core" "dirt belt"
 		not attributes "uninhabited"
 	to offer
 		has "event: geminus rebuilt"

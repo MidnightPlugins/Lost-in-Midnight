@@ -1558,7 +1558,7 @@ event "midnight tanker shipyard new wales"
 mission "Midnight Tanker Shipyard Poseidos"
 	minor
 	name "Escort to <planet>"
-	description "Distrubute flyers advertising the shipyard on <origin> in the spaceports at <stopovers>. Then return to <destination>."
+	description "Distribute flyers advertising the shipyard on <origin> in the spaceports at <stopovers>. Then return to <destination>."
 	source Poseidos
 	stopover Dune
 	stopover Skymoot
@@ -1760,7 +1760,7 @@ mission "Midnight Swarm Lord"
 			scene "thumbnail/starbus-thumb"
 			`A militia officer approaches you. "Captain <last>, a local pirate ship named Swarm Lord has been ambushing Militia ships and building a fleet of captured interceptors. It's starting to get out of hand. Could you help us hunt it down?`
 			choice
-				`	"Sure, I'm in the Militia too afterall."`
+				`	"Sure, I'm in the Militia too after all."`
 				`	"Sorry, I'm busy with something else."`
 					decline
 			`	"Thanks. We've already searched the nearby systems but failed to find it. The Swarm Lord might have moved on to more distant systems."`
@@ -1903,7 +1903,7 @@ mission "Midnight Striker"
 	on enter Kraz
 		conversation
 			scene "thumbnail/striker drone-thumb"
-			`You receive an pre-recorded hail from some drones: "Hey <first>, Barmy here. We're on a tight scedule, so I'll need you to get started right away. These are some new drones we put together for a secret project. After you're done fighting them meet me planet side and we can discuss how they performed." Maybe Barmy has gotten too comfortable with expecting your assistance in these mock battles...`
+			`You receive an pre-recorded hail from some drones: "Hey <first>, Barmy here. We're on a tight schedule, so I'll need you to get started right away. These are some new drones we put together for a secret project. After you're done fighting them meet me planet side and we can discuss how they performed." Maybe Barmy has gotten too comfortable with expecting your assistance in these mock battles...`
 	npc disable
 		government "Test Dummy"
 		system Kraz
@@ -1961,7 +1961,7 @@ mission "Midnight Striker"
 				`	"I suppose you're right."`
 					goto final
 			scene "outfit/kludge blaster"
-			`	Barmy frowns. "There's enough space to accomodate one. But despite having a more powerful projectile than regular Energy Blasters, their long recharge time means Kludge Blasters work best when used in multiples. We need to muster more firepower from the Striker's lone gun mount than a single Kludge Blaster can deliver." These drones must be for military use rather than mining. Barmy continues, "So that brings us back to Javelins versus Meteors..."`
+			`	Barmy frowns. "There's enough space to accommodate one. But despite having a more powerful projectile than regular Energy Blasters, their long recharge time means Kludge Blasters work best when used in multiples. We need to muster more firepower from the Striker's lone gun mount than a single Kludge Blaster can deliver." These drones must be for military use rather than mining. Barmy continues, "So that brings us back to Javelins versus Meteors..."`
 				goto final
 			label javelin
 			action

@@ -227,14 +227,14 @@ mission "Cartography: Quarg Hitchhiker 1"
 					goto end
 				`	"Sorry, I can't help you right now."`
 					defer
-				`	"My ship isn't outfitted to accomodate Quarg-sized passengers."`
-					goto accomodations
+				`	"My ship isn't outfitted to accommodate Quarg-sized passengers."`
+					goto accommodations
 				`	"What is a Quarg doing on a pirate world?"`
 			
 			`	"Ah, even a Quarg can fall victim to misfortune. But perhaps my fortunes will take a turn for the better."`
 				goto negotiation
 
-			label accomodations
+			label accommodations
 			`	"Do not concern yourself. I can manage some discomfort."`
 				goto negotiation
 			
@@ -602,7 +602,7 @@ mission "Cartography: Diyu Link"
 	on offer
 		conversation
 			scene "outfit/unknown"
-			`Somone wearing a dragon mask approaches you. "You seem lost. Do you need the hyperlink codes for entering this system? I can sell them to you for 100,000 credits.`
+			`Someone wearing a dragon mask approaches you. "You seem lost. Do you need the hyperlink codes for entering this system? I can sell them to you for 100,000 credits.`
 			choice
 				`	"Hyperlink codes?"`
 			scene "planet/station0ver8"
@@ -830,7 +830,7 @@ mission "Cartography: Quarg Hitchhiker 5"
 				`	"Outcast?"`
 					
 			`	"Yes," replies a Kimek. "Not welcome amongst its fellow Quarg, The Outcast is. Of many crimes, The Outcast is guilty."`
-			`	Upon reflection, you recall that both times you encountered Quash were on pirate worlds. Perhaps Quash wasn't so out of place there afterall.`
+			`	Upon reflection, you recall that both times you encountered Quash were on pirate worlds. Perhaps Quash wasn't so out of place there after all.`
 			``
 			`	An Arach speaks up. "Beware human. Though cast out from its own society The Outcast is, for good reason the Quarg must have."`
 			label questions
@@ -1492,7 +1492,7 @@ mission "Cartography: Chasm Link"
 				random < 10
 	on offer
 		conversation
-			`Somone in a cloak and gas mask approaches you. "Do you need the hyperlink codes for entering this system? I can sell them to you for 100,000 credits.`
+			`Someone in a cloak and gas mask approaches you. "Do you need the hyperlink codes for entering this system? I can sell them to you for 100,000 credits.`
 			choice
 				`	(Buy the codes.)`
 				`	(Refuse.)`

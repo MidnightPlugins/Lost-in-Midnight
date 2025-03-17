@@ -1207,7 +1207,7 @@ outfit "Guncraft I"
 	"capture defense" .3
 	"unplunderable" 1
 	"unique" 1
-	description "An old relic from the early turf wars, the Guncraft is considered by many to be the pinnacle of handgun design. This particular one has been kept in perfect condition. The basic model has a well balanced grip and precision sigting, but you've heard rumors of gunsmiths who posess the knowledge and skill to make parts modifications that could transform it into a terrifying weapon."
+	description "An old relic from the early turf wars, the Guncraft is considered by many to be the pinnacle of handgun design. This particular one has been kept in perfect condition. The basic model has a well balanced grip and precision sigting, but you've heard rumors of gunsmiths who possess the knowledge and skill to make parts modifications that could transform it into a terrifying weapon."
 
 outfit "Guncraft II"
 	category "Hand to Hand"

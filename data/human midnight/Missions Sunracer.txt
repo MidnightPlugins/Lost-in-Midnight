@@ -2097,7 +2097,7 @@ mission "Midnight Sunracer Tertio Puppet"
 				"racing position tertio" <?= -8
 				set "tertio bounty"
 				log "Minor People" "Al Cologne" `The head of a mafia organization. He had a business proposal for me but after some discussion he seemed to think that I'm too idealistic and changed his mind before telling me his plan.`
-			`	"That's very idealistic of you." A maid walks in carrying a fresh plate. He waves her away. "But I don't think you're the pilot I'm looking for afterall." He raises his glass towards you. "I think you'll find that your future in the Tertio League will be especially challenging. Escort the good captain out fellas." The men who brought you here take you back to the spaceport.`
+			`	"That's very idealistic of you." A maid walks in carrying a fresh plate. He waves her away. "But I don't think you're the pilot I'm looking for after all." He raises his glass towards you. "I think you'll find that your future in the Tertio League will be especially challenging. Escort the good captain out fellas." The men who brought you here take you back to the spaceport.`
 				decline
 			label money
 			`	Cologne starts laughing. "I think I'm going to like having you work for me kid!" He gulps down the rest of his wine. "Together, we'll make loads of money. It'll be easy work."`

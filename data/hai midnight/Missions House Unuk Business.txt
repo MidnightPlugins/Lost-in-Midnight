@@ -155,7 +155,7 @@ mission "House Unuk Business Kor Efret 4"
 		has "House Unuk Business Kor Efret 3: active"
 	on offer
 		conversation
-			`The master of House Unuk sent you a message. "It looks like you've found some reliable customers. We should estabish a trade route. When you can, acquire a Jump Drive for the freighter we'll be using to make the deliveries.`
+			`The master of House Unuk sent you a message. "It looks like you've found some reliable customers. We should establish a trade route. When you can, acquire a Jump Drive for the freighter we'll be using to make the deliveries.`
 				accept
 	on accept
 		fail

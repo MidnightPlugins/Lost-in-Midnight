@@ -693,7 +693,7 @@ mission "Hackerz 5"
 			`	As you run, several more Subsidurial shaped robots armed with gatling guns appear and open fire. By now, it's obvious that the whole amusement park is rigged with these robots. Once you are safely aboard your ship, you fire up the engines and begin to lift off. As you clear the atmosphere, the warning alarms start blaring. A swarm of drones is headed for you.`
 				launch
 			label revisit
-			`The hostile drones are still targetting you.`
+			`The hostile drones are still targeting you.`
 				launch
 	npc
 		government "Independent (Killable)"

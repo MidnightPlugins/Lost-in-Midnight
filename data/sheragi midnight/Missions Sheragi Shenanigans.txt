@@ -203,7 +203,7 @@ mission "Sheragi Shenanigans: Sapphire Shield epilogue A"
 	on offer
 		conversation
 			scene "ship/sapphire shield"
-			`You are surpised to see the Sapphire Shield here. Someone is trying to sell it. They tried to clean up the blaster scorch marks...`
+			`You are surprised to see the Sapphire Shield here. Someone is trying to sell it. They tried to clean up the blaster scorch marks...`
 			choice
 				`	"Tell me more about this ship."`
 				`	"Not interested in buying a ship right now."`
@@ -538,7 +538,7 @@ mission "Diamondback Sale"
 				`	"What kind of ship is this?"`
 				`	(I'm not interested in this.)`
 					decline
-			`	"Just an old Diamondback." The mechanic looks at you. "You've never heard of them? Diamondbacks have been in use since explorers first settled the galactic rim. They've fought in various wars throughtout the centuries and few survive to this day. Those that have are so extensively customized that no two are alike." He hesitates a moment before adding, "Some southern legends claim the Diamondbacks were wrecked spacecraft created by extinct aliens and salvaged by early explorers such as Han Sizer. Of course, there's no evidence to support those claims."`
+			`	"Just an old Diamondback." The mechanic looks at you. "You've never heard of them? Diamondbacks have been in use since explorers first settled the galactic rim. They've fought in various wars throughout the centuries and few survive to this day. Those that have are so extensively customized that no two are alike." He hesitates a moment before adding, "Some southern legends claim the Diamondbacks were wrecked spacecraft created by extinct aliens and salvaged by early explorers such as Han Sizer. Of course, there's no evidence to support those claims."`
 			choice
 				`	"Is it for sale?"`
 			`	"We actually just bought it from another customer. Once we're done refurbishing the ship, it'll be available."`

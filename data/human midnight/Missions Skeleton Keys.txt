@@ -978,11 +978,11 @@ mission "Skeleton Keys Starcadia Deep Epilogue"
 				`	(Run.)`
 					goto run
 			scene "thumbnail/starcadia-thumb"
-			`	"Of course you didn't steal it. The Starcadia was stolen long before you were even born. Most people wouldn't recognize it today. Still, Deep Security would appreciate the opportunity to study the ship. It was originally our ship, afterall."`
+			`	"Of course you didn't steal it. The Starcadia was stolen long before you were even born. Most people wouldn't recognize it today. Still, Deep Security would appreciate the opportunity to study the ship. It was originally our ship, after all."`
 				goto blueprints
 			label statute
 			scene "thumbnail/starcadia-thumb"
-			`	"You have a point. The Starcadia was stolen long enough ago that most people wouldn't recognize it today. Still, Deep Security would appreciate the opportunity to study the ship. It was originally our ship, afterall."`
+			`	"You have a point. The Starcadia was stolen long enough ago that most people wouldn't recognize it today. Still, Deep Security would appreciate the opportunity to study the ship. It was originally our ship, after all."`
 			label blueprints
 			choice
 				`	"Don't you have the original blue prints?"`
@@ -998,7 +998,7 @@ mission "Skeleton Keys Starcadia Deep Epilogue"
 				decline
 			label run
 			scene "thumbnail/raven"
-			`	You slam the entry hatch shut and begin preparations for lift off. Most of the officers are clearing away from the landing pad, but the one you were talking to is calmly speaking into his communicator... Your radar shows a pair of Ravens is targetting you.`
+			`	You slam the entry hatch shut and begin preparations for lift off. Most of the officers are clearing away from the landing pad, but the one you were talking to is calmly speaking into his communicator... Your radar shows a pair of Ravens is targeting you.`
 				launch
 	npc evade
 		government "Deep"

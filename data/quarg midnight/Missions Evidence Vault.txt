@@ -521,7 +521,7 @@ mission "Vault Weapon Quash 2"
 			`	"The Quarg do not approve of humans using their technology. There are unconfirmed reports of Quarg using violence against humans violating this taboo."`
 				goto questions
 			label reward
-			`	"We are willing to overlook the other stolen weapons that have found their way into your posession..."`
+			`	"We are willing to overlook the other stolen weapons that have found their way into your possession..."`
 				goto questions
 	to complete
 		never

@@ -103,14 +103,14 @@ mission "Midnight Dreams of Blood & Fire 2"
 			`	"Hello Captain <last>. We are very fortunate to have run into you. We need to take Dexter to my clinic on <destination>."`
 			`	While Caju is explaining their situation, Dexter eyes you warily. "Looks shabby. Don't want to."`
 			`	"Aww, please be nice Dexter!" Caju turns back to you. "We have spent hours searching the spaceport for a ship befitting Dexter's... station."`
-			`	Dexter harrumphs. Assuming a pompous pose he declares, "That's Lord Dexter the Third, chief metallurgist to the king of New Boston and I'll not ride any ship that does not offer Luxury Accomodations." He makes a move to stand, but Nurse Peka places her hand on his shoulder and he quickly abandons the attempt.`
+			`	Dexter harrumphs. Assuming a pompous pose he declares, "That's Lord Dexter the Third, chief metallurgist to the king of New Boston and I'll not ride any ship that does not offer Luxury Accommodations." He makes a move to stand, but Nurse Peka places her hand on his shoulder and he quickly abandons the attempt.`
 			choice
-				`	"I've got Luxury Accomodations."`
+				`	"I've got Luxury Accommodations."`
 					goto luxury
 				`	"Good luck with this one..."`
 			`	"I am sure Captain <last>'s ship has excellent amenities." Caju looks to you, her eyes seemingly pleading for help.`
 			choice
-				`	"I've got Luxury Accomodations."`
+				`	"I've got Luxury Accommodations."`
 					goto luxury
 				`	"No, you should look elsewhere."`
 			`	"Onward to the next vessel!" Dexter urges Peka to move as if she were his personal steed. Caju, for her part, slumps her shoulders in resignation as they walk away.`
@@ -595,7 +595,7 @@ mission "Midnight Bloodstone Theft 2"
 				`	"Would it be alright if I joined you?"`
 				`	"Farewell. I hope you catch whoever killed her."`
 					goto farewell
-			`	Akran responds warmly, "Of course! Afterall, you are the only other person who was there to witness the attack."`
+			`	Akran responds warmly, "Of course! After all, you are the only other person who was there to witness the attack."`
 			`	It takes about an hour to get to the forensics lab. After explaining to the staff who you are, they agree to allow you into their meeting with Akran.`
 			scene "outfit/bloodstone"
 			`	They have identified the murder weapon as a Quantum Bloodstone, a rare keystone variant that has recently been gaining popularity among some Hai. Though it is clearly not a normal Quantum Keystone, most of its composition is the same. A more thorough examination isn't possible at this facility and they ask Inspector Akran to take it to <destination>.`

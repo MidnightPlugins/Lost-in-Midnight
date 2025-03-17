@@ -639,7 +639,7 @@ mission "Jump Drive Theft 2"
 		conversation
 			`Someone from planetary security must have been bribed by your employer. No one questions you as you locate a discreet landing location near the facility housing Laboratory 51. Following the instructions you were given, you manage to bypass the facility's security systems and enter the lab. Inside, you find an alien device.`
 			scene "outfit/jump drive"
-			`According to the research notes here, this device is a functional Jump Drive! You load it onto a hover cart and work to remove it from the facility, taking care to avoid the guard patrols with the aid of the scedule your employer provided. Once you get back to your ship, you load the Jump Drive onto it and take off.`
+			`According to the research notes here, this device is a functional Jump Drive! You load it onto a hover cart and work to remove it from the facility, taking care to avoid the guard patrols with the aid of the schedule your employer provided. Once you get back to your ship, you load the Jump Drive onto it and take off.`
 				accept
 	on accept
 		outfit "Jump Drive" 1
@@ -1736,8 +1736,8 @@ mission "Prisoner Bribe Offer (Job)"
 	on offer
 		require "Brig"
 	on accept
-		log "Minor People" "Dirk Malone" `A notorious felon recently convicted for heinous crimes after the authorities spent years tracking him down. The trial was broadcast thoughout the galaxy.`
-		dialog `Your prisoner is the notorious felon Dirk Malone, recently convicted for heinous crimes after the authorities spent years tracking him down. The trial was broadcast thoughout the galaxy. He smirks as you lock him in your brig..."`
+		log "Minor People" "Dirk Malone" `A notorious felon recently convicted for heinous crimes after the authorities spent years tracking him down. The trial was broadcast throughout the galaxy.`
+		dialog `Your prisoner is the notorious felon Dirk Malone, recently convicted for heinous crimes after the authorities spent years tracking him down. The trial was broadcast throughout the galaxy. He smirks as you lock him in your brig..."`
 	on visit
 		dialog phrase "generic passenger on visit"
 	on complete

@@ -27,7 +27,7 @@ mission "Cartography: The Map Hazehai Hint"
 		has "Cartography: Quarg Hitchhiker 7: declined"
 		random < 30 - ( 10 * "Cartography: The Map Hazehai Hint: offered" )
 	on offer
-		dialog `You learned the locations of some new systems while traveling with Quash. It might be worthwile to share that data with the researchers on Alexandria.`
+		dialog `You learned the locations of some new systems while traveling with Quash. It might be worthwhile to share that data with the researchers on Alexandria.`
 	on accept
 		fail
 

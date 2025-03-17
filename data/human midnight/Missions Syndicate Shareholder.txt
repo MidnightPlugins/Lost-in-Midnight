@@ -65,7 +65,7 @@ mission "Midnight Earth Retirement Inheritance"
 				`	"I'm sorry for your loss."`
 					goto loss
 				`	"Am I the first guest to arrive?"`
-			`	She frowns. "Only one other will be attending. Thomas may seem rude, but please forgive him. He is paying for today's ceremony afterall."`
+			`	She frowns. "Only one other will be attending. Thomas may seem rude, but please forgive him. He is paying for today's ceremony after all."`
 				goto thomas
 			label alright
 			`	She smiles. "We were doing well the first few months after you brought us here. Charles and I actually enjoyed being retired at first. But then he fell ill. Thomas paid for the medical bills, but this only strained the relationship between him and Charles."`
