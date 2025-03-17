@@ -902,7 +902,7 @@ mission "Vault Weapon Insurgent Subjugation Gear"
 	on offer
 		conversation
 			scene planet/cloud8
-			`You receive a message from the governor on Poisonwood: "Hello Captain <first> <last>. Our contacts on Farpoint recommended you to us for a delicate sitation regarding an item stolen from their evidence vault. We had recovered the object from someone attempting to illegally sell it and had it ready for a freighter to transport to Farpoint. But a pirate ship posing as the official courier tricked the dockworkers into loading it onto their ship instead. We suspect the Behemoth that took this valuable cargo is still somewhere in the south near Graffias. If you are willing to assist us, please retrieve the stolen cargo and return it to Farpoint. Know that the nature of the item must be kept secret."`
+			`You receive a message from the governor on Poisonwood: "Hello Captain <first> <last>. Our contacts on Farpoint recommended you to us for a delicate situation regarding an item stolen from their evidence vault. We had recovered the object from someone attempting to illegally sell it and had it ready for a freighter to transport to Farpoint. But a pirate ship posing as the official courier tricked the dockworkers into loading it onto their ship instead. We suspect the Behemoth that took this valuable cargo is still somewhere in the south near Graffias. If you are willing to assist us, please retrieve the stolen cargo and return it to Farpoint. Know that the nature of the item must be kept secret."`
 			choice
 				`	"Alright, I'll retrieve the item."`
 				`	"Sorry, find someone else to do it."`

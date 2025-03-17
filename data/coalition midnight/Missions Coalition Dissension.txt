@@ -2382,7 +2382,7 @@ mission "Coalition Dissension: Spaceport Bomber (Arach)"
 			choice
 				`	"Hey, watch where you're going!"`
 				`	"Aren't you going to apologize?"`
-			`	The Arach turns to look at you and gurgles something in his strange gutteral language. You notice that he has no translation device. Before you have a chance to respond he is rushing off, as fast he can, away from the spaceport.`
+			`	The Arach turns to look at you and gurgles something in his strange guttural language. You notice that he has no translation device. Before you have a chance to respond he is rushing off, as fast he can, away from the spaceport.`
 			choice
 				`	Explore the spaceport.`
 			scene "thumbnail/arach courier"
@@ -2445,7 +2445,7 @@ mission "Coalition Dissension: Spaceport Bomber (Arach)"
 			label stop
 			action
 				set "Coalition Dissension: Spaceport Bomber (Arach) stopped"
-			`	The Arach approches you and gestures back towards the direction of the plaza. "To the plaza you must go. Many questions we have for you. Resist you must not." She is holding one of their weapons, no mere Laser Rifle. A shot from this would probably put a very large hole in you.`
+			`	The Arach approaches you and gestures back towards the direction of the plaza. "To the plaza you must go. Many questions we have for you. Resist you must not." She is holding one of their weapons, no mere Laser Rifle. A shot from this would probably put a very large hole in you.`
 				goto decision
 
 			label obey

@@ -443,8 +443,8 @@ mission "Hunting Beelzebub: Prefect Perfid"
 			`	Not knowing the hand gestures for his name, you clearly state:`
 			choice
 				`	"Beelzebub."`
-			`	"Beelzebub," Chilia attempts to mimick your vocalization. He signs,"Were there not some surveillance teams looking into a pirate by that name?"`
-			`	Torza signs,"Yes, but they have not been able to locate him. It is as if he knows our tracking methods."`
+			`	"Beelzebub," Chilia attempts to mimic your vocalization. He signs, "Were there not some surveillance teams looking into a pirate by that name?"`
+			`	Torza signs, "Yes, but they have not been able to locate him. It is as if he knows our tracking methods."`
 			`	Taely interjects, signing, "Whoever made this is intimately familiar with our technology."`
 			choice
 				`	"Made? You mean it was not stolen?"`

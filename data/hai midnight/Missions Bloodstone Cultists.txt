@@ -1193,6 +1193,6 @@ mission "Danger In Darkwaste Escape Epilogue"
 				decline
 	on decline
 		event "add quantum bloodstones"
-		log "The authorities claim the existance of the Hai cultists is nothing more than a conspiracy theory. A Hai criminal claims that the Hai cultists are real and that they are associated with Quantum Bloodstones."
+		log "The authorities claim the existence of the Hai cultists is nothing more than a conspiracy theory. A Hai criminal claims that the Hai cultists are real and that they are associated with Quantum Bloodstones."
 
 

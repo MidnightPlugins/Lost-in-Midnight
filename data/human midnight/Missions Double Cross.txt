@@ -316,9 +316,9 @@ mission "Escort Requiem Alpha"
 		"reputation: Independent (Killable)" <?= -1000
 		conversation
 			scene "scene/scene-requiemalpha"
-			`Your ship's warning alarm starts soon after entering the system. A fleet of ships that was waiting here has targetted you with their weapons. The <npc> transmits a message to you:`
-			`"Thank you for your help evading those pirates earlier. Unfortunately for you, our own organization was planning to steal the <npc> from the start. If only the owner of the ship hadn't been so cautious, you wouldn't have had to get involved. Nothing personal captain, this is just business."`
-			`The <npc> powers up its weapons.`
+			`Your ship's warning alarm starts soon after entering the system. A fleet of ships that was waiting here has targeted you with their weapons. The <npc> transmits a message to you:`
+			`	"Thank you for your help evading those pirates earlier. Unfortunately for you, our own organization was planning to steal the <npc> from the start. If only the owner of the ship hadn't been so cautious, you wouldn't have had to get involved. Nothing personal captain, this is just business."`
+			`	The <npc> powers up its weapons.`
 	npc
 		government "Pirate"
 		personality entering harvests plunders nemesis

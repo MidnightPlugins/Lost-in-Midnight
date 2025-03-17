@@ -1008,7 +1008,7 @@ mission "Oathbreakers: Rum Cellar Fight"
 					goto cut
 				`	(Escape.)`
 					goto vanish
-			`	After hesistating a moment, the Oathbreakers reluctantly stand aside, allowing you to board the <ship> and depart.`
+			`	After hesitating a moment, the Oathbreakers reluctantly stand aside, allowing you to board the <ship> and depart.`
 				launch
 			label cut
 			branch 7winds
@@ -1023,7 +1023,7 @@ mission "Oathbreakers: Rum Cellar Fight"
 				goto wind
 			label winded
 			scene "effect/blood"
-			`	You deactivate the blade and cut another Oathbreaker down! Unfortunately, you've relied on the blade for too long and are winded. While you gasp for air one of the Oathbreakers lands several hits, ventilating your body before you are able to phase out again. The new holes do nothing to help you breath better.`
+			`	You deactivate the blade and cut another Oathbreaker down! Unfortunately, you've relied on the blade for too long and are winded. While you gasp for air one of the Oathbreakers lands several hits, ventilating your body before you are able to phase out again. The new holes do nothing to help you breathe better.`
 				die
 			label 7winds
 			action

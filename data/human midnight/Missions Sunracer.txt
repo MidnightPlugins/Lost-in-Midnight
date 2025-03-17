@@ -1984,7 +1984,7 @@ mission "Midnight Sunracer Tertio Puppet"
 		random < 70
 	on offer
 		conversation
-			`Some men in suits appoach you. "This grand space faring vessel is the <ship>, which would indubitably make you the one and only Captain <last>. We come to you on this fine day, to extend a formal invitation to a very exclusive and elite private business meeting with our most esteemed boss, Mister Al Cologne." It would appear you've attracted the attention of the local mafia. "We strongly advise you not to turn down this very fortunate of opportunities our boss has chosen to grace you with." They probably want you to do something highly illegal...`
+			`Some men in suits approach you. "This grand space faring vessel is the <ship>, which would indubitably make you the one and only Captain <last>. We come to you on this fine day, to extend a formal invitation to a very exclusive and elite private business meeting with our most esteemed boss, Mister Al Cologne." It would appear you've attracted the attention of the local mafia. "We strongly advise you not to turn down this very fortunate of opportunities our boss has chosen to grace you with." They probably want you to do something highly illegal...`
 			label decisions
 			choice
 				`	"Alright, take me to your boss."`
@@ -2075,7 +2075,7 @@ mission "Midnight Sunracer Tertio Puppet"
 				`	"I'm busy. Why did your goons drag me here?"`
 					goto chops
 			scene "outfit/attention"
-			`	"No thank you?" He pulls his hand back, scowling. "What? You think you're too good for my hospitality? Huh!?!" He picks up his knife and stabs it into the roast. "A man welcomes you into his home and generously offers you the priveledge of partaking in the good Lord's bounty for which he has shed his own blood, sweat, and tears for. YET THIS IS HOW YOU REACT!?!" He picks up a wine glass and takes a sip before sighing. "The kids, they have no respect these days."`
+			`	"No thank you?" He pulls his hand back, scowling. "What? You think you're too good for my hospitality? Huh!?!" He picks up his knife and stabs it into the roast. "A man welcomes you into his home and generously offers you the priviledge of partaking in the good Lord's bounty for which he has shed his own blood, sweat, and tears for. YET THIS IS HOW YOU REACT!?!" He picks up a wine glass and takes a sip before sighing. "The kids, they have no respect these days."`
 			choice
 				`	"I'm sorry Mister Cologne, but why am I here?"`
 					goto why
@@ -2121,7 +2121,7 @@ mission "Midnight Sunracer Tertio Puppet"
 				decline
 			label outplayed
 			scene "outfit/handgun black"
-			`You are shot in the back as soon as you reach for your weapon. Knowing when you've been outplayed is an important survival skill. Unfortunately, this is the last life lesson you learn before you pass away.`
+			`	You are shot in the back as soon as you reach for your weapon. Knowing when you've been outplayed is an important survival skill. Unfortunately, this is the last life lesson you learn before you pass away.`
 				die
 
 mission "Midnight Sunracer Drug Running"

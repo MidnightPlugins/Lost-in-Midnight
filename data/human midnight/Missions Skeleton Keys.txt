@@ -843,7 +843,7 @@ mission "Skeleton Keys, Three 4"
 		log `Used the three "Skeleton Keys" to recover the Deep Security prototype ship "Starcadia" from a hidden vault on "Cadrelock Rock". The ship was stolen near the end of the Alpha War. Who stole it and hid it there is a mystery.`
 		conversation
 			scene "thumbnail/starcadia-thumb"
-			`The new crew members board the Starcadia and prepare to launch. The camoflaged entrance to the hangar bay slides open and the latest addition to your fleet is ready to depart.`
+			`The new crew members board the Starcadia and prepare to launch. The camoflauged entrance to the hangar bay slides open and the latest addition to your fleet is ready to depart.`
 
 mission "Skeleton Key Observer"
 	non-blocking
