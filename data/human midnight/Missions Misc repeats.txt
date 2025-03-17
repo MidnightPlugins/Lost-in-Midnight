@@ -444,7 +444,7 @@ mission "Midnight Eureka Map 1"
 	on offer
 		conversation
 			scene "outfit/eureka map"
-			`A street vendor approches you. "Can I interest you in a treasure map that once belonged to the captain of the "${pirate}" for 2,000 credits? A bargain, since I'm not sure what you'll find when you get there..."`
+			`A street vendor approaches you. "Can I interest you in a treasure map that once belonged to the captain of the "${pirate}" for 2,000 credits? A bargain, since I'm not sure what you'll find when you get there..."`
 			choice
 				`	(Buy the map.)`
 				`	(Refuse.)`
