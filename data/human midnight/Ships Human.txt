@@ -771,7 +771,7 @@ ship "Light Freighter"
 	explode "tiny explosion" 15
 	explode "small explosion" 15
 	"final explode" "final explosion small"
-	description "The Syndicate's Light Freighter is a suprisingly affordable and versatile upgrade from the Star Barge. Unfortunately, many shipyards that are supposed to carry it have trouble keeping it in stock due to high demand."
+	description "The Syndicate's Light Freighter is a surprisingly affordable and versatile upgrade from the Star Barge. Unfortunately, many shipyards that are supposed to carry it have trouble keeping it in stock due to high demand."
 
 
 

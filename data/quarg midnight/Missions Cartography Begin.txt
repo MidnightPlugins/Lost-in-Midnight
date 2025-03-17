@@ -1089,7 +1089,7 @@ mission "Cartography: Rum Cellar Side Trip"
 	on offer
 		clear pokerscore
 		conversation
-			`When you enter the bar, the crowd falls silent upon seeing Quash. The awkward silence is broken when a group playing poker calls out "Quash! Found your way to Rum Celler, did you? You're just in time to join in! How about it?"`
+			`When you enter the bar, the crowd falls silent upon seeing Quash. The awkward silence is broken when a group playing poker calls out "Quash! Found your way to Rum Cellar, did you? You're just in time to join in! How about it?"`
 			`	Quash shakes its head. "I'll abstain. However..." The Quarg turns to you. "Perhaps <first> would like to play."`
 			choice
 				`	"Deal me in."`
@@ -1129,7 +1129,7 @@ mission "Cartography: Rum Cellar Side Trip"
 					goto game
 				`	(Quit.)`
 			`	"Aww, that's too bad." They continue playing without you.`
-					accept
+				accept
 			label bluffhigh
 			action
 				payment -10000

@@ -2075,7 +2075,7 @@ mission "Midnight Sunracer Tertio Puppet"
 				`	"I'm busy. Why did your goons drag me here?"`
 					goto chops
 			scene "outfit/attention"
-			`	"No thank you?" He pulls his hand back, scowling. "What? You think you're too good for my hospitality? Huh!?!" He picks up his knife and stabs it into the roast. "A man welcomes you into his home and generously offers you the priviledge of partaking in the good Lord's bounty for which he has shed his own blood, sweat, and tears for. YET THIS IS HOW YOU REACT!?!" He picks up a wine glass and takes a sip before sighing. "The kids, they have no respect these days."`
+			`	"No thank you?" He pulls his hand back, scowling. "What? You think you're too good for my hospitality? Huh!?!" He picks up his knife and stabs it into the roast. "A man welcomes you into his home and generously offers you the privilege of partaking in the good Lord's bounty for which he has shed his own blood, sweat, and tears for. YET THIS IS HOW YOU REACT!?!" He picks up a wine glass and takes a sip before sighing. "The kids, they have no respect these days."`
 			choice
 				`	"I'm sorry Mister Cologne, but why am I here?"`
 					goto why
