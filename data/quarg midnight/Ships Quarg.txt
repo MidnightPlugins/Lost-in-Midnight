@@ -80,7 +80,7 @@ ship "Quarg Tiamat"
 		"drag" 11.5
 		"heat dissipation" .5
 		"fuel capacity" 1000
-		"cargo space" 400
+		"cargo space" 200
 		"outfit space" 535
 		"weapon capacity" 180
 		"engine capacity" 120
