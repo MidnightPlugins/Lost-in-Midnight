@@ -1,0 +1,16 @@
+outfitter "wanderer plugin"
+        "Thunderhead Pot"
+        "Anti-Ionic Plating"
+        "Wanderer Advanced Cooling"
+
+shipyard "wanderer plugin"
+        "Deep River Carrier"
+        "Storm Seeker"
+        "Shallow Pond"
+        "Spring Leaf"
+        "Winter Leaf"
+        "Tornado"
+        "Tsunami"
+        "Deep River Rapids"
+        "Thunder Maker"
+        

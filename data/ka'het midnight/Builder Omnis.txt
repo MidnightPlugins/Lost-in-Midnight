@@ -1,0 +1,18 @@
+outfitter "ka'het plugin"
+        "Builder Anti-Missile"
+        "Builder Negator"
+        "Builder Grand Cooling"
+        "Builder Grand Defense"
+        "Builder Grand Generator"
+        "Builder Grand Accumulator"
+        "Builder Hull Plating (100%)
+        "Builder IFF Transmitter"
+        "Ka'het Scanner"
+
+shipyard "ka'het plugin"
+        "Veliante'ixis"
+        "Kai'xeris"
+        "Kai'teris"
+        "Rao'xeris"
+        "Ool'mar"
+        "Veliante'exis"
