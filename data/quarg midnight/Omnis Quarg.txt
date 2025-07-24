@@ -1,4 +1,4 @@
-outfitter "quarg plugin"
+outfitter "quarg"
         "Elysian Trident"
         "Skyharpoon"
         "Void Scraper"
@@ -18,7 +18,7 @@ outfitter "quarg plugin"
         "Midnight's Last Orphan"
         
 
-shipyard "quarg plugin"
+shipyard "quarg"
         "Quarg Ouroboros"
         "Quarg Tiamat"
         "Qaurg Basilisk"
