@@ -1,3 +1,2 @@
 outfitter "bunrodea plugin"
-        "Thermal Insulator"
         "Lasher Rifle"
