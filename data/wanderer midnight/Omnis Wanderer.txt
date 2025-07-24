@@ -1,9 +1,9 @@
-outfitter "wanderer plugin"
+outfitter "wanderer"
         "Thunderhead Pot"
         "Anti-Ionic Plating"
         "Wanderer Advanced Cooling"
 
-shipyard "wanderer plugin"
+shipyard "wanderer"
         "Deep River Carrier"
         "Storm Seeker"
         "Shallow Pond"
