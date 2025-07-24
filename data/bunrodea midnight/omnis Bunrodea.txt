@@ -1,2 +1,2 @@
-outfitter "bunrodea plugin"
+outfitter "bunrodea"
         "Lasher Rifle"
