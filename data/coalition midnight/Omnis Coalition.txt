@@ -1,4 +1,4 @@
-outfitter "coalition"
+outfitter "coalition plugin"
         "Camouflaged Blaster"
         "Camouflaged Blaster Turret"
         "Coalition Attractor"
@@ -14,6 +14,6 @@ outfitter "coalition"
         "Riot Containment Barrier"
         "Saryd Light Lance"
 
-shipyard "coalition"
+shipyard "coalition plugin"
         "Kimek Bramble"
         "Saryd Trailblazer"
