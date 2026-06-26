@@ -19,6 +19,7 @@ government "Justicar"
 		"Ignitia" -.01
 		"Ignitia (Military)" -.01
 		"Pug (Cthogha)" -.01
+		"Hai (Unfettered)" -.01
 	"friendly hail" "friendly Justicar"
 	"friendly disabled hail" "disabled Justicar"
 	"hostile hail" "hostile Justicar"

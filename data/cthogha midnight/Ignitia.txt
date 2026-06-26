@@ -16,6 +16,8 @@ government "Ignitia"
 	"crew defense" 3.9
 	language "Ignitia"
 	"player reputation" 0
+	"attitude toward"
+		"Hai (Unfettered)" -.01
 
 government "Ignitia (Military)"
 	"display name" "Ignitia"
@@ -30,6 +32,7 @@ government "Ignitia (Military)"
 		"Pug (Cthogha)" -.01
 		"Quarg (Cthogha)" -.01
 		"Justicar" -.01
+		"Hai (Unfettered)" -.01
 
 outfit "Ignus-Lance"
 	category "Guns"

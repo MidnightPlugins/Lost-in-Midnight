@@ -428,7 +428,7 @@ outfit "Cthogha's Rain?"
 		"random lifetime" 1
 		"velocity override" 5
 		"range override" 15000
-		"reload" 480
+		"reload" 240
 		"homing"
 			"blindspot"
 		"optical tracking" .001
@@ -464,6 +464,7 @@ outfit "Cthogha's Rain Submunition"
 	weapon
 		"inaccuracy" 10
 		"velocity" 3000
+		"random velocity" 10
 		"lifetime" 5
 		"drag" .02
 		"homing"
@@ -499,8 +500,6 @@ outfit "Cthogha's Rain Submunition B"
 		"hit force" 150
 
 
-
-
 mission "Midnight Flame of Destruction"
 	transition
 	invisible
@@ -530,3 +529,4 @@ mission "Midnight Flame of Destruction Reset"
 	on offer
 		clear "Midnight Flame of Destruction: offered"
 		fail
+
