@@ -313,7 +313,7 @@ outfit "Void Rifle Display"
 
 
 outfit "Inhibitor Blaster"
-	plural "Modified Inhibitors"
+	plural "Inhibitor Blasters"
 	category "Guns"
 	series "Guns"
 	index 03010
