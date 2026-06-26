@@ -336,6 +336,36 @@ fleet "Ancestral Unfettered Defense"
 	variant 1
 		"Titan Beetle (Ion Cannon)"
 
+fleet "Bloodstone Cultists"
+	government "Hai (Unfettered)"
+	names "hai"
+	cargo 1
+	personality
+		lingering timid disables plunders
+	variant 1
+		"Centipede (Bloodstone)"
+	variant 1
+		"Cicada (Bloodstone)"
+	variant 1
+		"Lightning Bug (Bloodstone)"
+	variant 1
+		"Scarab (Bloodstone)"
+	variant 1
+		"Sea Scorpion (Bloodstone)"
+	variant 1
+		"Shield Beetle (Bloodstone)"
+	variant 1
+		"Water Bug (Bloodstone)"
+
+fleet "Bloodstone Raiders"
+	government "Hai (Unfettered)"
+	names "hai"
+	cargo 1
+	personality
+		lingering timid disables plunders
+	variant 1
+		"Shield Beetle (Jump, Bloodstone)"
+
 fleet "Unfettered Armor Beetle"
 	government "Hai (Unfettered)"
 	names "hai"

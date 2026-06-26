@@ -1390,7 +1390,7 @@ mission "Midnight Message Buoy: Mah Duum"
 		has "language: Hai"
 	on offer
 		message
-			text "Message buoy to all ships: Danger! Do not approach Bloodstone Portal."
+			text "Message buoy to all ships: Danger! [Stay away, Keep your distance] from the [anomaly, oddity]."
 		fail
 
 mission "Midnight Message Buoy: Mah Duum (untranslated)"

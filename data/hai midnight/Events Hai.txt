@@ -24,6 +24,8 @@ mission "Ion Pulse Cannons"
 		fail
 
 event "ion pulse cannons"
+	system Cthogha
+		add fleet "Bloodstone Raiders" 4800
 	fleet "Unfettered Tribute"
 		add variant 1
 			"Water Bug (Jump, Ion Pulse)"

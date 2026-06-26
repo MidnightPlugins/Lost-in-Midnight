@@ -359,6 +359,7 @@ ship "Lightning Bug" "Lightning Bug (Pulse Repeater)"
 		`"Biroo" Atomic Steering`
 		"Hyperdrive"
 
+
 ship "Scarab" "Scarab (Bloodstone)"
 	outfits
 		"Bullfrog Anti-Missile"
@@ -376,6 +377,27 @@ ship "Scarab" "Scarab (Bloodstone)"
 	turret "Bullfrog Anti-Missile"
 	turret "Chameleon Anti-Missile"
 
+
+ship "Sea Scorpion" "Sea Scorpion (Bloodstone)"
+	outfits
+		`"Bondir" Atomic Steering`
+		`"Bondir" Atomic Thruster`
+		"Cargo Expansion"
+		"Chameleon Anti-Missile"
+		"Fuel Pod"
+		"Geode Reactor"
+		"Hai Diamond Regenerator"
+		"Hai Ravine Batteries"
+		"Hai Tracker" 392
+		"Hai Tracker Pod" 4
+		"Hai Williwaw Cooling"
+		Hyperdrive
+		"Ion Flash Bang" 7
+		"Pulse Rifle" 15
+		"Phantom Tracker (Turret)"
+		"Quantum Bloodstone"
+		"Tracker Storage Pod" 6
+		"Value Detector" 2
 
 ship "Sea Scorpion" "Sea Scorpion (Displacer)"
 	outfits
@@ -550,6 +572,27 @@ ship "Shield Beetle" "Shield Beetle (Bloodstone)"
 		`"Bondir" Atomic Thruster`
 		`"Bufaer" Atomic Steering`
 		"Hyperdrive"
+
+ship "Shield Beetle" "Shield Beetle (Jump, Bloodstone)"
+	outfits
+		"Ion Cannon" 4
+		"Hai Tracker Pod" 4
+		"Hai Tracker" 224
+		"Phantom Tracker (Turret)" 2
+		"Chameleon Anti-Missile" 2
+		"Boulder Reactor"
+		"Geode Reactor"
+		"Hai Gorge Batteries"
+		"Hai Ravine Batteries"
+		"Hai Diamond Regenerator"
+		"Hai Williwaw Cooling" 2
+		"Quantum Bloodstone"
+		"Pulse Rifle" 55
+		"Ion Flash Bang" 27
+		Barracks
+		`"Bondir" Atomic Thruster`
+		`"Bufaer" Atomic Steering`
+		"Jump Drive"
 
 ship "Shield Beetle" "Shield Beetle (Displacer)"
 	outfits
