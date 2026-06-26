@@ -526,7 +526,7 @@ mission "Plasma Cluster Cannons 2"
 	on decline
 		log `One of my Plasma Charge Cannons was stolen. The thieves managed the bypass your security systems.`
 		outfit "Plasma Charge Cannon" -1
-		event "Plasma Charge Cannon pirate development" 30
+		event "Plasma Cluster Cannon pirate development" 30
 
 event "Plasma Cluster Cannon pirate development"
 
