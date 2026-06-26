@@ -474,7 +474,7 @@ event "Oathbreaker Glaze Reinforcements"
 
 
 
-mission "Plasma Charge Cannons"
+mission "Plasma Cluster Cannons"
 	invisible
 	minor
 	source Rust
@@ -508,7 +508,7 @@ mission "Plasma Charge Cannons"
 		outfit "Plasma Charge Cannon" 7
 		fail
 		
-mission "Plasma Charge Cannons 2"
+mission "Plasma Cluster Cannons 2"
 	invisible
 	source
 		government "Pirate"
@@ -528,9 +528,9 @@ mission "Plasma Charge Cannons 2"
 		outfit "Plasma Charge Cannon" -1
 		event "Plasma Charge Cannon pirate development" 30
 
-event "Plasma Charge Cannon pirate development"
+event "Plasma Cluster Cannon pirate development"
 
-mission "Plasma Charge Cannons 3"
+mission "Plasma Cluster Cannons 3"
 	name "Firebrand"
 	description "A heavy warship named the <npc> and its fleet is attacking Merchants near <destination>. Witnesses claim they are armed with what may be Plasma Charge Cannons. Destroy the fleet for <payment>."
 	"apparent payment" 600000
@@ -539,9 +539,9 @@ mission "Plasma Charge Cannons 3"
 		attributes "core"
 		attributes "frontier"
 	to offer
-		has "event: Plasma Charge Cannon pirate development"
+		has "event: Plasma Cluster Cannon pirate development"
 	on offer
-		event "Plasma Charge Cannons pirate core"
+		event "Plasma Cluster Cannons pirate core"
 		set "plasma cluster cannon new tortuga patched"
 		conversation
 			scene "outfit/plasma cluster cannon"
@@ -571,7 +571,7 @@ mission "Plasma Charge Cannons 3"
 outfitter "Plasma Charge Cannon"
 	"Plasma Charge Cannon"
 			
-event "Plasma Charge Cannons pirate core"
+event "Plasma Cluster Cannons pirate core"
 	planet "New Tortuga"
 		add outfitter "Plasma Charge Cannon"
 	fleet "Large Core Pirates"
@@ -804,7 +804,7 @@ mission "Plexus Prototype 4"
 			scene "outfit/jump drive"
 			`You are directed to deliver the Jump Drive to a Free Worlds military base and are compensated with <payment>. You can register to make more deliveries on the job board.`
 
-mission "Plasma Charge Cannons: Rust"
+mission "Plasma Cluster Cannons: Rust"
 	landing
 	name "Weapon Delivery"
 	description "Deliver a set of Plasma Charge Cannons to Southbound Shipyards on <destination>. Payment is <payment>."
@@ -1018,7 +1018,7 @@ event "Dreadnought Evolution - Liberator"
 #################################
 
 
-mission "Plasma Charge Cannon New Tortuga Patch"
+mission "Plasma Cluster Cannon New Tortuga Patch"
 	non-blocking
 	landing
 	invisible
