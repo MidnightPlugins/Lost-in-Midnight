@@ -43,6 +43,7 @@ system Cthogha
 	attributes midnight cthogha "black hole" "notable star" "supergiant star" "wolf-rayet" "wormhole"
 	haze _menu/haze-cthogha
 	fleet "Cthogha" 500
+	fleet "Bloodstone Cultists" 2400
 	hazard "Ember Waste Base Heat" 100
 	hazard "Cthogha's Aura" 1
 	hazard "Small Black Hole Accretion Disk" 1

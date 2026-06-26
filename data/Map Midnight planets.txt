@@ -983,7 +983,8 @@ star "star/nova-ancient"
 star "star/nasa PIA13275"
 	power 0.4
 	wind 4
-	icon "map/m-dwarf-star"
+#	icon "map/m-dwarf-star"
+	icon "map/nasa PIA13275"
 
 star "star/protostar-red"
 	power 0.3

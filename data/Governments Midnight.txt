@@ -386,6 +386,7 @@ government "Pug (Cthogha)"
 		"Quarg (Kor Efret)" -.01
 		"Quarg (Gegno)" -.01
 		"Quarg (Cthogha)" -.01
+		"Hai (Unfettered)" -.01
 	"friendly hail" "friendly pug"
 	"friendly disabled hail" "friendly disabled pug"
 	"hostile hail" "hostile pug"
@@ -412,6 +413,7 @@ government "Quarg (Cthogha)"
 		"Pug" -.01
 		"Pug (Wanderer)" -.01
 		"Pug (Cthogha)" -.01
+		"Hai (Unfettered)" -.01
 	language "Quarg (Cthogha)"
 	"friendly hail" "friendly Quarg Cthogha"
 	"friendly disabled hail" "disabled Quarg Cthogha"
