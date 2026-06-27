@@ -1267,6 +1267,7 @@ outfit "Hyperspace Nuke"
 		"hull damage" 7000
 		"hit force" 6000
 		"missile strength" 220
+		"triggers nuke alert"
 	description "	This Nuclear Missile has been outfitted with an experimental hyperspace fuel afterburner. It can fly faster, and potentially, farther than standard Nuclear Missiles if it doesn't explode prematurely from the hull stress. This increased speed helps it outpace anti-missile systems, but it has difficulty adjusting its trajectory once fired."
 	description "	[Hyperspace nukes are a one-shot weapon: each missile occupies a gun slot, and after it is fired, the slot it was in is left empty.]"
 
