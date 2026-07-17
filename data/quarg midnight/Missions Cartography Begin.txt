@@ -2530,7 +2530,7 @@ mission "Midnight Pictograph 2"
 	source "Greenrock"
 	to offer
 		has "Saving Artifacts 2: done"
-		has "outfit (flagship installed): Ancient Pictograph"
+		has "outfit (flagship installed): Ancient Earth Pictograph"
 		random < 70 - ( "Randomize Midnight Pictograph 2" * 65 )
 	on offer
 		conversation
