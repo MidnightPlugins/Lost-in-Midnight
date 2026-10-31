@@ -1354,9 +1354,7 @@ mission "Midnight Expansion Unfettered Displacer Pod"
 	to fail
 		has "Midnight Expansion Unfettered Displacer Pod: active"
 	to accept
-		or
-			has "outfit (flagship installed): Jump Drive"
-			has "outfit (cargo): Jump Drive"
+		has "outfit (removable): Jump Drive"
 	on accept
 		conversation
 			scene "outfit/hai displacer pod"
