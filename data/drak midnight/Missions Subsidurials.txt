@@ -771,21 +771,21 @@ mission "Day of Subsidurius"
 		fleet "Small Militia"
 	npc evade
 		to spawn
-			"armament deterrence" >= 16
+			"armament deterrence" >= 1.6
 		government "Pirate"
 		personality target waiting vindictive coward mute
 			#confusion 120
 		fleet "Weaponized Subsidurials"
 	npc evade
 		to spawn
-			"armament deterrence" >= 24
+			"armament deterrence" >= 2.4
 		government "Pirate"
 		personality target waiting vindictive coward mute
 			#confusion 120
 		fleet "Weaponized Subsidurials"
 	npc evade
 		to spawn
-			"armament deterrence" >= 32
+			"armament deterrence" >= 3.2
 		government "Pirate"
 		personality target waiting vindictive coward mute
 			#confusion 120
@@ -924,7 +924,7 @@ mission "Subsidurial Porter"
 		fleet "Small Core Pirates"
 	npc evade
 		to spawn
-			"armament deterrence" >= 16
+			"armament deterrence" >= 1.6
 		government "Pirate"
 		system
 			distance 1 2
@@ -947,7 +947,7 @@ mission "Subsidurial Porter"
 		fleet "Large Core Pirates"
 	npc evade
 		to spawn
-			"armament deterrence" >= 24
+			"armament deterrence" >= 2.4
 		government "Pirate"
 		system
 			distance 4 5
@@ -962,7 +962,7 @@ mission "Subsidurial Porter"
 		fleet "pirate raid" 2
 	npc evade
 		to spawn
-			"armament deterrence" >= 32
+			"armament deterrence" >= 3.2
 		government "Pirate"
 		system destination
 		personality staying harvests plunders
@@ -1003,7 +1003,7 @@ mission "Subsidurial Porter (North)"
 		fleet "Small Northern Pirates"
 	npc evade
 		to spawn
-			"armament deterrence" >= 16
+			"armament deterrence" >= 1.6
 		government "Pirate"
 		system
 			distance 1 2
@@ -1026,7 +1026,7 @@ mission "Subsidurial Porter (North)"
 		fleet "Large Northern Pirates"
 	npc evade
 		to spawn
-			"armament deterrence" >= 24
+			"armament deterrence" >= 2.4
 		government "Pirate"
 		system
 			distance 4 5
@@ -1041,7 +1041,7 @@ mission "Subsidurial Porter (North)"
 		fleet "pirate raid" 2
 	npc evade
 		to spawn
-			"armament deterrence" >= 32
+			"armament deterrence" >= 3.2
 		government "Pirate"
 		system destination
 		personality staying harvests plunders
@@ -1083,7 +1083,7 @@ mission "Subsidurial Porter (South)"
 		fleet "Small Southern Pirates"
 	npc evade
 		to spawn
-			"armament deterrence" >= 16
+			"armament deterrence" >= 1.6
 		government "Pirate"
 		system
 			distance 1 2
@@ -1106,7 +1106,7 @@ mission "Subsidurial Porter (South)"
 		fleet "Large Southern Pirates"
 	npc evade
 		to spawn
-			"armament deterrence" >= 24
+			"armament deterrence" >= 2.4
 		government "Pirate"
 		system
 			distance 4 5
@@ -1121,7 +1121,7 @@ mission "Subsidurial Porter (South)"
 		fleet "pirate raid" 2
 	npc evade
 		to spawn
-			"armament deterrence" >= 32
+			"armament deterrence" >= 3.2
 		government "Pirate"
 		system destination
 		personality staying harvests plunders
