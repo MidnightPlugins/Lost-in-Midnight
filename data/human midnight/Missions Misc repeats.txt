@@ -1237,69 +1237,69 @@ mission "Pirate Raid: Shield Suppressor"
 		fleet "pirate raid"
 	npc evade
 		to spawn
-			"armament deterrence" >= 10
+			"armament deterrence" >= 1.0
 		government "Pirate"
 		personality nemesis harvests plunders entering
 		fleet "pirate raid" 2
 		fleet "Marauder fleet I"
 	npc evade
 		to spawn
-			"armament deterrence" >= 14
+			"armament deterrence" >= 1.4
 		government "Pirate"
 		personality nemesis harvests plunders entering
 		fleet "pirate raid" 2
 		fleet "Marauder fleet II"
 	npc evade
 		to spawn
-			"armament deterrence" >= 18
+			"armament deterrence" >= 1.8
 		government "Pirate"
 		personality nemesis harvests plunders entering
 		fleet "Marauder fleet III"
 	npc evade
 		to spawn
-			"armament deterrence" >= 26
+			"armament deterrence" >= 2.6
 		government "Pirate"
 		personality nemesis harvests plunders entering
 		fleet "Marauder fleet IV"
 	npc evade
 		to spawn
-			"armament deterrence" >= 34
+			"armament deterrence" >= 3.4
 		government "Pirate"
 		personality nemesis harvests plunders entering
 		fleet "Marauder fleet V"
 	npc evade
 		to spawn
-			"armament deterrence" >= 40
+			"armament deterrence" >= 4.0
 		government "Pirate"
 		personality nemesis harvests plunders entering
 		fleet "Marauder fleet VI"
 	npc evade
 		to spawn
-			"armament deterrence" >= 48
+			"armament deterrence" >= 4.8
 		government "Pirate"
 		personality nemesis harvests plunders entering
 		fleet "Marauder fleet VII"
 	npc evade
 		to spawn
-			"armament deterrence" >= 56
+			"armament deterrence" >= 5.6
 		government "Pirate"
 		personality nemesis harvests plunders entering
 		fleet "Marauder fleet VIII"
 	npc evade
 		to spawn
-			"armament deterrence" >= 64
+			"armament deterrence" >= 6.4
 		government "Pirate"
 		personality nemesis harvests plunders entering
 		fleet "Marauder fleet IX"
 	npc evade
 		to spawn
-			"armament deterrence" >= 72
+			"armament deterrence" >= 7.2
 		government "Pirate"
 		personality nemesis harvests plunders entering
 		fleet "Marauder fleet X"
 	npc evade
 		to spawn
-			"armament deterrence" >= 80
+			"armament deterrence" >= 8.0
 		government "Pirate"
 		personality nemesis harvests plunders entering
 		fleet "Large Southern Pirates"

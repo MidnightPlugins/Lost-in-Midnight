@@ -420,7 +420,7 @@ mission "Executive Guard: Syndicate Extremists"
 		"armament deterrence" >= 14
 	npc
 		to spawn
-			"armament deterrence" >= 21
+			"armament deterrence" >= 2.1
 		government "Syndicate (Extremist)"
 		system Algenib
 		personality waiting staying heroic
@@ -430,7 +430,7 @@ mission "Executive Guard: Syndicate Extremists"
 				"Protector (Proton)"
 	npc
 		to spawn
-			"armament deterrence" >= 28
+			"armament deterrence" >= 2.8
 		government "Syndicate (Extremist)"
 		system Algenib
 		personality waiting staying heroic
@@ -440,7 +440,7 @@ mission "Executive Guard: Syndicate Extremists"
 				"Vanguard"
 	npc
 		to spawn
-			"armament deterrence" >= 35
+			"armament deterrence" >= 3.5
 		government "Syndicate (Extremist)"
 		system Algenib
 		personality waiting staying heroic
@@ -450,7 +450,7 @@ mission "Executive Guard: Syndicate Extremists"
 				"Protector (Proton)"
 	npc
 		to spawn
-			"armament deterrence" >= 42
+			"armament deterrence" >= 4.2
 		government "Syndicate (Extremist)"
 		system Algenib
 		personality waiting staying heroic
@@ -512,7 +512,7 @@ mission "Executive Guard: Syndicate Extremist Post War"
 			`You find the S.S. Longinus leading a large fleet of Marauder ships! They waste no time turning their weapons towards you!`
 	npc
 		to spawn
-			"armament deterrence" >= 28
+			"armament deterrence" >= 2.8
 		government "Syndicate (Extremist)"
 		system Algenib
 		personality waiting staying heroic
@@ -524,7 +524,7 @@ mission "Executive Guard: Syndicate Extremist Post War"
 				"Marauder Manta (Engines)"
 	npc
 		to spawn
-			"armament deterrence" >= 35
+			"armament deterrence" >= 3.5
 		government "Syndicate (Extremist)"
 		system Algenib
 		personality waiting staying heroic
@@ -536,7 +536,7 @@ mission "Executive Guard: Syndicate Extremist Post War"
 				"Marauder Splinter (Engines)"
 	npc
 		to spawn
-			"armament deterrence" >= 42
+			"armament deterrence" >= 4.2
 		government "Syndicate (Extremist)"
 		system Algenib
 		personality waiting staying heroic
@@ -546,7 +546,7 @@ mission "Executive Guard: Syndicate Extremist Post War"
 				"Marauder Protector"
 	npc
 		to spawn
-			"armament deterrence" >= 49
+			"armament deterrence" >= 4.9
 		government "Syndicate (Extremist)"
 		system Algenib
 		personality waiting staying heroic
@@ -627,14 +627,14 @@ mission "Gremlin Protoype Escort"
 		fleet "pirate raid"
 	npc
 		to spawn
-			"armament deterrence" >= 14
+			"armament deterrence" >= 1.4
 		government "Pirate"
 		personality entering plunders harvests
 			#confusion 20
 		fleet "pirate raid"
 	npc
 		to spawn
-			"armament deterrence" >= 21
+			"armament deterrence" >= 2.1
 		government "Pirate"
 		system destination
 		personality staying plunders harvests

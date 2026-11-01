@@ -770,7 +770,7 @@ mission "Kudgel's Cudgel"
 		dialog "Something is wrong. The Kudgel's Cudgel doesn't seem to be interested in mining and isn't responding to hails..."
 	npc
 		to spawn
-			"armament deterrence" >= 6
+			"armament deterrence" >= 0.6
 		government "Pirate"
 		system
 			distance 2 3
@@ -778,7 +778,7 @@ mission "Kudgel's Cudgel"
 		fleet "pirate raid"
 	npc
 		to spawn
-			"armament deterrence" >= 12
+			"armament deterrence" >= 1.2
 		government "Pirate"
 		system
 			distance 3 4
@@ -786,7 +786,7 @@ mission "Kudgel's Cudgel"
 		fleet "pirate raid"
 	npc
 		to spawn
-			"armament deterrence" >= 18
+			"armament deterrence" >= 1.8
 		government "Pirate"
 		system
 			distance 4 5
@@ -1704,7 +1704,7 @@ mission "Pot-o'-honey"
 				"Scout (Hai)"
 	npc
 		to spawn
-			"armament deterrence" >= 8
+			"armament deterrence" >= 0.8
 		government "Pirate"
 		system "Waypoint"
 		personality waiting staying harvests plunders nemesis
@@ -1716,7 +1716,7 @@ mission "Pot-o'-honey"
 				"Raven (Hai)"
 	npc
 		to spawn
-			"armament deterrence" >= 16
+			"armament deterrence" >= 1.6
 		government "Pirate"
 		system "Waypoint"
 		personality waiting staying harvests plunders nemesis
@@ -1730,7 +1730,7 @@ mission "Pot-o'-honey"
 				"Firebird (Hai Weapons)"
 	npc
 		to spawn
-			"armament deterrence" >= 24
+			"armament deterrence" >= 2.4
 		government "Pirate"
 		system "Waypoint"
 		personality waiting staying harvests plunders nemesis
@@ -1741,7 +1741,7 @@ mission "Pot-o'-honey"
 				"Mule (Hai Weapons)"
 	npc
 		to spawn
-			"armament deterrence" >= 32
+			"armament deterrence" >= 3.2
 		government "Pirate"
 		system "Waypoint"
 		personality waiting staying harvests plunders nemesis

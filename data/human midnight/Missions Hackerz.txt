@@ -920,7 +920,7 @@ mission "Hackerz 6"
 	npc save
 		to spawn
 			has "Trace Hackerz Prison Break"
-			"armament deterrence" >= 24
+			"armament deterrence" >= 2.4
 		government "Republic"
 		system destination
 		personality target waiting vindictive nemesis
@@ -937,7 +937,7 @@ mission "Hackerz 6"
 	npc save
 		to spawn
 			has "Trace Hackerz Prison Break"
-			"armament deterrence" >= 16
+			"armament deterrence" >= 1.6
 		government "Republic"
 		system destination
 		personality target waiting vindictive nemesis
@@ -1150,7 +1150,7 @@ mission "Hackerz 7"
 	npc save
 		to spawn
 			has "hackerz new america ambush"
-			"armament deterrence" >= 42
+			"armament deterrence" >= 4.2
 		government "Test Dummy"
 		system destination
 		personality target waiting vindictive nemesis mute
@@ -1162,7 +1162,7 @@ mission "Hackerz 7"
 	npc save
 		to spawn
 			has "hackerz new america ambush"
-			"armament deterrence" >= 36
+			"armament deterrence" >= 3.6
 		government "Test Dummy"
 		system destination
 		personality target waiting vindictive nemesis mute
@@ -1174,7 +1174,7 @@ mission "Hackerz 7"
 	npc save
 		to spawn
 			has "hackerz new america ambush"
-			"armament deterrence" >= 30
+			"armament deterrence" >= 3.0
 		government "Test Dummy"
 		system destination
 		personality target waiting vindictive nemesis mute
@@ -1187,7 +1187,7 @@ mission "Hackerz 7"
 	npc save
 		to spawn
 			has "hackerz new america ambush"
-			"armament deterrence" >= 24
+			"armament deterrence" >= 2.4
 		government "Test Dummy"
 		system destination
 		personality target waiting vindictive nemesis mute
@@ -1199,7 +1199,7 @@ mission "Hackerz 7"
 	npc save
 		to spawn
 			has "hackerz new america ambush"
-			"armament deterrence" >= 18
+			"armament deterrence" >= 1.8
 		government "Test Dummy"
 		system destination
 		personality target waiting vindictive nemesis mute
@@ -1213,7 +1213,7 @@ mission "Hackerz 7"
 	npc save
 		to spawn
 			has "hackerz new america ambush"
-			"armament deterrence" >= 12
+			"armament deterrence" >= 1.2
 		government "Test Dummy"
 		system destination
 		personality target waiting vindictive nemesis mute

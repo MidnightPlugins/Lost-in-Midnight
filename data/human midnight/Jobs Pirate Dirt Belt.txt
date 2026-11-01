@@ -678,7 +678,7 @@ mission "Hostage Exchange: hard"
 	npc evade
 		to spawn
 			has "midnight hostage exchange trap"
-			"armament deterrence" >= 6
+			"armament deterrence" >= 0.6
 		government "Bounty Hunter"
 		personality waiting vindictive unconstrained
 			#confusion 10
@@ -686,7 +686,7 @@ mission "Hostage Exchange: hard"
 	npc evade
 		to spawn
 			has "midnight hostage exchange trap"
-			"armament deterrence" >= 10
+			"armament deterrence" >= 1.0
 		government "Bounty Hunter"
 		personality waiting vindictive unconstrained
 			#confusion 10
@@ -694,7 +694,7 @@ mission "Hostage Exchange: hard"
 	npc evade
 		to spawn
 			has "midnight hostage exchange trap"
-			"armament deterrence" >= 14
+			"armament deterrence" >= 1.4
 		government "Bounty Hunter"
 		personality waiting vindictive unconstrained
 			#confusion 10
@@ -2422,13 +2422,13 @@ mission "Rum Cellar Throwdown"
 		fleet "pirate raid"
 	npc kill
 		to spawn
-			"armament deterrence" >= 16
+			"armament deterrence" >= 1.6
 		government "Pirate"
 		personality waiting staying vindictive
 		fleet "pirate raid"
 	npc kill
 		to spawn
-			"armament deterrence" >= 24
+			"armament deterrence" >= 2.4
 		government "Pirate"
 		personality waiting staying vindictive
 		fleet "pirate raid"
@@ -2438,13 +2438,13 @@ mission "Rum Cellar Throwdown"
 		fleet "pirate raid (rivals)" 2
 	npc kill
 		to spawn
-			"armament deterrence" >= 16
+			"armament deterrence" >= 1.6
 		government "Pirate (Rivals)"
 		personality waiting staying vindictive
 		fleet "pirate raid (rivals)" 2
 	npc kill
 		to spawn
-			"armament deterrence" >= 24
+			"armament deterrence" >= 2.4
 		government "Pirate (Rivals)"
 		personality waiting staying vindictive
 		fleet "pirate raid (rivals)" 2
