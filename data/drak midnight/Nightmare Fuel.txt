@@ -158,6 +158,9 @@ ship "Nightmare Eye"
 		"jump drive" 1
 		"jump fuel" 1
 		"fuel capacity" 10
+		"outfit space" 1
+		"weapon capacity" 1
+		"turret mounts" 1
 	outfits
 		"Nightmare Eye Weapon"
 	turret 0 0
