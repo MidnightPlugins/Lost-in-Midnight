@@ -658,7 +658,7 @@ news "Midnight Graffiti (Mythos Hai English)"
 			has "outfit: Midnight's Lost Orphan"
 			has "license: Nightmare Fuel"
 	location
-		government "Hai" "Hai (Unfettered)
+		government "Hai" "Hai (Unfettered)"
 		attributes "hai: human presence"
 	name
 		word
